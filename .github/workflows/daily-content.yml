@@ -12,6 +12,9 @@ permissions:
 jobs:
   build-and-send:
     runs-on: ubuntu-latest
+        env:
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
     steps:
       - uses: actions/checkout@v4
 
@@ -46,7 +49,7 @@ jobs:
       # Skipped automatically (steps just no-op) until IG_USER_ID /
       # IG_ACCESS_TOKEN secrets are set -- see README.md.
       - name: Publish today's media to GitHub Pages (so Instagram can fetch it)
-        if: ${{ secrets.IG_USER_ID != '' && secrets.IG_ACCESS_TOKEN != '' }}
+          if: ${{ env.IG_USER_ID != '' && env.IG_ACCESS_TOKEN != '' }}
         run: |
           # Copy the WHOLE day's output/ folder as-is (chart.png, slides/,
           # stories/, reel1/, reel2/, and whichever optional files that
@@ -67,7 +70,7 @@ jobs:
           git push
 
       - name: Publish to Instagram
-        if: ${{ secrets.IG_USER_ID != '' && secrets.IG_ACCESS_TOKEN != '' }}
+         if: ${{ env.IG_USER_ID != '' && env.IG_ACCESS_TOKEN != '' }}
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
