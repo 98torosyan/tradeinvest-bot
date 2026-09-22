@@ -1,0 +1,76 @@
+name: TradeInvest daily content
+
+on:
+  schedule:
+    # 04:00 UTC = 08:00 Yerevan time (UTC+4, no DST in Armenia)
+    - cron: "0 4 * * *"
+  workflow_dispatch: {}  # lets you trigger a run manually from the Actions tab
+
+permissions:
+  contents: write  # needed to commit today's media into docs/ for GitHub Pages
+
+jobs:
+  build-and-send:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install ffmpeg + ImageMagick (needed for video/text rendering)
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg imagemagick fonts-dejavu-core
+
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run the daily content pipeline (generate + send to Telegram)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+        run: |
+          python main.py
+          echo "DATE_STR=$(date -u +%F)" >> "$GITHUB_ENV"
+
+      - name: Upload today's assets as a workflow artifact (backup / manual posting)
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: content-${{ github.run_id }}
+          path: output/
+          retention-days: 14
+
+      # --- Instagram auto-post ------------------------------------------
+      # Skipped automatically (steps just no-op) until IG_USER_ID /
+      # IG_ACCESS_TOKEN secrets are set -- see README.md.
+      - name: Publish today's media to GitHub Pages (so Instagram can fetch it)
+        if: ${{ secrets.IG_USER_ID != '' && secrets.IG_ACCESS_TOKEN != '' }}
+        run: |
+          # Copy the WHOLE day's output/ folder as-is (chart.png, slides/,
+          # stories/, reel1/, reel2/, and whichever optional files that
+          # day's plan produced -- comparison.png on Fridays, meme.png on
+          # Saturdays). A hand-picked list of `cp` lines here previously
+          # missed comparison.png/meme.png, so manifest.json referenced
+          # files that were never actually published to Pages -- Instagram
+          # would then time out waiting for a URL that never comes up,
+          # and the whole carousel publish would fail, not just that one
+          # extra slide. Copying everything makes this future-proof.
+          mkdir -p docs/media/${{ env.DATE_STR }}
+          cp -r output/${{ env.DATE_STR }}/. docs/media/${{ env.DATE_STR }}/
+          touch docs/.nojekyll
+          git config user.name "tradeinvest-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/
+          git commit -m "media: ${{ env.DATE_STR }}" || echo "nothing to commit"
+          git push
+
+      - name: Publish to Instagram
+        if: ${{ secrets.IG_USER_ID != '' && secrets.IG_ACCESS_TOKEN != '' }}
+        env:
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/publish_to_instagram.py "${{ env.DATE_STR }}"
