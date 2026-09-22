@@ -1,9 +1,19 @@
 """
-Refreshes the long-lived Instagram/Facebook access token before it
-expires (long-lived tokens last ~60 days). Meant to run on its own
-monthly schedule (see .github/workflows/refresh-token.yml) so the
-daily content workflow never silently starts failing because the
-token went stale.
+Refreshes the long-lived Instagram access token before it expires
+(long-lived tokens last ~60 days). Meant to run on its own monthly
+schedule (see .github/workflows/refresh-token.yml) so the daily
+content workflow never silently starts failing because the token
+went stale.
+
+This project's tokens come from the "Instagram API with Instagram
+Login" flow (direct Instagram business login, Meta's current default
+setup path -- no Facebook Page token involved), so refreshing uses
+Instagram's own refresh endpoint (graph.instagram.com/refresh_access_token,
+grant_type=ig_refresh_token). That endpoint only needs the current
+valid long-lived token itself -- no app ID/secret, no Facebook Page.
+(If your token instead came from the older Facebook Login/Page-token
+flow, that uses a different endpoint -- see the Meta docs for
+"Refresh Access Token" under the flow you set up.)
 
 Two ways this can end, depending on what secrets are set:
   1. If GH_PAT (a GitHub Personal Access Token with the "repo" scope,
@@ -17,13 +27,10 @@ Two ways this can end, depending on what secrets are set:
      can paste it into the IG_ACCESS_TOKEN secret by hand. It is also
      sent on Telegram as a bonus, if Telegram is configured -- but
      Telegram is entirely optional, this never depends on it.
-
-Requires FB_APP_ID and FB_APP_SECRET (from the same Meta app used to
-create IG_ACCESS_TOKEN in the first place) -- see README.md.
 """
-import base64
 import os
 import sys
+import base64
 
 import requests
 from nacl import encoding, public
@@ -33,20 +40,16 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from config import IG_ACCESS_TOKEN, GRAPH_API_VERSION
 from delivery import telegram_sender
 
-FB_APP_ID = os.environ.get("FB_APP_ID", "")
-FB_APP_SECRET = os.environ.get("FB_APP_SECRET", "")
 GH_PAT = os.environ.get("GH_PAT", "")
 GITHUB_REPOSITORY = os.environ.get("GITHUB_REPOSITORY", "")  # "owner/repo", set by Actions
 
-GRAPH_BASE = f"https://graph.facebook.com/{GRAPH_API_VERSION}"
+GRAPH_BASE = f"https://graph.instagram.com/{GRAPH_API_VERSION}"
 
 
 def refresh_token():
-    resp = requests.get(f"{GRAPH_BASE}/oauth/access_token", params={
-        "grant_type": "fb_exchange_token",
-        "client_id": FB_APP_ID,
-        "client_secret": FB_APP_SECRET,
-        "fb_exchange_token": IG_ACCESS_TOKEN,
+    resp = requests.get(f"{GRAPH_BASE}/refresh_access_token", params={
+        "grant_type": "ig_refresh_token",
+        "access_token": IG_ACCESS_TOKEN,
     }, timeout=30)
     data = resp.json()
     if not resp.ok or "access_token" not in data:
@@ -94,8 +97,8 @@ def update_github_secret(name, value):
 
 
 def main():
-    if not (FB_APP_ID and FB_APP_SECRET and IG_ACCESS_TOKEN):
-        print("[refresh_ig_token] FB_APP_ID / FB_APP_SECRET / IG_ACCESS_TOKEN not all set -- nothing to do")
+    if not IG_ACCESS_TOKEN:
+        print("[refresh_ig_token] IG_ACCESS_TOKEN not set -- nothing to do")
         return
 
     new_token, expires_in = refresh_token()

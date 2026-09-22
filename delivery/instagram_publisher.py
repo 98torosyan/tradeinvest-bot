@@ -20,7 +20,13 @@ import requests
 
 from config import IG_USER_ID, IG_ACCESS_TOKEN, GRAPH_API_VERSION
 
-GRAPH_BASE = f"https://graph.facebook.com/{GRAPH_API_VERSION}"
+# graph.instagram.com, NOT graph.facebook.com: the token this project uses
+# comes from the "Instagram API with Instagram Login" flow (direct Instagram
+# business login, no Facebook Page token involved) -- Meta's current default
+# path for a new app. Tokens from that flow are Instagram User Access Tokens
+# and only work against the graph.instagram.com host; calling
+# graph.facebook.com with one fails authentication.
+GRAPH_BASE = f"https://graph.instagram.com/{GRAPH_API_VERSION}"
 
 
 class InstagramPublishError(RuntimeError):

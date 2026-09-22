@@ -94,10 +94,10 @@ python main.py
 Ստորև՝ ուղիղ ամենակարճ ճանապարհը դեպի **ամեն ինչ ինքնաշխատ Instagram-ում**, առանց Telegram-ի։
 
 1. Սարքիր նոր GitHub repo և push արա այս ամբողջ folder-ը։ **Repo-ն պարտադիր պիտի լինի public** (առանց այս՝ GitHub Pages-ը չի կարող media-ն հրապարակել, որ Instagram-ը fetch անի)։
-2. Կատարիր ներքևի **«Instagram-ում ուղիղ auto-post»** բաժնի բոլոր 7 քայլերը (Business account, Meta app, access token, IG_USER_ID)։ Սա մեկ անգամյա setup է, միայն դու ես կարող անել (Meta-ի սեփական հաշիվդ է)։
+2. Կատարիր ներքևի **«Instagram-ում ուղիղ auto-post»** բաժնի բոլոր 8 քայլերը (Business account, Meta app, tester role, access token, IG_USER_ID)։ Սա մեկ անգամյա setup է, միայն դու ես կարող անել (Meta-ի սեփական հաշիվդ է)։
 3. Repo-ի **Settings → Secrets and variables → Actions → New repository secret** բաժնում ավելացրու **միայն** ինստագրամի համար պետք եղածները.
-   - `IG_USER_ID`, `IG_ACCESS_TOKEN` — ստորև Քայլ 4-5-ից
-   - `FB_APP_ID`, `FB_APP_SECRET`, `GH_PAT` — որ token-ի թարմացումն էլ ինքնաշխատ լինի, ձեռքով ոչինչ երբեք պետք չգա անել (`scripts/refresh_ig_token.py`-ի բացատրությունը ներքևում)
+   - `IG_USER_ID`, `IG_ACCESS_TOKEN` — ստորև «Instagram-ում ուղիղ auto-post» բաժնից
+   - `GH_PAT` — (ուժեղ խորհուրդ) որ token-ի ~2-ամսյա թարմացումն էլ ինքնաշխատ լինի, ձեռքով ոչինչ երբեք պետք չգա անել (`scripts/refresh_ig_token.py`-ի բացատրությունը ներքևում)
    - `FRED_API_KEY` — ոչ պարտադիր, բայց առանց դրա macro slide-երը կլինեն ավելի քիչ
    - **`TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID` — բաց թող, պետք չեն։** Կոդը ինքն ստուգում է, եթե դատարկ են, պարզապես բաց է թողնում Telegram-ի քայլերը, ոչինչ չի կոտրվում։
 4. Repo Settings → **Pages** → Source՝ "Deploy from a branch" → Branch՝ `main`, folder՝ `/docs` → Save։ (Առաջին push-ից հետո՝ `docs/` folder-ը ինքնաշխատ ստեղծվում է pipeline-ի կողմից)։
@@ -111,36 +111,34 @@ Telegram-ը ուզածիդ դեպքում **լրացուցիչ** կարող ես
 
 ## Instagram-ում ուղիղ auto-post (լրիվ ավտոմատ, մեկ անգամյա setup)
 
+Այս project-ը օգտագործում է Meta-ի ընթացիկ (2026) default հոսքը՝ **«Instagram API with Instagram Login»** (ուղիղ Instagram login, ոչ թե հին Facebook Page token-ի հոսքը)։ Դրա համար բոլոր API կանչերը (`delivery/instagram_publisher.py`, `scripts/refresh_ig_token.py`) գնում են `graph.instagram.com`-ով, ոչ թե `graph.facebook.com`-ով. մյուս base URL-ով այս token-ը չի աշխատի։
+
 **Քայլ 1 — Instagram-ը դարձրու Business/Creator account**
 Instagram app → Settings → Account type → Switch to Professional Account → Business (կամ Creator)։
 
-**Քայլ 2 — կապիր Facebook Page-ի հետ**
-Business/Creator account-ը պիտի կապված լինի Facebook Page-ի հետ (եթե չունես, ստեղծիր մեկը՝ անվճար է, 2 րոպե)։ Instagram Settings → Account → Linked accounts → Facebook։
+**Քայլ 2 — կապիր Facebook-ի հետ (Accounts Center)**
+Instagram Settings → Account → Linked accounts → Facebook. Եթե դեռ չունես Facebook Page, Instagram-ի այս հոսքն ինքն է առաջարկում ստեղծել/կապել մեկը (Meta-ի **Центр аккаунтов / Accounts Center**-ի միջոցով)։ Page-ի անունը կարևոր չէ, կարևորն այն է, որ կապված լինի հենց այս Instagram account-ի հետ։
 
 **Քայլ 3 — Meta Developer App սարքիր**
-Գնա [developers.facebook.com](https://developers.facebook.com) → My Apps → Create App → "Other" → "Business"։ App-ի Dashboard-ում ավելացրու **Instagram Graph API** և **Facebook Login for Business** product-երը։
+Գնա [developers.facebook.com/apps](https://developers.facebook.com/apps/) → **Create App** → **Other** → **Business**։ App ստեղծելիս ընտրիր use case-երի ցուցակից (կամ App-ի Dashboard-ից «Сценарии использования» → «Добавить сценарии использования») **«Управление сообщениями и контентом в Instagram»** (Instagram API)։
 
-**Քայլ 4 — access token ստացիր**
-Meta-ի [Graph API Explorer](https://developers.facebook.com/tools/explorer/)-ում ընտրիր քո App-ը, User Token-ի փոխարեն ընտրիր "Get Page Access Token" (քո Page-ը), թույլտվություններից նշիր՝ `instagram_basic`, `instagram_content_publish`, `pages_show_list`, `pages_read_engagement`։ Ստացված token-ը երկարաձգիր (long-lived, ~60 օր)՝ [Access Token Debugger](https://developers.facebook.com/tools/debug/accesstoken/)-ում "Extend Access Token" կոճակով, կամ այս հրամանով.
-```bash
-curl -s "https://graph.facebook.com/v21.0/oauth/access_token?grant_type=fb_exchange_token&client_id=<APP_ID>&client_secret=<APP_SECRET>&fb_exchange_token=<SHORT_LIVED_TOKEN>"
-```
+**Քայլ 4 — ավելացրու publish-ի թույլտվությունը**
+App-ի ձախի մենյուից՝ **Сценарии использования → Настроить → Разрешения и функции**։ Ցուցակը երկար է. օգտագործիր բրաուզերի Ctrl+F, փնտրիր `content_publish`, ու սեղմիր **Добавить** հենց **`instagram_business_content_publish`**-ի կողքին (առանց սրա՝ միայն messaging-ի թույլտվություններն են ավտոմատ ավելացած, ոչ publish-ինը)։
 
-**Քայլ 5 — գտիր քո Instagram User ID-ն**
-```bash
-curl -s "https://graph.facebook.com/v21.0/me/accounts?access_token=<PAGE_TOKEN>"
-# պատասխանից վերցրու page id-ն, հետո.
-curl -s "https://graph.facebook.com/v21.0/<PAGE_ID>?fields=instagram_business_account&access_token=<PAGE_TOKEN>"
-# սա կտա instagram_business_account.id -ը == IG_USER_ID
-```
+**Քայլ 5 — Instagram account-ը դարձրու tester**
+App-ի ձախի մենյուից **Роли в приложении → Роли → Добавить людей** → ընտրիր **«Тестировщик Instagram»** role-ը → գրիր քո Instagram username-ը → **Добавить**։ Հետո Instagram app-ում՝ **Профиль → Настройки и конфиденциальность → Приложения и сайты → Приглашения тестировщика** → ընդունիր (Confirm/Принять) invite-ը։
 
-**Քայլ 6 — ավելացրու secrets-ը GitHub-ում**
-- `IG_USER_ID` — Քայլ 5-ից
-- `IG_ACCESS_TOKEN` — Քայլ 4-ից (long-lived token)
-- `FB_APP_ID`, `FB_APP_SECRET` — token-ի ավտոմատ թարմացման համար (`scripts/refresh_ig_token.py`)
-- `GH_PAT` — (ուժեղ խորհուրդ, ոչ պարտադիր) GitHub Personal Access Token՝ "repo" scope-ով, որ token-ի թարմացումը ինքն իրեն գրվի secrets-ում, զրո ձեռքով քայլ ընդմիշտ։ Առանց սրա՝ ամեն ~2 ամիսը մեկ նոր token-ը գրվում է այդ run-ի GitHub Actions summary-ում (Actions tab → այդ run-ը), + Telegram-ով եթե կարգավորած է, և դու մեկ անգամ ձեռքով տեղադրում ես secrets-ում։
+**Քայլ 6 — connect ու generate token**
+Վերադարձիր App-ի **Сценарии использования → Настройка API для входа в Instagram** tab, բաժին **«2. Сгенерируйте маркеры доступа»** → **Добавить аккаунт** → ընտրիր/հաստատիր քո Instagram account-ը։ Այն երևալուց հետո սեղմիր **«Сгенерировать маркер»** դրա կողքին։
+- Այդ տողում ցուցադրված թիվը (account-ի անվան տակ) հենց քո **`IG_USER_ID`**-ն է
+- Generate-ից հետո ցուցադրված/copy եղած token-ը հենց քո **`IG_ACCESS_TOKEN`**-ն է (արդեն long-lived, ~60 օր, առանձին երկարացում պետք չէ)
 
-**Քայլ 7 — միացրու GitHub Pages**
+**Քայլ 7 — ավելացրու secrets-ը GitHub-ում**
+- `IG_USER_ID` — Քայլ 6-ից
+- `IG_ACCESS_TOKEN` — Քայլ 6-ից
+- `GH_PAT` — (ուժեղ խորհուրդ, ոչ պարտադիր) GitHub Personal Access Token՝ "repo" scope-ով (github.com/settings/tokens → Generate new token (classic)), որ token-ի ~2-ամսյա թարմացումը ինքն իրեն գրվի secrets-ում, զրո ձեռքով քայլ ընդմիշտ։ Առանց սրա՝ ամեն ~2 ամիսը մեկ նոր token-ը գրվում է այդ run-ի GitHub Actions summary-ում (Actions tab → այդ run-ը), + Telegram-ով եթե կարգավորած է, և դու մեկ անգամ ձեռքով տեղադրում ես secrets-ում։ (Ուշադրություն. սա GitHub-ի token է, ոչ Meta-ի. Meta-ի կողմից այլ բան պետք չէ, refresh-ը Instagram-ի սեփական endpoint-ով է աշխատում, առանց App ID/Secret-ի։)
+
+**Քայլ 8 — միացրու GitHub Pages**
 Repo Settings → Pages → Source՝ "Deploy from a branch" → Branch՝ `main`, folder՝ `/docs` → Save։ (Առաջին push-ից հետո՝ `docs/` folder-ը ինքնաշխատ ստեղծվում է pipeline-ի կողմից)։
 
 Այսքանը։ Հաջորդ օրվա run-ից սկսած՝ pipeline-ը ինքնաշխատ push կանի media-ն Pages-ին և հրապարակի Instagram-ում՝ Post/Carousel, 2 Reel, 10 Story (Story-երը՝ առանց interactive sticker-ի, տես սահմանափակումների բաժինը)։ Telegram-ով նաև կստանաս publish-ի արդյունքի report (ինչը հաջողվեց, ինչը՝ ոչ)։
