@@ -18,7 +18,11 @@ BRAND_RED = "#EF4444"
 BRAND_ALERT_COLOR = "#EF4444"
 DATA_SOURCE_LABEL = "Տվյալների աղբյուր՝ CoinGecko, alternative.me, FRED"
 
-# --- Secrets / API keys (all optional except Telegram if sending) -------
+# --- Secrets / API keys (every one of these is optional) ----------------
+# Telegram is a fully optional side-channel delivery -- if these two are
+# left blank, delivery/telegram_sender.py just no-ops (see _check_configured
+# there); nothing else in the pipeline depends on it. An Instagram-only
+# setup (IG_USER_ID + IG_ACCESS_TOKEN below, no Telegram at all) works fine.
 TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
 TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 

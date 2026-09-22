@@ -5,7 +5,7 @@
 1. հավաքում է իրական crypto/macro տվյալներ (գներ, 7-օրյա chart, crypto լուրեր, Fear & Greed, Fed rate/CPI),
 2. կառուցում է օրվա ամբողջ Instagram content plan-ը (Reel #1, Post/Carousel, Reel #2, 10 Story, Top-3 idea) հայերենով,
 3. սարքում է իրական visual-ներ՝ dark/premium candlestick chart, carousel սլայդներ, 10 Story-նկար, և 2 վերտիկալ (1080×1920) Reel video՝ chart animation + text overlay + ձայնային narration-ով,
-4. ուղարկում է ամեն ինչ Telegram-ով **և**, եթե Instagram-ի setup-ը արված է (տես ներքևում), **ուղիղ ավտոմատ post է անում Instagram-ում** (feed Post/Carousel, 2 Reel, 10 Story)։
+4. **ուղիղ ավտոմատ post է անում Instagram-ում** (feed Post/Carousel, 2 Reel, 10 Story, +Saturday meme) — ձեռքով ոչինչ սեղմել պետք չէ, ամեն օր ինքնաշխատ։ Telegram-ը լրիվ **ոչ պարտադիր** կողքի ալիք է. եթե Telegram-ի secrets-ը դատարկ ես թողնում, այն պարզապես բաց է թողնվում, pipeline-ը դրանից ոչնչով կախված չէ։
 
 Ոչինչ չի հորինվում. ամեն թիվ/լուր, որ երևում է plan-ում, գալիս է իրական API-ից/RSS-ից. եթե տվյալը հասանելի չէ, այն պարզապես բաց է թողնվում։
 
@@ -20,7 +20,7 @@ main.py
  ├─ visuals/charts.py + cards.py → chart PNG + carousel slide PNG-ներ
  ├─ video/frames.py        → 10 Story PNG-ներ
  ├─ video/reel_video.py    → 2 Reel .mp4 (chart animation + text + TTS ձայն)
- ├─ delivery/telegram_sender.py → ամեն ինչ ուղարկում է Telegram bot-ով
+ ├─ delivery/telegram_sender.py → ոչ պարտադիր. ուղարկում է ամեն ինչ Telegram bot-ով, եթե կարգավորված է
  └─ manifest.json          → ցուցակ, թե ինչ պիտի հրապարակվի Instagram-ում ինչ caption-ով
 
 scripts/publish_to_instagram.py
@@ -30,7 +30,7 @@ scripts/publish_to_instagram.py
 scripts/refresh_ig_token.py → ամեն 2 շաբաթը մեկ թարմացնում է access token-ը՝ որ երբեք չլրանա ժամկետը
 ```
 
-GitHub Actions-ը (`.github/workflows/daily-content.yml`) այս ամբողջ pipeline-ը վազացնում է ամեն օր ինքնաշխատ՝ անվճար runner-ի վրա. **generate → Telegram → GitHub Pages → Instagram**։
+GitHub Actions-ը (`.github/workflows/daily-content.yml`) այս ամբողջ pipeline-ը վազացնում է ամեն օր ինքնաշխատ՝ անվճար runner-ի վրա. **generate → GitHub Pages → Instagram** (Telegram-ը՝ եթե կարգավորած է, ոչ պարտադիր)։
 
 ## Շաբաթական rotation / bonus content
 
@@ -84,23 +84,30 @@ python tests/test_pipeline_offline.py   # sample տվյալներով, առան�
 Իրական տվյալներով լոկալ փորձարկելու համար՝
 
 ```bash
-cp .env.example .env      # լրացրու TELEGRAM_BOT_TOKEN և TELEGRAM_CHAT_ID
+cp .env.example .env      # լրացրու IG_USER_ID/IG_ACCESS_TOKEN (Telegram-ը ոչ պարտադիր է)
 export $(cat .env | xargs)
 python main.py
 ```
 
-## GitHub-ում տեղադրելը (Telegram մասը — սա բավարար է, որ pipeline-ը սկսի աշխատել)
+## GitHub-ում տեղադրելը (Instagram-only, լրիվ ավտոմատ — ոչ մի ձեռքով post)
 
-1. Սարքիր նոր GitHub repo (օր.՝ `tradeinvest-content-bot`) և push արա այս ամբողջ folder-ը։ **Instagram auto-post-ի համար repo-ն պիտի լինի public** (որպեսզի GitHub Pages-ը կարողանա media-ն հրապարակել, որ Instagram-ը կարողանա fetch անել) — Telegram-only ռեժիմի համար private-ը լիովին ֆայն է։
-2. Repo-ի **Settings → Secrets and variables → Actions → New repository secret** բաժնում ավելացրու.
-   - `TELEGRAM_BOT_TOKEN` — BotFather-ից ստացած token
-   - `TELEGRAM_CHAT_ID` — քո chat ID-ն
-   - `FRED_API_KEY` — (ոչ պարտադիր, բայց առանց դրա macro slide-երը կլինեն ավելի քիչ)
-3. **Actions** tab-ում հաստատիր, որ workflow-ները միացված են (default-ով միացված են)։
-4. Ամեն օր ժամը 08:00 Երևանի ժամանակով (04:00 UTC) pipeline-ը ինքնաշխատ կաշխատի։ Ցանկացած պահի կարող ես ձեռքով trigger անել՝ Actions → "TradeInvest daily content" → **Run workflow**։
-5. Յուրաքանչյուր run-ի արդյունքները (նկարներ, video, plan.md) նաև պահվում են որպես **workflow artifact** 14 օր, backup-ի համար։
+Ստորև՝ ուղիղ ամենակարճ ճանապարհը դեպի **ամեն ինչ ինքնաշխատ Instagram-ում**, առանց Telegram-ի։
 
-Սա արդեն բավարար է, որ ամեն օր Telegram-ով ստանաս պատրաստի content։ Instagram-ում ուղիղ auto-post-ի համար պետք է **լրացուցիչ** հետևյալ քայլերը (մեկ անգամյա, միայն դու ես կարող անել)․
+1. Սարքիր նոր GitHub repo և push արա այս ամբողջ folder-ը։ **Repo-ն պարտադիր պիտի լինի public** (առանց այս՝ GitHub Pages-ը չի կարող media-ն հրապարակել, որ Instagram-ը fetch անի)։
+2. Կատարիր ներքևի **«Instagram-ում ուղիղ auto-post»** բաժնի բոլոր 7 քայլերը (Business account, Meta app, access token, IG_USER_ID)։ Սա մեկ անգամյա setup է, միայն դու ես կարող անել (Meta-ի սեփական հաշիվդ է)։
+3. Repo-ի **Settings → Secrets and variables → Actions → New repository secret** բաժնում ավելացրու **միայն** ինստագրամի համար պետք եղածները.
+   - `IG_USER_ID`, `IG_ACCESS_TOKEN` — ստորև Քայլ 4-5-ից
+   - `FB_APP_ID`, `FB_APP_SECRET`, `GH_PAT` — որ token-ի թարմացումն էլ ինքնաշխատ լինի, ձեռքով ոչինչ երբեք պետք չգա անել (`scripts/refresh_ig_token.py`-ի բացատրությունը ներքևում)
+   - `FRED_API_KEY` — ոչ պարտադիր, բայց առանց դրա macro slide-երը կլինեն ավելի քիչ
+   - **`TELEGRAM_BOT_TOKEN` / `TELEGRAM_CHAT_ID` — բաց թող, պետք չեն։** Կոդը ինքն ստուգում է, եթե դատարկ են, պարզապես բաց է թողնում Telegram-ի քայլերը, ոչինչ չի կոտրվում։
+4. Repo Settings → **Pages** → Source՝ "Deploy from a branch" → Branch՝ `main`, folder՝ `/docs` → Save։ (Առաջին push-ից հետո՝ `docs/` folder-ը ինքնաշխատ ստեղծվում է pipeline-ի կողմից)։
+5. **Actions** tab-ում հաստատիր, որ workflow-ները միացված են (default-ով միացված են)։
+6. Ամեն օր ժամը 08:00 Երևանի ժամանակով (04:00 UTC) pipeline-ը ինքնաշխատ կաշխատի ու ուղիղ post կանի Instagram-ում (Post/Carousel, 2 Reel, 10 Story, ուրբաթ՝ +comparison chart, շաբաթ՝ +meme)։ Ցանկացած պահի կարող ես ձեռքով trigger անել՝ Actions → "TradeInvest daily content" → **Run workflow**։
+7. Յուրաքանչյուր run-ի արդյունքները (նկարներ, video, plan.md) նաև պահվում են որպես **workflow artifact** 14 օր, backup-ի համար։
+
+Սա ամբողջությամբ ավտոմատացնում է իրական **post**-երը (carousel, 2 reel, 10 story, meme)։ Ինստագրամի API-ի 2 շատ մանր, զուտ կոսմետիկ բան կա, որ Meta-ն ընդհանրապես չի թողնում API-ով անել (ոչ մի կոդ սա շրջանցել չի կարող). comment-ը **pin** անելը (comment-ն ինքը արդեն ինքնաշխատ գրվում է) և Highlight cover-ների վերբեռնումը (նկարներն ինքնաշխատ սարքվում են, պարզապես վերբեռնումը՝ ոչ)։ Սրանք **post չեն**, ուղղակի պրոֆիլի դեկորացիա են — ցանկության դեպքում 1 անգամ ձեռքով, տես ներքևի բաժինը։
+
+Telegram-ը ուզածիդ դեպքում **լրացուցիչ** կարող ես միացնել (ոչ պարտադիր) — ուղղակի ավելացրու `TELEGRAM_BOT_TOKEN`/`TELEGRAM_CHAT_ID` secrets-ը, ոչինչ այլ փոփոխել պետք չէ։
 
 ## Instagram-ում ուղիղ auto-post (լրիվ ավտոմատ, մեկ անգամյա setup)
 
@@ -131,7 +138,7 @@ curl -s "https://graph.facebook.com/v21.0/<PAGE_ID>?fields=instagram_business_ac
 - `IG_USER_ID` — Քայլ 5-ից
 - `IG_ACCESS_TOKEN` — Քայլ 4-ից (long-lived token)
 - `FB_APP_ID`, `FB_APP_SECRET` — token-ի ավտոմատ թարմացման համար (`scripts/refresh_ig_token.py`)
-- `GH_PAT` — (ոչ պարտադիր) GitHub Personal Access Token՝ "repo" scope-ով, որ token-ի թարմացումը ինքն իրեն գրվի secrets-ում։ Առանց սրա՝ նոր token-ը ուղարկվում է Telegram-ով, դու ձեռքով ես տեղադրում։
+- `GH_PAT` — (ուժեղ խորհուրդ, ոչ պարտադիր) GitHub Personal Access Token՝ "repo" scope-ով, որ token-ի թարմացումը ինքն իրեն գրվի secrets-ում, զրո ձեռքով քայլ ընդմիշտ։ Առանց սրա՝ ամեն ~2 ամիսը մեկ նոր token-ը գրվում է այդ run-ի GitHub Actions summary-ում (Actions tab → այդ run-ը), + Telegram-ով եթե կարգավորած է, և դու մեկ անգամ ձեռքով տեղադրում ես secrets-ում։
 
 **Քայլ 7 — միացրու GitHub Pages**
 Repo Settings → Pages → Source՝ "Deploy from a branch" → Branch՝ `main`, folder՝ `/docs` → Save։ (Առաջին push-ից հետո՝ `docs/` folder-ը ինքնաշխատ ստեղծվում է pipeline-ի կողմից)։
