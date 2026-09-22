@@ -12,7 +12,13 @@ permissions:
 jobs:
   build-and-send:
     runs-on: ubuntu-latest
-        env:
+    env:
+      # Job-level env so the `if:` conditions below can check whether
+      # Instagram is configured. GitHub Actions does not allow reading
+      # the `secrets` context directly inside an `if:` expression
+      # ("Unrecognized named-value: 'secrets'") -- only `env` works there,
+      # so the secrets are mirrored into env here once and the two
+      # Instagram steps below check env.IG_USER_ID / env.IG_ACCESS_TOKEN.
       IG_USER_ID: ${{ secrets.IG_USER_ID }}
       IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
     steps:
@@ -49,7 +55,7 @@ jobs:
       # Skipped automatically (steps just no-op) until IG_USER_ID /
       # IG_ACCESS_TOKEN secrets are set -- see README.md.
       - name: Publish today's media to GitHub Pages (so Instagram can fetch it)
-          if: ${{ env.IG_USER_ID != '' && env.IG_ACCESS_TOKEN != '' }}
+        if: ${{ env.IG_USER_ID != '' && env.IG_ACCESS_TOKEN != '' }}
         run: |
           # Copy the WHOLE day's output/ folder as-is (chart.png, slides/,
           # stories/, reel1/, reel2/, and whichever optional files that
@@ -70,10 +76,8 @@ jobs:
           git push
 
       - name: Publish to Instagram
-         if: ${{ env.IG_USER_ID != '' && env.IG_ACCESS_TOKEN != '' }}
+        if: ${{ env.IG_USER_ID != '' && env.IG_ACCESS_TOKEN != '' }}
         env:
-          IG_USER_ID: ${{ secrets.IG_USER_ID }}
-          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scripts/publish_to_instagram.py "${{ env.DATE_STR }}"
