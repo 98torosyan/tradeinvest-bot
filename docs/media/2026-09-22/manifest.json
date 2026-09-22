@@ -1,0 +1,40 @@
+{
+  "date": "2026-09-22",
+  "chart": "chart.png",
+  "carousel": {
+    "images": [
+      "slides/slide_1.png",
+      "slides/slide_2.png",
+      "slides/slide_3.png",
+      "slides/slide_4.png"
+    ],
+    "caption": "Այսօրվա տերմինը՝ «Support / Resistance»։ Գիտե՞իր սա։ 📖\n\n⚠️ Այս կոնտենտը կրում է տեղեկատվական բնույթ և հիմնված է իրական, հրապարակային տվյալների վրա։ Այն չի հանդիսանում ֆինանսական խորհրդատվություն կամ շահույթի երաշխիք։ Crypto-ն բարձր ռիսկային ակտիվ է — միշտ արեք սեփական հետազոտությունը (DYOR)։"
+  },
+  "reel1": {
+    "video": "reel1/reel1.mp4",
+    "caption": "BTC-ը այս պահին $86,295 է (-0.3% 24ժ-ում). Ինչու՞՝ Canada's 'Big Six' banks to launch interbank tokenized deposit initiative. Մանրամասները՝ Reel-ում 👆 #TradeInvest #Crypto #CryptoNews #Bitcoin #Blockchain #DigitalAssets #BitcoinETF #CryptoAnalysis"
+  },
+  "reel2": {
+    "video": "reel2/reel2.mp4",
+    "caption": "Factor-ներ, որ այս պահին շարժում են ողջ շուկան 🧵 #TradeInvest #Crypto #CryptoNews #Bitcoin #Blockchain #FederalReserve #Inflation #FinancialMarkets"
+  },
+  "stories": [
+    "stories/story_1.png",
+    "stories/story_2.png",
+    "stories/story_3.png",
+    "stories/story_4.png",
+    "stories/story_5.png",
+    "stories/story_6.png",
+    "stories/story_7.png",
+    "stories/story_8.png",
+    "stories/story_9.png",
+    "stories/story_10.png"
+  ],
+  "sources": [
+    "https://www.coindesk.com/business/2026/09/22/canada-s-big-six-banks-unite-to-launch-interbank-tokenized-deposit-initiative",
+    "https://www.coindesk.com/policy/2026/09/22/next-for-the-u-s-sec-agency-s-chief-crypto-counsel-illuminates-path-for-custody",
+    "https://www.coindesk.com/policy/2026/09/22/european-central-banks-push-to-expand-stablecoin-yield-ban-to-crypto-lending-and-staking",
+    "https://cointelegraph.com/news/canada-six-largest-banks-explore-tokenized-canadian-dollar-deposits?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "https://cointelegraph.com/news/21shares-zcash-etp-europe-etherfi?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  ]
+}
