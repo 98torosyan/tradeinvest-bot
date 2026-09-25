@@ -1,0 +1,41 @@
+{
+  "date": "2026-09-25",
+  "chart": "chart.png",
+  "carousel": {
+    "images": [
+      "slides/slide_1.png",
+      "slides/slide_2.png",
+      "slides/slide_3.png",
+      "slides/slide_4.png",
+      "slides/slide_5.png"
+    ],
+    "caption": "BTC-ը +0.3% է շարժվել վերջին 24 ժամում։ Ինչու՞ — մանրամասները սլայդներում 👆\n\n⚠️ Այս կոնտենտը կրում է տեղեկատվական բնույթ և հիմնված է իրական, հրապարակային տվյալների վրա։ Այն չի հանդիսանում ֆինանսական խորհրդատվություն կամ շահույթի երաշխիք։ Crypto-ն բարձր ռիսկային ակտիվ է — միշտ արեք սեփական հետազոտությունը (DYOR)։"
+  },
+  "reel1": {
+    "video": "reel1/reel1.mp4",
+    "caption": "BTC-ը այս պահին $84,090 է (+0.3% 24ժ-ում). Ինչու՞՝ U.S. Federal Reserve moves on proposals to implement GENIUS Act for stablecoins. Մանրամասները՝ Reel-ում 👆 #TradeInvest #Crypto #CryptoNews #Bitcoin #Blockchain #CryptoMarket #CryptoAnalysis #DigitalAssets"
+  },
+  "reel2": {
+    "video": "reel2/reel2.mp4",
+    "caption": "Factor-ներ, որ այս պահին շարժում են ողջ շուկան 🧵 #TradeInvest #Crypto #CryptoNews #Bitcoin #Blockchain #Macro #Inflation #InterestRates"
+  },
+  "stories": [
+    "stories/story_1.png",
+    "stories/story_2.png",
+    "stories/story_3.png",
+    "stories/story_4.png",
+    "stories/story_5.png",
+    "stories/story_6.png",
+    "stories/story_7.png",
+    "stories/story_8.png",
+    "stories/story_9.png",
+    "stories/story_10.png"
+  ],
+  "sources": [
+    "https://www.coindesk.com/policy/2026/09/24/u-s-federal-reserve-moves-on-proposals-to-implement-genius-act-for-stablecoins",
+    "https://www.coindesk.com/markets/2026/09/24/crypto-exchange-bitget-loses-usd352-million-in-hack-claims-user-funds-are-safe",
+    "https://cointelegraph.com/news/bitget-ceo-suspects-north-korea-behind-352m-hack-citing-ip-clues?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "https://cointelegraph.com/magazine/asia-dominates-crypto-adoption-index-bitgets-356m-hack-asia-express?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+    "https://cointelegraph.com/news/fed-proposes-new-capital-redemption-rules-for-stablecoin-issuers?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  ]
+}
