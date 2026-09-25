@@ -1,11 +1,4 @@
 requests>=2.31
 feedparser>=6.0
-pandas>=2.0
-numpy>=1.24
-mplfinance>=0.12
-Pillow>=10.0
-moviepy>=2.0
-edge-tts>=7.0
-fonttools>=4.40
+playwright>=1.45
 pynacl>=1.5
-
