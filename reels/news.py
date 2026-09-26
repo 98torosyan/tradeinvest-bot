@@ -5,6 +5,7 @@ import re
 from urllib.parse import urlparse
 
 import feedparser
+import requests
 
 from . import gemini
 from .builder import ICONS
@@ -27,7 +28,10 @@ def fetch_items(exclude, per_feed=10):
     items = []
     for url in FEEDS:
         try:
-            feed = feedparser.parse(url)
+            resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0 (TradeInvest bot)"}, timeout=25)
+            resp.raise_for_status()
+            feed = feedparser.parse(resp.content)
+            print(f"[news] {url}: {len(feed.entries)} items")
         except Exception as exc:  # noqa: BLE001
             print(f"[news] feed failed {url}: {exc}"); continue
         for e in feed.entries[:per_feed]:

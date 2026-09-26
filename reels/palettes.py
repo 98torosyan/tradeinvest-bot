@@ -29,7 +29,7 @@ LESSON = [
      "blob1": "rgba(255,179,138,.20)", "blob2": "rgba(255,110,140,.12)", "blob3": "rgba(255,214,191,.08)",
      "pt": "#FFD9C4", "onacc": "#200B11"},
 ]
-COMMON = {"card": "rgba(255,255,255,.06)", "cardb": "rgba(255,255,255,.13)"}
+COMMON = {"card": "rgba(255,255,255,.06)", "cardb": "rgba(255,255,255,.13)", "onacc": "#0B1220"}
 
 
 def css_vars(p):

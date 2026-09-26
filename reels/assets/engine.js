@@ -17,7 +17,9 @@ function applyFx(it,local){
       w.style.opacity=.14+.86*r;w.style.transform=`translateY(${(1-r)*14}px)`;w.style.filter=`blur(${(1-r)*3}px)`;});break;}
     case 'draw':it.style.strokeDashoffset=(+it.dataset.len)*(1-EASE.inOut(raw));break;
     case 'count':{const f=+(it.dataset.from||0),to=+it.dataset.to,v=f+(to-f)*EASE.expo(raw);
-      it.textContent=(it.dataset.pre||'')+v.toFixed(+(it.dataset.dec||0))+(it.dataset.post||'');break;}
+      let txt=v.toFixed(+(it.dataset.dec||0));
+      if(it.dataset.grp){const [i,d]=txt.split('.');txt=i.replace(/\B(?=(\d{3})+(?!\d))/g,'\u202F')+(d?'.'+d:'');}
+      it.textContent=(it.dataset.pre||'')+txt+(it.dataset.post||'');break;}
     case 'scalex':it.style.transform=`scaleX(${EASE.inOut(raw)})`;break;
     case 'pop':{const e=raw<=0?0:EASE.back(raw);it.style.opacity=clamp01(raw*3);it.style.transform=`scale(${.4+.6*e})`;break;}
     case 'card':it.style.opacity=k;it.style.transform=`translateY(${(1-k)*40}px) scale(${.96+.04*k})`;break;

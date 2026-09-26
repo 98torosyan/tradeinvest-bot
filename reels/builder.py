@@ -195,7 +195,168 @@ def build_lesson(spec, palette):
         tl.add(h, t + 2.0)
     end = tl.t
     logo_t = outro(tl, "Crypto-ն հայերեն և պարզ", spec.get("cta", "Պահիր այս դասը"))
-    persistent = f'<div class="series" id="series"><span>{esc(spec["series"])}</span></div>'
+    if "level" in spec:
+        pill = f'Մակարդակ {spec["level"]}՝ {spec["level_name"]}'
+        prog_line = f'<div class="progress">Դաս {spec["n"]} / {spec["total"]}</div>'
+    else:
+        pill, prog_line = spec.get("series", ""), ""
+    persistent = f'<div class="series" id="series"><span>{esc(pill)}</span>{prog_line}</div>'
     hooks = (f"logoFx({logo_t:.2f});HOOKS.push(t=>{{const o=1-EASE.inOut(prog(t,{end:.2f}-.5,.5));"
              f"document.getElementById('series').style.opacity=Math.min(o,EASE.out(prog(t,0,.7)));}});")
     return page("lesson", palette, tl, persistent, hooks, seed=len(spec["title"]))
+
+
+# ---------------------------------------------------------------- STORY
+ASSET_NAMES = {"BTC": ("Bitcoin", "BTC"), "ETH": ("Ethereum", "ETH"), "XAU": ("Ոսկի", "XAU · 1 ունցիա"),
+               "SPX": ("S&P 500", "ԱՄՆ բաժնետոմսեր"), "NDX": ("Nasdaq 100", "Տեխնոլոգիաներ")}
+
+
+def _spark(vals, up, at):
+    if len(vals) < 2:
+        return ""
+    lo, hi = min(vals), max(vals); rng = (hi - lo) or 1
+    pts = [(i * 190 / (len(vals) - 1), 65 - (v - lo) / rng * 60) for i, v in enumerate(vals)]
+    d = "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in pts)
+    col = "#34D399" if up else "#F87171"
+    return f'<svg class="spark" viewBox="0 0 190 70"><path d="{d}" style="stroke:{col}" data-fx="draw" data-at="{at:.2f}" data-dur="1.1"/></svg>'
+
+
+def _gauge(value, at):
+    import math
+    cx, cy, rad = 410, 400, 330
+    cols = ["#F2705F", "#F0A35C", "#E6CC80", "#B4D784", "#8FD8A2"]
+    segs = ""
+    for i in range(5):
+        a0 = math.pi * (1 - i / 5) - .02; a1 = math.pi * (1 - (i + 1) / 5) + .02
+        segs += (f'<path d="M{cx + rad * math.cos(a0):.1f} {cy - rad * math.sin(a0):.1f} A{rad} {rad} 0 0 1 '
+                 f'{cx + rad * math.cos(a1):.1f} {cy - rad * math.sin(a1):.1f}" fill="none" stroke="{cols[i]}" '
+                 f'stroke-width="46" stroke-linecap="round" data-fx="draw" data-at="{at + i * .15:.2f}" data-dur=".6"/>')
+    ang = -90 + 180 * value / 100
+    return (f'<svg class="gauge" width="820" height="440" viewBox="0 0 820 440">{segs}'
+            f'<g id="needle" data-ang="{ang:.1f}" style="transform-origin:{cx}px {cy}px;opacity:0">'
+            f'<line x1="{cx}" y1="{cy}" x2="{cx}" y2="{cy - 280}" stroke="var(--txt)" stroke-width="12" stroke-linecap="round"/>'
+            f'<circle cx="{cx}" cy="{cy}" r="24" fill="var(--txt)"/></g></svg>')
+
+
+def fmt_dec(v):
+    return 0 if v >= 1000 else 2
+
+
+def build_story(snap, palette, date_label):
+    tl = Timeline()
+    # 1. title
+    h = fx("div", "kick", f"Առավոտյան ամփոփում · {esc(date_label)}", "rise", .1, .7)
+    h += lines(["Շուկան", "15 վայրկյանում"], .4, "t1", 1.0)
+    tl.add(h, 2.8)
+    # 2. prices
+    rows = ""
+    for i, key in enumerate(k for k in ("BTC", "ETH", "XAU", "SPX", "NDX") if k in snap["assets"]):
+        a = snap["assets"][key]; up = a["chg"] >= 0; at = .2 + i * .22
+        name, sub = ASSET_NAMES[key]
+        cls = "up" if up else "dn"; arrow = "▲" if up else "▼"
+        rows += (f'<div class="row" data-fx="card" data-at="{at:.2f}" data-dur=".7">'
+                 f'<div class="nm"><b>{esc(name)}</b><small>{esc(sub)}</small></div>'
+                 f'<div class="px" data-fx="count" data-at="{at + .2:.2f}" data-dur="1.4" data-from="{a["price"] * .97:.2f}" '
+                 f'data-to="{a["price"]:.2f}" data-dec="{fmt_dec(a["price"])}" data-grp="1" data-pre="$">0</div>'
+                 f'{_spark(a.get("spark", []), up, at + .4)}'
+                 f'<div class="chg {cls}">{arrow} {abs(a["chg"]):.1f}%</div></div>')
+    note = "Crypto՝ վերջին 24 ժամ, բաժնետոմսեր և ոսկի՝ նախորդ փակման համեմատ"
+    tl.add(f'<div class="rows">{rows}</div>' + fx("div", "note", esc(note), "fade", 1.6, .8), 6.0)
+    # 3. fear & greed
+    fng = snap.get("fng"); gauge_start = None
+    if fng:
+        gauge_start = tl.t
+        d = ""
+        if fng.get("prev") is not None:
+            diff = fng["value"] - fng["prev"]
+            d = f"Երեկ՝ {fng['prev']} ({'+' if diff >= 0 else ''}{diff})"
+        h = fx("div", "kick", "Fear &amp; Greed ինդեքս", "rise", 0, .6).replace('class="kick"', 'class="kick" style="align-self:center"')
+        h += _gauge(fng["value"], .3)
+        h += fx("div", "fngv grad", "0", "count", 1.2, 1.4, f'data-from="0" data-to="{fng["value"]}"')
+        h += fx("div", "fngl", esc(FNG_HY_B.get(fng["label"], fng["label"])), "rise", 1.9, .7)
+        if d:
+            h += fx("div", "fngd", esc(d), "fade", 2.3, .7)
+        tl.add(h, 3.6)
+    # 4. mood
+    m = snap["mood"]
+    col = {"bull": "#34D399", "bear": "#F87171", "flat": "var(--a2)"}[m["key"]]
+    h = fx("div", "kick", "Շուկայի տրամադրությունը", "rise", 0, .6).replace('class="kick"', 'class="kick" style="align-self:center"')
+    h += f'<div class="mood" style="color:{col};margin-top:50px" data-fx="pop" data-at=".4" data-dur=".9">{esc(m["label"])}</div>'
+    h += fx("div", "moodhy", esc(m["hy"]), "rise", .9, .7)
+    if m["parts"]:
+        h += '<div class="drivers">' + "".join(
+            f'<span data-fx="pop" data-at="{1.3 + i * .12:.2f}" data-dur=".6">{esc(p)}</span>' for i, p in enumerate(m["parts"])) + "</div>"
+    h += fx("div", "disc", "Սա տվյալների ամփոփում է, ոչ թե կանխատեսում։<br>Ֆինանսական խորհուրդ չէ։", "fade", 2.0, .8)
+    tl.add(h, 4.2)
+    brand = (f'<div class="brand" id="brand"><svg viewBox="-10 -44 356 390">'
+             f'<rect x="0" y="0" width="100" height="100" rx="22" fill="var(--txt)"/><rect x="118" y="0" width="100" height="100" rx="22" fill="var(--txt)"/>'
+             f'<rect x="236" y="-34" width="100" height="100" rx="22" fill="var(--a2)"/><rect x="118" y="118" width="100" height="100" rx="22" fill="var(--txt)"/>'
+             f'<rect x="118" y="236" width="100" height="100" rx="22" fill="var(--txt)"/></svg>@armtradeinvest</div>')
+    hooks = ("HOOKS.push(t=>{document.getElementById('brand').style.opacity=EASE.out(prog(t,.3,.8));"
+             "const n=document.getElementById('needle');if(n){")
+    if gauge_start is not None:
+        hooks += (f"const k=EASE.expo(prog(t,{gauge_start + 1.2:.2f},1.4));n.style.opacity=t>={gauge_start + 1.0:.2f}?1:0;"
+                  f"n.style.transform=`rotate(${{-90+(+n.dataset.ang+90)*k}}deg)`;"
+                  f"document.querySelectorAll('.gauge path').forEach(p=>{{if(t>={gauge_start:.2f})applyFx(p,t-{gauge_start:.2f});}});")
+    hooks += "}});"
+    return page("story", palette, tl, brand, hooks, seed=7)
+
+
+FNG_HY_B = {"Extreme Fear": "Խիստ վախ", "Fear": "Վախ", "Neutral": "Չեզոք", "Greed": "Ագահություն", "Extreme Greed": "Խիստ ագահություն"}
+
+
+# ---------------- Market Story ----------------
+ASSET_LABEL = {"BTC": ("BTC", "Bitcoin"), "ETH": ("ETH", "Ethereum"), "GOLD": ("XAU", "Ոսկի"), "SPX": ("S&P", "S&P 500")}
+MOOD = {"bull": ("Bullish", "Crypto շուկայում գերակշռում է աճի տրամադրությունը", "#3DDC97"),
+        "bear": ("Bearish", "Crypto շուկայում գերակշռում է անկման տրամադրությունը", "#FF6B6B"),
+        "neutral": ("Neutral", "Crypto շուկան հիմա չեզոք է, հստակ ուղղություն չկա", "#F4C95D")}
+
+
+def fmt_price(asset, v):
+    if asset == "SPX":
+        return f"{v:,.0f}"
+    return f"${v:,.0f}" if v >= 100 else f"${v:,.2f}"
+
+
+def sparkline(closes, w=240, h=90):
+    if not closes or len(closes) < 2:
+        return ""
+    lo, hi = min(closes), max(closes)
+    rng = (hi - lo) or 1
+    pts = [(i * w / (len(closes) - 1), h - (c - lo) / rng * (h - 10) - 5) for i, c in enumerate(closes)]
+    d = "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in pts)
+    up = closes[-1] >= closes[0]
+    return (f'<svg class="spark" viewBox="0 0 {w} {h}"><path d="{d}" class="{"up" if up else "down"}" '
+            f'data-fx="draw" data-at="{{at}}" data-dur="1.4"/></svg>')
+
+
+def build_story(spec, palette, date_label):
+    tl = Timeline()
+    rows_html = ""
+    order = [a for a in ("BTC", "ETH", "GOLD", "SPX") if a in spec["rows"]]
+    for i, a in enumerate(order):
+        r = spec["rows"][a]; at = 1.0 + i * 0.45
+        sym, name = ASSET_LABEL[a]
+        chg = r["chg24"]; cls = "up" if chg >= 0 else "down"; arrow = "▲" if chg >= 0 else "▼"
+        note = '<span class="note">վերջին փակում</span>' if a == "SPX" else ""
+        rows_html += (f'<div class="row" data-fx="rise" data-at="{at:.2f}" data-dur=".7">'
+                      f'<div class="sym">{sym}</div><div class="nm">{esc(name)}{note}</div>'
+                      f'{sparkline(r.get("closes")).replace("{at}", f"{at + .3:.2f}")}'
+                      f'<div class="val"><div class="pr">{fmt_price(a, r["price"])}</div>'
+                      f'<div class="ch {cls}">{arrow} {abs(chg):.1f}%</div></div></div>')
+    head = (fx("div", "mh1", "Շուկան այսօր", "rise", .1, .8) + fx("div", "mdate", esc(date_label), "rise", .3, .8))
+    fng = spec.get("fng")
+    fng_html = ""
+    if fng is not None:
+        fng_html = (f'<div class="fng" data-fx="rise" data-at="3.2" data-dur=".7"><div class="fl">Fear &amp; Greed</div>'
+                    f'<div class="fbar"><i data-fx="scalex" data-at="3.5" data-dur="1.4" style="width:{fng}%"></i></div>'
+                    f'<div class="fv" data-fx="count" data-at="3.5" data-dur="1.4" data-from="0" data-to="{fng}">0</div></div>')
+    label, expl, color = MOOD[spec["mood"]]
+    mood_html = (f'<div class="mood" data-fx="pop" data-at="5.4" data-dur=".9" style="--mc:{color}">'
+                 f'<div class="ml">{label}</div><div class="me">{esc(expl)}</div></div>'
+                 f'<div class="disc" data-fx="fade" data-at="6.4" data-dur=".8">Հիմնված է BTC-ի և ETH-ի 24 ժամվա և 7 օրվա շարժման, '
+                 f'ինչպես նաև Fear &amp; Greed ինդեքսի վրա։ Կանխատեսում կամ ֆինանսական խորհուրդ չէ։</div>')
+    tl.add(f'<div class="mstack">{head}<div class="rows">{rows_html}</div>{fng_html}{mood_html}</div>', 15.0, "mscene")
+    logo = f'<div class="mlogo">{logo_svg()}<span>TradeInvest</span></div>'
+    hooks = "logoFx(0.2);"
+    return page("market", palette, tl, logo, hooks, seed=7)

@@ -2,7 +2,7 @@ import json
 import os
 
 PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "state.json")
-DEFAULT = {"lesson_index": 0, "palette": {"news": 0, "lesson": 0}, "music": {"news": 0, "lesson": 0}, "posted_links": []}
+DEFAULT = {"course_index": 0, "lesson_index": 0, "palette": {"news": 0, "lesson": 0}, "music": {"news": 0, "lesson": 0, "story": 0}, "posted_links": []}
 
 
 def load():
