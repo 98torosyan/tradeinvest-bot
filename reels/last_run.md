@@ -1,3 +1,6 @@
+**2026-09-27 01:17** `chart` ✅ rendered, publishing
+- [chart] candles from binance, price confirmed by a second source
+---
 **2026-09-27 01:03** `news` ✅ published + teaser
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items

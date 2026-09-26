@@ -4,12 +4,14 @@
  "palette": {
   "news": 4,
   "lesson": 10,
-  "story": 1
+  "story": 1,
+  "chart": 1
  },
  "music": {
   "news": 4,
   "lesson": 10,
-  "story": 1
+  "story": 1,
+  "chart": 1
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
