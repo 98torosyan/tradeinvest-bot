@@ -147,3 +147,48 @@ def build_spec():
         raise RuntimeError("BTC/ETH գները չհաջողվեց ստուգել առնվազն երկու աղբյուրով")
     fng = _safe(fear_greed)
     return {"rows": rows, "fng": fng, "mood": mood(rows, fng)}
+
+
+# ---------- 24h candles for the "Bitcoin 24 ժամում" Story ----------
+def candles_binance():
+    k = _get(f"{BINANCE}/klines", params={"symbol": "BTCUSDT", "interval": "1h", "limit": 24})
+    return [{"t": int(c[0]) // 1000, "o": float(c[1]), "h": float(c[2]), "l": float(c[3]), "c": float(c[4])} for c in k]
+
+
+def candles_kraken():
+    d = _get("https://api.kraken.com/0/public/OHLC", params={"pair": "XBTUSD", "interval": 60})
+    if d.get("error"):
+        raise RuntimeError(d["error"])
+    rows = next(v for k, v in d["result"].items() if k != "last")[-24:]
+    return [{"t": int(r[0]), "o": float(r[1]), "h": float(r[2]), "l": float(r[3]), "c": float(r[4])} for r in rows]
+
+
+def price_coingecko_btc():
+    return float(_get("https://api.coingecko.com/api/v3/simple/price",
+                      params={"ids": "bitcoin", "vs_currencies": "usd"})["bitcoin"]["usd"])
+
+
+def build_chart_spec():
+    """24 hourly BTC candles, used only if the latest price is confirmed by a second source."""
+    NOTES.clear()
+    sets = {"binance": _safe(candles_binance), "kraken": _safe(candles_kraken)}
+    ref = _safe(price_coingecko_btc)
+    chosen = None
+    for name in ("binance", "kraken"):
+        cs = sets[name]
+        if not cs or len(cs) < 20:
+            continue
+        last = cs[-1]["c"]
+        others = [v for v in [ref] + [s[-1]["c"] for n, s in sets.items() if n != name and s] if v]
+        if any(abs(last / o - 1) * 100 <= 1.0 for o in others):
+            chosen = (name, cs); break
+        note(f"[chart] {name} last close {last} not confirmed by {others}")
+    if not chosen:
+        raise RuntimeError("BTC-ի մոմերը չհաջողվեց հաստատել երկրորդ աղբյուրով")
+    name, cs = chosen
+    hi = max(cs, key=lambda c: c["h"]); lo = min(cs, key=lambda c: c["l"])
+    big = max(cs, key=lambda c: abs(c["c"] / c["o"] - 1))
+    return {"candles": cs, "source": name, "price": cs[-1]["c"],
+            "chg": (cs[-1]["c"] / cs[0]["o"] - 1) * 100,
+            "high": hi["h"], "high_t": hi["t"], "low": lo["l"], "low_t": lo["t"],
+            "big_t": big["t"], "big_pct": (big["c"] / big["o"] - 1) * 100}

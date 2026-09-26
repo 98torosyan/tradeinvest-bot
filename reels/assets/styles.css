@@ -113,3 +113,17 @@ svg.icon *{fill:none;stroke:var(--a2);stroke-width:5;stroke-linecap:round;stroke
 .market .disc{margin-top:22px;font-size:26px;line-height:1.4;color:var(--mut)}
 .market .mlogo{position:absolute;right:70px;top:262px;display:flex;align-items:center;gap:14px;font-size:30px;font-weight:800}
 .market .mlogo .logo{width:56px;height:56px}
+.market .cprice{display:flex;align-items:baseline;gap:26px;margin-top:26px}
+.market .cprice>span:first-child{font-size:110px;font-weight:800;letter-spacing:-.02em}
+.market .cprice .ch{font-size:44px}
+.market .cchart{width:940px;height:760px;margin-top:26px;overflow:visible}
+.market .cinfo{display:flex;flex-direction:column;gap:14px;margin-top:22px}
+.market .cinfo>div{display:flex;justify-content:space-between;align-items:baseline;padding:18px 26px;border-radius:22px;background:var(--card);border:1.5px solid var(--cardb)}
+.market .cinfo b{font-size:32px;font-weight:600;color:var(--mut)}
+.market .cinfo span{font-size:38px;font-weight:800}
+.market .cbrand{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:26px;font-size:32px;font-weight:700;color:var(--mut)}
+.market .cbrand .logo{width:54px;height:54px}
+/* news over a background video: page is transparent, video shows through */
+body.footage{background:transparent !important}
+body.footage .blob,body.footage .gridlines{display:none}
+body.footage .card{background:rgba(6,12,24,.55);border-color:rgba(255,255,255,.16)}

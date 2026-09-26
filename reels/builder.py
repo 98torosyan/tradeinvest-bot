@@ -140,14 +140,14 @@ def ambient(kind, seed):
     return f'<div class="blob b1" id="b1"></div><div class="blob b2" id="b2"></div><div class="blob b3" id="b3"></div>{grid}<div>{pts}</div>'
 
 
-def page(kind, palette, tl, persistent, hooks, seed=1):
+def page(kind, palette, tl, persistent, hooks, seed=1, transparent=False):
     return (f'<!doctype html><html lang="hy"><head><meta charset="utf-8">'
             f'<link rel="stylesheet" href="{ASSETS}/fonts.css"><link rel="stylesheet" href="{ASSETS}/styles.css"></head>'
-            f'<body class="{kind}" style="{css_vars(palette)}">{ambient(kind, seed)}{persistent}{"".join(tl.scenes)}'
+            f'<body class="{kind}{" footage" if transparent else ""}" style="{css_vars(palette)}">{ambient(kind, seed)}{persistent}{"".join(tl.scenes)}'
             f'<script src="{ASSETS}/engine.js"></script><script>window.DURATION={tl.t:.2f};{AMBIENT_HOOK}{hooks}setupReel();</script></body></html>')
 
 
-def build_news(spec, palette, date_label):
+def build_news(spec, palette, date_label, footage=False):
     tl = Timeline()
     hl = split_lines(spec["headline"], 15)
     h = lines(hl, .3); t = .3 + len(hl) * .14 + 1.0
@@ -155,9 +155,17 @@ def build_news(spec, palette, date_label):
         s, t = words(spec["sub"], t, "who"); h += s
     big = spec.get("big")
     if big and isinstance(big.get("value"), (int, float)):
+        big = dict(big)
+        if not str(big.get("suffix", "")).strip():
+            if abs(big["value"]) >= 1e9:
+                big["value"], big["suffix"] = round(big["value"] / 1e9, 1), " մլրդ"
+            elif abs(big["value"]) >= 1e6:
+                big["value"], big["suffix"] = round(big["value"] / 1e6, 1), " մլն"
         dec = 0 if float(big["value"]).is_integer() else 1
+        shown = f'{big.get("prefix", "")}{big["value"]:,.{dec}f}{big.get("suffix", "")}'
+        size = 220 if len(shown) <= 7 else 170 if len(shown) <= 10 else 130
         h += fx("div", "big grad", "0", "count", t, 1.6,
-                f'data-from="0" data-to="{big["value"]}" data-dec="{dec}" data-pre="{esc(big.get("prefix",""))}" data-post="{esc(big.get("suffix",""))}"')
+                f'style="font-size:{size}px" data-grp="1" data-from="0" data-to="{big["value"]}" data-dec="{dec}" data-pre="{esc(big.get("prefix",""))}" data-post="{esc(big.get("suffix",""))}"')
         t += 1.6
     tl.add(h, t + 1.8)
     for n, st in enumerate(spec["steps"], 1):
@@ -175,7 +183,7 @@ def build_news(spec, palette, date_label):
              f"document.getElementById('live').style.opacity=.4+.6*Math.abs(Math.cos(t*2.4));"
              f"const o=1-EASE.inOut(prog(t,{end:.2f}-.5,.5));document.getElementById('mast').style.opacity=Math.min(o,EASE.out(prog(t,0,.7)));"
              f"document.querySelector('.rail').style.opacity=o;}});")
-    return page("news", palette, tl, persistent, hooks, seed=len(spec["headline"]))
+    return page("news", palette, tl, persistent, hooks, seed=len(spec["headline"]), transparent=footage)
 
 
 def build_lesson(spec, palette):
@@ -204,105 +212,6 @@ def build_lesson(spec, palette):
     hooks = (f"logoFx({logo_t:.2f});HOOKS.push(t=>{{const o=1-EASE.inOut(prog(t,{end:.2f}-.5,.5));"
              f"document.getElementById('series').style.opacity=Math.min(o,EASE.out(prog(t,0,.7)));}});")
     return page("lesson", palette, tl, persistent, hooks, seed=len(spec["title"]))
-
-
-# ---------------------------------------------------------------- STORY
-ASSET_NAMES = {"BTC": ("Bitcoin", "BTC"), "ETH": ("Ethereum", "ETH"), "XAU": ("Ոսկի", "XAU · 1 ունցիա"),
-               "SPX": ("S&P 500", "ԱՄՆ բաժնետոմսեր"), "NDX": ("Nasdaq 100", "Տեխնոլոգիաներ")}
-
-
-def _spark(vals, up, at):
-    if len(vals) < 2:
-        return ""
-    lo, hi = min(vals), max(vals); rng = (hi - lo) or 1
-    pts = [(i * 190 / (len(vals) - 1), 65 - (v - lo) / rng * 60) for i, v in enumerate(vals)]
-    d = "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in pts)
-    col = "#34D399" if up else "#F87171"
-    return f'<svg class="spark" viewBox="0 0 190 70"><path d="{d}" style="stroke:{col}" data-fx="draw" data-at="{at:.2f}" data-dur="1.1"/></svg>'
-
-
-def _gauge(value, at):
-    import math
-    cx, cy, rad = 410, 400, 330
-    cols = ["#F2705F", "#F0A35C", "#E6CC80", "#B4D784", "#8FD8A2"]
-    segs = ""
-    for i in range(5):
-        a0 = math.pi * (1 - i / 5) - .02; a1 = math.pi * (1 - (i + 1) / 5) + .02
-        segs += (f'<path d="M{cx + rad * math.cos(a0):.1f} {cy - rad * math.sin(a0):.1f} A{rad} {rad} 0 0 1 '
-                 f'{cx + rad * math.cos(a1):.1f} {cy - rad * math.sin(a1):.1f}" fill="none" stroke="{cols[i]}" '
-                 f'stroke-width="46" stroke-linecap="round" data-fx="draw" data-at="{at + i * .15:.2f}" data-dur=".6"/>')
-    ang = -90 + 180 * value / 100
-    return (f'<svg class="gauge" width="820" height="440" viewBox="0 0 820 440">{segs}'
-            f'<g id="needle" data-ang="{ang:.1f}" style="transform-origin:{cx}px {cy}px;opacity:0">'
-            f'<line x1="{cx}" y1="{cy}" x2="{cx}" y2="{cy - 280}" stroke="var(--txt)" stroke-width="12" stroke-linecap="round"/>'
-            f'<circle cx="{cx}" cy="{cy}" r="24" fill="var(--txt)"/></g></svg>')
-
-
-def fmt_dec(v):
-    return 0 if v >= 1000 else 2
-
-
-def build_story(snap, palette, date_label):
-    tl = Timeline()
-    # 1. title
-    h = fx("div", "kick", f"Առավոտյան ամփոփում · {esc(date_label)}", "rise", .1, .7)
-    h += lines(["Շուկան", "15 վայրկյանում"], .4, "t1", 1.0)
-    tl.add(h, 2.8)
-    # 2. prices
-    rows = ""
-    for i, key in enumerate(k for k in ("BTC", "ETH", "XAU", "SPX", "NDX") if k in snap["assets"]):
-        a = snap["assets"][key]; up = a["chg"] >= 0; at = .2 + i * .22
-        name, sub = ASSET_NAMES[key]
-        cls = "up" if up else "dn"; arrow = "▲" if up else "▼"
-        rows += (f'<div class="row" data-fx="card" data-at="{at:.2f}" data-dur=".7">'
-                 f'<div class="nm"><b>{esc(name)}</b><small>{esc(sub)}</small></div>'
-                 f'<div class="px" data-fx="count" data-at="{at + .2:.2f}" data-dur="1.4" data-from="{a["price"] * .97:.2f}" '
-                 f'data-to="{a["price"]:.2f}" data-dec="{fmt_dec(a["price"])}" data-grp="1" data-pre="$">0</div>'
-                 f'{_spark(a.get("spark", []), up, at + .4)}'
-                 f'<div class="chg {cls}">{arrow} {abs(a["chg"]):.1f}%</div></div>')
-    note = "Crypto՝ վերջին 24 ժամ, բաժնետոմսեր և ոսկի՝ նախորդ փակման համեմատ"
-    tl.add(f'<div class="rows">{rows}</div>' + fx("div", "note", esc(note), "fade", 1.6, .8), 6.0)
-    # 3. fear & greed
-    fng = snap.get("fng"); gauge_start = None
-    if fng:
-        gauge_start = tl.t
-        d = ""
-        if fng.get("prev") is not None:
-            diff = fng["value"] - fng["prev"]
-            d = f"Երեկ՝ {fng['prev']} ({'+' if diff >= 0 else ''}{diff})"
-        h = fx("div", "kick", "Fear &amp; Greed ինդեքս", "rise", 0, .6).replace('class="kick"', 'class="kick" style="align-self:center"')
-        h += _gauge(fng["value"], .3)
-        h += fx("div", "fngv grad", "0", "count", 1.2, 1.4, f'data-from="0" data-to="{fng["value"]}"')
-        h += fx("div", "fngl", esc(FNG_HY_B.get(fng["label"], fng["label"])), "rise", 1.9, .7)
-        if d:
-            h += fx("div", "fngd", esc(d), "fade", 2.3, .7)
-        tl.add(h, 3.6)
-    # 4. mood
-    m = snap["mood"]
-    col = {"bull": "#34D399", "bear": "#F87171", "flat": "var(--a2)"}[m["key"]]
-    h = fx("div", "kick", "Շուկայի տրամադրությունը", "rise", 0, .6).replace('class="kick"', 'class="kick" style="align-self:center"')
-    h += f'<div class="mood" style="color:{col};margin-top:50px" data-fx="pop" data-at=".4" data-dur=".9">{esc(m["label"])}</div>'
-    h += fx("div", "moodhy", esc(m["hy"]), "rise", .9, .7)
-    if m["parts"]:
-        h += '<div class="drivers">' + "".join(
-            f'<span data-fx="pop" data-at="{1.3 + i * .12:.2f}" data-dur=".6">{esc(p)}</span>' for i, p in enumerate(m["parts"])) + "</div>"
-    h += fx("div", "disc", "Սա տվյալների ամփոփում է, ոչ թե կանխատեսում։<br>Ֆինանսական խորհուրդ չէ։", "fade", 2.0, .8)
-    tl.add(h, 4.2)
-    brand = (f'<div class="brand" id="brand"><svg viewBox="-10 -44 356 390">'
-             f'<rect x="0" y="0" width="100" height="100" rx="22" fill="var(--txt)"/><rect x="118" y="0" width="100" height="100" rx="22" fill="var(--txt)"/>'
-             f'<rect x="236" y="-34" width="100" height="100" rx="22" fill="var(--a2)"/><rect x="118" y="118" width="100" height="100" rx="22" fill="var(--txt)"/>'
-             f'<rect x="118" y="236" width="100" height="100" rx="22" fill="var(--txt)"/></svg>@armtradeinvest</div>')
-    hooks = ("HOOKS.push(t=>{document.getElementById('brand').style.opacity=EASE.out(prog(t,.3,.8));"
-             "const n=document.getElementById('needle');if(n){")
-    if gauge_start is not None:
-        hooks += (f"const k=EASE.expo(prog(t,{gauge_start + 1.2:.2f},1.4));n.style.opacity=t>={gauge_start + 1.0:.2f}?1:0;"
-                  f"n.style.transform=`rotate(${{-90+(+n.dataset.ang+90)*k}}deg)`;"
-                  f"document.querySelectorAll('.gauge path').forEach(p=>{{if(t>={gauge_start:.2f})applyFx(p,t-{gauge_start:.2f});}});")
-    hooks += "}});"
-    return page("story", palette, tl, brand, hooks, seed=7)
-
-
-FNG_HY_B = {"Extreme Fear": "Խիստ վախ", "Fear": "Վախ", "Neutral": "Չեզոք", "Greed": "Ագահություն", "Extreme Greed": "Խիստ ագահություն"}
 
 
 # ---------------- Market Story ----------------
@@ -360,3 +269,65 @@ def build_story(spec, palette, date_label):
     logo = f'<div class="mlogo">{logo_svg()}<span>TradeInvest</span></div>'
     hooks = "logoFx(0.2);"
     return page("market", palette, tl, logo, hooks, seed=7)
+
+
+# ---------------- "Bitcoin 24 ժամում" candle Story ----------------
+def _hhmm(ts):
+    import datetime as _dt
+    from zoneinfo import ZoneInfo
+    return _dt.datetime.fromtimestamp(ts, ZoneInfo("Asia/Yerevan")).strftime("%H:%M")
+
+
+def build_chart_story(spec, palette, date_label):
+    cs = spec["candles"]; n = len(cs)
+    W, H, PAD = 940, 760, 30
+    lo = min(c["l"] for c in cs); hi = max(c["h"] for c in cs); rng = (hi - lo) or 1
+    y = lambda v: PAD + (hi - v) / rng * (H - 2 * PAD)
+    step = W / n; bw = step * .62
+    candles = ""
+    for i, c in enumerate(cs):
+        x = i * step + step / 2; up = c["c"] >= c["o"]; col = "#3DDC97" if up else "#FF6B6B"
+        top, bot = y(max(c["o"], c["c"])), y(min(c["o"], c["c"]))
+        candles += (f'<g class="cd" data-i="{i}" style="opacity:0">'
+                    f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{y(c["h"]):.1f}" y2="{y(c["l"]):.1f}" stroke="{col}" stroke-width="4"/>'
+                    f'<rect x="{x - bw / 2:.1f}" y="{top:.1f}" width="{bw:.1f}" height="{max(4, bot - top):.1f}" rx="3" fill="{col}"/></g>')
+    bi = next(i for i, c in enumerate(cs) if c["t"] == spec["big_t"])
+    bx = bi * step + step / 2
+    marks = (f'<line class="mk" x1="0" x2="{W}" y1="{y(spec["high"]):.1f}" y2="{y(spec["high"]):.1f}" stroke="var(--txt)" stroke-dasharray="8 10" stroke-width="2" data-fx="fade" data-at="6.0" data-dur=".6"/>'
+             f'<line class="mk" x1="0" x2="{W}" y1="{y(spec["low"]):.1f}" y2="{y(spec["low"]):.1f}" stroke="var(--txt)" stroke-dasharray="8 10" stroke-width="2" data-fx="fade" data-at="7.0" data-dur=".6"/>'
+             f'<rect x="{bx - step * .75:.1f}" y="4" width="{step * 1.5:.1f}" height="{H - 8}" rx="12" fill="none" stroke="var(--a2)" stroke-width="4" data-fx="fade" data-at="8.2" data-dur=".6"/>')
+    chg = spec["chg"]; cls = "up" if chg >= 0 else "down"; arrow = "▲" if chg >= 0 else "▼"
+    bp = spec["big_pct"]
+    head = (fx("div", "mh1", "Bitcoin 24 ժամում", "rise", .1, .8) + fx("div", "mdate", esc(date_label), "rise", .3, .8)
+            + f'<div class="cprice"><span data-fx="count" data-at=".6" data-dur="1.4" data-from="{spec["price"] * .98:.0f}" '
+              f'data-to="{spec["price"]:.0f}" data-grp="1" data-pre="$">0</span>'
+              f'<span class="ch {cls}" data-fx="pop" data-at="1.4" data-dur=".7">{arrow} {abs(chg):.1f}%</span></div>')
+    chart = f'<svg class="cchart" viewBox="0 0 {W} {H}">{candles}{marks}</svg>'
+    info = (f'<div class="cinfo">'
+            f'<div data-fx="rise" data-at="6.1" data-dur=".6"><b>Առավելագույն</b><span>${spec["high"]:,.0f} · {_hhmm(spec["high_t"])}</span></div>'
+            f'<div data-fx="rise" data-at="7.1" data-dur=".6"><b>Նվազագույն</b><span>${spec["low"]:,.0f} · {_hhmm(spec["low_t"])}</span></div>'
+            f'<div data-fx="rise" data-at="8.3" data-dur=".6"><b>Ամենամեծ ժամային շարժումը</b>'
+            f'<span>{_hhmm(spec["big_t"])}-ին՝ {"+" if bp >= 0 else "−"}{abs(bp):.1f}%</span></div></div>')
+    tl = Timeline()
+    brand = f'<div class="cbrand" data-fx="fade" data-at="9.0" data-dur=".8">{logo_svg()}<span>@armtradeinvest</span></div>'
+    tl.add(f'<div class="mstack">{head}{chart}{info}{brand}</div>', 16.0, "mscene")
+    logo = ""
+    hooks = ("logoFx(9.0);HOOKS.push(t=>{document.querySelectorAll('.cd').forEach(g=>{"
+             "const k=EASE.out(prog(t,1.6+(+g.dataset.i)*.17,.45));g.style.opacity=k;"
+             "g.style.transform=`translateY(${(1-k)*30}px)`;});});")
+    return page("market", palette, tl, logo, hooks, seed=11)
+
+
+def teaser_overlay(palette, kind):
+    """Transparent badge laid over the first seconds of a Reel for the Story teaser."""
+    text = "Ամբողջ դասը՝ էջում" if kind == "lesson" else "Ամբողջ լուրը՝ էջում"
+    return (f'<!doctype html><html lang="hy"><head><meta charset="utf-8"><link rel="stylesheet" href="{ASSETS}/fonts.css">'
+            f'<style>html,body{{margin:0;width:1080px;height:1920px;background:transparent;font-family:ArmSans,sans-serif}}'
+            f'.b{{position:absolute;left:50%;top:1395px;transform:translateX(-50%);display:flex;align-items:center;gap:22px;'
+            f'padding:26px 44px;border-radius:60px;background:linear-gradient(135deg,{palette["a2"]},{palette["a"]});'
+            f'color:#0B1220;font-size:46px;font-weight:800;box-shadow:0 20px 60px rgba(0,0,0,.45);white-space:nowrap}}'
+            f'.h{{position:absolute;left:0;right:0;top:1515px;text-align:center;color:#fff;font-size:34px;font-weight:700;'
+            f'text-shadow:0 2px 12px rgba(0,0,0,.6)}}</style></head><body>'
+            f'<div class="b"><svg width="44" height="44" viewBox="0 0 24 24"><path d="M12 20V5M5 11l7-7 7 7" fill="none" '
+            f'stroke="#0B1220" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>{text}</div>'
+            f'<div class="h">@armtradeinvest</div></body></html>')

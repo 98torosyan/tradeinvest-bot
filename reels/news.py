@@ -72,6 +72,7 @@ Return ONLY this JSON:
   {{"title": "Ի՞նչ է նշանակում", "icon": "<icon>", "paragraphs": [{{"text": "<max 110 characters>", "em": false}}, {{"text": "<key takeaway, max 80 characters>", "em": true}}]}},
   {{"title": "Քեզ ի՞նչ", "icon": "<icon>", "paragraphs": [{{"text": "<what it means for an ordinary person, max 110 characters>", "em": false}}, {{"text": "<calm, neutral reminder, max 80 characters>", "em": true}}]}}
  ],
+ "broll": "<2-4 English words for a calm cinematic background video that fits this news, e.g. 'city skyline night', 'gold bars', 'server room lights', 'stock exchange screen'. No people, no faces, no logos, no brand names>",
  "caption": "<2-4 Armenian sentences summarising the news, then a new line 'Աղբյուր՝ SOURCE', then a new line with 4-5 hashtags like #crypto #bitcoin #կրիպտո #հայերեն>"
 }}
 Allowed icons: {icons}
@@ -105,6 +106,9 @@ def _validate(d, n_items):
     for b in BANNED:
         if b in blob:
             errs.append(f"banned phrase: {b}")
+    b = str(d.get("broll") or "")
+    if not b or len(b) > 40 or not b.isascii():
+        d["broll"] = ""
     if d.get("sub") and len(d["sub"]) > 80:
         d["sub"] = ""
     return errs

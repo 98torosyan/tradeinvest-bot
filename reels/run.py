@@ -107,7 +107,7 @@ def cleanup_old(now):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--kind", choices=["lesson", "news", "story"], required=True)
+    ap.add_argument("--kind", choices=["lesson", "news", "story", "chart"], required=True)
     ap.add_argument("--no-publish", action="store_true")
     ap.add_argument("--out", default=os.path.join(ROOT, "output", "reels"))
     a = ap.parse_args()
@@ -122,7 +122,8 @@ def main():
     kind = a.kind
     st["palette"].setdefault(kind, 0); st["music"].setdefault(kind, 0)
     pal_list = palettes.LESSON if kind == "lesson" else palettes.NEWS
-    palette = palettes.NEWS[0] if kind == "story" else pal_list[st["palette"][kind] % len(pal_list)]
+    palette = palettes.NEWS[0] if kind in ("story", "chart") else pal_list[st["palette"][kind] % len(pal_list)]
+    background = None
 
     if kind == "lesson":
         with open(LESSONS, encoding="utf-8") as f:
@@ -150,6 +151,18 @@ def main():
         html = builder.build_story(spec, palette, builder.arm_date(now))
         caption = ""
         label = "Story «Շուկան այսօր»"
+    elif kind == "chart":
+        from . import market
+        try:
+            spec = market.build_chart_spec()
+        except Exception as exc:  # noqa: BLE001
+            RUN_LOG.extend(market.NOTES)
+            notify(f"⚠️ «Bitcoin 24 ժամում» Story-ն չհրապարակվեց՝ {exc}"); raise
+        RUN_LOG.extend(market.NOTES)
+        summary(f"[chart] candles from {spec['source']}, price confirmed by a second source")
+        html = builder.build_chart_story(spec, palette, builder.arm_date(now))
+        caption = ""
+        label = "Story «Bitcoin 24 ժամում»"
     else:
         from . import news
         try:
@@ -163,17 +176,31 @@ def main():
             if not a.no_publish:
                 commit_log(kind, "ℹ️ skipped")
             return 0
-        html = builder.build_news(spec, palette, builder.arm_date(now))
+        from . import pexels
+        used = st.setdefault("used_broll", [])
+        background, vid = pexels.fetch(spec.get("broll", ""), set(used))
+        RUN_LOG.extend(pexels.NOTES)
+        if vid:
+            used.append(vid); st["used_broll"] = used[-60:]
+        html = builder.build_news(spec, palette, builder.arm_date(now), footage=bool(background))
         caption = spec["caption"].strip()
         label = f"լուր «{spec['headline']}»"
 
-    tracks = render.music_tracks("news" if kind == "story" else kind)
+    tracks = render.music_tracks("news" if kind in ("story", "chart") else kind)
     music = tracks[st["music"][kind] % len(tracks)] if tracks else None
     rid = now.strftime("%Y%m%d-%H%M") + f"-{kind}"
     os.makedirs(a.out, exist_ok=True)
     mp4 = os.path.join(a.out, rid + ".mp4")
     t0 = time.time()
-    dur = render.render(html, mp4, music)
+    tint = palette["bg"].split("#", 1)[1][:6] if "#" in palette["bg"] else "07101F"
+    dur = render.render(html, mp4, music, background=background, tint="0x" + tint)
+    teaser = None
+    if kind in ("lesson", "news"):
+        try:
+            teaser = os.path.join(a.out, rid + "-teaser.mp4")
+            render.make_teaser(mp4, builder.teaser_overlay(palette, kind), teaser)
+        except Exception as exc:  # noqa: BLE001
+            summary(f"[teaser] not created: {str(exc)[:150]}"); teaser = None
     cover = os.path.join(a.out, rid + ".jpg")
     make_cover(html, cover)
     with open(os.path.join(a.out, rid + ".txt"), "w", encoding="utf-8") as f:
@@ -193,6 +220,8 @@ def main():
     os.makedirs(DOCS_REELS, exist_ok=True)
     shutil.copy(mp4, os.path.join(DOCS_REELS, rid + ".mp4"))
     shutil.copy(cover, os.path.join(DOCS_REELS, rid + ".jpg"))
+    if teaser:
+        shutil.copy(teaser, os.path.join(DOCS_REELS, rid + "-teaser.mp4"))
     open(os.path.join(ROOT, "docs", ".nojekyll"), "a").close()
     cleanup_old(now)
     state.save(st)
@@ -216,7 +245,7 @@ def main():
         if not ig._configured():
             media_id = None
         else:
-            if kind == "story":
+            if kind in ("story", "chart"):
                 params = dict(media_type="STORIES", video_url=url)
             else:
                 params = dict(media_type="REELS", video_url=url, caption=caption)
@@ -233,6 +262,22 @@ def main():
         return 1
     notify(f"✅ Հրապարակվեց՝ {label}\nԳույն՝ {palette['name']}, տևողություն՝ {dur:.0f} վրկ")
     print("published", media_id)
+    status = "✅ published"
+    if teaser:
+        turl = f"{PAGES_BASE_URL}/reels/{rid}-teaser.mp4"
+        try:
+            if not wait_until_reachable(turl, timeout=180):
+                raise RuntimeError("teaser not reachable on GitHub Pages")
+            c = ig._post(f"{IG_USER_ID}/media", media_type="STORIES", video_url=turl)
+            ig._wait_until_finished(c["id"])
+            ig._publish(c["id"])
+            summary("✅ teaser Story published"); status += " + teaser"
+        except Exception as exc:  # noqa: BLE001
+            summary(f"⚠️ teaser Story failed (the Reel itself is fine): {str(exc)[:200]}")
+    try:
+        commit_log(kind, status)
+    except Exception as exc:  # noqa: BLE001
+        print(f"[log] {exc}")
     return 0
 
 
