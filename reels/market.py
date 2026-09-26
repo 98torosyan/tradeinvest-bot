@@ -11,6 +11,11 @@ import requests
 
 UA = {"User-Agent": "Mozilla/5.0 (TradeInvest bot)"}
 T = 20
+NOTES = []  # diagnostics shown in reels/last_run.md
+
+
+def note(msg):
+    print(msg); NOTES.append(msg)
 
 
 def _get(url, **kw):
@@ -23,7 +28,7 @@ def _safe(fn, *a):
     try:
         return fn(*a)
     except Exception as exc:  # noqa: BLE001
-        print(f"[market] {fn.__name__} failed: {exc}")
+        note(f"[market] {fn.__name__} failed: {str(exc)[:150]}")
         return None
 
 
@@ -136,7 +141,8 @@ def build_spec():
         if r:
             rows[asset] = r
         else:
-            print(f"[market] {asset}: sources disagree or missing -> row dropped")
+            got = {n: round(v[asset]["price"], 2) for n, v in srcs.items() if v and asset in v}
+            note(f"[market] {asset} row dropped, sources: {got}")
     if "BTC" not in rows or "ETH" not in rows:
         raise RuntimeError("BTC/ETH գները չհաջողվեց ստուգել առնվազն երկու աղբյուրով")
     fng = _safe(fear_greed)

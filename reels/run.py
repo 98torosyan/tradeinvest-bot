@@ -24,9 +24,13 @@ KEEP_DAYS = 3
 HASHTAGS_LESSON = "#crypto #bitcoin #կրիպտո #հայերեն #cryptoeducation"
 
 
+RUN_LOG = []
+
+
 def summary(text):
-    """Written to the GitHub run page, so problems are visible without logs."""
+    """Written to the GitHub run page and to reels/last_run.md, so problems are visible without logs."""
     print(text)
+    RUN_LOG.append(text)
     path = os.environ.get("GITHUB_STEP_SUMMARY")
     if path:
         with open(path, "a", encoding="utf-8") as f:
@@ -69,6 +73,25 @@ def git(*args):
     subprocess.run(["git", *args], cwd=ROOT, check=True)
 
 
+def write_run_log(kind, status):
+    stamp = dt.datetime.now(ZoneInfo("Asia/Yerevan")).strftime("%Y-%m-%d %H:%M")
+    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "last_run.md")
+    old = open(path, encoding="utf-8").read().split("\n---\n")[:15] if os.path.exists(path) else []
+    entry = f"**{stamp}** `{kind}` {status}\n" + "\n".join(f"- {l}" for l in RUN_LOG)
+    with open(path, "w", encoding="utf-8") as f:
+        f.write("\n---\n".join([entry] + old))
+
+
+def commit_log(kind, status):
+    """Commit only reels/last_run.md (used when nothing is published)."""
+    subprocess.run(["git", "checkout", "--", "reels/state.json"], cwd=ROOT)
+    subprocess.run(["git", "pull", "--rebase", "--quiet"], cwd=ROOT)
+    write_run_log(kind, status)
+    subprocess.run(["git", "add", "reels/last_run.md"], cwd=ROOT)
+    subprocess.run(["git", "commit", "-q", "-m", f"run log: {kind} {status}"], cwd=ROOT)
+    subprocess.run(["git", "push", "-q"], cwd=ROOT)
+
+
 def cleanup_old(now):
     removed = False
     legacy = os.path.join(ROOT, "docs", "media")  # old daily pipeline output, no longer used
@@ -90,6 +113,11 @@ def main():
     a = ap.parse_args()
 
     now = dt.datetime.now(ZoneInfo("Asia/Yerevan"))
+    if not a.no_publish:
+        try:
+            git("pull", "--rebase", "--quiet")  # another reel may have been published meanwhile
+        except Exception as exc:  # noqa: BLE001
+            print(f"[git] pull failed: {exc}")
     st = state.load()
     kind = a.kind
     st["palette"].setdefault(kind, 0); st["music"].setdefault(kind, 0)
@@ -116,7 +144,9 @@ def main():
         try:
             spec = market.build_spec()
         except Exception as exc:  # noqa: BLE001
+            RUN_LOG.extend(market.NOTES)
             notify(f"⚠️ «Շուկան այսօր» Story-ն չհրապարակվեց՝ {exc}"); raise
+        RUN_LOG.extend(market.NOTES)
         html = builder.build_story(spec, palette, builder.arm_date(now))
         caption = ""
         label = "Story «Շուկան այսօր»"
@@ -125,9 +155,14 @@ def main():
         try:
             spec = news.make_spec(st["posted_links"])
         except Exception as exc:  # noqa: BLE001
+            RUN_LOG.extend(news.NOTES)
             notify(f"⚠️ Լուրերի Reel-ը չստեղծվեց՝ {exc}"); raise
+        RUN_LOG.extend(news.NOTES)
         if not spec:
-            summary("ℹ️ Լուր չհրապարակվեց՝ հարմար նոր լուր չգտնվեց"); return 0
+            summary("ℹ️ Լուր չհրապարակվեց՝ հարմար նոր լուր չգտնվեց")
+            if not a.no_publish:
+                commit_log(kind, "ℹ️ skipped")
+            return 0
         html = builder.build_news(spec, palette, builder.arm_date(now))
         caption = spec["caption"].strip()
         label = f"լուր «{spec['headline']}»"
@@ -161,7 +196,8 @@ def main():
     open(os.path.join(ROOT, "docs", ".nojekyll"), "a").close()
     cleanup_old(now)
     state.save(st)
-    git("add", "-A", "docs", "reels/state.json")
+    write_run_log(kind, "✅ rendered, publishing")
+    git("add", "-A", "docs", "reels/state.json", "reels/last_run.md")
     git("commit", "-m", f"reel: {rid}")
     git("pull", "--rebase", "--quiet")
     git("push")
@@ -205,4 +241,10 @@ if __name__ == "__main__":
         sys.exit(main())
     except Exception as exc:  # noqa: BLE001
         summary(f"❌ Սխալ՝ {type(exc).__name__}: {exc}")
+        try:
+            kind = next((sys.argv[i + 1] for i, x in enumerate(sys.argv) if x == "--kind"), "?")
+            if "--no-publish" not in sys.argv:
+                commit_log(kind, "❌ failed")
+        except Exception as e2:  # noqa: BLE001
+            print(f"[log] {e2}")
         raise

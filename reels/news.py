@@ -16,6 +16,13 @@ FEEDS = [
     "https://decrypt.co/feed",
 ]
 SOURCE_NAMES = {"coindesk.com": "CoinDesk", "cointelegraph.com": "Cointelegraph", "decrypt.co": "Decrypt"}
+NOTES = []
+
+
+def note(msg):
+    print(msg); NOTES.append(msg)
+
+
 BANNED = ["guarantee", "risk-free", "100%", "երաշխավորված շահույթ", "անպայման կաճ", "անպայման կընկն", "գնիր հիմա", "վաճառիր հիմա"]
 
 
@@ -31,9 +38,9 @@ def fetch_items(exclude, per_feed=10):
             resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0 (TradeInvest bot)"}, timeout=25)
             resp.raise_for_status()
             feed = feedparser.parse(resp.content)
-            print(f"[news] {url}: {len(feed.entries)} items")
+            note(f"[news] {url}: {len(feed.entries)} items")
         except Exception as exc:  # noqa: BLE001
-            print(f"[news] feed failed {url}: {exc}"); continue
+            note(f"[news] feed failed {url}: {str(exc)[:150]}"); continue
         for e in feed.entries[:per_feed]:
             link = e.get("link", "")
             if not link or link in exclude:
@@ -106,13 +113,13 @@ def _validate(d, n_items):
 def make_spec(exclude):
     items = fetch_items(set(exclude))
     if not items:
-        print("[news] no fresh items"); return None
+        note("[news] no fresh items"); return None
     listing = "\n".join(f"[{i}] {it['source']}: {it['title']}\n    {it['summary']}" for i, it in enumerate(items))
     prompt = PROMPT.format(icons=", ".join(ICONS), items=listing)
     for attempt in range(2):
         d = gemini.generate_json(prompt)
         if d.get("skip"):
-            print("[news] Gemini found nothing suitable"); return None
+            note("[news] Gemini found nothing suitable"); return None
         errs = _validate(d, len(items))
         if not errs:
             it = items[d["index"]]
@@ -120,6 +127,6 @@ def make_spec(exclude):
             if "Աղբյուր" not in d.get("caption", ""):
                 d["caption"] = d.get("caption", "") + f"\n\nԱղբյուր՝ {it['source']}"
             return d
-        print(f"[news] attempt {attempt + 1} invalid: {errs}")
+        note(f"[news] attempt {attempt + 1} invalid: {errs}")
         prompt += "\n\nYour previous answer had these problems, fix them: " + "; ".join(errs)
     return None
