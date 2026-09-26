@@ -127,3 +127,5 @@ svg.icon *{fill:none;stroke:var(--a2);stroke-width:5;stroke-linecap:round;stroke
 body.footage{background:transparent !important}
 body.footage .blob,body.footage .gridlines{display:none}
 body.footage .card{background:rgba(6,12,24,.55);border-color:rgba(255,255,255,.16)}
+body.footage .card{background:rgba(4,8,18,.78)}
+body.footage .h1,body.footage .h2{text-shadow:0 4px 24px rgba(0,0,0,.6)}

@@ -52,8 +52,8 @@ def render(html, out_mp4, music=None, background=None, tint="#07101F"):
         cmd += ["-stream_loop", "-1", "-i", background]
         filters.append(
             f"[{idx}:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,setpts=1.3*PTS,fps={FPS},"
-            f"eq=saturation=0.55:brightness=-0.05,gblur=sigma=1.2,trim=0:{duration:.2f},setpts=PTS-STARTPTS[bg];"
-            f"color=c={tint}@0.66:s=1080x1920:r={FPS}:d={duration:.2f}[tint];"
+            f"eq=saturation=0.45:brightness=-0.06,gblur=sigma=3.5,trim=0:{duration:.2f},setpts=PTS-STARTPTS[bg];"
+            f"color=c={tint}@0.80:s=1080x1920:r={FPS}:d={duration:.2f}[tint];"
             f"[bg][tint]overlay=shortest=1[bgt];[bgt][0:v]overlay=shortest=1:format=auto[v]")
         vmap = "[v]"; idx += 1
     if music:

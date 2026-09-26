@@ -7,7 +7,7 @@ import tempfile
 import requests
 
 API = "https://api.pexels.com/videos/search"
-FALLBACK_QUERIES = ["city skyline night", "abstract blue technology", "stock market screen", "server room lights"]
+FALLBACK_QUERIES = ["city skyline night", "abstract blue light", "server room lights", "night highway timelapse"]
 NOTES = []
 
 

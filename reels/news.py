@@ -72,7 +72,7 @@ Return ONLY this JSON:
   {{"title": "Ի՞նչ է նշանակում", "icon": "<icon>", "paragraphs": [{{"text": "<max 110 characters>", "em": false}}, {{"text": "<key takeaway, max 80 characters>", "em": true}}]}},
   {{"title": "Քեզ ի՞նչ", "icon": "<icon>", "paragraphs": [{{"text": "<what it means for an ordinary person, max 110 characters>", "em": false}}, {{"text": "<calm, neutral reminder, max 80 characters>", "em": true}}]}}
  ],
- "broll": "<2-4 English words for a calm cinematic background video that fits this news, e.g. 'city skyline night', 'gold bars', 'server room lights', 'stock exchange screen'. No people, no faces, no logos, no brand names>",
+ "broll": "<2-4 English words for a calm cinematic background video that fits this news, e.g. 'city skyline night', 'gold bars', 'server room lights', 'abstract blue light'. No people, no faces, no logos, no brand names, and no screens with numbers or text (they would compete with our own text)>",
  "caption": "<2-4 Armenian sentences summarising the news, then a new line 'Աղբյուր՝ SOURCE', then a new line with 4-5 hashtags like #crypto #bitcoin #կրիպտո #հայերեն>"
 }}
 Allowed icons: {icons}
