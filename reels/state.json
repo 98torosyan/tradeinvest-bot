@@ -2,16 +2,17 @@
  "course_index": 2,
  "lesson_index": 6,
  "palette": {
-  "news": 1,
+  "news": 2,
   "lesson": 8,
   "story": 1
  },
  "music": {
-  "news": 1,
+  "news": 2,
   "lesson": 8,
   "story": 1
  },
  "posted_links": [
-  "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack"
+  "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
+  "https://www.coindesk.com/policy/2026/09/25/u-s-sec-s-steadiest-crypto-advocate-hester-peirce-to-depart-next-week"
  ]
 }
