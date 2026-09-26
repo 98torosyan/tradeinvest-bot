@@ -2,18 +2,22 @@
  "course_index": 4,
  "lesson_index": 6,
  "palette": {
-  "news": 3,
+  "news": 4,
   "lesson": 10,
   "story": 1
  },
  "music": {
-  "news": 3,
+  "news": 4,
   "lesson": 10,
   "story": 1
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
   "https://www.coindesk.com/policy/2026/09/25/u-s-sec-s-steadiest-crypto-advocate-hester-peirce-to-depart-next-week",
-  "https://cointelegraph.com/news/sec-commissioner-hester-peirce-to-leave-post-on-oct-2?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  "https://cointelegraph.com/news/sec-commissioner-hester-peirce-to-leave-post-on-oct-2?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://decrypt.co/379391/bitcoin-etfs-notch-seven-day-winning-streak-as-2026-flows-turn-green"
+ ],
+ "used_broll": [
+  38431825
  ]
 }
