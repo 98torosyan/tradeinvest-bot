@@ -2,14 +2,16 @@
  "course_index": 1,
  "lesson_index": 6,
  "palette": {
-  "news": 0,
+  "news": 1,
   "lesson": 7,
   "story": 1
  },
  "music": {
-  "news": 0,
+  "news": 1,
   "lesson": 7,
   "story": 1
  },
- "posted_links": []
+ "posted_links": [
+  "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack"
+ ]
 }
