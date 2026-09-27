@@ -1,3 +1,6 @@
+**2026-09-27 18:18** `lesson` ✅ rendered, publishing
+
+---
 **2026-09-27 16:56** `news` ✅ published + teaser
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -78,9 +81,3 @@
 - ✅ Հրապարակվեց՝ լուր «Bitcoin ETF-ները աճ են գրանցել»
 Գույն՝ midnight, տևողություն՝ 36 վրկ
 - ✅ teaser Story published
----
-**2026-09-27 01:01** `news` ✅ rendered, publishing
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 54 items
-- [pexels] using video 38431825 for 'stock exchange screen'
