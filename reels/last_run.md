@@ -1,3 +1,6 @@
+**2026-09-27 09:18** `lesson` ✅ rendered, publishing
+
+---
 **2026-09-27 08:50** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7743.41}
