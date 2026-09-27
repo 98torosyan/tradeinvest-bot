@@ -1,3 +1,6 @@
+**2026-09-27 15:18** `lesson` ✅ rendered, publishing
+
+---
 **2026-09-27 12:21** `lesson` ✅ published + teaser
 - ✅ Հրապարակվեց՝ դաս «Ի՞նչ է ինդեքսը» (Մակարդակ 0՝ Շուկայի այբուբեն | Դաս 6/12)
 Գույն՝ wine, տևողություն՝ 34 վրկ
@@ -71,9 +74,3 @@
 
 ---
 **2026-09-26 21:21** `lesson` ✅ rendered, publishing
-
----
-**2026-09-26 20:25** `news` ✅ rendered, publishing
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 34 items
