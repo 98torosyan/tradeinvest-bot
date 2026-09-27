@@ -1,3 +1,8 @@
+**2026-09-27 19:48** `chart` ✅ published
+- [chart] candles from binance, price confirmed by a second source
+- ✅ Հրապարակվեց՝ Story «Bitcoin 24 ժամում»
+Գույն՝ midnight, տևողություն՝ 16 վրկ
+---
 **2026-09-27 19:46** `chart` ✅ rendered, publishing
 - [chart] candles from binance, price confirmed by a second source
 ---
@@ -72,8 +77,3 @@
 **2026-09-27 08:48** `story` ✅ rendered, publishing
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7743.41}
----
-**2026-09-27 01:18** `chart` ✅ published
-- [chart] candles from binance, price confirmed by a second source
-- ✅ Հրապարակվեց՝ Story «Bitcoin 24 ժամում»
-Գույն՝ midnight, տևողություն՝ 16 վրկ
