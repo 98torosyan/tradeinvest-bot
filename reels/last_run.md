@@ -1,3 +1,9 @@
+**2026-09-27 08:50** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7743.41}
+- ✅ Հրապարակվեց՝ Story «Շուկան այսօր»
+Գույն՝ midnight, տևողություն՝ 15 վրկ
+---
 **2026-09-27 08:48** `story` ✅ rendered, publishing
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7743.41}
