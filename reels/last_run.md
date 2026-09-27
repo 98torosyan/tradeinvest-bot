@@ -1,3 +1,6 @@
+**2026-09-27 19:46** `chart` ✅ rendered, publishing
+- [chart] candles from binance, price confirmed by a second source
+---
 **2026-09-27 18:20** `lesson` ✅ published + teaser
 - ✅ Հրապարակվեց՝ դաս «Ներդրում, թե՞ թրեյդինգ» (Մակարդակ 0՝ Շուկայի այբուբեն | Դաս 8/12)
 Գույն՝ forest, տևողություն՝ 34 վրկ
@@ -74,6 +77,3 @@
 - [chart] candles from binance, price confirmed by a second source
 - ✅ Հրապարակվեց՝ Story «Bitcoin 24 ժամում»
 Գույն՝ midnight, տևողություն՝ 16 վրկ
----
-**2026-09-27 01:17** `chart` ✅ rendered, publishing
-- [chart] candles from binance, price confirmed by a second source
