@@ -1,3 +1,9 @@
+**2026-09-27 20:27** `news` ✅ rendered, publishing
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 36 items
+- [pexels] using video 39625195 for 'abstract blue light'
+---
 **2026-09-27 19:48** `chart` ✅ published
 - [chart] candles from binance, price confirmed by a second source
 - ✅ Հրապարակվեց՝ Story «Bitcoin 24 ժամում»
@@ -73,7 +79,3 @@
 - [market] SPX row dropped, sources: {'yahoo': 7743.41}
 - ✅ Հրապարակվեց՝ Story «Շուկան այսօր»
 Գույն՝ midnight, տևողություն՝ 15 վրկ
----
-**2026-09-27 08:48** `story` ✅ rendered, publishing
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7743.41}

@@ -2,13 +2,13 @@
  "course_index": 8,
  "lesson_index": 6,
  "palette": {
-  "news": 6,
+  "news": 7,
   "lesson": 14,
   "story": 2,
   "chart": 2
  },
  "music": {
-  "news": 6,
+  "news": 7,
   "lesson": 14,
   "story": 2,
   "chart": 2
@@ -19,11 +19,13 @@
   "https://cointelegraph.com/news/sec-commissioner-hester-peirce-to-leave-post-on-oct-2?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://decrypt.co/379391/bitcoin-etfs-notch-seven-day-winning-streak-as-2026-flows-turn-green",
   "https://cointelegraph.com/news/bitget-clarifies-assets-affected-security-breach?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://decrypt.co/379350/bitget-hack-387m-what-happened-why-north-korea-suspect"
+  "https://decrypt.co/379350/bitget-hack-387m-what-happened-why-north-korea-suspect",
+  "https://decrypt.co/379398/sec-staff-token-buybacks-dont-make-crypto-security"
  ],
  "used_broll": [
   38431825,
   28709421,
-  18866694
+  18866694,
+  39625195
  ]
 }
