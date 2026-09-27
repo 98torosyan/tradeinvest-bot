@@ -1,3 +1,8 @@
+**2026-09-27 09:20** `lesson` ✅ published + teaser
+- ✅ Հրապարակվեց՝ դաս «Ի՞նչ է բաժնետոմսը» (Մակարդակ 0՝ Շուկայի այբուբեն | Դաս 5/12)
+Գույն՝ forest, տևողություն՝ 32 վրկ
+- ✅ teaser Story published
+---
 **2026-09-27 09:18** `lesson` ✅ rendered, publishing
 
 ---
