@@ -1,3 +1,12 @@
+**2026-09-27 16:56** `news` ✅ published + teaser
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 34 items
+- [pexels] using video 18866694 for 'server room lights'
+- ✅ Հրապարակվեց՝ լուր «Bitget բորսայի հաքերային կորուստները հասել են 387 մլն դոլարի»
+Գույն՝ graphite, տևողություն՝ 40 վրկ
+- ✅ teaser Story published
+---
 **2026-09-27 16:54** `news` ✅ rendered, publishing
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -75,8 +84,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 54 items
 - [pexels] using video 38431825 for 'stock exchange screen'
----
-**2026-09-27 00:54** `news` ✅ rendered, publishing
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 34 items
