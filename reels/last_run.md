@@ -1,3 +1,12 @@
+**2026-09-27 20:28** `news` ✅ published + teaser
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 36 items
+- [pexels] using video 39625195 for 'abstract blue light'
+- ✅ Հրապարակվեց՝ լուր «SEC. Token հետգնումը կրիպտոակտիվը չի դարձնում արժեթուղթ»
+Գույն՝ midnight, տևողություն՝ 38 վրկ
+- ✅ teaser Story published
+---
 **2026-09-27 20:27** `news` ✅ rendered, publishing
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -72,10 +81,3 @@
 - ✅ teaser Story published
 ---
 **2026-09-27 09:18** `lesson` ✅ rendered, publishing
-
----
-**2026-09-27 08:50** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7743.41}
-- ✅ Հրապարակվեց՝ Story «Շուկան այսօր»
-Գույն՝ midnight, տևողություն՝ 15 վրկ
