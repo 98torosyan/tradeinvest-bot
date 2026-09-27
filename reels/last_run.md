@@ -1,3 +1,9 @@
+**2026-09-27 10:54** `news` ✅ rendered, publishing
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 34 items
+- [pexels] using video 28709421 for 'server room lights'
+---
 **2026-09-27 09:20** `lesson` ✅ published + teaser
 - ✅ Հրապարակվեց՝ դաս «Ի՞նչ է բաժնետոմսը» (Մակարդակ 0՝ Շուկայի այբուբեն | Դաս 5/12)
 Գույն՝ forest, տևողություն՝ 32 վրկ
