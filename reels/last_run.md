@@ -1,3 +1,8 @@
+**2026-09-27 15:20** `lesson` ✅ published + teaser
+- ✅ Հրապարակվեց՝ դաս «Ոսկին՝ «ապահով նավահանգիստ»» (Մակարդակ 0՝ Շուկայի այբուբեն | Դաս 7/12)
+Գույն՝ amber, տևողություն՝ 34 վրկ
+- ✅ teaser Story published
+---
 **2026-09-27 15:18** `lesson` ✅ rendered, publishing
 
 ---
@@ -71,6 +76,3 @@
 - [news] https://decrypt.co/feed: 34 items
 ---
 **2026-09-27 00:48** `lesson` ✅ rendered, publishing
-
----
-**2026-09-26 21:21** `lesson` ✅ rendered, publishing
