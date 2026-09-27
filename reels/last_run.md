@@ -1,3 +1,8 @@
+**2026-09-27 21:21** `lesson` ✅ published + teaser
+- ✅ Հրապարակվեց՝ դաս «Ռիսկ և շահույթ» (Մակարդակ 0՝ Շուկայի այբուբեն | Դաս 9/12)
+Գույն՝ wine, տևողություն՝ 35 վրկ
+- ✅ teaser Story published
+---
 **2026-09-27 21:17** `lesson` ✅ rendered, publishing
 
 ---
@@ -77,8 +82,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 34 items
 - [pexels] using video 28709421 for 'server room lights'
----
-**2026-09-27 09:20** `lesson` ✅ published + teaser
-- ✅ Հրապարակվեց՝ դաս «Ի՞նչ է բաժնետոմսը» (Մակարդակ 0՝ Շուկայի այբուբեն | Դաս 5/12)
-Գույն՝ forest, տևողություն՝ 32 վրկ
-- ✅ teaser Story published
