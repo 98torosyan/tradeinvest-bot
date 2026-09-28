@@ -1,3 +1,20 @@
+**2026-09-28 09:20** `lesson` ✅ published
+- [pexels] using video 29025308 for 'city skyline night'
+- [pexels] video 36108468 rejected by the content check
+- [pexels] video 35972076 rejected by the content check
+- [pexels] video 34381274 rejected by the content check
+- [pexels] using video 39468111 for 'city skyline night'
+- [pexels] using video 18979105 for 'city lights night'
+- [pexels] using video 33472428 for 'empty street morning'
+- [pexels] using video 28201503 for 'rain window city'
+- [pexels] using video 7477551 for 'handshake close up'
+- [pexels] video 36108468 rejected by the content check
+- [pexels] video 35972076 rejected by the content check
+- [pexels] video 34381274 rejected by the content check
+- [pexels] video 39481319 rejected by the content check
+- [pexels] using video 11745565 for 'city skyline night'
+- ✅ M1-02 «Ինչպե՞ս է ձևավորվում գինը» published (26s, cta=question)
+---
 **2026-09-28 09:00** `lesson` ✅ published
 - [pexels] using video 11335976 for 'city skyline night'
 - [pexels] video 8540407 rejected by the content check
