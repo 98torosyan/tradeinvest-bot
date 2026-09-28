@@ -1,3 +1,7 @@
+**2026-09-28 08:51** `story` ✅ rendered, publishing
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7743.41}
+---
 **2026-09-27 21:21** `lesson` ✅ published + teaser
 - ✅ Հրապարակվեց՝ դաս «Ռիսկ և շահույթ» (Մակարդակ 0՝ Շուկայի այբուբեն | Դաս 9/12)
 Գույն՝ wine, տևողություն՝ 35 վրկ
@@ -76,9 +80,3 @@
 - ✅ Հրապարակվեց՝ լուր «Bitget-ի անվտանգության խախտման հետևանքով վնասները»
 Գույն՝ teal, տևողություն՝ 38 վրկ
 - ✅ teaser Story published
----
-**2026-09-27 10:54** `news` ✅ rendered, publishing
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 34 items
-- [pexels] using video 28709421 for 'server room lights'
