@@ -1,3 +1,10 @@
+**2026-09-28 10:54** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 36 items
+- [pexels] using video 7846332 for 'abstract blue light server room'
+- ✅ News published: Solana ETF-ները գրանցել են ռեկորդային մուտքեր
+---
 **2026-09-28 09:20** `lesson` ✅ published
 - [pexels] using video 29025308 for 'city skyline night'
 - [pexels] video 36108468 rejected by the content check

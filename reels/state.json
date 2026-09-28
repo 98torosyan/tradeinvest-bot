@@ -17,7 +17,7 @@
   }
  },
  "palette": {
-  "news": 0
+  "news": 1
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -26,7 +26,8 @@
   "https://decrypt.co/379391/bitcoin-etfs-notch-seven-day-winning-streak-as-2026-flows-turn-green",
   "https://cointelegraph.com/news/bitget-clarifies-assets-affected-security-breach?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://decrypt.co/379350/bitget-hack-387m-what-happened-why-north-korea-suspect",
-  "https://decrypt.co/379398/sec-staff-token-buybacks-dont-make-crypto-security"
+  "https://decrypt.co/379398/sec-staff-token-buybacks-dont-make-crypto-security",
+  "https://www.coindesk.com/markets/2026/09/28/solana-etfs-draw-record-usd188-million-in-a-week-as-bitwise-takes-two-thirds-of-inflows"
  ],
  "used_broll": [
   38431825,
@@ -45,7 +46,8 @@
   33472428,
   28201503,
   7477551,
-  11745565
+  11745565,
+  7846332
  ],
  "bandit": {
   "cta": {}
@@ -53,9 +55,16 @@
  "music_used": {
   "2026-09-28": [
    "delayed-flight.mp3",
-   "cbpd.mp3"
+   "cbpd.mp3",
+   "workout.mp3"
   ]
  },
- "last_track": "cbpd.mp3",
- "last_cta": "question"
+ "last_track": "workout.mp3",
+ "last_cta": "question",
+ "news_media": [
+  {
+   "media": "17960540055208000",
+   "date": "2026-09-28"
+  }
+ ]
 }
