@@ -1,5 +1,5 @@
 {
- "course_index": 3,
+ "course_index": 4,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -21,6 +21,13 @@
    "date": "2026-09-28",
    "hour": 12,
    "cta": "question"
+  },
+  "M1-04": {
+   "media": "18123586348926497",
+   "permalink": "https://www.instagram.com/reel/Dd1EY4Uggvb/",
+   "date": "2026-09-28",
+   "hour": 15,
+   "cta": "save"
   }
  },
  "palette": {
@@ -60,7 +67,13 @@
   35002915,
   15439746,
   16762623,
-  5635831
+  5635831,
+  10331098,
+  12595945,
+  30175521,
+  34578211,
+  8728110,
+  8745485
  ],
  "bandit": {
   "cta": {}
@@ -70,11 +83,12 @@
    "delayed-flight.mp3",
    "cbpd.mp3",
    "workout.mp3",
-   "memories.mp3"
+   "memories.mp3",
+   "delayed-flight.mp3"
   ]
  },
- "last_track": "memories.mp3",
- "last_cta": "question",
+ "last_track": "delayed-flight.mp3",
+ "last_cta": "save",
  "news_media": [
   {
    "media": "17960540055208000",

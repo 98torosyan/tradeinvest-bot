@@ -1,3 +1,18 @@
+**2026-09-28 15:18** `lesson` ✅ published
+- [pexels] video 39481319 rejected by the content check
+- [pexels] using video 10331098 for 'city skyline night'
+- [pexels] using video 12595945 for 'calm lake sunrise'
+- [pexels] video 31202359 rejected by the content check
+- [pexels] video 26690701 rejected by the content check
+- [pexels] video 30029522 rejected by the content check
+- [pexels] video 39481319 rejected by the content check
+- [pexels] using video 30175521 for 'city skyline night'
+- [pexels] download 28494561 failed: file too large
+- [pexels] using video 34578211 for 'abstract blue light'
+- [pexels] using video 8728110 for 'mountain climber'
+- [pexels] using video 8745485 for 'calm lake sunrise'
+- ✅ M1-04 «Trading և Investing» published (27s, cta=save)
+---
 **2026-09-28 13:50** `quiz` ✅ skipped
 - ℹ️ Quiz չկա՝ երեկ դաս չի հրապարակվել
 ---
@@ -125,5 +140,3 @@
 - ✅ Հրապարակվեց՝ դաս «Ի՞նչ է ինդեքսը» (Մակարդակ 0՝ Շուկայի այբուբեն | Դաս 6/12)
 Գույն՝ wine, տևողություն՝ 34 վրկ
 - ✅ teaser Story published
----
-**2026-09-27 12:19** `lesson` ✅ rendered, publishing
