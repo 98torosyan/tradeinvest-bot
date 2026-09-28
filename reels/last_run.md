@@ -1,3 +1,14 @@
+**2026-09-28 09:00** `lesson` ✅ published
+- [pexels] using video 11335976 for 'city skyline night'
+- [pexels] video 8540407 rejected by the content check
+- [pexels] using video 8540540 for 'farmers market stalls'
+- [pexels] using video 37104325 for 'city financial district'
+- [pexels] using video 39322557 for 'abstract blue light'
+- [pexels] using video 11933153 for 'city night timelapse'
+- [pexels] video 8540407 rejected by the content check
+- [pexels] using video 8541082 for 'farmers market stalls'
+- ✅ M1-01 «Ի՞նչ է ֆինանսական շուկան» published (29s, cta=save)
+---
 **2026-09-28 08:53** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7743.41}
