@@ -1,3 +1,9 @@
+**2026-09-28 16:53** `news` ❌ failed
+- ❌ news սխալ՝ RuntimeError: Gemini failed: gemini-2.5-flash: HTTP 404 {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features a | gemini-flash-lite-latest: HTTP 503 | gemini-flash-lite-
+---
 **2026-09-28 15:18** `lesson` ✅ published
 - [pexels] video 39481319 rejected by the content check
 - [pexels] using video 10331098 for 'city skyline night'
@@ -134,9 +140,3 @@
 - ✅ teaser Story published
 ---
 **2026-09-27 15:18** `lesson` ✅ rendered, publishing
-
----
-**2026-09-27 12:21** `lesson` ✅ published + teaser
-- ✅ Հրապարակվեց՝ դաս «Ի՞նչ է ինդեքսը» (Մակարդակ 0՝ Շուկայի այբուբեն | Դաս 6/12)
-Գույն՝ wine, տևողություն՝ 34 վրկ
-- ✅ teaser Story published
