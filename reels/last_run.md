@@ -1,3 +1,16 @@
+**2026-09-28 12:22** `lesson` ✅ published
+- [pexels] using video 11597069 for 'city skyline night'
+- [pexels] video 5995617 rejected by the content check
+- [pexels] using video 13801277 for 'stock exchange building'
+- [pexels] using video 35002915 for 'abstract network lights'
+- [pexels] download 28494561 failed: file too large
+- [pexels] using video 15439746 for 'abstract blue light'
+- [pexels] using video 16762623 for 'city night timelapse'
+- [pexels] video 5995617 rejected by the content check
+- [pexels] using video 5635831 for 'stock exchange building'
+- ✅ M1-03 «Ի՞նչ է բորսան» published (28s, cta=question)
+- ✅ teaser Story published
+---
 **2026-09-28 10:54** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
