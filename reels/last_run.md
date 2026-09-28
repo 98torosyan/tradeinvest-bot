@@ -1,3 +1,6 @@
+**2026-09-28 19:51** `chart` ✅ published
+- ✅ Story published
+---
 **2026-09-28 18:21** `lesson` ✅ published
 - [pexels] using video 39481319 for 'city skyline night'
 - [pexels] using video 7254961 for 'gold bars'
@@ -143,8 +146,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 34 items
 - [pexels] using video 18866694 for 'server room lights'
----
-**2026-09-27 15:20** `lesson` ✅ published + teaser
-- ✅ Հրապարակվեց՝ դաս «Ոսկին՝ «ապահով նավահանգիստ»» (Մակարդակ 0՝ Շուկայի այբուբեն | Դաս 7/12)
-Գույն՝ amber, տևողություն՝ 34 վրկ
-- ✅ teaser Story published

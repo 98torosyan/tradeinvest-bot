@@ -97,10 +97,11 @@
    "workout.mp3",
    "memories.mp3",
    "delayed-flight.mp3",
-   "cbpd.mp3"
+   "cbpd.mp3",
+   "autofahren.mp3"
   ]
  },
- "last_track": "cbpd.mp3",
+ "last_track": "autofahren.mp3",
  "last_cta": "send",
  "news_media": [
   {
