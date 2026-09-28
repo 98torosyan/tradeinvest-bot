@@ -1,3 +1,12 @@
+**2026-09-28 21:18** `lesson` ✅ published
+- [pexels] using video 39570925 for 'city skyline night'
+- [pexels] using video 39481172 for 'city skyline day'
+- [pexels] using video 35419124 for 'new york skyline'
+- [pexels] using video 11372816 for 'city aerial night'
+- [pexels] using video 33719666 for 'city skyline day'
+- ✅ M1-06 «Ի՞նչ է ինդեքսը» published (24s, cta=save)
+- ✅ teaser Story published
+---
 **2026-09-28 20:26** `news` ❌ failed
 - ❌ news սխալ՝ RuntimeError: Gemini failed: gemini-2.5-flash: HTTP 404 {
   "error": {
@@ -136,13 +145,3 @@
 - ✅ teaser Story published
 ---
 **2026-09-27 18:18** `lesson` ✅ rendered, publishing
-
----
-**2026-09-27 16:56** `news` ✅ published + teaser
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 34 items
-- [pexels] using video 18866694 for 'server room lights'
-- ✅ Հրապարակվեց՝ լուր «Bitget բորսայի հաքերային կորուստները հասել են 387 մլն դոլարի»
-Գույն՝ graphite, տևողություն՝ 40 վրկ
-- ✅ teaser Story published
