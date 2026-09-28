@@ -1,0 +1,19 @@
+.graphic .dim,.hero .dim{position:absolute;inset:0;background:rgba(0,0,0,.55)}
+.gcard{position:absolute;left:80px;right:80px;top:640px;padding:56px 50px;border-radius:40px;text-align:center;
+  background:rgba(8,12,20,.78);border:2px solid rgba(255,255,255,.16);box-shadow:0 30px 90px rgba(0,0,0,.5)}
+.gt{font-size:44px;font-weight:800;color:var(--a2);letter-spacing:.01em}
+.gx{font-size:70px;font-weight:800;line-height:1.2;margin-top:26px;font-family:ArmSans,sans-serif}
+.cmp{position:absolute;left:70px;right:70px;top:620px;display:flex;align-items:stretch;gap:0}
+.cmp .side{flex:1;padding:44px 30px;border-radius:34px;background:rgba(8,12,20,.8);border:2px solid rgba(255,255,255,.16);text-align:center}
+.cmp .side .gx{font-size:48px;margin-top:20px}
+.cmp .vs{align-self:center;width:110px;height:110px;margin:0 -20px;z-index:2;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  font-size:40px;font-weight:800;color:var(--onacc);background:linear-gradient(135deg,var(--a2),var(--a));flex:none}
+.chk{position:absolute;left:90px;right:90px;top:560px}
+.chk .gt{font-size:56px;margin-bottom:34px;text-align:center}
+.chk .it{display:flex;align-items:center;gap:26px;font-size:54px;font-weight:700;padding:22px 30px;margin-bottom:18px;
+  border-radius:26px;background:rgba(8,12,20,.78);border:2px solid rgba(255,255,255,.14)}
+.chk .it i{font-style:normal;width:64px;height:64px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;
+  color:var(--onacc);background:linear-gradient(135deg,var(--a2),var(--a));font-size:36px}
+.outro .nxt{top:520px}.outro .nxt2{top:580px}.outro .logo{top:820px}.outro .name{top:1140px}
+.outro .nxt2{left:90px;right:90px;font-size:80px}
+.hero .hstack{left:80px;right:80px}

@@ -31,7 +31,7 @@ def _candidates(query, key):
     return out
 
 
-def fetch(query, used_ids):
+def fetch(query, used_ids, check=None):
     """Returns (path, video_id) or (None, None). Never raises."""
     key = os.environ.get("PEXELS_API_KEY", "")
     if not key:
@@ -58,6 +58,8 @@ def fetch(query, used_ids):
                 ok = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries",
                                      "stream=width,height", "-of", "csv=p=0", path], capture_output=True, text=True)
                 if ok.returncode == 0 and ok.stdout.strip():
+                    if check is not None and not check(path):
+                        note(f"[pexels] video {vid} rejected by the content check"); continue
                     note(f"[pexels] using video {vid} for '{q}'")
                     return path, vid
             except Exception as exc:  # noqa: BLE001

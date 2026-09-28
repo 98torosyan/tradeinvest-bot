@@ -1,295 +1,265 @@
-"""Entry point: python -m reels.run --kind lesson|news [--no-publish]
-
-1. build the script (lesson bank or fresh news via Gemini)
-2. render it to MP4 with the next colour palette and music track
-3. host it on GitHub Pages (docs/reels/), publish it as an Instagram Reel
-4. report the result to Telegram
-"""
+"""TradeInvest v1.0 entry point:  python -m reels.run --kind lesson|news|story|chart|quiz|carousel [--no-publish]"""
 import argparse
 import datetime as dt
-import json
 import os
-import shutil
 import subprocess
 import sys
-import time
+import traceback
 from zoneinfo import ZoneInfo
 
-from . import builder, palettes, render, state
+from . import (builder, captions, control, curriculum, hosting, lesson_video, music, palettes, qa, render,
+               settings, state)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DOCS_REELS = os.path.join(ROOT, "docs", "reels")
-LESSONS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "lessons.json")
-KEEP_DAYS = 3
-HASHTAGS_LESSON = "#crypto #bitcoin #կրիպտո #հայերեն #cryptoeducation"
-
-
+OUT = os.path.join(ROOT, "output", "reels")
+LOG = os.path.join(ROOT, "reels", "last_run.md")
 RUN_LOG = []
+sys.path.insert(0, ROOT)
 
 
 def summary(text):
-    """Written to the GitHub run page and to reels/last_run.md, so problems are visible without logs."""
-    print(text)
-    RUN_LOG.append(text)
-    path = os.environ.get("GITHUB_STEP_SUMMARY")
-    if path:
-        with open(path, "a", encoding="utf-8") as f:
-            f.write(text + "\n\n")
+    print(text); RUN_LOG.append(str(text))
+    p = os.environ.get("GITHUB_STEP_SUMMARY")
+    if p:
+        open(p, "a", encoding="utf-8").write(str(text) + "\n\n")
 
 
 def notify(text):
     summary(text)
     try:
-        sys.path.insert(0, ROOT)
         from delivery.telegram_sender import send_text
         send_text(text)
     except Exception as exc:  # noqa: BLE001
-        print(f"[notify] {exc}")
+        print("[notify]", exc)
 
 
-def make_cover(html, out_jpg):
-    """Screenshot of the moment the title is fully on screen -> Reel cover
-    (otherwise Instagram picks the first, still-empty frame)."""
-    import re
-    from playwright.sync_api import sync_playwright
-    m = re.search(r'data-out="([\d.]+)"', html)
-    t = max(1.5, float(m.group(1)) - 0.9) if m else 3.0
-    path = out_jpg + ".html"
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(html)
-    with sync_playwright() as p:
-        b = p.chromium.launch()
-        pg = b.new_page(viewport={"width": 1080, "height": 1920})
-        pg.goto(f"file://{path}")
-        pg.evaluate("document.fonts.ready")
-        pg.wait_for_timeout(400)
-        pg.evaluate(f"seek({t})")
-        pg.screenshot(path=out_jpg, type="jpeg", quality=92)
-        b.close()
-    os.remove(path)
+def write_log(kind, status, now):
+    old = open(LOG, encoding="utf-8").read().split("\n---\n")[:20] if os.path.exists(LOG) else []
+    entry = f"**{now:%Y-%m-%d %H:%M}** `{kind}` {status}\n" + "\n".join(f"- {l}" for l in RUN_LOG[-25:])
+    open(LOG, "w", encoding="utf-8").write("\n---\n".join([entry] + old))
 
 
-def git(*args):
-    subprocess.run(["git", *args], cwd=ROOT, check=True)
+def already_posted(marker_text):
+    from . import igapi
+    try:
+        for m in igapi.recent_media(25):
+            if marker_text in (m.get("caption") or ""):
+                return m
+    except Exception as exc:  # noqa: BLE001
+        summary(f"[dedupe] check unavailable: {str(exc)[:120]}")
+    return None
 
 
-def write_run_log(kind, status):
-    stamp = dt.datetime.now(ZoneInfo("Asia/Yerevan")).strftime("%Y-%m-%d %H:%M")
-    path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "last_run.md")
-    old = open(path, encoding="utf-8").read().split("\n---\n")[:15] if os.path.exists(path) else []
-    entry = f"**{stamp}** `{kind}` {status}\n" + "\n".join(f"- {l}" for l in RUN_LOG)
-    with open(path, "w", encoding="utf-8") as f:
-        f.write("\n---\n".join([entry] + old))
+def publish_story_file(path, rid, publish):
+    urls = hosting.publish([(path, f"reels/{rid}.mp4")])
+    from delivery.media_hosting import wait_until_reachable
+    url = urls[f"reels/{rid}.mp4"]
+    if not wait_until_reachable(url, timeout=300):
+        raise RuntimeError(f"not reachable on Pages: {url}")
+    if not publish:
+        return None
+    from . import igapi
+    return igapi.publish_story_video(url)
 
 
-def commit_log(kind, status):
-    """Commit only reels/last_run.md (used when nothing is published)."""
-    subprocess.run(["git", "checkout", "--", "reels/state.json"], cwd=ROOT)
-    subprocess.run(["git", "pull", "--rebase", "--quiet"], cwd=ROOT)
-    write_run_log(kind, status)
-    subprocess.run(["git", "add", "reels/last_run.md"], cwd=ROOT)
-    subprocess.run(["git", "commit", "-q", "-m", f"run log: {kind} {status}"], cwd=ROOT)
-    subprocess.run(["git", "push", "-q"], cwd=ROOT)
+# ---------------------------------------------------------------- lesson
+def do_lesson(st, now, rid, publish):
+    from delivery.media_hosting import wait_until_reachable
+    cur = curriculum.load()
+    idx = st.get("course_index", 0)
+    lesson, nxt = curriculum.next_lesson(cur, idx)
+    if lesson is None:
+        notify("🎓 Դասընթացի բոլոր դասերը հրապարակված են։"); return "done"
+    errs = qa.pre_render(lesson, cur, set(st.get("published", {})))
+    if errs:
+        if any("not written" in e for e in errs):
+            if st.get("no_script_alert") != now.strftime("%Y-%m-%d"):
+                st["no_script_alert"] = now.strftime("%Y-%m-%d")
+                notify(f"📚 {lesson['id']} «{lesson['title']}» դասի սցենարը դեռ գրված չէ։ Դասերը կանգնած են, մինչև հաջորդ մոդուլը պատրաստ լինի։")
+            return "no-script"
+        notify("⚠️ Դասը չանցավ ստուգումը.\n" + "\n".join(errs)); return "qa-fail"
+    m = lesson["module"]; size = curriculum.module_size(cur, m)
+    marker = f"{captions.marker(lesson, size)} · {lesson['title']}"
+    dup = already_posted(marker) if publish else None
+    if dup:
+        summary(f"[dedupe] {lesson['id']} is already on Instagram ({dup['id']}), only the state is updated")
+        st.setdefault("published", {})[lesson["id"]] = {"media": dup["id"], "permalink": dup.get("permalink"),
+                                                       "date": now.strftime("%Y-%m-%d"), "hour": now.hour}
+        st["course_index"] = idx + 1; return "dedupe"
+    pal = palettes.MODULE[m]
+    track = music.pick("lesson", m, st, now.strftime("%Y-%m-%d"))
+    info = {"module_size": size, "next_title": nxt["title"] if nxt else None}
+    mp4, cover = os.path.join(OUT, rid + ".mp4"), os.path.join(OUT, rid + ".jpg")
+    res = lesson_video.render_lesson(lesson, info, pal, mp4, cover, music=track, used_ids=st.get("used_broll", []))
+    from . import pexels
+    RUN_LOG.extend(pexels.NOTES)
+    caption, arm = captions.lesson_caption(lesson, size, st)
+    errs, warns = qa.post_render(lesson, res, caption)
+    for w in warns:
+        summary("[qa warning] " + w)
+    if errs:
+        fails = st.setdefault("qa_fail", {}); fails[lesson["id"]] = fails.get(lesson["id"], 0) + 1
+        if fails[lesson["id"]] >= 2:
+            st["course_index"] = idx + 1
+            notify(f"⏭ {lesson['id']} դասը 2 անգամ չանցավ ստուգումը և բաց է թողնվում.\n" + "\n".join(errs[:6]))
+        else:
+            notify(f"⚠️ {lesson['id']} դասը չանցավ ստուգումը (կփորձվի նորից).\n" + "\n".join(errs[:6]))
+        return "qa-fail"
+    teaser = None
+    if now.hour in settings.TEASER_HOURS:
+        try:
+            teaser = os.path.join(OUT, rid + "-teaser.mp4")
+            render.make_teaser(mp4, builder.teaser_overlay(pal, "lesson"), teaser)
+        except Exception as exc:  # noqa: BLE001
+            summary(f"[teaser] {exc}"); teaser = None
+    files = [(mp4, f"reels/{rid}.mp4"), (cover, f"reels/{rid}.jpg")] + ([(teaser, f"reels/{rid}-teaser.mp4")] if teaser else [])
+    from . import site
+    site_dir = os.path.join(OUT, "site"); site.build(cur, st, site_dir)
+    if not publish:
+        summary(f"[dry-run] {lesson['id']} rendered: {res['duration']:.1f}s, cta={arm}"); return "dry-run"
+    urls = hosting.publish(files, site_dir)
+    if not wait_until_reachable(urls[f"reels/{rid}.mp4"], timeout=300):
+        raise RuntimeError("video is not reachable on GitHub Pages")
+    from . import igapi
+    wait_until_reachable(urls[f"reels/{rid}.jpg"], timeout=60)
+    media = igapi.publish_reel(urls[f"reels/{rid}.mp4"], caption, cover_url=urls[f"reels/{rid}.jpg"], share_to_feed=True)
+    st.setdefault("published", {})[lesson["id"]] = {"media": media, "permalink": igapi.permalink(media),
+                                                   "date": now.strftime("%Y-%m-%d"), "hour": now.hour, "cta": arm}
+    st["course_index"] = idx + 1
+    st["used_broll"] = (st.get("used_broll", []) + res["clips"])[-80:]
+    summary(f"✅ {lesson['id']} «{lesson['title']}» published ({res['duration']:.0f}s, cta={arm})")
+    if teaser:
+        try:
+            igapi.publish_story_video(urls[f"reels/{rid}-teaser.mp4"]); summary("✅ teaser Story published")
+        except Exception as exc:  # noqa: BLE001
+            summary(f"⚠️ teaser failed (the Reel is fine): {str(exc)[:160]}")
+    left = curriculum.scripted_left(cur, idx + 1)
+    if left < settings.COURSE_LOW_WARNING and st.get("low_alert") != now.strftime("%Y-%m-%d"):
+        st["low_alert"] = now.strftime("%Y-%m-%d")
+        notify(f"📚 Մնացել է {left} պատրաստի սցենար։")
+    return "published"
 
 
-def cleanup_old(now):
-    removed = False
-    legacy = os.path.join(ROOT, "docs", "media")  # old daily pipeline output, no longer used
-    if os.path.isdir(legacy):
-        shutil.rmtree(legacy); removed = True
-    if os.path.isdir(DOCS_REELS):
-        cutoff = (now - dt.timedelta(days=KEEP_DAYS)).strftime("%Y%m%d")
-        for f in os.listdir(DOCS_REELS):
-            if f[:8].isdigit() and f[:8] < cutoff:
-                os.remove(os.path.join(DOCS_REELS, f)); removed = True
-    return removed
+# ---------------------------------------------------------------- news
+def do_news(st, now, rid, publish):
+    from . import news, pexels
+    from delivery.media_hosting import wait_until_reachable
+    spec = news.make_spec(st.get("posted_links", []))
+    RUN_LOG.extend(news.NOTES)
+    if not spec:
+        summary("ℹ️ Լուր չհրապարակվեց՝ հարմար նոր լուր չգտնվեց"); return "skipped"
+    k = st.setdefault("palette", {}).get("news", 0); pal = palettes.NEWS[k % len(palettes.NEWS)]
+    bg, vid = pexels.fetch(spec.get("broll", ""), set(st.get("used_broll", [])), check=lesson_video._clip_ok(False))
+    RUN_LOG.extend(pexels.NOTES)
+    html = builder.build_news(spec, pal, builder.arm_date(now), footage=bool(bg))
+    mp4 = os.path.join(OUT, rid + ".mp4")
+    dur = render.render(html, mp4, music.pick("news", None, st, now.strftime("%Y-%m-%d")), background=bg,
+                        tint="0x" + pal["bg"].split("#", 1)[1][:6])
+    caption = spec["caption"].strip()
+    if caption.count("#") > settings.MAX_HASHTAGS:
+        caption = caption[: caption.find("#")].rstrip() + "\n\n" + " ".join([t for t in caption.split() if t.startswith("#")][:5])
+    if not publish:
+        summary(f"[dry-run] news rendered {dur:.1f}s"); return "dry-run"
+    urls = hosting.publish([(mp4, f"reels/{rid}.mp4")])
+    if not wait_until_reachable(urls[f"reels/{rid}.mp4"], timeout=300):
+        raise RuntimeError("video is not reachable on GitHub Pages")
+    from . import igapi
+    media = igapi.publish_reel(urls[f"reels/{rid}.mp4"], caption, share_to_feed=False)   # Reels tab only: grid stays a course library
+    st["palette"]["news"] = k + 1
+    st.setdefault("posted_links", []).append(spec["link"])
+    if vid:
+        st["used_broll"] = (st.get("used_broll", []) + [vid])[-80:]
+    st.setdefault("news_media", []).append({"media": media, "date": now.strftime("%Y-%m-%d")})
+    st["news_media"] = st["news_media"][-60:]
+    summary(f"✅ News published: {spec['headline']}"); return "published"
+
+
+# ---------------------------------------------------------------- stories
+def do_story(st, now, rid, publish, chart=False):
+    from . import market
+    pal = palettes.NEWS[0]
+    if chart:
+        spec = market.build_chart_spec(); html = builder.build_chart_story(spec, pal, builder.arm_date(now))
+    else:
+        spec = market.build_spec(); html = builder.build_story(spec, pal, builder.arm_date(now))
+    RUN_LOG.extend(market.NOTES)
+    mp4 = os.path.join(OUT, rid + ".mp4")
+    render.render(html, mp4, music.pick("story", None, st, now.strftime("%Y-%m-%d")))
+    if not publish:
+        return "dry-run"
+    publish_story_file(mp4, rid, publish); summary("✅ Story published"); return "published"
+
+
+def do_quiz(st, now, rid, publish):
+    from . import quiz
+    cur = curriculum.load()
+    y = (now - dt.timedelta(days=1)).strftime("%Y-%m-%d")
+    lesson = quiz.pick(cur, st, y)
+    if not lesson:
+        summary("ℹ️ Quiz չկա՝ երեկ դաս չի հրապարակվել"); return "skipped"
+    mp4 = os.path.join(OUT, rid + ".mp4")
+    render.render(quiz.html(lesson, palettes.MODULE[lesson["module"]]), mp4,
+                  music.pick("quiz", lesson["module"], st, now.strftime("%Y-%m-%d")))
+    if not publish:
+        return "dry-run"
+    publish_story_file(mp4, rid, publish); st["quiz_count"] = st.get("quiz_count", 0) + 1
+    summary(f"✅ Quiz Story from {lesson['id']}"); return "published"
+
+
+def do_carousel(st, now, rid, publish):
+    from . import carousel
+    from delivery.media_hosting import wait_until_reachable
+    cur = {l["id"]: l for l in curriculum.load()["lessons"]}
+    since = (now - dt.timedelta(days=7)).strftime("%Y-%m-%d")
+    ls = [cur[i] for i, p in sorted(st.get("published", {}).items(), key=lambda kv: kv[1].get("date", "")) if p.get("date", "") >= since and i in cur]
+    if len(ls) < 2:
+        summary("ℹ️ Carousel չկա՝ քիչ դասեր այս շաբաթ"); return "skipped"
+    ls = ls[-24:]
+    pages = carousel.slides(ls, palettes.MODULE[ls[-1]["module"]], f"{since} → {now:%Y-%m-%d}")
+    imgs = carousel.render(pages, os.path.join(OUT, rid + "-car"))
+    if not publish:
+        return "dry-run"
+    urls = hosting.publish([(p, f"reels/{rid}-{i}.jpg") for i, p in enumerate(imgs)])
+    ordered = [urls[f"reels/{rid}-{i}.jpg"] for i in range(len(imgs))]
+    if not wait_until_reachable(ordered[-1], timeout=300):
+        raise RuntimeError("carousel images not reachable")
+    from . import igapi
+    cap = ("Շաբաթը մեկ էջով 📚\nԱյս շաբաթվա դասերի ամփոփումը մեկ տեղում։ Պահիր՝ կրկնելու համար։\n\n"
+           "📩 Ուղարկիր նրան, ով սովորում է crypto\n📚 Ամբողջ դասընթացը՝ հղումը bio-ում\n\n#crypto #trading #կրիպտո #հայերեն #cryptoeducation")
+    igapi.publish_carousel(ordered, cap); summary("✅ Weekly carousel published"); return "published"
+
+
+HANDLERS = {"lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
+            "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel}
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--kind", choices=["lesson", "news", "story", "chart"], required=True)
+    ap.add_argument("--kind", choices=list(HANDLERS), required=True)
     ap.add_argument("--no-publish", action="store_true")
-    ap.add_argument("--out", default=os.path.join(ROOT, "output", "reels"))
     a = ap.parse_args()
-
-    now = dt.datetime.now(ZoneInfo("Asia/Yerevan"))
-    if not a.no_publish:
-        try:
-            git("pull", "--rebase", "--quiet")  # another reel may have been published meanwhile
-        except Exception as exc:  # noqa: BLE001
-            print(f"[git] pull failed: {exc}")
+    now = dt.datetime.now(ZoneInfo(settings.TZ))
+    publish = not a.no_publish
+    if publish:
+        subprocess.run(["git", "pull", "-q", "--rebase"], cwd=ROOT)
+    if control.paused():
+        summary("⏸ paused (Telegram /pause) — nothing published"); return 0
+    os.makedirs(OUT, exist_ok=True)
     st = state.load()
-    kind = a.kind
-    st["palette"].setdefault(kind, 0); st["music"].setdefault(kind, 0)
-    pal_list = palettes.LESSON if kind == "lesson" else palettes.NEWS
-    palette = palettes.NEWS[0] if kind in ("story", "chart") else pal_list[st["palette"][kind] % len(pal_list)]
-    background = None
-
-    if kind == "lesson":
-        with open(LESSONS, encoding="utf-8") as f:
-            course = json.load(f)
-        idx = st.get("course_index", 0)
-        if idx >= len(course):
-            notify("📚 Դասընթացի պատրաստի դասերը վերջացան։ Պետք է ավելացնել հաջորդ մակարդակը (տես reels/curriculum.md)։")
-            print("course finished"); return 0
-        left = len(course) - idx - 1
-        if left < 10:
-            notify(f"📚 Դասընթացում մնացել է {left} պատրաստի դաս։ Ժամանակն է պատրաստել հաջորդ մակարդակը։")
-        spec = course[idx]
-        html = builder.build_lesson(spec, palette)
-        head = f"Մակարդակ {spec['level']}՝ {spec['level_name']} | Դաս {spec['n']}/{spec['total']}"
-        caption = head + "\n\n" + spec["caption"].strip() + "\n\n" + HASHTAGS_LESSON
-        label = f"դաս «{spec['title']}» ({head})"
-    elif kind == "story":
-        from . import market
-        try:
-            spec = market.build_spec()
-        except Exception as exc:  # noqa: BLE001
-            RUN_LOG.extend(market.NOTES)
-            notify(f"⚠️ «Շուկան այսօր» Story-ն չհրապարակվեց՝ {exc}"); raise
-        RUN_LOG.extend(market.NOTES)
-        html = builder.build_story(spec, palette, builder.arm_date(now))
-        caption = ""
-        label = "Story «Շուկան այսօր»"
-    elif kind == "chart":
-        from . import market
-        try:
-            spec = market.build_chart_spec()
-        except Exception as exc:  # noqa: BLE001
-            RUN_LOG.extend(market.NOTES)
-            notify(f"⚠️ «Bitcoin 24 ժամում» Story-ն չհրապարակվեց՝ {exc}"); raise
-        RUN_LOG.extend(market.NOTES)
-        summary(f"[chart] candles from {spec['source']}, price confirmed by a second source")
-        html = builder.build_chart_story(spec, palette, builder.arm_date(now))
-        caption = ""
-        label = "Story «Bitcoin 24 ժամում»"
-    else:
-        from . import news
-        try:
-            spec = news.make_spec(st["posted_links"])
-        except Exception as exc:  # noqa: BLE001
-            RUN_LOG.extend(news.NOTES)
-            notify(f"⚠️ Լուրերի Reel-ը չստեղծվեց՝ {exc}"); raise
-        RUN_LOG.extend(news.NOTES)
-        if not spec:
-            summary("ℹ️ Լուր չհրապարակվեց՝ հարմար նոր լուր չգտնվեց")
-            if not a.no_publish:
-                commit_log(kind, "ℹ️ skipped")
-            return 0
-        from . import pexels
-        used = st.setdefault("used_broll", [])
-        background, vid = pexels.fetch(spec.get("broll", ""), set(used))
-        RUN_LOG.extend(pexels.NOTES)
-        if vid:
-            used.append(vid); st["used_broll"] = used[-60:]
-        html = builder.build_news(spec, palette, builder.arm_date(now), footage=bool(background))
-        caption = spec["caption"].strip()
-        label = f"լուր «{spec['headline']}»"
-
-    tracks = render.music_tracks("news" if kind in ("story", "chart") else kind)
-    music = tracks[st["music"][kind] % len(tracks)] if tracks else None
-    rid = now.strftime("%Y%m%d-%H%M") + f"-{kind}"
-    os.makedirs(a.out, exist_ok=True)
-    mp4 = os.path.join(a.out, rid + ".mp4")
-    t0 = time.time()
-    tint = palette["bg"].split("#", 1)[1][:6] if "#" in palette["bg"] else "07101F"
-    dur = render.render(html, mp4, music, background=background, tint="0x" + tint)
-    teaser = None
-    if kind in ("lesson", "news"):
-        try:
-            teaser = os.path.join(a.out, rid + "-teaser.mp4")
-            render.make_teaser(mp4, builder.teaser_overlay(palette, kind), teaser)
-        except Exception as exc:  # noqa: BLE001
-            summary(f"[teaser] not created: {str(exc)[:150]}"); teaser = None
-    cover = os.path.join(a.out, rid + ".jpg")
-    make_cover(html, cover)
-    with open(os.path.join(a.out, rid + ".txt"), "w", encoding="utf-8") as f:
-        f.write(caption)
-    print(f"rendered {mp4} ({dur:.1f}s video, {time.time() - t0:.0f}s render, palette={palette['name']}, music={music and os.path.basename(music)})")
-
-    # advance rotation state
-    st["palette"][kind] += 1
-    st["music"][kind] += 1
-    if kind == "lesson":
-        st["course_index"] = st.get("course_index", 0) + 1
-    elif kind == "news":
-        st["posted_links"].append(spec["link"])
-    if a.no_publish:
+    rid = now.strftime("%Y%m%d-%H%M") + f"-{a.kind}"
+    status = "❌ failed"
+    try:
+        status = "✅ " + HANDLERS[a.kind](st, now, rid, publish)
         return 0
-
-    os.makedirs(DOCS_REELS, exist_ok=True)
-    shutil.copy(mp4, os.path.join(DOCS_REELS, rid + ".mp4"))
-    shutil.copy(cover, os.path.join(DOCS_REELS, rid + ".jpg"))
-    if teaser:
-        shutil.copy(teaser, os.path.join(DOCS_REELS, rid + "-teaser.mp4"))
-    open(os.path.join(ROOT, "docs", ".nojekyll"), "a").close()
-    cleanup_old(now)
-    state.save(st)
-    write_run_log(kind, "✅ rendered, publishing")
-    git("add", "-A", "docs", "reels/state.json", "reels/last_run.md")
-    git("commit", "-m", f"reel: {rid}")
-    git("pull", "--rebase", "--quiet")
-    git("push")
-
-    sys.path.insert(0, ROOT)
-    from config import PAGES_BASE_URL
-    from delivery.media_hosting import wait_until_reachable
-    from config import IG_USER_ID
-    from delivery import instagram_publisher as ig
-    url = f"{PAGES_BASE_URL}/reels/{rid}.mp4"
-    cover_url = f"{PAGES_BASE_URL}/reels/{rid}.jpg"
-    if not wait_until_reachable(url, timeout=300):
-        notify(f"⚠️ Reel-ը չհրապարակվեց. ֆայլը GitHub Pages-ում հասանելի չդարձավ՝ {url}")
-        return 1
-    try:
-        if not ig._configured():
-            media_id = None
-        else:
-            if kind in ("story", "chart"):
-                params = dict(media_type="STORIES", video_url=url)
-            else:
-                params = dict(media_type="REELS", video_url=url, caption=caption)
-                if wait_until_reachable(cover_url, timeout=120):
-                    params["cover_url"] = cover_url
-            container = ig._post(f"{IG_USER_ID}/media", **params)
-            ig._wait_until_finished(container["id"])
-            media_id = ig._publish(container["id"])
     except Exception as exc:  # noqa: BLE001
-        notify(f"⚠️ Instagram-ը մերժեց Reel-ը ({label})՝ {exc}")
-        raise
-    if not media_id:
-        notify("⚠️ Instagram-ի secret-ները (IG_USER_ID / IG_ACCESS_TOKEN) բացակայում են. Reel-ը չհրապարակվեց")
+        notify(f"❌ {a.kind} սխալ՝ {type(exc).__name__}: {str(exc)[:300]}")
+        print(traceback.format_exc())
         return 1
-    notify(f"✅ Հրապարակվեց՝ {label}\nԳույն՝ {palette['name']}, տևողություն՝ {dur:.0f} վրկ")
-    print("published", media_id)
-    status = "✅ published"
-    if teaser:
-        turl = f"{PAGES_BASE_URL}/reels/{rid}-teaser.mp4"
-        try:
-            if not wait_until_reachable(turl, timeout=180):
-                raise RuntimeError("teaser not reachable on GitHub Pages")
-            c = ig._post(f"{IG_USER_ID}/media", media_type="STORIES", video_url=turl)
-            ig._wait_until_finished(c["id"])
-            ig._publish(c["id"])
-            summary("✅ teaser Story published"); status += " + teaser"
-        except Exception as exc:  # noqa: BLE001
-            summary(f"⚠️ teaser Story failed (the Reel itself is fine): {str(exc)[:200]}")
-    try:
-        commit_log(kind, status)
-    except Exception as exc:  # noqa: BLE001
-        print(f"[log] {exc}")
-    return 0
+    finally:
+        if publish:
+            state.save(st); write_log(a.kind, status, now)
+            control.commit(["reels/state.json", "reels/last_run.md", "control"], f"run: {rid} {status}")
 
 
 if __name__ == "__main__":
-    try:
-        sys.exit(main())
-    except Exception as exc:  # noqa: BLE001
-        summary(f"❌ Սխալ՝ {type(exc).__name__}: {exc}")
-        try:
-            kind = next((sys.argv[i + 1] for i, x in enumerate(sys.argv) if x == "--kind"), "?")
-            if "--no-publish" not in sys.argv:
-                commit_log(kind, "❌ failed")
-        except Exception as e2:  # noqa: BLE001
-            print(f"[log] {e2}")
-        raise
+    sys.exit(main())

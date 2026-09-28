@@ -1,0 +1,4811 @@
+{
+ "modules": [
+  {
+   "n": 1,
+   "title": "Շուկայի և crypto-ի հիմունքներ"
+  },
+  {
+   "n": 2,
+   "title": "Անվտանգություն, scam-եր և բորսա"
+  },
+  {
+   "n": 3,
+   "title": "Ռիսկի հիմունքներ"
+  },
+  {
+   "n": 4,
+   "title": "Թրեյդինգի մեխանիկա"
+  },
+  {
+   "n": 5,
+   "title": "Գրաֆիկի ընթերցում"
+  },
+  {
+   "n": 6,
+   "title": "Market Structure և Liquidity"
+  },
+  {
+   "n": 7,
+   "title": "Order Blocks և FVG"
+  },
+  {
+   "n": 8,
+   "title": "Ռիսկ և հոգեբանություն"
+  },
+  {
+   "n": 9,
+   "title": "Ռազմավարություն"
+  },
+  {
+   "n": 10,
+   "title": "Backtesting և վիճակագրություն"
+  },
+  {
+   "n": 11,
+   "title": "Դերիվատիվներ, մակրո, on-chain"
+  }
+ ],
+ "lessons": [
+  {
+   "title": "Ի՞նչ է ֆինանսական շուկան",
+   "type": "concept",
+   "hook": "Շուկան|միայն տոնավաճառ|չէ",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Շուկան այն տեղն է, որտեղ հանդիպում են գնորդներն ու վաճառողները",
+     "query": "farmers market stalls"
+    },
+    {
+     "kind": "broll",
+     "text": "Ֆինանսական շուկայում առևտուր են անում բաժնետոմսերով, արժույթներով, ոսկով և crypto-ով",
+     "query": "city financial district"
+    },
+    {
+     "kind": "card",
+     "title": "Ֆինանսական շուկա",
+     "text": "Այնտեղ գնում և վաճառում են ֆինանսական ակտիվներ",
+     "query": "abstract blue light"
+    },
+    {
+     "kind": "broll",
+     "text": "Այսօր դրա մեծ մասը կատարվում է առցանց՝ վայրկյանների ընթացքում",
+     "query": "city night timelapse"
+    }
+   ],
+   "recap": "Շուկա՝|գնորդներ|և վաճառողներ",
+   "summary": "Սկսում ենք զրոյից։ Առաջին դասը՝ ինչ է ֆինանսական շուկան և ինչու է այն ամեն ինչի հիմքը։",
+   "question": "Դու երբևէ մտածե՞լ ես, թե որտեղ է ձևավորվում Bitcoin-ի գինը։",
+   "keywords": [
+    "ֆինանսական շուկա",
+    "ինչ է շուկան",
+    "financial market",
+    "crypto դասընթաց"
+   ],
+   "facts": [
+    "Most trading in financial markets today happens electronically."
+   ],
+   "quiz": {
+    "q": "Որտե՞ղ է այսօր կատարվում ֆինանսական գործարքների մեծ մասը",
+    "options": [
+     "Առցանց",
+     "Միայն բանկերում",
+     "Տոնավաճառներում"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "market"
+   ],
+   "uses": [],
+   "negative": false,
+   "id": "M1-01",
+   "module": 1,
+   "n": 1,
+   "status": "script"
+  },
+  {
+   "title": "Ինչպե՞ս է ձևավորվում գինը",
+   "type": "concept",
+   "hook": "Ո՞վ է որոշում|գինը",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Երբ գնորդները շատ են, իսկ վաճառողները՝ քիչ",
+     "query": "people shopping crowd"
+    },
+    {
+     "kind": "broll",
+     "text": "գինը բարձրանում է",
+     "query": "city lights night",
+     "overlay": {
+      "type": "price",
+      "from": 100,
+      "to": 120,
+      "dir": "up"
+     }
+    },
+    {
+     "kind": "broll",
+     "text": "Երբ վաճառողները շատ են, իսկ գնորդները՝ քիչ",
+     "query": "empty street morning"
+    },
+    {
+     "kind": "broll",
+     "text": "գինը իջնում է",
+     "query": "rain window city",
+     "overlay": {
+      "type": "price",
+      "from": 120,
+      "to": 90,
+      "dir": "down"
+     }
+    },
+    {
+     "kind": "card",
+     "title": "Գին",
+     "text": "Այն կետը, որտեղ գնորդն ու վաճառողը համաձայնել են",
+     "query": "handshake close up"
+    }
+   ],
+   "recap": "Գինը ձևավորում է|շուկան",
+   "summary": "Առաջարկ և պահանջարկ. երկու ուժ, որոնք որոշում են ցանկացած ակտիվի գինը։",
+   "question": "Ո՞ր ապրանքի գինն է վերջերս քեզ զարմացրել։",
+   "keywords": [
+    "ինչպես է ձևավորվում գինը",
+    "առաջարկ և պահանջարկ",
+    "supply and demand",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Price rises when demand exceeds supply and falls when supply exceeds demand."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է լինում գնի հետ, երբ գնորդները շատ են, իսկ վաճառողները՝ քիչ",
+    "options": [
+     "Բարձրանում է",
+     "Իջնում է",
+     "Չի փոխվում"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "price",
+    "supply",
+    "demand"
+   ],
+   "uses": [
+    "market"
+   ],
+   "negative": false,
+   "id": "M1-02",
+   "module": 1,
+   "n": 2,
+   "status": "script"
+  },
+  {
+   "title": "Ի՞նչ է բորսան",
+   "type": "concept",
+   "hook": "Ո՞վ է կապում|գնորդին|վաճառողի հետ",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Բորսան կազմակերպված շուկա է՝ հստակ կանոններով",
+     "query": "stock exchange building"
+    },
+    {
+     "kind": "broll",
+     "text": "Այն համադրում է գնելու և վաճառելու հայտերը",
+     "query": "abstract network lights"
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Ֆոնդային բորսա",
+      "Բաժնետոմսեր, օրինակ՝ NYSE"
+     ],
+     "b": [
+      "Crypto բորսա",
+      "Crypto, 24/7"
+     ],
+     "query": "abstract blue light"
+    },
+    {
+     "kind": "broll",
+     "text": "Crypto բորսաները աշխատում են օրը 24 ժամ, շաբաթը 7 օր",
+     "query": "city night timelapse"
+    }
+   ],
+   "recap": "Բորսա՝|կանոններով|շուկա",
+   "summary": "Բորսան շուկայի կազմակերպված տարբերակն է։ Ինչպես է այն կապում գնորդներին և վաճառողներին։",
+   "question": "Իսկ դու գիտեի՞ր, որ crypto բորսաները երբեք չեն փակվում։",
+   "keywords": [
+    "ինչ է բորսան",
+    "crypto բորսա",
+    "exchange",
+    "stock exchange"
+   ],
+   "facts": [
+    "NYSE is a stock exchange.",
+    "Crypto exchanges operate 24/7."
+   ],
+   "quiz": {
+    "q": "Ե՞րբ են աշխատում crypto բորսաները",
+    "options": [
+     "24/7",
+     "Միայն աշխատանքային օրերին",
+     "Միայն ցերեկը"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "exchange"
+   ],
+   "uses": [
+    "market",
+    "price"
+   ],
+   "negative": false,
+   "id": "M1-03",
+   "module": 1,
+   "n": 3,
+   "status": "script"
+  },
+  {
+   "title": "Trading և Investing",
+   "type": "concept",
+   "hook": "Նույն Bitcoin-ը,|երկու տարբեր|մոտեցում",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Ներդրողը գնում է՝ տարիներով պահելու համար",
+     "query": "calm lake sunrise"
+    },
+    {
+     "kind": "broll",
+     "text": "Թրեյդերը փորձում է շահել գնի կարճ շարժումներից",
+     "query": "fast traffic timelapse"
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Investing",
+      "Տարիներ, քիչ գործարքներ"
+     ],
+     "b": [
+      "Trading",
+      "Րոպեներից օրեր, շատ գործարքներ"
+     ],
+     "query": "abstract blue light"
+    },
+    {
+     "kind": "broll",
+     "text": "Թրեյդինգը պահանջում է գիտելիք, կարգապահություն և ժամանակ",
+     "query": "mountain climber"
+    }
+   ],
+   "recap": "Ընտրիր|քո|ճանապարհը",
+   "summary": "Ներդրումն ու թրեյդինգը տարբեր բաներ են։ Որն է տարբերությունը և ինչ է պահանջում յուրաքանչյուրը։",
+   "question": "Քեզ ավելի մոտ է ներդրո՞ւմը, թե՞ թրեյդինգը։",
+   "keywords": [
+    "trading",
+    "investing",
+    "թրեյդինգ",
+    "ներդրում",
+    "crypto դաս հայերեն"
+   ],
+   "facts": [
+    "Investing is long-term holding; trading targets short-term price moves."
+   ],
+   "quiz": {
+    "q": "Ո՞վ է սովորաբար պահում ակտիվը տարիներով",
+    "options": [
+     "Ներդրողը",
+     "Թրեյդերը",
+     "Բորսան"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "trading",
+    "investing"
+   ],
+   "uses": [
+    "price"
+   ],
+   "negative": false,
+   "id": "M1-04",
+   "module": 1,
+   "n": 4,
+   "status": "script"
+  },
+  {
+   "title": "Ակտիվների դասեր",
+   "type": "concept",
+   "hook": "Ինչո՞վ են|առևտուր անում|շուկաներում",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Ակտիվը այն է, ինչ արժեք ունի և կարող է գնվել ու վաճառվել",
+     "query": "gold bars"
+    },
+    {
+     "kind": "checklist",
+     "title": "4 հիմնական դաս",
+     "items": [
+      "Stocks՝ ընկերությունների մասեր",
+      "Forex՝ արժույթներ",
+      "Commodities՝ ոսկի, նավթ",
+      "Crypto՝ թվային ակտիվներ"
+     ],
+     "query": "abstract blue light"
+    },
+    {
+     "kind": "broll",
+     "text": "Յուրաքանչյուր դաս ունի իր ռիսկը, իսկ crypto-ն ամենատատանվողներից է",
+     "query": "ocean waves storm"
+    }
+   ],
+   "recap": "4 դաս՝|4 տարբեր|ռիսկ",
+   "summary": "Stocks, Forex, Commodities և Crypto. ակտիվների 4 հիմնական դասերը և դրանց տարբերությունը։",
+   "question": "Այս 4-ից որի՞ն ես արդեն հանդիպել։",
+   "keywords": [
+    "ակտիվ",
+    "asset classes",
+    "stocks forex crypto",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Stocks represent company ownership; forex is currencies; commodities include gold and oil."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է Forex-ը",
+    "options": [
+     "Արժույթների շուկա",
+     "Ոսկու շուկա",
+     "Crypto բորսա"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "asset",
+    "stocks",
+    "forex",
+    "commodities",
+    "crypto"
+   ],
+   "uses": [
+    "market"
+   ],
+   "negative": false,
+   "id": "M1-05",
+   "module": 1,
+   "n": 5,
+   "status": "script"
+  },
+  {
+   "title": "Ի՞նչ է ինդեքսը",
+   "type": "concept",
+   "hook": "Ինչպե՞ս չափել|ամբողջ|շուկան",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Ինդեքսը ցույց է տալիս մի խումբ ակտիվների ընդհանուր շարժումը",
+     "query": "city skyline day"
+    },
+    {
+     "kind": "card",
+     "title": "S&P 500",
+     "text": "ԱՄՆ-ի 500 խոշոր ընկերություններ մեկ թվում",
+     "query": "new york skyline"
+    },
+    {
+     "kind": "broll",
+     "text": "Թրեյդերները հետևում են S&P 500-ին, որովհետև crypto-ն հաճախ արձագանքում է ընդհանուր տրամադրությանը",
+     "query": "city aerial night"
+    }
+   ],
+   "recap": "Ինդեքս՝|շուկայի|ջերմաչափ",
+   "summary": "Ինդեքսները ցույց են տալիս ամբողջ շուկայի ուղղությունը։ Ծանոթանանք S&P 500-ին։",
+   "question": "Դու հետևո՞ւմ ես S&P 500-ին։",
+   "keywords": [
+    "S&P 500",
+    "ինդեքս",
+    "stock index",
+    "crypto և ֆոնդային շուկա"
+   ],
+   "facts": [
+    "The S&P 500 tracks 500 large US companies."
+   ],
+   "quiz": {
+    "q": "Քանի՞ ընկերություն է ներառում S&P 500-ը",
+    "options": [
+     "500",
+     "50",
+     "5000"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "index"
+   ],
+   "uses": [
+    "stocks"
+   ],
+   "negative": false,
+   "id": "M1-06",
+   "module": 1,
+   "n": 6,
+   "status": "script"
+  },
+  {
+   "title": "Ոսկին՝ ապահով նավահանգիստ",
+   "type": "concept",
+   "hook": "Ինչո՞ւ են|ճգնաժամին|գնում ոսկի",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Ոսկին հազարավոր տարիներ համարվել է արժեքի պահպանման միջոց",
+     "query": "gold bars"
+    },
+    {
+     "kind": "card",
+     "title": "XAU",
+     "text": "Ոսկու կոդը շուկայում. գինը՝ դոլարով մեկ ունցիայի համար",
+     "query": "gold texture close up"
+    },
+    {
+     "kind": "broll",
+     "text": "Անորոշության ժամանակ շատերը գնում են ոսկի",
+     "query": "storm clouds"
+    },
+    {
+     "kind": "broll",
+     "text": "դրա համար այն կոչվում է ապահով նավահանգիստ",
+     "query": "calm harbor boats"
+    }
+   ],
+   "recap": "Ոսկի՝|ապահով|նավահանգիստ",
+   "summary": "Ինչու է ոսկին կարևոր ամբողջ շուկայի համար և ինչ է նշանակում XAU-ն։",
+   "question": "Իսկ դու ոսկին համարո՞ւմ ես ապահով ակտիվ։",
+   "keywords": [
+    "ոսկի",
+    "XAU",
+    "gold safe haven",
+    "ոսկու գին"
+   ],
+   "facts": [
+    "Gold is quoted as XAU, priced in USD per troy ounce."
+   ],
+   "quiz": {
+    "q": "Ինչպե՞ս է նշվում ոսկին շուկայում",
+    "options": [
+     "XAU",
+     "GLD",
+     "OSK"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "gold"
+   ],
+   "uses": [
+    "commodities"
+   ],
+   "negative": false,
+   "id": "M1-07",
+   "module": 1,
+   "n": 7,
+   "status": "script"
+  },
+  {
+   "title": "Ի՞նչ է Bitcoin-ը",
+   "type": "concept",
+   "hook": "21 միլիոն.|ոչ մի|ավել",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Bitcoin-ը թվային արժույթ է՝ առանց կենտրոնական բանկի",
+     "query": "abstract digital network"
+    },
+    {
+     "kind": "broll",
+     "text": "Այն գործում է 2009 թվականից",
+     "query": "night city lights"
+    },
+    {
+     "kind": "card",
+     "title": "Առավելագույն քանակ",
+     "text": "21 000 000 BTC",
+     "query": "abstract blue light"
+    },
+    {
+     "kind": "broll",
+     "text": "Գործարքները ստուգում են աշխարհով մեկ սփռված համակարգիչներ",
+     "query": "server room lights"
+    }
+   ],
+   "recap": "Bitcoin՝|սահմանափակ|թվային փող",
+   "summary": "Bitcoin-ը առաջին և ամենահայտնի crypto-ն է։ Ինչ է այն և ինչու է նրա քանակը սահմանափակ։",
+   "question": "Ե՞րբ ես առաջին անգամ լսել Bitcoin-ի մասին։",
+   "keywords": [
+    "ինչ է Bitcoin-ը",
+    "Bitcoin explained",
+    "Bitcoin հայերեն",
+    "21 միլիոն"
+   ],
+   "facts": [
+    "Bitcoin launched in 2009.",
+    "Bitcoin's maximum supply is 21 million."
+   ],
+   "quiz": {
+    "q": "Որքա՞ն է Bitcoin-ի առավելագույն քանակը",
+    "options": [
+     "21 միլիոն",
+     "100 միլիոն",
+     "Անսահմանափակ"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "bitcoin"
+   ],
+   "uses": [
+    "crypto"
+   ],
+   "negative": false,
+   "id": "M1-08",
+   "module": 1,
+   "n": 8,
+   "status": "script"
+  },
+  {
+   "title": "Ի՞նչ է Blockchain-ը",
+   "type": "concept",
+   "hook": "Մատյան,|որը հնարավոր չէ|կեղծել",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Blockchain-ը գործարքների մատյան է, որի պատճենը պահում են բազմաթիվ համակարգիչներ",
+     "query": "server room lights"
+    },
+    {
+     "kind": "broll",
+     "text": "Գործարքները խմբավորվում են բլոկներում, և ամեն բլոկ կապված է նախորդին",
+     "query": "chain links close up"
+    },
+    {
+     "kind": "card",
+     "title": "Բլոկ → Բլոկ → Բլոկ",
+     "text": "Հին գրառումը փոխելը գրեթե անհնար է",
+     "query": "abstract blue light"
+    }
+   ],
+   "recap": "Blockchain՝|ընդհանուր|մատյան",
+   "summary": "Blockchain-ը crypto-ի հիմքն է։ Պարզ բացատրություն՝ ինչպես է այն աշխատում և ինչու է վստահելի։",
+   "question": "Կարո՞ղ ես մեկ նախադասությամբ բացատրել blockchain-ը ընկերոջդ։",
+   "keywords": [
+    "ինչ է blockchain-ը",
+    "blockchain explained",
+    "բլոկչեյն",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Each block references the previous one, which makes past records very hard to alter."
+   ],
+   "quiz": {
+    "q": "Ինչո՞վ է կապված յուրաքանչյուր բլոկը",
+    "options": [
+     "Նախորդ բլոկով",
+     "Բանկով",
+     "Բորսայով"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "blockchain"
+   ],
+   "uses": [
+    "bitcoin"
+   ],
+   "negative": false,
+   "id": "M1-09",
+   "module": 1,
+   "n": 9,
+   "status": "script"
+  },
+  {
+   "title": "Mining և Halving",
+   "type": "concept",
+   "hook": "Ինչո՞ւ է|Bitcoin-ը|դանդաղում",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Մայներները ստուգում են գործարքները և պարգև ստանում նոր Bitcoin-ով",
+     "query": "computer hardware lights"
+    },
+    {
+     "kind": "broll",
+     "text": "Halving-ի ժամանակ այդ պարգևը կրճատվում է կիսով չափ",
+     "query": "hourglass sand"
+    },
+    {
+     "kind": "card",
+     "title": "Halving",
+     "text": "Մոտ 4 տարին մեկ՝ յուրաքանչյուր 210 000 բլոկից հետո",
+     "query": "abstract blue light"
+    },
+    {
+     "kind": "broll",
+     "text": "Նոր Bitcoin-ների թողարկումը ժամանակի հետ դանդաղում է",
+     "query": "slow river aerial"
+    }
+   ],
+   "recap": "Mining + Halving|= սահմանափակ|թողարկում",
+   "summary": "Ինչ են անում մայներները և ինչու է halving-ը Bitcoin-ի ամենաքննարկվող իրադարձություններից մեկը։",
+   "question": "Գիտեի՞ր, որ halving-ը տեղի է ունենում մոտ 4 տարին մեկ։",
+   "keywords": [
+    "mining",
+    "halving",
+    "Bitcoin halving",
+    "մայնինգ"
+   ],
+   "facts": [
+    "The Bitcoin block reward halves every 210,000 blocks, roughly every four years."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է կատարվում halving-ի ժամանակ",
+    "options": [
+     "Պարգևը կրճատվում է կիսով",
+     "Գինը կրկնապատկվում է",
+     "Bitcoin-ը փակվում է"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "mining",
+    "halving"
+   ],
+   "uses": [
+    "bitcoin",
+    "blockchain"
+   ],
+   "negative": false,
+   "id": "M1-10",
+   "module": 1,
+   "n": 10,
+   "status": "script"
+  },
+  {
+   "title": "Bitcoin vs Altcoins",
+   "type": "concept",
+   "hook": "Bitcoin-ից բացի|հազարավոր|coin-եր",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Altcoin են անվանում Bitcoin-ից բացի բոլոր crypto-ները",
+     "query": "abstract digital network"
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Bitcoin",
+      "Առաջինը և ամենամեծը"
+     ],
+     "b": [
+      "Altcoins",
+      "Հազարավոր, տարբեր նպատակներով"
+     ],
+     "query": "abstract blue light"
+    },
+    {
+     "kind": "broll",
+     "text": "Փոքր նախագծերը սովորաբար ավելի մեծ տատանումներ և ռիսկ ունեն",
+     "query": "rough sea waves"
+    }
+   ],
+   "recap": "Ավելի փոքր|= ավելի|ռիսկային",
+   "summary": "Ինչ են altcoin-ները և ինչու են դրանք սովորաբար ավելի ռիսկային, քան Bitcoin-ը։",
+   "question": "Ո՞ր altcoin-ն ես առաջինը լսել։",
+   "keywords": [
+    "altcoin",
+    "ինչ է altcoin-ը",
+    "Bitcoin vs altcoins",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Altcoins are all cryptocurrencies other than Bitcoin."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ են altcoin-ները",
+    "options": [
+     "Bitcoin-ից բացի բոլոր crypto-ները",
+     "Bitcoin-ի տեսակ",
+     "Բորսաներ"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "altcoin"
+   ],
+   "uses": [
+    "bitcoin"
+   ],
+   "negative": false,
+   "id": "M1-11",
+   "module": 1,
+   "n": 11,
+   "status": "script"
+  },
+  {
+   "title": "Ethereum և Smart Contracts",
+   "type": "concept",
+   "hook": "Blockchain,|որը գործարկում է|ծրագրեր",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Ethereum-ը blockchain է, որի վրա աշխատում են smart contract-ներ",
+     "query": "abstract blue light"
+    },
+    {
+     "kind": "card",
+     "title": "Smart contract",
+     "text": "Ծրագիր, որը ինքնաշխատ կատարում է պայմանները",
+     "query": "abstract network lights"
+    },
+    {
+     "kind": "broll",
+     "text": "ETH-ը ցանցի արժույթն է, և դրանով վճարվում են միջնորդավճարները",
+     "query": "abstract digital network"
+    }
+   ],
+   "recap": "Ethereum՝|ծրագրերի|հարթակ",
+   "summary": "Ethereum-ը երկրորդ ամենամեծ crypto-ն է և բազմաթիվ ծառայությունների հիմքը։",
+   "question": "Իսկ դու գիտեի՞ր, որ blockchain-ի վրա կարելի է ծրագրեր գործարկել։",
+   "keywords": [
+    "Ethereum",
+    "smart contract",
+    "ինչ է Ethereum-ը",
+    "ETH"
+   ],
+   "facts": [
+    "ETH is used to pay transaction fees on the Ethereum network."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է smart contract-ը",
+    "options": [
+     "Ինքնաշխատ ծրագիր",
+     "Բանկային պայմանագիր",
+     "Wallet"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "ethereum",
+    "smart_contract"
+   ],
+   "uses": [
+    "blockchain"
+   ],
+   "negative": false,
+   "id": "M1-12",
+   "module": 1,
+   "n": 12,
+   "status": "script"
+  },
+  {
+   "title": "Stablecoins",
+   "type": "concept",
+   "hook": "Crypto,|որը չի|տատանվում",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Stablecoin-ի գինը կապված է որևէ արժույթի, հաճախ՝ ԱՄՆ դոլարի",
+     "query": "abstract blue light"
+    },
+    {
+     "kind": "card",
+     "title": "USDT, USDC",
+     "text": "1 հատը նախատեսված է հավասար լինել 1 դոլարի",
+     "query": "abstract network lights"
+    },
+    {
+     "kind": "broll",
+     "text": "Կայունությունը կախված է թողարկողից և նրա պահուստներից",
+     "query": "bank vault door"
+    }
+   ],
+   "recap": "Stablecoin ≠|բանկային|ավանդ",
+   "summary": "Stablecoin-ները կամուրջ են սովորական փողի և crypto-ի միջև։ Ինչպես են աշխատում և ինչ ռիսկ ունեն։",
+   "question": "Դու օգտագործե՞լ ես stablecoin։",
+   "keywords": [
+    "stablecoin",
+    "USDT",
+    "USDC",
+    "ինչ է stablecoin-ը"
+   ],
+   "facts": [
+    "USDT and USDC are designed to track 1 US dollar."
+   ],
+   "quiz": {
+    "q": "Ինչի՞ց է կախված stablecoin-ի կայունությունը",
+    "options": [
+     "Թողարկողից և պահուստներից",
+     "Bitcoin-ի գնից",
+     "Mining-ից"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "stablecoin"
+   ],
+   "uses": [
+    "crypto"
+   ],
+   "negative": false,
+   "id": "M1-13",
+   "module": 1,
+   "n": 13,
+   "status": "script"
+  },
+  {
+   "title": "Market Cap",
+   "type": "calc",
+   "hook": "Էժան coin-ը|էժան|չէ",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Market cap-ը նախագծի ընդհանուր շուկայական արժեքն է",
+     "query": "city skyline day"
+    },
+    {
+     "kind": "card",
+     "title": "Market Cap",
+     "text": "Գին × Շրջանառության քանակ",
+     "query": "abstract blue light"
+    },
+    {
+     "kind": "broll",
+     "text": "Եթե 1 հատը 1 դոլար է, իսկ կա 1 միլիարդ հատ, market cap-ը 1 միլիարդ դոլար է",
+     "query": "abstract network lights"
+    }
+   ],
+   "recap": "Նայիր ոչ թե գնին,|այլ|market cap-ին",
+   "summary": "Market cap-ը օգնում է համեմատել նախագծերը։ Ինչու մեկ հատի գինը ամբողջ պատկերը չի տալիս։",
+   "question": "Որևէ անգամ գնե՞լ ես մի բան միայն այն պատճառով, որ այն «էժան» էր։",
+   "keywords": [
+    "market cap",
+    "շուկայական կապիտալիզացիա",
+    "ինչ է market cap-ը",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Market cap = price × circulating supply."
+   ],
+   "quiz": {
+    "q": "Ինչպե՞ս է հաշվարկվում market cap-ը",
+    "options": [
+     "Գին × քանակ",
+     "Գին + քանակ",
+     "Միայն գինը"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "market_cap"
+   ],
+   "uses": [
+    "price"
+   ],
+   "negative": false,
+   "id": "M1-14",
+   "module": 1,
+   "n": 14,
+   "status": "script"
+  },
+  {
+   "title": "Circulating և Total Supply",
+   "type": "concept",
+   "hook": "Քանի՞ coin|կա իրականում",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Circulating supply-ը այն քանակն է, որն արդեն շրջանառության մեջ է",
+     "query": "people shopping crowd"
+    },
+    {
+     "kind": "broll",
+     "text": "Total supply-ը ամբողջ քանակն է, ներառյալ դեռ արգելափակվածները",
+     "query": "bank vault door"
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Circulating",
+      "Հիմա շուկայում"
+     ],
+     "b": [
+      "Total",
+      "Բոլորը միասին"
+     ],
+     "query": "abstract blue light"
+    },
+    {
+     "kind": "broll",
+     "text": "Երբ արգելափակված coin-երը ազատվում են, առաջարկը մեծանում է",
+     "query": "dam water release"
+    }
+   ],
+   "recap": "Ստուգիր|ոչ միայն գինը,|այլ supply-ը",
+   "summary": "Circulating և total supply. ինչու է կարևոր իմանալ, թե որքան coin կա իրականում։",
+   "question": "Գնելուց առաջ ստուգո՞ւմ ես supply-ը։",
+   "keywords": [
+    "circulating supply",
+    "total supply",
+    "tokenomics",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Token unlocks increase circulating supply."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է լինում, երբ արգելափակված coin-երը ազատվում են",
+    "options": [
+     "Առաջարկը մեծանում է",
+     "Առաջարկը նվազում է",
+     "Ոչինչ"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "circulating_supply",
+    "total_supply"
+   ],
+   "uses": [
+    "market_cap",
+    "supply"
+   ],
+   "negative": false,
+   "id": "M1-15",
+   "module": 1,
+   "n": 15,
+   "status": "script"
+  },
+  {
+   "title": "Liquidity",
+   "type": "concept",
+   "hook": "Կկարողանա՞ս|վաճառել,|երբ պետք լինի",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Liquidity-ն ցույց է տալիս, թե որքան հեշտ կարելի է գնել կամ վաճառել",
+     "query": "busy market crowd"
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Բարձր",
+      "Bitcoin, խոշոր բաժնետոմսեր"
+     ],
+     "b": [
+      "Ցածր",
+      "Փոքր coin-եր"
+     ],
+     "query": "abstract blue light"
+    },
+    {
+     "kind": "broll",
+     "text": "Ցածր liquidity-ի դեպքում մեծ գործարքը կարող է կտրուկ փոխել գինը",
+     "query": "narrow mountain road"
+    }
+   ],
+   "recap": "Liquidity՝|վաճառելու|ազատություն",
+   "summary": "Liquidity-ն որոշում է՝ կկարողանա՞ս վաճառել, երբ պետք լինի։",
+   "question": "Իսկ դու երբևէ չե՞ս կարողացել ինչ-որ բան արագ վաճառել։",
+   "keywords": [
+    "liquidity",
+    "լիկվիդություն",
+    "ինչ է liquidity-ն",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Low-liquidity assets can move sharply on large orders."
+   ],
+   "quiz": {
+    "q": "Ո՞րն ունի ավելի բարձր liquidity",
+    "options": [
+     "Bitcoin-ը",
+     "Նոր, փոքր coin-ը",
+     "Երկուսը նույնը"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "liquidity"
+   ],
+   "uses": [
+    "market",
+    "price"
+   ],
+   "negative": false,
+   "id": "M1-16",
+   "module": 1,
+   "n": 16,
+   "status": "script"
+  },
+  {
+   "title": "Volatility",
+   "type": "concept",
+   "hook": "10% մեկ օրում.|նորմա՞լ է",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Volatility-ն ցույց է տալիս, թե որքան ուժեղ և արագ է փոխվում գինը",
+     "query": "ocean waves"
+    },
+    {
+     "kind": "broll",
+     "text": "Crypto-ում 10% շարժումը մեկ օրում հազվադեպ չէ",
+     "query": "roller coaster"
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Ներդրիր այնքան, որ տատանումները քեզ քնից չզրկեն",
+     "query": "calm lake sunrise"
+    }
+   ],
+   "recap": "Բարձր volatility|= բարձր|ռիսկ",
+   "summary": "Crypto-ն հայտնի է ուժեղ տատանումներով։ Ինչ է volatility-ն և ինչպես վարվել դրա հետ։",
+   "question": "Քո կարծիքով որքա՞ն տատանումն է «նորմալ»։",
+   "keywords": [
+    "volatility",
+    "տատանողականություն",
+    "crypto volatility",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Crypto assets can move 10% or more in a single day."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է ցույց տալիս volatility-ն",
+    "options": [
+     "Գնի փոփոխության ուժը և արագությունը",
+     "Market cap-ը",
+     "Supply-ը"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "volatility"
+   ],
+   "uses": [
+    "price",
+    "crypto"
+   ],
+   "negative": false,
+   "id": "M1-17",
+   "module": 1,
+   "n": 17,
+   "status": "script"
+  },
+  {
+   "title": "Bull Market և Bear Market",
+   "type": "concept",
+   "hook": "Ցուլ|թե|արջ",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Bull շուկան երկարատև աճի ժամանակաշրջան է",
+     "query": "bull field"
+    },
+    {
+     "kind": "broll",
+     "text": "Bear շուկան երկարատև անկման ժամանակաշրջան է",
+     "query": "brown bear forest"
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Bull",
+      "Ցուլը հարվածում է ներքևից վերև"
+     ],
+     "b": [
+      "Bear",
+      "Արջը՝ վերևից ներքև"
+     ],
+     "query": "abstract blue light"
+    },
+    {
+     "kind": "broll",
+     "text": "Բաժնետոմսերում 20% անկումը հաճախ համարվում է bear շուկայի նշան",
+     "query": "storm clouds"
+    }
+   ],
+   "recap": "Bull՝ աճ,|Bear՝|անկում",
+   "summary": "Bull և Bear. թրեյդերների ամենահաճախ օգտագործվող երկու բառը և դրանց ծագումը։",
+   "question": "Հիմա, քո կարծիքով, crypto-ն bull, թե՞ bear շուկայում է։",
+   "keywords": [
+    "bull market",
+    "bear market",
+    "բուլ և բեր շուկա",
+    "crypto դաս"
+   ],
+   "facts": [
+    "A 20% decline in stocks is commonly used as a bear market threshold."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է bull շուկան",
+    "options": [
+     "Երկարատև աճ",
+     "Երկարատև անկում",
+     "Կայուն գին"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "bull",
+    "bear"
+   ],
+   "uses": [
+    "market"
+   ],
+   "negative": false,
+   "id": "M1-18",
+   "module": 1,
+   "n": 18,
+   "status": "script"
+  },
+  {
+   "title": "FOMO և FUD",
+   "type": "concept",
+   "hook": "Բոլորը գնում են.|իսկ դու՞",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "FOMO-ն բաց թողնելու վախն է, երբ գնում ես միայն այն պատճառով, որ բոլորը գնում են",
+     "query": "crowd city street"
+    },
+    {
+     "kind": "broll",
+     "text": "FUD-ը վախ, անորոշություն և կասկած տարածող խոսակցություններն են",
+     "query": "dark storm clouds"
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Որոշումից առաջ ստուգիր աղբյուրը և փաստերը",
+     "query": "calm lake sunrise"
+    }
+   ],
+   "recap": "Հույզերը|վատ|խորհրդատուներ են",
+   "summary": "FOMO և FUD. երկու հույզ, որոնք բացատրում են crypto շուկայի շատ սխալներ։",
+   "question": "Երբևէ գնե՞լ ես ինչ-որ բան FOMO-ի պատճառով։",
+   "keywords": [
+    "FOMO",
+    "FUD",
+    "crypto հոգեբանություն",
+    "crypto դաս"
+   ],
+   "facts": [
+    "FUD stands for fear, uncertainty and doubt."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է FOMO-ն",
+    "options": [
+     "Բաց թողնելու վախը",
+     "Crypto բորսա",
+     "Ինդեքս"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "fomo",
+    "fud"
+   ],
+   "uses": [
+    "market"
+   ],
+   "negative": false,
+   "id": "M1-19",
+   "module": 1,
+   "n": 19,
+   "status": "script"
+  },
+  {
+   "title": "Ռիսկ և շահույթ",
+   "type": "concept",
+   "hook": "Ինչո՞ւ բարձր շահույթը|միշտ ունի|գին",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Որքան մեծ է հնարավոր շահույթը, այնքան մեծ է սովորաբար ռիսկը",
+     "query": "mountain climber"
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Ավանդ",
+      "Փոքր, բայց կայուն"
+     ],
+     "b": [
+      "Crypto",
+      "Հնարավոր մեծ աճ և մեծ անկում"
+     ],
+     "query": "abstract blue light"
+    },
+    {
+     "kind": "card",
+     "title": "Առաջին կանոն",
+     "text": "Մի՛ ներդրիր այն, ինչի կորուստը չես կարող թույլ տալ",
+     "query": "calm lake sunrise"
+    }
+   ],
+   "recap": "Ռիսկը|միշտ|առաջինն է",
+   "summary": "Ֆինանսների ամենակարևոր կանոնը՝ ռիսկի և շահույթի կապը։",
+   "question": "Որքա՞ն ռիսկ ես պատրաստ ընդունել։",
+   "keywords": [
+    "ռիսկ և շահույթ",
+    "risk reward",
+    "crypto ռիսկ",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Higher potential returns generally come with higher risk."
+   ],
+   "quiz": {
+    "q": "Ո՞րն է առաջին կանոնը",
+    "options": [
+     "Չներդնել այն, ինչի կորուստը չես կարող թույլ տալ",
+     "Միշտ գնել էժանը",
+     "Հետևել բոլորին"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "risk"
+   ],
+   "uses": [
+    "crypto"
+   ],
+   "negative": false,
+   "id": "M1-20",
+   "module": 1,
+   "n": 20,
+   "status": "script"
+  },
+  {
+   "title": "DeFi-ի գաղափարը",
+   "type": "concept",
+   "hook": "Ֆինանսներ|առանց|բանկի",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "DeFi-ն ֆինանսական ծառայություններ են, որոնք աշխատում են blockchain-ի ծրագրերով",
+     "query": "abstract network lights"
+    },
+    {
+     "kind": "checklist",
+     "title": "Ինչ կարելի է անել",
+     "items": [
+      "Փոխանակել crypto",
+      "Տալ և վերցնել վարկ",
+      "Վաստակել տոկոս"
+     ],
+     "query": "abstract blue light"
+    },
+    {
+     "kind": "broll",
+     "text": "Ծրագրային սխալը կամ hack-ը կարող է հանգեցնել գումարի կորստի",
+     "query": "dark storm clouds"
+    }
+   ],
+   "recap": "Բարձր տոկոս|= բարձր|ռիսկ",
+   "summary": "DeFi-ն փորձում է ֆինանսական ծառայությունները տեղափոխել blockchain։ Հնարավորություններն ու ռիսկերը՝ պարզ։",
+   "question": "Դու վստահո՞ւմ ես ֆինանսներին առանց բանկի։",
+   "keywords": [
+    "DeFi",
+    "decentralized finance",
+    "ինչ է DeFi-ն",
+    "crypto դաս"
+   ],
+   "facts": [
+    "DeFi runs on smart contracts; bugs or hacks can cause losses."
+   ],
+   "quiz": {
+    "q": "Ի՞նչն է DeFi-ի հիմնական ռիսկը",
+    "options": [
+     "Ծրագրային սխալ կամ hack",
+     "Բանկի փակվելը",
+     "Halving-ը"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "defi"
+   ],
+   "uses": [
+    "blockchain",
+    "smart_contract",
+    "risk"
+   ],
+   "negative": false,
+   "id": "M1-21",
+   "module": 1,
+   "n": 21,
+   "status": "script"
+  },
+  {
+   "title": "Ամփոփում + տնային առաջադրանք",
+   "type": "explain",
+   "hook": "Ամբողջ պատկերը|մեկ|րոպեում",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Շուկայում գնորդներն ու վաճառողները ձևավորում են գինը",
+     "query": "busy market crowd"
+    },
+    {
+     "kind": "broll",
+     "text": "Բորսան կապում է նրանց կանոններով",
+     "query": "stock exchange building"
+    },
+    {
+     "kind": "broll",
+     "text": "Ակտիվները տարբեր են՝ բաժնետոմսերից մինչև Bitcoin",
+     "query": "gold bars"
+    },
+    {
+     "kind": "broll",
+     "text": "Յուրաքանչյուրն ունի իր liquidity-ն և volatility-ն",
+     "query": "ocean waves"
+    },
+    {
+     "kind": "card",
+     "title": "Տնային առաջադրանք",
+     "text": "Գտիր Bitcoin-ի և Ethereum-ի market cap-ը և համեմատիր",
+     "query": "abstract blue light"
+    }
+   ],
+   "recap": "Մոդուլ 1|ավարտված է",
+   "summary": "Մոդուլ 1-ի ամփոփում և առաջին տնային առաջադրանքը։ Հաջորդը՝ անվտանգություն և բորսա։",
+   "question": "Ո՞ր դասն էր քեզ համար ամենաօգտակարը այս մոդուլում։",
+   "keywords": [
+    "crypto դասընթաց",
+    "crypto սկսնակների համար",
+    "crypto հայերեն",
+    "trading դաս"
+   ],
+   "facts": [],
+   "quiz": {
+    "q": "Ո՞վ է ձևավորում գինը շուկայում",
+    "options": [
+     "Գնորդներն ու վաճառողները",
+     "Բորսան",
+     "Կառավարությունը"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [
+    "market",
+    "price",
+    "exchange",
+    "liquidity",
+    "volatility",
+    "market_cap"
+   ],
+   "negative": false,
+   "id": "M1-22",
+   "module": 1,
+   "n": 22,
+   "status": "script"
+  },
+  {
+   "id": "M2-01",
+   "module": 2,
+   "n": 1,
+   "title": "Wallet-ի տեսակները",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M2-01"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-02",
+   "module": 2,
+   "n": 2,
+   "title": "Private Key և Seed Phrase",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M2-02"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-03",
+   "module": 2,
+   "n": 3,
+   "title": "Անվտանգության հիմունքներ",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M2-03"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-04",
+   "module": 2,
+   "n": 4,
+   "title": "2FA",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M2-04"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-05",
+   "module": 2,
+   "n": 5,
+   "title": "Ինչպես ստուգել կայքը",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M2-05"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-06",
+   "module": 2,
+   "n": 6,
+   "title": "Scam. կեղծ support",
+   "type": "concept",
+   "status": "planned",
+   "negative": true,
+   "introduces": [
+    "M2-06"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-07",
+   "module": 2,
+   "n": 7,
+   "title": "Scam. բուրգեր",
+   "type": "concept",
+   "status": "planned",
+   "negative": true,
+   "introduces": [
+    "M2-07"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-08",
+   "module": 2,
+   "n": 8,
+   "title": "Scam. կեղծ giveaway",
+   "type": "concept",
+   "status": "planned",
+   "negative": true,
+   "introduces": [
+    "M2-08"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-09",
+   "module": 2,
+   "n": 9,
+   "title": "Scam. ծանոթությունից ներդրում",
+   "type": "concept",
+   "status": "planned",
+   "negative": true,
+   "introduces": [
+    "M2-09"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-10",
+   "module": 2,
+   "n": 10,
+   "title": "Scam. pump and dump",
+   "type": "concept",
+   "status": "planned",
+   "negative": true,
+   "introduces": [
+    "M2-10"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-11",
+   "module": 2,
+   "n": 11,
+   "title": "Scam. կեղծ airdrop",
+   "type": "concept",
+   "status": "planned",
+   "negative": true,
+   "introduces": [
+    "M2-11"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-12",
+   "module": 2,
+   "n": 12,
+   "title": "Scam. «VIP ազդանշաններ»",
+   "type": "concept",
+   "status": "planned",
+   "negative": true,
+   "introduces": [
+    "M2-12"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-13",
+   "module": 2,
+   "n": 13,
+   "title": "Բորսայի կառուցվածքը",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M2-13"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-14",
+   "module": 2,
+   "n": 14,
+   "title": "Ինչպես ընտրել բորսա",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M2-14"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-15",
+   "module": 2,
+   "n": 15,
+   "title": "Trading Pair",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M2-15"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-16",
+   "module": 2,
+   "n": 16,
+   "title": "USDT և quote currency",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M2-16"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-17",
+   "module": 2,
+   "n": 17,
+   "title": "Ի՞նչ է պոզիցիան",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M2-17"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-18",
+   "module": 2,
+   "n": 18,
+   "title": "Bid, Ask և Spread",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M2-18"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-19",
+   "module": 2,
+   "n": 19,
+   "title": "Market Order",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M2-19"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-20",
+   "module": 2,
+   "n": 20,
+   "title": "Limit Order",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M2-20"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-21",
+   "module": 2,
+   "n": 21,
+   "title": "Stop Order",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M2-21"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-22",
+   "module": 2,
+   "n": 22,
+   "title": "Միջնորդավճարներ",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M2-22"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-23",
+   "module": 2,
+   "n": 23,
+   "title": "Հարկեր և կարգավորում",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M2-23"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M2-24",
+   "module": 2,
+   "n": 24,
+   "title": "Ամփոփում + տնային առաջադրանք",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M2-24"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-01",
+   "module": 3,
+   "n": 1,
+   "title": "Ինչու է ռիսկը առաջինը",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-01"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-02",
+   "module": 3,
+   "n": 2,
+   "title": "Ճշմարտությունը սկսնակների մասին",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-02"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-03",
+   "module": 3,
+   "n": 3,
+   "title": "Risk per Trade",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-03"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-04",
+   "module": 3,
+   "n": 4,
+   "title": "0.5% և 1% կանոնը",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-04"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-05",
+   "module": 3,
+   "n": 5,
+   "title": "Stop Loss-ի գաղափարը",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-05"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-06",
+   "module": 3,
+   "n": 6,
+   "title": "Position Size-ի բանաձևը",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-06"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-07",
+   "module": 3,
+   "n": 7,
+   "title": "Position sizing. հաշվարկ",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-07"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-08",
+   "module": 3,
+   "n": 8,
+   "title": "Risk/Reward Ratio",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-08"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-09",
+   "module": 3,
+   "n": 9,
+   "title": "1R-ի գաղափարը",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-09"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-10",
+   "module": 3,
+   "n": 10,
+   "title": "Win Rate և R/R կապը",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-10"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-11",
+   "module": 3,
+   "n": 11,
+   "title": "Կորուստների շարքի մաթեմատիկան",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-11"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-12",
+   "module": 3,
+   "n": 12,
+   "title": "Drawdown",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-12"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-13",
+   "module": 3,
+   "n": 13,
+   "title": "Վերականգնման մաթեմատիկան",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-13"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-14",
+   "module": 3,
+   "n": 14,
+   "title": "Դեմո և paper trading",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-14"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-15",
+   "module": 3,
+   "n": 15,
+   "title": "Trading Journal",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-15"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-16",
+   "module": 3,
+   "n": 16,
+   "title": "FOMO, Fear, Greed",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-16"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-17",
+   "module": 3,
+   "n": 17,
+   "title": "Revenge Trading և Overtrading",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-17"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M3-18",
+   "module": 3,
+   "n": 18,
+   "title": "Ամփոփում + տնային առաջադրանք",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M3-18"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-01",
+   "module": 4,
+   "n": 1,
+   "title": "Trading Volume",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-01"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-02",
+   "module": 4,
+   "n": 2,
+   "title": "Order Book",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-02"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-03",
+   "module": 4,
+   "n": 3,
+   "title": "Market Depth",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-03"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-04",
+   "module": 4,
+   "n": 4,
+   "title": "Slippage",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-04"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-05",
+   "module": 4,
+   "n": 5,
+   "title": "Maker և Taker",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-05"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-06",
+   "module": 4,
+   "n": 6,
+   "title": "Պոզիցիայի բացում և փակում",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-06"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-07",
+   "module": 4,
+   "n": 7,
+   "title": "Take Profit և Partial TP",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-07"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-08",
+   "module": 4,
+   "n": 8,
+   "title": "Stop Market vs Stop Limit",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-08"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-09",
+   "module": 4,
+   "n": 9,
+   "title": "Entry Price",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-09"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-10",
+   "module": 4,
+   "n": 10,
+   "title": "P&L-ի հաշվարկ",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-10"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-11",
+   "module": 4,
+   "n": 11,
+   "title": "ROE և ROI",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-11"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-12",
+   "module": 4,
+   "n": 12,
+   "title": "Spot և Futures",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-12"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-13",
+   "module": 4,
+   "n": 13,
+   "title": "Long և Short",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-13"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-14",
+   "module": 4,
+   "n": 14,
+   "title": "Leverage",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-14"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-15",
+   "module": 4,
+   "n": 15,
+   "title": "Margin",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-15"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-16",
+   "module": 4,
+   "n": 16,
+   "title": "Isolated և Cross Margin",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-16"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-17",
+   "module": 4,
+   "n": 17,
+   "title": "Liquidation",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-17"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-18",
+   "module": 4,
+   "n": 18,
+   "title": "Liquidation Price",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-18"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-19",
+   "module": 4,
+   "n": 19,
+   "title": "Leverage-ի իրական ռիսկը",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-19"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-20",
+   "module": 4,
+   "n": 20,
+   "title": "Funding Rate",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-20"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-21",
+   "module": 4,
+   "n": 21,
+   "title": "Open Interest",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-21"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-22",
+   "module": 4,
+   "n": 22,
+   "title": "Long/Short Ratio",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-22"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-23",
+   "module": 4,
+   "n": 23,
+   "title": "Liquidations Data",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-23"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-24",
+   "module": 4,
+   "n": 24,
+   "title": "TradingView-ի ինտերֆեյսը",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-24"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-25",
+   "module": 4,
+   "n": 25,
+   "title": "Chart-ի կարգավորում",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-25"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-26",
+   "module": 4,
+   "n": 26,
+   "title": "Alert-ներ",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-26"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-27",
+   "module": 4,
+   "n": 27,
+   "title": "Օրդերների համեմատություն",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-27"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-28",
+   "module": 4,
+   "n": 28,
+   "title": "Իսկ իրականում. slippage",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-28"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-29",
+   "module": 4,
+   "n": 29,
+   "title": "Simulated trade",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-29"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M4-30",
+   "module": 4,
+   "n": 30,
+   "title": "Ամփոփում + տնային առաջադրանք",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M4-30"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-01",
+   "module": 5,
+   "n": 1,
+   "title": "Մոմի կառուցվածքը (OHLC)",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-01"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-02",
+   "module": 5,
+   "n": 2,
+   "title": "Bullish և Bearish մոմ",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-02"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-03",
+   "module": 5,
+   "n": 3,
+   "title": "Timeframe-ների իմաստը",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-03"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-04",
+   "module": 5,
+   "n": 4,
+   "title": "Կարճ և երկար timeframe-ներ",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-04"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-05",
+   "module": 5,
+   "n": 5,
+   "title": "Higher Timeframe Analysis",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-05"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-06",
+   "module": 5,
+   "n": 6,
+   "title": "Trend-ի սահմանումը",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-06"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-07",
+   "module": 5,
+   "n": 7,
+   "title": "Uptrend. HH և HL",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-07"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-08",
+   "module": 5,
+   "n": 8,
+   "title": "Downtrend. LH և LL",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-08"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-09",
+   "module": 5,
+   "n": 9,
+   "title": "Range",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-09"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-10",
+   "module": 5,
+   "n": 10,
+   "title": "Swing High և Low",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-10"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-11",
+   "module": 5,
+   "n": 11,
+   "title": "Support",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-11"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-12",
+   "module": 5,
+   "n": 12,
+   "title": "Resistance",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-12"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-13",
+   "module": 5,
+   "n": 13,
+   "title": "Major S/R և Round Numbers",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-13"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-14",
+   "module": 5,
+   "n": 14,
+   "title": "Trendline",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-14"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-15",
+   "module": 5,
+   "n": 15,
+   "title": "Breakout",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-15"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-16",
+   "module": 5,
+   "n": 16,
+   "title": "Fakeout",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-16"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-17",
+   "module": 5,
+   "n": 17,
+   "title": "Retest",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-17"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-18",
+   "module": 5,
+   "n": 18,
+   "title": "Consolidation",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-18"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-19",
+   "module": 5,
+   "n": 19,
+   "title": "Ծավալի վերլուծություն",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-19"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-20",
+   "module": 5,
+   "n": 20,
+   "title": "Moving Average",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-20"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-21",
+   "module": 5,
+   "n": 21,
+   "title": "RSI",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-21"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-22",
+   "module": 5,
+   "n": 22,
+   "title": "MACD",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-22"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-23",
+   "module": 5,
+   "n": 23,
+   "title": "VWAP",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-23"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-24",
+   "module": 5,
+   "n": 24,
+   "title": "Bollinger Bands",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-24"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-25",
+   "module": 5,
+   "n": 25,
+   "title": "Double Top և Bottom",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-25"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-26",
+   "module": 5,
+   "n": 26,
+   "title": "Head and Shoulders",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-26"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-27",
+   "module": 5,
+   "n": 27,
+   "title": "Triangles և Flags",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-27"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-28",
+   "module": 5,
+   "n": 28,
+   "title": "Իսկ իրականում. chart-ի աղմուկը",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-28"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-29",
+   "module": 5,
+   "n": 29,
+   "title": "Ինդիկատորների սահմանները",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-29"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M5-30",
+   "module": 5,
+   "n": 30,
+   "title": "Ամբողջական Chart Analysis + տնային",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M5-30"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-01",
+   "module": 6,
+   "n": 1,
+   "title": "Market Structure",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-01"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-02",
+   "module": 6,
+   "n": 2,
+   "title": "Internal և External Structure",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-02"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-03",
+   "module": 6,
+   "n": 3,
+   "title": "Major և Minor Swing",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-03"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-04",
+   "module": 6,
+   "n": 4,
+   "title": "Structural High/Low",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-04"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-05",
+   "module": 6,
+   "n": 5,
+   "title": "BOS",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-05"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-06",
+   "module": 6,
+   "n": 6,
+   "title": "CHOCH",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-06"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-07",
+   "module": 6,
+   "n": 7,
+   "title": "MSS",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-07"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-08",
+   "module": 6,
+   "n": 8,
+   "title": "Displacement",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-08"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-09",
+   "module": 6,
+   "n": 9,
+   "title": "Impulse և Correction",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-09"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-10",
+   "module": 6,
+   "n": 10,
+   "title": "Liquidity (խորացված)",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-10"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-11",
+   "module": 6,
+   "n": 11,
+   "title": "Buy-Side և Sell-Side Liquidity",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-11"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-12",
+   "module": 6,
+   "n": 12,
+   "title": "Equal Highs և Lows",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-12"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-13",
+   "module": 6,
+   "n": 13,
+   "title": "Previous Day High/Low",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-13"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-14",
+   "module": 6,
+   "n": 14,
+   "title": "Previous Week High/Low",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-14"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-15",
+   "module": 6,
+   "n": 15,
+   "title": "Session High/Low",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-15"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-16",
+   "module": 6,
+   "n": 16,
+   "title": "Internal և External Liquidity",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-16"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-17",
+   "module": 6,
+   "n": 17,
+   "title": "Liquidity Sweep",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-17"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-18",
+   "module": 6,
+   "n": 18,
+   "title": "Sweep + Reclaim",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-18"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-19",
+   "module": 6,
+   "n": 19,
+   "title": "Stop Hunt",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-19"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-20",
+   "module": 6,
+   "n": 20,
+   "title": "Inducement",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-20"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-21",
+   "module": 6,
+   "n": 21,
+   "title": "Liquidity Hierarchy",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-21"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-22",
+   "module": 6,
+   "n": 22,
+   "title": "Structure + Liquidity",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-22"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-23",
+   "module": 6,
+   "n": 23,
+   "title": "Իսկ իրականում. structure",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-23"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M6-24",
+   "module": 6,
+   "n": 24,
+   "title": "Ամբողջական վերլուծություն + տնային",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M6-24"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-01",
+   "module": 7,
+   "n": 1,
+   "title": "Order Block",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-01"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-02",
+   "module": 7,
+   "n": 2,
+   "title": "Bullish և Bearish OB",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-02"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-03",
+   "module": 7,
+   "n": 3,
+   "title": "Valid OB-ի չափանիշները",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-03"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-04",
+   "module": 7,
+   "n": 4,
+   "title": "Structural OB",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-04"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-05",
+   "module": 7,
+   "n": 5,
+   "title": "Fresh, Mitigated, Invalid OB",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-05"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-06",
+   "module": 7,
+   "n": 6,
+   "title": "OB Selection",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-06"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-07",
+   "module": 7,
+   "n": 7,
+   "title": "Fair Value Gap",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-07"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-08",
+   "module": 7,
+   "n": 8,
+   "title": "Bullish և Bearish FVG",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-08"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-09",
+   "module": 7,
+   "n": 9,
+   "title": "FVG Formation",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-09"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-10",
+   "module": 7,
+   "n": 10,
+   "title": "FVG Fill",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-10"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-11",
+   "module": 7,
+   "n": 11,
+   "title": "Displacement + FVG",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-11"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-12",
+   "module": 7,
+   "n": 12,
+   "title": "OB + FVG",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-12"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-13",
+   "module": 7,
+   "n": 13,
+   "title": "Liquidity Sweep + OB",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-13"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-14",
+   "module": 7,
+   "n": 14,
+   "title": "MSS + OB",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-14"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-15",
+   "module": 7,
+   "n": 15,
+   "title": "Premium և Discount",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-15"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-16",
+   "module": 7,
+   "n": 16,
+   "title": "Equilibrium",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-16"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-17",
+   "module": 7,
+   "n": 17,
+   "title": "Dealing Range",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-17"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-18",
+   "module": 7,
+   "n": 18,
+   "title": "Repricing",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-18"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-19",
+   "module": 7,
+   "n": 19,
+   "title": "Mitigation",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-19"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-20",
+   "module": 7,
+   "n": 20,
+   "title": "Rejection vs Continuation",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-20"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-21",
+   "module": 7,
+   "n": 21,
+   "title": "Strong vs Weak Zone",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-21"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-22",
+   "module": 7,
+   "n": 22,
+   "title": "Multi-Timeframe OB",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-22"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-23",
+   "module": 7,
+   "n": 23,
+   "title": "Entry Model",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-23"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-24",
+   "module": 7,
+   "n": 24,
+   "title": "Իսկ իրականում. SMC",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-24"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-25",
+   "module": 7,
+   "n": 25,
+   "title": "SMC-ի սահմանները",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-25"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M7-26",
+   "module": 7,
+   "n": 26,
+   "title": "SMC Walkthrough + տնային",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M7-26"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-01",
+   "module": 8,
+   "n": 1,
+   "title": "Structural Stop Loss",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-01"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-02",
+   "module": 8,
+   "n": 2,
+   "title": "Volatility-based Stop",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-02"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-03",
+   "module": 8,
+   "n": 3,
+   "title": "ATR և Stop Loss",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-03"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-04",
+   "module": 8,
+   "n": 4,
+   "title": "Take Profit-ի կառուցվածք",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-04"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-05",
+   "module": 8,
+   "n": 5,
+   "title": "Liquidity-based Take Profit",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-05"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-06",
+   "module": 8,
+   "n": 6,
+   "title": "Minimum R/R",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-06"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-07",
+   "module": 8,
+   "n": 7,
+   "title": "1:2 և 1:3 R/R",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-07"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-08",
+   "module": 8,
+   "n": 8,
+   "title": "Break-even Win Rate",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-08"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-09",
+   "module": 8,
+   "n": 9,
+   "title": "Expectancy",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-09"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-10",
+   "module": 8,
+   "n": 10,
+   "title": "Losing Streak (խորացված)",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-10"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-11",
+   "module": 8,
+   "n": 11,
+   "title": "Maximum Drawdown",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-11"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-12",
+   "module": 8,
+   "n": 12,
+   "title": "Risk of Ruin",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-12"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-13",
+   "module": 8,
+   "n": 13,
+   "title": "Daily Loss Limit",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-13"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-14",
+   "module": 8,
+   "n": 14,
+   "title": "Weekly Loss Limit",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-14"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-15",
+   "module": 8,
+   "n": 15,
+   "title": "Կորելացված պոզիցիաներ",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-15"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-16",
+   "module": 8,
+   "n": 16,
+   "title": "Overtrading (խորացված)",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-16"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-17",
+   "module": 8,
+   "n": 17,
+   "title": "Revenge Trading (խորացված)",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-17"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-18",
+   "module": 8,
+   "n": 18,
+   "title": "Greed",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-18"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-19",
+   "module": 8,
+   "n": 19,
+   "title": "Fear",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-19"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-20",
+   "module": 8,
+   "n": 20,
+   "title": "Discipline",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-20"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-21",
+   "module": 8,
+   "n": 21,
+   "title": "Trading Journal (խորացված)",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-21"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-22",
+   "module": 8,
+   "n": 22,
+   "title": "Post-Trade Review",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-22"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-23",
+   "module": 8,
+   "n": 23,
+   "title": "Հոգնածություն և որոշումներ",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-23"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-24",
+   "module": 8,
+   "n": 24,
+   "title": "Trading Rulebook",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-24"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-25",
+   "module": 8,
+   "n": 25,
+   "title": "Իսկ իրականում. drawdown",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-25"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M8-26",
+   "module": 8,
+   "n": 26,
+   "title": "Ամփոփում + տնային առաջադրանք",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M8-26"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-01",
+   "module": 9,
+   "n": 1,
+   "title": "Trading Strategy",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-01"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-02",
+   "module": 9,
+   "n": 2,
+   "title": "Setup vs Strategy",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-02"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-03",
+   "module": 9,
+   "n": 3,
+   "title": "Strategy-ի 5 բաղադրիչները",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-03"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-04",
+   "module": 9,
+   "n": 4,
+   "title": "Market Condition Filter",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-04"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-05",
+   "module": 9,
+   "n": 5,
+   "title": "HTF Bias",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-05"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-06",
+   "module": 9,
+   "n": 6,
+   "title": "Long և Short Bias",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-06"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-07",
+   "module": 9,
+   "n": 7,
+   "title": "Entry Conditions",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-07"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-08",
+   "module": 9,
+   "n": 8,
+   "title": "Exit Conditions",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-08"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-09",
+   "module": 9,
+   "n": 9,
+   "title": "Stop Conditions",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-09"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-10",
+   "module": 9,
+   "n": 10,
+   "title": "No-Trade Conditions",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-10"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-11",
+   "module": 9,
+   "n": 11,
+   "title": "Session Filter",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-11"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-12",
+   "module": 9,
+   "n": 12,
+   "title": "Volatility Filter",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-12"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-13",
+   "module": 9,
+   "n": 13,
+   "title": "Volume Filter",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-13"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-14",
+   "module": 9,
+   "n": 14,
+   "title": "Liquidity Filter",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-14"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-15",
+   "module": 9,
+   "n": 15,
+   "title": "Funding և OI Filter",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-15"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-16",
+   "module": 9,
+   "n": 16,
+   "title": "Confluence",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-16"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-17",
+   "module": 9,
+   "n": 17,
+   "title": "A և B Setup",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-17"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-18",
+   "module": 9,
+   "n": 18,
+   "title": "Setup Scoring",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-18"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-19",
+   "module": 9,
+   "n": 19,
+   "title": "Trade Checklist",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-19"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-20",
+   "module": 9,
+   "n": 20,
+   "title": "Entry Trigger",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-20"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-21",
+   "module": 9,
+   "n": 21,
+   "title": "Confirmation vs Anticipation",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-21"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-22",
+   "module": 9,
+   "n": 22,
+   "title": "Aggressive և Conservative Entry",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-22"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-23",
+   "module": 9,
+   "n": 23,
+   "title": "Scale In",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-23"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-24",
+   "module": 9,
+   "n": 24,
+   "title": "Partial Exit",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-24"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-25",
+   "module": 9,
+   "n": 25,
+   "title": "Long Strategy",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-25"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-26",
+   "module": 9,
+   "n": 26,
+   "title": "Short Strategy",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-26"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-27",
+   "module": 9,
+   "n": 27,
+   "title": "Իսկ իրականում. վատ շուկա",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-27"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M9-28",
+   "module": 9,
+   "n": 28,
+   "title": "Ամփոփում + տնային առաջադրանք",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M9-28"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-01",
+   "module": 10,
+   "n": 1,
+   "title": "Backtesting",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-01"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-02",
+   "module": 10,
+   "n": 2,
+   "title": "Ինչու Backtest անել",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-02"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-03",
+   "module": 10,
+   "n": 3,
+   "title": "Historical Data",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-03"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-04",
+   "module": 10,
+   "n": 4,
+   "title": "Data Quality",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-04"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-05",
+   "module": 10,
+   "n": 5,
+   "title": "Sample Size",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-05"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-06",
+   "module": 10,
+   "n": 6,
+   "title": "Manual Backtesting",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-06"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-07",
+   "module": 10,
+   "n": 7,
+   "title": "Կանոնների գրանցում",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-07"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-08",
+   "module": 10,
+   "n": 8,
+   "title": "Entry-ի ստանդարտացում",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-08"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-09",
+   "module": 10,
+   "n": 9,
+   "title": "Exit-ի ստանդարտացում",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-09"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-10",
+   "module": 10,
+   "n": 10,
+   "title": "Fees-ի ներառում",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-10"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-11",
+   "module": 10,
+   "n": 11,
+   "title": "Slippage-ի ներառում",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-11"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-12",
+   "module": 10,
+   "n": 12,
+   "title": "Win Rate (վիճակագրություն)",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-12"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-13",
+   "module": 10,
+   "n": 13,
+   "title": "Average Win և Loss",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-13"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-14",
+   "module": 10,
+   "n": 14,
+   "title": "Expectancy-ի հաշվարկ",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-14"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-15",
+   "module": 10,
+   "n": 15,
+   "title": "Profit Factor",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-15"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-16",
+   "module": 10,
+   "n": 16,
+   "title": "Equity Curve",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-16"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-17",
+   "module": 10,
+   "n": 17,
+   "title": "Drawdown Curve",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-17"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-18",
+   "module": 10,
+   "n": 18,
+   "title": "Sharpe Ratio",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-18"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-19",
+   "module": 10,
+   "n": 19,
+   "title": "Sortino Ratio",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-19"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-20",
+   "module": 10,
+   "n": 20,
+   "title": "R-Multiple",
+   "type": "calc",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-20"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-21",
+   "module": 10,
+   "n": 21,
+   "title": "MAE և MFE",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-21"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-22",
+   "module": 10,
+   "n": 22,
+   "title": "Out-of-Sample",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-22"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-23",
+   "module": 10,
+   "n": 23,
+   "title": "Forward Testing",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-23"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-24",
+   "module": 10,
+   "n": 24,
+   "title": "Overfitting",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-24"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-25",
+   "module": 10,
+   "n": 25,
+   "title": "Data Snooping",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-25"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-26",
+   "module": 10,
+   "n": 26,
+   "title": "Optimization և Robustness",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-26"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-27",
+   "module": 10,
+   "n": 27,
+   "title": "Իսկ իրականում. backtest vs իրական",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-27"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M10-28",
+   "module": 10,
+   "n": 28,
+   "title": "Backtest Project + տնային",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M10-28"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-01",
+   "module": 11,
+   "n": 1,
+   "title": "Futures (խորացված)",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-01"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-02",
+   "module": 11,
+   "n": 2,
+   "title": "Perpetual Contracts",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-02"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-03",
+   "module": 11,
+   "n": 3,
+   "title": "Funding Rate (խորացված)",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-03"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-04",
+   "module": 11,
+   "n": 4,
+   "title": "Open Interest (խորացված)",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-04"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-05",
+   "module": 11,
+   "n": 5,
+   "title": "Price + OI",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-05"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-06",
+   "module": 11,
+   "n": 6,
+   "title": "Price + Funding",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-06"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-07",
+   "module": 11,
+   "n": 7,
+   "title": "Long և Short Liquidations",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-07"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-08",
+   "module": 11,
+   "n": 8,
+   "title": "Liquidation Clusters",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-08"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-09",
+   "module": 11,
+   "n": 9,
+   "title": "Basis",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-09"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-10",
+   "module": 11,
+   "n": 10,
+   "title": "Contango և Backwardation",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-10"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-11",
+   "module": 11,
+   "n": 11,
+   "title": "BTC Dominance",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-11"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-12",
+   "module": 11,
+   "n": 12,
+   "title": "Altcoin Market Structure",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-12"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-13",
+   "module": 11,
+   "n": 13,
+   "title": "Stablecoin Liquidity",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-13"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-14",
+   "module": 11,
+   "n": 14,
+   "title": "Total Market Cap",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-14"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-15",
+   "module": 11,
+   "n": 15,
+   "title": "On-Chain Data",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-15"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-16",
+   "module": 11,
+   "n": 16,
+   "title": "Exchange Inflows և Outflows",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-16"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-17",
+   "module": 11,
+   "n": 17,
+   "title": "Whale Activity",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-17"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-18",
+   "module": 11,
+   "n": 18,
+   "title": "Realized vs Unrealized",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-18"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-19",
+   "module": 11,
+   "n": 19,
+   "title": "Federal Reserve",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-19"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-20",
+   "module": 11,
+   "n": 20,
+   "title": "Interest Rates",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-20"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-21",
+   "module": 11,
+   "n": 21,
+   "title": "Inflation / CPI",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-21"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-22",
+   "module": 11,
+   "n": 22,
+   "title": "Employment Data",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-22"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-23",
+   "module": 11,
+   "n": 23,
+   "title": "DXY",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-23"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-24",
+   "module": 11,
+   "n": 24,
+   "title": "Treasury Yields",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-24"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-25",
+   "module": 11,
+   "n": 25,
+   "title": "Risk-On / Risk-Off",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-25"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-26",
+   "module": 11,
+   "n": 26,
+   "title": "Macro + Crypto",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-26"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-27",
+   "module": 11,
+   "n": 27,
+   "title": "News-ի ազդեցությունը",
+   "type": "concept",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-27"
+   ],
+   "uses": []
+  },
+  {
+   "id": "M11-28",
+   "module": 11,
+   "n": 28,
+   "title": "Market Context Analysis + ավարտ",
+   "type": "explain",
+   "status": "planned",
+   "negative": false,
+   "introduces": [
+    "M11-28"
+   ],
+   "uses": []
+  }
+ ]
+}

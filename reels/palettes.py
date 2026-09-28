@@ -35,3 +35,36 @@ COMMON = {"card": "rgba(255,255,255,.06)", "cardb": "rgba(255,255,255,.13)", "on
 def css_vars(p):
     v = dict(COMMON); v.update(p)
     return ";".join(f"--{k}:{val}" for k, val in v.items() if k != "name")
+
+
+def _mod(name, bg0, bg1, bg2, a, a2, txt, mut, p, blob):
+    return {"name": name, "bg": f"linear-gradient(175deg,{bg0} 0%,{bg1} 55%,{bg2} 100%)", "a": a, "a2": a2,
+            "txt": txt, "mut": mut, "p": p, "em": a2, "blob1": blob[0], "blob2": blob[1], "blob3": blob[2],
+            "pt": a2, "onacc": bg1}
+
+
+# one fixed colour per module (season) so the profile grid reads like a course library
+MODULE = {
+ 1: _mod("m1-amber", "#2A1B10", "#1A110A", "#100A06", "#F4B64A", "#FFD98A", "#FBF3E6", "#B9A68A", "#EFE3D0",
+         ("rgba(244,182,74,.22)", "rgba(242,112,95,.12)", "rgba(255,217,138,.10)")),
+ 2: _mod("m2-teal", "#0C2A2E", "#071A1D", "#041012", "#2FD4B0", "#A6F7E4", "#EFFAF8", "#8FB3AE", "#D7EEEA",
+         ("rgba(47,212,176,.22)", "rgba(80,170,255,.12)", "rgba(166,247,228,.08)")),
+ 3: _mod("m3-coral", "#2E1214", "#1D0B0C", "#120607", "#FF7A6B", "#FFC2B8", "#FCEFEE", "#C9A19C", "#F3DEDB",
+         ("rgba(255,122,107,.22)", "rgba(255,190,120,.10)", "rgba(255,194,184,.08)")),
+ 4: _mod("m4-blue", "#0B1834", "#07101F", "#050A15", "#5B9BFF", "#9CC2FF", "#F2F6FC", "#93A3C4", "#DDE6F5",
+         ("rgba(70,120,255,.26)", "rgba(90,220,240,.12)", "rgba(120,90,255,.10)")),
+ 5: _mod("m5-green", "#0E2A1B", "#081A10", "#040F09", "#3DDC97", "#A8F0CB", "#EEFAF3", "#95B8A4", "#D8EFE2",
+         ("rgba(61,220,151,.20)", "rgba(80,170,255,.10)", "rgba(168,240,203,.08)")),
+ 6: _mod("m6-violet", "#1B1830", "#110F20", "#0A0914", "#9B8CFF", "#D4CCFF", "#F4F2FF", "#A19CC0", "#E2DFF5",
+         ("rgba(155,140,255,.24)", "rgba(255,120,200,.10)", "rgba(100,160,255,.10)")),
+ 7: _mod("m7-magenta", "#2A1027", "#1A0A18", "#10060F", "#E86BD6", "#F6B8EE", "#FCF0FA", "#C29BBB", "#F1DDEE",
+         ("rgba(232,107,214,.22)", "rgba(140,120,255,.10)", "rgba(246,184,238,.08)")),
+ 8: _mod("m8-orange", "#2B180B", "#1B0F06", "#110903", "#FF9F43", "#FFD2A6", "#FDF3EA", "#C7A88C", "#F2E2D3",
+         ("rgba(255,159,67,.22)", "rgba(255,110,110,.10)", "rgba(255,210,166,.08)")),
+ 9: _mod("m9-cyan", "#08202A", "#05141B", "#030C10", "#3CC8F0", "#A9E9FA", "#EEF9FD", "#92B3BE", "#D6EEF5",
+         ("rgba(60,200,240,.22)", "rgba(80,120,255,.10)", "rgba(169,233,250,.08)")),
+ 10: _mod("m10-lime", "#1B230B", "#111707", "#0A0E04", "#B6E34A", "#E1F5A8", "#F7FBEC", "#AEB894", "#E7EFD2",
+          ("rgba(182,227,74,.20)", "rgba(61,220,151,.10)", "rgba(225,245,168,.08)")),
+ 11: _mod("m11-gold", "#16301F", "#0D1D14", "#08120C", "#E8C766", "#F6E3A1", "#F2F7EE", "#A7B8A0", "#E3EDDD",
+          ("rgba(232,199,102,.18)", "rgba(110,200,140,.12)", "rgba(246,227,161,.08)")),
+}

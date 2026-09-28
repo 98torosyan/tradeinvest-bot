@@ -50,3 +50,78 @@ def generate_json(prompt, temperature=0.4):
             except (KeyError, IndexError, ValueError) as exc:
                 errors.append(f"{model}: bad response ({exc})"); time.sleep(3)
     raise RuntimeError("Gemini failed: " + " | ".join(errors[-4:]))
+
+
+# ---------------- text-to-speech ----------------
+TTS_MODELS = [m for m in [os.environ.get("GEMINI_TTS_MODEL"), "gemini-3.8-flash-lite-tts", "gemini-3.8-flash-tts",
+                          "gemini-3.1-flash-tts-preview", "gemini-2.5-flash-preview-tts"] if m]
+TTS_STYLE = ("Read the following Armenian text aloud in natural Eastern Armenian, like a calm, confident, friendly "
+             "educator on a finance channel. Clear pronunciation, natural pace, no exaggeration:\n")
+
+
+def tts(text, voice="Charon", out_wav=None):
+    """Returns path to a 24 kHz mono WAV, or raises."""
+    import base64, time, wave as _wave
+    key = os.environ.get("GEMINI_API_KEY", "")
+    if not key:
+        raise RuntimeError("GEMINI_API_KEY is not set")
+    body = {"contents": [{"role": "user", "parts": [{"text": TTS_STYLE + text}]}],
+            "generationConfig": {"responseModalities": ["AUDIO"],
+                                 "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}}
+    last = ""
+    for model in TTS_MODELS:
+        for attempt in range(4):
+            r = requests.post(URL.format(model=model), headers={"x-goog-api-key": key}, json=body, timeout=180)
+            if r.status_code == 429:
+                time.sleep(12 * (attempt + 1)); continue
+            break
+        if r.status_code != 200:
+            last = f"TTS {model} HTTP {r.status_code}: {r.text[:200]}"
+            print("[tts]", last)
+            continue
+        try:
+            part = next(p for p in r.json()["candidates"][0]["content"]["parts"] if "inlineData" in p)
+        except (KeyError, IndexError, StopIteration):
+            last = f"TTS {model}: no audio in response"; continue
+        pcm = base64.b64decode(part["inlineData"]["data"])
+        rate = 24000
+        mime = part["inlineData"].get("mimeType", "")
+        if "rate=" in mime:
+            try:
+                rate = int(mime.split("rate=")[1].split(";")[0])
+            except ValueError:
+                pass
+        out_wav = out_wav or os.path.join(os.getcwd(), "tts.wav")
+        with _wave.open(out_wav, "w") as w:
+            w.setnchannels(1); w.setsampwidth(2); w.setframerate(rate); w.writeframes(pcm)
+        print(f"[tts] {model} voice={voice} ok ({len(pcm) / 2 / rate:.1f}s)")
+        return out_wav
+    raise RuntimeError(last or "TTS failed")
+
+
+# ---------------- vision check for stock footage ----------------
+def frame_flags(image_path):
+    """Asks Gemini whether a still frame shows readable text, a brand logo or an
+    identifiable human face. Returns a dict, or None if the check could not run."""
+    import base64
+    key = os.environ.get("GEMINI_API_KEY", "")
+    if not key:
+        return None
+    img = base64.b64encode(open(image_path, "rb").read()).decode()
+    prompt = ('Look at this video frame. Answer ONLY JSON: {"text": bool, "logo": bool, "face": bool} where '
+              'text = clearly readable words or numbers, logo = a recognisable brand logo or trademark, '
+              'face = a human face that could identify a person.')
+    body = {"contents": [{"role": "user", "parts": [{"inline_data": {"mime_type": "image/jpeg", "data": img}},
+                                                   {"text": prompt}]}],
+            "generationConfig": {"temperature": 0, "responseMimeType": "application/json"}}
+    for model in _models():
+        try:
+            r = requests.post(URL.format(model=model), headers={"x-goog-api-key": key}, json=body, timeout=60)
+            if r.status_code != 200:
+                continue
+            txt = r.json()["candidates"][0]["content"]["parts"][0]["text"]
+            d = json.loads(txt.strip().removeprefix("```json").removesuffix("```").strip())
+            return {k: bool(d.get(k)) for k in ("text", "logo", "face")}
+        except Exception:  # noqa: BLE001
+            continue
+    return None

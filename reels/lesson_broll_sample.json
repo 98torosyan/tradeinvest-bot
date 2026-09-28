@@ -1,0 +1,12 @@
+{"pill": "Մակարդակ 0՝ Շուկայի այբուբեն · Դաս 2", "next": "Ի՞նչ է բորսան", "cta": "Պահիր այս դասը",
+ "beats": [
+  {"text": "Ո՞վ է որոշում|գինը", "style": "hero", "query": "busy market crowd"},
+  {"text": "Պատկերացրու սովորական շուկա", "query": "farmers market stalls"},
+  {"text": "Գնորդները շատ են, իսկ վաճառողները՝ քիչ", "query": "people shopping crowd"},
+  {"text": "Արդյունքում գինը բարձրանում է", "query": "city lights night", "overlay": {"type": "price", "from": 100, "to": 120, "dir": "up"}},
+  {"text": "Հիմա հակառակը՝ վաճառողները շատ են", "query": "market vendors selling"},
+  {"text": "իսկ գնորդները՝ քիչ", "query": "empty street morning"},
+  {"text": "Եվ գինը իջնում է", "query": "rain window city", "overlay": {"type": "price", "from": 120, "to": 90, "dir": "down"}},
+  {"text": "Ամեն գին՝ համաձայնություն է գնորդի և վաճառողի միջև", "query": "handshake business"},
+  {"text": "Գինը ոչ ոք չի նշանակում|Այն ձևավորում է|շուկան", "style": "hero", "query": "city aerial night"}
+ ]}
