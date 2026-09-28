@@ -1,3 +1,9 @@
+**2026-09-28 20:26** `news` ❌ failed
+- ❌ news սխալ՝ RuntimeError: Gemini failed: gemini-2.5-flash: HTTP 404 {
+  "error": {
+    "code": 404,
+    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features a | gemini-flash-lite-latest: HTTP 503 | gemini-flash-lite-
+---
 **2026-09-28 19:51** `chart` ✅ published
 - ✅ Story published
 ---
@@ -140,9 +146,3 @@
 - ✅ Հրապարակվեց՝ լուր «Bitget բորսայի հաքերային կորուստները հասել են 387 մլն դոլարի»
 Գույն՝ graphite, տևողություն՝ 40 վրկ
 - ✅ teaser Story published
----
-**2026-09-27 16:54** `news` ✅ rendered, publishing
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 34 items
-- [pexels] using video 18866694 for 'server room lights'
