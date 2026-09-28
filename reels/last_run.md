@@ -1,3 +1,13 @@
+**2026-09-28 18:21** `lesson` ✅ published
+- [pexels] using video 39481319 for 'city skyline night'
+- [pexels] using video 7254961 for 'gold bars'
+- [pexels] download 28494561 failed: file too large
+- [pexels] using video 28483048 for 'abstract blue light'
+- [pexels] using video 32719391 for 'ocean waves storm'
+- [pexels] download 27452884 failed: file too large
+- [pexels] using video 7082893 for 'gold bars'
+- ✅ M1-05 «Ակտիվների դասեր» published (26s, cta=send)
+---
 **2026-09-28 16:53** `news` ❌ failed
 - ❌ news սխալ՝ RuntimeError: Gemini failed: gemini-2.5-flash: HTTP 404 {
   "error": {
@@ -138,5 +148,3 @@
 - ✅ Հրապարակվեց՝ դաս «Ոսկին՝ «ապահով նավահանգիստ»» (Մակարդակ 0՝ Շուկայի այբուբեն | Դաս 7/12)
 Գույն՝ amber, տևողություն՝ 34 վրկ
 - ✅ teaser Story published
----
-**2026-09-27 15:18** `lesson` ✅ rendered, publishing
