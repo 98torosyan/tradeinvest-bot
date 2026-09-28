@@ -1,3 +1,9 @@
+**2026-09-28 08:53** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7743.41}
+- ✅ Հրապարակվեց՝ Story «Շուկան այսօր»
+Գույն՝ midnight, տևողություն՝ 15 վրկ
+---
 **2026-09-28 08:51** `story` ✅ rendered, publishing
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7743.41}
@@ -70,13 +76,3 @@
 - ✅ teaser Story published
 ---
 **2026-09-27 12:19** `lesson` ✅ rendered, publishing
-
----
-**2026-09-27 10:57** `news` ✅ published + teaser
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 34 items
-- [pexels] using video 28709421 for 'server room lights'
-- ✅ Հրապարակվեց՝ լուր «Bitget-ի անվտանգության խախտման հետևանքով վնասները»
-Գույն՝ teal, տևողություն՝ 38 վրկ
-- ✅ teaser Story published
