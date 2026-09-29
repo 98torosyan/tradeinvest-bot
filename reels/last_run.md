@@ -1,3 +1,16 @@
+**2026-09-29 18:21** `lesson` ✅ published
+- [pexels] using clip 14300758 for 'city skyline night'
+- [pixabay] clip pb46688 rejected by the content check
+- [pixabay] using clip pb378976 for 'computer hardware lights'
+- [pexels] using clip 7703941 for 'hourglass sand'
+- [pixabay] download pb23835 failed: file too large
+- [pixabay] download pb99555 failed: file too large
+- [pixabay] using clip pb99550 for 'abstract blue light'
+- [pexels] using clip 38396377 for 'slow river aerial'
+- [pixabay] download pb27051 failed: file too large
+- [pixabay] using clip pb977 for 'abstract light bokeh'
+- ✅ M1-10 «Mining և Halving» published (36s, cta=send)
+---
 **2026-09-29 16:54** `news` ✅ qa-fail
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -161,8 +174,3 @@
 **2026-09-28 08:51** `story` ✅ rendered, publishing
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7743.41}
----
-**2026-09-27 21:21** `lesson` ✅ published + teaser
-- ✅ Հրապարակվեց՝ դաս «Ռիսկ և շահույթ» (Մակարդակ 0՝ Շուկայի այբուբեն | Դաս 9/12)
-Գույն՝ wine, տևողություն՝ 35 վրկ
-- ✅ teaser Story published

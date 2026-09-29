@@ -1,5 +1,5 @@
 {
- "course_index": 9,
+ "course_index": 10,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -63,6 +63,13 @@
    "date": "2026-09-29",
    "hour": 16,
    "cta": "save"
+  },
+  "M1-10": {
+   "media": "18121568596904859",
+   "permalink": "https://www.instagram.com/reel/Dd3-eZRiZa8/",
+   "date": "2026-09-29",
+   "hour": 18,
+   "cta": "send"
   }
  },
  "palette": {
@@ -137,7 +144,13 @@
   "pb4504",
   30794068,
   "pb26007",
-  35072002
+  35072002,
+  14300758,
+  "pb378976",
+  7703941,
+  "pb99550",
+  38396377,
+  "pb977"
  ],
  "bandit": {
   "cta": {}
@@ -149,11 +162,12 @@
    "hip-hop-02.mp3",
    "cbpd.mp3",
    "delayed-flight.mp3",
-   "cbpd.mp3"
+   "cbpd.mp3",
+   "memories.mp3"
   ]
  },
- "last_track": "cbpd.mp3",
- "last_cta": "save",
+ "last_track": "memories.mp3",
+ "last_cta": "send",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -177,6 +191,20 @@
   "pb26007.mp4": true,
   "pb26007.mp4:face": false,
   "35072002.mp4": true,
-  "35072002.mp4:face": false
+  "35072002.mp4:face": false,
+  "14300758.mp4": true,
+  "14300758.mp4:face": false,
+  "pb46688.mp4": false,
+  "pb46688.mp4:face": false,
+  "pb378976.mp4": true,
+  "pb378976.mp4:face": false,
+  "7703941.mp4": true,
+  "7703941.mp4:face": false,
+  "pb99550.mp4": true,
+  "pb99550.mp4:face": false,
+  "38396377.mp4": true,
+  "38396377.mp4:face": false,
+  "pb977.mp4": true,
+  "pb977.mp4:face": false
  }
 }
