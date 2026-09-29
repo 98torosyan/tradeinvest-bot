@@ -33,6 +33,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          HEALTHCHECK_URL: ${{ secrets.HEALTHCHECK_URL }}
         run: |
           if [ "${{ github.event.schedule }}" = "0 18 * * 0" ]; then
             python -m reels.watchdog --weekly
