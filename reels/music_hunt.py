@@ -29,6 +29,37 @@ BAD_TAGS = ("vocal", "voice", "sing", "song", "rap", "lyric", "speech", "spoken"
             "church", "religious", "sad", "horror", "scary", "national anthem")
 
 
+MIXKIT_GENRES = {
+    "lesson": ["lo-fi-beats", "chillout", "deep-house", "tropical-house", "downtempo"],
+    "news": ["house", "tech-house", "future-bass", "dance-pop", "hip-hop"],
+    "story": ["future-bass", "electropop", "dance-pop", "trap"],
+}
+MIX_RE = re.compile(r"https://assets\.mixkit\.co/music/(?:preview/mixkit-[a-z0-9-]*?-)?(\d+)(?:/\1)?\.mp3")
+
+
+def mixkit(profile, limit=12):
+    """Tracks from Mixkit genre pages (Mixkit Free License: commercial use, no attribution)."""
+    out, seen = [], set()
+    for g in MIXKIT_GENRES[profile]:
+        try:
+            html = requests.get(f"https://mixkit.co/free-stock-music/{g}/", timeout=30,
+                                headers={"User-Agent": "Mozilla/5.0 (TradeInvest bot)"}).text
+        except Exception as exc:  # noqa: BLE001
+            print("[mixkit]", g, exc); continue
+        for m in MIX_RE.finditer(html):
+            tid = m.group(1)
+            if tid in seen:
+                continue
+            seen.add(tid)
+            out.append({"id": f"mixkit-{tid}", "title": f"Mixkit {g} #{tid}", "creator": "Mixkit",
+                        "license": "mixkit", "license_version": "", "license_url": "https://mixkit.co/license/",
+                        "url": f"https://assets.mixkit.co/music/{tid}/{tid}.mp3", "tags": [{"name": g}]})
+            if len(out) >= limit:
+                return out
+    print(f"[mixkit] {profile}: {len(out)} tracks found")
+    return out
+
+
 def search(query, page_size=20):
     r = requests.get(API, timeout=30, headers={"User-Agent": "TradeInvest-bot"},
                      params={"q": query, "license": "cc0,by", "license_type": "commercial", "page_size": page_size,
@@ -92,15 +123,18 @@ def hunt():
     sent = 0
     for prof, cfg in PROFILES.items():
         got = 0
-        for q in cfg["queries"]:
-            if got >= cfg["per_week"]:
+        own = len([f for f in os.listdir(os.path.join(MUSIC, cfg["folder"]))]) if os.path.isdir(os.path.join(MUSIC, cfg["folder"])) else 0
+        want = cfg["per_week"] + (3 if own < 6 else 0)          # first weeks: build the library faster
+        batches = [("mixkit", lambda: mixkit(prof))] + [(q, (lambda q=q: search(q))) for q in cfg["queries"]]
+        for q, fetch in batches:
+            if got >= want:
                 break
             try:
-                results = search(q)
+                results = fetch()
             except Exception as exc:  # noqa: BLE001
                 print("[music] search failed:", exc); continue
             for r in results:
-                if got >= cfg["per_week"]:
+                if got >= want:
                     break
                 tags = " ".join([t.get("name", "") for t in r.get("tags") or []] + [r.get("title") or ""]).lower()
                 if r["id"] in known or any(b in tags for b in BAD_TAGS) or not r.get("url"):
@@ -213,6 +247,6 @@ def credit_for(track_path):
         c = json.load(open(CREDITS, encoding="utf-8")).get(os.path.basename(track_path or ""))
     except (OSError, ValueError):
         return ""
-    if c and (c.get("license") or "").lower() != "cc0":
+    if c and (c.get("license") or "").lower() not in ("cc0", "mixkit"):
         return f"🎵 {c['credit']}"
     return ""

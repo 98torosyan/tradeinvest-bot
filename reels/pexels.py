@@ -1,3 +1,4 @@
+import re
 """Free cinematic background clips from Pexels (free for commercial use,
 no attribution required). Needs PEXELS_API_KEY; without it nothing happens."""
 import os
@@ -33,7 +34,7 @@ def _candidates(query, key):
             continue
         if files:
             best = min(files, key=lambda f: abs((f.get("width") or 0) - 1080))
-            out.append((v["id"], best["link"]))
+            out.append((v["id"], best["link"], slug.replace("-", " ")))
     return out
 
 
@@ -50,7 +51,7 @@ def _pixabay_candidates(query, key):
         for size in ("large", "medium"):
             f = vids.get(size) or {}
             if f.get("url") and (f.get("height") or 0) >= 720:
-                out.append((f"pb{v['id']}", f["url"])); break
+                out.append((f"pb{v['id']}", f["url"], tags)); break
     return out
 
 
@@ -63,10 +64,18 @@ def _sources():
         s.append(("pexels", lambda q: _candidates(q, os.environ["PEXELS_API_KEY"])))
     if os.environ.get("PIXABAY_API_KEY"):
         s.append(("pixabay", lambda q: _pixabay_candidates(q, os.environ["PIXABAY_API_KEY"])))
-    if len(s) > 1:                                  # alternate sources beat by beat for variety
-        k = SOURCE_TURN[0] % len(s); SOURCE_TURN[0] += 1
-        s = s[k:] + s[:k]
-    return s
+    return s                                        # Pexels first (more precise search), Pixabay second
+
+
+STOP = {"close", "light", "lights", "night", "view", "background", "abstract", "with", "from", "into", "the", "and"}
+
+
+def relevant(query, text):
+    words = [w for w in re.findall(r"[a-z]+", (query or "").lower()) if len(w) > 3 and w not in STOP]
+    if not words or not text:
+        return True                     # nothing to compare (generic query or no description)
+    t = text.lower()
+    return any(w[:5] in t for w in words)       # prefix match: server/servers, market/markets
 
 
 def fetch(query, used_ids, check=None):
@@ -80,10 +89,10 @@ def fetch(query, used_ids, check=None):
             continue
         for name, search in sources:
             try:
-                cands = [c for c in search(q) if str(c[0]) not in used_ids]
+                cands = [c for c in search(q) if str(c[0]) not in used_ids and (q != query or relevant(q, c[2]))]
             except Exception as exc:  # noqa: BLE001
                 note(f"[{name}] search '{q}' failed: {str(exc)[:120]}"); continue
-            for vid, link in cands[:3]:
+            for vid, link, _text in cands[:3]:
                 path = os.path.join(tempfile.mkdtemp(prefix="bg_"), f"{vid}.mp4")
                 try:
                     with requests.get(link, stream=True, timeout=60) as r:

@@ -65,7 +65,7 @@
      "kind": "card",
      "title": "Ֆինանսական շուկա",
      "text": "Այնտեղ գնում և վաճառում են ֆինանսական ակտիվներ",
-     "query": "abstract blue light"
+     "query": "technology blue"
     },
     {
      "kind": "broll",
@@ -196,7 +196,7 @@
     {
      "kind": "broll",
      "text": "Այն համադրում է գնելու և վաճառելու հայտերը",
-     "query": "abstract network lights"
+     "query": "technology network connection"
     },
     {
      "kind": "compare",
@@ -208,7 +208,7 @@
       "Crypto բորսա",
       "Crypto, 24/7"
      ],
-     "query": "abstract blue light"
+     "query": "technology blue"
     },
     {
      "kind": "broll",
@@ -276,7 +276,7 @@
       "Trading",
       "Րոպեներից օրեր, շատ գործարքներ"
      ],
-     "query": "abstract blue light"
+     "query": "technology blue"
     },
     {
      "kind": "broll",
@@ -338,7 +338,7 @@
       "Commodities՝ ոսկի, նավթ",
       "Crypto՝ թվային ակտիվներ"
      ],
-     "query": "abstract blue light"
+     "query": "technology blue"
     },
     {
      "kind": "broll",
@@ -506,7 +506,7 @@
     {
      "kind": "broll",
      "text": "Bitcoin-ը թվային արժույթ է՝ առանց կենտրոնական բանկի",
-     "query": "abstract digital network"
+     "query": "digital network technology"
     },
     {
      "kind": "broll",
@@ -517,12 +517,12 @@
      "kind": "card",
      "title": "Առավելագույն քանակ",
      "text": "21 000 000 BTC",
-     "query": "abstract blue light"
+     "query": "technology blue"
     },
     {
      "kind": "broll",
      "text": "Գործարքները ստուգում են աշխարհով մեկ սփռված համակարգիչներ",
-     "query": "server room lights"
+     "query": "data center servers"
     }
    ],
    "recap": "Bitcoin՝|սահմանափակ|թվային փող",
@@ -567,18 +567,18 @@
     {
      "kind": "broll",
      "text": "Blockchain-ը գործարքների մատյան է, որի պատճենը պահում են բազմաթիվ համակարգիչներ",
-     "query": "server room lights"
+     "query": "data center servers"
     },
     {
      "kind": "broll",
      "text": "Գործարքները խմբավորվում են բլոկներում, և ամեն բլոկ կապված է նախորդին",
-     "query": "chain links close up"
+     "query": "blockchain network"
     },
     {
      "kind": "card",
      "title": "Բլոկ → Բլոկ → Բլոկ",
      "text": "Հին գրառումը փոխելը գրեթե անհնար է",
-     "query": "abstract blue light"
+     "query": "technology blue"
     }
    ],
    "recap": "Blockchain՝|ընդհանուր|մատյան",
@@ -622,7 +622,7 @@
     {
      "kind": "broll",
      "text": "Մայներները ստուգում են գործարքները և պարգև ստանում նոր Bitcoin-ով",
-     "query": "computer hardware lights"
+     "query": "crypto mining computer"
     },
     {
      "kind": "broll",
@@ -633,7 +633,7 @@
      "kind": "card",
      "title": "Halving",
      "text": "Մոտ 4 տարին մեկ՝ յուրաքանչյուր 210 000 բլոկից հետո",
-     "query": "abstract blue light"
+     "query": "technology blue"
     },
     {
      "kind": "broll",
@@ -684,7 +684,7 @@
     {
      "kind": "broll",
      "text": "Altcoin են անվանում Bitcoin-ից բացի բոլոր crypto-ները",
-     "query": "abstract digital network"
+     "query": "digital network technology"
     },
     {
      "kind": "compare",
@@ -696,7 +696,7 @@
       "Altcoins",
       "Հազարավոր, տարբեր նպատակներով"
      ],
-     "query": "abstract blue light"
+     "query": "technology blue"
     },
     {
      "kind": "broll",
@@ -745,18 +745,18 @@
     {
      "kind": "broll",
      "text": "Ethereum-ը blockchain է, որի վրա աշխատում են smart contract-ներ",
-     "query": "abstract blue light"
+     "query": "technology blue"
     },
     {
      "kind": "card",
      "title": "Smart contract",
      "text": "Ծրագիր, որը ինքնաշխատ կատարում է պայմանները",
-     "query": "abstract network lights"
+     "query": "technology network connection"
     },
     {
      "kind": "broll",
      "text": "ETH-ը ցանցի արժույթն է, և դրանով վճարվում են միջնորդավճարները",
-     "query": "abstract digital network"
+     "query": "digital network technology"
     }
    ],
    "recap": "Ethereum՝|ծրագրերի|հարթակ",
@@ -801,13 +801,13 @@
     {
      "kind": "broll",
      "text": "Stablecoin-ի գինը կապված է որևէ արժույթի, հաճախ՝ ԱՄՆ դոլարի",
-     "query": "abstract blue light"
+     "query": "technology blue"
     },
     {
      "kind": "card",
      "title": "USDT, USDC",
      "text": "1 հատը նախատեսված է հավասար լինել 1 դոլարի",
-     "query": "abstract network lights"
+     "query": "technology network connection"
     },
     {
      "kind": "broll",
@@ -862,12 +862,12 @@
      "kind": "card",
      "title": "Market Cap",
      "text": "Գին × Շրջանառության քանակ",
-     "query": "abstract blue light"
+     "query": "technology blue"
     },
     {
      "kind": "broll",
      "text": "Եթե 1 հատը 1 դոլար է, իսկ կա 1 միլիարդ հատ, market cap-ը 1 միլիարդ դոլար է",
-     "query": "abstract network lights"
+     "query": "technology network connection"
     }
    ],
    "recap": "Նայիր ոչ թե գնին,|այլ|market cap-ին",
@@ -928,7 +928,7 @@
       "Total",
       "Բոլորը միասին"
      ],
-     "query": "abstract blue light"
+     "query": "technology blue"
     },
     {
      "kind": "broll",
@@ -991,7 +991,7 @@
       "Ցածր",
       "Փոքր coin-եր"
      ],
-     "query": "abstract blue light"
+     "query": "technology blue"
     },
     {
      "kind": "broll",
@@ -1114,7 +1114,7 @@
       "Bear",
       "Արջը՝ վերևից ներքև"
      ],
-     "query": "abstract blue light"
+     "query": "technology blue"
     },
     {
      "kind": "broll",
@@ -1232,7 +1232,7 @@
       "Crypto",
       "Հնարավոր մեծ աճ և մեծ անկում"
      ],
-     "query": "abstract blue light"
+     "query": "technology blue"
     },
     {
      "kind": "card",
@@ -1282,7 +1282,7 @@
     {
      "kind": "broll",
      "text": "DeFi-ն ֆինանսական ծառայություններ են, որոնք աշխատում են blockchain-ի ծրագրերով",
-     "query": "abstract network lights"
+     "query": "technology network connection"
     },
     {
      "kind": "checklist",
@@ -1292,7 +1292,7 @@
       "Տալ և վերցնել վարկ",
       "Վաստակել տոկոս"
      ],
-     "query": "abstract blue light"
+     "query": "technology blue"
     },
     {
      "kind": "broll",
@@ -1364,7 +1364,7 @@
      "kind": "card",
      "title": "Տնային առաջադրանք",
      "text": "Գտիր Bitcoin-ի և Ethereum-ի market cap-ը և համեմատիր",
-     "query": "abstract blue light"
+     "query": "technology blue"
     }
    ],
    "recap": "Մոդուլ 1|ավարտված է",
