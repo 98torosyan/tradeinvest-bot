@@ -1,3 +1,15 @@
+**2026-09-29 09:18** `lesson` ✅ published
+- [pexels] using video 39437818 for 'city skyline night'
+- [pexels] download 27452884 failed: file too large
+- [pexels] using video 7361127 for 'gold bars'
+- [pexels] using video 6278979 for 'gold texture close up'
+- [pexels] using video 12460328 for 'storm clouds'
+- [pexels] video 36502582 rejected by the content check
+- [pexels] using video 15459464 for 'calm harbor boats'
+- [pexels] download 27452884 failed: file too large
+- [pexels] using video 15283163 for 'gold bars'
+- ✅ M1-07 «Ոսկին՝ ապահով նավահանգիստ» published (27s, cta=question)
+---
 **2026-09-29 08:50** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7683.69}
@@ -143,8 +155,3 @@
 ---
 **2026-09-27 19:46** `chart` ✅ rendered, publishing
 - [chart] candles from binance, price confirmed by a second source
----
-**2026-09-27 18:20** `lesson` ✅ published + teaser
-- ✅ Հրապարակվեց՝ դաս «Ներդրում, թե՞ թրեյդինգ» (Մակարդակ 0՝ Շուկայի այբուբեն | Դաս 8/12)
-Գույն՝ forest, տևողություն՝ 34 վրկ
-- ✅ teaser Story published
