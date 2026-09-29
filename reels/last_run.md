@@ -1,3 +1,15 @@
+**2026-09-29 12:21** `lesson` ✅ published
+- [pexels] using video 34382888 for 'city skyline night'
+- [pexels] using video 35163081 for 'abstract digital network'
+- [pexels] video 34232317 rejected by the content check
+- [pexels] using video 18138660 for 'night city lights'
+- [pexels] download 28494561 failed: file too large
+- [pexels] using video 16629709 for 'abstract blue light'
+- [pexels] using video 6091131 for 'server room lights'
+- [pexels] using video 35160268 for 'abstract digital network'
+- ✅ M1-08 «Ի՞նչ է Bitcoin-ը» published (26s, cta=save)
+- ✅ teaser Story published
+---
 **2026-09-29 10:53** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -154,8 +166,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 36 items
 - [pexels] using video 39625195 for 'abstract blue light'
----
-**2026-09-27 19:48** `chart` ✅ published
-- [chart] candles from binance, price confirmed by a second source
-- ✅ Հրապարակվեց՝ Story «Bitcoin 24 ժամում»
-Գույն՝ midnight, տևողություն՝ 16 վրկ

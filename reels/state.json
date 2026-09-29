@@ -1,5 +1,5 @@
 {
- "course_index": 7,
+ "course_index": 8,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -49,6 +49,13 @@
    "date": "2026-09-29",
    "hour": 9,
    "cta": "question"
+  },
+  "M1-08": {
+   "media": "17894991270416483",
+   "permalink": "https://www.instagram.com/reel/Dd3U-oZD6Ir/",
+   "date": "2026-09-29",
+   "hour": 12,
+   "cta": "save"
   }
  },
  "palette": {
@@ -112,7 +119,13 @@
   12460328,
   15459464,
   15283163,
-  38860079
+  38860079,
+  34382888,
+  35163081,
+  18138660,
+  16629709,
+  6091131,
+  35160268
  ],
  "bandit": {
   "cta": {}
@@ -121,11 +134,12 @@
   "2026-09-29": [
    "autofahren.mp3",
    "memories.mp3",
-   "hip-hop-02.mp3"
+   "hip-hop-02.mp3",
+   "cbpd.mp3"
   ]
  },
- "last_track": "hip-hop-02.mp3",
- "last_cta": "question",
+ "last_track": "cbpd.mp3",
+ "last_cta": "save",
  "news_media": [
   {
    "media": "17960540055208000",
