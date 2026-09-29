@@ -135,10 +135,11 @@
    "autofahren.mp3",
    "memories.mp3",
    "hip-hop-02.mp3",
-   "cbpd.mp3"
+   "cbpd.mp3",
+   "delayed-flight.mp3"
   ]
  },
- "last_track": "cbpd.mp3",
+ "last_track": "delayed-flight.mp3",
  "last_cta": "save",
  "news_media": [
   {
@@ -149,5 +150,6 @@
    "media": "18099342152551166",
    "date": "2026-09-29"
   }
- ]
+ ],
+ "quiz_count": 1
 }
