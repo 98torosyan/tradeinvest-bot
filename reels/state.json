@@ -52,7 +52,7 @@
   }
  },
  "palette": {
-  "news": 1
+  "news": 2
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -62,7 +62,8 @@
   "https://cointelegraph.com/news/bitget-clarifies-assets-affected-security-breach?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://decrypt.co/379350/bitget-hack-387m-what-happened-why-north-korea-suspect",
   "https://decrypt.co/379398/sec-staff-token-buybacks-dont-make-crypto-security",
-  "https://www.coindesk.com/markets/2026/09/28/solana-etfs-draw-record-usd188-million-in-a-week-as-bitwise-takes-two-thirds-of-inflows"
+  "https://www.coindesk.com/markets/2026/09/28/solana-etfs-draw-record-usd188-million-in-a-week-as-bitwise-takes-two-thirds-of-inflows",
+  "https://www.coindesk.com/markets/2026/09/28/goldman-sachs-brings-usd100-billion-treasury-fund-into-crypto-s-institutional-plumbing"
  ],
  "used_broll": [
   38431825,
@@ -110,7 +111,8 @@
   6278979,
   12460328,
   15459464,
-  15283163
+  15283163,
+  38860079
  ],
  "bandit": {
   "cta": {}
@@ -118,15 +120,20 @@
  "music_used": {
   "2026-09-29": [
    "autofahren.mp3",
-   "memories.mp3"
+   "memories.mp3",
+   "hip-hop-02.mp3"
   ]
  },
- "last_track": "memories.mp3",
+ "last_track": "hip-hop-02.mp3",
  "last_cta": "question",
  "news_media": [
   {
    "media": "17960540055208000",
    "date": "2026-09-28"
+  },
+  {
+   "media": "18099342152551166",
+   "date": "2026-09-29"
   }
  ]
 }

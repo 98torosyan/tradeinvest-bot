@@ -1,3 +1,10 @@
+**2026-09-29 10:53** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 36 items
+- [pexels] using video 38860079 for 'gold bars financial district'
+- ✅ News published: Goldman Sachs-ը մտցնում է գանձապետական ֆոնդ կրիպտո
+---
 **2026-09-29 09:18** `lesson` ✅ published
 - [pexels] using video 39437818 for 'city skyline night'
 - [pexels] download 27452884 failed: file too large
@@ -152,6 +159,3 @@
 - [chart] candles from binance, price confirmed by a second source
 - ✅ Հրապարակվեց՝ Story «Bitcoin 24 ժամում»
 Գույն՝ midnight, տևողություն՝ 16 վրկ
----
-**2026-09-27 19:46** `chart` ✅ rendered, publishing
-- [chart] candles from binance, price confirmed by a second source
