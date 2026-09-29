@@ -1,5 +1,5 @@
 {
- "course_index": 10,
+ "course_index": 11,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -70,6 +70,13 @@
    "date": "2026-09-29",
    "hour": 18,
    "cta": "send"
+  },
+  "M1-11": {
+   "media": "17903835912590011",
+   "permalink": "https://www.instagram.com/reel/Dd4SoOWkZuO/",
+   "date": "2026-09-29",
+   "hour": 21,
+   "cta": "save"
   }
  },
  "palette": {
@@ -150,7 +157,12 @@
   7703941,
   "pb99550",
   38396377,
-  "pb977"
+  "pb977",
+  28901427,
+  "pb45902",
+  36627993,
+  "pb182970",
+  39322558
  ],
  "bandit": {
   "cta": {}
@@ -164,11 +176,12 @@
    "delayed-flight.mp3",
    "cbpd.mp3",
    "memories.mp3",
-   "workout.mp3"
+   "workout.mp3",
+   "cbpd.mp3"
   ]
  },
- "last_track": "workout.mp3",
- "last_cta": "send",
+ "last_track": "cbpd.mp3",
+ "last_cta": "save",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -206,6 +219,18 @@
   "38396377.mp4": true,
   "38396377.mp4:face": false,
   "pb977.mp4": true,
-  "pb977.mp4:face": false
+  "pb977.mp4:face": false,
+  "35552568.mp4": false,
+  "35552568.mp4:face": false,
+  "28901427.mp4": true,
+  "28901427.mp4:face": false,
+  "pb45902.mp4": true,
+  "pb45902.mp4:face": false,
+  "36627993.mp4": true,
+  "36627993.mp4:face": false,
+  "pb182970.mp4": true,
+  "pb182970.mp4:face": false,
+  "39322558.mp4": true,
+  "39322558.mp4:face": false
  }
 }

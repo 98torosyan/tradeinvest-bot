@@ -1,3 +1,14 @@
+**2026-09-29 21:18** `lesson` ✅ published
+- [pexels] clip 35552568 rejected by the content check
+- [pexels] using clip 28901427 for 'city skyline night'
+- [pixabay] using clip pb45902 for 'abstract digital network'
+- [pexels] download 28494561 failed: file too large
+- [pexels] using clip 36627993 for 'abstract blue light'
+- [pixabay] using clip pb182970 for 'rough sea waves'
+- [pexels] using clip 39322558 for 'abstract light bokeh'
+- ✅ M1-11 «Bitcoin vs Altcoins» published (28s, cta=save)
+- ✅ teaser Story published
+---
 **2026-09-29 20:27** `news` ✅ qa-fail
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -163,14 +174,3 @@
 - [pexels] video 39481319 rejected by the content check
 - [pexels] using video 11745565 for 'city skyline night'
 - ✅ M1-02 «Ինչպե՞ս է ձևավորվում գինը» published (26s, cta=question)
----
-**2026-09-28 09:00** `lesson` ✅ published
-- [pexels] using video 11335976 for 'city skyline night'
-- [pexels] video 8540407 rejected by the content check
-- [pexels] using video 8540540 for 'farmers market stalls'
-- [pexels] using video 37104325 for 'city financial district'
-- [pexels] using video 39322557 for 'abstract blue light'
-- [pexels] using video 11933153 for 'city night timelapse'
-- [pexels] video 8540407 rejected by the content check
-- [pexels] using video 8541082 for 'farmers market stalls'
-- ✅ M1-01 «Ի՞նչ է ֆինանսական շուկան» published (29s, cta=save)
