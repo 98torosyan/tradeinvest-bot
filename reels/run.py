@@ -170,7 +170,8 @@ def do_news(st, now, rid, publish):
     ok, bad = qa.text_ok(" ".join([spec["headline"], spec.get("sub", "")] +
                                   [p["text"] for stp in spec["steps"] for p in stp["paragraphs"]] + [spec.get("caption", "")]))
     if not ok:
-        notify(f"⚠️ Լուրը չհրապարակվեց՝ ուղղագրական սխալներ. {', '.join(bad[:8])}"); return "qa-fail"
+        notify(f"⚠️ Լուրը չհրապարակվեց՝ ուղղագրական ստուգումը չանցավ. {', '.join(bad[:8])}\n"
+               f"Եթե բառերը ճիշտ են, գրիր՝ /allow {' '.join(bad[:8])}"); return "qa-fail"
     k = st.setdefault("palette", {}).get("news", 0); pal = palettes.NEWS[k % len(palettes.NEWS)]
     bg, vid = pexels.fetch(spec.get("broll", ""), set(st.get("used_broll", [])), check=lesson_video._clip_ok(False, st.setdefault("clip_checks", {})))
     RUN_LOG.extend(pexels.NOTES)

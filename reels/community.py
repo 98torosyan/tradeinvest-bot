@@ -53,6 +53,14 @@ def telegram_commands(st):
             control.set_paused(True); send_text("⏸ Բոլոր հրապարակումները կանգնեցված են։ /resume՝ վերսկսելու համար։")
         elif text.startswith("/resume"):
             control.set_paused(False); send_text("▶️ Հրապարակումները վերսկսված են։")
+        elif text.startswith("/allow"):
+            words = [w.strip(".,;:") for w in text.split()[1:] if w.strip(".,;:")]
+            if words:
+                wl = os.path.join(ROOT, "reels", "content", "whitelist_hy.txt")
+                with open(wl, "a", encoding="utf-8") as f:
+                    f.write("\n".join(words) + "\n")
+                changed = True
+                send_text("✅ Ավելացվեց ուղղագրական բառարանում՝ " + ", ".join(words))
         elif text.startswith("/status"):
             send_text(status_text(st))
         elif text.startswith("/fix"):
@@ -147,7 +155,7 @@ def main():
     except Exception as exc:  # noqa: BLE001
         print("[comments] failed:", exc)
     if changed:
-        control.commit(["control"], "control: telegram commands")
+        control.commit(["control", "reels/content/whitelist_hy.txt"], "control: telegram commands")
 
 
 if __name__ == "__main__":

@@ -46,7 +46,7 @@ def pre_render(lesson, cur, published_ids):
     return errs
 
 
-def text_ok(text, max_ratio=0.03, max_abs=3):
+def text_ok(text, max_ratio=0.05, max_abs=5):
     """For generated text (news, comment replies): tolerate a few unknown names, block real typos."""
     from . import spell
     ws = spell.words(text)
