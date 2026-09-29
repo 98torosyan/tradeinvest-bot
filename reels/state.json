@@ -1,5 +1,5 @@
 {
- "course_index": 8,
+ "course_index": 9,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -55,6 +55,13 @@
    "permalink": "https://www.instagram.com/reel/Dd3U-oZD6Ir/",
    "date": "2026-09-29",
    "hour": 12,
+   "cta": "save"
+  },
+  "M1-09": {
+   "media": "17915469753460777",
+   "permalink": "https://www.instagram.com/reel/Dd3vXpjFs1t/",
+   "date": "2026-09-29",
+   "hour": 16,
    "cta": "save"
   }
  },
@@ -125,7 +132,12 @@
   18138660,
   16629709,
   6091131,
-  35160268
+  35160268,
+  35464509,
+  "pb4504",
+  30794068,
+  "pb26007",
+  35072002
  ],
  "bandit": {
   "cta": {}
@@ -136,10 +148,11 @@
    "memories.mp3",
    "hip-hop-02.mp3",
    "cbpd.mp3",
-   "delayed-flight.mp3"
+   "delayed-flight.mp3",
+   "cbpd.mp3"
   ]
  },
- "last_track": "delayed-flight.mp3",
+ "last_track": "cbpd.mp3",
  "last_cta": "save",
  "news_media": [
   {
@@ -151,5 +164,19 @@
    "date": "2026-09-29"
   }
  ],
- "quiz_count": 1
+ "quiz_count": 1,
+ "clip_checks": {
+  "35464509.mp4": true,
+  "35464509.mp4:face": false,
+  "pb14900.mp4": false,
+  "pb14900.mp4:face": false,
+  "pb4504.mp4": true,
+  "pb4504.mp4:face": false,
+  "30794068.mp4": true,
+  "30794068.mp4:face": false,
+  "pb26007.mp4": true,
+  "pb26007.mp4:face": false,
+  "35072002.mp4": true,
+  "35072002.mp4:face": false
+ }
 }

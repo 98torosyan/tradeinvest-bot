@@ -1,3 +1,12 @@
+**2026-09-29 16:10** `lesson` ✅ published
+- [pexels] using clip 35464509 for 'city skyline night'
+- [pixabay] clip pb14900 rejected by the content check
+- [pixabay] using clip pb4504 for 'server room lights'
+- [pexels] using clip 30794068 for 'chain links close up'
+- [pixabay] using clip pb26007 for 'abstract blue light'
+- [pexels] using clip 35072002 for 'abstract light bokeh'
+- ✅ M1-09 «Ի՞նչ է Blockchain-ը» published (33s, cta=save)
+---
 **2026-09-29 13:51** `quiz` ✅ published
 - ✅ Quiz Story from M1-01
 ---
@@ -153,13 +162,3 @@
 - ✅ teaser Story published
 ---
 **2026-09-27 21:17** `lesson` ✅ rendered, publishing
-
----
-**2026-09-27 20:28** `news` ✅ published + teaser
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 36 items
-- [pexels] using video 39625195 for 'abstract blue light'
-- ✅ Հրապարակվեց՝ լուր «SEC. Token հետգնումը կրիպտոակտիվը չի դարձնում արժեթուղթ»
-Գույն՝ midnight, տևողություն՝ 38 վրկ
-- ✅ teaser Story published
