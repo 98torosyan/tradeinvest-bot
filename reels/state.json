@@ -163,10 +163,11 @@
    "cbpd.mp3",
    "delayed-flight.mp3",
    "cbpd.mp3",
-   "memories.mp3"
+   "memories.mp3",
+   "workout.mp3"
   ]
  },
- "last_track": "memories.mp3",
+ "last_track": "workout.mp3",
  "last_cta": "send",
  "news_media": [
   {

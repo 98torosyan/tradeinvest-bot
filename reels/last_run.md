@@ -1,3 +1,7 @@
+**2026-09-29 19:52** `chart` ✅ published
+- [market] price_coingecko_btc failed: 403 Client Error: Forbidden for url: https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd
+- ✅ Story published
+---
 **2026-09-29 18:21** `lesson` ✅ published
 - [pexels] using clip 14300758 for 'city skyline night'
 - [pixabay] clip pb46688 rejected by the content check
@@ -170,7 +174,3 @@
 - [market] SPX row dropped, sources: {'yahoo': 7743.41}
 - ✅ Հրապարակվեց՝ Story «Շուկան այսօր»
 Գույն՝ midnight, տևողություն՝ 15 վրկ
----
-**2026-09-28 08:51** `story` ✅ rendered, publishing
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7743.41}
