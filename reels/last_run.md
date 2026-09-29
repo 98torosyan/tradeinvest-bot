@@ -1,3 +1,9 @@
+**2026-09-29 20:27** `news` ✅ qa-fail
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 35 items
+- ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական սխալներ. Բիզնես, բիզնես, եղիր, կրիպտո, կրիպտոյի
+---
 **2026-09-29 19:52** `chart` ✅ published
 - [market] price_coingecko_btc failed: 403 Client Error: Forbidden for url: https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd
 - ✅ Story published
@@ -168,9 +174,3 @@
 - [pexels] video 8540407 rejected by the content check
 - [pexels] using video 8541082 for 'farmers market stalls'
 - ✅ M1-01 «Ի՞նչ է ֆինանսական շուկան» published (29s, cta=save)
----
-**2026-09-28 08:53** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7743.41}
-- ✅ Հրապարակվեց՝ Story «Շուկան այսօր»
-Գույն՝ midnight, տևողություն՝ 15 վրկ
