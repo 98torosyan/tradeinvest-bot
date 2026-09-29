@@ -108,6 +108,13 @@ def main():
         alerts += weekly(now)
     for a in alerts:
         send_text(a)
+    hc = os.environ.get("HEALTHCHECK_URL", "").strip()
+    if hc:                                   # heartbeat: if GitHub Actions ever stops, Healthchecks.io alerts on its own
+        try:
+            import requests
+            requests.get(hc, timeout=10)
+        except Exception:  # noqa: BLE001
+            pass
     control.put("watchdog", mem)
     control.commit(["control"], "watchdog")
 

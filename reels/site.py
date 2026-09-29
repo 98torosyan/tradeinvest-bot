@@ -13,6 +13,19 @@ summary span{color:#93A3C4;font-weight:500;font-size:14px}ol{padding:0 18px 16px
 li a{color:#9CC2FF;text-decoration:none}li.done{color:#EEF3FA}footer{text-align:center;color:#93A3C4;font-size:13px;padding:30px}"""
 
 
+def analytics():
+    """Privacy-friendly, cookie-free visitor stats for the bio link page."""
+    import os
+    cf = os.environ.get("CF_ANALYTICS_TOKEN", "").strip()
+    gc = os.environ.get("GOATCOUNTER_CODE", "").strip()
+    if cf:
+        return (f"<script defer src='https://static.cloudflareinsights.com/beacon.min.js' "
+                f"data-cf-beacon='{{\"token\": \"{html.escape(cf)}\"}}'></script>")
+    if gc:
+        return f'<script data-goatcounter="https://{html.escape(gc)}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>'
+    return ""
+
+
 def build(cur, state, out_dir):
     pub = state.get("published", {})
     parts = []
@@ -33,7 +46,9 @@ def build(cur, state, out_dir):
             f'<meta name="description" content="Անվճար crypto և թրեյդինգ դասընթաց հայերեն՝ զրոյից մինչև պրոֆեսիոնալ մակարդակ. {total} դաս, 11 մոդուլ։">'
             f'<style>{CSS}</style></head><body><header><h1>📚 TradeInvest դասընթաց</h1>'
             f'<p>Crypto և թրեյդինգ հայերեն՝ զրոյից մինչև պրոֆեսիոնալ մակարդակ · {total} դաս · 11 մոդուլ</p></header>'
-            f'<main>{"".join(parts)}</main><footer>@armtradeinvest · Կրթական բովանդակություն, ոչ ֆինանսական խորհուրդ</footer></body></html>')
+            f'<main>{"".join(parts)}</main><footer>@armtradeinvest · Կրթական բովանդակություն, ոչ ֆինանսական խորհուրդ'
+            f'<br>Գրաֆիկները՝ <a href="https://www.tradingview.com/" style="color:#9CC2FF">TradingView</a> Lightweight Charts™ '
+            f'(Copyright © 2025 TradingView, Inc.)</footer>{analytics()}</body></html>')
     os.makedirs(out_dir, exist_ok=True)
     open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8").write(page)
     return os.path.join(out_dir, "index.html")

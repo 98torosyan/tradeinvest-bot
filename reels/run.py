@@ -33,6 +33,17 @@ def notify(text):
         print("[notify]", exc)
 
 
+def ping(suffix=""):
+    """Healthchecks.io: if no ping arrives for hours, it alerts us independently of GitHub."""
+    url = os.environ.get("HEALTHCHECK_URL", "").strip()
+    if url:
+        try:
+            import requests
+            requests.get(url.rstrip("/") + suffix, timeout=10)
+        except Exception:  # noqa: BLE001
+            pass
+
+
 def write_log(kind, status, now):
     old = open(LOG, encoding="utf-8").read().split("\n---\n")[:20] if os.path.exists(LOG) else []
     entry = f"**{now:%Y-%m-%d %H:%M}** `{kind}` {status}\n" + "\n".join(f"- {l}" for l in RUN_LOG[-25:])
@@ -90,10 +101,18 @@ def do_lesson(st, now, rid, publish):
     track = music.pick("lesson", m, st, now.strftime("%Y-%m-%d"))
     info = {"module_size": size, "next_title": nxt["title"] if nxt else None}
     mp4, cover = os.path.join(OUT, rid + ".mp4"), os.path.join(OUT, rid + ".jpg")
-    res = lesson_video.render_lesson(lesson, info, pal, mp4, cover, music=track, used_ids=st.get("used_broll", []))
+    cache = st.setdefault("clip_checks", {})
+    res = lesson_video.render_lesson(lesson, info, pal, mp4, cover, music=track, used_ids=st.get("used_broll", []),
+                                     clip_cache=cache)
+    if len(cache) > 600:
+        st["clip_checks"] = dict(list(cache.items())[-400:])
     from . import pexels
     RUN_LOG.extend(pexels.NOTES)
     caption, arm = captions.lesson_caption(lesson, size, st)
+    from . import music_hunt
+    credit = music_hunt.credit_for(track)
+    if credit:
+        caption = caption.replace("\n\n#", f"\n{credit}\n\n#", 1) if "\n\n#" in caption else caption + "\n" + credit
     errs, warns = qa.post_render(lesson, res, caption)
     for w in warns:
         summary("[qa warning] " + w)
@@ -148,14 +167,22 @@ def do_news(st, now, rid, publish):
     RUN_LOG.extend(news.NOTES)
     if not spec:
         summary("ℹ️ Լուր չհրապարակվեց՝ հարմար նոր լուր չգտնվեց"); return "skipped"
+    ok, bad = qa.text_ok(" ".join([spec["headline"], spec.get("sub", "")] +
+                                  [p["text"] for stp in spec["steps"] for p in stp["paragraphs"]] + [spec.get("caption", "")]))
+    if not ok:
+        notify(f"⚠️ Լուրը չհրապարակվեց՝ ուղղագրական սխալներ. {', '.join(bad[:8])}"); return "qa-fail"
     k = st.setdefault("palette", {}).get("news", 0); pal = palettes.NEWS[k % len(palettes.NEWS)]
-    bg, vid = pexels.fetch(spec.get("broll", ""), set(st.get("used_broll", [])), check=lesson_video._clip_ok(False))
+    bg, vid = pexels.fetch(spec.get("broll", ""), set(st.get("used_broll", [])), check=lesson_video._clip_ok(False, st.setdefault("clip_checks", {})))
     RUN_LOG.extend(pexels.NOTES)
     html = builder.build_news(spec, pal, builder.arm_date(now), footage=bool(bg))
     mp4 = os.path.join(OUT, rid + ".mp4")
-    dur = render.render(html, mp4, music.pick("news", None, st, now.strftime("%Y-%m-%d")), background=bg,
+    ntrack = music.pick("news", None, st, now.strftime("%Y-%m-%d"))
+    dur = render.render(html, mp4, ntrack, background=bg,
                         tint="0x" + pal["bg"].split("#", 1)[1][:6])
     caption = spec["caption"].strip()
+    from . import music_hunt
+    if music_hunt.credit_for(ntrack):
+        caption += "\n" + music_hunt.credit_for(ntrack)
     if caption.count("#") > settings.MAX_HASHTAGS:
         caption = caption[: caption.find("#")].rstrip() + "\n\n" + " ".join([t for t in caption.split() if t.startswith("#")][:5])
     if not publish:
@@ -229,7 +256,13 @@ def do_carousel(st, now, rid, publish):
     igapi.publish_carousel(ordered, cap); summary("✅ Weekly carousel published"); return "published"
 
 
-HANDLERS = {"lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
+def do_music(st, now, rid, publish):
+    from . import music_hunt
+    n = music_hunt.hunt() if publish else 0
+    summary(f"🎵 music candidates sent to Telegram: {n}"); return "done"
+
+
+HANDLERS = {"music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
             "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel}
 
 
@@ -245,20 +278,34 @@ def main():
     if control.paused():
         summary("⏸ paused (Telegram /pause) — nothing published"); return 0
     os.makedirs(OUT, exist_ok=True)
+    if publish:
+        try:
+            from . import music_hunt
+            added = music_hunt.install_approved()
+            if added:
+                notify("🎵 Գրադարանին ավելացան՝ " + ", ".join(added))
+        except Exception as exc:  # noqa: BLE001
+            print("[music] approved tracks not installed:", exc)
     st = state.load()
     rid = now.strftime("%Y%m%d-%H%M") + f"-{a.kind}"
     status = "❌ failed"
     try:
         status = "✅ " + HANDLERS[a.kind](st, now, rid, publish)
+        if publish:
+            ping()
         return 0
     except Exception as exc:  # noqa: BLE001
+        if publish:
+            ping("/fail")
         notify(f"❌ {a.kind} սխալ՝ {type(exc).__name__}: {str(exc)[:300]}")
         print(traceback.format_exc())
         return 1
     finally:
+        if publish and status.startswith("❌"):
+            ping("/fail")                                            # instant alert from Healthchecks.io
         if publish:
             state.save(st); write_log(a.kind, status, now)
-            control.commit(["reels/state.json", "reels/last_run.md", "control"], f"run: {rid} {status}")
+            control.commit(["reels/state.json", "reels/last_run.md", "control", "reels/assets/music"], f"run: {rid} {status}")
 
 
 if __name__ == "__main__":

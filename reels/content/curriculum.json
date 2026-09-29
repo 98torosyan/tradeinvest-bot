@@ -327,7 +327,7 @@
     {
      "kind": "broll",
      "text": "Ակտիվը այն է, ինչ արժեք ունի և կարող է գնվել ու վաճառվել",
-     "query": "gold bars"
+     "query": "gold bullion close up"
     },
     {
      "kind": "checklist",
@@ -446,7 +446,7 @@
     {
      "kind": "broll",
      "text": "Ոսկին հազարավոր տարիներ համարվել է արժեքի պահպանման միջոց",
-     "query": "gold bars"
+     "query": "gold bullion close up"
     },
     {
      "kind": "card",
@@ -850,7 +850,7 @@
   },
   {
    "title": "Market Cap",
-   "type": "calc",
+   "type": "concept",
    "hook": "Էժան coin-ը|էժան|չէ",
    "beats": [
     {
@@ -1353,7 +1353,7 @@
     {
      "kind": "broll",
      "text": "Ակտիվները տարբեր են՝ բաժնետոմսերից մինչև Bitcoin",
-     "query": "gold bars"
+     "query": "gold bullion close up"
     },
     {
      "kind": "broll",
@@ -2468,17 +2468,83 @@
    "uses": []
   },
   {
+   "title": "Support",
+   "type": "explain",
+   "hook": "Ինչո՞ւ է գինը|հետ թռչում|նույն տեղից",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Support-ը գնային գոտի է, որտեղ գնորդները նախկինում ակտիվ են եղել",
+     "query": "city skyline night"
+    },
+    {
+     "kind": "chart",
+     "title": "Support",
+     "text": "Գինը մի քանի անգամ հասնում է նույն մակարդակին և հետ թռչում",
+     "pattern": "support",
+     "source": "ideal",
+     "level": "support",
+     "query": "abstract blue light"
+    },
+    {
+     "kind": "broll",
+     "text": "Որքան շատ են հպումները, այնքան շատ թրեյդերներ են հետևում այդ մակարդակին",
+     "query": "people walking city"
+    },
+    {
+     "kind": "math",
+     "title": "Stop loss և թիրախ",
+     "text": "Շատերը stop loss-ը դնում են support-ի տակ, իսկ թիրախը՝ վերևում",
+     "template": "rr",
+     "query": "abstract light bokeh"
+    },
+    {
+     "kind": "chart",
+     "title": "Իսկ իրականում",
+     "text": "Իրական գրաֆիկում support-ը գոտի է, ոչ թե կատարյալ գիծ",
+     "pattern": "support",
+     "source": "real",
+     "level": "support",
+     "query": "abstract blue light"
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Support-ը կարող է կոտրվել, դրա համար միշտ պետք է stop loss",
+     "query": "calm lake sunrise"
+    }
+   ],
+   "recap": "Support՝|գնորդների|գոտի",
+   "summary": "Support. գոտի, որտեղ գինը հաճախ կանգ է առնում և հետ թռչում։ Ինչպես գտնել այն գրաֆիկում և ինչու է այն կարևոր։",
+   "question": "Կարո՞ղ ես գտնել support-ը BTC-ի գրաֆիկում հենց հիմա։",
+   "keywords": [
+    "support",
+    "support level",
+    "սափորթ",
+    "տեխնիկական վերլուծություն",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Support is a price zone where buying interest has repeatedly stopped declines."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է support-ը",
+    "options": [
+     "Գոտի, որտեղ գնորդները ակտիվ են",
+     "Գոտի, որտեղ վաճառողները ակտիվ են",
+     "Ինդիկատոր"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "support"
+   ],
+   "uses": [],
+   "negative": false,
    "id": "M5-11",
    "module": 5,
    "n": 11,
-   "title": "Support",
-   "type": "concept",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M5-11"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
    "id": "M5-12",

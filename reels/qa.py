@@ -37,7 +37,21 @@ def pre_render(lesson, cur, published_ids):
     errs += [e for e in curriculum.validate(one, settings.LESSON_MAX_WORDS) if "before it is introduced" not in e]
     t = _text_of(lesson)
     errs += [f"{lesson['id']}: banned phrase '{b}'" for b in BANNED if b.lower() in t]
+    from . import spell
+    full = " ".join([t, lesson.get("question", ""), (lesson.get("quiz") or {}).get("q", ""),
+                     " ".join((lesson.get("quiz") or {}).get("options", []))])
+    bad = spell.unknown(full)
+    if bad:
+        errs.append(f"{lesson['id']}: spelling check failed for: {', '.join(bad[:12])}")
     return errs
+
+
+def text_ok(text, max_ratio=0.03, max_abs=3):
+    """For generated text (news, comment replies): tolerate a few unknown names, block real typos."""
+    from . import spell
+    ws = spell.words(text)
+    bad = spell.unknown(text)
+    return len(bad) <= max_abs and len(bad) <= max(1, int(len(ws) * max_ratio)), bad
 
 
 def layout(html, times):
@@ -53,7 +67,7 @@ def layout(html, times):
       if(r.left<s.x0||r.right>s.x1||r.top<s.y0||r.bottom>s.y1||e.scrollWidth>e.clientWidth*1.08+6)
         out.push((e.className+': '+e.textContent).slice(0,60)+' @'+[r.left,r.top,r.right,r.bottom].map(Math.round))});return out}"""
     with sync_playwright() as p:
-        b = p.chromium.launch(); pg = b.new_page(viewport={"width": 1080, "height": 1920})
+        b = p.chromium.launch(); pg = b.new_page(viewport={"width": 1080, "height": 1920}, locale="en-US")
         pg.goto(f"file://{path}"); pg.evaluate("document.fonts.ready"); pg.wait_for_timeout(300)
         for t in times:
             pg.evaluate(f"seek({t})")

@@ -89,6 +89,18 @@ def src_stooq():
     return out
 
 
+def src_ccxt():
+    """Extra independent source through ccxt (Coinbase spot)."""
+    import ccxt
+    ex = ccxt.coinbase({"enableRateLimit": True, "timeout": 20000})
+    out = {}
+    for asset, sym in (("BTC", "BTC/USD"), ("ETH", "ETH/USD")):
+        t = ex.fetch_ticker(sym)
+        if t.get("last") and t.get("percentage") is not None:
+            out[asset] = {"price": float(t["last"]), "chg24": float(t["percentage"])}
+    return out
+
+
 def fear_greed():
     d = _get("https://api.alternative.me/fng/", params={"limit": 1})["data"][0]
     return int(d["value"])
@@ -134,7 +146,7 @@ def mood(rows, fng):
 
 def build_spec():
     srcs = {n: _safe(f) for n, f in (("binance", src_binance), ("coingecko", src_coingecko), ("cmc", src_cmc),
-                                     ("yahoo", src_yahoo), ("stooq", src_stooq))}
+                                     ("yahoo", src_yahoo), ("stooq", src_stooq), ("ccxt", src_ccxt))}
     rows = {}
     for asset in ("BTC", "ETH", "GOLD", "SPX"):
         r = consensus(asset, [s.get(asset) for s in srcs.values() if s])

@@ -17,3 +17,8 @@
 .outro .nxt{top:520px}.outro .nxt2{top:580px}.outro .logo{top:820px}.outro .name{top:1140px}
 .outro .nxt2{left:90px;right:90px;font-size:80px}
 .hero .hstack{left:80px;right:80px}
+.gicon{width:120px;height:120px;margin:0 auto 18px}
+.gicon svg{width:120px;height:120px}
+.ctitle{position:absolute;top:400px;left:80px;right:80px;text-align:center;font-family:ArmSerif,serif;font-weight:800;font-size:72px;color:var(--txt)}
+.lwc{position:absolute;left:50px;top:500px;width:980px;height:820px}
+.graphic.beat .cap{top:1330px}

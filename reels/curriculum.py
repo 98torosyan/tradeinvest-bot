@@ -3,7 +3,7 @@ import json
 import os
 
 PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "content", "curriculum.json")
-BEAT_KINDS = {"hero", "broll", "card", "compare", "checklist"}
+BEAT_KINDS = {"hero", "broll", "card", "compare", "checklist", "chart", "math"}
 
 
 def load():

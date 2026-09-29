@@ -25,7 +25,7 @@ def _frames(html, work, transparent):
     ext = "png" if transparent else "jpg"
     with sync_playwright() as p:
         browser = p.chromium.launch()
-        pg = browser.new_page(viewport={"width": 1080, "height": 1920})
+        pg = browser.new_page(viewport={"width": 1080, "height": 1920}, locale="en-US")
         pg.goto(f"file://{page_path}")
         pg.evaluate("document.fonts.ready")
         pg.wait_for_timeout(400)
@@ -80,7 +80,7 @@ def make_teaser(reel_mp4, overlay_html, out_mp4, seconds=12.0):
     with open(page, "w", encoding="utf-8") as f:
         f.write(overlay_html)
     with sync_playwright() as p:
-        b = p.chromium.launch(); pg = b.new_page(viewport={"width": 1080, "height": 1920})
+        b = p.chromium.launch(); pg = b.new_page(viewport={"width": 1080, "height": 1920}, locale="en-US")
         pg.goto(f"file://{page}"); pg.evaluate("document.fonts.ready"); pg.wait_for_timeout(300)
         pg.screenshot(path=png, omit_background=True); b.close()
     has_audio = bool(subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a", "-show_entries", "stream=index",

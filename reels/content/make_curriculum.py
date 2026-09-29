@@ -63,11 +63,16 @@ CALC = re.compile(r"հաշվարկ|բանաձև|Expectancy|Sharpe|Sortino|Ratio|
 EXPL = re.compile(r"Ամփոփում|Ամբողջական|Walkthrough|Project|Strategy$|Իսկ իրականում|Simulated|Analysis")
 
 from m1 import M1
+from m5 import M5
+SCRIPTED = {5: M5}
 lessons = []
 for n, spec in enumerate(M1, 1):
     lessons.append(dict(spec, id=f"M1-{n:02d}", module=1, n=n, status="script"))
 for m, titles in TITLES.items():
     for n, t in enumerate(titles, 1):
+        if n in SCRIPTED.get(m, {}):
+            spec = SCRIPTED[m][n]
+            lessons.append(dict(spec, id=f"M{m}-{n:02d}", module=m, n=n, status="script")); continue
         typ = "calc" if CALC.search(t) else "explain" if EXPL.search(t) else "concept"
         lessons.append({"id": f"M{m}-{n:02d}", "module": m, "n": n, "title": t, "type": typ, "status": "planned",
                         "negative": t.startswith("Scam"), "introduces": [f"M{m}-{n:02d}"], "uses": []})

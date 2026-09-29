@@ -9,8 +9,10 @@ DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "music"
 
 
 def pick(kind, module, state, today):
-    folder = "news" if kind in ("news", "story", "chart") else "lesson"
+    folder = {"news": "news", "story": "story", "chart": "story", "quiz": "story"}.get(kind, "lesson")
     files = sorted(glob.glob(os.path.join(DIR, folder, "*.mp3")) + glob.glob(os.path.join(DIR, folder, "*.wav")))
+    if not files and folder == "story":                 # no story tracks approved yet: use the news library
+        files = sorted(glob.glob(os.path.join(DIR, "news", "*.mp3")) + glob.glob(os.path.join(DIR, "news", "*.wav")))
     if not files:
         return None
     group = "quiz" if kind == "quiz" else settings.MUSIC_GROUPS.get(module or 1, "basics")

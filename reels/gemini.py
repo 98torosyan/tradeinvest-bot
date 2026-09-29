@@ -11,7 +11,7 @@ URL = "https://generativelanguage.googleapis.com/v1beta/models/{model}:generateC
 
 def _models():
     first = os.environ.get("GEMINI_MODEL", "").strip()
-    base = ["gemini-flash-latest", "gemini-2.5-flash", "gemini-flash-lite-latest"]
+    base = ["gemini-flash-latest", "gemini-flash-lite-latest"]
     return ([first] if first else []) + [m for m in base if m != first]
 
 
@@ -114,7 +114,7 @@ def frame_flags(image_path):
     body = {"contents": [{"role": "user", "parts": [{"inline_data": {"mime_type": "image/jpeg", "data": img}},
                                                    {"text": prompt}]}],
             "generationConfig": {"temperature": 0, "responseMimeType": "application/json"}}
-    for model in _models():
+    for model in ["gemini-flash-lite-latest"]:          # cheap model, one try: quota is kept for news and comments
         try:
             r = requests.post(URL.format(model=model), headers={"x-goog-api-key": key}, json=body, timeout=60)
             if r.status_code != 200:

@@ -39,6 +39,12 @@ def telegram_commands(st):
     changed = False
     for u in r.get("result", []):
         off = max(off, u["update_id"]); changed = True
+        cq = u.get("callback_query")
+        if cq:
+            if str(((cq.get("message") or {}).get("chat") or {}).get("id")) == str(TELEGRAM_CHAT_ID):
+                from . import music_hunt
+                music_hunt.on_callback(cq)
+            continue
         msg = u.get("message") or {}
         if str(msg.get("chat", {}).get("id")) != str(TELEGRAM_CHAT_ID):
             continue                                  # only the owner's chat may control the bot
@@ -119,7 +125,9 @@ def comments(st):
                 print("[comments] gemini:", exc); return done
             act, reply = d.get("action"), (d.get("reply") or "").strip()
             from .qa import BANNED
-            if act == "reply" and reply and len(reply) < 400 and not any(b.lower() in reply.lower() for b in BANNED):
+            from .qa import text_ok
+            spelled_ok = text_ok(reply, 0.05, 1)[0] if reply else False
+            if act == "reply" and reply and spelled_ok and len(reply) < 400 and not any(b.lower() in reply.lower() for b in BANNED):
                 igapi.reply(c["id"], f"{reply}\n{settings.AI_SIGNATURE}")
                 send_text(f"💬 @{c.get('username')}: {c.get('text')}\n↳ {reply}")
                 done += 1
