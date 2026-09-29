@@ -1,3 +1,9 @@
+**2026-09-29 16:54** `news` ✅ qa-fail
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 55 items
+- ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական սխալներ. Բիզնես, ինստիտուցիոնալ, կորպորատիվ, կրիպտո, կրիպտոարժույթի
+---
 **2026-09-29 16:10** `lesson` ✅ published
 - [pexels] using clip 35464509 for 'city skyline night'
 - [pixabay] clip pb14900 rejected by the content check
@@ -160,5 +166,3 @@
 - ✅ Հրապարակվեց՝ դաս «Ռիսկ և շահույթ» (Մակարդակ 0՝ Շուկայի այբուբեն | Դաս 9/12)
 Գույն՝ wine, տևողություն՝ 35 վրկ
 - ✅ teaser Story published
----
-**2026-09-27 21:17** `lesson` ✅ rendered, publishing
