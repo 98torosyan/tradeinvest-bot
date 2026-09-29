@@ -103,18 +103,11 @@
   "cta": {}
  },
  "music_used": {
-  "2026-09-28": [
-   "delayed-flight.mp3",
-   "cbpd.mp3",
-   "workout.mp3",
-   "memories.mp3",
-   "delayed-flight.mp3",
-   "cbpd.mp3",
-   "autofahren.mp3",
-   "memories.mp3"
+  "2026-09-29": [
+   "autofahren.mp3"
   ]
  },
- "last_track": "memories.mp3",
+ "last_track": "autofahren.mp3",
  "last_cta": "save",
  "news_media": [
   {

@@ -1,3 +1,8 @@
+**2026-09-29 08:50** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7683.69}
+- ✅ Story published
+---
 **2026-09-28 21:18** `lesson` ✅ published
 - [pexels] using video 39570925 for 'city skyline night'
 - [pexels] using video 39481172 for 'city skyline day'
@@ -143,5 +148,3 @@
 - ✅ Հրապարակվեց՝ դաս «Ներդրում, թե՞ թրեյդինգ» (Մակարդակ 0՝ Շուկայի այբուբեն | Դաս 8/12)
 Գույն՝ forest, տևողություն՝ 34 վրկ
 - ✅ teaser Story published
----
-**2026-09-27 18:18** `lesson` ✅ rendered, publishing
