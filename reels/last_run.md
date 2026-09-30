@@ -1,3 +1,21 @@
+**2026-09-30 18:23** `lesson` ✅ published
+- [pexels] using clip 11335976 for 'city skyline night'
+- [pexels] clip 36108468 rejected by the content check
+- [pexels] clip 35972076 rejected by the content check
+- [pexels] clip 34381274 rejected by the content check
+- [pixabay] using clip pb3626 for 'people shopping crowd'
+- [pexels] clip 33390334 rejected by the content check
+- [pixabay] clip pb20857 rejected by the content check
+- [pixabay] clip pb20459 rejected by the content check
+- [pixabay] download pb230033 failed: file too large
+- [pexels] using clip 30747149 for 'city skyline night'
+- [pexels] download 28494561 failed: file too large
+- [pexels] using clip 36726052 for 'technology blue'
+- [pexels] using clip 10884417 for 'dam water release'
+- [pexels] using clip 36628009 for 'abstract light bokeh'
+- [qa warning] motion-graphics share 33% < 40%
+- ✅ M1-15 «Circulating և Total Supply» published (42s, cta=send)
+---
 **2026-09-30 16:56** `news` ✅ qa-fail
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -154,9 +172,3 @@
 - [pexels] using video 33719666 for 'city skyline day'
 - ✅ M1-06 «Ի՞նչ է ինդեքսը» published (24s, cta=save)
 - ✅ teaser Story published
----
-**2026-09-28 20:26** `news` ❌ failed
-- ❌ news սխալ՝ RuntimeError: Gemini failed: gemini-2.5-flash: HTTP 404 {
-  "error": {
-    "code": 404,
-    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features a | gemini-flash-lite-latest: HTTP 503 | gemini-flash-lite-
