@@ -1,3 +1,6 @@
+**2026-09-30 19:53** `chart` ✅ published
+- ✅ Story published
+---
 **2026-09-30 18:23** `lesson` ✅ published
 - [pexels] using clip 11335976 for 'city skyline night'
 - [pexels] clip 36108468 rejected by the content check
@@ -163,12 +166,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7683.69}
 - ✅ Story published
----
-**2026-09-28 21:18** `lesson` ✅ published
-- [pexels] using video 39570925 for 'city skyline night'
-- [pexels] using video 39481172 for 'city skyline day'
-- [pexels] using video 35419124 for 'new york skyline'
-- [pexels] using video 11372816 for 'city aerial night'
-- [pexels] using video 33719666 for 'city skyline day'
-- ✅ M1-06 «Ի՞նչ է ինդեքսը» published (24s, cta=save)
-- ✅ teaser Story published
