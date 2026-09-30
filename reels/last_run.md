@@ -1,3 +1,13 @@
+**2026-09-30 09:20** `lesson` ✅ published
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] using clip pb3134 for 'city skyline night'
+- [pexels] using clip 15886614 for 'technology blue'
+- [pexels] using clip 35158244 for 'technology network connection'
+- [pexels] clip 39463971 rejected by the content check
+- [pexels] using clip 34995393 for 'digital network technology'
+- [pexels] using clip 39322559 for 'abstract light bokeh'
+- ✅ M1-12 «Ethereum և Smart Contracts» published (34s, cta=question)
+---
 **2026-09-30 08:51** `story` ✅ published
 - 🎵 Գրադարանին ավելացան՝ lesson_mixkit-chillout-105.mp3, news_mixkit-house-471.mp3, news_mixkit-house-744.mp3, story_mixkit-electropop-870.mp3
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
@@ -146,16 +156,3 @@
 ---
 **2026-09-28 13:50** `quiz` ✅ skipped
 - ℹ️ Quiz չկա՝ երեկ դաս չի հրապարակվել
----
-**2026-09-28 12:22** `lesson` ✅ published
-- [pexels] using video 11597069 for 'city skyline night'
-- [pexels] video 5995617 rejected by the content check
-- [pexels] using video 13801277 for 'stock exchange building'
-- [pexels] using video 35002915 for 'abstract network lights'
-- [pexels] download 28494561 failed: file too large
-- [pexels] using video 15439746 for 'abstract blue light'
-- [pexels] using video 16762623 for 'city night timelapse'
-- [pexels] video 5995617 rejected by the content check
-- [pexels] using video 5635831 for 'stock exchange building'
-- ✅ M1-03 «Ի՞նչ է բորսան» published (28s, cta=question)
-- ✅ teaser Story published

@@ -1,5 +1,5 @@
 {
- "course_index": 11,
+ "course_index": 12,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -77,6 +77,13 @@
    "date": "2026-09-29",
    "hour": 21,
    "cta": "save"
+  },
+  "M1-12": {
+   "media": "18137709619540901",
+   "permalink": "https://www.instagram.com/reel/Dd5lQDsmcfI/",
+   "date": "2026-09-30",
+   "hour": 9,
+   "cta": "question"
   }
  },
  "palette": {
@@ -162,7 +169,12 @@
   "pb45902",
   36627993,
   "pb182970",
-  39322558
+  39322558,
+  "pb3134",
+  15886614,
+  35158244,
+  34995393,
+  39322559
  ],
  "bandit": {
   "cta": {}
@@ -173,7 +185,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "save",
+ "last_cta": "question",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -223,6 +235,37 @@
   "pb182970.mp4": true,
   "pb182970.mp4:face": false,
   "39322558.mp4": true,
-  "39322558.mp4:face": false
+  "39322558.mp4:face": false,
+  "pb3134.mp4": true,
+  "pb3134.mp4:face": false,
+  "15886614.mp4": true,
+  "15886614.mp4:face": false,
+  "35158244.mp4": true,
+  "35158244.mp4:face": false,
+  "39463971.mp4": false,
+  "39463971.mp4:face": false,
+  "34995393.mp4": true,
+  "34995393.mp4:face": false,
+  "39322559.mp4": true,
+  "39322559.mp4:face": false
+ },
+ "music_bag": {
+  "lesson": [
+   "lesson_mixkit-chillout-105.mp3",
+   "cbpd.mp3",
+   "memories.mp3"
+  ]
+ },
+ "music_last": {
+  "lesson": "delayed-flight.mp3"
+ },
+ "music_sections": {
+  "delayed-flight.mp3": [
+   2.0,
+   14.0
+  ]
+ },
+ "music_uses": {
+  "delayed-flight.mp3": 1
  }
 }
