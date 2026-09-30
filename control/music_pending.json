@@ -45,7 +45,7 @@
   "license_version": "",
   "license_url": "https://mixkit.co/license/",
   "credit": "Mixkit chillout #105 — Mixkit (MIXKIT )",
-  "status": "pending"
+  "status": "approved"
  },
  "lesson-5-mixkit": {
   "ov_id": "mixkit-27",
@@ -81,7 +81,7 @@
   "license_version": "",
   "license_url": "https://mixkit.co/license/",
   "credit": "Mixkit house #471 — Mixkit (MIXKIT )",
-  "status": "pending"
+  "status": "approved"
  },
  "news-8-mixkit": {
   "ov_id": "mixkit-474",
@@ -105,7 +105,7 @@
   "license_version": "",
   "license_url": "https://mixkit.co/license/",
   "credit": "Mixkit house #744 — Mixkit (MIXKIT )",
-  "status": "pending"
+  "status": "approved"
  },
  "news-10-mixkit": {
   "ov_id": "mixkit-181",
@@ -165,6 +165,6 @@
   "license_version": "",
   "license_url": "https://mixkit.co/license/",
   "credit": "Mixkit electropop #870 — Mixkit (MIXKIT )",
-  "status": "pending"
+  "status": "approved"
  }
 }
