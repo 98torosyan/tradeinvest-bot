@@ -1,3 +1,6 @@
+**2026-09-30 04:53** `music` ✅ done
+- 🎵 music candidates sent to Telegram: 14
+---
 **2026-09-29 21:18** `lesson` ✅ published
 - [pexels] clip 35552568 rejected by the content check
 - [pexels] using clip 28901427 for 'city skyline night'
@@ -157,20 +160,3 @@
 - [news] https://decrypt.co/feed: 36 items
 - [pexels] using video 7846332 for 'abstract blue light server room'
 - ✅ News published: Solana ETF-ները գրանցել են ռեկորդային մուտքեր
----
-**2026-09-28 09:20** `lesson` ✅ published
-- [pexels] using video 29025308 for 'city skyline night'
-- [pexels] video 36108468 rejected by the content check
-- [pexels] video 35972076 rejected by the content check
-- [pexels] video 34381274 rejected by the content check
-- [pexels] using video 39468111 for 'city skyline night'
-- [pexels] using video 18979105 for 'city lights night'
-- [pexels] using video 33472428 for 'empty street morning'
-- [pexels] using video 28201503 for 'rain window city'
-- [pexels] using video 7477551 for 'handshake close up'
-- [pexels] video 36108468 rejected by the content check
-- [pexels] video 35972076 rejected by the content check
-- [pexels] video 34381274 rejected by the content check
-- [pexels] video 39481319 rejected by the content check
-- [pexels] using video 11745565 for 'city skyline night'
-- ✅ M1-02 «Ինչպե՞ս է ձևավորվում գինը» published (26s, cta=question)
