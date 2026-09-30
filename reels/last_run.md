@@ -1,3 +1,6 @@
+**2026-09-30 13:52** `quiz` ✅ published
+- ✅ Quiz Story from M1-08
+---
 **2026-09-30 12:22** `lesson` ✅ published
 - [pexels] clip 35552568 rejected by the content check
 - [pixabay] using clip pb336755 for 'city skyline night'
@@ -153,9 +156,3 @@
 - [pexels] download 27452884 failed: file too large
 - [pexels] using video 7082893 for 'gold bars'
 - ✅ M1-05 «Ակտիվների դասեր» published (26s, cta=send)
----
-**2026-09-28 16:53** `news` ❌ failed
-- ❌ news սխալ՝ RuntimeError: Gemini failed: gemini-2.5-flash: HTTP 404 {
-  "error": {
-    "code": 404,
-    "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features a | gemini-flash-lite-latest: HTTP 503 | gemini-flash-lite-

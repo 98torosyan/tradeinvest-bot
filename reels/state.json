@@ -214,7 +214,7 @@
    "date": "2026-09-30"
   }
  ],
- "quiz_count": 1,
+ "quiz_count": 2,
  "clip_checks": {
   "35464509.mp4": true,
   "35464509.mp4:face": false,
@@ -290,11 +290,13 @@
    "user_the-mountain-market-systems-146118.mp3",
    "user_soundsurfer-trading-254548.mp3"
   ],
-  "news": []
+  "news": [],
+  "story": []
  },
  "music_last": {
   "lesson": "user_the-mountain-tech-corporate-593075.mp3",
-  "news": "user_momotmusic-inspiring-reels-406484.mp3"
+  "news": "user_momotmusic-inspiring-reels-406484.mp3",
+  "story": "story_mixkit-electropop-870.mp3"
  },
  "music_sections": {
   "delayed-flight.mp3": [
@@ -319,12 +321,17 @@
    85.0,
    97.0,
    112.0
+  ],
+  "story_mixkit-electropop-870.mp3": [
+   20.0,
+   37.0
   ]
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
   "user_momotmusic-inspiring-reels-406484.mp3": 1,
-  "user_the-mountain-tech-corporate-593075.mp3": 1
+  "user_the-mountain-tech-corporate-593075.mp3": 1,
+  "story_mixkit-electropop-870.mp3": 1
  },
  "low_alert": "2026-09-30"
 }
