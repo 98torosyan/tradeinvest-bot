@@ -271,3 +271,63 @@ def credit_for(track_path):
     if c and (c.get("license") or "").lower() not in ("cc0", "mixkit"):
         return f"🎵 {c['credit']}"
     return ""
+
+
+INCOMING = os.path.join(MUSIC, "incoming")
+PROFILE_WORDS = {"lesson": ("դաս", "das", "lesson", "урок"), "news": ("լուր", "lur", "news", "новост"),
+                 "story": ("story", "սթորի", "stori", "сторис")}
+
+
+def profile_from_caption(caption):
+    c = (caption or "").lower()
+    for prof, words in PROFILE_WORDS.items():
+        if any(w in c for w in words):
+            return prof
+    return None
+
+
+def save_incoming(file_id, filename, caption):
+    """Community job: downloads an audio file the owner sent to the bot (no ffmpeg there)."""
+    prof = profile_from_caption(caption)
+    if not prof:
+        return None, "no-profile"
+    info = tg("getFile", file_id=file_id)
+    if not info.get("ok"):
+        return None, "telegram: " + str(info.get("description", ""))[:80]
+    sys.path.insert(0, ROOT)
+    from config import TELEGRAM_BOT_TOKEN
+    url = f"https://api.telegram.org/file/bot{TELEGRAM_BOT_TOKEN}/{info['result']['file_path']}"
+    os.makedirs(INCOMING, exist_ok=True)
+    base = _slug(os.path.splitext(filename or "track")[0])
+    dst = os.path.join(INCOMING, f"{prof}__{base}{os.path.splitext(filename or '.mp3')[1] or '.mp3'}")
+    with requests.get(url, timeout=120, stream=True) as r:
+        r.raise_for_status()
+        with open(dst, "wb") as f:
+            for chunk in r.iter_content(1 << 20):
+                f.write(chunk)
+    return (prof, os.path.basename(dst)), "ok"
+
+
+def install_incoming():
+    """Reels job (ffmpeg available): normalises owner-sent tracks into the right library as user_*.mp3."""
+    done = []
+    if not os.path.isdir(INCOMING):
+        return done
+    for name in sorted(os.listdir(INCOMING)):
+        if "__" not in name:
+            continue
+        prof, rest = name.split("__", 1)
+        folder = os.path.join(MUSIC, PROFILES.get(prof, PROFILES["lesson"])["folder"])
+        os.makedirs(folder, exist_ok=True)
+        out = os.path.join(folder, f"user_{_slug(os.path.splitext(rest)[0])}.mp3")
+        src = os.path.join(INCOMING, name)
+        r = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", src, "-af",
+                            "loudnorm=I=-16:TP=-1.5:LRA=11", "-ac", "2", "-ar", "44100", "-b:a", "192k", out])
+        if r.returncode == 0:
+            os.remove(src); done.append(os.path.basename(out))
+            for old in os.listdir(folder):                 # the owner's music replaces the old library of this type
+                if not old.startswith("user_") and old.endswith((".mp3", ".wav")):
+                    os.remove(os.path.join(folder, old)); done.append(f"−{old}")
+        else:
+            print("[music] could not convert", name)
+    return done

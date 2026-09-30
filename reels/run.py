@@ -259,6 +259,8 @@ def do_carousel(st, now, rid, publish):
 
 def do_music(st, now, rid, publish):
     from . import music_hunt
+    if not settings.MUSIC_HUNT_ENABLED:
+        summary("🎵 automatic music search is off (tracks come from the owner via Telegram)"); return "skipped"
     n = music_hunt.hunt() if publish else 0
     summary(f"🎵 music candidates sent to Telegram: {n}"); return "done"
 
@@ -282,7 +284,7 @@ def main():
     if publish:
         try:
             from . import music_hunt
-            added = music_hunt.install_approved()
+            added = music_hunt.install_approved() + music_hunt.install_incoming()
             if added:
                 notify("🎵 Գրադարանին ավելացան՝ " + ", ".join(added))
         except Exception as exc:  # noqa: BLE001

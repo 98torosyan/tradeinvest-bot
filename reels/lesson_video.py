@@ -85,7 +85,7 @@ def _nwords(*parts):
 def beat_len(b):
     k, W = b["kind"], settings.WORD_SEC
     if k == "hero":
-        return max(2.4, 0.9 + 0.5 * len(b["text"].split("|")) + 0.12 * _nwords(b["text"]))
+        return max(3.2, 1.4 + 0.7 * len(b["text"].split("|")) + 0.15 * _nwords(b["text"]))
     if k == "card":
         return min(7.0, max(3.5, 1.8 + 0.62 * _nwords(b["title"], b["text"])))
     if k == "compare":
@@ -98,7 +98,7 @@ def beat_len(b):
         return min(10.0, max(5.5, 3.2 + 0.55 * _nwords(b.get("text", ""))))
     words = b["text"].split()
     need = sum(max(settings.CHUNK_MIN, len(c) * W) for c in chunks(words)) + 0.6     # every chunk readable
-    return min(10.0, max(2.6, need))
+    return min(12.0, max(2.6, need))
 
 
 def plan(lesson, grid):
@@ -247,8 +247,8 @@ def _hero(b):
         if b.get("first") and i == 0:
             html += f'<div class="hl"{style}>{esc(p)}</div>'                      # visible on frame 0 (hook)
         else:
-            at = (0.35 if b.get("first") else 0.15) + i * 0.42
-            html += f'<div class="hl" data-fx="slam" data-at="{at:.2f}" data-dur=".42"{style}>{esc(p)}</div>'
+            at = (0.55 + 0.8 if b.get("first") else 0.2) + i * 0.62   # first scene starts 0.8 s "early" (hook on frame 0)
+            html += f'<div class="hl" data-fx="slam" data-at="{at:.2f}" data-dur=".55"{style}>{esc(p)}</div>'
     return f'<div class="dim"></div><div class="hstack">{html}</div>'
 
 
@@ -268,7 +268,7 @@ def _captions(b):
         s0, s1 = wt[wi][0], wt[wi + len(ch) - 1][1]
         ws = "".join(f'<span class="w" data-s="{wt[wi + j][0]:.2f}" data-e="{wt[wi + j][1]:.2f}">{esc(w)}</span> '
                      for j, w in enumerate(ch))
-        fs = _fit(max(ch, key=len), 92, width=860, k=0.86)
+        fs = _fit(max(ch, key=len), 92, width=800, k=0.86)
         out += f'<div class="chunk" style="font-size:{fs}px" data-s="{s0:.2f}" data-e="{s1:.2f}">{ws}</div>'
         wi += len(ch)
     return f'<div class="cap">{out}</div>'
@@ -399,13 +399,13 @@ def overlay_html(lesson, cur_info, palette, beats, total):
             f'<script src="{ASSETS}/engine.js"></script><script>window.DURATION={total:.2f};{CHART_JS}'
             f'''(function(){{const o=applyFx;applyFx=function(it,l){{if(it.dataset.fx!=='slam')return o(it,l);
  const r=prog(l,+it.dataset.at,+it.dataset.dur);const e=r<=0?0:EASE.back(r);it.style.opacity=clamp01(r*3);
- it.style.transform=`scale(${{1.4-.4*e}})`;it.style.filter=`blur(${{(1-clamp01(r*1.6))*12}}px)`;}};}})();
+ it.style.transform=`scale(${{1.18-.18*e}})`;it.style.filter=`blur(${{(1-clamp01(r*2.2))*6}}px)`;}};}})();
 HOOKS.push(t=>{{const end={oa:.2f};const o=1-EASE.inOut(prog(t,end-.35,.35));
  document.getElementById('pill').style.opacity=o;document.getElementById('prog').style.opacity=o;
  document.getElementById('pi').style.transform=`scaleX(${{clamp01(t/end)}})`;
  for(const sc of SCENES){{if(!sc.el.classList.contains('beat'))continue;const l=t-sc.a;
   sc.el.querySelectorAll('.chunk').forEach(c=>{{const on=l>=+c.dataset.s&&l<+c.dataset.e+(c.nextElementSibling?0:9);
-   c.style.display=on?'block':'none';const k=EASE.back(clamp01((l-+c.dataset.s)/.22));c.style.transform=`scale(${{.85+.15*k}})`;}});
+   c.style.display=on?'block':'none';const k=Math.min(1,EASE.back(clamp01((l-+c.dataset.s)/.22)));c.style.transform=`scale(${{.88+.12*k}})`;}});
   sc.el.querySelectorAll('.w').forEach(w=>w.classList.toggle('on',l>=+w.dataset.s&&l<+w.dataset.e));}}
 }});logoFx({oa + 0.55:.2f});setupReel();</script></body></html>''')
 

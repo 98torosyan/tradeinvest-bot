@@ -55,6 +55,24 @@ def telegram_commands(st):
                                             "secret_has_spaces": str(TELEGRAM_CHAT_ID) != str(TELEGRAM_CHAT_ID).strip()})
             continue
         text = (msg.get("text") or "").strip()
+        media = msg.get("audio") or msg.get("document")
+        if media and (msg.get("audio") or str(media.get("mime_type", "")).startswith("audio")
+                      or str(media.get("file_name", "")).lower().endswith((".mp3", ".wav", ".m4a", ".ogg", ".flac"))):
+            from . import music_hunt
+            try:
+                res, why = music_hunt.save_incoming(media["file_id"], media.get("file_name") or media.get("title") or "track",
+                                                    msg.get("caption"))
+            except Exception as exc:  # noqa: BLE001
+                res, why = None, str(exc)[:120]
+            if res:
+                changed = True
+                where = {"lesson": "դասերի", "news": "լուրերի", "story": "Story-ների"}[res[0]]
+                send_text(f"✅ Trek-ը ստացվեց ({where} համար)։ Այն կմշակվի և կօգտագործվի հաջորդ Reel-ից սկսած։")
+            elif why == "no-profile":
+                send_text("🎵 Ֆայլը ստացա, բայց caption-ում գրիր՝ «դաս», «լուր» կամ «story», որ իմանամ, թե որտեղ օգտագործել, և ուղարկիր նորից։")
+            else:
+                send_text(f"⚠️ Trek-ը չհաջողվեց ստանալ՝ {why}")
+            continue
         if text.startswith("/pause"):
             control.set_paused(True); send_text("⏸ Բոլոր հրապարակումները կանգնեցված են։ /resume՝ վերսկսելու համար։")
         elif text.startswith("/resume"):
@@ -161,7 +179,7 @@ def main():
     except Exception as exc:  # noqa: BLE001
         print("[comments] failed:", exc)
     if changed:
-        control.commit(["control", "reels/content/whitelist_hy.txt"], "control: telegram commands")
+        control.commit(["control", "reels/content/whitelist_hy.txt", "reels/assets/music/incoming"], "control: telegram commands")
 
 
 if __name__ == "__main__":
