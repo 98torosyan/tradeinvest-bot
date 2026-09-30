@@ -1,3 +1,9 @@
+**2026-09-30 08:51** `story` ✅ published
+- 🎵 Գրադարանին ավելացան՝ lesson_mixkit-chillout-105.mp3, news_mixkit-house-471.mp3, news_mixkit-house-744.mp3, story_mixkit-electropop-870.mp3
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7670.84}
+- ✅ Story published
+---
 **2026-09-30 04:53** `music` ✅ done
 - 🎵 music candidates sent to Telegram: 14
 ---
@@ -153,10 +159,3 @@
 - [pexels] using video 5635831 for 'stock exchange building'
 - ✅ M1-03 «Ի՞նչ է բորսան» published (28s, cta=question)
 - ✅ teaser Story published
----
-**2026-09-28 10:54** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 36 items
-- [pexels] using video 7846332 for 'abstract blue light server room'
-- ✅ News published: Solana ETF-ները գրանցել են ռեկորդային մուտքեր

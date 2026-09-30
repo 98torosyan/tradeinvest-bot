@@ -35,18 +35,6 @@
   "credit": "Mixkit chillout #475 — Mixkit (MIXKIT )",
   "status": "pending"
  },
- "lesson-4-mixkit": {
-  "ov_id": "mixkit-105",
-  "profile": "lesson",
-  "url": "https://assets.mixkit.co/music/105/105.mp3",
-  "title": "Mixkit chillout #105",
-  "creator": "Mixkit",
-  "license": "mixkit",
-  "license_version": "",
-  "license_url": "https://mixkit.co/license/",
-  "credit": "Mixkit chillout #105 — Mixkit (MIXKIT )",
-  "status": "approved"
- },
  "lesson-5-mixkit": {
   "ov_id": "mixkit-27",
   "profile": "lesson",
@@ -71,18 +59,6 @@
   "credit": "Mixkit house #623 — Mixkit (MIXKIT )",
   "status": "pending"
  },
- "news-7-mixkit": {
-  "ov_id": "mixkit-471",
-  "profile": "news",
-  "url": "https://assets.mixkit.co/music/471/471.mp3",
-  "title": "Mixkit house #471",
-  "creator": "Mixkit",
-  "license": "mixkit",
-  "license_version": "",
-  "license_url": "https://mixkit.co/license/",
-  "credit": "Mixkit house #471 — Mixkit (MIXKIT )",
-  "status": "approved"
- },
  "news-8-mixkit": {
   "ov_id": "mixkit-474",
   "profile": "news",
@@ -94,18 +70,6 @@
   "license_url": "https://mixkit.co/license/",
   "credit": "Mixkit house #474 — Mixkit (MIXKIT )",
   "status": "pending"
- },
- "news-9-mixkit": {
-  "ov_id": "mixkit-744",
-  "profile": "news",
-  "url": "https://assets.mixkit.co/music/744/744.mp3",
-  "title": "Mixkit house #744",
-  "creator": "Mixkit",
-  "license": "mixkit",
-  "license_version": "",
-  "license_url": "https://mixkit.co/license/",
-  "credit": "Mixkit house #744 — Mixkit (MIXKIT )",
-  "status": "approved"
  },
  "news-10-mixkit": {
   "ov_id": "mixkit-181",
@@ -154,17 +118,5 @@
   "license_url": "https://mixkit.co/license/",
   "credit": "Mixkit electropop #439 — Mixkit (MIXKIT )",
   "status": "pending"
- },
- "story-14-mixkit": {
-  "ov_id": "mixkit-870",
-  "profile": "story",
-  "url": "https://assets.mixkit.co/music/870/870.mp3",
-  "title": "Mixkit electropop #870",
-  "creator": "Mixkit",
-  "license": "mixkit",
-  "license_version": "",
-  "license_url": "https://mixkit.co/license/",
-  "credit": "Mixkit electropop #870 — Mixkit (MIXKIT )",
-  "status": "approved"
  }
 }

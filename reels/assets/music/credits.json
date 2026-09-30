@@ -12,5 +12,45 @@
   "mixkit-640",
   "mixkit-695",
   "mixkit-928"
- ]
+ ],
+ "lesson_mixkit-chillout-105.mp3": {
+  "ov_id": "mixkit-105",
+  "profile": "lesson",
+  "title": "Mixkit chillout #105",
+  "creator": "Mixkit",
+  "license": "mixkit",
+  "license_version": "",
+  "license_url": "https://mixkit.co/license/",
+  "credit": "Mixkit chillout #105 — Mixkit (MIXKIT )"
+ },
+ "news_mixkit-house-471.mp3": {
+  "ov_id": "mixkit-471",
+  "profile": "news",
+  "title": "Mixkit house #471",
+  "creator": "Mixkit",
+  "license": "mixkit",
+  "license_version": "",
+  "license_url": "https://mixkit.co/license/",
+  "credit": "Mixkit house #471 — Mixkit (MIXKIT )"
+ },
+ "news_mixkit-house-744.mp3": {
+  "ov_id": "mixkit-744",
+  "profile": "news",
+  "title": "Mixkit house #744",
+  "creator": "Mixkit",
+  "license": "mixkit",
+  "license_version": "",
+  "license_url": "https://mixkit.co/license/",
+  "credit": "Mixkit house #744 — Mixkit (MIXKIT )"
+ },
+ "story_mixkit-electropop-870.mp3": {
+  "ov_id": "mixkit-870",
+  "profile": "story",
+  "title": "Mixkit electropop #870",
+  "creator": "Mixkit",
+  "license": "mixkit",
+  "license_version": "",
+  "license_url": "https://mixkit.co/license/",
+  "credit": "Mixkit electropop #870 — Mixkit (MIXKIT )"
+ }
 }
