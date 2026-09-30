@@ -1,3 +1,13 @@
+**2026-09-30 15:18** `lesson` ✅ published
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] clip pb337459 rejected by the content check
+- [pixabay] using clip pb30154 for 'city skyline night'
+- [pexels] using clip 29941192 for 'city skyline day'
+- [pexels] using clip 28203566 for 'technology blue'
+- [pexels] using clip 34995473 for 'technology network connection'
+- [pexels] using clip 4565572 for 'abstract light bokeh'
+- ✅ M1-14 «Market Cap» published (37s, cta=save)
+---
 **2026-09-30 13:52** `quiz` ✅ published
 - ✅ Quiz Story from M1-08
 ---
@@ -146,13 +156,3 @@
 ---
 **2026-09-28 19:51** `chart` ✅ published
 - ✅ Story published
----
-**2026-09-28 18:21** `lesson` ✅ published
-- [pexels] using video 39481319 for 'city skyline night'
-- [pexels] using video 7254961 for 'gold bars'
-- [pexels] download 28494561 failed: file too large
-- [pexels] using video 28483048 for 'abstract blue light'
-- [pexels] using video 32719391 for 'ocean waves storm'
-- [pexels] download 27452884 failed: file too large
-- [pexels] using video 7082893 for 'gold bars'
-- ✅ M1-05 «Ակտիվների դասեր» published (26s, cta=send)
