@@ -1,3 +1,10 @@
+**2026-09-30 20:28** `news` ✅ qa-fail
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 36 items
+- ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական ստուգումը չանցավ. Ինստիտուցիոնալ, Կրիպտոակտիվությունը, Սինգապուրի, ինստիտուցիոնալ, կրիպտոակտիվությունը
+Եթե բառերը ճիշտ են, գրիր՝ /allow Ինստիտուցիոնալ Կրիպտոակտիվությունը Սինգապուրի ինստիտուցիոնալ կրիպտոակտիվությունը
+---
 **2026-09-30 19:53** `chart` ✅ published
 - ✅ Story published
 ---
@@ -161,8 +168,3 @@
 - [pexels] download 27452884 failed: file too large
 - [pexels] using video 15283163 for 'gold bars'
 - ✅ M1-07 «Ոսկին՝ ապահով նավահանգիստ» published (27s, cta=question)
----
-**2026-09-29 08:50** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7683.69}
-- ✅ Story published
