@@ -1,3 +1,15 @@
+**2026-09-30 12:22** `lesson` ✅ published
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] using clip pb336755 for 'city skyline night'
+- [pexels] using clip 16863222 for 'technology blue'
+- [pexels] using clip 34995047 for 'technology network connection'
+- [pexels] clip 33390334 rejected by the content check
+- [pexels] using clip 7318813 for 'bank vault door'
+- [pexels] using clip 35090395 for 'abstract light bokeh'
+- ✅ M1-13 «Stablecoins» published (34s, cta=send)
+- ✅ teaser Story published
+- 📚 Մնացել է 9 պատրաստի սցենար։
+---
 **2026-09-30 10:54** `news` ✅ published
 - 🎵 Գրադարանին ավելացան՝ user_apalonbeats-finance-money-trading-invest.mp3, −memories.mp3, −lesson_mixkit-chillout-105.mp3, −cbpd.mp3, −delayed-flight.mp3, user_momotmusic-inspiring-reels-406484.mp3, user_soundsurfer-trading-254548.mp3, user_starostin-investment-finance-trading-mon.mp3, user_the-mountain-finance-background-449885.mp3, user_the-mountain-market-systems-146118.mp3, user_the-mountain-tech-corporate-593075.mp3, user_momotmusic-inspiring-reels-406484.mp3, −autofahren.mp3, −news_mixkit-house-471.mp3, −hip-hop-02.mp3, −workout.mp3, −news_mixkit-house-744.mp3
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
@@ -147,18 +159,3 @@
   "error": {
     "code": 404,
     "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features a | gemini-flash-lite-latest: HTTP 503 | gemini-flash-lite-
----
-**2026-09-28 15:18** `lesson` ✅ published
-- [pexels] video 39481319 rejected by the content check
-- [pexels] using video 10331098 for 'city skyline night'
-- [pexels] using video 12595945 for 'calm lake sunrise'
-- [pexels] video 31202359 rejected by the content check
-- [pexels] video 26690701 rejected by the content check
-- [pexels] video 30029522 rejected by the content check
-- [pexels] video 39481319 rejected by the content check
-- [pexels] using video 30175521 for 'city skyline night'
-- [pexels] download 28494561 failed: file too large
-- [pexels] using video 34578211 for 'abstract blue light'
-- [pexels] using video 8728110 for 'mountain climber'
-- [pexels] using video 8745485 for 'calm lake sunrise'
-- ✅ M1-04 «Trading և Investing» published (27s, cta=save)

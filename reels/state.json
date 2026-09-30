@@ -1,5 +1,5 @@
 {
- "course_index": 12,
+ "course_index": 13,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -84,6 +84,13 @@
    "date": "2026-09-30",
    "hour": 9,
    "cta": "question"
+  },
+  "M1-13": {
+   "media": "18008434121993701",
+   "permalink": "https://www.instagram.com/reel/Dd56JpXgX8s/",
+   "date": "2026-09-30",
+   "hour": 12,
+   "cta": "send"
   }
  },
  "palette": {
@@ -176,7 +183,12 @@
   35158244,
   34995393,
   39322559,
-  "pb3138"
+  "pb3138",
+  "pb336755",
+  16863222,
+  34995047,
+  7318813,
+  35090395
  ],
  "bandit": {
   "cta": {}
@@ -187,7 +199,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "question",
+ "last_cta": "send",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -255,18 +267,33 @@
   "39322559.mp4": true,
   "39322559.mp4:face": false,
   "pb3138.mp4": true,
-  "pb3138.mp4:face": false
+  "pb3138.mp4:face": false,
+  "pb336755.mp4": true,
+  "pb336755.mp4:face": false,
+  "16863222.mp4": true,
+  "16863222.mp4:face": false,
+  "34995047.mp4": true,
+  "34995047.mp4:face": false,
+  "33390334.mp4": false,
+  "33390334.mp4:face": false,
+  "7318813.mp4": true,
+  "7318813.mp4:face": false,
+  "35090395.mp4": true,
+  "35090395.mp4:face": false
  },
  "music_bag": {
   "lesson": [
-   "lesson_mixkit-chillout-105.mp3",
-   "cbpd.mp3",
-   "memories.mp3"
+   "user_the-mountain-finance-background-449885.mp3",
+   "user_starostin-investment-finance-trading-mon.mp3",
+   "user_momotmusic-inspiring-reels-406484.mp3",
+   "user_apalonbeats-finance-money-trading-invest.mp3",
+   "user_the-mountain-market-systems-146118.mp3",
+   "user_soundsurfer-trading-254548.mp3"
   ],
   "news": []
  },
  "music_last": {
-  "lesson": "delayed-flight.mp3",
+  "lesson": "user_the-mountain-tech-corporate-593075.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3"
  },
  "music_sections": {
@@ -280,10 +307,24 @@
    29.0,
    41.0,
    53.0
+  ],
+  "user_the-mountain-tech-corporate-593075.mp3": [
+   1.0,
+   13.0,
+   25.0,
+   37.0,
+   49.0,
+   61.0,
+   73.0,
+   85.0,
+   97.0,
+   112.0
   ]
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 1
- }
+  "user_momotmusic-inspiring-reels-406484.mp3": 1,
+  "user_the-mountain-tech-corporate-593075.mp3": 1
+ },
+ "low_alert": "2026-09-30"
 }
