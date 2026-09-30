@@ -1,3 +1,18 @@
+**2026-09-30 21:20** `lesson` ✅ published
+- [pexels] using clip 29025308 for 'city skyline night'
+- [pexels] clip 19434326 rejected by the content check
+- [pexels] clip 35972076 rejected by the content check
+- [pexels] clip 35245798 rejected by the content check
+- [pixabay] clip pb1643 rejected by the content check
+- [pixabay] using clip pb36510 for 'busy market crowd'
+- [pexels] download 28494561 failed: file too large
+- [pexels] using clip 26056271 for 'technology blue'
+- [pexels] download 38623894 failed: file too large
+- [pexels] using clip 35584996 for 'narrow mountain road'
+- [pexels] using clip 39322557 for 'abstract light bokeh'
+- ✅ M1-16 «Liquidity» published (36s, cta=question)
+- ✅ teaser Story published
+---
 **2026-09-30 20:28** `news` ✅ qa-fail
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -156,15 +171,3 @@
 - [news] https://decrypt.co/feed: 36 items
 - [pexels] using video 38860079 for 'gold bars financial district'
 - ✅ News published: Goldman Sachs-ը մտցնում է գանձապետական ֆոնդ կրիպտո
----
-**2026-09-29 09:18** `lesson` ✅ published
-- [pexels] using video 39437818 for 'city skyline night'
-- [pexels] download 27452884 failed: file too large
-- [pexels] using video 7361127 for 'gold bars'
-- [pexels] using video 6278979 for 'gold texture close up'
-- [pexels] using video 12460328 for 'storm clouds'
-- [pexels] video 36502582 rejected by the content check
-- [pexels] using video 15459464 for 'calm harbor boats'
-- [pexels] download 27452884 failed: file too large
-- [pexels] using video 15283163 for 'gold bars'
-- ✅ M1-07 «Ոսկին՝ ապահով նավահանգիստ» published (27s, cta=question)

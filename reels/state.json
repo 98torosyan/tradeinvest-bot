@@ -1,5 +1,5 @@
 {
- "course_index": 15,
+ "course_index": 16,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -105,6 +105,13 @@
    "date": "2026-09-30",
    "hour": 18,
    "cta": "send"
+  },
+  "M1-16": {
+   "media": "18592198906069673",
+   "permalink": "https://www.instagram.com/reel/Dd63pLrEiAg/",
+   "date": "2026-09-30",
+   "hour": 21,
+   "cta": "question"
   }
  },
  "palette": {
@@ -123,11 +130,6 @@
   "https://cointelegraph.com/news/bitwise-launches-first-us-spot-near-etf-after-tokens-recent-surge?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
-  39468111,
-  18979105,
-  33472428,
-  28201503,
-  7477551,
   11745565,
   7846332,
   11597069,
@@ -202,7 +204,12 @@
   30747149,
   36726052,
   10884417,
-  36628009
+  36628009,
+  29025308,
+  "pb36510",
+  26056271,
+  35584996,
+  39322557
  ],
  "bandit": {
   "cta": {}
@@ -213,7 +220,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "send",
+ "last_cta": "question",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -327,11 +334,26 @@
   "10884417.mp4": true,
   "10884417.mp4:face": false,
   "36628009.mp4": true,
-  "36628009.mp4:face": false
+  "36628009.mp4:face": false,
+  "29025308.mp4": true,
+  "29025308.mp4:face": false,
+  "19434326.mp4": false,
+  "19434326.mp4:face": false,
+  "35245798.mp4": false,
+  "35245798.mp4:face": false,
+  "pb1643.mp4": false,
+  "pb1643.mp4:face": false,
+  "pb36510.mp4": true,
+  "pb36510.mp4:face": false,
+  "26056271.mp4": true,
+  "26056271.mp4:face": false,
+  "35584996.mp4": true,
+  "35584996.mp4:face": false,
+  "39322557.mp4": true,
+  "39322557.mp4:face": false
  },
  "music_bag": {
   "lesson": [
-   "user_momotmusic-inspiring-reels-406484.mp3",
    "user_apalonbeats-finance-money-trading-invest.mp3",
    "user_the-mountain-market-systems-146118.mp3",
    "user_soundsurfer-trading-254548.mp3"
@@ -340,7 +362,7 @@
   "story": []
  },
  "music_last": {
-  "lesson": "user_starostin-investment-finance-trading-mon.mp3",
+  "lesson": "user_momotmusic-inspiring-reels-406484.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -390,7 +412,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 1,
+  "user_momotmusic-inspiring-reels-406484.mp3": 2,
   "user_the-mountain-tech-corporate-593075.mp3": 1,
   "story_mixkit-electropop-870.mp3": 2,
   "user_the-mountain-finance-background-449885.mp3": 1,
