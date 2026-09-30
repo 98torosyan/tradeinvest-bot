@@ -23,8 +23,8 @@ DATA_SOURCE_LABEL = "Տվյալների աղբյուր՝ CoinGecko, alternative.
 # left blank, delivery/telegram_sender.py just no-ops (see _check_configured
 # there); nothing else in the pipeline depends on it. An Instagram-only
 # setup (IG_USER_ID + IG_ACCESS_TOKEN below, no Telegram at all) works fine.
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "")
-TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
+TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
 
 # FRED (Federal Reserve Economic Data) - free key from https://fred.stlouisfed.org/docs/api/api_key.html
 FRED_API_KEY = os.environ.get("FRED_API_KEY", "")

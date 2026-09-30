@@ -8,6 +8,7 @@ import re
 import subprocess
 import sys
 import tempfile
+import time
 
 import requests
 
@@ -76,7 +77,7 @@ def analyse(path):
     """Tempo (BPM), loudness and whether the first 2 seconds already carry energy."""
     import numpy as np
     import librosa
-    y, sr = librosa.load(path, sr=22050, mono=True, duration=150)
+    y, sr = librosa.load(path, sr=22050, mono=True, duration=90)
     dur = len(y) / sr
     tempo = float(np.atleast_1d(librosa.beat.beat_track(y=y, sr=sr)[0])[0])
     rms = librosa.feature.rms(y=y)[0]
@@ -116,13 +117,19 @@ def tg(method, **kw):
     return requests.post(f"https://api.telegram.org/bot{TELEGRAM_BOT_TOKEN}/{method}", data=kw, files=files, timeout=60).json()
 
 
+MAX_BYTES = 20 << 20          # never download huge files (some archives offer 10-minute WAV/FLAC)
+DEADLINE_MIN = 15             # the whole search must finish well inside the workflow timeout
+ANALYSE_PER_PROFILE = 14
+
+
 def hunt():
     """Weekly: finds candidates and sends previews. Returns number of previews sent."""
+    deadline = time.time() + DEADLINE_MIN * 60
     pending = control.get("music_pending", {}) or {}
     known = _known()
     sent = 0
     for prof, cfg in PROFILES.items():
-        got = 0
+        got, analysed = 0, 0
         own = len([f for f in os.listdir(os.path.join(MUSIC, cfg["folder"]))]) if os.path.isdir(os.path.join(MUSIC, cfg["folder"])) else 0
         want = cfg["per_week"] + (3 if own < 6 else 0)          # first weeks: build the library faster
         batches = [("mixkit", lambda: mixkit(prof))] + [(q, (lambda q=q: search(q))) for q in cfg["queries"]]
@@ -134,25 +141,39 @@ def hunt():
             except Exception as exc:  # noqa: BLE001
                 print("[music] search failed:", exc); continue
             for r in results:
-                if got >= want:
+                if got >= want or analysed >= ANALYSE_PER_PROFILE or time.time() > deadline:
                     break
+                dur_ms = r.get("duration") or 0
+                if dur_ms and not (cfg["min_len"] * 1000 <= dur_ms <= 360000):
+                    continue                       # too short, or longer than 6 minutes
                 tags = " ".join([t.get("name", "") for t in r.get("tags") or []] + [r.get("title") or ""]).lower()
                 if r["id"] in known or any(b in tags for b in BAD_TAGS) or not r.get("url"):
                     continue
                 work = tempfile.mkdtemp(prefix="mh_")
                 src = os.path.join(work, "full")
                 try:
-                    with requests.get(r["url"], timeout=90, stream=True) as resp:
+                    analysed += 1
+                    size = 0
+                    with requests.get(r["url"], timeout=60, stream=True) as resp:
                         resp.raise_for_status()
                         with open(src, "wb") as f:
                             for chunk in resp.iter_content(1 << 20):
+                                size += len(chunk)
+                                if size > MAX_BYTES:
+                                    raise RuntimeError("file too large")
                                 f.write(chunk)
                     wav = os.path.join(work, "a.wav")
-                    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", src, "-t", "150", "-ac", "1", wav], check=True)
+                    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", src, "-t", "90", "-ac", "1", "-ar", "22050", wav],
+                                   check=True, timeout=60)
                     a = analyse(wav)
                 except Exception as exc:  # noqa: BLE001
                     print("[music] skip", r.get("title"), exc); known.add(r["id"]); continue
                 known.add(r["id"])
+                try:
+                    a["duration"] = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of",
+                                                          "csv=p=0", src], capture_output=True, text=True, timeout=30).stdout.strip())
+                except (ValueError, subprocess.TimeoutExpired):
+                    pass
                 if not fits(prof, a):
                     continue
                 prev = os.path.join(work, "preview.mp3")

@@ -41,13 +41,19 @@ def telegram_commands(st):
         off = max(off, u["update_id"]); changed = True
         cq = u.get("callback_query")
         if cq:
-            if str(((cq.get("message") or {}).get("chat") or {}).get("id")) == str(TELEGRAM_CHAT_ID):
+            if str(((cq.get("message") or {}).get("chat") or {}).get("id")).strip() == str(TELEGRAM_CHAT_ID).strip():
                 from . import music_hunt
                 music_hunt.on_callback(cq)
             continue
         msg = u.get("message") or {}
-        if str(msg.get("chat", {}).get("id")) != str(TELEGRAM_CHAT_ID):
-            continue                                  # only the owner's chat may control the bot
+        if str(msg.get("chat", {}).get("id")).strip() != str(TELEGRAM_CHAT_ID).strip():
+            # only the owner's chat may control the bot; remember who tried (helps to fix a wrong TELEGRAM_CHAT_ID)
+            ch = msg.get("chat", {})
+            control.put("tg_last_foreign", {"chat_id": ch.get("id"), "type": ch.get("type"),
+                                            "name": ch.get("first_name") or ch.get("title"), "text": (msg.get("text") or "")[:30],
+                                            "secret_digits": len(str(TELEGRAM_CHAT_ID).strip()),
+                                            "secret_has_spaces": str(TELEGRAM_CHAT_ID) != str(TELEGRAM_CHAT_ID).strip()})
+            continue
         text = (msg.get("text") or "").strip()
         if text.startswith("/pause"):
             control.set_paused(True); send_text("⏸ Բոլոր հրապարակումները կանգնեցված են։ /resume՝ վերսկսելու համար։")
