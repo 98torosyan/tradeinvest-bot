@@ -1,3 +1,10 @@
+**2026-09-30 16:56** `news` ✅ qa-fail
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 36 items
+- ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական ստուգումը չանցավ. Բրիտանիայի, բիզնեսները, բիզնեսների, լիցենզավորման, լիցենզիայի
+Եթե բառերը ճիշտ են, գրիր՝ /allow Բրիտանիայի բիզնեսները բիզնեսների լիցենզավորման լիցենզիայի
+---
 **2026-09-30 15:18** `lesson` ✅ published
 - [pexels] clip 35552568 rejected by the content check
 - [pixabay] clip pb337459 rejected by the content check
@@ -153,6 +160,3 @@
   "error": {
     "code": 404,
     "message": "This model models/gemini-2.5-flash is no longer available to new users. Please update your code to use models/gemini-3.8-flash for the latest features a | gemini-flash-lite-latest: HTTP 503 | gemini-flash-lite-
----
-**2026-09-28 19:51** `chart` ✅ published
-- ✅ Story published
