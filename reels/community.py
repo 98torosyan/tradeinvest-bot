@@ -68,11 +68,34 @@ def telegram_commands(st):
                 changed = True
                 where = {"lesson": "դասերի", "news": "լուրերի", "story": "Story-ների"}[res[0]]
                 send_text(f"✅ Trek-ը ստացվեց ({where} համար)։ Այն կմշակվի և կօգտագործվի հաջորդ Reel-ից սկսած։")
-            elif why == "no-profile":
-                send_text("🎵 Ֆայլը ստացա, բայց caption-ում գրիր՝ «դաս», «լուր» կամ «story», որ իմանամ, թե որտեղ օգտագործել, և ուղարկիր նորից։")
+            elif why == "no-profile":                    # no caption: keep it and wait for one word (դաս / լուր / story)
+                waiting = control.get("audio_waiting", []) or []
+                waiting.append({"file_id": media["file_id"], "name": media.get("file_name") or media.get("title") or "track"})
+                control.put("audio_waiting", waiting[-20:]); changed = True
+                send_text(f"🎵 Ստացա ({len(waiting)} ֆայլ սպասում է)։ Հիմա գրիր մեկ բառ՝ «դաս», «լուր» կամ «story», "
+                          "և այն կկիրառվի բոլոր սպասող ֆայլերի համար։")
             else:
                 send_text(f"⚠️ Trek-ը չհաջողվեց ստանալ՝ {why}")
             continue
+        waiting = control.get("audio_waiting", []) or []
+        if waiting and text and not text.startswith("/"):
+            from . import music_hunt
+            prof = music_hunt.profile_from_caption(text)
+            if prof:
+                ok, bad = [], []
+                for w in waiting:
+                    try:
+                        res, why = music_hunt.save_incoming(w["file_id"], w["name"], text)
+                        (ok if res else bad).append(w["name"])
+                    except Exception as exc:  # noqa: BLE001
+                        bad.append(f"{w['name']} ({str(exc)[:40]})")
+                control.put("audio_waiting", []); changed = True
+                where = {"lesson": "դասերի", "news": "լուրերի", "story": "Story-ների"}[prof]
+                msg_txt = f"✅ {len(ok)} trek ստացվեց ({where} համար)։ Կօգտագործվեն հաջորդ Reel-ից սկսած։"
+                if bad:
+                    msg_txt += "\n⚠️ Չհաջողվեց՝ " + ", ".join(bad)
+                send_text(msg_txt)
+                continue
         if text.startswith("/pause"):
             control.set_paused(True); send_text("⏸ Բոլոր հրապարակումները կանգնեցված են։ /resume՝ վերսկսելու համար։")
         elif text.startswith("/resume"):
