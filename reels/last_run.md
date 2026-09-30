@@ -1,3 +1,12 @@
+**2026-09-30 10:54** `news` ✅ published
+- 🎵 Գրադարանին ավելացան՝ user_apalonbeats-finance-money-trading-invest.mp3, −memories.mp3, −lesson_mixkit-chillout-105.mp3, −cbpd.mp3, −delayed-flight.mp3, user_momotmusic-inspiring-reels-406484.mp3, user_soundsurfer-trading-254548.mp3, user_starostin-investment-finance-trading-mon.mp3, user_the-mountain-finance-background-449885.mp3, user_the-mountain-market-systems-146118.mp3, user_the-mountain-tech-corporate-593075.mp3, user_momotmusic-inspiring-reels-406484.mp3, −autofahren.mp3, −news_mixkit-house-471.mp3, −hip-hop-02.mp3, −workout.mp3, −news_mixkit-house-744.mp3
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 36 items
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] using clip pb3138 for 'city skyline night'
+- ✅ News published: Bitwise-ը գործարկել է առաջին NEAR ETF-ը
+---
 **2026-09-30 09:20** `lesson` ✅ published
 - [pexels] clip 35552568 rejected by the content check
 - [pixabay] using clip pb3134 for 'city skyline night'
@@ -153,6 +162,3 @@
 - [pexels] using video 8728110 for 'mountain climber'
 - [pexels] using video 8745485 for 'calm lake sunrise'
 - ✅ M1-04 «Trading և Investing» published (27s, cta=save)
----
-**2026-09-28 13:50** `quiz` ✅ skipped
-- ℹ️ Quiz չկա՝ երեկ դաս չի հրապարակվել

@@ -87,7 +87,7 @@
   }
  },
  "palette": {
-  "news": 2
+  "news": 3
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -98,7 +98,8 @@
   "https://decrypt.co/379350/bitget-hack-387m-what-happened-why-north-korea-suspect",
   "https://decrypt.co/379398/sec-staff-token-buybacks-dont-make-crypto-security",
   "https://www.coindesk.com/markets/2026/09/28/solana-etfs-draw-record-usd188-million-in-a-week-as-bitwise-takes-two-thirds-of-inflows",
-  "https://www.coindesk.com/markets/2026/09/28/goldman-sachs-brings-usd100-billion-treasury-fund-into-crypto-s-institutional-plumbing"
+  "https://www.coindesk.com/markets/2026/09/28/goldman-sachs-brings-usd100-billion-treasury-fund-into-crypto-s-institutional-plumbing",
+  "https://cointelegraph.com/news/bitwise-launches-first-us-spot-near-etf-after-tokens-recent-surge?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
   38431825,
@@ -174,7 +175,8 @@
   15886614,
   35158244,
   34995393,
-  39322559
+  39322559,
+  "pb3138"
  ],
  "bandit": {
   "cta": {}
@@ -194,6 +196,10 @@
   {
    "media": "18099342152551166",
    "date": "2026-09-29"
+  },
+  {
+   "media": "17949711753318101",
+   "date": "2026-09-30"
   }
  ],
  "quiz_count": 1,
@@ -247,25 +253,37 @@
   "34995393.mp4": true,
   "34995393.mp4:face": false,
   "39322559.mp4": true,
-  "39322559.mp4:face": false
+  "39322559.mp4:face": false,
+  "pb3138.mp4": true,
+  "pb3138.mp4:face": false
  },
  "music_bag": {
   "lesson": [
    "lesson_mixkit-chillout-105.mp3",
    "cbpd.mp3",
    "memories.mp3"
-  ]
+  ],
+  "news": []
  },
  "music_last": {
-  "lesson": "delayed-flight.mp3"
+  "lesson": "delayed-flight.mp3",
+  "news": "user_momotmusic-inspiring-reels-406484.mp3"
  },
  "music_sections": {
   "delayed-flight.mp3": [
    2.0,
    14.0
+  ],
+  "user_momotmusic-inspiring-reels-406484.mp3": [
+   1.0,
+   13.0,
+   29.0,
+   41.0,
+   53.0
   ]
  },
  "music_uses": {
-  "delayed-flight.mp3": 1
+  "delayed-flight.mp3": 1,
+  "user_momotmusic-inspiring-reels-406484.mp3": 1
  }
 }
