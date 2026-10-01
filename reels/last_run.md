@@ -1,3 +1,8 @@
+**2026-10-01 08:53** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7651.54}
+- ✅ Story published
+---
 **2026-09-30 21:20** `lesson` ✅ published
 - [pexels] using clip 29025308 for 'city skyline night'
 - [pexels] clip 19434326 rejected by the content check
@@ -164,10 +169,3 @@
 - [pexels] using video 35160268 for 'abstract digital network'
 - ✅ M1-08 «Ի՞նչ է Bitcoin-ը» published (26s, cta=save)
 - ✅ teaser Story published
----
-**2026-09-29 10:53** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 36 items
-- [pexels] using video 38860079 for 'gold bars financial district'
-- ✅ News published: Goldman Sachs-ը մտցնում է գանձապետական ֆոնդ կրիպտո
