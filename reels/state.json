@@ -1,5 +1,5 @@
 {
- "course_index": 17,
+ "course_index": 18,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -119,6 +119,13 @@
    "date": "2026-10-01",
    "hour": 9,
    "cta": "send"
+  },
+  "M1-18": {
+   "media": "18104698526254658",
+   "permalink": "https://www.instagram.com/reel/Dd8fEPmDK5j/",
+   "date": "2026-10-01",
+   "hour": 12,
+   "cta": "question"
   }
  },
  "palette": {
@@ -137,12 +144,6 @@
   "https://cointelegraph.com/news/bitwise-launches-first-us-spot-near-etf-after-tokens-recent-surge?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
-  15439746,
-  16762623,
-  5635831,
-  10331098,
-  12595945,
-  30175521,
   34578211,
   8728110,
   8745485,
@@ -216,7 +217,13 @@
   9620654,
   36982633,
   8745444,
-  39322562
+  39322562,
+  11745565,
+  34461235,
+  18148735,
+  "pb2526",
+  29326055,
+  11597069
  ],
  "bandit": {
   "cta": {}
@@ -227,7 +234,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "send",
+ "last_cta": "question",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -367,18 +374,33 @@
   "8745444.mp4": true,
   "8745444.mp4:face": false,
   "39322562.mp4": true,
-  "39322562.mp4:face": false
+  "39322562.mp4:face": false,
+  "11745565.mp4": true,
+  "11745565.mp4:face": false,
+  "19191119.mp4": false,
+  "19191119.mp4:face": false,
+  "34461235.mp4": true,
+  "34461235.mp4:face": false,
+  "18148735.mp4": true,
+  "18148735.mp4:face": false,
+  "pb13370.mp4": false,
+  "pb13370.mp4:face": false,
+  "pb2526.mp4": true,
+  "pb2526.mp4:face": false,
+  "29326055.mp4": true,
+  "29326055.mp4:face": false,
+  "11597069.mp4": true,
+  "11597069.mp4:face": false
  },
  "music_bag": {
   "lesson": [
-   "user_the-mountain-market-systems-146118.mp3",
    "user_soundsurfer-trading-254548.mp3"
   ],
   "news": [],
   "story": []
  },
  "music_last": {
-  "lesson": "user_apalonbeats-finance-money-trading-invest.mp3",
+  "lesson": "user_the-mountain-market-systems-146118.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -434,6 +456,12 @@
    87.0,
    99.0,
    111.0
+  ],
+  "user_the-mountain-market-systems-146118.mp3": [
+   2.0,
+   16.0,
+   28.0,
+   43.0
   ]
  },
  "music_uses": {
@@ -443,7 +471,8 @@
   "story_mixkit-electropop-870.mp3": 3,
   "user_the-mountain-finance-background-449885.mp3": 1,
   "user_starostin-investment-finance-trading-mon.mp3": 1,
-  "user_apalonbeats-finance-money-trading-invest.mp3": 1
+  "user_apalonbeats-finance-money-trading-invest.mp3": 1,
+  "user_the-mountain-market-systems-146118.mp3": 1
  },
  "low_alert": "2026-10-01"
 }

@@ -1,3 +1,20 @@
+**2026-10-01 12:22** `lesson` ✅ published
+- [pexels] using clip 11745565 for 'city skyline night'
+- [pexels] clip 19191119 rejected by the content check
+- [pexels] using clip 34461235 for 'bull field'
+- [pexels] using clip 18148735 for 'brown bear forest'
+- [pexels] download 28494561 failed: file too large
+- [pixabay] clip pb46688 rejected by the content check
+- [pixabay] clip pb13370 rejected by the content check
+- [pixabay] using clip pb2526 for 'technology blue'
+- [pexels] using clip 29326055 for 'storm clouds'
+- [pixabay] download pb27051 failed: file too large
+- [pixabay] download pb88802 failed: file too large
+- [pixabay] download pb19989 failed: file too large
+- [pexels] using clip 11597069 for 'city skyline night'
+- ✅ M1-18 «Bull Market և Bear Market» published (37s, cta=question)
+- ✅ teaser Story published
+---
 **2026-10-01 10:55** `news` ✅ qa-fail
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -161,12 +178,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 55 items
 - ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական սխալներ. Բիզնես, ինստիտուցիոնալ, կորպորատիվ, կրիպտո, կրիպտոարժույթի
----
-**2026-09-29 16:10** `lesson` ✅ published
-- [pexels] using clip 35464509 for 'city skyline night'
-- [pixabay] clip pb14900 rejected by the content check
-- [pixabay] using clip pb4504 for 'server room lights'
-- [pexels] using clip 30794068 for 'chain links close up'
-- [pixabay] using clip pb26007 for 'abstract blue light'
-- [pexels] using clip 35072002 for 'abstract light bokeh'
-- ✅ M1-09 «Ի՞նչ է Blockchain-ը» published (33s, cta=save)
