@@ -1,3 +1,10 @@
+**2026-10-01 10:55** `news` ✅ qa-fail
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական ստուգումը չանցավ. Բլոկչեյնը, ավիավառելիքի, բլոկչեյնը, հայտարարություններին
+Եթե բառերը ճիշտ են, գրիր՝ /allow Բլոկչեյնը ավիավառելիքի բլոկչեյնը հայտարարություններին
+---
 **2026-10-01 09:20** `lesson` ✅ published
 - [pexels] using clip 39468111 for 'city skyline night'
 - [pexels] using clip 9620654 for 'ocean waves'
@@ -163,6 +170,3 @@
 - [pixabay] using clip pb26007 for 'abstract blue light'
 - [pexels] using clip 35072002 for 'abstract light bokeh'
 - ✅ M1-09 «Ի՞նչ է Blockchain-ը» published (33s, cta=save)
----
-**2026-09-29 13:51** `quiz` ✅ published
-- ✅ Quiz Story from M1-01
