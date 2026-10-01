@@ -1,3 +1,20 @@
+**2026-10-01 15:20** `lesson` ✅ published
+- [pexels] using clip 10331098 for 'city skyline night'
+- [pexels] clip 39569280 rejected by the content check
+- [pexels] clip 35245798 rejected by the content check
+- [pexels] download 35254957 failed: file too large
+- [pixabay] clip pb23258 rejected by the content check
+- [pixabay] clip pb1643 rejected by the content check
+- [pixabay] using clip pb41315 for 'crowd city street'
+- [pexels] using clip 37630172 for 'dark storm clouds'
+- [pexels] using clip 12595945 for 'calm lake sunrise'
+- [pixabay] download pb27051 failed: file too large
+- [pixabay] download pb88802 failed: file too large
+- [pixabay] download pb19989 failed: file too large
+- [pexels] using clip 30175521 for 'city skyline night'
+- [qa warning] motion-graphics share 40% < 40%
+- ✅ M1-19 «FOMO և FUD» published (37s, cta=send)
+---
 **2026-10-01 13:52** `quiz` ✅ published
 - ✅ Quiz Story from M1-14
 ---
@@ -162,16 +179,3 @@
 **2026-09-29 19:52** `chart` ✅ published
 - [market] price_coingecko_btc failed: 403 Client Error: Forbidden for url: https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd
 - ✅ Story published
----
-**2026-09-29 18:21** `lesson` ✅ published
-- [pexels] using clip 14300758 for 'city skyline night'
-- [pixabay] clip pb46688 rejected by the content check
-- [pixabay] using clip pb378976 for 'computer hardware lights'
-- [pexels] using clip 7703941 for 'hourglass sand'
-- [pixabay] download pb23835 failed: file too large
-- [pixabay] download pb99555 failed: file too large
-- [pixabay] using clip pb99550 for 'abstract blue light'
-- [pexels] using clip 38396377 for 'slow river aerial'
-- [pixabay] download pb27051 failed: file too large
-- [pixabay] using clip pb977 for 'abstract light bokeh'
-- ✅ M1-10 «Mining և Halving» published (36s, cta=send)

@@ -1,5 +1,5 @@
 {
- "course_index": 18,
+ "course_index": 19,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -126,6 +126,13 @@
    "date": "2026-10-01",
    "hour": 12,
    "cta": "question"
+  },
+  "M1-19": {
+   "media": "17864807973675323",
+   "permalink": "https://www.instagram.com/reel/Dd8zWL1iqR-/",
+   "date": "2026-10-01",
+   "hour": 15,
+   "cta": "send"
   }
  },
  "palette": {
@@ -144,11 +151,6 @@
   "https://cointelegraph.com/news/bitwise-launches-first-us-spot-near-etf-after-tokens-recent-surge?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
-  34578211,
-  8728110,
-  8745485,
-  39481319,
-  7254961,
   28483048,
   32719391,
   7082893,
@@ -223,7 +225,12 @@
   18148735,
   "pb2526",
   29326055,
-  11597069
+  11597069,
+  10331098,
+  "pb41315",
+  37630172,
+  12595945,
+  30175521
  ],
  "bandit": {
   "cta": {}
@@ -234,7 +241,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "question",
+ "last_cta": "send",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -390,17 +397,29 @@
   "29326055.mp4": true,
   "29326055.mp4:face": false,
   "11597069.mp4": true,
-  "11597069.mp4:face": false
+  "11597069.mp4:face": false,
+  "10331098.mp4": true,
+  "10331098.mp4:face": false,
+  "39569280.mp4": false,
+  "39569280.mp4:face": false,
+  "pb23258.mp4": false,
+  "pb23258.mp4:face": false,
+  "pb41315.mp4": true,
+  "pb41315.mp4:face": false,
+  "37630172.mp4": true,
+  "37630172.mp4:face": false,
+  "12595945.mp4": true,
+  "12595945.mp4:face": false,
+  "30175521.mp4": true,
+  "30175521.mp4:face": false
  },
  "music_bag": {
-  "lesson": [
-   "user_soundsurfer-trading-254548.mp3"
-  ],
+  "lesson": [],
   "news": [],
   "story": []
  },
  "music_last": {
-  "lesson": "user_the-mountain-market-systems-146118.mp3",
+  "lesson": "user_soundsurfer-trading-254548.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -462,6 +481,14 @@
    16.0,
    28.0,
    43.0
+  ],
+  "user_soundsurfer-trading-254548.mp3": [
+   2.0,
+   14.0,
+   26.0,
+   38.0,
+   53.0,
+   65.0
   ]
  },
  "music_uses": {
@@ -472,7 +499,8 @@
   "user_the-mountain-finance-background-449885.mp3": 1,
   "user_starostin-investment-finance-trading-mon.mp3": 1,
   "user_apalonbeats-finance-money-trading-invest.mp3": 1,
-  "user_the-mountain-market-systems-146118.mp3": 1
+  "user_the-mountain-market-systems-146118.mp3": 1,
+  "user_soundsurfer-trading-254548.mp3": 1
  },
  "low_alert": "2026-10-01"
 }
