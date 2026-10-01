@@ -143,7 +143,7 @@
   }
  },
  "palette": {
-  "news": 4
+  "news": 5
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -156,10 +156,10 @@
   "https://www.coindesk.com/markets/2026/09/28/solana-etfs-draw-record-usd188-million-in-a-week-as-bitwise-takes-two-thirds-of-inflows",
   "https://www.coindesk.com/markets/2026/09/28/goldman-sachs-brings-usd100-billion-treasury-fund-into-crypto-s-institutional-plumbing",
   "https://cointelegraph.com/news/bitwise-launches-first-us-spot-near-etf-after-tokens-recent-surge?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://cointelegraph.com/markets/bitcoin-etf-6-3-billion-inflows-q3-btc-rise-43?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  "https://cointelegraph.com/markets/bitcoin-etf-6-3-billion-inflows-q3-btc-rise-43?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://cointelegraph.com/news/near-intents-exploit-assistance-bitget-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
-  11372816,
   33719666,
   39437818,
   7361127,
@@ -238,7 +238,8 @@
   8727847,
   28483048,
   8745485,
-  "pb5624"
+  "pb5624",
+  "pb14906"
  ],
  "bandit": {
   "cta": {}
@@ -265,6 +266,10 @@
   },
   {
    "media": "18048938045812777",
+   "date": "2026-10-01"
+  },
+  {
+   "media": "18139836214620057",
    "date": "2026-10-01"
   }
  ],
@@ -437,7 +442,11 @@
   "8745485.mp4": true,
   "8745485.mp4:face": false,
   "pb5624.mp4": true,
-  "pb5624.mp4:face": false
+  "pb5624.mp4:face": false,
+  "pb846.mp4": false,
+  "pb846.mp4:face": false,
+  "pb14906.mp4": true,
+  "pb14906.mp4:face": false
  },
  "music_bag": {
   "lesson": [
@@ -526,7 +535,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 3,
+  "user_momotmusic-inspiring-reels-406484.mp3": 4,
   "user_the-mountain-tech-corporate-593075.mp3": 1,
   "story_mixkit-electropop-870.mp3": 5,
   "user_the-mountain-finance-background-449885.mp3": 1,

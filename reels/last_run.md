@@ -1,3 +1,12 @@
+**2026-10-01 21:09** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- [pixabay] clip pb14900 rejected by the content check
+- [pixabay] clip pb846 rejected by the content check
+- [pixabay] using clip pb14906 for 'server room lights'
+- ✅ News published: NEAR Intents-ը ենթարկվել է հարձակման
+---
 **2026-10-01 20:02** `chart` ✅ published
 - ✅ Story published
 ---
@@ -182,6 +191,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7670.84}
 - ✅ Story published
----
-**2026-09-30 04:53** `music` ✅ done
-- 🎵 music candidates sent to Telegram: 14
