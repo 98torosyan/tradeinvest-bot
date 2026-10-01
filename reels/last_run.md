@@ -1,3 +1,6 @@
+**2026-10-01 20:02** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-01 18:28** `lesson` ✅ published
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] clip 35552568 rejected by the content check
@@ -182,14 +185,3 @@
 ---
 **2026-09-30 04:53** `music` ✅ done
 - 🎵 music candidates sent to Telegram: 14
----
-**2026-09-29 21:18** `lesson` ✅ published
-- [pexels] clip 35552568 rejected by the content check
-- [pexels] using clip 28901427 for 'city skyline night'
-- [pixabay] using clip pb45902 for 'abstract digital network'
-- [pexels] download 28494561 failed: file too large
-- [pexels] using clip 36627993 for 'abstract blue light'
-- [pixabay] using clip pb182970 for 'rough sea waves'
-- [pexels] using clip 39322558 for 'abstract light bokeh'
-- ✅ M1-11 «Bitcoin vs Altcoins» published (28s, cta=save)
-- ✅ teaser Story published
