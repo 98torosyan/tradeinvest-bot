@@ -1,5 +1,5 @@
 {
- "course_index": 19,
+ "course_index": 20,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -133,6 +133,13 @@
    "date": "2026-10-01",
    "hour": 15,
    "cta": "send"
+  },
+  "M1-20": {
+   "media": "18118239316946304",
+   "permalink": "https://www.instagram.com/reel/Dd9I1wil3_g/",
+   "date": "2026-10-01",
+   "hour": 18,
+   "cta": "save"
   }
  },
  "palette": {
@@ -152,11 +159,6 @@
   "https://cointelegraph.com/markets/bitcoin-etf-6-3-billion-inflows-q3-btc-rise-43?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
-  32719391,
-  7082893,
-  39570925,
-  39481172,
-  35419124,
   11372816,
   33719666,
   39437818,
@@ -231,7 +233,12 @@
   37630172,
   12595945,
   30175521,
-  39625195
+  39625195,
+  "pb204326",
+  8727847,
+  28483048,
+  8745485,
+  "pb5624"
  ],
  "bandit": {
   "cta": {}
@@ -242,7 +249,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "send",
+ "last_cta": "save",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -418,15 +425,34 @@
   "30175521.mp4": true,
   "30175521.mp4:face": false,
   "39625195.mp4": true,
-  "39625195.mp4:face": false
+  "39625195.mp4:face": false,
+  "39481319.mp4": false,
+  "39481319.mp4:face": false,
+  "pb204326.mp4": true,
+  "pb204326.mp4:face": false,
+  "8727847.mp4": true,
+  "8727847.mp4:face": true,
+  "28483048.mp4": true,
+  "28483048.mp4:face": false,
+  "8745485.mp4": true,
+  "8745485.mp4:face": false,
+  "pb5624.mp4": true,
+  "pb5624.mp4:face": false
  },
  "music_bag": {
-  "lesson": [],
+  "lesson": [
+   "user_the-mountain-finance-background-449885.mp3",
+   "user_starostin-investment-finance-trading-mon.mp3",
+   "user_apalonbeats-finance-money-trading-invest.mp3",
+   "user_soundsurfer-trading-254548.mp3",
+   "user_momotmusic-inspiring-reels-406484.mp3",
+   "user_the-mountain-tech-corporate-593075.mp3"
+  ],
   "news": [],
   "story": []
  },
  "music_last": {
-  "lesson": "user_soundsurfer-trading-254548.mp3",
+  "lesson": "user_the-mountain-market-systems-146118.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -506,7 +532,7 @@
   "user_the-mountain-finance-background-449885.mp3": 1,
   "user_starostin-investment-finance-trading-mon.mp3": 1,
   "user_apalonbeats-finance-money-trading-invest.mp3": 1,
-  "user_the-mountain-market-systems-146118.mp3": 1,
+  "user_the-mountain-market-systems-146118.mp3": 2,
   "user_soundsurfer-trading-254548.mp3": 1
  },
  "low_alert": "2026-10-01"

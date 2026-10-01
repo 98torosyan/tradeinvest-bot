@@ -1,3 +1,20 @@
+**2026-10-01 18:28** `lesson` ✅ published
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] clip pb337459 rejected by the content check
+- [pixabay] using clip pb204326 for 'city skyline night'
+- [pexels] using clip 8727847 for 'mountain climber'
+- [pexels] using clip 28483048 for 'technology blue'
+- [pexels] using clip 8745485 for 'calm lake sunrise'
+- [pixabay] download pb27051 failed: file too large
+- [pixabay] download pb88802 failed: file too large
+- [pixabay] download pb19989 failed: file too large
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] clip pb337459 rejected by the content check
+- [pixabay] using clip pb5624 for 'city skyline night'
+- ✅ M1-20 «Ռիսկ և շահույթ» published (35s, cta=save)
+---
 **2026-10-01 16:55** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -176,9 +193,3 @@
 - [pexels] using clip 39322558 for 'abstract light bokeh'
 - ✅ M1-11 «Bitcoin vs Altcoins» published (28s, cta=save)
 - ✅ teaser Story published
----
-**2026-09-29 20:27** `news` ✅ qa-fail
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 35 items
-- ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական սխալներ. Բիզնես, բիզնես, եղիր, կրիպտո, կրիպտոյի
