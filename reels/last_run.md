@@ -1,3 +1,12 @@
+**2026-10-01 09:20** `lesson` ✅ published
+- [pexels] using clip 39468111 for 'city skyline night'
+- [pexels] using clip 9620654 for 'ocean waves'
+- [pexels] using clip 36982633 for 'roller coaster'
+- [pexels] using clip 8745444 for 'calm lake sunrise'
+- [pexels] using clip 39322562 for 'abstract light bokeh'
+- ✅ M1-17 «Volatility» published (34s, cta=send)
+- 📚 Մնացել է 5 պատրաստի սցենար։
+---
 **2026-10-01 08:53** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7651.54}
@@ -157,15 +166,3 @@
 ---
 **2026-09-29 13:51** `quiz` ✅ published
 - ✅ Quiz Story from M1-01
----
-**2026-09-29 12:21** `lesson` ✅ published
-- [pexels] using video 34382888 for 'city skyline night'
-- [pexels] using video 35163081 for 'abstract digital network'
-- [pexels] video 34232317 rejected by the content check
-- [pexels] using video 18138660 for 'night city lights'
-- [pexels] download 28494561 failed: file too large
-- [pexels] using video 16629709 for 'abstract blue light'
-- [pexels] using video 6091131 for 'server room lights'
-- [pexels] using video 35160268 for 'abstract digital network'
-- ✅ M1-08 «Ի՞նչ է Bitcoin-ը» published (26s, cta=save)
-- ✅ teaser Story published
