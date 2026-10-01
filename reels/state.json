@@ -136,7 +136,7 @@
   }
  },
  "palette": {
-  "news": 3
+  "news": 4
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -148,10 +148,10 @@
   "https://decrypt.co/379398/sec-staff-token-buybacks-dont-make-crypto-security",
   "https://www.coindesk.com/markets/2026/09/28/solana-etfs-draw-record-usd188-million-in-a-week-as-bitwise-takes-two-thirds-of-inflows",
   "https://www.coindesk.com/markets/2026/09/28/goldman-sachs-brings-usd100-billion-treasury-fund-into-crypto-s-institutional-plumbing",
-  "https://cointelegraph.com/news/bitwise-launches-first-us-spot-near-etf-after-tokens-recent-surge?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  "https://cointelegraph.com/news/bitwise-launches-first-us-spot-near-etf-after-tokens-recent-surge?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://cointelegraph.com/markets/bitcoin-etf-6-3-billion-inflows-q3-btc-rise-43?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
-  28483048,
   32719391,
   7082893,
   39570925,
@@ -230,7 +230,8 @@
   "pb41315",
   37630172,
   12595945,
-  30175521
+  30175521,
+  39625195
  ],
  "bandit": {
   "cta": {}
@@ -254,6 +255,10 @@
   {
    "media": "17949711753318101",
    "date": "2026-09-30"
+  },
+  {
+   "media": "18048938045812777",
+   "date": "2026-10-01"
   }
  ],
  "quiz_count": 3,
@@ -411,7 +416,9 @@
   "12595945.mp4": true,
   "12595945.mp4:face": false,
   "30175521.mp4": true,
-  "30175521.mp4:face": false
+  "30175521.mp4:face": false,
+  "39625195.mp4": true,
+  "39625195.mp4:face": false
  },
  "music_bag": {
   "lesson": [],
@@ -493,7 +500,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 2,
+  "user_momotmusic-inspiring-reels-406484.mp3": 3,
   "user_the-mountain-tech-corporate-593075.mp3": 1,
   "story_mixkit-electropop-870.mp3": 4,
   "user_the-mountain-finance-background-449885.mp3": 1,

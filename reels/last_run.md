@@ -1,3 +1,10 @@
+**2026-10-01 16:55** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- [pexels] using clip 39625195 for 'abstract blue light, server room lights'
+- ✅ News published: Bitcoin ETF-ները հավաքել են 6.3 միլիարդ դոլար
+---
 **2026-10-01 15:20** `lesson` ✅ published
 - [pexels] using clip 10331098 for 'city skyline night'
 - [pexels] clip 39569280 rejected by the content check
@@ -175,7 +182,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 35 items
 - ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական սխալներ. Բիզնես, բիզնես, եղիր, կրիպտո, կրիպտոյի
----
-**2026-09-29 19:52** `chart` ✅ published
-- [market] price_coingecko_btc failed: 403 Client Error: Forbidden for url: https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd
-- ✅ Story published
