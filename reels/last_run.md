@@ -1,3 +1,6 @@
+**2026-10-01 13:52** `quiz` ✅ published
+- ✅ Quiz Story from M1-14
+---
 **2026-10-01 12:22** `lesson` ✅ published
 - [pexels] using clip 11745565 for 'city skyline night'
 - [pexels] clip 19191119 rejected by the content check
@@ -172,9 +175,3 @@
 - [pixabay] download pb27051 failed: file too large
 - [pixabay] using clip pb977 for 'abstract light bokeh'
 - ✅ M1-10 «Mining և Halving» published (36s, cta=send)
----
-**2026-09-29 16:54** `news` ✅ qa-fail
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 55 items
-- ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական սխալներ. Բիզնես, ինստիտուցիոնալ, կորպորատիվ, կրիպտո, կրիպտոարժույթի
