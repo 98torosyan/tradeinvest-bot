@@ -1,3 +1,28 @@
+**2026-10-01 21:23** `lesson` ✅ published
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 39570925 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] clip pb337459 rejected by the content check
+- [pixabay] clip pb86350 rejected by the content check
+- [pixabay] using clip pb220942 for 'city skyline night'
+- [pexels] using clip 35002915 for 'technology network connection'
+- [pexels] download 28494561 failed: file too large
+- [pixabay] clip pb46688 rejected by the content check
+- [pixabay] clip pb13370 rejected by the content check
+- [pixabay] using clip pb13067 for 'technology blue'
+- [pexels] using clip 31410686 for 'dark storm clouds'
+- [pixabay] download pb27051 failed: file too large
+- [pixabay] download pb88802 failed: file too large
+- [pixabay] download pb19989 failed: file too large
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 39570925 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] clip pb337459 rejected by the content check
+- [pixabay] clip pb86350 rejected by the content check
+- [pixabay] using clip pb287386 for 'city skyline night'
+- ✅ M1-21 «DeFi-ի գաղափարը» published (35s, cta=question)
+- ✅ teaser Story published
+---
 **2026-10-01 21:09** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -185,9 +210,3 @@
 - [pexels] using clip 34995393 for 'digital network technology'
 - [pexels] using clip 39322559 for 'abstract light bokeh'
 - ✅ M1-12 «Ethereum և Smart Contracts» published (34s, cta=question)
----
-**2026-09-30 08:51** `story` ✅ published
-- 🎵 Գրադարանին ավելացան՝ lesson_mixkit-chillout-105.mp3, news_mixkit-house-471.mp3, news_mixkit-house-744.mp3, story_mixkit-electropop-870.mp3
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7670.84}
-- ✅ Story published

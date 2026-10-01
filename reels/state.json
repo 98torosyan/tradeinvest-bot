@@ -1,5 +1,5 @@
 {
- "course_index": 20,
+ "course_index": 21,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -140,6 +140,13 @@
    "date": "2026-10-01",
    "hour": 18,
    "cta": "save"
+  },
+  "M1-21": {
+   "media": "18158180272502494",
+   "permalink": "https://www.instagram.com/reel/Dd9c2UIk6Rz/",
+   "date": "2026-10-01",
+   "hour": 21,
+   "cta": "question"
   }
  },
  "palette": {
@@ -160,11 +167,6 @@
   "https://cointelegraph.com/news/near-intents-exploit-assistance-bitget-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
-  33719666,
-  39437818,
-  7361127,
-  6278979,
-  12460328,
   15459464,
   15283163,
   38860079,
@@ -239,7 +241,12 @@
   28483048,
   8745485,
   "pb5624",
-  "pb14906"
+  "pb14906",
+  "pb220942",
+  35002915,
+  "pb13067",
+  31410686,
+  "pb287386"
  ],
  "bandit": {
   "cta": {}
@@ -250,7 +257,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "save",
+ "last_cta": "question",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -446,11 +453,24 @@
   "pb846.mp4": false,
   "pb846.mp4:face": false,
   "pb14906.mp4": true,
-  "pb14906.mp4:face": false
+  "pb14906.mp4:face": false,
+  "39570925.mp4": false,
+  "39570925.mp4:face": false,
+  "pb86350.mp4": false,
+  "pb86350.mp4:face": false,
+  "pb220942.mp4": true,
+  "pb220942.mp4:face": false,
+  "35002915.mp4": true,
+  "35002915.mp4:face": false,
+  "pb13067.mp4": true,
+  "pb13067.mp4:face": false,
+  "31410686.mp4": true,
+  "31410686.mp4:face": false,
+  "pb287386.mp4": true,
+  "pb287386.mp4:face": false
  },
  "music_bag": {
   "lesson": [
-   "user_the-mountain-finance-background-449885.mp3",
    "user_starostin-investment-finance-trading-mon.mp3",
    "user_apalonbeats-finance-money-trading-invest.mp3",
    "user_soundsurfer-trading-254548.mp3",
@@ -461,7 +481,7 @@
   "story": []
  },
  "music_last": {
-  "lesson": "user_the-mountain-market-systems-146118.mp3",
+  "lesson": "user_the-mountain-finance-background-449885.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -538,7 +558,7 @@
   "user_momotmusic-inspiring-reels-406484.mp3": 4,
   "user_the-mountain-tech-corporate-593075.mp3": 1,
   "story_mixkit-electropop-870.mp3": 5,
-  "user_the-mountain-finance-background-449885.mp3": 1,
+  "user_the-mountain-finance-background-449885.mp3": 2,
   "user_starostin-investment-finance-trading-mon.mp3": 1,
   "user_apalonbeats-finance-money-trading-invest.mp3": 1,
   "user_the-mountain-market-systems-146118.mp3": 2,
