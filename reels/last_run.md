@@ -1,3 +1,10 @@
+**2026-10-02 16:54** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 39 items
+- [pexels] using clip 15439741 for 'abstract blue light server room lights'
+- ✅ News published: BNB Chain-ում թայքինզ արված ակտիվները
+---
 **2026-10-02 15:19** `lesson` ✅ published
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] using clip 35464509 for 'city skyline night'
@@ -225,21 +232,3 @@
 ---
 **2026-09-30 19:53** `chart` ✅ published
 - ✅ Story published
----
-**2026-09-30 18:23** `lesson` ✅ published
-- [pexels] using clip 11335976 for 'city skyline night'
-- [pexels] clip 36108468 rejected by the content check
-- [pexels] clip 35972076 rejected by the content check
-- [pexels] clip 34381274 rejected by the content check
-- [pixabay] using clip pb3626 for 'people shopping crowd'
-- [pexels] clip 33390334 rejected by the content check
-- [pixabay] clip pb20857 rejected by the content check
-- [pixabay] clip pb20459 rejected by the content check
-- [pixabay] download pb230033 failed: file too large
-- [pexels] using clip 30747149 for 'city skyline night'
-- [pexels] download 28494561 failed: file too large
-- [pexels] using clip 36726052 for 'technology blue'
-- [pexels] using clip 10884417 for 'dam water release'
-- [pexels] using clip 36628009 for 'abstract light bokeh'
-- [qa warning] motion-graphics share 33% < 40%
-- ✅ M1-15 «Circulating և Total Supply» published (42s, cta=send)
