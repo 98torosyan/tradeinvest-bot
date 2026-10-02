@@ -1,3 +1,11 @@
+**2026-10-02 20:25** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 39 items
+- [pixabay] clip pb14900 rejected by the content check
+- [pixabay] using clip pb4504 for 'server room lights'
+- ✅ News published: SEC-ը նոր կանոններ է առաջարկում
+---
 **2026-10-02 19:53** `chart` ✅ published
 - ✅ Story published
 ---
@@ -223,18 +231,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7651.54}
 - ✅ Story published
----
-**2026-09-30 21:20** `lesson` ✅ published
-- [pexels] using clip 29025308 for 'city skyline night'
-- [pexels] clip 19434326 rejected by the content check
-- [pexels] clip 35972076 rejected by the content check
-- [pexels] clip 35245798 rejected by the content check
-- [pixabay] clip pb1643 rejected by the content check
-- [pixabay] using clip pb36510 for 'busy market crowd'
-- [pexels] download 28494561 failed: file too large
-- [pexels] using clip 26056271 for 'technology blue'
-- [pexels] download 38623894 failed: file too large
-- [pexels] using clip 35584996 for 'narrow mountain road'
-- [pexels] using clip 39322557 for 'abstract light bokeh'
-- ✅ M1-16 «Liquidity» published (36s, cta=question)
-- ✅ teaser Story published
