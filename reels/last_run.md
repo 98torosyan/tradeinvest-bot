@@ -1,3 +1,6 @@
+**2026-10-02 22:42** `lesson` ✅ dedupe
+- [dedupe] M2-04 is already on Instagram (18029238296685925), only the state is updated
+---
 **2026-10-02 21:20** `lesson` ❌ failed
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] clip 35552568 rejected by the content check
@@ -231,12 +234,3 @@
 - [news] https://decrypt.co/feed: 38 items
 - ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական ստուգումը չանցավ. Բլոկչեյնը, ավիավառելիքի, բլոկչեյնը, հայտարարություններին
 Եթե բառերը ճիշտ են, գրիր՝ /allow Բլոկչեյնը ավիավառելիքի բլոկչեյնը հայտարարություններին
----
-**2026-10-01 09:20** `lesson` ✅ published
-- [pexels] using clip 39468111 for 'city skyline night'
-- [pexels] using clip 9620654 for 'ocean waves'
-- [pexels] using clip 36982633 for 'roller coaster'
-- [pexels] using clip 8745444 for 'calm lake sunrise'
-- [pexels] using clip 39322562 for 'abstract light bokeh'
-- ✅ M1-17 «Volatility» published (34s, cta=send)
-- 📚 Մնացել է 5 պատրաստի սցենար։

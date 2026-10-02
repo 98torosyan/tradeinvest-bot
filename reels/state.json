@@ -1,5 +1,5 @@
 {
- "course_index": 25,
+ "course_index": 26,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -175,6 +175,12 @@
    "date": "2026-10-02",
    "hour": 18,
    "cta": "send"
+  },
+  "M2-04": {
+   "media": "18029238296685925",
+   "permalink": "https://www.instagram.com/reel/DeABQdIESZ4/",
+   "date": "2026-10-02",
+   "hour": 22
   }
  },
  "palette": {
