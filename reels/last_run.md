@@ -1,3 +1,6 @@
+**2026-10-02 19:53** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-02 18:22** `lesson` ✅ published
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] using clip 14300758 for 'city skyline night'
@@ -235,10 +238,3 @@
 - [pexels] using clip 39322557 for 'abstract light bokeh'
 - ✅ M1-16 «Liquidity» published (36s, cta=question)
 - ✅ teaser Story published
----
-**2026-09-30 20:28** `news` ✅ qa-fail
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 36 items
-- ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական ստուգումը չանցավ. Ինստիտուցիոնալ, Կրիպտոակտիվությունը, Սինգապուրի, ինստիտուցիոնալ, կրիպտոակտիվությունը
-Եթե բառերը ճիշտ են, գրիր՝ /allow Ինստիտուցիոնալ Կրիպտոակտիվությունը Սինգապուրի ինստիտուցիոնալ կրիպտոակտիվությունը
