@@ -1,3 +1,30 @@
+**2026-10-02 09:19** `lesson` ✅ published
+- [pexels] clip 35972076 rejected by the content check
+- [pexels] clip 35245798 rejected by the content check
+- [pixabay] clip pb1643 rejected by the content check
+- [pixabay] clip pb23258 rejected by the content check
+- [pixabay] clip pb3630 rejected by the content check
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pexels] using clip 29025309 for 'city skyline night'
+- [pexels] using clip 8394086 for 'stock exchange building'
+- [pexels] using clip 7361127 for 'gold bullion close up'
+- [pexels] using clip 27915864 for 'ocean waves'
+- [pexels] download 28494561 failed: file too large
+- [pixabay] clip pb46688 rejected by the content check
+- [pixabay] clip pb13370 rejected by the content check
+- [pixabay] using clip pb3463 for 'technology blue'
+- [pixabay] download pb27051 failed: file too large
+- [pixabay] download pb88802 failed: file too large
+- [pixabay] download pb19989 failed: file too large
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] clip pb337459 rejected by the content check
+- [pixabay] clip pb86350 rejected by the content check
+- [pixabay] using clip pb19799 for 'city skyline night'
+- [qa warning] motion-graphics share 36% < 40%
+- ✅ M1-22 «Ամփոփում + տնային առաջադրանք» published (42s, cta=send)
+---
 **2026-10-02 08:51** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7666.45}
@@ -196,12 +223,3 @@
 - ✅ M1-13 «Stablecoins» published (34s, cta=send)
 - ✅ teaser Story published
 - 📚 Մնացել է 9 պատրաստի սցենար։
----
-**2026-09-30 10:54** `news` ✅ published
-- 🎵 Գրադարանին ավելացան՝ user_apalonbeats-finance-money-trading-invest.mp3, −memories.mp3, −lesson_mixkit-chillout-105.mp3, −cbpd.mp3, −delayed-flight.mp3, user_momotmusic-inspiring-reels-406484.mp3, user_soundsurfer-trading-254548.mp3, user_starostin-investment-finance-trading-mon.mp3, user_the-mountain-finance-background-449885.mp3, user_the-mountain-market-systems-146118.mp3, user_the-mountain-tech-corporate-593075.mp3, user_momotmusic-inspiring-reels-406484.mp3, −autofahren.mp3, −news_mixkit-house-471.mp3, −hip-hop-02.mp3, −workout.mp3, −news_mixkit-house-744.mp3
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 36 items
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] using clip pb3138 for 'city skyline night'
-- ✅ News published: Bitwise-ը գործարկել է առաջին NEAR ETF-ը
