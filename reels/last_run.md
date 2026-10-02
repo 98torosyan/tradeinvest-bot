@@ -1,3 +1,8 @@
+**2026-10-02 08:51** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7666.45}
+- ✅ Story published
+---
 **2026-10-01 21:23** `lesson` ✅ published
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] clip 39570925 rejected by the content check
@@ -200,13 +205,3 @@
 - [pexels] clip 35552568 rejected by the content check
 - [pixabay] using clip pb3138 for 'city skyline night'
 - ✅ News published: Bitwise-ը գործարկել է առաջին NEAR ETF-ը
----
-**2026-09-30 09:20** `lesson` ✅ published
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] using clip pb3134 for 'city skyline night'
-- [pexels] using clip 15886614 for 'technology blue'
-- [pexels] using clip 35158244 for 'technology network connection'
-- [pexels] clip 39463971 rejected by the content check
-- [pexels] using clip 34995393 for 'digital network technology'
-- [pexels] using clip 39322559 for 'abstract light bokeh'
-- ✅ M1-12 «Ethereum և Smart Contracts» published (34s, cta=question)
