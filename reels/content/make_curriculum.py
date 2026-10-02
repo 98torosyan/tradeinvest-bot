@@ -63,8 +63,9 @@ CALC = re.compile(r"հաշվարկ|բանաձև|Expectancy|Sharpe|Sortino|Ratio|
 EXPL = re.compile(r"Ամփոփում|Ամբողջական|Walkthrough|Project|Strategy$|Իսկ իրականում|Simulated|Analysis")
 
 from m1 import M1
+from m2 import M2
 from m5 import M5
-SCRIPTED = {5: M5}
+SCRIPTED = {2: M2, 5: M5}
 lessons = []
 for n, spec in enumerate(M1, 1):
     lessons.append(dict(spec, id=f"M1-{n:02d}", module=1, n=n, status="script"))

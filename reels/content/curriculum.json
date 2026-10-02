@@ -1402,316 +1402,1384 @@
    "status": "script"
   },
   {
+   "title": "Wallet-ի տեսակները",
+   "type": "concept",
+   "hook": "Որտե՞ղ են|իրականում պահվում|քո coin-երը",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Crypto wallet-ը պահում է բանալիները, որոնցով կառավարում ես քո coin-երը",
+     "query": "smartphone app closeup"
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Hot wallet",
+      "Միացված է ինտերնետին, հարմար է"
+     ],
+     "b": [
+      "Cold wallet",
+      "Անջատված է, ավելի անվտանգ"
+     ],
+     "query": "technology blue"
+    },
+    {
+     "kind": "broll",
+     "text": "Բորսայում պահելիս բանալիները բորսայի մոտ են, ոչ թե քո",
+     "query": "bank vault door"
+    }
+   ],
+   "recap": "Ով ունի բանալին,|նա է տերը",
+   "summary": "Hot, cold և բորսայի wallet. որտեղ են պահվում coin-երը և ինչով են տարբերվում։",
+   "question": "Դու որտե՞ղ ես պահում քո crypto-ն։",
+   "keywords": [
+    "crypto wallet",
+    "hot wallet",
+    "cold wallet",
+    "wallet հայերեն"
+   ],
+   "facts": [
+    "Hot wallets are online; cold wallets are kept offline."
+   ],
+   "quiz": {
+    "q": "Ո՞ր wallet-ն է անջատված ինտերնետից",
+    "options": [
+     "Cold wallet",
+     "Hot wallet",
+     "Բորսայի wallet"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "wallet"
+   ],
+   "uses": [
+    "crypto",
+    "exchange"
+   ],
+   "negative": false,
    "id": "M2-01",
    "module": 2,
    "n": 1,
-   "title": "Wallet-ի տեսակները",
-   "type": "concept",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M2-01"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Private Key և Seed Phrase",
+   "type": "concept",
+   "hook": "12 բառ,|որոնք արժեն|ամեն ինչ",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Private key-ը գաղտնի բանալի է, որով հաստատվում են գործարքները",
+     "query": "padlock closeup"
+    },
+    {
+     "kind": "broll",
+     "text": "Seed phrase-ը 12 կամ 24 բառ է, որով կարելի է վերականգնել ամբողջ wallet-ը",
+     "query": "notebook handwriting pen"
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Seed phrase-ը երբեք մի՛ ուղարկիր ոչ մեկին, նույնիսկ «support»-ին",
+     "query": "dark room laptop"
+    }
+   ],
+   "recap": "Seed phrase՝|միայն քեզ",
+   "summary": "Private key և seed phrase. ամենակարևոր գաղտնիքները crypto-ում և ինչպես պաշտպանել դրանք։",
+   "question": "Գիտեի՞ր, որ seed phrase-ով մեկը կարող է վերցնել ամբողջ wallet-ը։",
+   "keywords": [
+    "seed phrase",
+    "private key",
+    "crypto անվտանգություն",
+    "wallet վերականգնում"
+   ],
+   "facts": [
+    "A seed phrase is usually 12 or 24 words and can restore a wallet."
+   ],
+   "quiz": {
+    "q": "Ո՞ւմ կարելի է ասել seed phrase-ը",
+    "options": [
+     "Ոչ մեկին",
+     "Բորսայի support-ին",
+     "Ընկերոջը"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "private_key",
+    "seed_phrase"
+   ],
+   "uses": [
+    "wallet"
+   ],
+   "negative": false,
    "id": "M2-02",
    "module": 2,
    "n": 2,
-   "title": "Private Key և Seed Phrase",
-   "type": "concept",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M2-02"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Անվտանգության հիմունքներ",
+   "type": "concept",
+   "hook": "Hacker-ին|պետք չէ քո|համակարգիչը",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Մեծ մասամբ գումարը կորչում է ոչ թե hack-ից, այլ մարդկային սխալից",
+     "query": "laptop password screen"
+    },
+    {
+     "kind": "checklist",
+     "title": "Հիմնական կանոններ",
+     "items": [
+      "Ամեն տեղ՝ տարբեր գաղտնաբառ",
+      "Միացրու 2FA",
+      "Մի՛ սեղմիր անծանոթ հղումներ"
+     ],
+     "query": "technology blue"
+    },
+    {
+     "kind": "broll",
+     "text": "Եթե առաջարկը չափազանց լավ է թվում, հավանաբար խաբեություն է",
+     "query": "dark storm clouds"
+    }
+   ],
+   "recap": "Զգուշությունը|լավագույն|պաշտպանությունն է",
+   "summary": "Crypto անվտանգության հիմնական կանոնները, որոնք պաշտպանում են գումարի մեծ մասը։",
+   "question": "Դու օգտագործո՞ւմ ես տարբեր գաղտնաբառեր տարբեր կայքերի համար։",
+   "keywords": [
+    "crypto անվտանգություն",
+    "crypto security",
+    "գաղտնաբառ",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Many crypto losses come from phishing and human error rather than protocol hacks."
+   ],
+   "quiz": {
+    "q": "Ինչո՞վ է մեծ մասամբ կորչում գումարը",
+    "options": [
+     "Մարդկային սխալով",
+     "Bitcoin-ի սխալով",
+     "Halving-ով"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "security"
+   ],
+   "uses": [
+    "seed_phrase"
+   ],
+   "negative": false,
    "id": "M2-03",
    "module": 2,
    "n": 3,
-   "title": "Անվտանգության հիմունքներ",
-   "type": "concept",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M2-03"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "2FA",
+   "type": "concept",
+   "hook": "Գաղտնաբառը|բավական|չէ",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "2FA-ն երկրորդ պաշտպանության քայլ է գաղտնաբառից հետո",
+     "query": "smartphone security lock"
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "SMS կոդ",
+      "Ավելի թույլ"
+     ],
+     "b": [
+      "Authenticator հավելված",
+      "Ավելի ուժեղ"
+     ],
+     "query": "technology blue"
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Պահիր 2FA-ի վերականգնման կոդերը անվտանգ տեղում",
+     "query": "notebook handwriting pen"
+    }
+   ],
+   "recap": "2FA՝|երկրորդ|դուռ",
+   "summary": "2FA-ն պաշտպանում է նույնիսկ այն դեպքում, եթե գաղտնաբառը գողացել են։",
+   "question": "Քո բորսայի հաշվում 2FA-ն միացվա՞ծ է։",
+   "keywords": [
+    "2FA",
+    "երկքայլ նույնականացում",
+    "authenticator",
+    "crypto անվտանգություն"
+   ],
+   "facts": [
+    "Authenticator apps are generally safer than SMS codes because of SIM-swap attacks."
+   ],
+   "quiz": {
+    "q": "Ո՞ր 2FA-ն է ավելի ուժեղ",
+    "options": [
+     "Authenticator հավելվածը",
+     "SMS կոդը",
+     "Երկուսն էլ նույնն են"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "2fa"
+   ],
+   "uses": [
+    "security"
+   ],
+   "negative": false,
    "id": "M2-04",
    "module": 2,
    "n": 4,
-   "title": "2FA",
-   "type": "concept",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M2-04"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Ինչպես ստուգել կայքը",
+   "type": "concept",
+   "hook": "Մեկ տառ|և գումարը|չկա",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Խաբեբաները ստեղծում են կայքեր, որոնք գրեթե չեն տարբերվում իսկականից",
+     "query": "laptop screen dark"
+    },
+    {
+     "kind": "checklist",
+     "title": "Ստուգիր",
+     "items": [
+      "Հասցեն՝ տառ առ տառ",
+      "Մուտքը՝ միայն էջանիշից",
+      "Գովազդային հղումները՝ ոչ"
+     ],
+     "query": "technology blue"
+    },
+    {
+     "kind": "broll",
+     "text": "Հավելվածները ներբեռնիր միայն պաշտոնական խանութից",
+     "query": "smartphone app closeup"
+    }
+   ],
+   "recap": "Ստուգիր|հասցեն|ամեն անգամ",
+   "summary": "Կեղծ կայքերը crypto-ում ամենատարածված ծուղակներից են։ Ինչպես տարբերել իսկականը։",
+   "question": "Դու երբևէ հանդիպե՞լ ես կեղծ կայքի։",
+   "keywords": [
+    "phishing",
+    "կեղծ կայք",
+    "crypto scam",
+    "crypto անվտանգություն"
+   ],
+   "facts": [
+    "Phishing sites often copy real domains with one changed character."
+   ],
+   "quiz": {
+    "q": "Ինչպե՞ս է ավելի անվտանգ մուտք գործել բորսա",
+    "options": [
+     "Էջանիշից",
+     "Գովազդի հղումից",
+     "Անծանոթ նամակից"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "phishing"
+   ],
+   "uses": [
+    "security"
+   ],
+   "negative": false,
    "id": "M2-05",
    "module": 2,
    "n": 5,
-   "title": "Ինչպես ստուգել կայքը",
-   "type": "concept",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M2-05"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Scam. կեղծ support",
+   "type": "concept",
+   "hook": "«Support»-ը|քեզ առաջինը|չի գրում",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Խաբեբան ներկայանում է որպես բորսայի կամ wallet-ի support",
+     "query": "smartphone notification night"
+    },
+    {
+     "kind": "broll",
+     "text": "Նա խնդրում է seed phrase-ը կամ կոդը՝ «հաշիվը փրկելու համար»",
+     "query": "dark room laptop"
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Իսկական support-ը երբեք չի խնդրում seed phrase կամ 2FA կոդ",
+     "query": "padlock closeup"
+    }
+   ],
+   "recap": "Seed phrase խնդրող|support-ը|խաբեբա է",
+   "summary": "Մի՛ խաբվիր. կեղծ support-ը crypto-ում ամենահաճախ հանդիպող խաբեություններից է։",
+   "question": "Քեզ երբևէ գրե՞լ է «support»՝ առանց քո դիմելու։",
+   "keywords": [
+    "crypto scam",
+    "կեղծ support",
+    "խաբեություն",
+    "մի խաբվիր"
+   ],
+   "facts": [
+    "Legitimate support never asks for seed phrases or 2FA codes."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է անում իսկական support-ը",
+    "options": [
+     "Երբեք չի խնդրում seed phrase",
+     "Խնդրում է 2FA կոդ",
+     "Գրում է առաջինը"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "scam"
+   ],
+   "uses": [
+    "seed_phrase",
+    "2fa"
+   ],
+   "negative": true,
    "id": "M2-06",
    "module": 2,
    "n": 6,
-   "title": "Scam. կեղծ support",
-   "type": "concept",
-   "status": "planned",
-   "negative": true,
-   "introduces": [
-    "M2-06"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Scam. բուրգեր",
+   "type": "concept",
+   "hook": "Կայուն 30%|ամեն|ամիս",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Բուրգը խոստանում է կայուն, բարձր եկամուտ առանց ռիսկի",
+     "query": "money stack closeup"
+    },
+    {
+     "kind": "broll",
+     "text": "Հին մասնակիցներին վճարում են նորերի գումարով, մինչև համակարգը փլուզվում է",
+     "query": "dominoes falling"
+    },
+    {
+     "kind": "card",
+     "title": "Նշան",
+     "text": "Երաշխավորված բարձր տոկոս և «բեր ընկերոջդ» պահանջ",
+     "query": "dark storm clouds"
+    }
+   ],
+   "recap": "Երաշխավորված տոկոս|= կարմիր|դրոշ",
+   "summary": "Մի՛ խաբվիր. ինչպես ճանաչել ֆինանսական բուրգը նախքան գումար ներդնելը։",
+   "question": "Քեզ երբևէ առաջարկե՞լ են «կայուն եկամուտ» crypto-ով։",
+   "keywords": [
+    "ֆինանսական բուրգ",
+    "Ponzi",
+    "crypto scam",
+    "մի խաբվիր"
+   ],
+   "facts": [
+    "Ponzi schemes pay earlier investors with money from new investors."
+   ],
+   "quiz": {
+    "q": "Ինչո՞վ են բուրգերը վճարում հին մասնակիցներին",
+    "options": [
+     "Նորերի գումարով",
+     "Շահույթով",
+     "Bitcoin-ի mining-ով"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [
+    "scam"
+   ],
+   "negative": true,
    "id": "M2-07",
    "module": 2,
    "n": 7,
-   "title": "Scam. բուրգեր",
-   "type": "concept",
-   "status": "planned",
-   "negative": true,
-   "introduces": [
-    "M2-07"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Scam. կեղծ giveaway",
+   "type": "concept",
+   "hook": "Ուղարկիր 1,|ստացիր|2",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Կեղծ giveaway-ը խոստանում է կրկնապատկել քո ուղարկած crypto-ն",
+     "query": "smartphone notification night"
+    },
+    {
+     "kind": "broll",
+     "text": "Հաճախ օգտագործում են հայտնի մարդկանց անունները և կեղծ վիդեոներ",
+     "query": "dark room laptop"
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Ոչ ոք չի կրկնապատկում քո գումարը. ուղարկածը չի վերադառնա",
+     "query": "padlock closeup"
+    }
+   ],
+   "recap": "Անվճար crypto|չի|լինում",
+   "summary": "Մի՛ խաբվիր. «ուղարկիր և կրկնապատկիր» giveaway-ները միշտ խաբեություն են։",
+   "question": "Դու տեսե՞լ ես նման giveaway սոցցանցերում։",
+   "keywords": [
+    "crypto giveaway",
+    "crypto scam",
+    "կեղծ giveaway",
+    "մի խաբվիր"
+   ],
+   "facts": [
+    "Crypto 'send to double' giveaways are scams."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է լինում ուղարկված գումարի հետ",
+    "options": [
+     "Չի վերադառնում",
+     "Կրկնապատկվում է",
+     "Վերադառնում է մեկ օրից"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [
+    "scam"
+   ],
+   "negative": true,
    "id": "M2-08",
    "module": 2,
    "n": 8,
-   "title": "Scam. կեղծ giveaway",
-   "type": "concept",
-   "status": "planned",
-   "negative": true,
-   "introduces": [
-    "M2-08"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Scam. ծանոթությունից ներդրում",
+   "type": "concept",
+   "hook": "Նոր ընկեր,|որը խոսում է|միայն crypto-ից",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Խաբեբան ամիսներով կառուցում է վստահություն ծանոթության կայքերում կամ սոցցանցերում",
+     "query": "smartphone chat night"
+    },
+    {
+     "kind": "broll",
+     "text": "Հետո առաջարկում է «իր» հարթակը, որտեղ շահույթը միայն էկրանին է",
+     "query": "laptop screen dark"
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Մի՛ ներդրիր այնտեղ, որտեղ քեզ ուղղորդում է անծանոթը",
+     "query": "dark storm clouds"
+    }
+   ],
+   "recap": "Վստահությունը|չի նշանակում|անվտանգություն",
+   "summary": "Մի՛ խաբվիր. երկար շփումից հետո crypto ներդրման առաջարկը դասական խաբեություն է։",
+   "question": "Կզգուշացնե՞ս ընկերոջդ, եթե նա պատմի նման «նոր ընկերոջ» մասին։",
+   "keywords": [
+    "romance scam",
+    "crypto scam",
+    "pig butchering",
+    "մի խաբվիր"
+   ],
+   "facts": [
+    "These scams build trust over weeks before pushing a fake investment platform."
+   ],
+   "quiz": {
+    "q": "Որտե՞ղ է «շահույթը» նման հարթակներում",
+    "options": [
+     "Միայն էկրանին",
+     "Բանկում",
+     "Blockchain-ում"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [
+    "scam"
+   ],
+   "negative": true,
    "id": "M2-09",
    "module": 2,
    "n": 9,
-   "title": "Scam. ծանոթությունից ներդրում",
-   "type": "concept",
-   "status": "planned",
-   "negative": true,
-   "introduces": [
-    "M2-09"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Scam. pump and dump",
+   "type": "concept",
+   "hook": "Գինը թռավ.|հետո|փլուզվեց",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Կազմակերպիչները գնում են էժան coin, ապա գովազդում այն",
+     "query": "crowd city street"
+    },
+    {
+     "kind": "broll",
+     "text": "Երբ նորեկները գնում են, նրանք վաճառում են և գինը փլուզվում է",
+     "query": "stock chart falling red"
+    },
+    {
+     "kind": "card",
+     "title": "Նշան",
+     "text": "Կտրուկ աճ առանց պատճառի և «շտապիր գնել» կոչեր",
+     "query": "dark storm clouds"
+    }
+   ],
+   "recap": "Շտապեցնողը|սովորաբար|վաճառում է",
+   "summary": "Մի՛ խաբվիր. ինչպես է աշխատում pump and dump-ը և ով է իրականում շահում։",
+   "question": "Գնե՞լ ես երբևէ coin, որի մասին «բոլորը խոսում էին»։",
+   "keywords": [
+    "pump and dump",
+    "crypto scam",
+    "manipulation",
+    "մի խաբվիր"
+   ],
+   "facts": [
+    "Pump-and-dump schemes inflate a price then sell to latecomers."
+   ],
+   "quiz": {
+    "q": "Ո՞վ է շահում pump and dump-ից",
+    "options": [
+     "Կազմակերպիչները",
+     "Ուշացած գնորդները",
+     "Բոլորը"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [
+    "scam",
+    "price"
+   ],
+   "negative": true,
    "id": "M2-10",
    "module": 2,
    "n": 10,
-   "title": "Scam. pump and dump",
-   "type": "concept",
-   "status": "planned",
-   "negative": true,
-   "introduces": [
-    "M2-10"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Scam. կեղծ airdrop",
+   "type": "concept",
+   "hook": "Անվճար token-ը|քո wallet-ում|հենց այնպես",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Wallet-ում հայտնվում է անծանոթ token՝ հղումով դեպի կայք",
+     "query": "smartphone app closeup"
+    },
+    {
+     "kind": "broll",
+     "text": "Այդ կայքը խնդրում է «հաստատել» գործարք, որը դատարկում է wallet-ը",
+     "query": "laptop screen dark"
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Անծանոթ token-ների հետ ոչինչ մի՛ արա և մի՛ սեղմիր հղումները",
+     "query": "padlock closeup"
+    }
+   ],
+   "recap": "Անծանոթ token՝|մի՛|դիպչիր",
+   "summary": "Մի՛ խաբվիր. կեղծ airdrop-ները և wallet drainer-ները կարող են դատարկել wallet-ը մեկ սեղմումով։",
+   "question": "Քո wallet-ում երբևէ հայտնվե՞լ է անծանոթ token։",
+   "keywords": [
+    "airdrop scam",
+    "wallet drainer",
+    "crypto scam",
+    "մի խաբվիր"
+   ],
+   "facts": [
+    "Wallet drainers trick users into signing malicious approvals."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ անել անծանոթ token-ի հետ",
+    "options": [
+     "Ոչինչ չանել",
+     "Վաճառել անմիջապես",
+     "Սեղմել հղումը"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [
+    "scam",
+    "wallet"
+   ],
+   "negative": true,
    "id": "M2-11",
    "module": 2,
    "n": 11,
-   "title": "Scam. կեղծ airdrop",
-   "type": "concept",
-   "status": "planned",
-   "negative": true,
-   "introduces": [
-    "M2-11"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Scam. «VIP ազդանշաններ»",
+   "type": "concept",
+   "hook": "100% ճշգրիտ|ազդանշաններ.|միայն վճարով",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Խմբերը վաճառում են «գաղտնի ազդանշաններ» և ցույց տալիս միայն հաջող գործարքները",
+     "query": "smartphone chat night"
+    },
+    {
+     "kind": "broll",
+     "text": "Կորուստները ջնջվում են, իսկ արդյունքները հաճախ կեղծ են",
+     "query": "laptop screen dark"
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Ոչ ոք չի կարող երաշխավորել շահույթ շուկայում",
+     "query": "calm lake sunrise"
+    }
+   ],
+   "recap": "Երաշխիք|չկա|շուկայում",
+   "summary": "Մի՛ խաբվիր. «VIP ազդանշանների» խմբերը սովորաբար վաստակում են քո վճարից, ոչ թե շուկայից։",
+   "question": "Քեզ երբևէ առաջարկե՞լ են վճարովի ազդանշաններ։",
+   "keywords": [
+    "crypto signals",
+    "VIP signals",
+    "crypto scam",
+    "մի խաբվիր"
+   ],
+   "facts": [
+    "No one can guarantee trading profits."
+   ],
+   "quiz": {
+    "q": "Ինչո՞վ են հաճախ վաստակում «VIP» խմբերը",
+    "options": [
+     "Բաժանորդների վճարով",
+     "Միայն շուկայից",
+     "Mining-ով"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [
+    "scam",
+    "trading"
+   ],
+   "negative": true,
    "id": "M2-12",
    "module": 2,
    "n": 12,
-   "title": "Scam. «VIP ազդանշաններ»",
-   "type": "concept",
-   "status": "planned",
-   "negative": true,
-   "introduces": [
-    "M2-12"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Բորսայի կառուցվածքը",
+   "type": "concept",
+   "hook": "Ի՞նչ է կատարվում|«Գնել» սեղմելուց|հետո",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Crypto բորսան միացնում է գնորդների և վաճառողների հայտերը",
+     "query": "technology network connection"
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "CEX",
+      "Կենտրոնացված, ընկերություն"
+     ],
+     "b": [
+      "DEX",
+      "Smart contract-ներով"
+     ],
+     "query": "technology blue"
+    },
+    {
+     "kind": "broll",
+     "text": "Կենտրոնացված բորսայում քո գումարը պահվում է բորսայի մոտ",
+     "query": "bank vault door"
+    }
+   ],
+   "recap": "Բորսա՝|միջնորդ|կանոններով",
+   "summary": "Ինչպես է աշխատում crypto բորսան և ինչ տարբերություն կա CEX-ի և DEX-ի միջև։",
+   "question": "Դու օգտագործե՞լ ես երբևէ DEX։",
+   "keywords": [
+    "crypto բորսա",
+    "CEX",
+    "DEX",
+    "exchange"
+   ],
+   "facts": [
+    "Centralized exchanges hold user funds; DEXs use smart contracts."
+   ],
+   "quiz": {
+    "q": "Ինչո՞վ է աշխատում DEX-ը",
+    "options": [
+     "Smart contract-ներով",
+     "Բանկով",
+     "Թղթային գործարքներով"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "cex",
+    "dex"
+   ],
+   "uses": [
+    "exchange",
+    "smart_contract"
+   ],
+   "negative": false,
    "id": "M2-13",
    "module": 2,
    "n": 13,
-   "title": "Բորսայի կառուցվածքը",
-   "type": "concept",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M2-13"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Ինչպես ընտրել բորսա",
+   "type": "concept",
+   "hook": "Ամենամեծ բոնուսը|ամենավատ|չափանիշն է",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Բորսա ընտրելիս կարևոր է ոչ թե գովազդը, այլ վստահելիությունը",
+     "query": "city financial district"
+    },
+    {
+     "kind": "checklist",
+     "title": "Ստուգիր",
+     "items": [
+      "Լիցենզիա և կարգավորում",
+      "Անվտանգության պատմություն",
+      "Լիկվիդություն և միջնորդավճարներ"
+     ],
+     "query": "technology blue"
+    },
+    {
+     "kind": "broll",
+     "text": "Մեծ գումար երկար ժամանակ բորսայում մի՛ պահիր",
+     "query": "bank vault door"
+    }
+   ],
+   "recap": "Վստահություն|> բոնուս",
+   "summary": "Բորսա ընտրելու չափանիշները. ինչին նայել և ինչից զգուշանալ։",
+   "question": "Ո՞ր չափանիշն է քեզ համար ամենակարևորը։",
+   "keywords": [
+    "ինչպես ընտրել բորսա",
+    "crypto exchange",
+    "կարգավորվող բորսա",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Regulation and security history matter more than bonuses."
+   ],
+   "quiz": {
+    "q": "Ո՞րն է ամենաթույլ չափանիշը",
+    "options": [
+     "Ամենամեծ բոնուսը",
+     "Լիցենզիան",
+     "Անվտանգությունը"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [
+    "exchange",
+    "liquidity"
+   ],
+   "negative": false,
    "id": "M2-14",
    "module": 2,
    "n": 14,
-   "title": "Ինչպես ընտրել բորսա",
-   "type": "concept",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M2-14"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Trading Pair",
+   "type": "concept",
+   "hook": "BTC/USDT.|ի՞նչ է նշանակում|շեղը",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Trading pair-ը ցույց է տալիս, թե որ ակտիվն ես փոխանակում որի հետ",
+     "query": "technology blue"
+    },
+    {
+     "kind": "card",
+     "title": "BTC/USDT",
+     "text": "Գնում ես BTC՝ վճարելով USDT-ով",
+     "query": "digital network technology"
+    },
+    {
+     "kind": "broll",
+     "text": "Առաջին ակտիվը գնվում կամ վաճառվում է, երկրորդով չափվում է գինը",
+     "query": "city skyline day"
+    }
+   ],
+   "recap": "Զույգ՝|ինչ ես գնում|և ինչով",
+   "summary": "Trading pair-ը բորսայի հիմնական հասկացություններից է։ Ինչպես կարդալ BTC/USDT-ն։",
+   "question": "Ո՞ր զույգով ես առավել հաճախ հանդիպում։",
+   "keywords": [
+    "trading pair",
+    "BTC/USDT",
+    "զույգ",
+    "crypto դաս"
+   ],
+   "facts": [
+    "In BTC/USDT, BTC is the base asset and USDT is the quote asset."
+   ],
+   "quiz": {
+    "q": "BTC/USDT-ում ինչո՞վ ես վճարում",
+    "options": [
+     "USDT-ով",
+     "BTC-ով",
+     "Դոլարով բանկից"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "trading_pair"
+   ],
+   "uses": [
+    "exchange",
+    "stablecoin"
+   ],
+   "negative": false,
    "id": "M2-15",
    "module": 2,
    "n": 15,
-   "title": "Trading Pair",
-   "type": "concept",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M2-15"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "USDT և quote currency",
+   "type": "concept",
+   "hook": "Ինչո՞ւ են|գները|USDT-ով",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Quote currency-ն այն արժույթն է, որով չափվում է գինը",
+     "query": "technology blue"
+    },
+    {
+     "kind": "broll",
+     "text": "Շատ բորսաներում դա USDT-ն կամ USDC-ն է, որոնք կապված են դոլարին",
+     "query": "money stack closeup"
+    },
+    {
+     "kind": "card",
+     "title": "Հիշիր",
+     "text": "Stablecoin-ի արժեքը կախված է թողարկողից",
+     "query": "bank vault door"
+    }
+   ],
+   "recap": "Quote currency՝|գնի|չափանիշ",
+   "summary": "Ինչու են crypto գները մեծ մասամբ USDT-ով և ինչ է quote currency-ն։",
+   "question": "Դու օգտագործո՞ւմ ես USDT։",
+   "keywords": [
+    "USDT",
+    "quote currency",
+    "stablecoin",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Many crypto pairs are quoted in USDT or USDC."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է quote currency-ն",
+    "options": [
+     "Արժույթը, որով չափվում է գինը",
+     "Գնվող ակտիվը",
+     "Միջնորդավճարը"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "quote_currency"
+   ],
+   "uses": [
+    "trading_pair",
+    "stablecoin"
+   ],
+   "negative": false,
    "id": "M2-16",
    "module": 2,
    "n": 16,
-   "title": "USDT և quote currency",
-   "type": "concept",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M2-16"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Ի՞նչ է պոզիցիան",
+   "type": "concept",
+   "hook": "Գնեցիր.|հիմա դու|պոզիցիայում ես",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Պոզիցիան քո բաց գործարքն է, որի արդյունքը կախված է գնից",
+     "query": "city lights night"
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Բաց պոզիցիա",
+      "Արդյունքը դեռ փոխվում է"
+     ],
+     "b": [
+      "Փակ պոզիցիա",
+      "Արդյունքը ֆիքսված է"
+     ],
+     "query": "technology blue"
+    },
+    {
+     "kind": "broll",
+     "text": "Ամեն պոզիցիայի համար պետք է պլան՝ որտեղ դուրս գալ",
+     "query": "chess board closeup"
+    }
+   ],
+   "recap": "Պոզիցիա՝|պլանով",
+   "summary": "Պոզիցիան թրեյդինգի հիմնական հասկացությունն է։ Ինչ է բաց և փակ պոզիցիան։",
+   "question": "Դու նախօրոք որոշո՞ւմ ես, թե որտեղ դուրս գալ գործարքից։",
+   "keywords": [
+    "պոզիցիա",
+    "position",
+    "թրեյդինգ",
+    "crypto դաս"
+   ],
+   "facts": [
+    "An open position's result changes with price until it is closed."
+   ],
+   "quiz": {
+    "q": "Ե՞րբ է արդյունքը ֆիքսվում",
+    "options": [
+     "Պոզիցիան փակելիս",
+     "Բացելիս",
+     "Երբեք"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "position"
+   ],
+   "uses": [
+    "trading",
+    "price"
+   ],
+   "negative": false,
    "id": "M2-17",
    "module": 2,
    "n": 17,
-   "title": "Ի՞նչ է պոզիցիան",
-   "type": "concept",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M2-17"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Bid, Ask և Spread",
+   "type": "concept",
+   "hook": "Ինչո՞ւ են|երկու|գին",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Bid-ը ամենաբարձր գինն է, որով պատրաստ են գնել",
+     "query": "people shopping crowd"
+    },
+    {
+     "kind": "broll",
+     "text": "Ask-ը ամենացածր գինն է, որով պատրաստ են վաճառել",
+     "query": "farmers market stalls"
+    },
+    {
+     "kind": "card",
+     "title": "Spread",
+     "text": "Ask-ի և Bid-ի տարբերությունը",
+     "query": "technology blue"
+    }
+   ],
+   "recap": "Փոքր spread|= բարձր|լիկվիդություն",
+   "summary": "Bid, ask և spread. ինչու շուկայում միշտ երկու գին կա։",
+   "question": "Նկատե՞լ ես, որ գնման և վաճառքի գները տարբեր են։",
+   "keywords": [
+    "bid ask",
+    "spread",
+    "order book",
+    "crypto դաս"
+   ],
+   "facts": [
+    "The spread is the difference between the best ask and best bid."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է spread-ը",
+    "options": [
+     "Ask-ի և Bid-ի տարբերությունը",
+     "Միջնորդավճարը",
+     "Գնի աճը"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "bid",
+    "ask",
+    "spread"
+   ],
+   "uses": [
+    "price",
+    "liquidity"
+   ],
+   "negative": false,
    "id": "M2-18",
    "module": 2,
    "n": 18,
-   "title": "Bid, Ask և Spread",
-   "type": "concept",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M2-18"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Market Order",
+   "type": "concept",
+   "hook": "Գնել|հենց|հիմա",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Market order-ը կատարվում է անմիջապես՝ առկա լավագույն գնով",
+     "query": "fast traffic timelapse"
+    },
+    {
+     "kind": "broll",
+     "text": "Արագ է, բայց վերջնական գինը կարող է մի փոքր տարբերվել",
+     "query": "city lights night"
+    },
+    {
+     "kind": "card",
+     "title": "Հիշիր",
+     "text": "Ցածր լիկվիդության դեպքում տարբերությունը կարող է մեծ լինել",
+     "query": "narrow mountain road"
+    }
+   ],
+   "recap": "Market՝|արագություն|գնի հաշվին",
+   "summary": "Market order. ամենապարզ օրդերը և նրա թաքնված ռիսկը։",
+   "question": "Դու սովորաբար օգտագործո՞ւմ ես market order։",
+   "keywords": [
+    "market order",
+    "օրդեր",
+    "թրեյդինգ",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Market orders execute immediately at the best available price."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է երաշխավորում market order-ը",
+    "options": [
+     "Կատարում",
+     "Ճշգրիտ գին",
+     "Շահույթ"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "market_order"
+   ],
+   "uses": [
+    "spread",
+    "liquidity"
+   ],
+   "negative": false,
    "id": "M2-19",
    "module": 2,
    "n": 19,
-   "title": "Market Order",
-   "type": "concept",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M2-19"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Limit Order",
+   "type": "concept",
+   "hook": "Քո գինը|կամ|ոչինչ",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Limit order-ը կատարվում է միայն քո սահմանած գնով կամ ավելի լավ",
+     "query": "chess board closeup"
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Market",
+      "Արագ, գինը՝ անհայտ"
+     ],
+     "b": [
+      "Limit",
+      "Գինը՝ հայտնի, կատարումը՝ ոչ"
+     ],
+     "query": "technology blue"
+    },
+    {
+     "kind": "broll",
+     "text": "Եթե գինը չհասնի քո մակարդակին, օրդերը կմնա չկատարված",
+     "query": "hourglass sand"
+    }
+   ],
+   "recap": "Limit՝|գին|ժամանակի հաշվին",
+   "summary": "Limit order. ինչպես վերահսկել գինը և ինչ ես դրա դիմաց վճարում։",
+   "question": "Ո՞րն ես նախընտրում՝ market, թե limit։",
+   "keywords": [
+    "limit order",
+    "օրդեր",
+    "թրեյդինգ",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Limit orders execute only at the set price or better and may not fill."
+   ],
+   "quiz": {
+    "q": "Ո՞րն է limit order-ի ռիսկը",
+    "options": [
+     "Կարող է չկատարվել",
+     "Գինը անհայտ է",
+     "Միշտ թանկ է"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "limit_order"
+   ],
+   "uses": [
+    "market_order"
+   ],
+   "negative": false,
    "id": "M2-20",
    "module": 2,
    "n": 20,
-   "title": "Limit Order",
-   "type": "concept",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M2-20"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Stop Order",
+   "type": "concept",
+   "hook": "Օրդեր,|որը սպասում է|գնին",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Stop order-ը ակտիվանում է, երբ գինը հասնում է նշված մակարդակին",
+     "query": "hourglass sand"
+    },
+    {
+     "kind": "broll",
+     "text": "Հաճախ այն օգտագործում են կորուստը սահմանափակելու համար",
+     "query": "padlock closeup"
+    },
+    {
+     "kind": "card",
+     "title": "Հիշիր",
+     "text": "Արագ շուկայում կատարման գինը կարող է տարբերվել",
+     "query": "ocean waves"
+    }
+   ],
+   "recap": "Stop՝|նախօրոք|որոշված ելք",
+   "summary": "Stop order. ինչպես է այն աշխատում և ինչու է կարևոր ռիսկի համար։",
+   "question": "Դու դնո՞ւմ ես stop order քո գործարքներում։",
+   "keywords": [
+    "stop order",
+    "stop loss",
+    "օրդեր",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Stop orders trigger when price reaches a set level; fills can slip in fast markets."
+   ],
+   "quiz": {
+    "q": "Ե՞րբ է ակտիվանում stop order-ը",
+    "options": [
+     "Երբ գինը հասնում է մակարդակին",
+     "Անմիջապես",
+     "Օրվա վերջում"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "stop_order"
+   ],
+   "uses": [
+    "limit_order",
+    "market_order"
+   ],
+   "negative": false,
    "id": "M2-21",
    "module": 2,
    "n": 21,
-   "title": "Stop Order",
-   "type": "concept",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M2-21"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Միջնորդավճարներ",
+   "type": "concept",
+   "hook": "Փոքր տոկոսը|դառնում է|մեծ գումար",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Բորսաները գանձում են միջնորդավճար յուրաքանչյուր գործարքից",
+     "query": "money stack closeup"
+    },
+    {
+     "kind": "checklist",
+     "title": "Որտեղ են վճարները",
+     "items": [
+      "Գնում և վաճառք",
+      "Կանխիկացում",
+      "Blockchain-ի ցանցի վճար"
+     ],
+     "query": "technology blue"
+    },
+    {
+     "kind": "broll",
+     "text": "Հաճախակի գործարքների դեպքում վճարները կարող են ուտել շահույթի մեծ մասը",
+     "query": "hourglass sand"
+    }
+   ],
+   "recap": "Հաշվիր|վճարները|նախօրոք",
+   "summary": "Միջնորդավճարներ. որտեղ են դրանք թաքնված և ինչպես են ազդում արդյունքի վրա։",
+   "question": "Դու գիտե՞ս, թե որքան ես վճարում յուրաքանչյուր գործարքի համար։",
+   "keywords": [
+    "trading fees",
+    "միջնորդավճար",
+    "crypto բորսա",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Fees apply to trades, withdrawals and network transfers."
+   ],
+   "quiz": {
+    "q": "Ե՞րբ են վճարները ամենաշատ ազդում",
+    "options": [
+     "Հաճախակի գործարքների դեպքում",
+     "Երբեք",
+     "Միայն մեկ գործարքում"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "fees"
+   ],
+   "uses": [
+    "exchange",
+    "trading"
+   ],
+   "negative": false,
    "id": "M2-22",
    "module": 2,
    "n": 22,
-   "title": "Միջնորդավճարներ",
-   "type": "concept",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M2-22"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Հարկեր և կարգավորում",
+   "type": "concept",
+   "hook": "Շահույթ.|իսկ|հարկե՞րը",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Crypto-ի հարկային կանոնները տարբեր երկրներում տարբեր են և փոխվում են",
+     "query": "city financial district"
+    },
+    {
+     "kind": "checklist",
+     "title": "Ինչ անել",
+     "items": [
+      "Պահիր գործարքների գրառումները",
+      "Ստուգիր պաշտոնական աղբյուրները",
+      "Անհրաժեշտության դեպքում՝ մասնագետ"
+     ],
+     "query": "technology blue"
+    },
+    {
+     "kind": "broll",
+     "text": "Կարգավորվող բորսաները պահանջում են անձի հաստատում",
+     "query": "bank vault door"
+    }
+   ],
+   "recap": "Գրառումներ|այսօր,|հանգստություն վաղը",
+   "summary": "Հարկեր և կարգավորում. ընդհանուր կանոններ, որոնք պետք է իմանա յուրաքանչյուր crypto օգտատեր։",
+   "question": "Դու պահո՞ւմ ես քո գործարքների գրառումները։",
+   "keywords": [
+    "crypto հարկեր",
+    "կարգավորում",
+    "KYC",
+    "crypto դաս"
+   ],
+   "facts": [
+    "Crypto tax rules differ by country and change over time."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ պահել միշտ",
+    "options": [
+     "Գործարքների գրառումները",
+     "Seed phrase-ը հեռախոսի նոթերում",
+     "Ոչինչ"
+    ],
+    "a": 0
+   },
+   "introduces": [
+    "taxes"
+   ],
+   "uses": [
+    "exchange"
+   ],
+   "negative": false,
    "id": "M2-23",
    "module": 2,
    "n": 23,
-   "title": "Հարկեր և կարգավորում",
-   "type": "concept",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M2-23"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
+   "title": "Ամփոփում + տնային առաջադրանք",
+   "type": "explain",
+   "hook": "Մոդուլ 2.|ամբողջը|մեկ րոպեում",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Wallet-ը և seed phrase-ը քո գումարի բանալիներն են",
+     "query": "padlock closeup"
+    },
+    {
+     "kind": "broll",
+     "text": "Scam-երը միշտ խոստանում են արագ և «ապահով» շահույթ",
+     "query": "dark storm clouds"
+    },
+    {
+     "kind": "broll",
+     "text": "Բորսայում հիմնականը trading pair-ն է, օրդերները և վճարները",
+     "query": "technology network connection"
+    },
+    {
+     "kind": "card",
+     "title": "Տնային առաջադրանք",
+     "text": "Միացրու 2FA-ն և պահիր seed phrase-ը թղթի վրա, անվտանգ տեղում",
+     "query": "notebook handwriting pen"
+    }
+   ],
+   "recap": "Մոդուլ 2|ավարտված է",
+   "summary": "Մոդուլ 2-ի ամփոփում և տնային առաջադրանք։ Հաջորդը՝ ռիսկի հիմունքներ։",
+   "question": "Մոդուլ 2-ի ո՞ր դասն էր քեզ համար ամենաօգտակարը։",
+   "keywords": [
+    "crypto անվտանգություն",
+    "crypto դասընթաց",
+    "crypto հայերեն",
+    "trading դաս"
+   ],
+   "facts": [],
+   "quiz": {
+    "q": "Ի՞նչն է միշտ խոստանում scam-ը",
+    "options": [
+     "Արագ, «ապահով» շահույթ",
+     "Ռիսկի մասին զգուշացում",
+     "Դասընթաց"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [
+    "wallet",
+    "seed_phrase",
+    "scam",
+    "trading_pair",
+    "fees"
+   ],
+   "negative": false,
    "id": "M2-24",
    "module": 2,
    "n": 24,
-   "title": "Ամփոփում + տնային առաջադրանք",
-   "type": "explain",
-   "status": "planned",
-   "negative": false,
-   "introduces": [
-    "M2-24"
-   ],
-   "uses": []
+   "status": "script"
   },
   {
    "id": "M3-01",

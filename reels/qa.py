@@ -46,12 +46,11 @@ def pre_render(lesson, cur, published_ids):
     return errs
 
 
-def text_ok(text, max_ratio=0.05, max_abs=5):
-    """For generated text (news, comment replies): tolerate a few unknown names, block real typos."""
+def text_ok(text, max_ratio=0.05, max_abs=2):
+    """For generated text (news, comment replies): names and new terms pass, real typos (1-edit) block."""
     from . import spell
-    ws = spell.words(text)
-    bad = spell.unknown(text)
-    return len(bad) <= max_abs and len(bad) <= max(1, int(len(ws) * max_ratio)), bad
+    typos, _unk = spell.check(text)
+    return len(typos) <= max_abs and len(typos) <= max(1, int(len(spell.words(text)) * max_ratio)), typos
 
 
 def layout(html, times):
