@@ -1,3 +1,12 @@
+**2026-10-02 10:55** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 39 items
+- [pexels] download 28494561 failed: file too large
+- [pexels] clip 16629709 rejected by the content check
+- [pexels] using clip 36644496 for 'abstract blue light'
+- ✅ News published: SEC-ն առաջարկում է կրիպտոյի պահառության նոր կանոններ
+---
 **2026-10-02 09:19** `lesson` ✅ published
 - [pexels] clip 35972076 rejected by the content check
 - [pexels] clip 35245798 rejected by the content check
@@ -211,15 +220,3 @@
 ---
 **2026-09-30 13:52** `quiz` ✅ published
 - ✅ Quiz Story from M1-08
----
-**2026-09-30 12:22** `lesson` ✅ published
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] using clip pb336755 for 'city skyline night'
-- [pexels] using clip 16863222 for 'technology blue'
-- [pexels] using clip 34995047 for 'technology network connection'
-- [pexels] clip 33390334 rejected by the content check
-- [pexels] using clip 7318813 for 'bank vault door'
-- [pexels] using clip 35090395 for 'abstract light bokeh'
-- ✅ M1-13 «Stablecoins» published (34s, cta=send)
-- ✅ teaser Story published
-- 📚 Մնացել է 9 պատրաստի սցենար։

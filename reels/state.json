@@ -157,7 +157,7 @@
   }
  },
  "palette": {
-  "news": 5
+  "news": 6
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -171,10 +171,10 @@
   "https://www.coindesk.com/markets/2026/09/28/goldman-sachs-brings-usd100-billion-treasury-fund-into-crypto-s-institutional-plumbing",
   "https://cointelegraph.com/news/bitwise-launches-first-us-spot-near-etf-after-tokens-recent-surge?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/markets/bitcoin-etf-6-3-billion-inflows-q3-btc-rise-43?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://cointelegraph.com/news/near-intents-exploit-assistance-bitget-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  "https://cointelegraph.com/news/near-intents-exploit-assistance-bitget-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://decrypt.co/379899/sec-proposes-rules-advisers-funds-hold-crypto"
  ],
  "used_broll": [
-  6091131,
   35160268,
   35464509,
   "pb4504",
@@ -253,7 +253,8 @@
   7361127,
   27915864,
   "pb3463",
-  "pb19799"
+  "pb19799",
+  36644496
  ],
  "bandit": {
   "cta": {}
@@ -285,6 +286,10 @@
   {
    "media": "18139836214620057",
    "date": "2026-10-01"
+  },
+  {
+   "media": "18117241352062236",
+   "date": "2026-10-02"
   }
  ],
  "quiz_count": 3,
@@ -490,7 +495,11 @@
   "pb3463.mp4": true,
   "pb3463.mp4:face": false,
   "pb19799.mp4": true,
-  "pb19799.mp4:face": false
+  "pb19799.mp4:face": false,
+  "16629709.mp4": false,
+  "16629709.mp4:face": false,
+  "36644496.mp4": true,
+  "36644496.mp4:face": false
  },
  "music_bag": {
   "lesson": [
@@ -577,7 +586,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 4,
+  "user_momotmusic-inspiring-reels-406484.mp3": 5,
   "user_the-mountain-tech-corporate-593075.mp3": 1,
   "story_mixkit-electropop-870.mp3": 6,
   "user_the-mountain-finance-background-449885.mp3": 2,
