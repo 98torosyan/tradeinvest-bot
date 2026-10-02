@@ -1,3 +1,6 @@
+**2026-10-02 13:52** `quiz` ✅ published
+- ✅ Quiz Story from M1-20
+---
 **2026-10-02 12:22** `lesson` ✅ published
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] using clip 34382888 for 'city skyline night'
@@ -230,13 +233,3 @@
 - [news] https://decrypt.co/feed: 36 items
 - ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական ստուգումը չանցավ. Բրիտանիայի, բիզնեսները, բիզնեսների, լիցենզավորման, լիցենզիայի
 Եթե բառերը ճիշտ են, գրիր՝ /allow Բրիտանիայի բիզնեսները բիզնեսների լիցենզավորման լիցենզիայի
----
-**2026-09-30 15:18** `lesson` ✅ published
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] using clip pb30154 for 'city skyline night'
-- [pexels] using clip 29941192 for 'city skyline day'
-- [pexels] using clip 28203566 for 'technology blue'
-- [pexels] using clip 34995473 for 'technology network connection'
-- [pexels] using clip 4565572 for 'abstract light bokeh'
-- ✅ M1-14 «Market Cap» published (37s, cta=save)
