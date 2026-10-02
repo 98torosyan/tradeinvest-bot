@@ -288,7 +288,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "send",
+ "last_cta": "question",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -562,17 +562,19 @@
   "pb2085.mp4": true,
   "pb2085.mp4:face": false,
   "33638649.mp4": true,
-  "33638649.mp4:face": false
+  "33638649.mp4:face": false,
+  "7534961.mp4": true,
+  "7534961.mp4:face": true,
+  "8873342.mp4": true,
+  "8873342.mp4:face": false
  },
  "music_bag": {
-  "lesson": [
-   "user_the-mountain-tech-corporate-593075.mp3"
-  ],
+  "lesson": [],
   "news": [],
   "story": []
  },
  "music_last": {
-  "lesson": "user_momotmusic-inspiring-reels-406484.mp3",
+  "lesson": "user_the-mountain-tech-corporate-593075.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -647,7 +649,7 @@
  "music_uses": {
   "delayed-flight.mp3": 1,
   "user_momotmusic-inspiring-reels-406484.mp3": 8,
-  "user_the-mountain-tech-corporate-593075.mp3": 1,
+  "user_the-mountain-tech-corporate-593075.mp3": 2,
   "story_mixkit-electropop-870.mp3": 8,
   "user_the-mountain-finance-background-449885.mp3": 2,
   "user_starostin-investment-finance-trading-mon.mp3": 2,

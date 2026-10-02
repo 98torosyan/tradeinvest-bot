@@ -1,3 +1,17 @@
+**2026-10-02 21:20** `lesson` ❌ failed
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pexels] using clip 28901427 for 'city skyline night'
+- [pexels] using clip 7534961 for 'smartphone security lock'
+- [pexels] clip 16629709 rejected by the content check
+- [pexels] download 28494561 failed: file too large
+- [pixabay] clip pb46688 rejected by the content check
+- [pixabay] clip pb13370 rejected by the content check
+- [pixabay] using clip pb45902 for 'technology blue'
+- [pexels] using clip 8873342 for 'notebook handwriting pen'
+- [pexels] using clip 39322558 for 'abstract light bokeh'
+- ❌ lesson սխալ՝ JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+---
 **2026-10-02 20:25** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -226,8 +240,3 @@
 - [pexels] using clip 39322562 for 'abstract light bokeh'
 - ✅ M1-17 «Volatility» published (34s, cta=send)
 - 📚 Մնացել է 5 պատրաստի սցենար։
----
-**2026-10-01 08:53** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7651.54}
-- ✅ Story published
