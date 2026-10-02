@@ -1,5 +1,5 @@
 {
- "course_index": 24,
+ "course_index": 25,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -168,6 +168,13 @@
    "date": "2026-10-02",
    "hour": 15,
    "cta": "save"
+  },
+  "M2-03": {
+   "media": "18104527733580828",
+   "permalink": "https://www.instagram.com/reel/Dd_tBfDke1l/",
+   "date": "2026-10-02",
+   "hour": 18,
+   "cta": "send"
   }
  },
  "palette": {
@@ -190,11 +197,6 @@
   "https://cointelegraph.com/markets/bnb-chain-1-billion-tokenized-assets-market-3-7-billion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
-  "pb977",
-  28901427,
-  "pb45902",
-  36627993,
-  "pb182970",
   39322558,
   "pb3134",
   15886614,
@@ -269,7 +271,12 @@
   34993447,
   7942762,
   "pb251083",
-  15439741
+  15439741,
+  14300758,
+  19532053,
+  "pb2085",
+  33638649,
+  35072002
  ],
  "bandit": {
   "cta": {}
@@ -280,7 +287,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "save",
+ "last_cta": "send",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -544,18 +551,23 @@
   "pb251083.mp4": true,
   "pb251083.mp4:face": false,
   "15439741.mp4": true,
-  "15439741.mp4:face": false
+  "15439741.mp4:face": false,
+  "19532053.mp4": true,
+  "19532053.mp4:face": false,
+  "pb2085.mp4": true,
+  "pb2085.mp4:face": false,
+  "33638649.mp4": true,
+  "33638649.mp4:face": false
  },
  "music_bag": {
   "lesson": [
-   "user_momotmusic-inspiring-reels-406484.mp3",
    "user_the-mountain-tech-corporate-593075.mp3"
   ],
   "news": [],
   "story": []
  },
  "music_last": {
-  "lesson": "user_soundsurfer-trading-254548.mp3",
+  "lesson": "user_momotmusic-inspiring-reels-406484.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -629,7 +641,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 6,
+  "user_momotmusic-inspiring-reels-406484.mp3": 7,
   "user_the-mountain-tech-corporate-593075.mp3": 1,
   "story_mixkit-electropop-870.mp3": 7,
   "user_the-mountain-finance-background-449885.mp3": 2,

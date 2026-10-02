@@ -1,3 +1,16 @@
+**2026-10-02 18:22** `lesson` ✅ published
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] using clip 14300758 for 'city skyline night'
+- [pexels] using clip 19532053 for 'laptop password screen'
+- [pexels] clip 16629709 rejected by the content check
+- [pexels] download 28494561 failed: file too large
+- [pixabay] clip pb46688 rejected by the content check
+- [pixabay] clip pb13370 rejected by the content check
+- [pixabay] using clip pb2085 for 'technology blue'
+- [pexels] using clip 33638649 for 'dark storm clouds'
+- [pexels] using clip 35072002 for 'abstract light bokeh'
+- ✅ M2-03 «Անվտանգության հիմունքներ» published (35s, cta=send)
+---
 **2026-10-02 16:54** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -229,6 +242,3 @@
 - [news] https://decrypt.co/feed: 36 items
 - ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական ստուգումը չանցավ. Ինստիտուցիոնալ, Կրիպտոակտիվությունը, Սինգապուրի, ինստիտուցիոնալ, կրիպտոակտիվությունը
 Եթե բառերը ճիշտ են, գրիր՝ /allow Ինստիտուցիոնալ Կրիպտոակտիվությունը Սինգապուրի ինստիտուցիոնալ կրիպտոակտիվությունը
----
-**2026-09-30 19:53** `chart` ✅ published
-- ✅ Story published
