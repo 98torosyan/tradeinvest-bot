@@ -1,3 +1,20 @@
+**2026-10-02 15:19** `lesson` ✅ published
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] using clip 35464509 for 'city skyline night'
+- [pexels] clip 26586643 rejected by the content check
+- [pexels] using clip 26586646 for 'padlock closeup'
+- [pexels] using clip 34993447 for 'notebook handwriting pen'
+- [pexels] using clip 7942762 for 'dark room laptop'
+- [pixabay] download pb27051 failed: file too large
+- [pixabay] download pb88802 failed: file too large
+- [pixabay] download pb19989 failed: file too large
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] clip pb337459 rejected by the content check
+- [pixabay] clip pb86350 rejected by the content check
+- [pixabay] using clip pb251083 for 'city skyline night'
+- ✅ M2-02 «Private Key և Seed Phrase» published (37s, cta=save)
+---
 **2026-10-02 13:52** `quiz` ✅ published
 - ✅ Quiz Story from M1-20
 ---
@@ -226,10 +243,3 @@
 - [pexels] using clip 36628009 for 'abstract light bokeh'
 - [qa warning] motion-graphics share 33% < 40%
 - ✅ M1-15 «Circulating և Total Supply» published (42s, cta=send)
----
-**2026-09-30 16:56** `news` ✅ qa-fail
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 36 items
-- ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական ստուգումը չանցավ. Բրիտանիայի, բիզնեսները, բիզնեսների, լիցենզավորման, լիցենզիայի
-Եթե բառերը ճիշտ են, գրիր՝ /allow Բրիտանիայի բիզնեսները բիզնեսների լիցենզավորման լիցենզիայի

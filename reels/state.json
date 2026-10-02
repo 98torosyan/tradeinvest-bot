@@ -1,5 +1,5 @@
 {
- "course_index": 23,
+ "course_index": 24,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -161,6 +161,13 @@
    "date": "2026-10-02",
    "hour": 12,
    "cta": "save"
+  },
+  "M2-02": {
+   "media": "18630238144013324",
+   "permalink": "https://www.instagram.com/reel/Dd_X-YMiWHF/",
+   "date": "2026-10-02",
+   "hour": 15,
+   "cta": "save"
   }
  },
  "palette": {
@@ -182,11 +189,6 @@
   "https://decrypt.co/379899/sec-proposes-rules-advisers-funds-hold-crypto"
  ],
  "used_broll": [
-  35072002,
-  14300758,
-  "pb378976",
-  7703941,
-  "pb99550",
   38396377,
   "pb977",
   28901427,
@@ -261,7 +263,12 @@
   39500866,
   "pb3464",
   35099110,
-  "pb42489"
+  "pb42489",
+  35464509,
+  26586646,
+  34993447,
+  7942762,
+  "pb251083"
  ],
  "bandit": {
   "cta": {}
@@ -520,11 +527,20 @@
   "35099110.mp4": true,
   "35099110.mp4:face": false,
   "pb42489.mp4": true,
-  "pb42489.mp4:face": false
+  "pb42489.mp4:face": false,
+  "26586643.mp4": false,
+  "26586643.mp4:face": false,
+  "26586646.mp4": true,
+  "26586646.mp4:face": false,
+  "34993447.mp4": true,
+  "34993447.mp4:face": false,
+  "7942762.mp4": true,
+  "7942762.mp4:face": false,
+  "pb251083.mp4": true,
+  "pb251083.mp4:face": false
  },
  "music_bag": {
   "lesson": [
-   "user_soundsurfer-trading-254548.mp3",
    "user_momotmusic-inspiring-reels-406484.mp3",
    "user_the-mountain-tech-corporate-593075.mp3"
   ],
@@ -532,7 +548,7 @@
   "story": []
  },
  "music_last": {
-  "lesson": "user_apalonbeats-finance-money-trading-invest.mp3",
+  "lesson": "user_soundsurfer-trading-254548.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -613,7 +629,7 @@
   "user_starostin-investment-finance-trading-mon.mp3": 2,
   "user_apalonbeats-finance-money-trading-invest.mp3": 2,
   "user_the-mountain-market-systems-146118.mp3": 2,
-  "user_soundsurfer-trading-254548.mp3": 1
+  "user_soundsurfer-trading-254548.mp3": 2
  },
  "low_alert": "2026-10-01"
 }
