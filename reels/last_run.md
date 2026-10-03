@@ -1,3 +1,15 @@
+**2026-10-03 22:33** `lesson` ✅ published
+- [pexels] using clip 11335976 for 'city skyline night'
+- [pexels] clip 7279035 rejected by the content check
+- [pexels] clip 7986754 rejected by the content check
+- [pexels] clip 6611951 rejected by the content check
+- [pixabay] using clip pb142641 for 'smartphone notification night'
+- [pexels] using clip 36178907 for 'dark room laptop'
+- [pexels] clip 26586643 rejected by the content check
+- [pexels] using clip 34516347 for 'padlock closeup'
+- [pexels] using clip 4565572 for 'abstract light bokeh'
+- ✅ M2-08 «Scam. կեղծ giveaway» published (33s, cta=send)
+---
 **2026-10-03 20:53** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -210,28 +222,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7666.45}
 - ✅ Story published
----
-**2026-10-01 21:23** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 39570925 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] clip pb86350 rejected by the content check
-- [pixabay] using clip pb220942 for 'city skyline night'
-- [pexels] using clip 35002915 for 'technology network connection'
-- [pexels] download 28494561 failed: file too large
-- [pixabay] clip pb46688 rejected by the content check
-- [pixabay] clip pb13370 rejected by the content check
-- [pixabay] using clip pb13067 for 'technology blue'
-- [pexels] using clip 31410686 for 'dark storm clouds'
-- [pixabay] download pb27051 failed: file too large
-- [pixabay] download pb88802 failed: file too large
-- [pixabay] download pb19989 failed: file too large
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 39570925 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] clip pb86350 rejected by the content check
-- [pixabay] using clip pb287386 for 'city skyline night'
-- ✅ M1-21 «DeFi-ի գաղափարը» published (35s, cta=question)
-- ✅ teaser Story published

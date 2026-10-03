@@ -1,5 +1,5 @@
 {
- "course_index": 29,
+ "course_index": 30,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -202,6 +202,13 @@
    "date": "2026-10-03",
    "hour": 17,
    "cta": "save"
+  },
+  "M2-08": {
+   "media": "18099541928066244",
+   "permalink": "https://www.instagram.com/reel/DeCue9wjEaL/",
+   "date": "2026-10-03",
+   "hour": 22,
+   "cta": "send"
   }
  },
  "palette": {
@@ -227,11 +234,6 @@
   "https://cointelegraph.com/news/near-intents-recovers-entire-stolen-38m-after-ultimatum-to-exploiter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
-  "pb3626",
-  30747149,
-  36726052,
-  10884417,
-  36628009,
   29025308,
   "pb36510",
   26056271,
@@ -306,7 +308,12 @@
   8102763,
   39537199,
   35090395,
-  "pb30154"
+  "pb30154",
+  11335976,
+  "pb142641",
+  36178907,
+  34516347,
+  4565572
  ],
  "bandit": {
   "cta": {}
@@ -317,7 +324,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "save",
+ "last_cta": "send",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -635,11 +642,16 @@
   "8102763.mp4": true,
   "8102763.mp4:face": false,
   "39537199.mp4": true,
-  "39537199.mp4:face": false
+  "39537199.mp4:face": false,
+  "pb142641.mp4": true,
+  "pb142641.mp4:face": false,
+  "36178907.mp4": true,
+  "36178907.mp4:face": false,
+  "34516347.mp4": true,
+  "34516347.mp4:face": false
  },
  "music_bag": {
   "lesson": [
-   "user_soundsurfer-trading-254548.mp3",
    "user_the-mountain-market-systems-146118.mp3",
    "user_apalonbeats-finance-money-trading-invest.mp3",
    "user_the-mountain-tech-corporate-593075.mp3"
@@ -648,7 +660,7 @@
   "story": []
  },
  "music_last": {
-  "lesson": "user_momotmusic-inspiring-reels-406484.mp3",
+  "lesson": "user_soundsurfer-trading-254548.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -729,7 +741,7 @@
   "user_starostin-investment-finance-trading-mon.mp3": 3,
   "user_apalonbeats-finance-money-trading-invest.mp3": 2,
   "user_the-mountain-market-systems-146118.mp3": 2,
-  "user_soundsurfer-trading-254548.mp3": 2
+  "user_soundsurfer-trading-254548.mp3": 3
  },
  "low_alert": "2026-10-01"
 }
