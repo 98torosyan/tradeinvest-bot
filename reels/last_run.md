@@ -1,3 +1,10 @@
+**2026-10-04 00:07** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 39 items
+- [pexels] using clip 37676204 for 'abstract blue light chart'
+- ✅ News published: Bitcoin-ը հասավ 87 հազար դոլարի
+---
 **2026-10-03 23:56** `chart` ✅ published
 - ✅ Story published
 ---
@@ -198,12 +205,3 @@
 - [pixabay] using clip pb42489 for 'city skyline night'
 - ✅ M2-01 «Wallet-ի տեսակները» published (36s, cta=save)
 - ✅ teaser Story published
----
-**2026-10-02 10:55** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 39 items
-- [pexels] download 28494561 failed: file too large
-- [pexels] clip 16629709 rejected by the content check
-- [pexels] using clip 36644496 for 'abstract blue light'
-- ✅ News published: SEC-ն առաջարկում է կրիպտոյի պահառության նոր կանոններ
