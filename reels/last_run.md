@@ -1,3 +1,6 @@
+**2026-10-03 13:49** `quiz` ✅ published
+- ✅ Quiz Story from M2-04
+---
 **2026-10-03 12:21** `lesson` ✅ published
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] clip 35552568 rejected by the content check
@@ -218,20 +221,3 @@
 ---
 **2026-10-01 20:02** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-01 18:28** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] using clip pb204326 for 'city skyline night'
-- [pexels] using clip 8727847 for 'mountain climber'
-- [pexels] using clip 28483048 for 'technology blue'
-- [pexels] using clip 8745485 for 'calm lake sunrise'
-- [pixabay] download pb27051 failed: file too large
-- [pixabay] download pb88802 failed: file too large
-- [pixabay] download pb19989 failed: file too large
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] using clip pb5624 for 'city skyline night'
-- ✅ M1-20 «Ռիսկ և շահույթ» published (35s, cta=save)
