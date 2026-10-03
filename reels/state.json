@@ -191,7 +191,7 @@
   }
  },
  "palette": {
-  "news": 8
+  "news": 9
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -208,10 +208,10 @@
   "https://cointelegraph.com/news/near-intents-exploit-assistance-bitget-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://decrypt.co/379899/sec-proposes-rules-advisers-funds-hold-crypto",
   "https://cointelegraph.com/markets/bnb-chain-1-billion-tokenized-assets-market-3-7-billion?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://www.coindesk.com/policy/2026/10/01/u-s-sec-maps-out-crypto-custody-in-new-proposal-that-furthers-its-digital-assets-agenda"
+  "https://www.coindesk.com/policy/2026/10/01/u-s-sec-maps-out-crypto-custody-in-new-proposal-that-furthers-its-digital-assets-agenda",
+  "https://decrypt.co/379972/ethereum-layer-2-blast-shutting-down"
  ],
  "used_broll": [
-  "pb3138",
   "pb336755",
   16863222,
   34995047,
@@ -290,7 +290,8 @@
   34771082,
   "pb45902",
   "pb202987",
-  39322558
+  39322558,
+  "pb3134"
  ],
  "bandit": {
   "cta": {}
@@ -334,6 +335,10 @@
   {
    "media": "17989315617100875",
    "date": "2026-10-02"
+  },
+  {
+   "media": "18103300760316456",
+   "date": "2026-10-03"
   }
  ],
  "quiz_count": 4,
@@ -585,7 +590,9 @@
   "13441336.mp4": false,
   "13441336.mp4:face": false,
   "pb202987.mp4": true,
-  "pb202987.mp4:face": false
+  "pb202987.mp4:face": false,
+  "pb14907.mp4": false,
+  "pb14907.mp4:face": false
  },
  "music_bag": {
   "lesson": [
@@ -674,7 +681,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 8,
+  "user_momotmusic-inspiring-reels-406484.mp3": 9,
   "user_the-mountain-tech-corporate-593075.mp3": 2,
   "story_mixkit-electropop-870.mp3": 9,
   "user_the-mountain-finance-background-449885.mp3": 2,

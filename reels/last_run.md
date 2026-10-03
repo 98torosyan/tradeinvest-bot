@@ -1,3 +1,15 @@
+**2026-10-03 11:02** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 39 items
+- [pixabay] clip pb14900 rejected by the content check
+- [pixabay] clip pb846 rejected by the content check
+- [pixabay] clip pb14907 rejected by the content check
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] using clip pb3134 for 'city skyline night'
+- ✅ News published: Ethereum Layer-2 ցանց Blast-ը փակվում է
+---
 **2026-10-03 10:32** `music` ✅ skipped
 - 🎵 automatic music search is off (tracks come from the owner via Telegram)
 ---
@@ -215,20 +227,3 @@
 - [news] https://decrypt.co/feed: 38 items
 - [pexels] using clip 39625195 for 'abstract blue light, server room lights'
 - ✅ News published: Bitcoin ETF-ները հավաքել են 6.3 միլիարդ դոլար
----
-**2026-10-01 15:20** `lesson` ✅ published
-- [pexels] using clip 10331098 for 'city skyline night'
-- [pexels] clip 39569280 rejected by the content check
-- [pexels] clip 35245798 rejected by the content check
-- [pexels] download 35254957 failed: file too large
-- [pixabay] clip pb23258 rejected by the content check
-- [pixabay] clip pb1643 rejected by the content check
-- [pixabay] using clip pb41315 for 'crowd city street'
-- [pexels] using clip 37630172 for 'dark storm clouds'
-- [pexels] using clip 12595945 for 'calm lake sunrise'
-- [pixabay] download pb27051 failed: file too large
-- [pixabay] download pb88802 failed: file too large
-- [pixabay] download pb19989 failed: file too large
-- [pexels] using clip 30175521 for 'city skyline night'
-- [qa warning] motion-graphics share 40% < 40%
-- ✅ M1-19 «FOMO և FUD» published (37s, cta=send)
