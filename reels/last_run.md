@@ -1,3 +1,16 @@
+**2026-10-03 20:53** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 39 items
+- [pixabay] clip pb14900 rejected by the content check
+- [pixabay] clip pb846 rejected by the content check
+- [pixabay] clip pb14907 rejected by the content check
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] clip pb337459 rejected by the content check
+- [pixabay] using clip pb30154 for 'city skyline night'
+- ✅ News published: NEAR Intents-ը վերադարձրել է գողացված գումարը
+---
 **2026-10-03 17:26** `lesson` ✅ published
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] clip 35552568 rejected by the content check
@@ -222,12 +235,3 @@
 - [pixabay] using clip pb287386 for 'city skyline night'
 - ✅ M1-21 «DeFi-ի գաղափարը» published (35s, cta=question)
 - ✅ teaser Story published
----
-**2026-10-01 21:09** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- [pixabay] clip pb14900 rejected by the content check
-- [pixabay] clip pb846 rejected by the content check
-- [pixabay] using clip pb14906 for 'server room lights'
-- ✅ News published: NEAR Intents-ը ենթարկվել է հարձակման
