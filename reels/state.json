@@ -1,5 +1,5 @@
 {
- "course_index": 30,
+ "course_index": 31,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -209,6 +209,13 @@
    "date": "2026-10-03",
    "hour": 22,
    "cta": "send"
+  },
+  "M2-09": {
+   "media": "18157321366503059",
+   "permalink": "https://www.instagram.com/reel/DeC2wpOgIDM/",
+   "date": "2026-10-03",
+   "hour": 23,
+   "cta": "save"
   }
  },
  "palette": {
@@ -234,11 +241,6 @@
   "https://cointelegraph.com/news/near-intents-recovers-entire-stolen-38m-after-ultimatum-to-exploiter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
-  29025308,
-  "pb36510",
-  26056271,
-  35584996,
-  39322557,
   39468111,
   9620654,
   36982633,
@@ -313,7 +315,12 @@
   "pb142641",
   36178907,
   34516347,
-  4565572
+  4565572,
+  30747149,
+  "pb9490",
+  5473802,
+  35510513,
+  36628009
  ],
  "bandit": {
   "cta": {}
@@ -324,7 +331,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "send",
+ "last_cta": "save",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -648,11 +655,22 @@
   "36178907.mp4": true,
   "36178907.mp4:face": false,
   "34516347.mp4": true,
-  "34516347.mp4:face": false
+  "34516347.mp4:face": false,
+  "19759192.mp4": true,
+  "19759192.mp4:face": true,
+  "6980602.mp4": true,
+  "6980602.mp4:face": true,
+  "pb9490.mp4": true,
+  "pb9490.mp4:face": false,
+  "5473915.mp4": false,
+  "5473915.mp4:face": false,
+  "5473802.mp4": true,
+  "5473802.mp4:face": false,
+  "35510513.mp4": true,
+  "35510513.mp4:face": false
  },
  "music_bag": {
   "lesson": [
-   "user_the-mountain-market-systems-146118.mp3",
    "user_apalonbeats-finance-money-trading-invest.mp3",
    "user_the-mountain-tech-corporate-593075.mp3"
   ],
@@ -660,7 +678,7 @@
   "story": []
  },
  "music_last": {
-  "lesson": "user_soundsurfer-trading-254548.mp3",
+  "lesson": "user_the-mountain-market-systems-146118.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -740,7 +758,7 @@
   "user_the-mountain-finance-background-449885.mp3": 3,
   "user_starostin-investment-finance-trading-mon.mp3": 3,
   "user_apalonbeats-finance-money-trading-invest.mp3": 2,
-  "user_the-mountain-market-systems-146118.mp3": 2,
+  "user_the-mountain-market-systems-146118.mp3": 3,
   "user_soundsurfer-trading-254548.mp3": 3
  },
  "low_alert": "2026-10-01"

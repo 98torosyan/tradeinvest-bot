@@ -1,3 +1,17 @@
+**2026-10-03 23:47** `lesson` ✅ published
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pexels] using clip 30747149 for 'city skyline night'
+- [pexels] clip 7279035 rejected by the content check
+- [pexels] clip 19759192 rejected by the content check
+- [pexels] clip 6980602 rejected by the content check
+- [pixabay] using clip pb9490 for 'smartphone chat night'
+- [pexels] clip 5473915 rejected by the content check
+- [pexels] using clip 5473802 for 'laptop screen dark'
+- [pexels] using clip 35510513 for 'dark storm clouds'
+- [pexels] using clip 36628009 for 'abstract light bokeh'
+- ✅ M2-09 «Scam. ծանոթությունից ներդրում» published (37s, cta=save)
+---
 **2026-10-03 22:33** `lesson` ✅ published
 - [pexels] using clip 11335976 for 'city skyline night'
 - [pexels] clip 7279035 rejected by the content check
@@ -217,8 +231,3 @@
 - [pixabay] using clip pb19799 for 'city skyline night'
 - [qa warning] motion-graphics share 36% < 40%
 - ✅ M1-22 «Ամփոփում + տնային առաջադրանք» published (42s, cta=send)
----
-**2026-10-02 08:51** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7666.45}
-- ✅ Story published
