@@ -1,3 +1,18 @@
+**2026-10-03 12:21** `lesson` ✅ published
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] using clip pb3138 for 'city skyline night'
+- [pexels] clip 7279035 rejected by the content check
+- [pexels] clip 7986754 rejected by the content check
+- [pexels] clip 6611951 rejected by the content check
+- [pixabay] using clip pb38084 for 'smartphone notification night'
+- [pexels] using clip 5495896 for 'dark room laptop'
+- [pexels] clip 26586643 rejected by the content check
+- [pexels] using clip 26586645 for 'padlock closeup'
+- [pexels] using clip 39322559 for 'abstract light bokeh'
+- ✅ M2-06 «Scam. կեղծ support» published (35s, cta=question)
+- ✅ teaser Story published
+---
 **2026-10-03 11:02** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -220,10 +235,3 @@
 - [pixabay] clip pb337459 rejected by the content check
 - [pixabay] using clip pb5624 for 'city skyline night'
 - ✅ M1-20 «Ռիսկ և շահույթ» published (35s, cta=save)
----
-**2026-10-01 16:55** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- [pexels] using clip 39625195 for 'abstract blue light, server room lights'
-- ✅ News published: Bitcoin ETF-ները հավաքել են 6.3 միլիարդ դոլար

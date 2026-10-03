@@ -1,5 +1,5 @@
 {
- "course_index": 27,
+ "course_index": 28,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -188,6 +188,13 @@
    "date": "2026-10-03",
    "hour": 9,
    "cta": "save"
+  },
+  "M2-06": {
+   "media": "18117661843949084",
+   "permalink": "https://www.instagram.com/reel/DeBoW25FXhO/",
+   "date": "2026-10-03",
+   "hour": 12,
+   "cta": "question"
   }
  },
  "palette": {
@@ -212,11 +219,6 @@
   "https://decrypt.co/379972/ethereum-layer-2-blast-shutting-down"
  ],
  "used_broll": [
-  "pb336755",
-  16863222,
-  34995047,
-  7318813,
-  35090395,
   "pb30154",
   29941192,
   28203566,
@@ -291,7 +293,12 @@
   "pb45902",
   "pb202987",
   39322558,
-  "pb3134"
+  "pb3134",
+  "pb3138",
+  "pb38084",
+  5495896,
+  26586645,
+  39322559
  ],
  "bandit": {
   "cta": {}
@@ -302,7 +309,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "save",
+ "last_cta": "question",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -592,11 +599,22 @@
   "pb202987.mp4": true,
   "pb202987.mp4:face": false,
   "pb14907.mp4": false,
-  "pb14907.mp4:face": false
+  "pb14907.mp4:face": false,
+  "7279035.mp4": false,
+  "7279035.mp4:face": false,
+  "7986754.mp4": true,
+  "7986754.mp4:face": true,
+  "6611951.mp4": true,
+  "6611951.mp4:face": true,
+  "pb38084.mp4": true,
+  "pb38084.mp4:face": false,
+  "5495896.mp4": true,
+  "5495896.mp4:face": false,
+  "26586645.mp4": true,
+  "26586645.mp4:face": false
  },
  "music_bag": {
   "lesson": [
-   "user_the-mountain-finance-background-449885.mp3",
    "user_momotmusic-inspiring-reels-406484.mp3",
    "user_soundsurfer-trading-254548.mp3",
    "user_the-mountain-market-systems-146118.mp3",
@@ -607,7 +625,7 @@
   "story": []
  },
  "music_last": {
-  "lesson": "user_starostin-investment-finance-trading-mon.mp3",
+  "lesson": "user_the-mountain-finance-background-449885.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -684,7 +702,7 @@
   "user_momotmusic-inspiring-reels-406484.mp3": 9,
   "user_the-mountain-tech-corporate-593075.mp3": 2,
   "story_mixkit-electropop-870.mp3": 9,
-  "user_the-mountain-finance-background-449885.mp3": 2,
+  "user_the-mountain-finance-background-449885.mp3": 3,
   "user_starostin-investment-finance-trading-mon.mp3": 3,
   "user_apalonbeats-finance-money-trading-invest.mp3": 2,
   "user_the-mountain-market-systems-146118.mp3": 2,
