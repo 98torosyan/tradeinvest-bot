@@ -1,3 +1,16 @@
+**2026-10-03 17:26** `lesson` ✅ published
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] using clip pb336755 for 'city skyline night'
+- [pexels] clip 6266655 rejected by the content check
+- [pexels] clip 3827390 rejected by the content check
+- [pexels] clip 6266763 rejected by the content check
+- [pixabay] using clip pb109146 for 'money stack closeup'
+- [pexels] using clip 8102763 for 'dominoes falling'
+- [pexels] using clip 39537199 for 'dark storm clouds'
+- [pexels] using clip 35090395 for 'abstract light bokeh'
+- ✅ M2-07 «Scam. բուրգեր» published (35s, cta=save)
+---
 **2026-10-03 13:49** `quiz` ✅ published
 - ✅ Quiz Story from M2-04
 ---
@@ -218,6 +231,3 @@
 - [pixabay] clip pb846 rejected by the content check
 - [pixabay] using clip pb14906 for 'server room lights'
 - ✅ News published: NEAR Intents-ը ենթարկվել է հարձակման
----
-**2026-10-01 20:02** `chart` ✅ published
-- ✅ Story published
