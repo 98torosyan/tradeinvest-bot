@@ -1,3 +1,8 @@
+**2026-10-03 08:50** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7722.72}
+- ✅ Story published
+---
 **2026-10-02 22:42** `lesson` ✅ dedupe
 - [dedupe] M2-04 is already on Instagram (18029238296685925), only the state is updated
 ---
@@ -227,10 +232,3 @@
 - [pexels] using clip 11597069 for 'city skyline night'
 - ✅ M1-18 «Bull Market և Bear Market» published (37s, cta=question)
 - ✅ teaser Story published
----
-**2026-10-01 10:55** `news` ✅ qa-fail
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական ստուգումը չանցավ. Բլոկչեյնը, ավիավառելիքի, բլոկչեյնը, հայտարարություններին
-Եթե բառերը ճիշտ են, գրիր՝ /allow Բլոկչեյնը ավիավառելիքի բլոկչեյնը հայտարարություններին
