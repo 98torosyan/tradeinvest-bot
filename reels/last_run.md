@@ -1,3 +1,20 @@
+**2026-10-03 09:19** `lesson` ✅ published
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pexels] using clip 28901427 for 'city skyline night'
+- [pexels] using clip 34771082 for 'laptop screen dark'
+- [pexels] clip 16629709 rejected by the content check
+- [pexels] download 28494561 failed: file too large
+- [pixabay] clip pb46688 rejected by the content check
+- [pixabay] clip pb13370 rejected by the content check
+- [pixabay] using clip pb45902 for 'technology blue'
+- [pexels] clip 38410501 rejected by the content check
+- [pexels] clip 34453413 rejected by the content check
+- [pexels] clip 13441336 rejected by the content check
+- [pixabay] using clip pb202987 for 'smartphone app closeup'
+- [pexels] using clip 39322558 for 'abstract light bokeh'
+- ✅ M2-05 «Ինչպես ստուգել կայքը» published (36s, cta=save)
+---
 **2026-10-03 08:50** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7722.72}
@@ -215,20 +232,3 @@
 ---
 **2026-10-01 13:52** `quiz` ✅ published
 - ✅ Quiz Story from M1-14
----
-**2026-10-01 12:22** `lesson` ✅ published
-- [pexels] using clip 11745565 for 'city skyline night'
-- [pexels] clip 19191119 rejected by the content check
-- [pexels] using clip 34461235 for 'bull field'
-- [pexels] using clip 18148735 for 'brown bear forest'
-- [pexels] download 28494561 failed: file too large
-- [pixabay] clip pb46688 rejected by the content check
-- [pixabay] clip pb13370 rejected by the content check
-- [pixabay] using clip pb2526 for 'technology blue'
-- [pexels] using clip 29326055 for 'storm clouds'
-- [pixabay] download pb27051 failed: file too large
-- [pixabay] download pb88802 failed: file too large
-- [pixabay] download pb19989 failed: file too large
-- [pexels] using clip 11597069 for 'city skyline night'
-- ✅ M1-18 «Bull Market և Bear Market» published (37s, cta=question)
-- ✅ teaser Story published

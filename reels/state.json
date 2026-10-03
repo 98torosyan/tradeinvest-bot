@@ -1,5 +1,5 @@
 {
- "course_index": 26,
+ "course_index": 27,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -181,6 +181,13 @@
    "permalink": "https://www.instagram.com/reel/DeABQdIESZ4/",
    "date": "2026-10-02",
    "hour": 22
+  },
+  "M2-05": {
+   "media": "18135541246632783",
+   "permalink": "https://www.instagram.com/reel/DeBTi7lCORU/",
+   "date": "2026-10-03",
+   "hour": 9,
+   "cta": "save"
   }
  },
  "palette": {
@@ -204,11 +211,6 @@
   "https://www.coindesk.com/policy/2026/10/01/u-s-sec-maps-out-crypto-custody-in-new-proposal-that-furthers-its-digital-assets-agenda"
  ],
  "used_broll": [
-  "pb3134",
-  15886614,
-  35158244,
-  34995393,
-  39322559,
   "pb3138",
   "pb336755",
   16863222,
@@ -283,7 +285,12 @@
   "pb2085",
   33638649,
   35072002,
-  "pb4504"
+  "pb4504",
+  28901427,
+  34771082,
+  "pb45902",
+  "pb202987",
+  39322558
  ],
  "bandit": {
   "cta": {}
@@ -294,7 +301,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "question",
+ "last_cta": "save",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -572,15 +579,28 @@
   "7534961.mp4": true,
   "7534961.mp4:face": true,
   "8873342.mp4": true,
-  "8873342.mp4:face": false
+  "8873342.mp4:face": false,
+  "34771082.mp4": true,
+  "34771082.mp4:face": false,
+  "13441336.mp4": false,
+  "13441336.mp4:face": false,
+  "pb202987.mp4": true,
+  "pb202987.mp4:face": false
  },
  "music_bag": {
-  "lesson": [],
+  "lesson": [
+   "user_the-mountain-finance-background-449885.mp3",
+   "user_momotmusic-inspiring-reels-406484.mp3",
+   "user_soundsurfer-trading-254548.mp3",
+   "user_the-mountain-market-systems-146118.mp3",
+   "user_apalonbeats-finance-money-trading-invest.mp3",
+   "user_the-mountain-tech-corporate-593075.mp3"
+  ],
   "news": [],
   "story": []
  },
  "music_last": {
-  "lesson": "user_the-mountain-tech-corporate-593075.mp3",
+  "lesson": "user_starostin-investment-finance-trading-mon.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -658,7 +678,7 @@
   "user_the-mountain-tech-corporate-593075.mp3": 2,
   "story_mixkit-electropop-870.mp3": 9,
   "user_the-mountain-finance-background-449885.mp3": 2,
-  "user_starostin-investment-finance-trading-mon.mp3": 2,
+  "user_starostin-investment-finance-trading-mon.mp3": 3,
   "user_apalonbeats-finance-money-trading-invest.mp3": 2,
   "user_the-mountain-market-systems-146118.mp3": 2,
   "user_soundsurfer-trading-254548.mp3": 2
