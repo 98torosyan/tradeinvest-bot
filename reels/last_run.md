@@ -1,3 +1,6 @@
+**2026-10-03 23:56** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-03 23:47** `lesson` ✅ published
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] clip 35552568 rejected by the content check
@@ -204,30 +207,3 @@
 - [pexels] clip 16629709 rejected by the content check
 - [pexels] using clip 36644496 for 'abstract blue light'
 - ✅ News published: SEC-ն առաջարկում է կրիպտոյի պահառության նոր կանոններ
----
-**2026-10-02 09:19** `lesson` ✅ published
-- [pexels] clip 35972076 rejected by the content check
-- [pexels] clip 35245798 rejected by the content check
-- [pixabay] clip pb1643 rejected by the content check
-- [pixabay] clip pb23258 rejected by the content check
-- [pixabay] clip pb3630 rejected by the content check
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pexels] using clip 29025309 for 'city skyline night'
-- [pexels] using clip 8394086 for 'stock exchange building'
-- [pexels] using clip 7361127 for 'gold bullion close up'
-- [pexels] using clip 27915864 for 'ocean waves'
-- [pexels] download 28494561 failed: file too large
-- [pixabay] clip pb46688 rejected by the content check
-- [pixabay] clip pb13370 rejected by the content check
-- [pixabay] using clip pb3463 for 'technology blue'
-- [pixabay] download pb27051 failed: file too large
-- [pixabay] download pb88802 failed: file too large
-- [pixabay] download pb19989 failed: file too large
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] clip pb86350 rejected by the content check
-- [pixabay] using clip pb19799 for 'city skyline night'
-- [qa warning] motion-graphics share 36% < 40%
-- ✅ M1-22 «Ամփոփում + տնային առաջադրանք» published (42s, cta=send)
