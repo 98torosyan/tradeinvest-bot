@@ -1,3 +1,6 @@
+**2026-10-03 10:32** `music` ✅ skipped
+- 🎵 automatic music search is off (tracks come from the owner via Telegram)
+---
 **2026-10-03 09:19** `lesson` ✅ published
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] clip 35552568 rejected by the content check
@@ -229,6 +232,3 @@
 - [pexels] using clip 30175521 for 'city skyline night'
 - [qa warning] motion-graphics share 40% < 40%
 - ✅ M1-19 «FOMO և FUD» published (37s, cta=send)
----
-**2026-10-01 13:52** `quiz` ✅ published
-- ✅ Quiz Story from M1-14
