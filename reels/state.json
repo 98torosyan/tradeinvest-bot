@@ -1,5 +1,5 @@
 {
- "course_index": 32,
+ "course_index": 33,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -223,6 +223,13 @@
    "date": "2026-10-04",
    "hour": 15,
    "cta": "send"
+  },
+  "M2-11": {
+   "media": "18109060984934051",
+   "permalink": "https://www.instagram.com/reel/DeEzIs1gFQ0/",
+   "date": "2026-10-04",
+   "hour": 17,
+   "cta": "save"
   }
  },
  "palette": {
@@ -249,11 +256,6 @@
   "https://cointelegraph.com/markets/bitcoin-briefly-taps-87k-as-bond-yields-drop-on-low-us-nonfarm-payrolls-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
-  34461235,
-  18148735,
-  "pb2526",
-  29326055,
-  11597069,
   10331098,
   "pb41315",
   37630172,
@@ -328,7 +330,12 @@
   39468111,
   32536829,
   17238361,
-  39322557
+  39322557,
+  11745565,
+  "pb3176",
+  34771079,
+  "pb150875",
+  "pb977"
  ],
  "bandit": {
   "cta": {}
@@ -339,7 +346,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "send",
+ "last_cta": "save",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -689,17 +696,25 @@
   "32536829.mp4": true,
   "32536829.mp4:face": false,
   "17238361.mp4": true,
-  "17238361.mp4:face": false
+  "17238361.mp4:face": false,
+  "pb8255.mp4": false,
+  "pb8255.mp4:face": false,
+  "pb3180.mp4": false,
+  "pb3180.mp4:face": false,
+  "pb3176.mp4": true,
+  "pb3176.mp4:face": false,
+  "34771079.mp4": true,
+  "34771079.mp4:face": false,
+  "pb150875.mp4": true,
+  "pb150875.mp4:face": false
  },
  "music_bag": {
-  "lesson": [
-   "user_the-mountain-tech-corporate-593075.mp3"
-  ],
+  "lesson": [],
   "news": [],
   "story": []
  },
  "music_last": {
-  "lesson": "user_apalonbeats-finance-money-trading-invest.mp3",
+  "lesson": "user_the-mountain-tech-corporate-593075.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -774,7 +789,7 @@
  "music_uses": {
   "delayed-flight.mp3": 1,
   "user_momotmusic-inspiring-reels-406484.mp3": 12,
-  "user_the-mountain-tech-corporate-593075.mp3": 2,
+  "user_the-mountain-tech-corporate-593075.mp3": 3,
   "story_mixkit-electropop-870.mp3": 12,
   "user_the-mountain-finance-background-449885.mp3": 3,
   "user_starostin-investment-finance-trading-mon.mp3": 3,

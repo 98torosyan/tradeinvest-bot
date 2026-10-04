@@ -1,3 +1,20 @@
+**2026-10-04 17:53** `lesson` ✅ published
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] using clip 11745565 for 'city skyline night'
+- [pexels] clip 38410501 rejected by the content check
+- [pexels] clip 34453413 rejected by the content check
+- [pexels] clip 13441336 rejected by the content check
+- [pixabay] clip pb8255 rejected by the content check
+- [pixabay] clip pb3180 rejected by the content check
+- [pixabay] using clip pb3176 for 'smartphone app closeup'
+- [pexels] clip 5473915 rejected by the content check
+- [pexels] using clip 34771079 for 'laptop screen dark'
+- [pexels] clip 26586643 rejected by the content check
+- [pixabay] using clip pb150875 for 'padlock closeup'
+- [pixabay] download pb27051 failed: file too large
+- [pixabay] using clip pb977 for 'abstract light bokeh'
+- ✅ M2-11 «Scam. կեղծ airdrop» published (36s, cta=save)
+---
 **2026-10-04 15:05** `lesson` ✅ published
 - [pexels] using clip 29025308 for 'city skyline night'
 - [pexels] clip 39569280 rejected by the content check
@@ -182,20 +199,3 @@
 - [news] https://decrypt.co/feed: 39 items
 - [pexels] using clip 15439741 for 'abstract blue light server room lights'
 - ✅ News published: BNB Chain-ում թայքինզ արված ակտիվները
----
-**2026-10-02 15:19** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] using clip 35464509 for 'city skyline night'
-- [pexels] clip 26586643 rejected by the content check
-- [pexels] using clip 26586646 for 'padlock closeup'
-- [pexels] using clip 34993447 for 'notebook handwriting pen'
-- [pexels] using clip 7942762 for 'dark room laptop'
-- [pixabay] download pb27051 failed: file too large
-- [pixabay] download pb88802 failed: file too large
-- [pixabay] download pb19989 failed: file too large
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] clip pb86350 rejected by the content check
-- [pixabay] using clip pb251083 for 'city skyline night'
-- ✅ M2-02 «Private Key և Seed Phrase» published (37s, cta=save)
