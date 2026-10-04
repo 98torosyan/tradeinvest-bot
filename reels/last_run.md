@@ -1,3 +1,6 @@
+**2026-10-04 19:25** `carousel` ❌ failed
+- ❌ carousel սխալ՝ InstagramPublishError: 17841424152621072/media_publish failed: {'error': {'message': 'Media ID is not available', 'type': 'OAuthException', 'code': 9007, 'error_subcode': 2207027, 'is_transient': False, 'error_user_title': 'Cannot Publish', 'error_user_msg': 'The media is not ready for publishing, please wait for a moment
+---
 **2026-10-04 18:41** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -186,16 +189,3 @@
 ---
 **2026-10-02 19:53** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-02 18:22** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] using clip 14300758 for 'city skyline night'
-- [pexels] using clip 19532053 for 'laptop password screen'
-- [pexels] clip 16629709 rejected by the content check
-- [pexels] download 28494561 failed: file too large
-- [pixabay] clip pb46688 rejected by the content check
-- [pixabay] clip pb13370 rejected by the content check
-- [pixabay] using clip pb2085 for 'technology blue'
-- [pexels] using clip 33638649 for 'dark storm clouds'
-- [pexels] using clip 35072002 for 'abstract light bokeh'
-- ✅ M2-03 «Անվտանգության հիմունքներ» published (35s, cta=send)
