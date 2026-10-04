@@ -1,3 +1,28 @@
+**2026-10-04 21:54** `lesson` ✅ published
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] using clip 11597069 for 'city skyline night'
+- [pexels] clip 7279035 rejected by the content check
+- [pexels] clip 19759192 rejected by the content check
+- [pexels] clip 6980602 rejected by the content check
+- [pixabay] clip pb42408 rejected by the content check
+- [pixabay] clip pb131161 rejected by the content check
+- [pixabay] clip pb130213 rejected by the content check
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] using clip 10331098 for 'city skyline night'
+- [pexels] clip 5473915 rejected by the content check
+- [pexels] using clip 5495890 for 'laptop screen dark'
+- [pexels] using clip 8745444 for 'calm lake sunrise'
+- [pixabay] download pb27051 failed: file too large
+- [pixabay] download pb88802 failed: file too large
+- [pixabay] download pb19989 failed: file too large
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] clip pb337459 rejected by the content check
+- [pixabay] clip pb86350 rejected by the content check
+- [pixabay] using clip pb50352 for 'city skyline night'
+- ✅ M2-12 «Scam. «VIP ազդանշաններ»» published (35s, cta=question)
+- ✅ teaser Story published
+---
 **2026-10-04 20:01** `quiz` ✅ published
 - ✅ Quiz Story from M2-05
 ---
@@ -181,11 +206,3 @@
 - [pexels] using clip 8873342 for 'notebook handwriting pen'
 - [pexels] using clip 39322558 for 'abstract light bokeh'
 - ❌ lesson սխալ՝ JSONDecodeError: Expecting value: line 1 column 1 (char 0)
----
-**2026-10-02 20:25** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 39 items
-- [pixabay] clip pb14900 rejected by the content check
-- [pixabay] using clip pb4504 for 'server room lights'
-- ✅ News published: SEC-ը նոր կանոններ է առաջարկում
