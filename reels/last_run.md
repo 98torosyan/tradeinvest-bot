@@ -1,3 +1,10 @@
+**2026-10-04 18:41** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 59 items
+- [pexels] using clip 7846332 for 'abstract blue light server room'
+- ✅ News published: Near Intents-ից գողացված միջոցները վերադարձվել են
+---
 **2026-10-04 17:53** `lesson` ✅ published
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] using clip 11745565 for 'city skyline night'
@@ -192,10 +199,3 @@
 - [pexels] using clip 33638649 for 'dark storm clouds'
 - [pexels] using clip 35072002 for 'abstract light bokeh'
 - ✅ M2-03 «Անվտանգության հիմունքներ» published (35s, cta=send)
----
-**2026-10-02 16:54** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 39 items
-- [pexels] using clip 15439741 for 'abstract blue light server room lights'
-- ✅ News published: BNB Chain-ում թայքինզ արված ակտիվները
