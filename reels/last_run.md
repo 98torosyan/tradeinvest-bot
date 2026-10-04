@@ -1,3 +1,18 @@
+**2026-10-04 15:05** `lesson` ✅ published
+- [pexels] using clip 29025308 for 'city skyline night'
+- [pexels] clip 39569280 rejected by the content check
+- [pexels] download 35254957 failed: file too large
+- [pexels] clip 35245798 rejected by the content check
+- [pixabay] clip pb23258 rejected by the content check
+- [pixabay] clip pb1643 rejected by the content check
+- [pixabay] clip pb127690 rejected by the content check
+- [pexels] using clip 39468111 for 'city skyline night'
+- [pexels] clip 35606045 rejected by the content check
+- [pexels] using clip 32536829 for 'stock chart falling red'
+- [pexels] using clip 17238361 for 'dark storm clouds'
+- [pexels] using clip 39322557 for 'abstract light bokeh'
+- ✅ M2-10 «Scam. pump and dump» published (35s, cta=send)
+---
 **2026-10-04 14:55** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7722.72}
@@ -184,6 +199,3 @@
 - [pixabay] clip pb86350 rejected by the content check
 - [pixabay] using clip pb251083 for 'city skyline night'
 - ✅ M2-02 «Private Key և Seed Phrase» published (37s, cta=save)
----
-**2026-10-02 13:52** `quiz` ✅ published
-- ✅ Quiz Story from M1-20
