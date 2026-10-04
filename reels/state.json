@@ -240,7 +240,7 @@
   }
  },
  "palette": {
-  "news": 12
+  "news": 13
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -261,10 +261,10 @@
   "https://decrypt.co/379972/ethereum-layer-2-blast-shutting-down",
   "https://cointelegraph.com/news/near-intents-recovers-entire-stolen-38m-after-ultimatum-to-exploiter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/markets/bitcoin-briefly-taps-87k-as-bond-yields-drop-on-low-us-nonfarm-payrolls-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://decrypt.co/380014/near-intents-recovers-3-8-million-after-48-hour-ultimatum"
+  "https://decrypt.co/380014/near-intents-recovers-3-8-million-after-48-hour-ultimatum",
+  "https://decrypt.co/380007/uptober-starts-green-bitcoin-etfs-draw-134-million"
  ],
  "used_broll": [
-  "pb204326",
   8727847,
   28483048,
   8745485,
@@ -343,7 +343,8 @@
   10331098,
   5495890,
   8745444,
-  "pb50352"
+  "pb50352",
+  34534564
  ],
  "bandit": {
   "cta": {}
@@ -403,6 +404,10 @@
   {
    "media": "18630175420059865",
    "date": "2026-10-04"
+  },
+  {
+   "media": "18107932133072673",
+   "date": "2026-10-05"
   }
  ],
  "quiz_count": 6,
@@ -730,7 +735,9 @@
   "5495890.mp4": true,
   "5495890.mp4:face": false,
   "pb50352.mp4": true,
-  "pb50352.mp4:face": false
+  "pb50352.mp4:face": false,
+  "34534564.mp4": true,
+  "34534564.mp4:face": false
  },
  "music_bag": {
   "lesson": [
@@ -819,7 +826,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 13,
+  "user_momotmusic-inspiring-reels-406484.mp3": 14,
   "user_the-mountain-tech-corporate-593075.mp3": 3,
   "story_mixkit-electropop-870.mp3": 14,
   "user_the-mountain-finance-background-449885.mp3": 3,

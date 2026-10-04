@@ -1,3 +1,11 @@
+**2026-10-05 01:00** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 59 items
+- [pexels] download 28494561 failed: file too large
+- [pexels] using clip 34534564 for 'abstract blue light chart lines'
+- ✅ News published: Bitcoin ETF-ները հավաքել են 134 մլն դոլար
+---
 **2026-10-05 00:48** `chart` ✅ published
 - ✅ Story published
 ---
@@ -192,6 +200,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7722.72}
 - ✅ Story published
----
-**2026-10-02 22:42** `lesson` ✅ dedupe
-- [dedupe] M2-04 is already on Instagram (18029238296685925), only the state is updated
