@@ -1,3 +1,6 @@
+**2026-10-05 00:48** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-04 21:54** `lesson` ✅ published
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] using clip 11597069 for 'city skyline night'
@@ -192,17 +195,3 @@
 ---
 **2026-10-02 22:42** `lesson` ✅ dedupe
 - [dedupe] M2-04 is already on Instagram (18029238296685925), only the state is updated
----
-**2026-10-02 21:20** `lesson` ❌ failed
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pexels] using clip 28901427 for 'city skyline night'
-- [pexels] using clip 7534961 for 'smartphone security lock'
-- [pexels] clip 16629709 rejected by the content check
-- [pexels] download 28494561 failed: file too large
-- [pixabay] clip pb46688 rejected by the content check
-- [pixabay] clip pb13370 rejected by the content check
-- [pixabay] using clip pb45902 for 'technology blue'
-- [pexels] using clip 8873342 for 'notebook handwriting pen'
-- [pexels] using clip 39322558 for 'abstract light bokeh'
-- ❌ lesson սխալ՝ JSONDecodeError: Expecting value: line 1 column 1 (char 0)
