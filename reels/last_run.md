@@ -1,3 +1,8 @@
+**2026-10-04 14:55** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7722.72}
+- ✅ Story published
+---
 **2026-10-04 00:07** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -182,26 +187,3 @@
 ---
 **2026-10-02 13:52** `quiz` ✅ published
 - ✅ Quiz Story from M1-20
----
-**2026-10-02 12:22** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] using clip 34382888 for 'city skyline night'
-- [pexels] clip 38410501 rejected by the content check
-- [pexels] clip 34453413 rejected by the content check
-- [pexels] using clip 39500866 for 'smartphone app closeup'
-- [pexels] clip 16629709 rejected by the content check
-- [pexels] download 28494561 failed: file too large
-- [pixabay] clip pb46688 rejected by the content check
-- [pixabay] clip pb13370 rejected by the content check
-- [pixabay] using clip pb3464 for 'technology blue'
-- [pexels] using clip 35099110 for 'bank vault door'
-- [pixabay] download pb27051 failed: file too large
-- [pixabay] download pb88802 failed: file too large
-- [pixabay] download pb19989 failed: file too large
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] clip pb86350 rejected by the content check
-- [pixabay] using clip pb42489 for 'city skyline night'
-- ✅ M2-01 «Wallet-ի տեսակները» published (36s, cta=save)
-- ✅ teaser Story published
