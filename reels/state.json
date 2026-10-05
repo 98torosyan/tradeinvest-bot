@@ -302,7 +302,7 @@
   }
  },
  "palette": {
-  "news": 15
+  "news": 16
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -326,10 +326,10 @@
   "https://decrypt.co/380014/near-intents-recovers-3-8-million-after-48-hour-ultimatum",
   "https://decrypt.co/380007/uptober-starts-green-bitcoin-etfs-draw-134-million",
   "https://www.coindesk.com/markets/2026/10/05/okx-and-nyse-s-owner-file-for-round-the-clock-tokenized-trading-in-u-s-stocks",
-  "https://cointelegraph.com/news/okx-nyse-parent-file-to-launch-tokenized-us-stock-platform?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  "https://cointelegraph.com/news/okx-nyse-parent-file-to-launch-tokenized-us-stock-platform?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://decrypt.co/380032/okx-and-nyse-owner-ice-plan-24-7-tokenized-stock-trading-under-sec-exemption"
  ],
  "used_broll": [
-  "pb42489",
   35464509,
   26586646,
   34993447,
@@ -408,7 +408,8 @@
   28203566,
   "pb8625",
   "pb19799",
-  34578211
+  34578211,
+  9945022
  ],
  "bandit": {
   "cta": {
@@ -492,6 +493,10 @@
   },
   {
    "media": "18136261984710815",
+   "date": "2026-10-05"
+  },
+  {
+   "media": "18032963672671378",
    "date": "2026-10-05"
   }
  ],
@@ -840,7 +845,9 @@
   "pb8625.mp4": true,
   "pb8625.mp4:face": false,
   "34578211.mp4": true,
-  "34578211.mp4:face": false
+  "34578211.mp4:face": false,
+  "9945022.mp4": true,
+  "9945022.mp4:face": false
  },
  "music_bag": {
   "lesson": [
@@ -925,7 +932,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 17,
+  "user_momotmusic-inspiring-reels-406484.mp3": 18,
   "user_the-mountain-tech-corporate-593075.mp3": 4,
   "story_mixkit-electropop-870.mp3": 17,
   "user_the-mountain-finance-background-449885.mp3": 4,

@@ -1,3 +1,10 @@
+**2026-10-05 20:27** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- [pexels] using clip 9945022 for 'abstract blue light server room'
+- ✅ News published: OKX-ը և NYSE-ի սեփականատերը նախատեսում են 24/7 թոքենիզացված բաժնետոմսերի առևտուր
+---
 **2026-10-05 19:54** `chart` ✅ published
 - ✅ Story published
 ---
@@ -208,17 +215,3 @@
 ---
 **2026-10-03 23:56** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-03 23:47** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pexels] using clip 30747149 for 'city skyline night'
-- [pexels] clip 7279035 rejected by the content check
-- [pexels] clip 19759192 rejected by the content check
-- [pexels] clip 6980602 rejected by the content check
-- [pixabay] using clip pb9490 for 'smartphone chat night'
-- [pexels] clip 5473915 rejected by the content check
-- [pexels] using clip 5473802 for 'laptop screen dark'
-- [pexels] using clip 35510513 for 'dark storm clouds'
-- [pexels] using clip 36628009 for 'abstract light bokeh'
-- ✅ M2-09 «Scam. ծանոթությունից ներդրում» published (37s, cta=save)
