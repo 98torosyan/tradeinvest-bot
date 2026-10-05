@@ -1,3 +1,6 @@
+**2026-10-05 19:54** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-05 18:25** `lesson` ✅ published
 - [pexels] clip 16629709 rejected by the content check
 - [pexels] using clip 28203566 for 'technology blue'
@@ -219,15 +222,3 @@
 - [pexels] using clip 35510513 for 'dark storm clouds'
 - [pexels] using clip 36628009 for 'abstract light bokeh'
 - ✅ M2-09 «Scam. ծանոթությունից ներդրում» published (37s, cta=save)
----
-**2026-10-03 22:33** `lesson` ✅ published
-- [pexels] using clip 11335976 for 'city skyline night'
-- [pexels] clip 7279035 rejected by the content check
-- [pexels] clip 7986754 rejected by the content check
-- [pexels] clip 6611951 rejected by the content check
-- [pixabay] using clip pb142641 for 'smartphone notification night'
-- [pexels] using clip 36178907 for 'dark room laptop'
-- [pexels] clip 26586643 rejected by the content check
-- [pexels] using clip 34516347 for 'padlock closeup'
-- [pexels] using clip 4565572 for 'abstract light bokeh'
-- ✅ M2-08 «Scam. կեղծ giveaway» published (33s, cta=send)
