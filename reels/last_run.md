@@ -1,3 +1,8 @@
+**2026-10-05 09:12** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7722.72}
+- ✅ Story published
+---
 **2026-10-05 01:00** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -195,8 +200,3 @@
 - [pixabay] using clip pb202987 for 'smartphone app closeup'
 - [pexels] using clip 39322558 for 'abstract light bokeh'
 - ✅ M2-05 «Ինչպես ստուգել կայքը» published (36s, cta=save)
----
-**2026-10-03 08:50** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7722.72}
-- ✅ Story published
