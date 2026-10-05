@@ -1,3 +1,6 @@
+**2026-10-05 13:54** `quiz` ✅ published
+- ✅ Quiz Story from M2-10
+---
 **2026-10-05 12:23** `lesson` ✅ published
 - [pixabay] clip pb337459 rejected by the content check
 - [pixabay] using clip pb5624 for 'city skyline night'
@@ -202,18 +205,3 @@
 ---
 **2026-10-03 13:49** `quiz` ✅ published
 - ✅ Quiz Story from M2-04
----
-**2026-10-03 12:21** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] using clip pb3138 for 'city skyline night'
-- [pexels] clip 7279035 rejected by the content check
-- [pexels] clip 7986754 rejected by the content check
-- [pexels] clip 6611951 rejected by the content check
-- [pixabay] using clip pb38084 for 'smartphone notification night'
-- [pexels] using clip 5495896 for 'dark room laptop'
-- [pexels] clip 26586643 rejected by the content check
-- [pexels] using clip 26586645 for 'padlock closeup'
-- [pexels] using clip 39322559 for 'abstract light bokeh'
-- ✅ M2-06 «Scam. կեղծ support» published (35s, cta=question)
-- ✅ teaser Story published
