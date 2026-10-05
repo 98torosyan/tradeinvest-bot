@@ -1,3 +1,18 @@
+**2026-10-05 09:27** `lesson` ✅ published
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] using clip 30175521 for 'city skyline night'
+- [pexels] using clip 35163081 for 'technology network connection'
+- [pexels] using clip 15886614 for 'technology blue'
+- [pexels] using clip 7318813 for 'bank vault door'
+- [pixabay] download pb27051 failed: file too large
+- [pixabay] download pb88802 failed: file too large
+- [pixabay] download pb19989 failed: file too large
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] clip pb337459 rejected by the content check
+- [pixabay] using clip pb204326 for 'city skyline night'
+- ✅ M2-13 «Բորսայի կառուցվածքը» published (33s, cta=send)
+---
 **2026-10-05 09:12** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7722.72}
@@ -183,20 +198,3 @@
 ---
 **2026-10-03 10:32** `music` ✅ skipped
 - 🎵 automatic music search is off (tracks come from the owner via Telegram)
----
-**2026-10-03 09:19** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pexels] using clip 28901427 for 'city skyline night'
-- [pexels] using clip 34771082 for 'laptop screen dark'
-- [pexels] clip 16629709 rejected by the content check
-- [pexels] download 28494561 failed: file too large
-- [pixabay] clip pb46688 rejected by the content check
-- [pixabay] clip pb13370 rejected by the content check
-- [pixabay] using clip pb45902 for 'technology blue'
-- [pexels] clip 38410501 rejected by the content check
-- [pexels] clip 34453413 rejected by the content check
-- [pexels] clip 13441336 rejected by the content check
-- [pixabay] using clip pb202987 for 'smartphone app closeup'
-- [pexels] using clip 39322558 for 'abstract light bokeh'
-- ✅ M2-05 «Ինչպես ստուգել կայքը» published (36s, cta=save)

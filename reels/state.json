@@ -1,5 +1,5 @@
 {
- "course_index": 34,
+ "course_index": 35,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -271,6 +271,13 @@
    "hour": 21,
    "cta": "question",
    "insights_done": true
+  },
+  "M2-13": {
+   "media": "17972299200158655",
+   "permalink": "https://www.instagram.com/reel/DeGeAihFM4G/",
+   "date": "2026-10-05",
+   "hour": 9,
+   "cta": "send"
   }
  },
  "palette": {
@@ -299,11 +306,6 @@
   "https://decrypt.co/380007/uptober-starts-green-bitcoin-etfs-draw-134-million"
  ],
  "used_broll": [
-  8727847,
-  28483048,
-  8745485,
-  "pb5624",
-  "pb14906",
   "pb220942",
   35002915,
   "pb13067",
@@ -378,7 +380,12 @@
   5495890,
   8745444,
   "pb50352",
-  34534564
+  34534564,
+  30175521,
+  35163081,
+  15886614,
+  7318813,
+  "pb204326"
  ],
  "bandit": {
   "cta": {
@@ -402,7 +409,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "question",
+ "last_cta": "send",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -784,11 +791,12 @@
   "pb50352.mp4": true,
   "pb50352.mp4:face": false,
   "34534564.mp4": true,
-  "34534564.mp4:face": false
+  "34534564.mp4:face": false,
+  "35163081.mp4": true,
+  "35163081.mp4:face": false
  },
  "music_bag": {
   "lesson": [
-   "user_momotmusic-inspiring-reels-406484.mp3",
    "user_the-mountain-tech-corporate-593075.mp3",
    "user_the-mountain-finance-background-449885.mp3",
    "user_apalonbeats-finance-money-trading-invest.mp3",
@@ -799,7 +807,7 @@
   "story": []
  },
  "music_last": {
-  "lesson": "user_soundsurfer-trading-254548.mp3",
+  "lesson": "user_momotmusic-inspiring-reels-406484.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -873,7 +881,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 14,
+  "user_momotmusic-inspiring-reels-406484.mp3": 15,
   "user_the-mountain-tech-corporate-593075.mp3": 3,
   "story_mixkit-electropop-870.mp3": 15,
   "user_the-mountain-finance-background-449885.mp3": 3,
