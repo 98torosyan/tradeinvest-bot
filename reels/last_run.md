@@ -1,3 +1,30 @@
+**2026-10-05 18:25** `lesson` ✅ published
+- [pexels] clip 16629709 rejected by the content check
+- [pexels] using clip 28203566 for 'technology blue'
+- [pexels] clip 6266655 rejected by the content check
+- [pexels] clip 6266763 rejected by the content check
+- [pexels] clip 3827390 rejected by the content check
+- [pixabay] using clip pb8625 for 'money stack closeup'
+- [pexels] clip 33390334 rejected by the content check
+- [pixabay] clip pb20857 rejected by the content check
+- [pixabay] clip pb20459 rejected by the content check
+- [pixabay] download pb230033 failed: file too large
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] clip pb337459 rejected by the content check
+- [pixabay] clip pb86350 rejected by the content check
+- [pixabay] using clip pb19799 for 'city skyline night'
+- [pixabay] download pb27051 failed: file too large
+- [pixabay] download pb88802 failed: file too large
+- [pixabay] download pb19989 failed: file too large
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] clip pb337459 rejected by the content check
+- [pixabay] clip pb86350 rejected by the content check
+- [pixabay] clip pb267744 rejected by the content check
+- [pexels] using clip 34578211 for 'abstract blue light'
+- ✅ M2-16 «USDT և quote currency» published (34s, cta=send)
+---
 **2026-10-05 16:57** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -204,16 +231,3 @@
 - [pexels] using clip 34516347 for 'padlock closeup'
 - [pexels] using clip 4565572 for 'abstract light bokeh'
 - ✅ M2-08 «Scam. կեղծ giveaway» published (33s, cta=send)
----
-**2026-10-03 20:53** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 39 items
-- [pixabay] clip pb14900 rejected by the content check
-- [pixabay] clip pb846 rejected by the content check
-- [pixabay] clip pb14907 rejected by the content check
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] using clip pb30154 for 'city skyline night'
-- ✅ News published: NEAR Intents-ը վերադարձրել է գողացված գումարը
