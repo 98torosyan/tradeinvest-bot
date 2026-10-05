@@ -1,3 +1,12 @@
+**2026-10-05 16:57** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pexels] using clip 29025309 for 'city skyline night'
+- ✅ News published: OKX-ը և NYSE-ի սեփականատերը ստեղծում են թոքենիզացված հարթակ
+---
 **2026-10-05 15:21** `lesson` ✅ published
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] using clip 39437818 for 'city skyline night'
@@ -208,16 +217,3 @@
 - [pixabay] clip pb337459 rejected by the content check
 - [pixabay] using clip pb30154 for 'city skyline night'
 - ✅ News published: NEAR Intents-ը վերադարձրել է գողացված գումարը
----
-**2026-10-03 17:26** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] using clip pb336755 for 'city skyline night'
-- [pexels] clip 6266655 rejected by the content check
-- [pexels] clip 3827390 rejected by the content check
-- [pexels] clip 6266763 rejected by the content check
-- [pixabay] using clip pb109146 for 'money stack closeup'
-- [pexels] using clip 8102763 for 'dominoes falling'
-- [pexels] using clip 39537199 for 'dark storm clouds'
-- [pexels] using clip 35090395 for 'abstract light bokeh'
-- ✅ M2-07 «Scam. բուրգեր» published (35s, cta=save)
