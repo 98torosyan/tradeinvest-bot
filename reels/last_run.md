@@ -1,3 +1,30 @@
+**2026-10-05 12:23** `lesson` ✅ published
+- [pixabay] clip pb337459 rejected by the content check
+- [pixabay] using clip pb5624 for 'city skyline night'
+- [pexels] using clip 37104325 for 'city financial district'
+- [pexels] clip 16629709 rejected by the content check
+- [pexels] using clip 16863222 for 'technology blue'
+- [pexels] clip 33390334 rejected by the content check
+- [pixabay] clip pb20857 rejected by the content check
+- [pixabay] clip pb20459 rejected by the content check
+- [pixabay] download pb230033 failed: file too large
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] clip pb337459 rejected by the content check
+- [pixabay] clip pb86350 rejected by the content check
+- [pixabay] using clip pb220942 for 'city skyline night'
+- [pixabay] download pb27051 failed: file too large
+- [pixabay] download pb88802 failed: file too large
+- [pixabay] download pb19989 failed: file too large
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] clip pb337459 rejected by the content check
+- [pixabay] clip pb86350 rejected by the content check
+- [pixabay] clip pb267744 rejected by the content check
+- [pexels] using clip 15439746 for 'abstract blue light'
+- ✅ M2-14 «Ինչպես ընտրել բորսա» published (32s, cta=send)
+- ✅ teaser Story published
+---
 **2026-10-05 10:59** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -190,15 +217,3 @@
 - [pexels] using clip 39322559 for 'abstract light bokeh'
 - ✅ M2-06 «Scam. կեղծ support» published (35s, cta=question)
 - ✅ teaser Story published
----
-**2026-10-03 11:02** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 39 items
-- [pixabay] clip pb14900 rejected by the content check
-- [pixabay] clip pb846 rejected by the content check
-- [pixabay] clip pb14907 rejected by the content check
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] using clip pb3134 for 'city skyline night'
-- ✅ News published: Ethereum Layer-2 ցանց Blast-ը փակվում է
