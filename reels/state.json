@@ -281,7 +281,7 @@
   }
  },
  "palette": {
-  "news": 13
+  "news": 14
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -303,10 +303,10 @@
   "https://cointelegraph.com/news/near-intents-recovers-entire-stolen-38m-after-ultimatum-to-exploiter?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/markets/bitcoin-briefly-taps-87k-as-bond-yields-drop-on-low-us-nonfarm-payrolls-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://decrypt.co/380014/near-intents-recovers-3-8-million-after-48-hour-ultimatum",
-  "https://decrypt.co/380007/uptober-starts-green-bitcoin-etfs-draw-134-million"
+  "https://decrypt.co/380007/uptober-starts-green-bitcoin-etfs-draw-134-million",
+  "https://www.coindesk.com/markets/2026/10/05/okx-and-nyse-s-owner-file-for-round-the-clock-tokenized-trading-in-u-s-stocks"
  ],
  "used_broll": [
-  "pb220942",
   35002915,
   "pb13067",
   31410686,
@@ -385,7 +385,8 @@
   35163081,
   15886614,
   7318813,
-  "pb204326"
+  "pb204326",
+  39625195
  ],
  "bandit": {
   "cta": {
@@ -461,6 +462,10 @@
   },
   {
    "media": "18107932133072673",
+   "date": "2026-10-05"
+  },
+  {
+   "media": "18146419552562876",
    "date": "2026-10-05"
   }
  ],
@@ -881,7 +886,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 15,
+  "user_momotmusic-inspiring-reels-406484.mp3": 16,
   "user_the-mountain-tech-corporate-593075.mp3": 3,
   "story_mixkit-electropop-870.mp3": 15,
   "user_the-mountain-finance-background-449885.mp3": 3,
