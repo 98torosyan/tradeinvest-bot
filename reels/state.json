@@ -1,5 +1,5 @@
 {
- "course_index": 38,
+ "course_index": 39,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -299,6 +299,13 @@
    "date": "2026-10-05",
    "hour": 18,
    "cta": "send"
+  },
+  "M2-17": {
+   "media": "18019322561728873",
+   "permalink": "https://www.instagram.com/reel/DeHvw6rDt1B/",
+   "date": "2026-10-05",
+   "hour": 21,
+   "cta": "send"
   }
  },
  "palette": {
@@ -330,11 +337,6 @@
   "https://decrypt.co/380032/okx-and-nyse-owner-ice-plan-24-7-tokenized-stock-trading-under-sec-exemption"
  ],
  "used_broll": [
-  35464509,
-  26586646,
-  34993447,
-  7942762,
-  "pb251083",
   15439741,
   14300758,
   19532053,
@@ -409,7 +411,12 @@
   "pb8625",
   "pb19799",
   34578211,
-  9945022
+  9945022,
+  34382888,
+  18979105,
+  26056271,
+  6689107,
+  "pb42489"
  ],
  "bandit": {
   "cta": {
@@ -847,18 +854,21 @@
   "34578211.mp4": true,
   "34578211.mp4:face": false,
   "9945022.mp4": true,
-  "9945022.mp4:face": false
+  "9945022.mp4:face": false,
+  "18979105.mp4": true,
+  "18979105.mp4:face": false,
+  "6689107.mp4": true,
+  "6689107.mp4:face": false
  },
  "music_bag": {
   "lesson": [
-   "user_the-mountain-market-systems-146118.mp3",
    "user_starostin-investment-finance-trading-mon.mp3"
   ],
   "news": [],
   "story": []
  },
  "music_last": {
-  "lesson": "user_apalonbeats-finance-money-trading-invest.mp3",
+  "lesson": "user_the-mountain-market-systems-146118.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -938,7 +948,7 @@
   "user_the-mountain-finance-background-449885.mp3": 4,
   "user_starostin-investment-finance-trading-mon.mp3": 3,
   "user_apalonbeats-finance-money-trading-invest.mp3": 4,
-  "user_the-mountain-market-systems-146118.mp3": 3,
+  "user_the-mountain-market-systems-146118.mp3": 4,
   "user_soundsurfer-trading-254548.mp3": 4
  },
  "low_alert": "2026-10-05"
