@@ -1,5 +1,5 @@
 {
- "course_index": 39,
+ "course_index": 40,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -306,6 +306,13 @@
    "date": "2026-10-05",
    "hour": 21,
    "cta": "send"
+  },
+  "M2-18": {
+   "media": "18119828464946245",
+   "permalink": "https://www.instagram.com/reel/DeJCE0agDr7/",
+   "date": "2026-10-06",
+   "hour": 9,
+   "cta": "save"
   }
  },
  "palette": {
@@ -337,11 +344,6 @@
   "https://decrypt.co/380032/okx-and-nyse-owner-ice-plan-24-7-tokenized-stock-trading-under-sec-exemption"
  ],
  "used_broll": [
-  15439741,
-  14300758,
-  19532053,
-  "pb2085",
-  33638649,
   35072002,
   "pb4504",
   28901427,
@@ -416,7 +418,12 @@
   18979105,
   26056271,
   6689107,
-  "pb42489"
+  "pb42489",
+  35464509,
+  "pb3626",
+  8540540,
+  36726052,
+  "pb251083"
  ],
  "bandit": {
   "cta": {
@@ -440,7 +447,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "send",
+ "last_cta": "save",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -858,17 +865,17 @@
   "18979105.mp4": true,
   "18979105.mp4:face": false,
   "6689107.mp4": true,
-  "6689107.mp4:face": false
+  "6689107.mp4:face": false,
+  "8540540.mp4": true,
+  "8540540.mp4:face": true
  },
  "music_bag": {
-  "lesson": [
-   "user_starostin-investment-finance-trading-mon.mp3"
-  ],
+  "lesson": [],
   "news": [],
   "story": []
  },
  "music_last": {
-  "lesson": "user_the-mountain-market-systems-146118.mp3",
+  "lesson": "user_starostin-investment-finance-trading-mon.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -946,10 +953,10 @@
   "user_the-mountain-tech-corporate-593075.mp3": 4,
   "story_mixkit-electropop-870.mp3": 18,
   "user_the-mountain-finance-background-449885.mp3": 4,
-  "user_starostin-investment-finance-trading-mon.mp3": 3,
+  "user_starostin-investment-finance-trading-mon.mp3": 4,
   "user_apalonbeats-finance-money-trading-invest.mp3": 4,
   "user_the-mountain-market-systems-146118.mp3": 4,
   "user_soundsurfer-trading-254548.mp3": 4
  },
- "low_alert": "2026-10-05"
+ "low_alert": "2026-10-06"
 }

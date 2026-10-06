@@ -1,3 +1,25 @@
+**2026-10-06 09:20** `lesson` ✅ published
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] using clip 35464509 for 'city skyline night'
+- [pexels] clip 36108468 rejected by the content check
+- [pexels] clip 35972076 rejected by the content check
+- [pexels] clip 34381274 rejected by the content check
+- [pixabay] using clip pb3626 for 'people shopping crowd'
+- [pexels] using clip 8540540 for 'farmers market stalls'
+- [pexels] clip 16629709 rejected by the content check
+- [pexels] download 28494561 failed: file too large
+- [pexels] using clip 36726052 for 'technology blue'
+- [pixabay] download pb27051 failed: file too large
+- [pixabay] download pb88802 failed: file too large
+- [pixabay] download pb19989 failed: file too large
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] clip pb337459 rejected by the content check
+- [pixabay] clip pb86350 rejected by the content check
+- [pixabay] using clip pb251083 for 'city skyline night'
+- ✅ M2-18 «Bid, Ask և Spread» published (29s, cta=save)
+- 📚 Մնացել է 6 պատրաստի սցենար։
+---
 **2026-10-06 08:51** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7773.95}
@@ -223,8 +245,3 @@
 - [pexels] using clip 17238361 for 'dark storm clouds'
 - [pexels] using clip 39322557 for 'abstract light bokeh'
 - ✅ M2-10 «Scam. pump and dump» published (35s, cta=send)
----
-**2026-10-04 14:55** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7722.72}
-- ✅ Story published
