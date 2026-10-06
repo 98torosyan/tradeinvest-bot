@@ -1,5 +1,5 @@
 {
- "course_index": 43,
+ "course_index": 44,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -334,6 +334,13 @@
    "date": "2026-10-06",
    "hour": 18,
    "cta": "question"
+  },
+  "M2-22": {
+   "media": "18096304841391070",
+   "permalink": "https://www.instagram.com/reel/DeKUVtSDqZA/",
+   "date": "2026-10-06",
+   "hour": 21,
+   "cta": "save"
   }
  },
  "palette": {
@@ -367,11 +374,6 @@
   "https://cointelegraph.com/news/paxos-3b-usdg-stablecoin-launches-arbitrum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
-  35090395,
-  "pb30154",
-  11335976,
-  "pb142641",
-  36178907,
   34516347,
   4565572,
   30747149,
@@ -446,7 +448,12 @@
   26586646,
   9620654,
   39322558,
-  15439741
+  15439741,
+  "pb3138",
+  "pb109146",
+  "pb13067",
+  35590093,
+  39322559
  ],
  "bandit": {
   "cta": {
@@ -470,7 +477,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "question",
+ "last_cta": "save",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -910,11 +917,12 @@
   "8758291.mp4": true,
   "8758291.mp4:face": false,
   "7944932.mp4": true,
-  "7944932.mp4:face": false
+  "7944932.mp4:face": false,
+  "35590093.mp4": true,
+  "35590093.mp4:face": false
  },
  "music_bag": {
   "lesson": [
-   "user_soundsurfer-trading-254548.mp3",
    "user_the-mountain-finance-background-449885.mp3",
    "user_momotmusic-inspiring-reels-406484.mp3",
    "user_starostin-investment-finance-trading-mon.mp3"
@@ -923,7 +931,7 @@
   "story": []
  },
  "music_last": {
-  "lesson": "user_the-mountain-market-systems-146118.mp3",
+  "lesson": "user_soundsurfer-trading-254548.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -1004,7 +1012,7 @@
   "user_starostin-investment-finance-trading-mon.mp3": 4,
   "user_apalonbeats-finance-money-trading-invest.mp3": 5,
   "user_the-mountain-market-systems-146118.mp3": 5,
-  "user_soundsurfer-trading-254548.mp3": 4
+  "user_soundsurfer-trading-254548.mp3": 5
  },
  "low_alert": "2026-10-06"
 }
