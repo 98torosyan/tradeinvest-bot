@@ -1,5 +1,5 @@
 {
- "course_index": 40,
+ "course_index": 41,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -313,6 +313,13 @@
    "date": "2026-10-06",
    "hour": 9,
    "cta": "save"
+  },
+  "M2-19": {
+   "media": "18074121746724395",
+   "permalink": "https://www.instagram.com/reel/DeJW3KMkg3o/",
+   "date": "2026-10-06",
+   "hour": 12,
+   "cta": "send"
   }
  },
  "palette": {
@@ -345,11 +352,6 @@
   "https://www.coindesk.com/business/2026/10/01/stripe-to-expand-stablecoin-cards-to-over-100-countries-by-the-end-of-the-year"
  ],
  "used_broll": [
-  "pb4504",
-  28901427,
-  34771082,
-  "pb45902",
-  "pb202987",
   39322558,
   "pb3134",
   "pb3138",
@@ -424,7 +426,12 @@
   8540540,
   36726052,
   "pb251083",
-  14300758
+  14300758,
+  36627993,
+  31455842,
+  34232317,
+  35584996,
+  35072002
  ],
  "bandit": {
   "cta": {
@@ -448,7 +455,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "save",
+ "last_cta": "send",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -872,15 +879,30 @@
   "6689107.mp4": true,
   "6689107.mp4:face": false,
   "8540540.mp4": true,
-  "8540540.mp4:face": true
+  "8540540.mp4:face": true,
+  "30029522.mp4": false,
+  "30029522.mp4:face": false,
+  "11372918.mp4": false,
+  "11372918.mp4:face": false,
+  "31455842.mp4": true,
+  "31455842.mp4:face": false,
+  "34232317.mp4": true,
+  "34232317.mp4:face": false
  },
  "music_bag": {
-  "lesson": [],
+  "lesson": [
+   "user_the-mountain-tech-corporate-593075.mp3",
+   "user_the-mountain-market-systems-146118.mp3",
+   "user_soundsurfer-trading-254548.mp3",
+   "user_the-mountain-finance-background-449885.mp3",
+   "user_momotmusic-inspiring-reels-406484.mp3",
+   "user_starostin-investment-finance-trading-mon.mp3"
+  ],
   "news": [],
   "story": []
  },
  "music_last": {
-  "lesson": "user_starostin-investment-finance-trading-mon.mp3",
+  "lesson": "user_apalonbeats-finance-money-trading-invest.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -959,7 +981,7 @@
   "story_mixkit-electropop-870.mp3": 18,
   "user_the-mountain-finance-background-449885.mp3": 4,
   "user_starostin-investment-finance-trading-mon.mp3": 4,
-  "user_apalonbeats-finance-money-trading-invest.mp3": 4,
+  "user_apalonbeats-finance-money-trading-invest.mp3": 5,
   "user_the-mountain-market-systems-146118.mp3": 4,
   "user_soundsurfer-trading-254548.mp3": 4
  },
