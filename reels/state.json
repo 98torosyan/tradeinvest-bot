@@ -337,7 +337,7 @@
   }
  },
  "palette": {
-  "news": 17
+  "news": 18
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -363,10 +363,10 @@
   "https://www.coindesk.com/markets/2026/10/05/okx-and-nyse-s-owner-file-for-round-the-clock-tokenized-trading-in-u-s-stocks",
   "https://cointelegraph.com/news/okx-nyse-parent-file-to-launch-tokenized-us-stock-platform?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://decrypt.co/380032/okx-and-nyse-owner-ice-plan-24-7-tokenized-stock-trading-under-sec-exemption",
-  "https://www.coindesk.com/business/2026/10/01/stripe-to-expand-stablecoin-cards-to-over-100-countries-by-the-end-of-the-year"
+  "https://www.coindesk.com/business/2026/10/01/stripe-to-expand-stablecoin-cards-to-over-100-countries-by-the-end-of-the-year",
+  "https://cointelegraph.com/news/paxos-3b-usdg-stablecoin-launches-arbitrum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
-  39537199,
   35090395,
   "pb30154",
   11335976,
@@ -445,7 +445,8 @@
   7944932,
   26586646,
   9620654,
-  39322558
+  39322558,
+  15439741
  ],
  "bandit": {
   "cta": {
@@ -537,6 +538,10 @@
   },
   {
    "media": "18130346521705931",
+   "date": "2026-10-06"
+  },
+  {
+   "media": "17938154397384528",
    "date": "2026-10-06"
   }
  ],
@@ -992,7 +997,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 19,
+  "user_momotmusic-inspiring-reels-406484.mp3": 20,
   "user_the-mountain-tech-corporate-593075.mp3": 5,
   "story_mixkit-electropop-870.mp3": 20,
   "user_the-mountain-finance-background-449885.mp3": 4,
