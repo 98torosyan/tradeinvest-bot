@@ -316,7 +316,7 @@
   }
  },
  "palette": {
-  "news": 16
+  "news": 17
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -341,10 +341,10 @@
   "https://decrypt.co/380007/uptober-starts-green-bitcoin-etfs-draw-134-million",
   "https://www.coindesk.com/markets/2026/10/05/okx-and-nyse-s-owner-file-for-round-the-clock-tokenized-trading-in-u-s-stocks",
   "https://cointelegraph.com/news/okx-nyse-parent-file-to-launch-tokenized-us-stock-platform?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://decrypt.co/380032/okx-and-nyse-owner-ice-plan-24-7-tokenized-stock-trading-under-sec-exemption"
+  "https://decrypt.co/380032/okx-and-nyse-owner-ice-plan-24-7-tokenized-stock-trading-under-sec-exemption",
+  "https://www.coindesk.com/business/2026/10/01/stripe-to-expand-stablecoin-cards-to-over-100-countries-by-the-end-of-the-year"
  ],
  "used_broll": [
-  35072002,
   "pb4504",
   28901427,
   34771082,
@@ -423,7 +423,8 @@
   "pb3626",
   8540540,
   36726052,
-  "pb251083"
+  "pb251083",
+  14300758
  ],
  "bandit": {
   "cta": {
@@ -512,6 +513,10 @@
   {
    "media": "18032963672671378",
    "date": "2026-10-05"
+  },
+  {
+   "media": "18130346521705931",
+   "date": "2026-10-06"
   }
  ],
  "quiz_count": 7,
@@ -949,7 +954,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 18,
+  "user_momotmusic-inspiring-reels-406484.mp3": 19,
   "user_the-mountain-tech-corporate-593075.mp3": 4,
   "story_mixkit-electropop-870.mp3": 18,
   "user_the-mountain-finance-background-449885.mp3": 4,

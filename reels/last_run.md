@@ -1,3 +1,11 @@
+**2026-10-06 10:56** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] using clip 14300758 for 'city skyline night'
+- ✅ News published: Stripe-ը ընդլայնում է stablecoin քարտերը
+---
 **2026-10-06 09:20** `lesson` ✅ published
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] using clip 35464509 for 'city skyline night'
@@ -230,18 +238,3 @@
 - [pixabay] download pb27051 failed: file too large
 - [pixabay] using clip pb977 for 'abstract light bokeh'
 - ✅ M2-11 «Scam. կեղծ airdrop» published (36s, cta=save)
----
-**2026-10-04 15:05** `lesson` ✅ published
-- [pexels] using clip 29025308 for 'city skyline night'
-- [pexels] clip 39569280 rejected by the content check
-- [pexels] download 35254957 failed: file too large
-- [pexels] clip 35245798 rejected by the content check
-- [pixabay] clip pb23258 rejected by the content check
-- [pixabay] clip pb1643 rejected by the content check
-- [pixabay] clip pb127690 rejected by the content check
-- [pexels] using clip 39468111 for 'city skyline night'
-- [pexels] clip 35606045 rejected by the content check
-- [pexels] using clip 32536829 for 'stock chart falling red'
-- [pexels] using clip 17238361 for 'dark storm clouds'
-- [pexels] using clip 39322557 for 'abstract light bokeh'
-- ✅ M2-10 «Scam. pump and dump» published (35s, cta=send)
