@@ -1,5 +1,5 @@
 {
- "course_index": 42,
+ "course_index": 43,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -327,6 +327,13 @@
    "date": "2026-10-06",
    "hour": 15,
    "cta": "send"
+  },
+  "M2-21": {
+   "media": "17890210950616653",
+   "permalink": "https://www.instagram.com/reel/DeKAGmsE2v_/",
+   "date": "2026-10-06",
+   "hour": 18,
+   "cta": "question"
   }
  },
  "palette": {
@@ -359,11 +366,6 @@
   "https://www.coindesk.com/business/2026/10/01/stripe-to-expand-stablecoin-cards-to-over-100-countries-by-the-end-of-the-year"
  ],
  "used_broll": [
-  26586645,
-  39322559,
-  "pb336755",
-  "pb109146",
-  8102763,
   39537199,
   35090395,
   "pb30154",
@@ -438,7 +440,12 @@
   8758291,
   "pb2526",
   7703941,
-  36644496
+  36644496,
+  "pb3134",
+  7944932,
+  26586646,
+  9620654,
+  39322558
  ],
  "bandit": {
   "cta": {
@@ -462,7 +469,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "send",
+ "last_cta": "question",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -896,11 +903,12 @@
   "34232317.mp4": true,
   "34232317.mp4:face": false,
   "8758291.mp4": true,
-  "8758291.mp4:face": false
+  "8758291.mp4:face": false,
+  "7944932.mp4": true,
+  "7944932.mp4:face": false
  },
  "music_bag": {
   "lesson": [
-   "user_the-mountain-market-systems-146118.mp3",
    "user_soundsurfer-trading-254548.mp3",
    "user_the-mountain-finance-background-449885.mp3",
    "user_momotmusic-inspiring-reels-406484.mp3",
@@ -910,7 +918,7 @@
   "story": []
  },
  "music_last": {
-  "lesson": "user_the-mountain-tech-corporate-593075.mp3",
+  "lesson": "user_the-mountain-market-systems-146118.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -990,7 +998,7 @@
   "user_the-mountain-finance-background-449885.mp3": 4,
   "user_starostin-investment-finance-trading-mon.mp3": 4,
   "user_apalonbeats-finance-money-trading-invest.mp3": 5,
-  "user_the-mountain-market-systems-146118.mp3": 4,
+  "user_the-mountain-market-systems-146118.mp3": 5,
   "user_soundsurfer-trading-254548.mp3": 4
  },
  "low_alert": "2026-10-06"

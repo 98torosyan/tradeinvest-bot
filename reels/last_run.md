@@ -1,3 +1,13 @@
+**2026-10-06 18:22** `lesson` ✅ published
+- [pexels] clip 39481319 rejected by the content check
+- [pixabay] using clip pb3134 for 'city skyline night'
+- [pexels] using clip 7944932 for 'hourglass sand'
+- [pexels] clip 26586643 rejected by the content check
+- [pexels] using clip 26586646 for 'padlock closeup'
+- [pexels] using clip 9620654 for 'ocean waves'
+- [pexels] using clip 39322558 for 'abstract light bokeh'
+- ✅ M2-21 «Stop Order» published (35s, cta=question)
+---
 **2026-10-06 15:19** `lesson` ✅ published
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] clip 35552568 rejected by the content check
@@ -252,6 +262,3 @@
 - [pixabay] using clip pb50352 for 'city skyline night'
 - ✅ M2-12 «Scam. «VIP ազդանշաններ»» published (35s, cta=question)
 - ✅ teaser Story published
----
-**2026-10-04 20:01** `quiz` ✅ published
-- ✅ Quiz Story from M2-05
