@@ -1,3 +1,8 @@
+**2026-10-06 08:51** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7773.95}
+- ✅ Story published
+---
 **2026-10-05 21:19** `lesson` ✅ published
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] using clip 34382888 for 'city skyline night'
@@ -223,10 +228,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7722.72}
 - ✅ Story published
----
-**2026-10-04 00:07** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 39 items
-- [pexels] using clip 37676204 for 'abstract blue light chart'
-- ✅ News published: Bitcoin-ը հասավ 87 հազար դոլարի
