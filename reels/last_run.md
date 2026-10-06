@@ -1,3 +1,26 @@
+**2026-10-06 15:19** `lesson` ✅ published
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pexels] using clip 28901427 for 'city skyline night'
+- [pexels] using clip 8758291 for 'chess board closeup'
+- [pexels] clip 16629709 rejected by the content check
+- [pexels] download 28494561 failed: file too large
+- [pixabay] clip pb46688 rejected by the content check
+- [pixabay] clip pb13370 rejected by the content check
+- [pixabay] using clip pb2526 for 'technology blue'
+- [pexels] using clip 7703941 for 'hourglass sand'
+- [pixabay] download pb27051 failed: file too large
+- [pixabay] download pb88802 failed: file too large
+- [pixabay] download pb19989 failed: file too large
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] clip pb337459 rejected by the content check
+- [pixabay] clip pb86350 rejected by the content check
+- [pixabay] clip pb267744 rejected by the content check
+- [pexels] download 28494561 failed: file too large
+- [pexels] using clip 36644496 for 'abstract blue light'
+- ✅ M2-20 «Limit Order» published (35s, cta=send)
+---
 **2026-10-06 13:52** `quiz` ✅ published
 - ✅ Quiz Story from M2-15
 ---
@@ -232,6 +255,3 @@
 ---
 **2026-10-04 20:01** `quiz` ✅ published
 - ✅ Quiz Story from M2-05
----
-**2026-10-04 19:25** `carousel` ❌ failed
-- ❌ carousel սխալ՝ InstagramPublishError: 17841424152621072/media_publish failed: {'error': {'message': 'Media ID is not available', 'type': 'OAuthException', 'code': 9007, 'error_subcode': 2207027, 'is_transient': False, 'error_user_title': 'Cannot Publish', 'error_user_msg': 'The media is not ready for publishing, please wait for a moment
