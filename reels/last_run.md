@@ -1,3 +1,17 @@
+**2026-10-07 12:23** `lesson` ✅ published
+- [pexels] clip 39481319 rejected by the content check
+- [pexels] clip 35552568 rejected by the content check
+- [pixabay] using clip pb336755 for 'city skyline night'
+- [pexels] clip 26586643 rejected by the content check
+- [pexels] using clip 26586645 for 'padlock closeup'
+- [pexels] using clip 31410686 for 'dark storm clouds'
+- [pexels] using clip 35158244 for 'technology network connection'
+- [pexels] using clip 34993447 for 'notebook handwriting pen'
+- [pexels] using clip 4565572 for 'abstract light bokeh'
+- [qa warning] motion-graphics share 39% < 40%
+- ✅ M2-24 «Ամփոփում + տնային առաջադրանք» published (41s, cta=send)
+- ✅ teaser Story published
+---
 **2026-10-07 10:56** `news` ✅ qa-fail
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -226,30 +240,3 @@
 ---
 **2026-10-05 13:54** `quiz` ✅ published
 - ✅ Quiz Story from M2-10
----
-**2026-10-05 12:23** `lesson` ✅ published
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] using clip pb5624 for 'city skyline night'
-- [pexels] using clip 37104325 for 'city financial district'
-- [pexels] clip 16629709 rejected by the content check
-- [pexels] using clip 16863222 for 'technology blue'
-- [pexels] clip 33390334 rejected by the content check
-- [pixabay] clip pb20857 rejected by the content check
-- [pixabay] clip pb20459 rejected by the content check
-- [pixabay] download pb230033 failed: file too large
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] clip pb86350 rejected by the content check
-- [pixabay] using clip pb220942 for 'city skyline night'
-- [pixabay] download pb27051 failed: file too large
-- [pixabay] download pb88802 failed: file too large
-- [pixabay] download pb19989 failed: file too large
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] clip pb86350 rejected by the content check
-- [pixabay] clip pb267744 rejected by the content check
-- [pexels] using clip 15439746 for 'abstract blue light'
-- ✅ M2-14 «Ինչպես ընտրել բորսա» published (32s, cta=send)
-- ✅ teaser Story published
