@@ -1,3 +1,8 @@
+**2026-10-07 08:55** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7818.93}
+- ✅ Story published
+---
 **2026-10-06 21:18** `lesson` ✅ published
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] clip 35552568 rejected by the content check
@@ -249,8 +254,3 @@
 - [pixabay] clip pb337459 rejected by the content check
 - [pixabay] using clip pb204326 for 'city skyline night'
 - ✅ M2-13 «Բորսայի կառուցվածքը» published (33s, cta=send)
----
-**2026-10-05 09:12** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7722.72}
-- ✅ Story published
