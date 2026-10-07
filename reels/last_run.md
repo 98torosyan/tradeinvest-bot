@@ -1,3 +1,6 @@
+**2026-10-07 13:53** `quiz` ✅ published
+- ✅ Quiz Story from M2-21
+---
 **2026-10-07 12:23** `lesson` ✅ published
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] clip 35552568 rejected by the content check
@@ -237,6 +240,3 @@
 - [pixabay] using clip pb287386 for 'city skyline night'
 - ✅ M2-15 «Trading Pair» published (36s, cta=send)
 - 📚 Մնացել է 9 պատրաստի սցենար։
----
-**2026-10-05 13:54** `quiz` ✅ published
-- ✅ Quiz Story from M2-10
