@@ -384,25 +384,46 @@ def overlay_html(lesson, cur_info, palette, beats, total):
             inner = _graphic(b); cls = "graphic beat" if b["kind"] in ("chart", "math") else "graphic"
         scenes.append(f'<section class="scene {cls}" data-in="{a_in:.2f}" data-out="{a + d:.2f}">{inner}</section>')
     oa = total - OUTRO
-    nxt = cur_info.get("next_title")
+    nxt = cur_info.get("next_title") if settings.SHOW_COURSE_LABEL else None
+    if not settings.SHOW_COURSE_LABEL:
+        scenes_cta = ('<div class="nxt" data-fx="rise" data-at=".1" data-dur=".5">Ամեն օր՝ նոր թրեյդինգ դաս</div>'
+                      '<div class="nxt2" data-fx="rise" data-at=".25" data-dur=".6">Հետևիր @armtradeinvest</div>')
+    else:
+        scenes_cta = ""
     nxt_html = (f'<div class="nxt" data-fx="rise" data-at=".1" data-dur=".5">Հաջորդ դասը</div>'
                 f'<div class="nxt2" data-fx="rise" data-at=".25" data-dur=".6">{esc(nxt)}</div>') if nxt else ""
-    scenes.append(f'<section class="scene outro" data-in="{oa:.2f}" data-out="{total + 1:.2f}"><div class="obg"></div>{nxt_html}'
+    scenes.append(f'<section class="scene outro" data-in="{oa:.2f}" data-out="{total + 1:.2f}"><div class="obg"></div>{nxt_html or scenes_cta}'
                   f'{logo_svg()}<div class="name" data-fx="rise" data-at="1.3" data-dur=".6">TradeInvest</div></section>')
     css = open(os.path.join(ASSETS, "broll.css"), encoding="utf-8").read() + open(os.path.join(ASSETS, "lesson.css"), encoding="utf-8").read()
-    pill = f'Մոդուլ {lesson["module"]} · Դաս {lesson["n"]}/{cur_info["module_size"]}'
+    if settings.SHOW_COURSE_LABEL:
+        pill = f'Մոդուլ {lesson["module"]} · Դաս {lesson["n"]}/{cur_info["module_size"]}'
+        head = f'<div class="pill" id="pill"><span>{esc(pill)}</span></div><div class="prog" id="prog"><i id="pi"></i></div>'
+    else:
+        head = ""
+    bg_canvas, bg_js = "", ""
+    if settings.BG_MODE == "charts":
+        import json as _j
+        from . import bgdata
+        seed = sum(map(ord, lesson["id"]))
+        data = bgdata.get(seed)
+        styles = settings.BG_STYLES
+        bsc = [{"a": (-1 if i == 0 else b["_t"]), "b": b["_t"] + b["_d"], "style": "candles" if b["kind"] == "hero" else ("plain" if b["kind"] in ("chart", "math") else styles[(seed + i) % len(styles)]),
+                "seed": seed + i * 13, "acc": palette["a2"]} for i, b in enumerate(beats)]
+        bsc.append({"a": total - OUTRO, "b": total + 2, "style": "line", "seed": seed + 99, "acc": palette["a2"]})
+        bg_canvas = '<canvas id="bgc" width="1080" height="1920" style="position:absolute;left:0;top:0;width:1080px;height:1920px;z-index:0"></canvas>'
+        bg_js = (f'<script>window.BGDATA={_j.dumps(data)};window.BGSCENES={_j.dumps(bsc)};</script>'
+                 f'<script src="{ASSETS}/chartbg.js"></script>')
     return (f'<!doctype html><html lang="hy"><head><meta charset="utf-8"><link rel="stylesheet" href="{ASSETS}/fonts.css">'
             f'<style>{css}</style></head><body style="{css_vars(palette)}">'
-            f'<div class="shade"></div><div class="pill" id="pill"><span>{esc(pill)}</span></div>'
-            f'<div class="prog" id="prog"><i id="pi"></i></div>{"".join(scenes)}'
+            f'{bg_canvas}<div class="shade"></div>{head}{"".join(scenes)}'
             f'<script src="{ASSETS}/js/lwc.js"></script><script src="{ASSETS}/js/lottie.js"></script>'
-            f'<script src="{ASSETS}/engine.js"></script><script>window.DURATION={total:.2f};{CHART_JS}'
+            f'<script src="{ASSETS}/engine.js"></script>{bg_js}<script>window.DURATION={total:.2f};{CHART_JS}'
             f'''(function(){{const o=applyFx;applyFx=function(it,l){{if(it.dataset.fx!=='slam')return o(it,l);
  const r=prog(l,+it.dataset.at,+it.dataset.dur);const e=r<=0?0:EASE.back(r);it.style.opacity=clamp01(r*3);
  it.style.transform=`scale(${{1.18-.18*e}})`;it.style.filter=`blur(${{(1-clamp01(r*2.2))*6}}px)`;}};}})();
 HOOKS.push(t=>{{const end={oa:.2f};const o=1-EASE.inOut(prog(t,end-.35,.35));
- document.getElementById('pill').style.opacity=o;document.getElementById('prog').style.opacity=o;
- document.getElementById('pi').style.transform=`scaleX(${{clamp01(t/end)}})`;
+ const P=document.getElementById('pill');if(P){{P.style.opacity=o;document.getElementById('prog').style.opacity=o;
+ document.getElementById('pi').style.transform=`scaleX(${{clamp01(t/end)}})`;}}
  for(const sc of SCENES){{if(!sc.el.classList.contains('beat'))continue;const l=t-sc.a;
   sc.el.querySelectorAll('.chunk').forEach(c=>{{const on=l>=+c.dataset.s&&l<+c.dataset.e+(c.nextElementSibling?0:9);
    c.style.display=on?'block':'none';const k=Math.min(1,EASE.back(clamp01((l-+c.dataset.s)/.22)));c.style.transform=`scale(${{.88+.12*k}})`;}});
@@ -440,7 +461,12 @@ def render_lesson(lesson, cur_info, palette, out_mp4, out_cover, music=None, use
                 grid, moff = ng, ng[0]
     beats, total = plan(lesson, grid)
     work = tempfile.mkdtemp(prefix="lesson_")
-    foot, used = build_footage(beats, total, work, used_ids, palette, lesson.get("negative", False), clip_cache)
+    if settings.BG_MODE == "charts":                # backgrounds are drawn inside the overlay page
+        foot, used = os.path.join(work, "footage.mp4"), []
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", f"color=c=0x070b14:s=1080x1920:r={FPS}:d={total + 1:.2f}",
+                        "-c:v", "libx264", "-preset", "veryfast", "-pix_fmt", "yuv420p", foot], check=True)
+    else:
+        foot, used = build_footage(beats, total, work, used_ids, palette, lesson.get("negative", False), clip_cache)
     html = overlay_html(lesson, cur_info, palette, beats, total)
     pattern, _ = _frames(html, work, transparent=True)
     events = []

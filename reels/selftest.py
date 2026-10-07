@@ -21,9 +21,12 @@ def main():
     st = state.load()
     lesson = cur["lessons"][0]
     size = curriculum.module_size(cur, 1)
-    res = lesson_video.render_lesson(lesson, {"module_size": size, "next_title": cur["lessons"][1]["title"]},
-                                     palettes.MODULE[1], f"{OUT}/t.mp4", f"{OUT}/t.jpg")
-    cap, _ = captions.lesson_caption(lesson, size, {})
+    res = lesson_video.render_lesson(lesson, {"module_size": size, "next_title": None},
+                                     palettes.MODULE[5], f"{OUT}/t.mp4", f"{OUT}/t.jpg")
+    if cur.get("series"):
+        cap, _ = captions.hit_caption(lesson, f"📈 {lesson['series']} · {lesson['title']}", {})
+    else:
+        cap, _ = captions.lesson_caption(lesson, size, {})
     e, w = qa.post_render(lesson, res, cap)
     print("lesson:", round(res["duration"], 1), "s; qa errors:", e, "warnings:", w)
     if e:
@@ -46,7 +49,7 @@ def main():
     from . import spell, manim_scenes, media_checks, charts
     if not spell.available() or spell.unknown("Սա կարևոր դաս է") or not spell.unknown("շուկաիում"):
         print("spell-check is not working"); return 1
-    chart_lesson = next(l for l in cur["lessons"] if l["id"] == "M5-11")
+    chart_lesson = next(l for l in cur["lessons"] if any(b["kind"] == "chart" for b in l["beats"]) and any(b["kind"] == "math" for b in l["beats"]))
     beats, total = lesson_video.plan(chart_lesson, None)
     h = lesson_video.overlay_html(chart_lesson, {"module_size": 30, "next_title": "Resistance"}, palettes.MODULE[5], beats, total)
     lay = qa.layout(h, [b["_t"] + b["_d"] * 0.8 for b in beats])

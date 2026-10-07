@@ -24,3 +24,18 @@ def lesson_caption(lesson, module_size, state):
     lines += [lesson.get("question", ""), CTA[arm], "📚 Սկսիր առաջին դասից՝ հղումը bio-ում", "", " ".join(tags)]
     text = "\n".join(l for l in lines if l is not None).strip()
     return text[:2150], arm
+
+
+SERIES_TAG = {1: "#technicalanalysis", 2: "#tradingpsychology", 3: "#indicators", 4: "#cryptomarket", 5: "#riskmanagement"}
+
+
+def hit_caption(lesson, title_line, state):
+    arm = bandit.choose(state, "cta", list(CTA), avoid=state.get("last_cta"))
+    state["last_cta"] = arm
+    tags = ["#trading", "#crypto", "#թրեյդինգ", "#հայերեն", SERIES_TAG.get(lesson["module"], "#crypto")][: settings.MAX_HASHTAGS]
+    lines = [lesson["hook"].replace("|", " "), title_line, "", lesson["summary"], ""]
+    if lesson.get("keywords"):
+        lines += ["🔑 " + " · ".join(lesson["keywords"]), ""]
+    lines += [lesson.get("question", ""), CTA[arm], "🔔 Ամեն օր՝ նոր թրեյդինգ դաս @armtradeinvest",
+              "⚠️ Կրթական բովանդակություն է, ոչ թե ֆինանսական խորհուրդ", "", " ".join(tags)]
+    return "\n".join(l for l in lines if l is not None).strip()[:2150], arm

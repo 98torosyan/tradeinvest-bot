@@ -1,6 +1,7 @@
 """TradeInvest v1.0 entry point:  python -m reels.run --kind lesson|news|story|chart|quiz|carousel [--no-publish]"""
 import argparse
 import datetime as dt
+import json
 import os
 import subprocess
 import sys
@@ -73,8 +74,89 @@ def publish_story_file(path, rid, publish):
     return igapi.publish_story_video(url)
 
 
+# ---------------------------------------------------------------- standalone trading Reels ("hits")
+def do_hit(st, now, rid, publish):
+    from delivery.media_hosting import wait_until_reachable
+    cur = json.load(open(HITS, encoding="utf-8"))
+    done = set(st.get("published", {}))
+    todo = [l for l in cur["lessons"] if l["id"] not in done]
+    left = len(todo)
+    if left <= settings.COURSE_LOW_WARNING and st.get("hits_low_alert") != now.strftime("%Y-%m-%d"):
+        st["hits_low_alert"] = now.strftime("%Y-%m-%d")
+        notify(f"📚 Մնացել է {left} պատրաստի Reel (~{left / max(1, settings.LESSONS_PER_DAY):.1f} օր)։ Ժամանակն է գրել նորերը։")
+    if not todo:
+        return "no-script"
+    lesson = todo[0]
+    st["course_index"] = len(cur["lessons"]) - left          # position in the hits list (used by /status and watchdog)
+    errs = qa.pre_render(lesson, cur, done)
+    if errs:
+        notify("⚠️ Reel-ը չանցավ ստուգումը.\n" + "\n".join(errs)); return "qa-fail"
+    title_line = f"📈 {lesson['series']} · {lesson['title']}"
+    dup = already_posted(title_line) if publish else None
+    if dup:
+        summary(f"[dedupe] {lesson['id']} is already on Instagram ({dup['id']}), only the state is updated")
+        st.setdefault("published", {})[lesson["id"]] = {"media": dup["id"], "permalink": dup.get("permalink"),
+                                                       "date": now.strftime("%Y-%m-%d"), "hour": now.hour}
+        st["course_index"] += 1
+        return "dedupe"
+    pal = palettes.MODULE[SERIES_PALETTE.get(lesson["module"], 5)]
+    track = music.pick("lesson", lesson["module"], st, now.strftime("%Y-%m-%d"))
+    mp4, cover = os.path.join(OUT, rid + ".mp4"), os.path.join(OUT, rid + ".jpg")
+    res = lesson_video.render_lesson(lesson, {"module_size": 0, "next_title": None}, pal, mp4, cover, music=track,
+                                     used_ids=[], clip_cache={})
+    caption, arm = captions.hit_caption(lesson, title_line, st)
+    errs, warns = qa.post_render(lesson, res, caption)
+    for w in warns:
+        summary("[qa warning] " + w)
+    if errs:
+        fails = st.setdefault("qa_fail", {}); fails[lesson["id"]] = fails.get(lesson["id"], 0) + 1
+        if fails[lesson["id"]] >= 2:
+            st.setdefault("published", {})[lesson["id"]] = {"skipped": True, "date": now.strftime("%Y-%m-%d")}
+            notify(f"⏭ {lesson['id']} Reel-ը 2 անգամ չանցավ ստուգումը և բաց է թողնվում.\n" + "\n".join(errs[:6]))
+        else:
+            notify(f"⚠️ {lesson['id']} Reel-ը չանցավ ստուգումը (կփորձվի նորից).\n" + "\n".join(errs[:6]))
+        return "qa-fail"
+    teaser = None
+    if now.hour in settings.TEASER_HOURS:
+        try:
+            teaser = os.path.join(OUT, rid + "-teaser.mp4")
+            render.make_teaser(mp4, builder.teaser_overlay(pal, "lesson"), teaser)
+        except Exception as exc:  # noqa: BLE001
+            summary(f"[teaser] {exc}"); teaser = None
+    files = [(mp4, f"reels/{rid}.mp4"), (cover, f"reels/{rid}.jpg")] + ([(teaser, f"reels/{rid}-teaser.mp4")] if teaser else [])
+    from . import site
+    site_dir = os.path.join(OUT, "site"); site.build(cur, st, site_dir)
+    if not publish:
+        summary(f"[dry-run] {lesson['id']} rendered {res['duration']:.1f}s"); return "dry-run"
+    urls = hosting.publish(files, site_dir)
+    if not wait_until_reachable(urls[f"reels/{rid}.mp4"], timeout=300):
+        raise RuntimeError("video is not reachable on GitHub Pages")
+    from . import igapi
+    media = igapi.publish_reel(urls[f"reels/{rid}.mp4"], caption, cover_url=urls.get(f"reels/{rid}.jpg"))
+    try:
+        link = igapi.permalink(media)
+    except Exception:  # noqa: BLE001
+        link = None
+    st.setdefault("published", {})[lesson["id"]] = {"media": media, "permalink": link,
+                                                   "date": now.strftime("%Y-%m-%d"), "hour": now.hour, "cta": arm}
+    if teaser:
+        try:
+            publish_story_file(teaser, rid + "-teaser", True)
+        except Exception as exc:  # noqa: BLE001
+            summary(f"[teaser] {exc}")
+    st["course_index"] += 1
+    summary(f"✅ {lesson['id']} «{lesson['title']}» published ({res['duration']:.0f}s, cta={arm})")
+    return "published"
+
+
 # ---------------------------------------------------------------- lesson
+HITS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "content", "hits.json")
+SERIES_PALETTE = {1: 5, 2: 8, 3: 6, 4: 7, 5: 3}
+
+
 def do_lesson(st, now, rid, publish):
+    if settings.CONTENT_MODE == "hits":
+        return do_hit(st, now, rid, publish)
     from delivery.media_hosting import wait_until_reachable
     cur = curriculum.load()
     idx = st.get("course_index", 0)
@@ -173,7 +255,8 @@ def do_news(st, now, rid, publish):
         notify(f"⚠️ Լուրը չհրապարակվեց՝ ուղղագրական ստուգումը չանցավ. {', '.join(bad[:8])}\n"
                f"Եթե բառերը ճիշտ են, գրիր՝ /allow {' '.join(bad[:8])}"); return "qa-fail"
     k = st.setdefault("palette", {}).get("news", 0); pal = palettes.NEWS[k % len(palettes.NEWS)]
-    bg, vid = pexels.fetch(spec.get("broll", ""), set(st.get("used_broll", [])), check=lesson_video._clip_ok(False, st.setdefault("clip_checks", {})))
+    bg, vid = (None, None) if settings.BG_MODE == "charts" else \
+        pexels.fetch(spec.get("broll", ""), set(st.get("used_broll", [])), check=lesson_video._clip_ok(False, st.setdefault("clip_checks", {})))
     RUN_LOG.extend(pexels.NOTES)
     html = builder.build_news(spec, pal, builder.arm_date(now), footage=bool(bg))
     mp4 = os.path.join(OUT, rid + ".mp4")
@@ -188,11 +271,19 @@ def do_news(st, now, rid, publish):
         caption = caption[: caption.find("#")].rstrip() + "\n\n" + " ".join([t for t in caption.split() if t.startswith("#")][:5])
     if not publish:
         summary(f"[dry-run] news rendered {dur:.1f}s"); return "dry-run"
-    urls = hosting.publish([(mp4, f"reels/{rid}.mp4")])
-    if not wait_until_reachable(urls[f"reels/{rid}.mp4"], timeout=300):
-        raise RuntimeError("video is not reachable on GitHub Pages")
-    from . import igapi
-    media = igapi.publish_reel(urls[f"reels/{rid}.mp4"], caption, share_to_feed=False)   # Reels tab only: grid stays a course library
+    if settings.NEWS_AS_STORY:                      # news live in Stories only; the grid and Reels tab are for lessons
+        if dur > 59:
+            cut = mp4.replace(".mp4", "-59.mp4")
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", mp4, "-t", "59", "-af", "afade=t=out:st=57:d=2",
+                            "-c:v", "copy", cut], check=True)
+            os.replace(cut, mp4)
+        media = publish_story_file(mp4, rid, publish)
+    else:
+        urls = hosting.publish([(mp4, f"reels/{rid}.mp4")])
+        if not wait_until_reachable(urls[f"reels/{rid}.mp4"], timeout=300):
+            raise RuntimeError("video is not reachable on GitHub Pages")
+        from . import igapi
+        media = igapi.publish_reel(urls[f"reels/{rid}.mp4"], caption, share_to_feed=False)
     st["palette"]["news"] = k + 1
     st.setdefault("posted_links", []).append(spec["link"])
     if vid:

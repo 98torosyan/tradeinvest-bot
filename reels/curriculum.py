@@ -6,8 +6,14 @@ PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "content", "curr
 BEAT_KINDS = {"hero", "broll", "card", "compare", "checklist", "chart", "math"}
 
 
+HITS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "content", "hits.json")
+
+
 def load():
-    with open(PATH, encoding="utf-8") as f:
+    """The active content: standalone trading Reels (hits) or the old module course."""
+    from . import settings
+    path = HITS_PATH if getattr(settings, "CONTENT_MODE", "course") == "hits" else PATH
+    with open(path, encoding="utf-8") as f:
         return json.load(f)
 
 

@@ -38,7 +38,7 @@ def build(cur, state, out_dir):
             t = html.escape(l["title"])
             items.append(f'<li class="done"><a href="{html.escape(p["permalink"])}">{t}</a></li>' if p and p.get("permalink")
                          else f"<li>{t}</li>")
-        parts.append(f'<details{" open" if 0 < done < len(ls) or m["n"] == 1 else ""}><summary>Մոդուլ {m["n"]}. '
+        parts.append(f'<details{" open" if 0 < done < len(ls) or m["n"] == 1 else ""}><summary>{"" if cur.get("series") else "Մոդուլ " + str(m["n"]) + ". "}'
                      f'{html.escape(m["title"])}<span>{done}/{len(ls)}</span></summary><ol>{"".join(items)}</ol></details>')
     total = len(cur["lessons"])
     page = (f'<!doctype html><html lang="hy"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
