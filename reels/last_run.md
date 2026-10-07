@@ -1,3 +1,6 @@
+**2026-10-07 20:29** `lesson` ✅ published
+- ✅ H-001 «Մոմերը 10 վայրկյանում» published (55s, cta=send)
+---
 **2026-10-07 19:57** `chart` ✅ published
 - ✅ Story published
 ---
@@ -194,30 +197,3 @@
 ---
 **2026-10-05 19:54** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-05 18:25** `lesson` ✅ published
-- [pexels] clip 16629709 rejected by the content check
-- [pexels] using clip 28203566 for 'technology blue'
-- [pexels] clip 6266655 rejected by the content check
-- [pexels] clip 6266763 rejected by the content check
-- [pexels] clip 3827390 rejected by the content check
-- [pixabay] using clip pb8625 for 'money stack closeup'
-- [pexels] clip 33390334 rejected by the content check
-- [pixabay] clip pb20857 rejected by the content check
-- [pixabay] clip pb20459 rejected by the content check
-- [pixabay] download pb230033 failed: file too large
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] clip pb86350 rejected by the content check
-- [pixabay] using clip pb19799 for 'city skyline night'
-- [pixabay] download pb27051 failed: file too large
-- [pixabay] download pb88802 failed: file too large
-- [pixabay] download pb19989 failed: file too large
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] clip pb86350 rejected by the content check
-- [pixabay] clip pb267744 rejected by the content check
-- [pexels] using clip 34578211 for 'abstract blue light'
-- ✅ M2-16 «USDT և quote currency» published (34s, cta=send)
