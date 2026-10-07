@@ -1,3 +1,9 @@
+**2026-10-07 16:58** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 36 items
+- ✅ News published: Ռուսաստանում գրանցել են առաջին կրիպտոբիրժաները
+---
 **2026-10-07 13:53** `quiz` ✅ published
 - ✅ Quiz Story from M2-21
 ---
@@ -221,22 +227,3 @@
 - [pexels] clip 35552568 rejected by the content check
 - [pexels] using clip 29025309 for 'city skyline night'
 - ✅ News published: OKX-ը և NYSE-ի սեփականատերը ստեղծում են թոքենիզացված հարթակ
----
-**2026-10-05 15:21** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] using clip 39437818 for 'city skyline night'
-- [pexels] clip 16629709 rejected by the content check
-- [pexels] using clip 28483048 for 'technology blue'
-- [pexels] clip 39463971 rejected by the content check
-- [pexels] using clip 35160268 for 'digital network technology'
-- [pexels] using clip 39481172 for 'city skyline day'
-- [pixabay] download pb27051 failed: file too large
-- [pixabay] download pb88802 failed: file too large
-- [pixabay] download pb19989 failed: file too large
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] clip pb86350 rejected by the content check
-- [pixabay] using clip pb287386 for 'city skyline night'
-- ✅ M2-15 «Trading Pair» published (36s, cta=send)
-- 📚 Մնացել է 9 պատրաստի սցենար։
