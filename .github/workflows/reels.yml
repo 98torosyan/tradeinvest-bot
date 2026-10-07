@@ -1,18 +1,17 @@
 name: TradeInvest Reels
 
 # UTC times. Yerevan = UTC+4 (no DST). Odd minutes on purpose (GitHub delays runs on the hour).
-#   08:37 market story | 09:07 12:07 15:07 18:07 21:07 lessons | 10:37 16:37 20:07 news
-#   13:37 quiz story   | 19:37 BTC 24h story | Sunday 11:37 weekly carousel | Saturday 10:13 music candidates
+#   08:37 market story | 09:07 14:07 20:07 trading Reels | 10:37 16:37 22:07 news Stories
+#   13:37 quiz story   | 19:37 BTC 24h story | Sunday 11:37 weekly carousel
 on:
   schedule:
     - cron: "37 4 * * *"
-    - cron: "7 5,8,11,14,17 * * *"
+    - cron: "7 5,10,16 * * *"
     - cron: "37 6,12 * * *"
-    - cron: "7 16 * * *"
+    - cron: "7 18 * * *"
     - cron: "37 9 * * *"
     - cron: "37 15 * * *"
     - cron: "37 7 * * 0"
-    - cron: "13 6 * * 6"
   workflow_dispatch:
     inputs:
       kind:
@@ -46,11 +45,10 @@ jobs:
           if [ -z "$KIND" ]; then
             case "${{ github.event.schedule }}" in
               "37 4 * * *") KIND=story ;;
-              "7 5,8,11,14,17 * * *") KIND=lesson ;;
+              "7 5,10,16 * * *") KIND=lesson ;;
               "37 9 * * *") KIND=quiz ;;
               "37 15 * * *") KIND=chart ;;
               "37 7 * * 0") KIND=carousel ;;
-              "13 6 * * 6") KIND=music ;;
               *) KIND=news ;;
             esac
           fi
