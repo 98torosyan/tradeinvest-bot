@@ -1,3 +1,10 @@
+**2026-10-07 10:56** `news` ✅ qa-fail
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 37 items
+- ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական ստուգումը չանցավ. մլն, պահառու, պահառուն, ցուցակել, ցուցակման, ցուցակվելու
+Եթե բառերը ճիշտ են, գրիր՝ /allow մլն պահառու պահառուն ցուցակել ցուցակման ցուցակվելու
+---
 **2026-10-07 09:21** `lesson` ✅ published
 - [pexels] using clip 11335976 for 'city skyline night'
 - [pexels] using clip 29205869 for 'city financial district'
@@ -246,10 +253,3 @@
 - [pexels] using clip 15439746 for 'abstract blue light'
 - ✅ M2-14 «Ինչպես ընտրել բորսա» published (32s, cta=send)
 - ✅ teaser Story published
----
-**2026-10-05 10:59** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 39 items
-- [pexels] using clip 39625195 for 'abstract blue light server room'
-- ✅ News published: OKX-ը և NYSE-ի մայր ընկերությունը հայտ են ներկայացրել
