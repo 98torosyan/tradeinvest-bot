@@ -1,3 +1,17 @@
+**2026-10-07 09:21** `lesson` ✅ published
+- [pexels] using clip 11335976 for 'city skyline night'
+- [pexels] using clip 29205869 for 'city financial district'
+- [pexels] clip 16629709 rejected by the content check
+- [pexels] download 28494561 failed: file too large
+- [pixabay] clip pb46688 rejected by the content check
+- [pixabay] clip pb13370 rejected by the content check
+- [pixabay] using clip pb3463 for 'technology blue'
+- [pexels] clip 33390334 rejected by the content check
+- [pexels] using clip 35099110 for 'bank vault door'
+- [pexels] using clip 35090395 for 'abstract light bokeh'
+- ✅ M2-23 «Հարկեր և կարգավորում» published (35s, cta=send)
+- 📚 Մնացել է 1 պատրաստի սցենար։
+---
 **2026-10-07 08:55** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7818.93}
@@ -239,18 +253,3 @@
 - [news] https://decrypt.co/feed: 39 items
 - [pexels] using clip 39625195 for 'abstract blue light server room'
 - ✅ News published: OKX-ը և NYSE-ի մայր ընկերությունը հայտ են ներկայացրել
----
-**2026-10-05 09:27** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] using clip 30175521 for 'city skyline night'
-- [pexels] using clip 35163081 for 'technology network connection'
-- [pexels] using clip 15886614 for 'technology blue'
-- [pexels] using clip 7318813 for 'bank vault door'
-- [pixabay] download pb27051 failed: file too large
-- [pixabay] download pb88802 failed: file too large
-- [pixabay] download pb19989 failed: file too large
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] using clip pb204326 for 'city skyline night'
-- ✅ M2-13 «Բորսայի կառուցվածքը» published (33s, cta=send)

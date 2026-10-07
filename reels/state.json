@@ -1,5 +1,5 @@
 {
- "course_index": 44,
+ "course_index": 45,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -341,6 +341,13 @@
    "date": "2026-10-06",
    "hour": 21,
    "cta": "save"
+  },
+  "M2-23": {
+   "media": "17890127766683117",
+   "permalink": "https://www.instagram.com/reel/DeLm9TKmxiO/",
+   "date": "2026-10-07",
+   "hour": 9,
+   "cta": "send"
   }
  },
  "palette": {
@@ -374,11 +381,6 @@
   "https://cointelegraph.com/news/paxos-3b-usdg-stablecoin-launches-arbitrum?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
-  34516347,
-  4565572,
-  30747149,
-  "pb9490",
-  5473802,
   35510513,
   36628009,
   37676204,
@@ -453,7 +455,12 @@
   "pb109146",
   "pb13067",
   35590093,
-  39322559
+  39322559,
+  11335976,
+  29205869,
+  "pb3463",
+  35099110,
+  35090395
  ],
  "bandit": {
   "cta": {
@@ -477,7 +484,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "save",
+ "last_cta": "send",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -919,11 +926,12 @@
   "7944932.mp4": true,
   "7944932.mp4:face": false,
   "35590093.mp4": true,
-  "35590093.mp4:face": false
+  "35590093.mp4:face": false,
+  "29205869.mp4": true,
+  "29205869.mp4:face": false
  },
  "music_bag": {
   "lesson": [
-   "user_the-mountain-finance-background-449885.mp3",
    "user_momotmusic-inspiring-reels-406484.mp3",
    "user_starostin-investment-finance-trading-mon.mp3"
   ],
@@ -931,7 +939,7 @@
   "story": []
  },
  "music_last": {
-  "lesson": "user_soundsurfer-trading-254548.mp3",
+  "lesson": "user_the-mountain-finance-background-449885.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -1008,11 +1016,11 @@
   "user_momotmusic-inspiring-reels-406484.mp3": 20,
   "user_the-mountain-tech-corporate-593075.mp3": 5,
   "story_mixkit-electropop-870.mp3": 21,
-  "user_the-mountain-finance-background-449885.mp3": 4,
+  "user_the-mountain-finance-background-449885.mp3": 5,
   "user_starostin-investment-finance-trading-mon.mp3": 4,
   "user_apalonbeats-finance-money-trading-invest.mp3": 5,
   "user_the-mountain-market-systems-146118.mp3": 5,
   "user_soundsurfer-trading-254548.mp3": 5
  },
- "low_alert": "2026-10-06"
+ "low_alert": "2026-10-07"
 }
