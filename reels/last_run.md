@@ -1,3 +1,6 @@
+**2026-10-08 13:54** `quiz` ✅ published
+- ✅ Quiz Story from H-001
+---
 **2026-10-08 10:58** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -178,8 +181,3 @@
 - [pixabay] using clip pb251083 for 'city skyline night'
 - ✅ M2-18 «Bid, Ask և Spread» published (29s, cta=save)
 - 📚 Մնացել է 6 պատրաստի սցենար։
----
-**2026-10-06 08:51** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7773.95}
-- ✅ Story published
