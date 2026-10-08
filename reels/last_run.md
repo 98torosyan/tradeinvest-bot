@@ -1,3 +1,7 @@
+**2026-10-08 14:27** `lesson` ✅ published
+- [qa warning] motion-graphics share 28% < 40%
+- ✅ H-003 «Liquidation-ի շղթա» published (57s, cta=send)
+---
 **2026-10-08 13:54** `quiz` ✅ published
 - ✅ Quiz Story from H-001
 ---
@@ -159,25 +163,3 @@
 - [pexels] clip 39481319 rejected by the content check
 - [pexels] using clip 14300758 for 'city skyline night'
 - ✅ News published: Stripe-ը ընդլայնում է stablecoin քարտերը
----
-**2026-10-06 09:20** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] using clip 35464509 for 'city skyline night'
-- [pexels] clip 36108468 rejected by the content check
-- [pexels] clip 35972076 rejected by the content check
-- [pexels] clip 34381274 rejected by the content check
-- [pixabay] using clip pb3626 for 'people shopping crowd'
-- [pexels] using clip 8540540 for 'farmers market stalls'
-- [pexels] clip 16629709 rejected by the content check
-- [pexels] download 28494561 failed: file too large
-- [pexels] using clip 36726052 for 'technology blue'
-- [pixabay] download pb27051 failed: file too large
-- [pixabay] download pb88802 failed: file too large
-- [pixabay] download pb19989 failed: file too large
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] clip pb86350 rejected by the content check
-- [pixabay] using clip pb251083 for 'city skyline night'
-- ✅ M2-18 «Bid, Ask և Spread» published (29s, cta=save)
-- 📚 Մնացել է 6 պատրաստի սցենար։
