@@ -1,3 +1,6 @@
+**2026-10-08 20:48** `lesson` ✅ published
+- ✅ H-004 «RSI-ը պարզ լեզվով» published (46s, cta=send)
+---
 **2026-10-08 19:55** `chart` ✅ published
 - ✅ Story published
 ---
@@ -143,6 +146,3 @@
 - [pexels] download 28494561 failed: file too large
 - [pexels] using clip 36644496 for 'abstract blue light'
 - ✅ M2-20 «Limit Order» published (35s, cta=send)
----
-**2026-10-06 13:52** `quiz` ✅ published
-- ✅ Quiz Story from M2-15
