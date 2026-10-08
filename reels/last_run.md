@@ -1,3 +1,9 @@
+**2026-10-08 10:58** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 57 items
+- ✅ News published: Tether-ը համագործակցում է Ղազախստանի ԿԲ-ի հետ
+---
 **2026-10-08 09:26** `lesson` ✅ published
 - ✅ H-002 «FOMO» published (49s, cta=send)
 ---
@@ -177,21 +183,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7773.95}
 - ✅ Story published
----
-**2026-10-05 21:19** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] using clip 34382888 for 'city skyline night'
-- [pexels] using clip 18979105 for 'city lights night'
-- [pexels] clip 16629709 rejected by the content check
-- [pexels] download 28494561 failed: file too large
-- [pexels] using clip 26056271 for 'technology blue'
-- [pexels] using clip 6689107 for 'chess board closeup'
-- [pixabay] download pb27051 failed: file too large
-- [pixabay] download pb88802 failed: file too large
-- [pixabay] download pb19989 failed: file too large
-- [pexels] clip 39481319 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] clip pb86350 rejected by the content check
-- [pixabay] using clip pb42489 for 'city skyline night'
-- ✅ M2-17 «Ի՞նչ է պոզիցիան» published (36s, cta=send)
-- ✅ teaser Story published
