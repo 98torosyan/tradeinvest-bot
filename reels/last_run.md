@@ -1,3 +1,9 @@
+**2026-10-08 22:29** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 57 items
+- ✅ News published: ԵՄ կարգավորողը պահանջում է հեռացնել չարտոնված stablecoin-ները
+---
 **2026-10-08 20:48** `lesson` ✅ published
 - ✅ H-004 «RSI-ը պարզ լեզվով» published (46s, cta=send)
 ---
@@ -123,26 +129,3 @@
 - [pexels] using clip 9620654 for 'ocean waves'
 - [pexels] using clip 39322558 for 'abstract light bokeh'
 - ✅ M2-21 «Stop Order» published (35s, cta=question)
----
-**2026-10-06 15:19** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pexels] using clip 28901427 for 'city skyline night'
-- [pexels] using clip 8758291 for 'chess board closeup'
-- [pexels] clip 16629709 rejected by the content check
-- [pexels] download 28494561 failed: file too large
-- [pixabay] clip pb46688 rejected by the content check
-- [pixabay] clip pb13370 rejected by the content check
-- [pixabay] using clip pb2526 for 'technology blue'
-- [pexels] using clip 7703941 for 'hourglass sand'
-- [pixabay] download pb27051 failed: file too large
-- [pixabay] download pb88802 failed: file too large
-- [pixabay] download pb19989 failed: file too large
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] clip pb86350 rejected by the content check
-- [pixabay] clip pb267744 rejected by the content check
-- [pexels] download 28494561 failed: file too large
-- [pexels] using clip 36644496 for 'abstract blue light'
-- ✅ M2-20 «Limit Order» published (35s, cta=send)
