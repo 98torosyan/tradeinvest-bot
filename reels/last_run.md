@@ -1,3 +1,8 @@
+**2026-10-08 08:53** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7801.77}
+- ✅ Story published
+---
 **2026-10-07 20:29** `lesson` ✅ published
 - ✅ H-001 «Մոմերը 10 վայրկյանում» published (55s, cta=send)
 ---
@@ -194,6 +199,3 @@
 - [news] https://decrypt.co/feed: 38 items
 - [pexels] using clip 9945022 for 'abstract blue light server room'
 - ✅ News published: OKX-ը և NYSE-ի սեփականատերը նախատեսում են 24/7 թոքենիզացված բաժնետոմսերի առևտուր
----
-**2026-10-05 19:54** `chart` ✅ published
-- ✅ Story published
