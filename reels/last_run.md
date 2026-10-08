@@ -1,3 +1,6 @@
+**2026-10-08 19:55** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-08 16:58** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -143,21 +146,3 @@
 ---
 **2026-10-06 13:52** `quiz` ✅ published
 - ✅ Quiz Story from M2-15
----
-**2026-10-06 12:21** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] clip pb337459 rejected by the content check
-- [pixabay] clip pb86350 rejected by the content check
-- [pixabay] clip pb267744 rejected by the content check
-- [pexels] download 28494561 failed: file too large
-- [pexels] using clip 36627993 for 'abstract blue light'
-- [pexels] clip 30029522 rejected by the content check
-- [pexels] clip 11372918 rejected by the content check
-- [pexels] using clip 31455842 for 'fast traffic timelapse'
-- [pexels] using clip 34232317 for 'city lights night'
-- [pexels] download 38623894 failed: file too large
-- [pexels] using clip 35584996 for 'narrow mountain road'
-- [pexels] using clip 35072002 for 'abstract light bokeh'
-- ✅ M2-19 «Market Order» published (33s, cta=send)
-- ✅ teaser Story published
