@@ -1,3 +1,9 @@
+**2026-10-08 16:58** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 35 items
+- ✅ News published: Հունաստանը նախատեսում է մտցնել 10% հարկ
+---
 **2026-10-08 14:27** `lesson` ✅ published
 - [qa warning] motion-graphics share 28% < 40%
 - ✅ H-003 «Liquidation-ի շղթա» published (57s, cta=send)
@@ -155,11 +161,3 @@
 - [pexels] using clip 35072002 for 'abstract light bokeh'
 - ✅ M2-19 «Market Order» published (33s, cta=send)
 - ✅ teaser Story published
----
-**2026-10-06 10:56** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] using clip 14300758 for 'city skyline night'
-- ✅ News published: Stripe-ը ընդլայնում է stablecoin քարտերը
