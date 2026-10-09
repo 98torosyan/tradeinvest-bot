@@ -1,3 +1,7 @@
+**2026-10-09 20:25** `lesson` ✅ published
+- [qa warning] motion-graphics share 40% < 40%
+- ✅ H-007 «Revenge trading» published (45s, cta=send)
+---
 **2026-10-09 19:54** `chart` ✅ published
 - ✅ Story published
 ---
@@ -80,17 +84,3 @@
 ---
 **2026-10-07 13:53** `quiz` ✅ published
 - ✅ Quiz Story from M2-21
----
-**2026-10-07 12:23** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] using clip pb336755 for 'city skyline night'
-- [pexels] clip 26586643 rejected by the content check
-- [pexels] using clip 26586645 for 'padlock closeup'
-- [pexels] using clip 31410686 for 'dark storm clouds'
-- [pexels] using clip 35158244 for 'technology network connection'
-- [pexels] using clip 34993447 for 'notebook handwriting pen'
-- [pexels] using clip 4565572 for 'abstract light bokeh'
-- [qa warning] motion-graphics share 39% < 40%
-- ✅ M2-24 «Ամփոփում + տնային առաջադրանք» published (41s, cta=send)
-- ✅ teaser Story published
