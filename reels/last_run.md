@@ -1,3 +1,9 @@
+**2026-10-09 10:58** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 37 items
+- ✅ News published: Թաիլանդը հաստատել է Bitcoin և Ether ETF-ների կանոնները
+---
 **2026-10-09 09:26** `lesson` ✅ published
 - ✅ H-005 «1%-ի կանոնը» published (51s, cta=send)
 ---
@@ -117,10 +123,3 @@
 - [pexels] using clip 39322559 for 'abstract light bokeh'
 - ✅ M2-22 «Միջնորդավճարներ» published (35s, cta=save)
 - ✅ teaser Story published
----
-**2026-10-06 20:28** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 37 items
-- [pexels] using clip 15439741 for 'abstract blue light server room'
-- ✅ News published: Paxos-ի USDG-ն գործարկվել է Arbitrum-ում

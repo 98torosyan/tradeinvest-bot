@@ -393,7 +393,7 @@
   }
  },
  "palette": {
-  "news": 22
+  "news": 23
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -424,7 +424,8 @@
   "https://cointelegraph.com/news/russia-first-crypto-platforms-register-new-law?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://decrypt.co/380347/tether-kazakhstan-central-bank-stablecoin-tokenized-assets",
   "https://cointelegraph.com/news/greece-capital-gains-tax-cryptocurrencies?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://www.coindesk.com/policy/2026/10/08/eu-securities-regulator-gives-crypto-platforms-3-months-to-remove-unauthorized-stablecoins"
+  "https://www.coindesk.com/policy/2026/10/08/eu-securities-regulator-gives-crypto-platforms-3-months-to-remove-unauthorized-stablecoins",
+  "https://cointelegraph.com/news/thailand-finalizes-rules-paving-way-for-bitcoin-ether-etfs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
   17238361,
@@ -619,6 +620,10 @@
   {
    "media": "18461943142190873",
    "date": "2026-10-08"
+  },
+  {
+   "media": "18631301449049797",
+   "date": "2026-10-09"
   }
  ],
  "quiz_count": 10,
@@ -1076,7 +1081,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 25,
+  "user_momotmusic-inspiring-reels-406484.mp3": 26,
   "user_the-mountain-tech-corporate-593075.mp3": 5,
   "story_mixkit-electropop-870.mp3": 27,
   "user_the-mountain-finance-background-449885.mp3": 6,
