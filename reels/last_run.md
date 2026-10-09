@@ -1,3 +1,6 @@
+**2026-10-09 14:27** `lesson` ✅ published
+- ✅ H-006 «Support» published (55s, cta=question)
+---
 **2026-10-09 13:53** `quiz` ✅ published
 - ✅ Quiz Story from H-003
 ---
@@ -103,8 +106,3 @@
 - [pexels] using clip 35090395 for 'abstract light bokeh'
 - ✅ M2-23 «Հարկեր և կարգավորում» published (35s, cta=send)
 - 📚 Մնացել է 1 պատրաստի սցենար։
----
-**2026-10-07 08:55** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7818.93}
-- ✅ Story published
