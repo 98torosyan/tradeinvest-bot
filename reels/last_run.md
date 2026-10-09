@@ -1,3 +1,6 @@
+**2026-10-09 13:53** `quiz` ✅ published
+- ✅ Quiz Story from H-003
+---
 **2026-10-09 10:58** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -105,21 +108,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7818.93}
 - ✅ Story published
----
-**2026-10-06 21:18** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pexels] clip 35552568 rejected by the content check
-- [pixabay] using clip pb3138 for 'city skyline night'
-- [pexels] clip 6266655 rejected by the content check
-- [pexels] clip 3827390 rejected by the content check
-- [pexels] clip 6266763 rejected by the content check
-- [pixabay] using clip pb109146 for 'money stack closeup'
-- [pexels] clip 16629709 rejected by the content check
-- [pexels] download 28494561 failed: file too large
-- [pixabay] clip pb46688 rejected by the content check
-- [pixabay] clip pb13370 rejected by the content check
-- [pixabay] using clip pb13067 for 'technology blue'
-- [pexels] using clip 35590093 for 'hourglass sand'
-- [pexels] using clip 39322559 for 'abstract light bokeh'
-- ✅ M2-22 «Միջնորդավճարներ» published (35s, cta=save)
-- ✅ teaser Story published
