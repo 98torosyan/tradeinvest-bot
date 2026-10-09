@@ -1,3 +1,9 @@
+**2026-10-09 16:56** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 37 items
+- ✅ News published: Թաիլանդը բացում է դռները Bitcoin-ի և Ether-ի ETF-ների առաջ
+---
 **2026-10-09 14:27** `lesson` ✅ published
 - ✅ H-006 «Support» published (55s, cta=question)
 ---
@@ -92,17 +98,3 @@
 - [news] https://decrypt.co/feed: 37 items
 - ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական ստուգումը չանցավ. մլն, պահառու, պահառուն, ցուցակել, ցուցակման, ցուցակվելու
 Եթե բառերը ճիշտ են, գրիր՝ /allow մլն պահառու պահառուն ցուցակել ցուցակման ցուցակվելու
----
-**2026-10-07 09:21** `lesson` ✅ published
-- [pexels] using clip 11335976 for 'city skyline night'
-- [pexels] using clip 29205869 for 'city financial district'
-- [pexels] clip 16629709 rejected by the content check
-- [pexels] download 28494561 failed: file too large
-- [pixabay] clip pb46688 rejected by the content check
-- [pixabay] clip pb13370 rejected by the content check
-- [pixabay] using clip pb3463 for 'technology blue'
-- [pexels] clip 33390334 rejected by the content check
-- [pexels] using clip 35099110 for 'bank vault door'
-- [pexels] using clip 35090395 for 'abstract light bokeh'
-- ✅ M2-23 «Հարկեր և կարգավորում» published (35s, cta=send)
-- 📚 Մնացել է 1 պատրաստի սցենար։
