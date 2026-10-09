@@ -1,3 +1,6 @@
+**2026-10-09 19:54** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-09 16:56** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -91,10 +94,3 @@
 - [qa warning] motion-graphics share 39% < 40%
 - ✅ M2-24 «Ամփոփում + տնային առաջադրանք» published (41s, cta=send)
 - ✅ teaser Story published
----
-**2026-10-07 10:56** `news` ✅ qa-fail
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 37 items
-- ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական ստուգումը չանցավ. մլն, պահառու, պահառուն, ցուցակել, ցուցակման, ցուցակվելու
-Եթե բառերը ճիշտ են, գրիր՝ /allow մլն պահառու պահառուն ցուցակել ցուցակման ցուցակվելու
