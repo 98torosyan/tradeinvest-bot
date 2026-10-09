@@ -1,3 +1,8 @@
+**2026-10-09 08:53** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7765.36}
+- ✅ Story published
+---
 **2026-10-08 22:29** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -119,13 +124,3 @@
 ---
 **2026-10-06 20:01** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-06 18:22** `lesson` ✅ published
-- [pexels] clip 39481319 rejected by the content check
-- [pixabay] using clip pb3134 for 'city skyline night'
-- [pexels] using clip 7944932 for 'hourglass sand'
-- [pexels] clip 26586643 rejected by the content check
-- [pexels] using clip 26586646 for 'padlock closeup'
-- [pexels] using clip 9620654 for 'ocean waves'
-- [pexels] using clip 39322558 for 'abstract light bokeh'
-- ✅ M2-21 «Stop Order» published (35s, cta=question)
