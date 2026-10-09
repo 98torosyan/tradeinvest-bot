@@ -1,3 +1,6 @@
+**2026-10-09 09:26** `lesson` ✅ published
+- ✅ H-005 «1%-ի կանոնը» published (51s, cta=send)
+---
 **2026-10-09 08:53** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7765.36}
@@ -121,6 +124,3 @@
 - [news] https://decrypt.co/feed: 37 items
 - [pexels] using clip 15439741 for 'abstract blue light server room'
 - ✅ News published: Paxos-ի USDG-ն գործարկվել է Arbitrum-ում
----
-**2026-10-06 20:01** `chart` ✅ published
-- ✅ Story published
