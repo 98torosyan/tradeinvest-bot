@@ -1,3 +1,9 @@
+**2026-10-09 22:28** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- ✅ News published: Ledger-ը հետաքննում է $86 մլն-ի հնարավոր հափշտակությունը
+---
 **2026-10-09 20:25** `lesson` ✅ published
 - [qa warning] motion-graphics share 40% < 40%
 - ✅ H-007 «Revenge trading» published (45s, cta=send)
@@ -81,6 +87,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 36 items
 - ✅ News published: Ռուսաստանում գրանցել են առաջին կրիպտոբիրժաները
----
-**2026-10-07 13:53** `quiz` ✅ published
-- ✅ Quiz Story from M2-21
