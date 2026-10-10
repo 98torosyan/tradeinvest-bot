@@ -1,3 +1,6 @@
+**2026-10-10 14:23** `lesson` ✅ published
+- ✅ H-009 «Moving Average» published (43s, cta=send)
+---
 **2026-10-10 13:50** `quiz` ✅ published
 - ✅ Quiz Story from H-007
 ---
@@ -85,6 +88,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 57 items
 - ✅ News published: Tether-ը համագործակցում է Ղազախստանի ԿԲ-ի հետ
----
-**2026-10-08 09:26** `lesson` ✅ published
-- ✅ H-002 «FOMO» published (49s, cta=send)
