@@ -1,3 +1,9 @@
+**2026-10-10 22:26** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- ✅ News published: Sam Altman-ի աջակցությամբ Bitcoin ապահովագրողը $37.5 մլն է ներգրավել
+---
 **2026-10-10 20:23** `lesson` ✅ published
 - ✅ H-010 «R/R. ռիսկ և պարգև» published (49s, cta=send)
 ---
@@ -81,9 +87,3 @@
 ---
 **2026-10-08 19:55** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-08 16:58** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 35 items
-- ✅ News published: Հունաստանը նախատեսում է մտցնել 10% հարկ
