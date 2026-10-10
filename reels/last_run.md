@@ -1,3 +1,6 @@
+**2026-10-10 19:50** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-10 16:54** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -85,6 +88,3 @@
 **2026-10-08 14:27** `lesson` ✅ published
 - [qa warning] motion-graphics share 28% < 40%
 - ✅ H-003 «Liquidation-ի շղթա» published (57s, cta=send)
----
-**2026-10-08 13:54** `quiz` ✅ published
-- ✅ Quiz Story from H-001
