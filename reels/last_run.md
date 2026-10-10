@@ -1,3 +1,8 @@
+**2026-10-10 08:53** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7811.54}
+- ✅ Story published
+---
 **2026-10-09 22:28** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -81,9 +86,3 @@
 ---
 **2026-10-07 19:57** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-07 16:58** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 36 items
-- ✅ News published: Ռուսաստանում գրանցել են առաջին կրիպտոբիրժաները
