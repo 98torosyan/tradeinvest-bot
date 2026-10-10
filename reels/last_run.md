@@ -1,3 +1,9 @@
+**2026-10-10 10:55** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- ✅ News published: Ledger-ը հետաքննում է 87 մլն դոլարի հնարավոր գողությունը
+---
 **2026-10-10 09:23** `lesson` ✅ published
 - [qa warning] motion-graphics share 29% < 40%
 - ✅ H-008 «Ինչու է գինը շարժվում» published (57s, cta=save)
@@ -84,6 +90,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7801.77}
 - ✅ Story published
----
-**2026-10-07 20:29** `lesson` ✅ published
-- ✅ H-001 «Մոմերը 10 վայրկյանում» published (55s, cta=send)

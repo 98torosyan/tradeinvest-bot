@@ -414,7 +414,7 @@
   }
  },
  "palette": {
-  "news": 25
+  "news": 26
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -448,7 +448,8 @@
   "https://www.coindesk.com/policy/2026/10/08/eu-securities-regulator-gives-crypto-platforms-3-months-to-remove-unauthorized-stablecoins",
   "https://cointelegraph.com/news/thailand-finalizes-rules-paving-way-for-bitcoin-ether-etfs?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://www.coindesk.com/policy/2026/10/09/thailand-opens-door-to-locally-listed-bitcoin-and-ether-etfs",
-  "https://cointelegraph.com/news/ledger-investigates-fund-losses-linked-to-southeast-asian-reseller-warns-users?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  "https://cointelegraph.com/news/ledger-investigates-fund-losses-linked-to-southeast-asian-reseller-warns-users?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://decrypt.co/380582/ledger-probes-87m-theft-crypto-wallet-reseller"
  ],
  "used_broll": [
   17238361,
@@ -655,6 +656,10 @@
   {
    "media": "18435352747180978",
    "date": "2026-10-09"
+  },
+  {
+   "media": "18123910732787465",
+   "date": "2026-10-10"
   }
  ],
  "quiz_count": 11,
@@ -1108,7 +1113,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 29,
+  "user_momotmusic-inspiring-reels-406484.mp3": 30,
   "user_the-mountain-tech-corporate-593075.mp3": 6,
   "story_mixkit-electropop-870.mp3": 30,
   "user_the-mountain-finance-background-449885.mp3": 6,
