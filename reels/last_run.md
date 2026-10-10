@@ -1,3 +1,9 @@
+**2026-10-10 16:54** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- ✅ News published: Celsius-ի հիմնադիրն ընդմիշտ հեռացվել է կրիպտոյի ոլորտից
+---
 **2026-10-10 14:23** `lesson` ✅ published
 - ✅ H-009 «Moving Average» published (43s, cta=send)
 ---
@@ -82,9 +88,3 @@
 ---
 **2026-10-08 13:54** `quiz` ✅ published
 - ✅ Quiz Story from H-001
----
-**2026-10-08 10:58** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 57 items
-- ✅ News published: Tether-ը համագործակցում է Ղազախստանի ԿԲ-ի հետ
