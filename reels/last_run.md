@@ -1,3 +1,6 @@
+**2026-10-10 13:50** `quiz` ✅ published
+- ✅ Quiz Story from H-007
+---
 **2026-10-10 10:55** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -85,8 +88,3 @@
 ---
 **2026-10-08 09:26** `lesson` ✅ published
 - ✅ H-002 «FOMO» published (49s, cta=send)
----
-**2026-10-08 08:53** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7801.77}
-- ✅ Story published
