@@ -1,3 +1,7 @@
+**2026-10-10 09:23** `lesson` ✅ published
+- [qa warning] motion-graphics share 29% < 40%
+- ✅ H-008 «Ինչու է գինը շարժվում» published (57s, cta=save)
+---
 **2026-10-10 08:53** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7811.54}
@@ -83,6 +87,3 @@
 ---
 **2026-10-07 20:29** `lesson` ✅ published
 - ✅ H-001 «Մոմերը 10 վայրկյանում» published (55s, cta=send)
----
-**2026-10-07 19:57** `chart` ✅ published
-- ✅ Story published
