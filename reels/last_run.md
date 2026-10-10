@@ -1,3 +1,6 @@
+**2026-10-10 20:23** `lesson` ✅ published
+- ✅ H-010 «R/R. ռիսկ և պարգև» published (49s, cta=send)
+---
 **2026-10-10 19:50** `chart` ✅ published
 - ✅ Story published
 ---
@@ -84,7 +87,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 35 items
 - ✅ News published: Հունաստանը նախատեսում է մտցնել 10% հարկ
----
-**2026-10-08 14:27** `lesson` ✅ published
-- [qa warning] motion-graphics share 28% < 40%
-- ✅ H-003 «Liquidation-ի շղթա» published (57s, cta=send)
