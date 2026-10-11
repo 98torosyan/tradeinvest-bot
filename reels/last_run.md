@@ -1,3 +1,9 @@
+**2026-10-11 10:56** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- ✅ News published: XRP Ledger-ում ուղղվել է 10 տարվա լուրջ սխալ
+---
 **2026-10-11 09:24** `lesson` ✅ published
 - ✅ H-011 «Breakout, թե՞ fakeout» published (41s, cta=save)
 ---
@@ -83,9 +89,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7765.36}
 - ✅ Story published
----
-**2026-10-08 22:29** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 57 items
-- ✅ News published: ԵՄ կարգավորողը պահանջում է հեռացնել չարտոնված stablecoin-ները
