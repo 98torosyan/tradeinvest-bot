@@ -1,3 +1,6 @@
+**2026-10-11 11:47** `carousel` ❌ failed
+- ❌ carousel սխալ՝ InstagramPublishError: 17841424152621072/media_publish failed: {'error': {'message': 'Media ID is not available', 'type': 'OAuthException', 'code': 9007, 'error_subcode': 2207027, 'is_transient': False, 'error_user_title': 'Cannot Publish', 'error_user_msg': 'The media is not ready for publishing, please wait for a moment
+---
 **2026-10-11 10:56** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -84,8 +87,3 @@
 ---
 **2026-10-09 09:26** `lesson` ✅ published
 - ✅ H-005 «1%-ի կանոնը» published (51s, cta=send)
----
-**2026-10-09 08:53** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7765.36}
-- ✅ Story published
