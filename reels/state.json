@@ -361,91 +361,104 @@
    "permalink": "https://www.instagram.com/reel/DeMz4Q9iPyI/",
    "date": "2026-10-07",
    "hour": 20,
-   "cta": "send"
+   "cta": "send",
+   "insights_done": true
   },
   "H-002": {
    "media": "18166988515494102",
    "permalink": "https://www.instagram.com/reel/DeOMrr3APwI/",
    "date": "2026-10-08",
    "hour": 9,
-   "cta": "send"
+   "cta": "send",
+   "insights_done": true
   },
   "H-003": {
    "media": "18106805654360480",
    "permalink": "https://www.instagram.com/reel/DeOvaLVAmkD/",
    "date": "2026-10-08",
    "hour": 14,
-   "cta": "send"
+   "cta": "send",
+   "insights_done": true
   },
   "H-004": {
    "media": "18139900618714322",
    "permalink": "https://www.instagram.com/reel/DeParxyG763/",
    "date": "2026-10-08",
    "hour": 20,
-   "cta": "send"
+   "cta": "send",
+   "insights_done": true
   },
   "H-005": {
    "media": "18134602012683476",
    "permalink": "https://www.instagram.com/reel/DeQxhgTH7th/",
    "date": "2026-10-09",
    "hour": 9,
-   "cta": "send"
+   "cta": "send",
+   "insights_done": true
   },
   "H-006": {
    "media": "17944396926344949",
    "permalink": "https://www.instagram.com/reel/DeRUDmzFXXg/",
    "date": "2026-10-09",
    "hour": 14,
-   "cta": "question"
+   "cta": "question",
+   "insights_done": true
   },
   "H-007": {
    "media": "17928447615422434",
    "permalink": "https://www.instagram.com/reel/DeR8rPuDNOe/",
    "date": "2026-10-09",
    "hour": 20,
-   "cta": "send"
+   "cta": "send",
+   "insights_done": true
   },
   "H-008": {
    "media": "18118315651978471",
    "permalink": "https://www.instagram.com/reel/DeTWO79jqpB/",
    "date": "2026-10-10",
    "hour": 9,
-   "cta": "save"
+   "cta": "save",
+   "insights_done": true
   },
   "H-009": {
    "media": "18125191583304209",
    "permalink": "https://www.instagram.com/reel/DeT3z4RgFAT/",
    "date": "2026-10-10",
    "hour": 14,
-   "cta": "send"
+   "cta": "send",
+   "insights_done": true
   },
   "H-010": {
    "media": "18015709964867019",
    "permalink": "https://www.instagram.com/reel/DeUhjY6Ds-7/",
    "date": "2026-10-10",
    "hour": 20,
-   "cta": "send"
+   "cta": "send",
+   "insights_done": true
   },
   "H-011": {
    "media": "18031861535897052",
    "permalink": "https://www.instagram.com/reel/DeV6gy-il3_/",
    "date": "2026-10-11",
    "hour": 9,
-   "cta": "save"
+   "cta": "save",
+   "insights_done": true
   },
   "H-012": {
    "media": "18161143018520783",
    "permalink": "https://www.instagram.com/reel/DeWc2MVDJEN/",
    "date": "2026-10-11",
    "hour": 14,
-   "cta": "send"
+   "cta": "send",
+   "insights_done": true
   },
   "H-013": {
    "media": "18128581312694775",
    "permalink": "https://www.instagram.com/reel/DeXGJfPlChS/",
    "date": "2026-10-11",
    "hour": 20,
-   "cta": "question"
+   "cta": "question",
+   "insights_done": true
   }
  },
  "palette": {
@@ -575,16 +588,16 @@
  "bandit": {
   "cta": {
    "save": [
-    1,
-    15
+    2,
+    16
    ],
    "question": [
     1,
-    10
+    12
    ],
    "send": [
-    4,
-    8
+    5,
+    16
    ]
   }
  },
