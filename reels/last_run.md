@@ -1,3 +1,9 @@
+**2026-10-11 16:55** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- ✅ News published: Ledger-ը հաստատել է սարքերի չարտոնված միջամտությունը
+---
 **2026-10-11 14:24** `lesson` ✅ published
 - ✅ H-012 «Առանց stop loss-ի» published (41s, cta=send)
 ---
@@ -81,6 +87,3 @@
 ---
 **2026-10-09 14:27** `lesson` ✅ published
 - ✅ H-006 «Support» published (55s, cta=question)
----
-**2026-10-09 13:53** `quiz` ✅ published
-- ✅ Quiz Story from H-003
