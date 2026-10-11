@@ -1,3 +1,6 @@
+**2026-10-11 13:51** `quiz` ✅ published
+- ✅ Quiz Story from H-008
+---
 **2026-10-11 11:47** `carousel` ❌ failed
 - ❌ carousel սխալ՝ InstagramPublishError: 17841424152621072/media_publish failed: {'error': {'message': 'Media ID is not available', 'type': 'OAuthException', 'code': 9007, 'error_subcode': 2207027, 'is_transient': False, 'error_user_title': 'Cannot Publish', 'error_user_msg': 'The media is not ready for publishing, please wait for a moment
 ---
@@ -84,6 +87,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 37 items
 - ✅ News published: Թաիլանդը հաստատել է Bitcoin և Ether ETF-ների կանոնները
----
-**2026-10-09 09:26** `lesson` ✅ published
-- ✅ H-005 «1%-ի կանոնը» published (51s, cta=send)
