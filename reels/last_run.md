@@ -1,3 +1,7 @@
+**2026-10-11 20:24** `lesson` ✅ published
+- [qa warning] motion-graphics share 32% < 40%
+- ✅ H-013 «Stop hunt» published (52s, cta=question)
+---
 **2026-10-11 19:53** `chart` ✅ published
 - ✅ Story published
 ---
@@ -81,9 +85,3 @@
 ---
 **2026-10-09 19:54** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-09 16:56** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 37 items
-- ✅ News published: Թաիլանդը բացում է դռները Bitcoin-ի և Ether-ի ETF-ների առաջ
