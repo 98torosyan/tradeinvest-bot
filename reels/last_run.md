@@ -1,3 +1,6 @@
+**2026-10-11 19:53** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-11 16:55** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -84,6 +87,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 37 items
 - ✅ News published: Թաիլանդը բացում է դռները Bitcoin-ի և Ether-ի ETF-ների առաջ
----
-**2026-10-09 14:27** `lesson` ✅ published
-- ✅ H-006 «Support» published (55s, cta=question)
