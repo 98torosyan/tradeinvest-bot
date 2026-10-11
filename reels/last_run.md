@@ -1,3 +1,6 @@
+**2026-10-11 14:24** `lesson` ✅ published
+- ✅ H-012 «Առանց stop loss-ի» published (41s, cta=send)
+---
 **2026-10-11 13:51** `quiz` ✅ published
 - ✅ Quiz Story from H-008
 ---
@@ -81,9 +84,3 @@
 ---
 **2026-10-09 13:53** `quiz` ✅ published
 - ✅ Quiz Story from H-003
----
-**2026-10-09 10:58** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 37 items
-- ✅ News published: Թաիլանդը հաստատել է Bitcoin և Ether ETF-ների կանոնները
