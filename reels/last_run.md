@@ -1,3 +1,6 @@
+**2026-10-11 09:24** `lesson` ✅ published
+- ✅ H-011 «Breakout, թե՞ fakeout» published (41s, cta=save)
+---
 **2026-10-11 08:52** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7811.54}
@@ -86,6 +89,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 57 items
 - ✅ News published: ԵՄ կարգավորողը պահանջում է հեռացնել չարտոնված stablecoin-ները
----
-**2026-10-08 20:48** `lesson` ✅ published
-- ✅ H-004 «RSI-ը պարզ լեզվով» published (46s, cta=send)
