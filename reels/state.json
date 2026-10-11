@@ -462,7 +462,7 @@
   }
  },
  "palette": {
-  "news": 30
+  "news": 31
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -501,7 +501,8 @@
   "https://cointelegraph.com/news/celsius-founder-alex-mashinsky-permanently-banned-from-crypto-industry-in-ny-settlement?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://decrypt.co/380633/sam-altman-backed-life-insurer-bitcoin-raise",
   "https://www.coindesk.com/tech/2026/10/10/xrp-ledger-patched-decade-old-bug-that-could-create-billions-of-dollars-in-xrp-from-nothing",
-  "https://cointelegraph.com/news/ledger-confirms-unauthorized-hardware-implant-losses-may-exceed-86m?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  "https://cointelegraph.com/news/ledger-confirms-unauthorized-hardware-implant-losses-may-exceed-86m?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://www.coindesk.com/business/2026/10/05/1-2-billion-apac-consumers-could-adopt-stablecoins-by-2031-according-to-visa"
  ],
  "used_broll": [
   17238361,
@@ -727,6 +728,10 @@
   },
   {
    "media": "18110795474138444",
+   "date": "2026-10-11"
+  },
+  {
+   "media": "18109657658604883",
    "date": "2026-10-11"
   }
  ],
@@ -1184,7 +1189,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 35,
+  "user_momotmusic-inspiring-reels-406484.mp3": 36,
   "user_the-mountain-tech-corporate-593075.mp3": 6,
   "story_mixkit-electropop-870.mp3": 35,
   "user_the-mountain-finance-background-449885.mp3": 7,

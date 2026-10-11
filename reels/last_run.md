@@ -1,3 +1,9 @@
+**2026-10-11 22:27** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- ✅ News published: Visa-ի հարցումը stablecoin-ների մասին
+---
 **2026-10-11 20:24** `lesson` ✅ published
 - [qa warning] motion-graphics share 32% < 40%
 - ✅ H-013 «Stop hunt» published (52s, cta=question)
@@ -82,6 +88,3 @@
 **2026-10-09 20:25** `lesson` ✅ published
 - [qa warning] motion-graphics share 40% < 40%
 - ✅ H-007 «Revenge trading» published (45s, cta=send)
----
-**2026-10-09 19:54** `chart` ✅ published
-- ✅ Story published
