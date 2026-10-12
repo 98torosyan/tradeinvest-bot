@@ -1,3 +1,8 @@
+**2026-10-12 08:57** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7811.54}
+- ✅ Story published
+---
 **2026-10-11 22:27** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -84,7 +89,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 38 items
 - ✅ News published: Ledger-ը հետաքննում է $86 մլն-ի հնարավոր հափշտակությունը
----
-**2026-10-09 20:25** `lesson` ✅ published
-- [qa warning] motion-graphics share 40% < 40%
-- ✅ H-007 «Revenge trading» published (45s, cta=send)
