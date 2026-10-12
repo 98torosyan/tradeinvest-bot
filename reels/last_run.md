@@ -1,3 +1,6 @@
+**2026-10-12 14:36** `lesson` ✅ published
+- ✅ H-015 «Drawdown-ի մաթեմատիկան» published (43s, cta=send)
+---
 **2026-10-12 14:31** `quiz` ✅ published
 - ✅ Quiz Story from H-012
 ---
@@ -80,9 +83,3 @@
 ---
 **2026-10-10 13:50** `quiz` ✅ published
 - ✅ Quiz Story from H-007
----
-**2026-10-10 10:55** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- ✅ News published: Ledger-ը հետաքննում է 87 մլն դոլարի հնարավոր գողությունը
