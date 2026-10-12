@@ -1,3 +1,9 @@
+**2026-10-12 17:14** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 58 items
+- ✅ News published: Ավստրալիան առաջարկում է լծակների սահմանափակումներ
+---
 **2026-10-12 14:36** `lesson` ✅ published
 - ✅ H-015 «Drawdown-ի մաթեմատիկան» published (43s, cta=send)
 ---
@@ -80,6 +86,3 @@
 ---
 **2026-10-10 14:23** `lesson` ✅ published
 - ✅ H-009 «Moving Average» published (43s, cta=send)
----
-**2026-10-10 13:50** `quiz` ✅ published
-- ✅ Quiz Story from H-007

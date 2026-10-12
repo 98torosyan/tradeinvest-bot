@@ -476,7 +476,7 @@
   }
  },
  "palette": {
-  "news": 32
+  "news": 33
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -517,7 +517,8 @@
   "https://www.coindesk.com/tech/2026/10/10/xrp-ledger-patched-decade-old-bug-that-could-create-billions-of-dollars-in-xrp-from-nothing",
   "https://cointelegraph.com/news/ledger-confirms-unauthorized-hardware-implant-losses-may-exceed-86m?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://www.coindesk.com/business/2026/10/05/1-2-billion-apac-consumers-could-adopt-stablecoins-by-2031-according-to-visa",
-  "https://cointelegraph.com/news/french-lawmakers-back-reporting-rule-for-crypto-wallets-over-112k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  "https://cointelegraph.com/news/french-lawmakers-back-reporting-rule-for-crypto-wallets-over-112k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://cointelegraph.com/news/australia-asic-crypto-settled-cfd-protections?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
   17238361,
@@ -751,6 +752,10 @@
   },
   {
    "media": "17911248405503197",
+   "date": "2026-10-12"
+  },
+  {
+   "media": "18146111029574686",
    "date": "2026-10-12"
   }
  ],
@@ -1205,7 +1210,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 37,
+  "user_momotmusic-inspiring-reels-406484.mp3": 38,
   "user_the-mountain-tech-corporate-593075.mp3": 7,
   "story_mixkit-electropop-870.mp3": 37,
   "user_the-mountain-finance-background-449885.mp3": 7,
