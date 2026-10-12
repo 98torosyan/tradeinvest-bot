@@ -1,3 +1,6 @@
+**2026-10-12 19:56** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-12 17:14** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -83,6 +86,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 38 items
 - ✅ News published: Celsius-ի հիմնադիրն ընդմիշտ հեռացվել է կրիպտոյի ոլորտից
----
-**2026-10-10 14:23** `lesson` ✅ published
-- ✅ H-009 «Moving Average» published (43s, cta=send)
