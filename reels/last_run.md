@@ -1,3 +1,6 @@
+**2026-10-12 20:27** `lesson` ✅ published
+- ✅ H-016 «Trend. HH և HL» published (41s, cta=send)
+---
 **2026-10-12 19:56** `chart` ✅ published
 - ✅ Story published
 ---
@@ -80,9 +83,3 @@
 ---
 **2026-10-10 19:50** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-10 16:54** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- ✅ News published: Celsius-ի հիմնադիրն ընդմիշտ հեռացվել է կրիպտոյի ոլորտից
