@@ -1,3 +1,6 @@
+**2026-10-12 14:31** `quiz` ✅ published
+- ✅ Quiz Story from H-012
+---
 **2026-10-12 11:03** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -83,7 +86,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 38 items
 - ✅ News published: Ledger-ը հետաքննում է 87 մլն դոլարի հնարավոր գողությունը
----
-**2026-10-10 09:23** `lesson` ✅ published
-- [qa warning] motion-graphics share 29% < 40%
-- ✅ H-008 «Ինչու է գինը շարժվում» published (57s, cta=save)
