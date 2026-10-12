@@ -1,3 +1,9 @@
+**2026-10-12 11:03** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 58 items
+- ✅ News published: Ֆրանսիայում կրիպտո դրամապանակների համար նոր կանոն է առաջարկվում
+---
 **2026-10-12 09:27** `lesson` ✅ published
 - ✅ H-014 «Ծավալը» published (43s, cta=send)
 ---
@@ -81,8 +87,3 @@
 **2026-10-10 09:23** `lesson` ✅ published
 - [qa warning] motion-graphics share 29% < 40%
 - ✅ H-008 «Ինչու է գինը շարժվում» published (57s, cta=save)
----
-**2026-10-10 08:53** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7811.54}
-- ✅ Story published
