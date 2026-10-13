@@ -1,3 +1,6 @@
+**2026-10-13 19:56** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-13 17:03** `news` ✅ qa-fail
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -84,6 +87,3 @@
 ---
 **2026-10-11 14:24** `lesson` ✅ published
 - ✅ H-012 «Առանց stop loss-ի» published (41s, cta=send)
----
-**2026-10-11 13:51** `quiz` ✅ published
-- ✅ Quiz Story from H-008
