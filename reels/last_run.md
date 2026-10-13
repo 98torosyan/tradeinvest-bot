@@ -1,3 +1,9 @@
+**2026-10-13 22:32** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 35 items
+- ✅ News published: Ռուսական Sberbank-ը թույլտվություն է ստացել կրիպտոառևտրի համար
+---
 **2026-10-13 20:28** `lesson` ✅ published
 - ✅ H-019 «Divergence» published (43s, cta=send)
 ---
@@ -81,9 +87,3 @@
 ---
 **2026-10-11 19:53** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-11 16:55** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- ✅ News published: Ledger-ը հաստատել է սարքերի չարտոնված միջամտությունը

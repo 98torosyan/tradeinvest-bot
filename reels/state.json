@@ -504,7 +504,7 @@
   }
  },
  "palette": {
-  "news": 35
+  "news": 36
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -548,7 +548,8 @@
   "https://cointelegraph.com/news/french-lawmakers-back-reporting-rule-for-crypto-wallets-over-112k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/news/australia-asic-crypto-settled-cfd-protections?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/news/standard-chartered-rlusd-custody-lmax-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://decrypt.co/380776/standard-chartered-hold-ripple-rlusd-stablecoin-dubai"
+  "https://decrypt.co/380776/standard-chartered-hold-ripple-rlusd-stablecoin-dubai",
+  "https://cointelegraph.com/news/sberbank-russia-crypto-trading-approval?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
   17238361,
@@ -794,6 +795,10 @@
   },
   {
    "media": "18070802963774558",
+   "date": "2026-10-13"
+  },
+  {
+   "media": "18098649380084595",
    "date": "2026-10-13"
   }
  ],
@@ -1252,7 +1257,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 41,
+  "user_momotmusic-inspiring-reels-406484.mp3": 42,
   "user_the-mountain-tech-corporate-593075.mp3": 8,
   "story_mixkit-electropop-870.mp3": 41,
   "user_the-mountain-finance-background-449885.mp3": 7,
