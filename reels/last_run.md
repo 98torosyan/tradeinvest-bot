@@ -1,3 +1,9 @@
+**2026-10-13 11:03** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 36 items
+- ✅ News published: Standard Chartered-ը կպահի Ripple-ի stablecoin-ը
+---
 **2026-10-13 09:27** `lesson` ✅ published
 - ✅ H-017 «Overtrading» published (42s, cta=save)
 ---
@@ -80,8 +86,3 @@
 ---
 **2026-10-11 09:24** `lesson` ✅ published
 - ✅ H-011 «Breakout, թե՞ fakeout» published (41s, cta=save)
----
-**2026-10-11 08:52** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7811.54}
-- ✅ Story published

@@ -490,7 +490,7 @@
   }
  },
  "palette": {
-  "news": 34
+  "news": 35
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -533,7 +533,8 @@
   "https://www.coindesk.com/business/2026/10/05/1-2-billion-apac-consumers-could-adopt-stablecoins-by-2031-according-to-visa",
   "https://cointelegraph.com/news/french-lawmakers-back-reporting-rule-for-crypto-wallets-over-112k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/news/australia-asic-crypto-settled-cfd-protections?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://cointelegraph.com/news/standard-chartered-rlusd-custody-lmax-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  "https://cointelegraph.com/news/standard-chartered-rlusd-custody-lmax-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://decrypt.co/380776/standard-chartered-hold-ripple-rlusd-stablecoin-dubai"
  ],
  "used_broll": [
   17238361,
@@ -776,6 +777,10 @@
   {
    "media": "18428925310145690",
    "date": "2026-10-12"
+  },
+  {
+   "media": "18070802963774558",
+   "date": "2026-10-13"
   }
  ],
  "quiz_count": 14,
@@ -1235,7 +1240,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 40,
+  "user_momotmusic-inspiring-reels-406484.mp3": 41,
   "user_the-mountain-tech-corporate-593075.mp3": 8,
   "story_mixkit-electropop-870.mp3": 39,
   "user_the-mountain-finance-background-449885.mp3": 7,
