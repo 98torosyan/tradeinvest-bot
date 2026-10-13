@@ -1,3 +1,10 @@
+**2026-10-13 17:03** `news` ✅ qa-fail
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 36 items
+- ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական ստուգումը չանցավ. արտահոսքի, չիպ, չիպը, տրվում
+Եթե բառերը ճիշտ են, գրիր՝ /allow արտահոսքի չիպ չիպը տրվում
+---
 **2026-10-13 14:28** `lesson` ✅ published
 - ✅ H-018 «Funding rate» published (44s, cta=send)
 ---
@@ -80,6 +87,3 @@
 ---
 **2026-10-11 13:51** `quiz` ✅ published
 - ✅ Quiz Story from H-008
----
-**2026-10-11 11:47** `carousel` ❌ failed
-- ❌ carousel սխալ՝ InstagramPublishError: 17841424152621072/media_publish failed: {'error': {'message': 'Media ID is not available', 'type': 'OAuthException', 'code': 9007, 'error_subcode': 2207027, 'is_transient': False, 'error_user_title': 'Cannot Publish', 'error_user_msg': 'The media is not ready for publishing, please wait for a moment
