@@ -1,3 +1,6 @@
+**2026-10-13 20:28** `lesson` ✅ published
+- ✅ H-019 «Divergence» published (43s, cta=send)
+---
 **2026-10-13 19:56** `chart` ✅ published
 - ✅ Story published
 ---
@@ -84,6 +87,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 38 items
 - ✅ News published: Ledger-ը հաստատել է սարքերի չարտոնված միջամտությունը
----
-**2026-10-11 14:24** `lesson` ✅ published
-- ✅ H-012 «Առանց stop loss-ի» published (41s, cta=send)
