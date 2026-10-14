@@ -1,3 +1,7 @@
+**2026-10-14 20:40** `lesson` ✅ published
+- 📚 Մնացել է 10 պատրաստի Reel (~3.3 օր)։ Ժամանակն է գրել նորերը։
+- ✅ H-022 «Մեծ leverage» published (42s, cta=save)
+---
 **2026-10-14 20:12** `chart` ✅ published
 - ✅ Story published
 ---
@@ -83,6 +87,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 58 items
 - ✅ News published: Ավստրալիան առաջարկում է լծակների սահմանափակումներ
----
-**2026-10-12 14:36** `lesson` ✅ published
-- ✅ H-015 «Drawdown-ի մաթեմատիկան» published (43s, cta=send)
