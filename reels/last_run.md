@@ -1,3 +1,6 @@
+**2026-10-14 09:36** `lesson` ✅ published
+- ✅ H-020 «Պոզիցիայի չափը» published (50s, cta=question)
+---
 **2026-10-14 09:06** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7805.45}
@@ -85,7 +88,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 38 items
 - ✅ News published: Visa-ի հարցումը stablecoin-ների մասին
----
-**2026-10-11 20:24** `lesson` ✅ published
-- [qa warning] motion-graphics share 32% < 40%
-- ✅ H-013 «Stop hunt» published (52s, cta=question)
