@@ -1,3 +1,9 @@
+**2026-10-14 22:43** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 34 items
+- ✅ News published: Kraken-ի մայր ընկերությունը գնում է ԵՄ բանկ
+---
 **2026-10-14 20:40** `lesson` ✅ published
 - 📚 Մնացել է 10 պատրաստի Reel (~3.3 օր)։ Ժամանակն է գրել նորերը։
 - ✅ H-022 «Մեծ leverage» published (42s, cta=save)
@@ -81,9 +87,3 @@
 ---
 **2026-10-12 19:56** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-12 17:14** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 58 items
-- ✅ News published: Ավստրալիան առաջարկում է լծակների սահմանափակումներ
