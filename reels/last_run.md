@@ -1,3 +1,6 @@
+**2026-10-14 14:38** `lesson` ✅ published
+- ✅ H-021 «Resistance» published (42s, cta=send)
+---
 **2026-10-14 14:07** `quiz` ✅ published
 - ✅ Quiz Story from H-017
 ---
@@ -83,6 +86,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 58 items
 - ✅ News published: Ֆրանսիայում կրիպտո դրամապանակների համար նոր կանոն է առաջարկվում
----
-**2026-10-12 09:27** `lesson` ✅ published
-- ✅ H-014 «Ծավալը» published (43s, cta=send)
