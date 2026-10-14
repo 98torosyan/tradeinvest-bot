@@ -1,3 +1,9 @@
+**2026-10-14 11:18** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 53 items
+- ✅ News published: Binance-ը փակում է իր Bitcoin mining pool-ը 6 տարի անց
+---
 **2026-10-14 09:36** `lesson` ✅ published
 - ✅ H-020 «Պոզիցիայի չափը» published (50s, cta=question)
 ---
@@ -82,9 +88,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7811.54}
 - ✅ Story published
----
-**2026-10-11 22:27** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- ✅ News published: Visa-ի հարցումը stablecoin-ների մասին
