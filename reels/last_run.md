@@ -1,3 +1,6 @@
+**2026-10-14 20:12** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-14 17:14** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -83,6 +86,3 @@
 ---
 **2026-10-12 14:36** `lesson` ✅ published
 - ✅ H-015 «Drawdown-ի մաթեմատիկան» published (43s, cta=send)
----
-**2026-10-12 14:31** `quiz` ✅ published
-- ✅ Quiz Story from H-012
