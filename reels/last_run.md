@@ -1,3 +1,8 @@
+**2026-10-14 09:06** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7805.45}
+- ✅ Story published
+---
 **2026-10-13 22:32** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -84,6 +89,3 @@
 **2026-10-11 20:24** `lesson` ✅ published
 - [qa warning] motion-graphics share 32% < 40%
 - ✅ H-013 «Stop hunt» published (52s, cta=question)
----
-**2026-10-11 19:53** `chart` ✅ published
-- ✅ Story published
