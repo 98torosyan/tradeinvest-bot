@@ -1,3 +1,9 @@
+**2026-10-14 17:14** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 33 items
+- ✅ News published: Standard Chartered-ը գործարկել է Bitcoin-ի առևտուր
+---
 **2026-10-14 14:38** `lesson` ✅ published
 - ✅ H-021 «Resistance» published (42s, cta=send)
 ---
@@ -80,9 +86,3 @@
 ---
 **2026-10-12 14:31** `quiz` ✅ published
 - ✅ Quiz Story from H-012
----
-**2026-10-12 11:03** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 58 items
-- ✅ News published: Ֆրանսիայում կրիպտո դրամապանակների համար նոր կանոն է առաջարկվում

@@ -518,7 +518,7 @@
   }
  },
  "palette": {
-  "news": 37
+  "news": 38
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -564,7 +564,8 @@
   "https://cointelegraph.com/news/standard-chartered-rlusd-custody-lmax-deal?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://decrypt.co/380776/standard-chartered-hold-ripple-rlusd-stablecoin-dubai",
   "https://cointelegraph.com/news/sberbank-russia-crypto-trading-approval?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://decrypt.co/380870/binance-shutting-down-bitcoin-mining-pool"
+  "https://decrypt.co/380870/binance-shutting-down-bitcoin-mining-pool",
+  "https://www.coindesk.com/business/2026/10/14/standard-chartered-unlocks-direct-bitcoin-and-ether-trading-for-affluent-uae-clients"
  ],
  "used_broll": [
   17238361,
@@ -818,6 +819,10 @@
   },
   {
    "media": "18420832552155685",
+   "date": "2026-10-14"
+  },
+  {
+   "media": "18632626414032039",
    "date": "2026-10-14"
   }
  ],
@@ -1274,7 +1279,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 43,
+  "user_momotmusic-inspiring-reels-406484.mp3": 44,
   "user_the-mountain-tech-corporate-593075.mp3": 8,
   "story_mixkit-electropop-870.mp3": 43,
   "user_the-mountain-finance-background-449885.mp3": 8,
