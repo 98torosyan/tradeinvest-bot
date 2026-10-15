@@ -1,3 +1,7 @@
+**2026-10-15 09:35** `lesson` ✅ published
+- 📚 Մնացել է 9 պատրաստի Reel (~3.0 օր)։ Ժամանակն է գրել նորերը։
+- ✅ H-023 «Whale-եր» published (40s, cta=send)
+---
 **2026-10-15 09:04** `story` ✅ published
 - [market] src_stooq failed: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=%5Espx&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(h
 - [market] SPX row dropped, sources: {'yahoo': 7718.94}
@@ -86,6 +90,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 38 items
 - ✅ News published: Standard Chartered-ը սկսել է RLUSD stablecoin-ի պահառությունը
----
-**2026-10-12 20:27** `lesson` ✅ published
-- ✅ H-016 «Trend. HH և HL» published (41s, cta=send)
