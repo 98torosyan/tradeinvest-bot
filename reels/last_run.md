@@ -1,3 +1,6 @@
+**2026-10-15 20:08** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-15 17:18** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -85,6 +88,3 @@
 ---
 **2026-10-13 14:28** `lesson` ✅ published
 - ✅ H-018 «Funding rate» published (44s, cta=send)
----
-**2026-10-13 13:55** `quiz` ✅ published
-- ✅ Quiz Story from H-016
