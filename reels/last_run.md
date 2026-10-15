@@ -1,3 +1,9 @@
+**2026-10-15 11:19** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 35 items
+- ✅ News published: ԵՄ-ն Circle-ի USDC-ն դասակարգել է որպես կարևոր stablecoin
+---
 **2026-10-15 09:35** `lesson` ✅ published
 - 📚 Մնացել է 9 պատրաստի Reel (~3.0 օր)։ Ժամանակն է գրել նորերը։
 - ✅ H-023 «Whale-եր» published (40s, cta=send)
@@ -84,9 +90,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7807.24}
 - ✅ Story published
----
-**2026-10-12 22:29** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- ✅ News published: Standard Chartered-ը սկսել է RLUSD stablecoin-ի պահառությունը
