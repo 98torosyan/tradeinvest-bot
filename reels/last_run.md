@@ -1,3 +1,6 @@
+**2026-10-15 20:38** `lesson` ✅ published
+- ✅ H-025 «Win rate-ի թակարդը» published (40s, cta=send)
+---
 **2026-10-15 20:08** `chart` ✅ published
 - ✅ Story published
 ---
@@ -85,6 +88,3 @@
 - [news] https://decrypt.co/feed: 36 items
 - ⚠️ Լուրը չհրապարակվեց՝ ուղղագրական ստուգումը չանցավ. արտահոսքի, չիպ, չիպը, տրվում
 Եթե բառերը ճիշտ են, գրիր՝ /allow արտահոսքի չիպ չիպը տրվում
----
-**2026-10-13 14:28** `lesson` ✅ published
-- ✅ H-018 «Funding rate» published (44s, cta=send)
