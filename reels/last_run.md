@@ -1,3 +1,8 @@
+**2026-10-15 09:04** `story` ✅ published
+- [market] src_stooq failed: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=%5Espx&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(h
+- [market] SPX row dropped, sources: {'yahoo': 7718.94}
+- ✅ Story published
+---
 **2026-10-14 22:43** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -84,6 +89,3 @@
 ---
 **2026-10-12 20:27** `lesson` ✅ published
 - ✅ H-016 «Trend. HH և HL» published (41s, cta=send)
----
-**2026-10-12 19:56** `chart` ✅ published
-- ✅ Story published
