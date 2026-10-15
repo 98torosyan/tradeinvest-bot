@@ -1,3 +1,6 @@
+**2026-10-15 14:38** `lesson` ✅ published
+- ✅ H-024 «MACD» published (42s, cta=save)
+---
 **2026-10-15 14:07** `quiz` ✅ published
 - ✅ Quiz Story from H-021
 ---
@@ -85,6 +88,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 36 items
 - ✅ News published: Standard Chartered-ը կպահի Ripple-ի stablecoin-ը
----
-**2026-10-13 09:27** `lesson` ✅ published
-- ✅ H-017 «Overtrading» published (42s, cta=save)
