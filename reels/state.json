@@ -539,7 +539,7 @@
   }
  },
  "palette": {
-  "news": 40
+  "news": 41
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -588,7 +588,8 @@
   "https://decrypt.co/380870/binance-shutting-down-bitcoin-mining-pool",
   "https://www.coindesk.com/business/2026/10/14/standard-chartered-unlocks-direct-bitcoin-and-ether-trading-for-affluent-uae-clients",
   "https://www.coindesk.com/business/2026/10/14/kraken-parent-payward-to-become-first-crypto-firm-to-buy-a-eu-bank-as-it-expands-into-deposits-lending",
-  "https://cointelegraph.com/news/eba-circle-usdc-stablecoin-significant-token-mica?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  "https://cointelegraph.com/news/eba-circle-usdc-stablecoin-significant-token-mica?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://decrypt.co/380981/sberbank-russia-bank-trade-crypto-bitcoin"
  ],
  "used_broll": [
   17238361,
@@ -854,6 +855,10 @@
   },
   {
    "media": "17933655405407017",
+   "date": "2026-10-15"
+  },
+  {
+   "media": "18409875163092207",
    "date": "2026-10-15"
   }
  ],
@@ -1314,7 +1319,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 47,
+  "user_momotmusic-inspiring-reels-406484.mp3": 48,
   "user_the-mountain-tech-corporate-593075.mp3": 8,
   "story_mixkit-electropop-870.mp3": 46,
   "user_the-mountain-finance-background-449885.mp3": 8,

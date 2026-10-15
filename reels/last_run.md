@@ -1,3 +1,9 @@
+**2026-10-15 17:18** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 35 items
+- ✅ News published: Sberbank-ը թույլտվություն է ստացել Bitcoin-ով առևտրի համար
+---
 **2026-10-15 14:38** `lesson` ✅ published
 - ✅ H-024 «MACD» published (42s, cta=save)
 ---
@@ -82,9 +88,3 @@
 ---
 **2026-10-13 13:55** `quiz` ✅ published
 - ✅ Quiz Story from H-016
----
-**2026-10-13 11:03** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 36 items
-- ✅ News published: Standard Chartered-ը կպահի Ripple-ի stablecoin-ը
