@@ -1,3 +1,6 @@
+**2026-10-16 14:08** `quiz` ✅ published
+- ✅ Quiz Story from H-025
+---
 **2026-10-16 11:17** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -85,8 +88,3 @@
 ---
 **2026-10-14 09:36** `lesson` ✅ published
 - ✅ H-020 «Պոզիցիայի չափը» published (50s, cta=question)
----
-**2026-10-14 09:06** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7805.45}
-- ✅ Story published
