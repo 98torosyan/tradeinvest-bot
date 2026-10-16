@@ -1,3 +1,6 @@
+**2026-10-16 16:38** `lesson` ✅ published
+- ✅ H-027 «Թրեյդինգ առանց պլանի» published (44s, cta=send)
+---
 **2026-10-16 14:08** `quiz` ✅ published
 - ✅ Quiz Story from H-025
 ---
@@ -85,6 +88,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 53 items
 - ✅ News published: Binance-ը փակում է իր Bitcoin mining pool-ը 6 տարի անց
----
-**2026-10-14 09:36** `lesson` ✅ published
-- ✅ H-020 «Պոզիցիայի չափը» published (50s, cta=question)
