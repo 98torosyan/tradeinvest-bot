@@ -1,3 +1,9 @@
+**2026-10-16 22:39** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 37 items
+- ✅ News published: Deutsche Bank-ը մուտք է գործում կրիպտո շուկա
+---
 **2026-10-16 20:55** `news` ❌ failed
 - ❌ news սխալ՝ RuntimeError: Gemini failed: gemini-flash-latest: HTTP 503 | gemini-flash-lite-latest: HTTP 503 | gemini-flash-lite-latest: HTTP 503 | gemini-flash-lite-latest: HTTP 503
 ---
@@ -80,9 +86,3 @@
 ---
 **2026-10-14 20:12** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-14 17:14** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 33 items
-- ✅ News published: Standard Chartered-ը գործարկել է Bitcoin-ի առևտուր
