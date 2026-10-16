@@ -1,5 +1,5 @@
 {
- "course_index": 27,
+ "course_index": 28,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -556,6 +556,13 @@
    "permalink": "https://www.instagram.com/reel/Dejkb5QDWyK/",
    "date": "2026-10-16",
    "hour": 16,
+   "cta": "send"
+  },
+  "H-028": {
+   "media": "18102035624039987",
+   "permalink": "https://www.instagram.com/reel/DejzShggfNU/",
+   "date": "2026-10-16",
+   "hour": 18,
    "cta": "send"
   }
  },
@@ -1266,14 +1273,13 @@
  },
  "music_bag": {
   "lesson": [
-   "user_the-mountain-tech-corporate-593075.mp3",
    "user_apalonbeats-finance-money-trading-invest.mp3"
   ],
   "news": [],
   "story": []
  },
  "music_last": {
-  "lesson": "user_starostin-investment-finance-trading-mon.mp3",
+  "lesson": "user_the-mountain-tech-corporate-593075.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -1348,7 +1354,7 @@
  "music_uses": {
   "delayed-flight.mp3": 1,
   "user_momotmusic-inspiring-reels-406484.mp3": 50,
-  "user_the-mountain-tech-corporate-593075.mp3": 8,
+  "user_the-mountain-tech-corporate-593075.mp3": 9,
   "story_mixkit-electropop-870.mp3": 49,
   "user_the-mountain-finance-background-449885.mp3": 9,
   "user_starostin-investment-finance-trading-mon.mp3": 9,

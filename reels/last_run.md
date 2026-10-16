@@ -1,3 +1,7 @@
+**2026-10-16 18:48** `lesson` ✅ published
+- [qa warning] motion-graphics share 39% < 40%
+- ✅ H-028 «Slippage» published (42s, cta=send)
+---
 **2026-10-16 16:38** `lesson` ✅ published
 - ✅ H-027 «Թրեյդինգ առանց պլանի» published (44s, cta=send)
 ---
@@ -82,9 +86,3 @@
 ---
 **2026-10-14 14:07** `quiz` ✅ published
 - ✅ Quiz Story from H-017
----
-**2026-10-14 11:18** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 53 items
-- ✅ News published: Binance-ը փակում է իր Bitcoin mining pool-ը 6 տարի անց
