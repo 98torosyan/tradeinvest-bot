@@ -1,3 +1,6 @@
+**2026-10-16 20:07** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-16 18:48** `lesson` ✅ published
 - [qa warning] motion-graphics share 39% < 40%
 - ✅ H-028 «Slippage» published (42s, cta=send)
@@ -83,6 +86,3 @@
 ---
 **2026-10-14 14:38** `lesson` ✅ published
 - ✅ H-021 «Resistance» published (42s, cta=send)
----
-**2026-10-14 14:07** `quiz` ✅ published
-- ✅ Quiz Story from H-017
