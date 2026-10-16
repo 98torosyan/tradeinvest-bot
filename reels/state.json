@@ -553,7 +553,7 @@
   }
  },
  "palette": {
-  "news": 42
+  "news": 43
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -604,7 +604,8 @@
   "https://www.coindesk.com/business/2026/10/14/kraken-parent-payward-to-become-first-crypto-firm-to-buy-a-eu-bank-as-it-expands-into-deposits-lending",
   "https://cointelegraph.com/news/eba-circle-usdc-stablecoin-significant-token-mica?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://decrypt.co/380981/sberbank-russia-bank-trade-crypto-bitcoin",
-  "https://cointelegraph.com/news/mastercard-bvnk-global-money-platform-stablecoins?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  "https://cointelegraph.com/news/mastercard-bvnk-global-money-platform-stablecoins?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://decrypt.co/381057/mastercard-bvnk-global-money-platform-fiat-stablecoins"
  ],
  "used_broll": [
   17238361,
@@ -879,6 +880,10 @@
   {
    "media": "18202170166326646",
    "date": "2026-10-15"
+  },
+  {
+   "media": "18383849005231835",
+   "date": "2026-10-16"
   }
  ],
  "quiz_count": 17,
@@ -1336,7 +1341,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 49,
+  "user_momotmusic-inspiring-reels-406484.mp3": 50,
   "user_the-mountain-tech-corporate-593075.mp3": 8,
   "story_mixkit-electropop-870.mp3": 48,
   "user_the-mountain-finance-background-449885.mp3": 9,

@@ -1,3 +1,9 @@
+**2026-10-16 11:17** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 35 items
+- ✅ News published: Mastercard-ը գործարկում է fiat-ի և stablecoin-ների հարթակ
+---
 **2026-10-16 09:35** `lesson` ✅ published
 - 📚 Մնացել է 6 պատրաստի Reel (~2.0 օր)։ Ժամանակն է գրել նորերը։
 - ✅ H-026 «Double Top» published (47s, cta=question)
@@ -84,9 +90,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7805.45}
 - ✅ Story published
----
-**2026-10-13 22:32** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 35 items
-- ✅ News published: Ռուսական Sberbank-ը թույլտվություն է ստացել կրիպտոառևտրի համար
