@@ -1,3 +1,6 @@
+**2026-10-16 23:33** `lesson` ✅ published
+- ✅ H-029 «Ինդիկատորների 3 սխալ» published (43s, cta=save)
+---
 **2026-10-16 22:39** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -83,6 +86,3 @@
 **2026-10-14 20:40** `lesson` ✅ published
 - 📚 Մնացել է 10 պատրաստի Reel (~3.3 օր)։ Ժամանակն է գրել նորերը։
 - ✅ H-022 «Մեծ leverage» published (42s, cta=save)
----
-**2026-10-14 20:12** `chart` ✅ published
-- ✅ Story published
