@@ -1,3 +1,6 @@
+**2026-10-16 20:55** `news` ❌ failed
+- ❌ news սխալ՝ RuntimeError: Gemini failed: gemini-flash-latest: HTTP 503 | gemini-flash-lite-latest: HTTP 503 | gemini-flash-lite-latest: HTTP 503 | gemini-flash-lite-latest: HTTP 503
+---
 **2026-10-16 20:07** `chart` ✅ published
 - ✅ Story published
 ---
@@ -83,6 +86,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 33 items
 - ✅ News published: Standard Chartered-ը գործարկել է Bitcoin-ի առևտուր
----
-**2026-10-14 14:38** `lesson` ✅ published
-- ✅ H-021 «Resistance» published (42s, cta=send)
