@@ -1,3 +1,6 @@
+**2026-10-17 22:26** `lesson` ✅ no-script
+
+---
 **2026-10-17 21:56** `chart` ✅ published
 - ✅ Story published
 ---
@@ -79,6 +82,3 @@
 ---
 **2026-10-15 20:38** `lesson` ✅ published
 - ✅ H-025 «Win rate-ի թակարդը» published (40s, cta=send)
----
-**2026-10-15 20:08** `chart` ✅ published
-- ✅ Story published
