@@ -58,7 +58,7 @@ def layout(html, times):
     errs = []
     path = os.path.join(tempfile.mkdtemp(prefix="qa_"), "o.html")
     open(path, "w", encoding="utf-8").write(html)
-    js = """(s)=>{const out=[];document.querySelectorAll('.hl,.chunk,.gcard,.cmp,.chk,.ptag,.nxt2,.stat .sv,.stat .sl,.stat .ss,.myth,.quiz,.steps,.bars').forEach(e=>{
+    js = """(s)=>{const out=[];document.querySelectorAll('.hl,.chunk,.gcard,.cmp,.chk,.ptag,.nxt2,.stat .sv,.stat .sl,.stat .ss,.myth,.quiz,.steps,.bars,.wte').forEach(e=>{
       const st=getComputedStyle(e);let p=e,vis=true;while(p&&p!==document.body){const cs=getComputedStyle(p);
       if(cs.visibility==='hidden'||cs.display==='none'||+cs.opacity<0.05){vis=false;break}p=p.parentElement}
       if(!vis)return;const r=e.getBoundingClientRect();if(r.width<2)return;

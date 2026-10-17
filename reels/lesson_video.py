@@ -14,6 +14,7 @@ from .palettes import css_vars
 
 FPS = int(os.environ.get("REEL_FPS", "30"))
 OUTRO = 3.4
+LOOP = 0.45              # seconds at the very end that fade back into the hook frame
 GRAPHIC = {"hero", "card", "compare", "checklist", "chart", "math", "stat", "myth", "quiz", "steps", "bars"}
 
 
@@ -475,6 +476,9 @@ def overlay_html(lesson, cur_info, palette, beats, total):
         a_in = -0.8 if i == 0 else a                     # first scene already fully visible at frame 0
         if b["kind"] == "hero":
             inner = _hero(b, sty["hero"]); cls = "hero"
+            if i == 0 and not settings.SHOW_COURSE_LABEL:      # open loop: tells the viewer the payoff comes at the end
+                inner += (f'<div class="wte" data-fx="rise" data-at="{0.8 + min(1.9, d - 1.4):.2f}" data-dur=".5">'
+                          f'<span>Վերջում՝ ամենակարևորը</span><i></i></div>')
         elif b["kind"] == "broll":
             inner = (_price(b["overlay"]) if b.get("overlay") else "") + _captions(b); cls = "beat"
         else:
@@ -491,8 +495,12 @@ def overlay_html(lesson, cur_info, palette, beats, total):
         scenes_cta = ""
     nxt_html = (f'<div class="nxt" data-fx="rise" data-at=".1" data-dur=".5">Հաջորդ դասը</div>'
                 f'<div class="nxt2" data-fx="rise" data-at=".25" data-dur=".6">{esc(nxt)}</div>') if nxt else ""
-    scenes.append(f'<section class="scene outro" data-in="{oa:.2f}" data-out="{total + 1:.2f}"><div class="obg"></div>{nxt_html or scenes_cta}'
+    loop = not settings.SHOW_COURSE_LABEL           # last frames turn back into the first frame, so the replay is seamless
+    scenes.append(f'<section class="scene outro" data-in="{oa:.2f}" data-out="{(total if loop else total + 1):.2f}"><div class="obg"></div>{nxt_html or scenes_cta}'
                   f'{logo_svg()}<div class="name" data-fx="rise" data-at="1.3" data-dur=".6">TradeInvest</div></section>')
+    if loop:
+        first = dict(beats[0], first=True)
+        scenes.append(f'<section class="scene hero loopb" data-in="{total - LOOP:.2f}" data-out="{total + 1:.2f}">{_hero(first, sty["hero"])}</section>')
     css = "".join(open(os.path.join(ASSETS, f), encoding="utf-8").read() for f in ("broll.css", "lesson.css", "themes.css"))
     css = (f"@font-face{{font-family:'ArmCond';src:url('file://{ASSETS}/ttf/NotoSansArmenian.ttf');font-weight:100 900;font-stretch:62.5% 100%}}"
            + "".join(f"@font-face{{font-family:'JBMono';font-weight:{w};src:url('file://{ASSETS}/fonts/jetbrains-mono-latin-{w}-normal.woff2')}}"
@@ -506,7 +514,7 @@ def overlay_html(lesson, cur_info, palette, beats, total):
         pill = f'Մոդուլ {lesson["module"]} · Դաս {lesson["n"]}/{cur_info["module_size"]}'
         head = f'<div class="pill" id="pill"><span>{esc(pill)}</span></div><div class="prog" id="prog"><i id="pi"></i></div>'
     else:
-        head = ""
+        head = '<div class="rbar"><i id="rbi"></i></div>'      # watch-progress bar: viewers see how little is left
     bg_canvas, bg_js = "", ""
     if settings.BG_MODE == "charts":
         import json as _j
@@ -517,7 +525,9 @@ def overlay_html(lesson, cur_info, palette, beats, total):
         calm = ("chart", "math", "quiz", "myth", "bars", "steps", "stat")
         bsc = [{"a": (-1 if i == 0 else b["_t"]), "b": b["_t"] + b["_d"], "style": bgs[0] if b["kind"] == "hero" else ("plain" if b["kind"] in calm else bgs[(seed + i) % len(bgs)]),
                 "seed": seed + i * 13, "acc": palette["a2"]} for i, b in enumerate(beats)]
-        bsc.append({"a": total - OUTRO, "b": total + 2, "style": "line", "seed": seed + 99, "acc": palette["a2"]})
+        bsc.append({"a": total - OUTRO, "b": (total - LOOP if loop else total + 2), "style": "line", "seed": seed + 99, "acc": palette["a2"]})
+        if loop:
+            bsc.append({"a": total - LOOP - 1, "b": total + 2, "style": bgs[0], "seed": seed, "acc": palette["a2"]})
         bg_canvas = '<canvas id="bgc" width="1080" height="1920" style="position:absolute;left:0;top:0;width:1080px;height:1920px;z-index:0"></canvas>'
         bg_js = (f'<script>window.BGDATA={_j.dumps(data)};window.BGSCENES={_j.dumps(bsc)};</script>'
                  f'<script src="{ASSETS}/chartbg.js"></script>')
@@ -530,6 +540,7 @@ def overlay_html(lesson, cur_info, palette, beats, total):
 HOOKS.push(t=>{{const end={oa:.2f};const o=1-EASE.inOut(prog(t,end-.35,.35));
  const P=document.getElementById('pill');if(P){{P.style.opacity=o;document.getElementById('prog').style.opacity=o;
  document.getElementById('pi').style.transform=`scaleX(${{clamp01(t/end)}})`;}}
+ const R=document.getElementById('rbi');if(R){{R.style.transform=`scaleX(${{clamp01(t/end)}})`;R.parentElement.style.opacity=o;}}
 }});logoFx({oa + 0.55:.2f});setupReel();</script></body></html>''')
 
 

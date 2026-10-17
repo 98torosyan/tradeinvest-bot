@@ -118,3 +118,19 @@
 .st-marker .quiz .op.ok{background:#E2F8EA;box-shadow:12px 12px 0 #2FD18B}
 .st-marker .stat .sv{color:#141100;background:var(--a);display:inline-block;padding:0 40px;border-radius:24px;text-shadow:none}
 .st-marker .series-tag span{background:var(--a);color:#141100;border:none}
+
+/* watch-progress bar (top) */
+.rbar{position:absolute;left:60px;right:60px;top:214px;height:8px;border-radius:8px;background:rgba(255,255,255,.14);z-index:50;overflow:hidden}
+.rbar i{position:absolute;inset:0;border-radius:8px;background:linear-gradient(90deg,var(--a),var(--a2));transform-origin:left;transform:scaleX(0);box-shadow:0 0 14px var(--a)}
+.st-marker .rbar i{background:var(--a);box-shadow:none}
+.st-terminal .rbar{border-radius:0}.st-terminal .rbar i{border-radius:0}
+/* open loop chip under the hook */
+.wte{position:absolute;left:0;right:0;top:1440px;margin:auto;width:max-content;max-width:900px;display:flex;align-items:center;gap:18px;
+ font-family:ArmSans,sans-serif;font-size:44px;font-weight:700;color:var(--onacc);background:linear-gradient(135deg,var(--a2),var(--a));
+ padding:18px 36px;border-radius:60px;box-shadow:0 14px 40px rgba(0,0,0,.45)}
+.wte i{width:18px;height:18px;border-right:5px solid currentColor;border-bottom:5px solid currentColor;transform:rotate(45deg) translate(-3px,-3px)}
+.st-terminal .wte{border-radius:6px;font-family:JBMono,ArmSans,monospace;font-size:38px}
+.st-editorial .wte{font-family:ArmSerif,serif;font-style:italic;background:none;color:var(--a2);border:3px solid var(--a);box-shadow:none}
+.st-neon .wte{background:none;color:var(--a2);border:3px solid var(--a2);box-shadow:0 0 24px var(--a2),inset 0 0 18px rgba(79,227,255,.25)}
+.st-glass .wte{background:rgba(255,255,255,.12);color:var(--txt);border:1.5px solid rgba(255,255,255,.3);backdrop-filter:blur(18px)}
+.st-marker .wte{border-radius:8px}

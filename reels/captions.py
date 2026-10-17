@@ -31,6 +31,9 @@ SERIES_POOL = {1: ["#technicalanalysis", "#chartpatterns", "#priceaction", "#can
                3: ["#indicators", "#technicalanalysis", "#tradingview", "#tradingtools"],
                4: ["#cryptomarket", "#bitcoin", "#cryptotrading", "#btc"],
                5: ["#riskmanagement", "#moneymanagement", "#tradingstrategy", "#tradingtips"]}
+# a branded tag per series: tapping it opens every lesson of that series (binge-watching from one Reel)
+SERIES_HUB = {1: "#armtrade_charts", 2: "#armtrade_mistakes", 3: "#armtrade_indicators",
+              4: "#armtrade_market", 5: "#armtrade_risk"}
 HIT_CTA = {"send": "📩 Ուղարկիր ընկերոջդ, ով սա պետք է իմանա",
            "question": "👇 Ո՞րն է քո պատասխանը։ Գրիր comment-ում",
            "save": "🔖 Պահիր, որ չկորցնես"}
@@ -42,7 +45,7 @@ OUTRO_CTA = {"send": ("Ուղարկիր ընկերոջդ,", "ով սա պետք 
 
 def topic_tags(lesson):
     """5 hashtags: 2 fixed + 1 from the series pool (rotated) + up to 2 from the lesson's own English keywords."""
-    tags = ["#թրեյդինգ", "#trading"]
+    tags = ["#թրեյդինգ"]
     pool = SERIES_POOL.get(lesson.get("module"), ["#crypto"])
     seed = sum(map(ord, lesson.get("id", "")))
     tags.append(pool[seed % len(pool)])
@@ -51,27 +54,42 @@ def topic_tags(lesson):
             t = "#" + "".join(ch for ch in kw.lower() if ch.isalnum())
             if 4 <= len(t) <= 26 and t not in tags:
                 tags.append(t)
-        if len(tags) >= 4:
+        if len(tags) >= 3:
             break
-    for extra in pool + ["#crypto", "#հայերեն"]:
-        if len(tags) >= settings.MAX_HASHTAGS:
+    limit = settings.MAX_HASHTAGS - (1 if lesson.get("module") in SERIES_HUB else 0)   # the series tag is the 5th
+    for extra in pool + ["#trading", "#crypto"]:
+        if len(tags) >= limit:
             break
         if extra not in tags:
             tags.append(extra)
-    return tags[: settings.MAX_HASHTAGS]
+    return tags[:limit]
 
 
-def choose_cta(state):
-    arm = bandit.choose(state, "cta", list(HIT_CTA), avoid=state.get("last_cta"))
+def content_cta(lesson):
+    """Some lessons ask for one action by their nature: a checklist is worth saving, a quiz asks for an answer."""
+    kinds = {b.get("kind") for b in (lesson or {}).get("beats", [])}
+    if kinds & {"checklist", "steps"}:
+        return "save"
+    if "quiz" in kinds:
+        return "question"
+    return None
+
+
+def choose_cta(state, lesson=None):
+    arm = content_cta(lesson) or bandit.choose(state, "cta", list(HIT_CTA), avoid=state.get("last_cta"))
     state["last_cta"] = arm
     return arm
 
 
 def hit_caption(lesson, title_line, state, arm=None):
-    arm = arm or choose_cta(state)
+    arm = arm or choose_cta(state, lesson)
     lines = [lesson["hook"].replace("|", " "), title_line, "", lesson["summary"], ""]
     if lesson.get("keywords"):
         lines += ["🔑 " + " · ".join(lesson["keywords"]), ""]
-    lines += [lesson.get("question", ""), HIT_CTA[arm], "🔔 Ամեն օր՝ նոր թրեյդինգ դաս @armtradeinvest",
+    hub = SERIES_HUB.get(lesson.get("module"))
+    lines += [lesson.get("question", ""), HIT_CTA[arm]]
+    if hub:
+        lines.append(f"📚 Այս շարքի բոլոր դասերը՝ {hub}")
+    lines += ["🔔 Ամեն օր՝ նոր թրեյդինգ դաս @armtradeinvest",
               "⚠️ Կրթական բովանդակություն է, ոչ թե ֆինանսական խորհուրդ", "", " ".join(topic_tags(lesson))]
     return "\n".join(l for l in lines if l is not None).strip()[:2150], arm
