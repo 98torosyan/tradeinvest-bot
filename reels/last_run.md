@@ -1,3 +1,9 @@
+**2026-10-18 00:32** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 37 items
+- ✅ News published: Circle-ը նախատեսում է մուտք գործել 40 զարգացող շուկա
+---
 **2026-10-17 22:26** `lesson` ✅ no-script
 
 ---
@@ -79,6 +85,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 37 items
 - ✅ News published: Mastercard-ը միավորում է կրիպտոն և բանկերը
----
-**2026-10-15 20:38** `lesson` ✅ published
-- ✅ H-025 «Win rate-ի թակարդը» published (40s, cta=send)
