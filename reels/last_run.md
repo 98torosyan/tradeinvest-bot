@@ -1,3 +1,9 @@
+**2026-10-17 19:54** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 37 items
+- ✅ News published: Stablecoin փոխանցումները 84%-ով ավելի էժան են ավանդականից
+---
 **2026-10-17 17:41** `lesson` ✅ no-script
 
 ---
@@ -79,6 +85,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 35 items
 - ✅ News published: Sberbank-ը թույլտվություն է ստացել Bitcoin-ով առևտրի համար
----
-**2026-10-15 14:38** `lesson` ✅ published
-- ✅ H-024 «MACD» published (42s, cta=save)
