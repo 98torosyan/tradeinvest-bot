@@ -1,3 +1,6 @@
+**2026-10-17 17:41** `lesson` ✅ no-script
+
+---
 **2026-10-17 17:10** `quiz` ✅ published
 - ✅ Quiz Story from H-028
 ---
@@ -79,6 +82,3 @@
 ---
 **2026-10-15 14:38** `lesson` ✅ published
 - ✅ H-024 «MACD» published (42s, cta=save)
----
-**2026-10-15 14:07** `quiz` ✅ published
-- ✅ Quiz Story from H-021
