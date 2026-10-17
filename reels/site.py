@@ -42,11 +42,16 @@ def build(cur, state, out_dir):
                      f'{html.escape(m["title"])}<span>{done}/{len(ls)}</span></summary><ol>{"".join(items)}</ol></details>')
     total = len(cur["lessons"])
     page = (f'<!doctype html><html lang="hy"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
-            f'<title>TradeInvest. Crypto և թրեյդինգ դասընթաց հայերեն</title>'
-            f'<meta name="description" content="Անվճար crypto և թրեյդինգ դասընթաց հայերեն՝ զրոյից մինչև պրոֆեսիոնալ մակարդակ. {total} դաս, 11 մոդուլ։">'
-            f'<style>{CSS}</style></head><body><header><h1>📚 TradeInvest դասընթաց</h1>'
-            f'<p>Crypto և թրեյդինգ հայերեն՝ զրոյից մինչև պրոֆեսիոնալ մակարդակ · {total} դաս · 11 մոդուլ</p></header>'
-            f'<main>{"".join(parts)}</main><footer>@armtradeinvest · Կրթական բովանդակություն, ոչ ֆինանսական խորհուրդ'
+            + (f'<title>TradeInvest. Թրեյդինգ հայերեն</title>'
+               f'<meta name="description" content="Անվճար թրեյդինգ դասեր հայերեն՝ գրաֆիկներ, ինդիկատորներ, ռիսկի կառավարում, թրեյդերների սխալներ. {total} դաս։">'
+               if cur.get("series") else
+               f'<title>TradeInvest. Crypto և թրեյդինգ դասընթաց հայերեն</title>'
+               f'<meta name="description" content="Անվճար crypto և թրեյդինգ դասընթաց հայերեն՝ զրոյից մինչև պրոֆեսիոնալ մակարդակ. {total} դաս, 11 մոդուլ։">')
+            + f'<style>{CSS}</style></head><body><header><h1>📚 TradeInvest</h1>'
+            + (f'<p>Թրեյդինգ հայերեն՝ պարզ և կարճ · {total} դաս · {len(cur["series"])} շարք · ամեն օր նոր դաս</p></header>'
+               if cur.get("series") else
+               f'<p>Crypto և թրեյդինգ հայերեն՝ զրոյից մինչև պրոֆեսիոնալ մակարդակ · {total} դաս · 11 մոդուլ</p></header>')
+            + f'<main>{"".join(parts)}</main><footer>@armtradeinvest · Կրթական բովանդակություն, ոչ ֆինանսական խորհուրդ'
             f'<br>Գրաֆիկները՝ <a href="https://www.tradingview.com/" style="color:#9CC2FF">TradingView</a> Lightweight Charts™ '
             f'(Copyright © 2025 TradingView, Inc.)</footer>{analytics()}</body></html>')
     os.makedirs(out_dir, exist_ok=True)

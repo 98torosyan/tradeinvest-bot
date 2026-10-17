@@ -19,10 +19,11 @@ def main():
     if errs:
         print("curriculum errors:", errs); return 1
     st = state.load()
-    lesson = cur["lessons"][0]
+    lesson = next((l for l in cur["lessons"] if l.get("style")), cur["lessons"][0])
     size = curriculum.module_size(cur, 1)
+    from . import styles as _st
     res = lesson_video.render_lesson(lesson, {"module_size": size, "next_title": None},
-                                     palettes.MODULE[5], f"{OUT}/t.mp4", f"{OUT}/t.jpg")
+                                     _st.get(lesson["style"])["pal"] if lesson.get("style") else palettes.MODULE[5], f"{OUT}/t.mp4", f"{OUT}/t.jpg")
     if cur.get("series"):
         cap, _ = captions.hit_caption(lesson, f"📈 {lesson['series']} · {lesson['title']}", {})
     else:
@@ -60,6 +61,22 @@ def main():
     else:
         print("manim missing"); return 1
     charts.ideal("support"); media_checks.lut_for(palettes.MODULE[5])
+    # season 2: every visual style lays out correctly (one Reel per style, steady moments)
+    from . import styles
+    seen = set()
+    for l in cur["lessons"]:
+        sname = l.get("style")
+        if not sname or sname in seen:
+            continue
+        seen.add(sname)
+        beats, total = lesson_video.plan(l, None)
+        h = lesson_video.overlay_html(l, {"module_size": 0, "next_title": None}, styles.get(sname)["pal"], beats, total)
+        lay = qa.layout(h, [b["_t"] + b["_d"] * f for b in beats for f in (0.5, 0.8)])
+        print(f"style {sname} ({l['id']}):", lay[:2] or "ok")
+        if lay:
+            return 1
+    for p_ in charts.PATTERNS:
+        charts.ideal(p_)
     site.build(cur, st, f"{OUT}/site")
     for f in ("t.mp4", "t.jpg", "q.mp4", "site/index.html"):
         if not os.path.getsize(f"{OUT}/{f}"):

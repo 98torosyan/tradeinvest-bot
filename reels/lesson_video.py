@@ -14,11 +14,30 @@ from .palettes import css_vars
 
 FPS = int(os.environ.get("REEL_FPS", "30"))
 OUTRO = 3.4
-GRAPHIC = {"hero", "card", "compare", "checklist", "chart", "math"}
+GRAPHIC = {"hero", "card", "compare", "checklist", "chart", "math", "stat", "myth", "quiz", "steps", "bars"}
 
 
 # ---------------- music beat grid (numpy only) ----------------
 def beat_grid_librosa(music, seconds=120):
+    """Runs the librosa beat tracker in a child process: a crash in native code (numba) can then never
+    take the whole publishing run down -- we simply fall back to the numpy beat grid."""
+    import json as _j
+    import sys as _sys
+    code = ("import json,sys;sys.path.insert(0,sys.argv[2]);from reels.lesson_video import _beat_grid_librosa as f;"
+            "r=f(sys.argv[1]);print(json.dumps(None if r is None else [list(map(float,r[0])),list(map(float,r[1]))]))")
+    try:
+        root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+        r = subprocess.run([_sys.executable, "-c", code, music, root], capture_output=True, text=True, timeout=180)
+        if r.returncode != 0:
+            print("[librosa] beat tracker failed (code", r.returncode, "), using the numpy grid")
+            return None
+        out = _j.loads(r.stdout.strip().splitlines()[-1])
+        return (out[0], out[1]) if out else None
+    except Exception as exc:  # noqa: BLE001
+        print("[librosa]", exc); return None
+
+
+def _beat_grid_librosa(music, seconds=120):
     """(beat_times, downbeat_times) aligned to the music start, via librosa; None if unavailable."""
     try:
         import librosa
@@ -94,6 +113,17 @@ def beat_len(b):
         return min(9.0, max(4.5, 1.6 + 1.3 * len(b["items"]) + 0.2 * _nwords(*b["items"])))
     if k == "chart":
         return min(10.0, max(6.0, 3.4 + 0.55 * _nwords(b.get("title", ""), b.get("text", ""))))
+    if k == "stat":
+        return min(7.0, max(4.6, 2.6 + 0.55 * _nwords(b.get("label", ""), b.get("sub", ""))))
+    if k == "myth":
+        return min(11.0, max(6.0, 2.2 + 0.32 * _nwords(b["myth"]) + 0.62 * _nwords(b["truth"])))
+    if k == "quiz":
+        t_opts = 0.7 + 0.3 * _nwords(b["q"])
+        return min(14.0, t_opts + 0.55 * len(b["options"]) + 0.3 + 3 + 1.8 + 0.12 * _nwords(*b["options"]))
+    if k == "steps":
+        return min(10.0, max(4.8, 1.6 + 1.1 * len(b["items"]) + 0.22 * _nwords(*b["items"])))
+    if k == "bars":
+        return min(9.0, max(4.8, 2.4 + 0.8 * len(b["items"]) + 0.15 * _nwords(*[x[0] for x in b["items"]])))
     if k == "math":
         return min(10.0, max(5.5, 3.2 + 0.55 * _nwords(b.get("text", ""))))
     words = b["text"].split()
@@ -237,17 +267,27 @@ def _fit(text, base, width=900, k=0.64):
     return int(min(base, width / (longest * k)))
 
 
-def _hero(b):
+def _hero(b, mode="slam"):
     parts = b["text"].split("|")
     html = ""
     for i, p in enumerate(parts):
         last = i == len(parts) - 1 and len(parts) > 1
-        size = _fit(max(p.split(), key=len) if len(p) > 14 else p, 150 if last else 128, width=880, k=0.92)
+        k = 0.78 if mode == "glow" else 0.92                     # condensed neon type is narrower
+        size = _fit(max(p.split(), key=len) if len(p) > 14 else p, 150 if last else 128, width=880, k=k)
         style = f' style="font-size:{size}px"'
         if b.get("first") and i == 0:
             html += f'<div class="hl"{style}>{esc(p)}</div>'                      # visible on frame 0 (hook)
+            continue
+        at = (0.55 + 0.8 if b.get("first") else 0.2) + i * 0.62   # first scene starts 0.8 s "early" (hook on frame 0)
+        if mode == "mask":
+            html += f'<div class="hl mk" data-fx="mask" data-at="{at:.2f}" data-dur=".7"{style}><span>{esc(p)}</span></div>'
+        elif mode == "type":
+            html += f'<div class="hl" data-fx="type" data-at="{at - .1:.2f}" data-dur="{max(.45, .045 * len(p)):.2f}"{style}>{esc(p)}</div>'
+        elif mode == "chars":
+            html += f'<div class="hl" data-fx="chars" data-at="{at:.2f}" data-dur=".6"{style}>{esc(p)}</div>'
+        elif mode == "glow":
+            html += f'<div class="hl" data-fx="glow" data-at="{at:.2f}" data-dur=".7"{style}>{esc(p)}</div>'
         else:
-            at = (0.55 + 0.8 if b.get("first") else 0.2) + i * 0.62   # first scene starts 0.8 s "early" (hook on frame 0)
             html += f'<div class="hl" data-fx="slam" data-at="{at:.2f}" data-dur=".55"{style}>{esc(p)}</div>'
     return f'<div class="dim"></div><div class="hstack">{html}</div>'
 
@@ -312,10 +352,13 @@ def _icon_html(name, at=0.05):
     return f'<div class="gicon" data-fx="pop" data-at="{at:.2f}" data-dur=".5">{body}</div>'
 
 
-def _graphic(b):
+CARD_FX = {"glass": "tilt", "editorial": "rise", "terminal": "rise", "neon": "pop", "paper": "pop"}
+
+
+def _graphic(b, card="neon"):
     k = b["kind"]
     if k == "card":
-        return (f'<div class="dim"></div><div class="gcard" data-fx="pop" data-at=".15" data-dur=".55">{_icon_html(icon_for(b), .3)}'
+        return (f'<div class="dim"></div><div class="gcard" data-fx="{CARD_FX.get(card, "pop")}" data-at=".15" data-dur=".55">{_icon_html(icon_for(b), .3)}'
                 f'<div class="gt">{esc(b["title"])}</div><div class="gx" data-fx="rise" data-at=".55" data-dur=".6">{esc(b["text"])}</div></div>')
     if k == "chart":
         import json as _j
@@ -340,15 +383,66 @@ def _graphic(b):
                 + _captions(dict(b, _d=b["_d"])))
     if k == "compare":
         a, c = b["a"], b["b"]
+        lw = lambda t: max(str(t).split(), key=len)
+        gt = min(_fit(lw(a[0]), 44, width=330, k=0.8), _fit(lw(c[0]), 44, width=330, k=0.8))   # both sides the same size
+        gx = min(_fit(lw(a[1]), 48, width=330, k=0.8), _fit(lw(c[1]), 48, width=330, k=0.8))
+        st = lambda n: f' style="font-size:{n}px"'
         return (f'<div class="dim"></div><div class="cmp">'
-                f'<div class="side l" data-fx="rise" data-at=".2" data-dur=".6"><div class="gt">{esc(a[0])}</div><div class="gx">{esc(a[1])}</div></div>'
+                f'<div class="side l" data-fx="rise" data-at=".2" data-dur=".6"><div class="gt"{st(gt)}>{esc(a[0])}</div><div class="gx"{st(gx)}>{esc(a[1])}</div></div>'
                 f'<div class="vs" data-fx="pop" data-at=".7" data-dur=".5">VS</div>'
-                f'<div class="side r" data-fx="rise" data-at="1.0" data-dur=".6"><div class="gt">{esc(c[0])}</div><div class="gx">{esc(c[1])}</div></div></div>')
+                f'<div class="side r" data-fx="rise" data-at="1.0" data-dur=".6"><div class="gt"{st(gt)}>{esc(c[0])}</div><div class="gx"{st(gx)}>{esc(c[1])}</div></div></div>')
     if k == "checklist":
         items = "".join(f'<div class="it" data-fx="rise" data-at="{0.6 + i * 1.0:.2f}" data-dur=".5"><i>✓</i>{esc(x)}</div>'
                         for i, x in enumerate(b["items"]))
         return (f'<div class="dim"></div><div class="chk"><div class="gt" data-fx="rise" data-at=".15" data-dur=".5">{esc(b["title"])}</div>'
                 f'{items}</div>')
+    if k == "stat":
+        try:
+            num = float(str(b["value"]).replace(",", ""))
+        except ValueError:
+            num = None
+        dec = len(str(b["value"]).split(".")[1]) if "." in str(b["value"]) else 0
+        val = (f'<div class="sv" data-fx="count" data-at=".25" data-dur="1.4" data-from="0" data-to="{num}" data-dec="{dec}" '
+               f'data-grp="1" data-pre="{esc(b.get("pre", ""))}" data-post="{esc(b.get("post", ""))}">{esc(b.get("pre", ""))}0</div>'
+               if num is not None else f'<div class="sv" data-fx="pop" data-at=".25" data-dur=".6">{esc(b["value"])}</div>')
+        ring = ('<svg class="ring" viewBox="0 0 560 30"><path d="M10 15 H550" stroke="var(--a)" stroke-width="10" stroke-linecap="round" '
+                'fill="none" data-fx="draw" data-at=".25" data-dur="1.4"/></svg>')
+        sub = f'<div class="ss" data-fx="rise" data-at="1.9" data-dur=".6">{esc(b["sub"])}</div>' if b.get("sub") else ""
+        shown = f'{b.get("pre", "")}{num:,.{dec}f}{b.get("post", "")}' if num is not None else str(b["value"])
+        val = val.replace('<div class="sv"', f'<div class="sv" style="font-size:{_fit(shown, 250, width=880, k=0.62)}px"', 1)
+        return (f'<div class="dim"></div><div class="stat">{val}{ring}'
+                f'<div class="sl" data-fx="rise" data-at="1.3" data-dur=".6">{esc(b["label"])}</div>{sub}</div>')
+    if k == "myth":
+        t2 = 0.6 + 0.32 * _nwords(b["myth"])
+        return (f'<div class="dim"></div><div class="myth" data-fx="tilt" data-at=".05" data-dur=".6">'
+                f'<span class="tag m">ՄԻՖ</span><div class="mx"><span data-fx="strike" data-at="{t2:.2f}" data-dur=".6">{esc(b["myth"])}</span></div>'
+                f'<div data-fx="flip" data-at="{t2 + .6:.2f}" data-dur=".6"><span class="tag t">ԻՐԱԿԱՆՈՒԹՅՈՒՆ</span>'
+                f'<div class="tx">{esc(b["truth"])}</div></div></div>')
+    if k == "quiz":
+        t_opts = 0.7 + 0.3 * _nwords(b["q"])
+        t_think = t_opts + 0.55 * len(b["options"]) + 0.3
+        rows = ""
+        for i, o in enumerate(b["options"]):
+            cls = "ok" if i == b["a"] else "no"
+            rows += (f'<div class="op" data-fx="rise" data-at="{t_opts + i * .55:.2f}" data-dur=".5">'
+                     f'<b>{"ԱԲԳ"[i]}</b><span>{esc(o)}</span><i data-fx="state" data-cls="{cls}" data-at="{t_think + 3:.2f}"></i></div>')
+        return (f'<div class="dim"></div><div class="quiz"><div class="qq" data-fx="rise" data-at=".15" data-dur=".5">{esc(b["q"])}</div>'
+                f'{rows}<div class="timer" data-fx="shrink" data-at="{t_think:.2f}" data-dur="3"></div>'
+                f'<div class="hint" data-fx="rise" data-at="{t_think:.2f}" data-dur=".4">Մտածիր 3 վայրկյան… գրիր comment-ում</div></div>')
+    if k == "steps":
+        items = "".join(f'<div class="st" data-fx="rise" data-at="{0.7 + i * 1.1:.2f}" data-dur=".5"><i>{i + 1}</i><span>{esc(x)}</span></div>'
+                        for i, x in enumerate(b["items"]))
+        return (f'<div class="dim"></div><div class="steps"><div class="gt" data-fx="rise" data-at=".15" data-dur=".5">{esc(b["title"])}</div>'
+                f'<div class="rail" data-fx="scaley" data-at=".6" data-dur="{1.1 * len(b["items"]):.2f}"></div>{items}</div>')
+    if k == "bars":
+        mx = max(abs(float(v)) for _, v, _d, *r in b["items"]) or 1
+        rows = ""
+        for i, (lab, v, disp, *rest) in enumerate(b["items"]):
+            bad = " bad" if rest and rest[0] == "bad" else ""
+            at = 0.6 + i * 0.8
+            rows += (f'<div class="br" data-fx="rise" data-at="{at:.2f}" data-dur=".45"><div class="bl"><span>{esc(lab)}</span><em>{esc(disp)}</em></div>'
+                     f'<div class="bt"><div class="bf{bad}" data-fx="fill" data-w="{abs(float(v)) / mx:.3f}" data-at="{at + .2:.2f}" data-dur="1.0"></div></div></div>')
+        return (f'<div class="dim"></div><div class="bars"><div class="gt" data-fx="rise" data-at=".15" data-dur=".5">{esc(b["title"])}</div>{rows}</div>')
     return ""
 
 
@@ -372,16 +466,19 @@ document.querySelectorAll('.lottie').forEach(el=>{const sc=el.closest('.scene');
 
 
 def overlay_html(lesson, cur_info, palette, beats, total):
+    from . import styles
+    sname = lesson.get("style") or "marker"
+    sty = styles.get(sname)
     scenes = []
     for i, b in enumerate(beats):
         a, d = b["_t"], b["_d"]
         a_in = -0.8 if i == 0 else a                     # first scene already fully visible at frame 0
         if b["kind"] == "hero":
-            inner = _hero(b); cls = "hero"
+            inner = _hero(b, sty["hero"]); cls = "hero"
         elif b["kind"] == "broll":
             inner = (_price(b["overlay"]) if b.get("overlay") else "") + _captions(b); cls = "beat"
         else:
-            inner = _graphic(b); cls = "graphic beat" if b["kind"] in ("chart", "math") else "graphic"
+            inner = _graphic(b, sty["card"]); cls = "graphic beat" if b["kind"] in ("chart", "math") else "graphic"
         scenes.append(f'<section class="scene {cls}" data-in="{a_in:.2f}" data-out="{a + d:.2f}">{inner}</section>')
     oa = total - OUTRO
     nxt = cur_info.get("next_title") if settings.SHOW_COURSE_LABEL else None
@@ -394,7 +491,15 @@ def overlay_html(lesson, cur_info, palette, beats, total):
                 f'<div class="nxt2" data-fx="rise" data-at=".25" data-dur=".6">{esc(nxt)}</div>') if nxt else ""
     scenes.append(f'<section class="scene outro" data-in="{oa:.2f}" data-out="{total + 1:.2f}"><div class="obg"></div>{nxt_html or scenes_cta}'
                   f'{logo_svg()}<div class="name" data-fx="rise" data-at="1.3" data-dur=".6">TradeInvest</div></section>')
-    css = open(os.path.join(ASSETS, "broll.css"), encoding="utf-8").read() + open(os.path.join(ASSETS, "lesson.css"), encoding="utf-8").read()
+    css = "".join(open(os.path.join(ASSETS, f), encoding="utf-8").read() for f in ("broll.css", "lesson.css", "themes.css"))
+    css = (f"@font-face{{font-family:'ArmCond';src:url('file://{ASSETS}/ttf/NotoSansArmenian.ttf');font-weight:100 900;font-stretch:62.5% 100%}}"
+           + "".join(f"@font-face{{font-family:'JBMono';font-weight:{w};src:url('file://{ASSETS}/fonts/jetbrains-mono-latin-{w}-normal.woff2')}}"
+                     for w in (500, 700, 800)) + css)
+    extra = '<div class="scan"></div>' if sname == "terminal" else ""
+    if sname == "glass":
+        extra = ('<div class="blobs"><i style="left:-200px;top:200px;width:700px;height:700px;background:var(--blob1)"></i>'
+                 '<i style="right:-220px;top:900px;width:760px;height:760px;background:var(--blob2)"></i>'
+                 '<i style="left:200px;bottom:-200px;width:600px;height:600px;background:var(--blob3)"></i></div>')
     if settings.SHOW_COURSE_LABEL:
         pill = f'Մոդուլ {lesson["module"]} · Դաս {lesson["n"]}/{cur_info["module_size"]}'
         head = f'<div class="pill" id="pill"><span>{esc(pill)}</span></div><div class="prog" id="prog"><i id="pi"></i></div>'
@@ -406,41 +511,50 @@ def overlay_html(lesson, cur_info, palette, beats, total):
         from . import bgdata
         seed = sum(map(ord, lesson["id"]))
         data = bgdata.get(seed)
-        styles = settings.BG_STYLES
-        bsc = [{"a": (-1 if i == 0 else b["_t"]), "b": b["_t"] + b["_d"], "style": "candles" if b["kind"] == "hero" else ("plain" if b["kind"] in ("chart", "math") else styles[(seed + i) % len(styles)]),
+        bgs = sty["bg"]
+        calm = ("chart", "math", "quiz", "myth", "bars", "steps", "stat")
+        bsc = [{"a": (-1 if i == 0 else b["_t"]), "b": b["_t"] + b["_d"], "style": bgs[0] if b["kind"] == "hero" else ("plain" if b["kind"] in calm else bgs[(seed + i) % len(bgs)]),
                 "seed": seed + i * 13, "acc": palette["a2"]} for i, b in enumerate(beats)]
         bsc.append({"a": total - OUTRO, "b": total + 2, "style": "line", "seed": seed + 99, "acc": palette["a2"]})
         bg_canvas = '<canvas id="bgc" width="1080" height="1920" style="position:absolute;left:0;top:0;width:1080px;height:1920px;z-index:0"></canvas>'
         bg_js = (f'<script>window.BGDATA={_j.dumps(data)};window.BGSCENES={_j.dumps(bsc)};</script>'
                  f'<script src="{ASSETS}/chartbg.js"></script>')
     return (f'<!doctype html><html lang="hy"><head><meta charset="utf-8"><link rel="stylesheet" href="{ASSETS}/fonts.css">'
-            f'<style>{css}</style></head><body style="{css_vars(palette)}">'
-            f'{bg_canvas}<div class="shade"></div>{head}{"".join(scenes)}'
+            f'<style>{css}</style></head><body class="st-{sname}" data-trans="{sty["trans"]}" data-cap="{sty["cap"]}" style="{css_vars(palette)}">'
+            f'{bg_canvas}{extra}<div class="shade"></div>{head}{"".join(scenes)}'
             f'<script src="{ASSETS}/js/lwc.js"></script><script src="{ASSETS}/js/lottie.js"></script>'
             f'<script src="{ASSETS}/engine.js"></script>{bg_js}<script>window.DURATION={total:.2f};{CHART_JS}'
-            f'''(function(){{const o=applyFx;applyFx=function(it,l){{if(it.dataset.fx!=='slam')return o(it,l);
- const r=prog(l,+it.dataset.at,+it.dataset.dur);const e=r<=0?0:EASE.back(r);it.style.opacity=clamp01(r*3);
- it.style.transform=`scale(${{1.18-.18*e}})`;it.style.filter=`blur(${{(1-clamp01(r*2.2))*6}}px)`;}};}})();
+            f'''captionFx();
 HOOKS.push(t=>{{const end={oa:.2f};const o=1-EASE.inOut(prog(t,end-.35,.35));
  const P=document.getElementById('pill');if(P){{P.style.opacity=o;document.getElementById('prog').style.opacity=o;
  document.getElementById('pi').style.transform=`scaleX(${{clamp01(t/end)}})`;}}
- for(const sc of SCENES){{if(!sc.el.classList.contains('beat'))continue;const l=t-sc.a;
-  sc.el.querySelectorAll('.chunk').forEach(c=>{{const on=l>=+c.dataset.s&&l<+c.dataset.e+(c.nextElementSibling?0:9);
-   c.style.display=on?'block':'none';const k=Math.min(1,EASE.back(clamp01((l-+c.dataset.s)/.22)));c.style.transform=`scale(${{.88+.12*k}})`;}});
-  sc.el.querySelectorAll('.w').forEach(w=>w.classList.toggle('on',l>=+w.dataset.s&&l<+w.dataset.e));}}
 }});logoFx({oa + 0.55:.2f});setupReel();</script></body></html>''')
 
 
 def cover_html(lesson, cur_info, palette):
+    from . import styles
+    sname = lesson.get("style") or "marker"
     title = "<br>".join(esc(p) for p in lesson["hook"].split("|"))
+    longest = max(lesson["hook"].replace("|", " ").split(), key=len)
+    tsize = min(150 if sname == "neon" else 112, _fit(longest, 150, width=900, k=0.62 if sname == "neon" else 0.78))
+    label = lesson.get("series") or f'Մոդուլ {lesson["module"]} · Դաս {lesson["n"]}'
+    css = open(os.path.join(ASSETS, "themes.css"), encoding="utf-8").read()
+    fonts = f"@font-face{{font-family:'ArmCond';src:url('file://{ASSETS}/ttf/NotoSansArmenian.ttf');font-weight:100 900;font-stretch:62.5% 100%}}"
+    tfont = {"neon": "font-family:ArmCond,ArmSans;font-stretch:62.5%;font-weight:900;font-size:150px;text-shadow:0 0 30px var(--a),0 0 80px var(--a)",
+             "editorial": "font-family:ArmSerif,serif;font-weight:800",
+             "terminal": "font-family:ArmSans,sans-serif;font-weight:800;text-shadow:0 0 40px rgba(31,214,122,.4)",
+             "glass": "font-family:ArmSans,sans-serif;font-weight:800",
+             "marker": "font-family:ArmSans,sans-serif;font-weight:800"}.get(sname, "")
     return (f'<!doctype html><html lang="hy"><head><meta charset="utf-8"><link rel="stylesheet" href="{ASSETS}/fonts.css">'
-            f'<style>*{{margin:0;padding:0;box-sizing:border-box}}html,body{{width:1080px;height:1920px;overflow:hidden}}'
+            f'<style>{fonts}{css}*{{margin:0;padding:0;box-sizing:border-box}}html,body{{width:1080px;height:1920px;overflow:hidden}}'
             f'body{{background:var(--bg);color:var(--txt);font-family:ArmSans,sans-serif;display:flex;flex-direction:column;'
             f'align-items:center;justify-content:center;gap:56px;text-align:center}}'
-            f'.m{{font-size:44px;font-weight:700;color:var(--onacc);background:linear-gradient(135deg,var(--a2),var(--a));padding:16px 34px;border-radius:50px}}'
-            f'.t{{font-family:ArmSerif,serif;font-weight:800;font-size:112px;line-height:1.1;padding:0 70px}}'
-            f'.s{{font-size:46px;color:var(--mut);font-weight:600;padding:0 90px}}.logo{{width:120px;height:120px}}</style></head>'
-            f'<body style="{css_vars(palette)}"><div class="m">Մոդուլ {lesson["module"]} · Դաս {lesson["n"]}</div>'
+            f'.m{{font-size:40px;font-weight:700;letter-spacing:.06em;color:var(--onacc);background:linear-gradient(135deg,var(--a2),var(--a));padding:16px 34px;border-radius:50px}}'
+            f'.t{{font-size:112px;line-height:1.1;padding:0 70px;{tfont}}}.t .acc{{color:var(--a2)}}.t{{font-size:{tsize}px}}'
+            f'.s{{font-size:46px;color:var(--mut);font-weight:600;padding:0 90px}}.logo{{width:120px;height:120px}}'
+            f'.glow{{position:absolute;inset:0;background:radial-gradient(circle at 50% 42%,var(--blob1),transparent 60%);z-index:-1}}</style></head>'
+            f'<body class="st-{sname}" style="{css_vars(palette)}"><div class="glow"></div>{"<div class=scan></div>" if sname == "terminal" else ""}'
+            f'<div class="m">{esc(label)}</div>'
             f'<div class="t">{title}</div><div class="s">{esc(lesson["title"])}</div>'
             f'{logo_svg().replace("opacity:0", "opacity:1")}</body></html>')
 
@@ -479,6 +593,22 @@ def render_lesson(lesson, cur_info, palette, out_mp4, out_cover, music=None, use
             events.append(("pop", b["_t"] + .2, .35))
         if b.get("overlay"):
             events += [("tick", b["_t"] + .35 + k * .1, .12) for k in range(12)] + [("pop", b["_t"] + 1.5, .35)]
+        if b["kind"] == "stat":
+            events += [("riser", b["_t"] + .1, 1.4), ("pop", b["_t"] + 1.6, .35)]
+        if b["kind"] == "myth":
+            events += [("impact", b["_t"] + 0.6 + 0.32 * _nwords(b["myth"]), .5), ("chime", b["_t"] + 1.2 + 0.32 * _nwords(b["myth"]), .8)]
+        if b["kind"] == "quiz":
+            tt = b["_t"] + 0.7 + 0.3 * _nwords(b["q"]) + 0.55 * len(b["options"]) + 0.3
+            events += [("tick", tt + k, .12) for k in range(3)] + [("chime", tt + 3, .9)]
+        if b["kind"] in ("steps", "bars"):
+            n = len(b["items"]); gap = 1.1 if b["kind"] == "steps" else 0.8
+            events += [("pop", b["_t"] + .7 + k * gap, .3) for k in range(n)]
+        if lesson.get("style") == "terminal" and b["kind"] == "broll":
+            words = b["text"].split(); chs = chunks(words)
+            need = [max(settings.CHUNK_MIN, len(c) * settings.WORD_SEC) for c in chs]
+            sc_ = (b["_d"] - 0.45) / max(sum(need), 1e-6); tt = b["_t"] + 0.15
+            for n_ in need:
+                events += [("tick", tt + k * .07, .08) for k in range(5)]; tt += n_ * sc_
     events += [("whoosh", total - OUTRO - .18, .45), ("logo", total - OUTRO + 0.5, .8)]
     wav = os.path.join(work, "mix.wav")
     mix_audio(music, events, total, wav, music_offset=moff)

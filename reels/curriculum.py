@@ -3,7 +3,7 @@ import json
 import os
 
 PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "content", "curriculum.json")
-BEAT_KINDS = {"hero", "broll", "card", "compare", "checklist", "chart", "math"}
+BEAT_KINDS = {"hero", "broll", "card", "compare", "checklist", "chart", "math", "stat", "myth", "quiz", "steps", "bars"}
 
 
 HITS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "content", "hits.json")
@@ -25,15 +25,22 @@ def module_size(cur, m):
     return sum(1 for l in cur["lessons"] if l["module"] == m)
 
 
+def beat_texts(b):
+    """Every piece of visible text in a beat, for all beat kinds."""
+    out = [str(b.get(k, "")) for k in ("text", "title", "label", "sub", "myth", "truth", "q")]
+    for side in ("a", "b"):
+        if isinstance(b.get(side), list):
+            out += [str(x) for x in b[side]]
+    for it in b.get("items", []):
+        out.append(str(it[0]) if isinstance(it, (list, tuple)) else str(it))
+    out += [str(o) for o in b.get("options", [])]
+    return [x for x in out if x]
+
+
 def words(lesson):
     n = 0
     for b in lesson.get("beats", []):
-        for k in ("text", "title"):
-            n += len(str(b.get(k, "")).split())
-        for side in ("a", "b"):
-            if side in b:
-                n += len(" ".join(b[side]).split())
-        n += len(" ".join(b.get("items", [])).split())
+        n += sum(len(x.split()) for x in beat_texts(b))
     n += len(lesson.get("hook", "").replace("|", " ").split()) + len(lesson.get("recap", "").replace("|", " ").split())
     return n
 

@@ -1952,6 +1952,3606 @@
    "n": 31,
    "status": "script",
    "series": "Գրաֆիկի գաղտնիքները"
+  },
+  {
+   "title": "Head and Shoulders",
+   "type": "explain",
+   "hook": "Գրաֆիկի|ամենահայտնի|ֆիգուրը",
+   "beats": [
+    {
+     "kind": "chart",
+     "title": "Head and Shoulders",
+     "text": "Երեք գագաթ. միջինը ամենաբարձրն է, իսկ եզրայինները՝ մոտավորապես նույն բարձրության",
+     "pattern": "head_shoulders",
+     "source": "ideal",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Գագաթների միջև եղած հատակները միացնող գիծը կոչվում է neckline",
+     "query": ""
+    },
+    {
+     "kind": "myth",
+     "myth": "Երրորդ գագաթը արդեն վաճառքի ազդանշան է",
+     "truth": "Ֆիգուրը հաստատվում է միայն neckline-ի կոտրումից հետո"
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Մինչև հաստատումը սա միայն հնարավոր ֆիգուր է",
+     "query": ""
+    }
+   ],
+   "recap": "Սպասիր|neckline-ի|կոտրմանը",
+   "summary": "Head and Shoulders. ինչպես ճանաչել ֆիգուրը և երբ է այն իրականում հաստատվում։",
+   "question": "Դու տեսե՞լ ես այս ֆիգուրը BTC-ի գրաֆիկում։",
+   "keywords": [
+    "head and shoulders",
+    "chart pattern",
+    "neckline",
+    "տեխնիկական վերլուծություն"
+   ],
+   "facts": [
+    "Head and shoulders is confirmed by a close below the neckline."
+   ],
+   "quiz": {
+    "q": "Ե՞րբ է ֆիգուրը հաստատվում",
+    "options": [
+     "Neckline-ի կոտրումով",
+     "Երրորդ գագաթին",
+     "Երբեք"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-032",
+   "module": 1,
+   "n": 32,
+   "status": "script",
+   "series": "Գրաֆիկի գաղտնիքները",
+   "style": "neon",
+   "season": 2
+  },
+  {
+   "title": "Միջինացում կորստի մեջ",
+   "type": "explain",
+   "hook": "Գինը ընկավ.|«Էլի գնեմ,|միջինը իջնի»",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Կորստի մեջ գտնվող պոզիցիային ավելացնելը կոչվում է averaging down",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Միջին գինը իջնում է, բայց ռիսկը մեծանում է",
+     "query": ""
+    },
+    {
+     "kind": "bars",
+     "title": "Մեկ սխալ գործարք",
+     "items": [
+      [
+       "Սկզբնական պոզիցիա",
+       1,
+       "$100"
+      ],
+      [
+       "Առաջին ավելացում",
+       2,
+       "$200"
+      ],
+      [
+       "Երկրորդ ավելացում",
+       4,
+       "$400",
+       "bad"
+      ]
+     ]
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Ավելացրու շահույթի մեջ գտնվող պոզիցիային, ոչ թե կորստի",
+     "query": ""
+    }
+   ],
+   "recap": "Մի՛ ավելացրու|կորցնող|պոզիցիային",
+   "summary": "Averaging down. ինչու է կորստի մեջ «միջինացնելը» փոքր սխալը մեծ դարձնելու ամենաարագ ճանապարհը։",
+   "question": "Դու երբևէ միջինացրե՞լ ես կորստի մեջ։",
+   "keywords": [
+    "averaging down",
+    "թրեյդերի սխալներ",
+    "ռիսկ",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "Adding to a losing position increases total risk."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է կատարվում averaging down-ի ժամանակ",
+    "options": [
+     "Ռիսկը մեծանում է",
+     "Ռիսկը վերանում է",
+     "Շահույթը երաշխավորվում է"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-033",
+   "module": 2,
+   "n": 33,
+   "status": "script",
+   "series": "Թրեյդերի սխալները",
+   "style": "editorial",
+   "season": 2
+  },
+  {
+   "title": "Bollinger Bands",
+   "type": "explain",
+   "hook": "Երբ գրաֆիկը|«սեղմվում է»,|պատրաստվիր",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Bollinger Bands-ը միջին գիծ է և երկու շերտ դրա վերևում ու ներքևում",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Շերտերը լայնանում են, երբ տատանումը մեծ է, և նեղանում են, երբ շուկան հանգիստ է",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Squeeze",
+     "text": "Շերտերի ուժեղ նեղացումը հաճախ նախորդում է մեծ շարժման",
+     "query": ""
+    },
+    {
+     "kind": "myth",
+     "myth": "Վերին շերտին հպումը վաճառքի ազդանշան է",
+     "truth": "Ուժեղ trend-ում գինը կարող է երկար «քայլել» շերտի երկայնքով"
+    }
+   ],
+   "recap": "Squeeze՝|մեծ շարժման|նախազգուշացում",
+   "summary": "Bollinger Bands պարզ լեզվով. ինչ է squeeze-ը և ինչու շերտին հպումը ինքնին ազդանշան չէ։",
+   "question": "Դու օգտագործո՞ւմ ես Bollinger Bands։",
+   "keywords": [
+    "Bollinger Bands",
+    "squeeze",
+    "ինդիկատոր",
+    "տեխնիկական վերլուծություն"
+   ],
+   "facts": [
+    "Bollinger Bands use a moving average plus and minus two standard deviations."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է հաճախ նախորդում մեծ շարժմանը",
+    "options": [
+     "Շերտերի նեղացումը",
+     "Շերտերի անհետացումը",
+     "Ծավալի բացակայությունը"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-034",
+   "module": 3,
+   "n": 34,
+   "status": "script",
+   "series": "Ինդիկատորներ պարզ լեզվով",
+   "style": "terminal",
+   "season": 2
+  },
+  {
+   "title": "BTC dominance",
+   "type": "explain",
+   "hook": "Ինչու են altcoin-ները|ընկնում,|երբ BTC-ն աճում է",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "BTC dominance-ը ցույց է տալիս Bitcoin-ի բաժինը ամբողջ crypto շուկայում",
+     "query": ""
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Dominance-ը աճում է",
+      "Գումարը հավաքվում է BTC-ում"
+     ],
+     "b": [
+      "Dominance-ը իջնում է",
+      "Altcoin-ները հաճախ ավելի ուժեղ են"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Դրա համար BTC-ի աճը միշտ չէ, որ օգնում է altcoin-ներին",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Հուշում",
+     "text": "Altcoin գնելուց առաջ նայիր նաև dominance-ի գրաֆիկին",
+     "query": ""
+    }
+   ],
+   "recap": "Dominance՝|շուկայի|կողմնացույց",
+   "summary": "BTC dominance. ինչ է այն և ինչու է կարևոր altcoin-ների համար։",
+   "question": "Դու հետևո՞ւմ ես BTC dominance-ին։",
+   "keywords": [
+    "BTC dominance",
+    "altcoin",
+    "crypto շուկա",
+    "crypto հայերեն"
+   ],
+   "facts": [
+    "BTC dominance is Bitcoin's share of total crypto market capitalisation."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է ցույց տալիս BTC dominance-ը",
+    "options": [
+     "Bitcoin-ի բաժինը շուկայում",
+     "BTC-ի գինը",
+     "Մայներների քանակը"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-035",
+   "module": 4,
+   "n": 35,
+   "status": "script",
+   "series": "Շուկան իրականում",
+   "style": "glass",
+   "season": 2
+  },
+  {
+   "title": "Expectancy",
+   "type": "explain",
+   "hook": "Մեկ թիվ,|որը ասում է՝|ռազմավարությունը աշխատո՞ւմ է",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Expectancy-ն ցույց է տալիս, թե միջինում որքան ես վաստակում մեկ գործարքից",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Բանաձև",
+     "text": "Հաղթանակ % × միջին շահույթ − կորուստ % × միջին կորուստ",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Օրինակ",
+     "text": "40% × 2R − 60% × 1R = +0.2R յուրաքանչյուր գործարքում",
+     "query": ""
+    },
+    {
+     "kind": "stat",
+     "value": "0.2",
+     "label": "միջին շահույթ մեկ գործարքում",
+     "sub": "100 գործարք ≈ +20R",
+     "pre": "+",
+     "post": "R"
+    },
+    {
+     "kind": "broll",
+     "text": "Եթե expectancy-ն բացասական է, ավելի շատ գործարքը ավելի շատ կորուստ է",
+     "query": ""
+    }
+   ],
+   "recap": "Դրական expectancy|կամ|ոչ մի գործարք",
+   "summary": "Expectancy. մեկ բանաձև, որը ցույց է տալիս՝ ռազմավարությունը երկարաժամկետում շահութաբե՞ր է, թե՞ ոչ։",
+   "question": "Գիտե՞ս քո ռազմավարության expectancy-ն։",
+   "keywords": [
+    "expectancy",
+    "ռիսկի կառավարում",
+    "R multiple",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "Expectancy = win rate × average win − loss rate × average loss."
+   ],
+   "quiz": {
+    "q": "40% × 2R − 60% × 1R =",
+    "options": [
+     "+0.2R",
+     "−0.2R",
+     "+1R"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-036",
+   "module": 5,
+   "n": 36,
+   "status": "script",
+   "series": "Ռիսկ առանց ձանձրույթի",
+   "style": "marker",
+   "season": 2
+  },
+  {
+   "title": "Double Bottom",
+   "type": "explain",
+   "hook": "Երկու հատակ|նույն տեղում.|ի՞նչ է սպասվում",
+   "beats": [
+    {
+     "kind": "chart",
+     "title": "Double Bottom",
+     "text": "Գինը երկու անգամ իջնում է նույն գոտուն և հետ թռչում",
+     "pattern": "double_bottom",
+     "source": "ideal",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Սա կարող է նշանակել, որ վաճառողները թուլանում են",
+     "query": ""
+    },
+    {
+     "kind": "steps",
+     "title": "Ինչպես ստուգել",
+     "items": [
+      "Երկու հատակը մոտավորապես նույն գոտում են",
+      "Գինը կոտրում է հատակների միջև եղած գագաթը",
+      "Մոմը փակվում է այդ մակարդակից վեր"
+     ]
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Առանց հաստատման սա միայն հնարավոր ֆիգուր է",
+     "query": ""
+    }
+   ],
+   "recap": "Երկու հատակ՝|սպասիր|հաստատման",
+   "summary": "Double Bottom. շրջադարձի դասական ֆիգուր և ինչպես ստուգել այն մինչև մուտքը։",
+   "question": "Դու առևտուր անո՞ւմ ես ֆիգուրներով։",
+   "keywords": [
+    "double bottom",
+    "chart pattern",
+    "ֆիգուր",
+    "տեխնիկական վերլուծություն"
+   ],
+   "facts": [
+    "A double bottom is confirmed by a break above the middle peak."
+   ],
+   "quiz": {
+    "q": "Ե՞րբ է double bottom-ը հաստատվում",
+    "options": [
+     "Միջին գագաթի կոտրումով",
+     "Երկրորդ հատակին",
+     "Առաջին հատակին"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-037",
+   "module": 1,
+   "n": 37,
+   "status": "script",
+   "series": "Գրաֆիկի գաղտնիքները",
+   "style": "editorial",
+   "season": 2
+  },
+  {
+   "title": "Stop loss-ի տեղափոխում",
+   "type": "explain",
+   "hook": "Գինը մոտեցավ stop-ին.|«Մի քիչ|ներքև տանեմ»",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Stop loss-ը հեռացնելը նշանակում է մեծացնել արդեն որոշված կորուստը",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Յուրաքանչյուր տեղափոխություն թվում է փոքր, բայց միասին դրանք կարող են ոչնչացնել հաշիվը",
+     "query": ""
+    },
+    {
+     "kind": "quiz",
+     "q": "Գինը հասնում է քո stop-ին։ Ի՞նչ ես անում",
+     "options": [
+      "Տանում եմ ներքև",
+      "Թողնում եմ, թող աշխատի",
+      "Փակում եմ առանց stop-ի"
+     ],
+     "a": 1
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Stop-ը կարելի է մոտեցնել շահույթի կողմ, բայց երբեք՝ հեռացնել",
+     "query": ""
+    }
+   ],
+   "recap": "Stop-ը|խոստում է|ինքդ քեզ",
+   "summary": "Ինչու է stop loss-ը տեղափոխելը թրեյդերների ամենաթանկ սովորություններից մեկը։",
+   "question": "Դու երբևէ տեղափոխե՞լ ես stop-ը։",
+   "keywords": [
+    "stop loss",
+    "թրեյդերի սխալներ",
+    "կարգապահություն",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "Widening a stop increases the planned loss of a trade."
+   ],
+   "quiz": {
+    "q": "Stop-ը ո՞ր ուղղությամբ կարելի է տեղափոխել",
+    "options": [
+     "Շահույթի կողմ",
+     "Կորստի կողմ",
+     "Ցանկացած"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-038",
+   "module": 2,
+   "n": 38,
+   "status": "script",
+   "series": "Թրեյդերի սխալները",
+   "style": "terminal",
+   "season": 2
+  },
+  {
+   "title": "EMA, թե՞ SMA",
+   "type": "explain",
+   "hook": "Երկու միջին,|երկու|բնավորություն",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "SMA-ն հաշվում է բոլոր գների պարզ միջինը",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "EMA-ն ավելի մեծ կշիռ է տալիս վերջին գներին",
+     "query": ""
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "SMA",
+      "Ավելի հարթ, ավելի ուշ է արձագանքում"
+     ],
+     "b": [
+      "EMA",
+      "Ավելի արագ է արձագանքում, բայց ավելի շատ աղմուկ ունի"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Ո՞րն ընտրել",
+     "text": "Չկա «լավագույնը». կարևոր է օգտագործել նույնը հետևողականորեն",
+     "query": ""
+    }
+   ],
+   "recap": "Արագ՝|EMA,|հանգիստ՝ SMA",
+   "summary": "EMA և SMA. ինչով են տարբերվում և երբ որն է ավելի հարմար։",
+   "question": "Ո՞րն ես դու օգտագործում՝ EMA, թե՞ SMA։",
+   "keywords": [
+    "EMA",
+    "SMA",
+    "moving average",
+    "ինդիկատոր"
+   ],
+   "facts": [
+    "An EMA weights recent prices more heavily than an SMA."
+   ],
+   "quiz": {
+    "q": "Ո՞րն է ավելի արագ արձագանքում",
+    "options": [
+     "EMA",
+     "SMA",
+     "Երկուսը նույնն են"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-039",
+   "module": 3,
+   "n": 39,
+   "status": "script",
+   "series": "Ինդիկատորներ պարզ լեզվով",
+   "style": "glass",
+   "season": 2
+  },
+  {
+   "title": "Altseason",
+   "type": "explain",
+   "hook": "Ինչպե՞ս է|գումարը «հոսում»|շուկայում",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Altseason է կոչվում ժամանակահատվածը, երբ altcoin-ները աճում են BTC-ից ավելի արագ",
+     "query": ""
+    },
+    {
+     "kind": "steps",
+     "title": "Հաճախ նկարագրվող հերթականություն",
+     "items": [
+      "Նախ աճում է BTC-ն",
+      "Հետո՝ ETH-ը",
+      "Հետո՝ մեծ altcoin-ները",
+      "Վերջում՝ փոքր coin-երը"
+     ]
+    },
+    {
+     "kind": "myth",
+     "myth": "Altseason-ը գալիս է ամեն տարի",
+     "truth": "Այս հերթականությունը միայն դիտարկում է, ոչ թե կանոն կամ երաշխիք"
+    },
+    {
+     "kind": "card",
+     "title": "Զգուշացում",
+     "text": "Փոքր coin-երը ամենաշատն են աճում և ամենաշատն են ընկնում",
+     "query": ""
+    }
+   ],
+   "recap": "Դիտարկում|≠|կանխատեսում",
+   "summary": "Altseason. ինչպես է գումարը հաճախ շարժվում BTC-ից դեպի altcoin-ներ և ինչու դա երաշխիք չէ։",
+   "question": "Դու սպասո՞ւմ ես altseason-ի։",
+   "keywords": [
+    "altseason",
+    "altcoin",
+    "crypto շուկա",
+    "crypto հայերեն"
+   ],
+   "facts": [
+    "Market rotation patterns are observations, not guarantees."
+   ],
+   "quiz": {
+    "q": "Altseason-ի հերթականությունը",
+    "options": [
+     "Դիտարկում է, ոչ թե կանոն",
+     "Երաշխավորված է",
+     "Կրկնվում է ամեն տարի"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-040",
+   "module": 4,
+   "n": 40,
+   "status": "script",
+   "series": "Շուկան իրականում",
+   "style": "marker",
+   "season": 2
+  },
+  {
+   "title": "Մասնակի շահույթ",
+   "type": "explain",
+   "hook": "Ինչպես վաստակել|և չանհանգստանալ|հետընթացից",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Մասնակի շահույթը պոզիցիայի մի մասի փակումն է թիրախին հասնելուց առաջ",
+     "query": ""
+    },
+    {
+     "kind": "steps",
+     "title": "Օրինակ պլան",
+     "items": [
+      "1R-ում փակիր պոզիցիայի կեսը",
+      "Stop-ը տեղափոխիր մուտքի կետ",
+      "Մնացածը թող՝ մինչև 3R"
+     ]
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Առավելություն",
+      "Շահույթի մի մասը ֆիքսված է"
+     ],
+     "b": [
+      "Թերություն",
+      "Մեծ շարժման դեպքում վաստակում ես ավելի քիչ"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Պլանը որոշիր նախքան մուտքը, ոչ թե գործարքի ընթացքում",
+     "query": ""
+    }
+   ],
+   "recap": "Մաս-մաս|փակելը|նույնպես պլան է",
+   "summary": "Մասնակի շահույթ. ինչպես փակել պոզիցիան մասերով և ինչ ես ստանում ու կորցնում դրանով։",
+   "question": "Դու փակո՞ւմ ես պոզիցիան մասերով։",
+   "keywords": [
+    "partial take profit",
+    "take profit",
+    "ռիսկի կառավարում",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "Scaling out locks in part of the profit but caps the upside."
+   ],
+   "quiz": {
+    "q": "Ո՞րն է մասնակի շահույթի թերությունը",
+    "options": [
+     "Մեծ շարժման դեպքում քիչ ես վաստակում",
+     "Ռիսկը մեծանում է",
+     "Միջնորդավճար չկա"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-041",
+   "module": 5,
+   "n": 41,
+   "status": "script",
+   "series": "Ռիսկ առանց ձանձրույթի",
+   "style": "neon",
+   "season": 2
+  },
+  {
+   "title": "Եռանկյուն",
+   "type": "explain",
+   "hook": "Գինը սեղմվում է.|պայթյունը|մոտ է",
+   "beats": [
+    {
+     "kind": "chart",
+     "title": "Եռանկյուն",
+     "text": "Գագաթներն իջնում են, հատակները բարձրանում են, և գինը սեղմվում է",
+     "pattern": "triangle",
+     "source": "ideal",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Տատանումը փոքրանում է, և շուկան սպասում է ուղղության",
+     "query": ""
+    },
+    {
+     "kind": "quiz",
+     "q": "Ո՞ր ուղղությամբ կլինի կոտրումը",
+     "options": [
+      "Միշտ վեր",
+      "Միշտ ներքև",
+      "Նախապես հայտնի չէ"
+     ],
+     "a": 2
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Սպասիր կոտրման և հաստատման, մի՛ գուշակիր",
+     "query": ""
+    }
+   ],
+   "recap": "Սեղմում՝|հետո|շարժում",
+   "summary": "Եռանկյուն ֆիգուրը. ինչ է նշանակում գնի սեղմումը և ինչու կոտրման ուղղությունը նախապես հայտնի չէ։",
+   "question": "Հիմա BTC-ի գրաֆիկում եռանկյուն տեսնո՞ւմ ես։",
+   "keywords": [
+    "triangle pattern",
+    "եռանկյուն",
+    "chart pattern",
+    "տեխնիկական վերլուծություն"
+   ],
+   "facts": [
+    "Triangles show contracting volatility before a breakout in either direction."
+   ],
+   "quiz": {
+    "q": "Եռանկյունից կոտրման ուղղությունը",
+    "options": [
+     "Նախապես հայտնի չէ",
+     "Միշտ վեր",
+     "Միշտ ներքև"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-042",
+   "module": 1,
+   "n": 42,
+   "status": "script",
+   "series": "Գրաֆիկի գաղտնիքները",
+   "style": "terminal",
+   "season": 2
+  },
+  {
+   "title": "Շահույթը շուտ փակելը",
+   "type": "explain",
+   "hook": "Շահույթը փակում ես|արագ,|իսկ կորուստը պահում",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Շատերը շտապում են ֆիքսել փոքր շահույթը, բայց երկար պահում են կորուստը",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Այս սովորությունը հոգեբանության մեջ կոչվում է disposition effect",
+     "query": ""
+    },
+    {
+     "kind": "bars",
+     "title": "Արդյունքը 10 գործարքում",
+     "items": [
+      [
+       "5 շահույթ × $10",
+       50,
+       "+$50"
+      ],
+      [
+       "5 կորուստ × $30",
+       150,
+       "−$150",
+       "bad"
+      ]
+     ]
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Կտրիր կորուստները արագ, թող շահույթները աճեն պլանով",
+     "query": ""
+    }
+   ],
+   "recap": "Փոքր շահույթ +|մեծ կորուստ =|մինուս",
+   "summary": "Disposition effect. ինչու ենք շուտ փակում շահույթը և երկար պահում կորուստը։",
+   "question": "Ճանաչո՞ւմ ես քեզ այս սովորության մեջ։",
+   "keywords": [
+    "disposition effect",
+    "թրեյդերի սխալներ",
+    "հոգեբանություն",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "Traders often sell winners too early and hold losers too long."
+   ],
+   "quiz": {
+    "q": "Ինչպե՞ս է կոչվում այս սովորությունը",
+    "options": [
+     "Disposition effect",
+     "FOMO",
+     "Slippage"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-043",
+   "module": 2,
+   "n": 43,
+   "status": "script",
+   "series": "Թրեյդերի սխալները",
+   "style": "glass",
+   "season": 2
+  },
+  {
+   "title": "Fibonacci",
+   "type": "explain",
+   "hook": "61.8%.|ինչու են|թրեյդերները սիրում այս թիվը",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Fibonacci retracement-ը ցույց է տալիս, թե որքան է գինը հետ գնացել նախորդ շարժումից",
+     "query": ""
+    },
+    {
+     "kind": "checklist",
+     "title": "Հայտնի մակարդակներ",
+     "items": [
+      "38.2%",
+      "50%",
+      "61.8%"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Շատերը սպասում են գնի արձագանքի այս գոտիներում",
+     "query": ""
+    },
+    {
+     "kind": "myth",
+     "myth": "Fibonacci-ն կանխատեսում է, թե որտեղ կշրջվի գինը",
+     "truth": "Դրանք միայն գոտիներ են, որոնց հետևում են շատերը, ոչ թե երաշխիք"
+    }
+   ],
+   "recap": "Գոտի,|ոչ թե|կախարդանք",
+   "summary": "Fibonacci retracement. ինչ են 38.2, 50 և 61.8 տոկոսները և ինչպես դրանք ճիշտ օգտագործել։",
+   "question": "Դու գծո՞ւմ ես Fibonacci քո գրաֆիկում։",
+   "keywords": [
+    "Fibonacci",
+    "retracement",
+    "ինդիկատոր",
+    "տեխնիկական վերլուծություն"
+   ],
+   "facts": [
+    "Common retracement levels are 38.2%, 50% and 61.8%."
+   ],
+   "quiz": {
+    "q": "Fibonacci մակարդակները",
+    "options": [
+     "Գոտիներ են, ոչ թե երաշխիք",
+     "Ճշգրիտ կանխատեսում են",
+     "Աշխատում են միայն BTC-ի վրա"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-044",
+   "module": 3,
+   "n": 44,
+   "status": "script",
+   "series": "Ինդիկատորներ պարզ լեզվով",
+   "style": "marker",
+   "season": 2
+  },
+  {
+   "title": "Spot, թե՞ Futures",
+   "type": "explain",
+   "hook": "Նույն coin-ը,|բոլորովին|տարբեր ռիսկ",
+   "beats": [
+    {
+     "kind": "compare",
+     "a": [
+      "Spot",
+      "Գնում ես իսկական coin-ը"
+     ],
+     "b": [
+      "Futures",
+      "Առևտուր ես անում պայմանագրով"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Futures-ում կարելի է օգտագործել leverage և վաստակել նաև գնի անկումից",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Բայց futures-ում կա liquidation, իսկ spot-ում՝ ոչ",
+     "query": ""
+    },
+    {
+     "kind": "stat",
+     "value": "0",
+     "label": "liquidation spot-ում առանց leverage-ի",
+     "sub": "Coin-ը մնում է քեզ, նույնիսկ եթե գինը ընկնի",
+     "pre": "",
+     "post": ""
+    },
+    {
+     "kind": "card",
+     "title": "Սկսնակի համար",
+     "text": "Սկսիր spot-ից, մինչև լավ չհասկանաս ռիսկը",
+     "query": ""
+    }
+   ],
+   "recap": "Spot՝|սեփականություն,|futures՝ պայմանագիր",
+   "summary": "Spot և futures. հիմնական տարբերությունները և ինչու է սկսնակի համար spot-ը ավելի անվտանգ։",
+   "question": "Դու առևտուր անո՞ւմ ես spot-ում, թե futures-ում։",
+   "keywords": [
+    "spot",
+    "futures",
+    "leverage",
+    "crypto հայերեն"
+   ],
+   "facts": [
+    "Futures positions can be liquidated; unleveraged spot holdings cannot."
+   ],
+   "quiz": {
+    "q": "Որտե՞ղ կա liquidation",
+    "options": [
+     "Futures-ում",
+     "Spot-ում առանց leverage-ի",
+     "Ոչ մի տեղ"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-045",
+   "module": 4,
+   "n": 45,
+   "status": "script",
+   "series": "Շուկան իրականում",
+   "style": "neon",
+   "season": 2
+  },
+  {
+   "title": "Trailing stop",
+   "type": "explain",
+   "hook": "Stop,|որը հետևում է|գնին",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Trailing stop-ը շարժվում է գնի հետևից, երբ գինը գնում է քո օգտին",
+     "query": ""
+    },
+    {
+     "kind": "steps",
+     "title": "Ինչպես է աշխատում",
+     "items": [
+      "Գինը բարձրանում է",
+      "Stop-ը բարձրանում է նրա հետևից",
+      "Գինը շրջվում է և փակում է պոզիցիան"
+     ]
+    },
+    {
+     "kind": "broll",
+     "text": "Այսպես շահույթի մի մասը պաշտպանվում է, իսկ շարժումը կարող է շարունակվել",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Զգուշացում",
+     "text": "Չափազանց մոտ trailing stop-ը կարող է փակվել սովորական աղմուկից",
+     "query": ""
+    }
+   ],
+   "recap": "Թող|շահույթը|աճի",
+   "summary": "Trailing stop. ինչպես պաշտպանել շահույթը և չփակել գործարքը չափազանց շուտ։",
+   "question": "Դու օգտագործո՞ւմ ես trailing stop։",
+   "keywords": [
+    "trailing stop",
+    "stop loss",
+    "ռիսկի կառավարում",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "A trailing stop follows price and locks in part of the profit."
+   ],
+   "quiz": {
+    "q": "Ո՞րն է trailing stop-ի ռիսկը",
+    "options": [
+     "Աղմուկից փակվելը",
+     "Անսահման կորուստը",
+     "Միջնորդավճար չունենալը"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-046",
+   "module": 5,
+   "n": 46,
+   "status": "script",
+   "series": "Ռիսկ առանց ձանձրույթի",
+   "style": "editorial",
+   "season": 2
+  },
+  {
+   "title": "Դրոշ ֆիգուրը",
+   "type": "explain",
+   "hook": "Ուժեղ շարժում,|հանգիստ դադար,|և նորից",
+   "beats": [
+    {
+     "kind": "chart",
+     "title": "Դրոշ",
+     "text": "Ուժեղ աճից հետո գինը մի փոքր իջնում է նեղ միջակայքում",
+     "pattern": "flag",
+     "source": "ideal",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Ուժեղ շարժումը կոչվում է «ձող», իսկ դադարը՝ «դրոշ»",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Հաճախ դադարից հետո շարժումը շարունակվում է նույն ուղղությամբ",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Հաստատումը դրոշի վերին եզրի կոտրումն է",
+     "query": ""
+    }
+   ],
+   "recap": "Դադարը|նույնպես|ազդանշան է",
+   "summary": "Դրոշ ֆիգուրը. trend-ի շարունակության դասական օրինակ և ինչպես այն ճանաչել։",
+   "question": "Դու երբևէ առևտուր արե՞լ ես դրոշ ֆիգուրով։",
+   "keywords": [
+    "bull flag",
+    "flag pattern",
+    "chart pattern",
+    "տեխնիկական վերլուծություն"
+   ],
+   "facts": [
+    "A flag is a brief consolidation after a strong move."
+   ],
+   "quiz": {
+    "q": "Ինչ է «ձողը» դրոշ ֆիգուրում",
+    "options": [
+     "Ուժեղ նախնական շարժումը",
+     "Դադարը",
+     "Ծավալը"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-047",
+   "module": 1,
+   "n": 47,
+   "status": "script",
+   "series": "Գրաֆիկի գաղտնիքները",
+   "style": "glass",
+   "season": 2
+  },
+  {
+   "title": "Կույր կրկնօրինակում",
+   "type": "explain",
+   "hook": "«Նա գնեց,|ես էլ|կգնեմ»",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Սոցցանցերում ցույց են տալիս հաջող գործարքները, բայց հազվադեպ՝ կորուստները",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Դու չգիտես նրա մուտքի պլանը, stop-ը, պոզիցիայի չափը և երբ է նա դուրս գալիս",
+     "query": ""
+    },
+    {
+     "kind": "myth",
+     "myth": "Եթե նա հաջողակ է, ես էլ կվաստակեմ",
+     "truth": "Դու կրկնում ես մուտքը, բայց ոչ թե նրա ռիսկի կառավարումը"
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Ուրիշի գաղափարը օգտագործիր միայն որպես թեմա ուսումնասիրության համար",
+     "query": ""
+    }
+   ],
+   "recap": "Ուրիշի գործարք՝|քո|ռիսկ",
+   "summary": "Ինչու է ուրիշների գործարքները կույր կրկնելը վտանգավոր, նույնիսկ եթե նրանք հաջողակ են թվում։",
+   "question": "Դու հետևո՞ւմ ես ուրիշների գործարքներին։",
+   "keywords": [
+    "copy trading",
+    "թրեյդերի սխալներ",
+    "crypto influencers",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "Copying entries without the risk plan copies only part of the trade."
+   ],
+   "quiz": {
+    "q": "Ինչ չես տեսնում ուրիշի գործարքում",
+    "options": [
+     "Նրա ռիսկի պլանը",
+     "Coin-ի անունը",
+     "Գրաֆիկը"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-048",
+   "module": 2,
+   "n": 48,
+   "status": "script",
+   "series": "Թրեյդերի սխալները",
+   "style": "marker",
+   "season": 2
+  },
+  {
+   "title": "VWAP",
+   "type": "explain",
+   "hook": "Գիծ,|որին նայում են|մեծ խաղացողները",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "VWAP-ը միջին գինն է՝ հաշվի առնելով, թե որ գնով որքան ծավալ է առևտրվել",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Այն սովորաբար հաշվվում է մեկ օրվա կամ սեսիայի համար",
+     "query": ""
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Գինը VWAP-ից վեր",
+      "Գնորդները ավելի ուժեղ են"
+     ],
+     "b": [
+      "Գինը VWAP-ից ներքև",
+      "Վաճառողները ավելի ուժեղ են"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Հիշիր",
+     "text": "Շատ ընկերություններ VWAP-ը օգտագործում են որպես կատարման որակի չափանիշ",
+     "query": ""
+    }
+   ],
+   "recap": "VWAP՝|ծավալով|միջին գին",
+   "summary": "VWAP. ինչ է ծավալով կշռված միջին գինը և ինչու են այն օգտագործում մեծ խաղացողները։",
+   "question": "Դու նայո՞ւմ ես VWAP-ին գործարքից առաջ։",
+   "keywords": [
+    "VWAP",
+    "volume weighted average price",
+    "ինդիկատոր",
+    "intraday"
+   ],
+   "facts": [
+    "VWAP is the volume-weighted average price, usually reset each session."
+   ],
+   "quiz": {
+    "q": "Ինչով է VWAP-ը տարբերվում սովորական միջինից",
+    "options": [
+     "Հաշվի է առնում ծավալը",
+     "Չունի տարբերություն",
+     "Հաշվում է միայն փակումները"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-049",
+   "module": 3,
+   "n": 49,
+   "status": "script",
+   "series": "Ինդիկատորներ պարզ լեզվով",
+   "style": "neon",
+   "season": 2
+  },
+  {
+   "title": "Order book-ի պատերը",
+   "type": "explain",
+   "hook": "Հսկայական հայտ,|որը հանկարծ|անհետանում է",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Order book-ում երբեմն երևում են շատ մեծ հայտեր, որոնք կոչվում են «պատեր»",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Պատը կարող է իրական լինել, բայց կարող է նաև դրվել միայն տպավորություն ստեղծելու համար",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Spoofing",
+     "text": "Հայտ, որը դրվում է առանց կատարելու մտադրության և հանվում է վերջին պահին",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Մի՛ որոշիր միայն մեկ մեծ հայտի հիման վրա",
+     "query": ""
+    }
+   ],
+   "recap": "Ոչ ամեն պատ|իրական|է",
+   "summary": "Order book-ի պատերը և spoofing-ը. ինչու մեծ հայտը միշտ չէ, որ այն է, ինչ թվում է։",
+   "question": "Դու նայո՞ւմ ես order book-ին գործարքից առաջ։",
+   "keywords": [
+    "order book",
+    "spoofing",
+    "buy wall",
+    "crypto հայերեն"
+   ],
+   "facts": [
+    "Spoofing means placing orders without intent to execute them."
+   ],
+   "quiz": {
+    "q": "Ինչ է spoofing-ը",
+    "options": [
+     "Կեղծ հայտ, որը հանվում է",
+     "Միջնորդավճար",
+     "Ինդիկատոր"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-050",
+   "module": 4,
+   "n": 50,
+   "status": "script",
+   "series": "Շուկան իրականում",
+   "style": "editorial",
+   "season": 2
+  },
+  {
+   "title": "Break-even stop",
+   "type": "explain",
+   "hook": "Stop-ը մուտքի կետում.|լա՞վ է,|թե՞ ոչ",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Break-even stop-ը stop-ի տեղափոխումն է մուտքի գնի մոտ",
+     "query": ""
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Դրական",
+      "Գործարքը այլևս կորուստ չի տա"
+     ],
+     "b": [
+      "Բացասական",
+      "Սովորական հետընթացը կարող է փակել գործարքը"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "quiz",
+     "q": "Ե՞րբ է ավելի խելամիտ stop-ը տեղափոխել մուտքի կետ",
+     "options": [
+      "Անմիջապես մուտքից հետո",
+      "Երբ գինը անցել է պլանավորված մակարդակը",
+      "Երբեք"
+     ],
+     "a": 1
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Որոշիր նախօրոք, թե երբ ես տեղափոխում stop-ը",
+     "query": ""
+    }
+   ],
+   "recap": "Անվտանգություն|ընդդեմ|տարածության",
+   "summary": "Break-even stop. երբ է այն օգնում և երբ է փակում լավ գործարքները չափազանց շուտ։",
+   "question": "Ե՞րբ ես դու տեղափոխում stop-ը մուտքի կետ։",
+   "keywords": [
+    "break even",
+    "stop loss",
+    "ռիսկի կառավարում",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "A break-even stop removes risk but can be hit by normal pullbacks."
+   ],
+   "quiz": {
+    "q": "Break-even stop-ի ռիսկը",
+    "options": [
+     "Փակում է սովորական հետընթացից",
+     "Մեծացնում է կորուստը",
+     "Չունի ռիսկ"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-051",
+   "module": 5,
+   "n": 51,
+   "status": "script",
+   "series": "Ռիսկ առանց ձանձրույթի",
+   "style": "terminal",
+   "season": 2
+  },
+  {
+   "title": "Retest",
+   "type": "explain",
+   "hook": "Կոտրեց.|վերադարձավ.|հետո՞",
+   "beats": [
+    {
+     "kind": "chart",
+     "title": "Retest",
+     "text": "Գինը կոտրում է resistance-ը, վերադառնում է դրան և թռչում վերև",
+     "pattern": "retest",
+     "source": "ideal",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Կոտրված resistance-ը հաճախ դառնում է support",
+     "query": ""
+    },
+    {
+     "kind": "steps",
+     "title": "Retest-ի մուտք",
+     "items": [
+      "Կոտրում",
+      "Վերադարձ մակարդակին",
+      "Հաստատող մոմ",
+      "Մուտք՝ stop-ով մակարդակից ներքև"
+     ]
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Retest-ը կարող է չլինել. չգնված շարժումը կորուստ չէ",
+     "query": ""
+    }
+   ],
+   "recap": "Կոտրում +|retest =|ավելի վստահ մուտք",
+   "summary": "Retest. ինչպես է կոտրված resistance-ը դառնում support և ինչպես օգտագործել դա մուտքի համար։",
+   "question": "Դու սպասո՞ւմ ես retest-ի, թե՞ մտնում ես կոտրման պահին։",
+   "keywords": [
+    "retest",
+    "support resistance",
+    "breakout",
+    "տեխնիկական վերլուծություն"
+   ],
+   "facts": [
+    "Broken resistance often acts as support on a retest."
+   ],
+   "quiz": {
+    "q": "Ինչ է հաճախ դառնում կոտրված resistance-ը",
+    "options": [
+     "Support",
+     "Trend",
+     "Ծավալ"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-052",
+   "module": 1,
+   "n": 52,
+   "status": "script",
+   "series": "Գրաֆիկի գաղտնիքները",
+   "style": "marker",
+   "season": 2
+  },
+  {
+   "title": "Լուրերի վրա առևտուր",
+   "type": "explain",
+   "hook": "Լուրը դուրս եկավ.|գինը թռավ.|և հետ եկավ",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Կարևոր լուրերի պահին գինը կարող է մի քանի վայրկյանում շարժվել երկու ուղղությամբ",
+     "query": ""
+    },
+    {
+     "kind": "checklist",
+     "title": "Ինչ է կատարվում այդ պահին",
+     "items": [
+      "Spread-ը լայնանում է",
+      "Slippage-ը մեծանում է",
+      "Stop-երը կատարվում են վատ գներով"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Առաջին շարժումը հաճախ ամենապատահականն է",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Թող առաջին րոպեներն անցնեն, հետո որոշիր",
+     "query": ""
+    }
+   ],
+   "recap": "Առաջին րոպեն|պատկանում է|ալգորիթմներին",
+   "summary": "Ինչու է կարևոր լուրերի առաջին րոպեներին առևտուրը սկսնակների համար ծուղակ։",
+   "question": "Դու առևտուր անո՞ւմ ես կարևոր լուրերի ժամանակ։",
+   "keywords": [
+    "news trading",
+    "volatility",
+    "թրեյդերի սխալներ",
+    "crypto հայերեն"
+   ],
+   "facts": [
+    "Spreads widen and slippage rises around major news releases."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է կատարվում spread-ի հետ լուրերի պահին",
+    "options": [
+     "Լայնանում է",
+     "Վերանում է",
+     "Չի փոխվում"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-053",
+   "module": 2,
+   "n": 53,
+   "status": "script",
+   "series": "Թրեյդերի սխալները",
+   "style": "neon",
+   "season": 2
+  },
+  {
+   "title": "ATR",
+   "type": "explain",
+   "hook": "Որտե՞ղ դնել stop-ը.|պատասխանը|տատանման մեջ է",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "ATR-ը ցույց է տալիս մոմերի միջին չափը որոշ ժամանակահատվածում",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Բարձր ATR նշանակում է մեծ տատանում, ցածր ATR՝ հանգիստ շուկա",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Օրինակ",
+     "text": "ATR = $800, stop = 1.5 × ATR = $1,200 մուտքից",
+     "query": ""
+    },
+    {
+     "kind": "myth",
+     "myth": "Stop-ը միշտ պետք է լինի 1% հեռավորության վրա",
+     "truth": "Stop-ը պետք է համապատասխանի շուկայի տատանմանը"
+    }
+   ],
+   "recap": "Stop՝|ըստ|տատանման",
+   "summary": "ATR. ինչպես չափել շուկայի տատանումը և օգտագործել այն stop loss-ի համար։",
+   "question": "Դու օգտագործո՞ւմ ես ATR stop-ի համար։",
+   "keywords": [
+    "ATR",
+    "average true range",
+    "stop loss",
+    "ինդիկատոր"
+   ],
+   "facts": [
+    "ATR measures the average range of recent candles."
+   ],
+   "quiz": {
+    "q": "Ինչ է ցույց տալիս ATR-ը",
+    "options": [
+     "Միջին տատանումը",
+     "Trend-ի ուղղությունը",
+     "Ծավալը"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-054",
+   "module": 3,
+   "n": 54,
+   "status": "script",
+   "series": "Ինդիկատորներ պարզ լեզվով",
+   "style": "editorial",
+   "season": 2
+  },
+  {
+   "title": "Halving",
+   "type": "explain",
+   "hook": "Ամեն 4 տարին մեկ|Bitcoin-ի պարգևը|կիսվում է",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Halving-ի ժամանակ մայներների պարգևը նոր բլոկի համար կիսով չափ նվազում է",
+     "query": ""
+    },
+    {
+     "kind": "stat",
+     "value": "210000",
+     "label": "բլոկը մեկ",
+     "sub": "Մոտավորապես 4 տարին մեկ",
+     "pre": "",
+     "post": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Նոր Bitcoin-ների թողարկումը դանդաղում է, և դա շատերը կապում են շուկայի ցիկլերի հետ",
+     "query": ""
+    },
+    {
+     "kind": "myth",
+     "myth": "Halving-ից հետո գինը անպայման աճում է",
+     "truth": "Անցյալ ցիկլերը չեն երաշխավորում ապագան"
+    }
+   ],
+   "recap": "Ավելի քիչ նոր BTC,|բայց|երաշխիք չկա",
+   "summary": "Bitcoin halving. ինչ է կատարվում ամեն 210,000 բլոկը մեկ և ինչու դա երաշխիք չէ։",
+   "question": "Ինչպե՞ս ես կարծում, halving-ը դեռ ազդո՞ւմ է գնի վրա։",
+   "keywords": [
+    "halving",
+    "Bitcoin",
+    "մայնինգ",
+    "crypto հայերեն"
+   ],
+   "facts": [
+    "The Bitcoin block reward halves every 210,000 blocks, about every four years."
+   ],
+   "quiz": {
+    "q": "Halving-ը տեղի է ունենում",
+    "options": [
+     "210,000 բլոկը մեկ",
+     "Ամեն տարի",
+     "Ամեն ամիս"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-055",
+   "module": 4,
+   "n": 55,
+   "status": "script",
+   "series": "Շուկան իրականում",
+   "style": "terminal",
+   "season": 2
+  },
+  {
+   "title": "Օրական կորստի սահման",
+   "type": "explain",
+   "hook": "Վատ օր է.|ե՞րբ|կանգ առնել",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Վատ օրերին թրեյդերները հաճախ ավելացնում են գործարքները՝ կորուստը հետ բերելու համար",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Սահմանիր օրական առավելագույն կորուստ, օրինակ՝ հաշվի 3%-ը",
+     "query": ""
+    },
+    {
+     "kind": "steps",
+     "title": "Երբ հասնում ես սահմանին",
+     "items": [
+      "Փակում ես տերմինալը",
+      "Գրառում ես, թե ինչ պատահեց",
+      "Վերադառնում ես հաջորդ օրը"
+     ]
+    },
+    {
+     "kind": "broll",
+     "text": "Այսպես մեկ վատ օրը չի դառնում վատ ամիս",
+     "query": ""
+    }
+   ],
+   "recap": "Վատ օր|≠|վատ ամիս",
+   "summary": "Օրական կորստի սահմանը. պարզ կանոն, որը պաշտպանում է հաշիվը ամենավատ օրերին։",
+   "question": "Ունե՞ս օրական կորստի սահման։",
+   "keywords": [
+    "daily loss limit",
+    "ռիսկի կառավարում",
+    "կարգապահություն",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "A daily loss limit stops one bad day from becoming a bad month."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ անել օրական սահմանին հասնելիս",
+    "options": [
+     "Կանգ առնել մինչև վաղը",
+     "Կրկնապատկել ռիսկը",
+     "Բացել ևս մեկ գործարք"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-056",
+   "module": 5,
+   "n": 56,
+   "status": "script",
+   "series": "Ռիսկ առանց ձանձրույթի",
+   "style": "glass",
+   "season": 2
+  },
+  {
+   "title": "Doji",
+   "type": "explain",
+   "hook": "Մոմ առանց մարմնի.|շուկան|չի կարողանում որոշել",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Doji-ն մոմ է, որի բացման և փակման գները գրեթե նույնն են",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Այն ցույց է տալիս անորոշություն գնորդների և վաճառողների միջև",
+     "query": ""
+    },
+    {
+     "kind": "myth",
+     "myth": "Doji-ն միշտ շրջադարձի ազդանշան է",
+     "truth": "Doji-ն միայն անորոշություն է. կարևոր է, թե որտեղ է այն հայտնվել"
+    },
+    {
+     "kind": "card",
+     "title": "Հուշում",
+     "text": "Doji-ն կարևոր մակարդակում ավելի շատ բան է ասում, քան միջակայքի մեջտեղում",
+     "query": ""
+    }
+   ],
+   "recap": "Doji՝|անորոշության|մոմ",
+   "summary": "Doji մոմը. ինչ է նշանակում և ինչու այն ինքնին շրջադարձի ազդանշան չէ։",
+   "question": "Դու ուշադրություն դարձնո՞ւմ ես doji-ին։",
+   "keywords": [
+    "doji",
+    "candlestick",
+    "ճապոնական մոմեր",
+    "տեխնիկական վերլուծություն"
+   ],
+   "facts": [
+    "A doji has nearly equal open and close prices."
+   ],
+   "quiz": {
+    "q": "Ինչ է ցույց տալիս doji-ն",
+    "options": [
+     "Անորոշություն",
+     "Երաշխավորված աճ",
+     "Ծավալ"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-057",
+   "module": 1,
+   "n": 57,
+   "status": "script",
+   "series": "Գրաֆիկի գաղտնիքները",
+   "style": "neon",
+   "season": 2
+  },
+  {
+   "title": "Ամեն ինչ մեկ coin-ում",
+   "type": "explain",
+   "hook": "Ամբողջ գումարը|մեկ coin-ում.|ի՞նչ կարող է լինել",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Մեկ coin-ի վրա ամբողջ գումարը դնելը նշանակում է կախված լինել մեկ նախագծի ճակատագրից",
+     "query": ""
+    },
+    {
+     "kind": "stat",
+     "value": "90",
+     "label": "կամ ավելի անկում",
+     "sub": "Շատ altcoin-ներ պատմության մեջ կորցրել են իրենց արժեքի 90%-ից ավելին",
+     "pre": "−",
+     "post": "%"
+    },
+    {
+     "kind": "broll",
+     "text": "Բաշխումը չի վերացնում ռիսկը, բայց նվազեցնում է մեկ սխալի ազդեցությունը",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Մեկ գաղափարի վրա մի՛ դիր այն, ինչ չես կարող կորցնել",
+     "query": ""
+    }
+   ],
+   "recap": "Մի՛ դիր|բոլոր ձվերը|մեկ զամբյուղում",
+   "summary": "Ինչու է ամբողջ գումարը մեկ coin-ում պահելը սկսնակների ամենավտանգավոր սխալներից մեկը։",
+   "question": "Քանի՞ coin ունես քո պորտֆելում։",
+   "keywords": [
+    "diversification",
+    "պորտֆել",
+    "թրեյդերի սխալներ",
+    "crypto հայերեն"
+   ],
+   "facts": [
+    "Many altcoins have lost more than 90% of their value."
+   ],
+   "quiz": {
+    "q": "Ի՞նչ է անում բաշխումը",
+    "options": [
+     "Նվազեցնում է մեկ սխալի ազդեցությունը",
+     "Վերացնում է ռիսկը",
+     "Երաշխավորում է շահույթ"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-058",
+   "module": 2,
+   "n": 58,
+   "status": "script",
+   "series": "Թրեյդերի սխալները",
+   "style": "editorial",
+   "season": 2
+  },
+  {
+   "title": "Golden Cross",
+   "type": "explain",
+   "hook": "Երկու գիծ|խաչվեցին.|ի՞նչ է սա նշանակում",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Golden cross-ը տեղի է ունենում, երբ 50 օրվա միջինը անցնում է 200 օրվա միջինից վեր",
+     "query": ""
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Golden cross",
+      "Կարճաժամկետ միջինը վեր է անցնում"
+     ],
+     "b": [
+      "Death cross",
+      "Կարճաժամկետ միջինը ներքև է անցնում"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Քանի որ երկու գիծն էլ միջին են, ազդանշանը հաճախ գալիս է շարժումից ուշ",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Օգտագործիր որպես trend-ի հաստատում, ոչ թե մուտքի ճշգրիտ կետ",
+     "query": ""
+    }
+   ],
+   "recap": "Ուշ,|բայց|հաստատող",
+   "summary": "Golden cross և death cross. ինչ են նշանակում և ինչու են դրանք միշտ ուշանում։",
+   "question": "Դու հետևո՞ւմ ես golden cross-ին։",
+   "keywords": [
+    "golden cross",
+    "death cross",
+    "moving average",
+    "ինդիկատոր"
+   ],
+   "facts": [
+    "A golden cross is the 50-day average crossing above the 200-day average."
+   ],
+   "quiz": {
+    "q": "Ինչո՞ւ է golden cross-ը ուշանում",
+    "options": [
+     "Հիմնված է միջինների վրա",
+     "Սխալ է հաշվվում",
+     "Աշխատում է միայն գիշերը"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-059",
+   "module": 3,
+   "n": 59,
+   "status": "script",
+   "series": "Ինդիկատորներ պարզ լեզվով",
+   "style": "terminal",
+   "season": 2
+  },
+  {
+   "title": "Fear & Greed",
+   "type": "explain",
+   "hook": "Երբ բոլորը|վախենում են,|ի՞նչ ես անում դու",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Fear & Greed ինդեքսը չափում է շուկայի տրամադրությունը 0-ից 100",
+     "query": ""
+    },
+    {
+     "kind": "bars",
+     "title": "Ինդեքսի գոտիները",
+     "items": [
+      [
+       "Ծայրահեղ վախ",
+       20,
+       "0–25"
+      ],
+      [
+       "Չեզոք",
+       50,
+       "45–55"
+      ],
+      [
+       "Ծայրահեղ ագահություն",
+       90,
+       "75–100",
+       "bad"
+      ]
+     ]
+    },
+    {
+     "kind": "broll",
+     "text": "Ծայրահեղ արժեքները ցույց են տալիս, թե որքան է ամբոխը միակողմանի",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Ինդեքսը տրամադրություն է, ոչ թե գնման կամ վաճառքի ազդանշան",
+     "query": ""
+    }
+   ],
+   "recap": "Ամբոխի|տրամադրությունը|թվերով",
+   "summary": "Fear & Greed ինդեքսը. ինչ է չափում և ինչպես այն օգտագործել առանց կույր վստահության։",
+   "question": "Քո կարծիքով հիմա շուկայում վա՞խ է, թե՞ ագահություն։",
+   "keywords": [
+    "fear and greed",
+    "sentiment",
+    "crypto շուկա",
+    "crypto հայերեն"
+   ],
+   "facts": [
+    "The Fear & Greed index measures market sentiment from 0 to 100."
+   ],
+   "quiz": {
+    "q": "Fear & Greed ինդեքսը",
+    "options": [
+     "Տրամադրության չափում է",
+     "Գնման ազդանշան է",
+     "Bitcoin-ի գինն է"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-060",
+   "module": 4,
+   "n": 60,
+   "status": "script",
+   "series": "Շուկան իրականում",
+   "style": "glass",
+   "season": 2
+  },
+  {
+   "title": "Leverage ≠ ռիսկ",
+   "type": "explain",
+   "hook": "10x leverage,|բայց ռիսկը|ընդամենը 1%",
+   "beats": [
+    {
+     "kind": "myth",
+     "myth": "Leverage-ը ինքնին որոշում է ռիսկը",
+     "truth": "Ռիսկը որոշվում է պոզիցիայի չափով և stop-ի հեռավորությամբ"
+    },
+    {
+     "kind": "card",
+     "title": "Օրինակ",
+     "text": "Հաշիվ $1,000, պոզիցիա $500, stop-ը 2% → կորուստ $10, այսինքն 1%",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Նույն գործարքը կարելի է բացել 1x-ով կամ 10x-ով, իսկ ռիսկը կմնա $10",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Զգուշացում",
+     "text": "Մեծ leverage-ը liquidation-ի գինը մոտեցնում է մուտքին",
+     "query": ""
+    }
+   ],
+   "recap": "Ռիսկ =|չափ ×|stop",
+   "summary": "Leverage և ռիսկ. ինչու leverage-ը ինքնին չի որոշում, թե որքան ես կորցնում։",
+   "question": "Դու հաշվո՞ւմ ես ռիսկը, թե՞ նայում ես միայն leverage-ին։",
+   "keywords": [
+    "leverage",
+    "ռիսկի կառավարում",
+    "position size",
+    "futures"
+   ],
+   "facts": [
+    "Risk depends on position size and stop distance, not leverage alone."
+   ],
+   "quiz": {
+    "q": "Ի՞նչն է որոշում ռիսկը",
+    "options": [
+     "Չափը և stop-ի հեռավորությունը",
+     "Միայն leverage-ը",
+     "Coin-ի անունը"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-061",
+   "module": 5,
+   "n": 61,
+   "status": "script",
+   "series": "Ռիսկ առանց ձանձրույթի",
+   "style": "marker",
+   "season": 2
+  },
+  {
+   "title": "Hammer",
+   "type": "explain",
+   "hook": "Երկար պոչ|ներքևում.|գնորդները վերադարձա՞ն",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Hammer-ը մոմ է փոքր մարմնով վերևում և երկար պոչով ներքևում",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Այն ցույց է տալիս, որ վաճառողները իջեցրին գինը, բայց գնորդները հետ բերեցին այն",
+     "query": ""
+    },
+    {
+     "kind": "checklist",
+     "title": "Ե՞րբ է այն ավելի կարևոր",
+     "items": [
+      "Անկումից հետո",
+      "Support-ի մոտ",
+      "Մեծ ծավալով"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Սպասիր հաջորդ մոմի հաստատմանը",
+     "query": ""
+    }
+   ],
+   "recap": "Պոչը|պատմում է|պայքարի մասին",
+   "summary": "Hammer մոմը. ինչ է պատմում երկար ստորին պոչը և երբ է այն ամենակարևորը։",
+   "question": "Դու օգտագործո՞ւմ ես մոմերի ֆիգուրներ։",
+   "keywords": [
+    "hammer",
+    "pin bar",
+    "candlestick",
+    "տեխնիկական վերլուծություն"
+   ],
+   "facts": [
+    "A hammer has a small body near the top and a long lower wick."
+   ],
+   "quiz": {
+    "q": "Որտե՞ղ է hammer-ը ավելի կարևոր",
+    "options": [
+     "Support-ի մոտ, անկումից հետո",
+     "Միջակայքի մեջտեղում",
+     "Կարևոր չէ"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-062",
+   "module": 1,
+   "n": 62,
+   "status": "script",
+   "series": "Գրաֆիկի գաղտնիքները",
+   "style": "editorial",
+   "season": 2
+  },
+  {
+   "title": "Առանց օրագրի",
+   "type": "explain",
+   "hook": "Նույն սխալը|10 անգամ|և չես նկատում",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Առանց գրառումների շատ դժվար է տեսնել, թե որ սխալներն են կրկնվում",
+     "query": ""
+    },
+    {
+     "kind": "checklist",
+     "title": "Ինչ գրել յուրաքանչյուր գործարքից հետո",
+     "items": [
+      "Մուտքի պատճառը",
+      "Stop և թիրախ",
+      "Արդյունքը R-ով",
+      "Ինչ էի զգում"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Մեկ ամիս հետո օրագիրը ցույց է տալիս քո իրական թույլ կետերը",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Հիշիր",
+     "text": "Օրագիրը քո ամենաանկեղծ ուսուցիչն է",
+     "query": ""
+    }
+   ],
+   "recap": "Գրիր,|որ|տեսնես",
+   "summary": "Թրեյդինգային օրագիր. ինչ գրել յուրաքանչյուր գործարքից հետո և ինչու է այն այդքան կարևոր։",
+   "question": "Դու պահո՞ւմ ես թրեյդինգային օրագիր։",
+   "keywords": [
+    "trading journal",
+    "թրեյդինգային օրագիր",
+    "թրեյդերի սխալներ",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "A trading journal reveals repeated mistakes."
+   ],
+   "quiz": {
+    "q": "Ինչո՞ւ է օրագիրը կարևոր",
+    "options": [
+     "Ցույց է տալիս կրկնվող սխալները",
+     "Կանխատեսում է գինը",
+     "Նվազեցնում է միջնորդավճարը"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-063",
+   "module": 2,
+   "n": 63,
+   "status": "script",
+   "series": "Թրեյդերի սխալները",
+   "style": "terminal",
+   "season": 2
+  },
+  {
+   "title": "Open Interest",
+   "type": "explain",
+   "hook": "Ծավալից բացի|կա ևս մեկ|կարևոր թիվ",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Open interest-ը futures-ում բաց պայմանագրերի ընդհանուր քանակն է",
+     "query": ""
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Գինը ↑ և OI ↑",
+      "Շուկա են մտնում նոր պոզիցիաներ"
+     ],
+     "b": [
+      "Գինը ↑ և OI ↓",
+      "Աճը կարող է լինել short-երի փակումից"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Շատ բարձր open interest-ը նշանակում է, որ շատերը օգտագործում են leverage",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Զգուշացում",
+     "text": "Բարձր OI-ի դեպքում liquidation-ի շղթաները ավելի հավանական են",
+     "query": ""
+    }
+   ],
+   "recap": "OI՝|leverage-ի|ջերմաչափ",
+   "summary": "Open interest. ինչ է ցույց տալիս futures-ում բաց պոզիցիաների քանակը և ինչպես կարդալ այն գնի հետ միասին։",
+   "question": "Դու նայո՞ւմ ես open interest-ին։",
+   "keywords": [
+    "open interest",
+    "futures",
+    "liquidation",
+    "crypto հայերեն"
+   ],
+   "facts": [
+    "Open interest is the total number of open futures contracts."
+   ],
+   "quiz": {
+    "q": "Ինչ է open interest-ը",
+    "options": [
+     "Բաց պայմանագրերի քանակը",
+     "Օրվա ծավալը",
+     "Funding rate-ը"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-064",
+   "module": 3,
+   "n": 64,
+   "status": "script",
+   "series": "Ինդիկատորներ պարզ լեզվով",
+   "style": "glass",
+   "season": 2
+  },
+  {
+   "title": "Short squeeze",
+   "type": "explain",
+   "hook": "Գինը թռավ|առանց լուրի.|ի՞նչ պատահեց",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Երբ շատերը short են, իսկ գինը սկսում է բարձրանալ, նրանք ստիպված փակում են պոզիցիաները",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Short-ի փակումը գնում է, որը գինը ավելի է բարձրացնում",
+     "query": ""
+    },
+    {
+     "kind": "steps",
+     "title": "Ինչպես է աշխատում",
+     "items": [
+      "Շատ short-եր",
+      "Գինը մի փոքր աճում է",
+      "Stop-եր և liquidation-ներ",
+      "Կտրուկ աճ"
+     ]
+    },
+    {
+     "kind": "card",
+     "title": "Հիշիր",
+     "text": "Squeeze-ը հաճախ արագ է ավարտվում",
+     "query": ""
+    }
+   ],
+   "recap": "Վաճառողները|դառնում են|գնորդներ",
+   "summary": "Short squeeze. ինչու է գինը երբեմն կտրուկ թռչում առանց որևէ լուրի։",
+   "question": "Դու երբևէ հայտնվե՞լ ես short squeeze-ի մեջ։",
+   "keywords": [
+    "short squeeze",
+    "liquidation",
+    "futures",
+    "crypto հայերեն"
+   ],
+   "facts": [
+    "Closing short positions requires buying, which can accelerate a rally."
+   ],
+   "quiz": {
+    "q": "Ինչո՞ւ է squeeze-ի ժամանակ գինը աճում",
+    "options": [
+     "Short-երը գնում են փակելու համար",
+     "Բորսան է բարձրացնում",
+     "Ծավալը զրո է"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-065",
+   "module": 4,
+   "n": 65,
+   "status": "script",
+   "series": "Շուկան իրականում",
+   "style": "marker",
+   "season": 2
+  },
+  {
+   "title": "Կոռելյացիա",
+   "type": "explain",
+   "hook": "5 coin,|բայց իրականում|մեկ գործարք",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Շատ altcoin-ներ շարժվում են միասին՝ հաճախ BTC-ի հետևից",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Եթե բացել ես 5 long altcoin-ներում, դա կարող է լինել մեկ մեծ գործարք",
+     "query": ""
+    },
+    {
+     "kind": "bars",
+     "title": "Ռիսկը իրականում",
+     "items": [
+      [
+       "Մեկ գործարք",
+       1,
+       "1%"
+      ],
+      [
+       "5 կապված գործարք",
+       5,
+       "≈5%",
+       "bad"
+      ]
+     ]
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Հաշվիր ընդհանուր ռիսկը բոլոր կապված պոզիցիաների համար",
+     "query": ""
+    }
+   ],
+   "recap": "Շատ coin|≠|քիչ ռիսկ",
+   "summary": "Կոռելյացիա. ինչու մի քանի altcoin-ում բաց պոզիցիաները կարող են լինել մեկ մեծ ռիսկ։",
+   "question": "Քանի՞ պոզիցիա ես սովորաբար բացում միաժամանակ։",
+   "keywords": [
+    "correlation",
+    "ռիսկի կառավարում",
+    "altcoin",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "Highly correlated positions behave like one larger position."
+   ],
+   "quiz": {
+    "q": "5 կապված long-ը նման է",
+    "options": [
+     "Մեկ մեծ գործարքի",
+     "5 անկախ գործարքի",
+     "Ռիսկ չունի"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-066",
+   "module": 5,
+   "n": 66,
+   "status": "script",
+   "series": "Ռիսկ առանց ձանձրույթի",
+   "style": "neon",
+   "season": 2
+  },
+  {
+   "title": "Engulfing",
+   "type": "explain",
+   "hook": "Մեկ մոմ,|որը «կուլ է տալիս»|նախորդին",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Engulfing-ը տեղի է ունենում, երբ մոմի մարմինը ամբողջությամբ ծածկում է նախորդ մոմի մարմինը",
+     "query": ""
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Bullish engulfing",
+      "Կանաչ մոմը ծածկում է կարմիրին"
+     ],
+     "b": [
+      "Bearish engulfing",
+      "Կարմիր մոմը ծածկում է կանաչին"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Այն ցույց է տալիս, որ նախաձեռնությունը կարող է փոխվել",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Նայիր, թե որտեղ է այն հայտնվել. մակարդակը կարևոր է",
+     "query": ""
+    }
+   ],
+   "recap": "Ուժի|փոփոխություն|մեկ մոմում",
+   "summary": "Engulfing մոմերը. ինչպես ճանաչել, երբ նախաձեռնությունը անցնում է մի կողմից մյուսին։",
+   "question": "Դու տեսե՞լ ես engulfing այս շաբաթ։",
+   "keywords": [
+    "engulfing",
+    "candlestick",
+    "ճապոնական մոմեր",
+    "տեխնիկական վերլուծություն"
+   ],
+   "facts": [
+    "An engulfing candle's body fully covers the previous candle's body."
+   ],
+   "quiz": {
+    "q": "Bullish engulfing-ում",
+    "options": [
+     "Կանաչը ծածկում է կարմիրին",
+     "Կարմիրը ծածկում է կանաչին",
+     "Մոմերը նույնն են"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-067",
+   "module": 1,
+   "n": 67,
+   "status": "script",
+   "series": "Գրաֆիկի գաղտնիքները",
+   "style": "terminal",
+   "season": 2
+  },
+  {
+   "title": "Հոգնած առևտուր",
+   "type": "explain",
+   "hook": "Գիշերվա 3-ն է.|«Մեկ գործարք էլ|ու կքնեմ»",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Հոգնածությունը նվազեցնում է կենտրոնացումը և մեծացնում է իմպուլսիվ որոշումները",
+     "query": ""
+    },
+    {
+     "kind": "checklist",
+     "title": "Չառևտրել, երբ",
+     "items": [
+      "Հոգնած ես",
+      "Զայրացած ես",
+      "Շտապում ես կորուստը հետ բերել"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "myth",
+     "myth": "Crypto շուկան 24/7 է, ուրեմն պետք է անընդհատ հետևել",
+     "truth": "Շուկան միշտ կլինի. քո ուժերը՝ ոչ"
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Լավ որոշումը պահանջում է հանգիստ ուղեղ",
+     "query": ""
+    }
+   ],
+   "recap": "Շուկան կսպասի,|քո առողջությունը|ոչ",
+   "summary": "Ինչու է հոգնած կամ զգացմունքային վիճակում առևտուրը կորուստների թաքնված պատճառներից մեկը։",
+   "question": "Դու առևտուր անո՞ւմ ես ուշ գիշերը։",
+   "keywords": [
+    "trading psychology",
+    "հոգեբանություն",
+    "թրեյդերի սխալներ",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "Fatigue increases impulsive decisions."
+   ],
+   "quiz": {
+    "q": "Ե՞րբ չարժե առևտուր անել",
+    "options": [
+     "Երբ հոգնած ես",
+     "Երբ ունես պլան",
+     "Երբ հանգիստ ես"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-068",
+   "module": 2,
+   "n": 68,
+   "status": "script",
+   "series": "Թրեյդերի սխալները",
+   "style": "glass",
+   "season": 2
+  },
+  {
+   "title": "RSI-ի trend գոտիները",
+   "type": "explain",
+   "hook": "RSI-ը 40-ում.|և դա|լավ նորություն է",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Աճման trend-ում RSI-ը հաճախ մնում է 40-ից 80 միջակայքում",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Անկման trend-ում այն հաճախ տատանվում է 20-ից 60 միջակայքում",
+     "query": ""
+    },
+    {
+     "kind": "bars",
+     "title": "RSI-ի գոտիները trend-ում",
+     "items": [
+      [
+       "Աճման trend",
+       80,
+       "40–80"
+      ],
+      [
+       "Անկման trend",
+       60,
+       "20–60",
+       "bad"
+      ]
+     ]
+    },
+    {
+     "kind": "card",
+     "title": "Հուշում",
+     "text": "Աճման trend-ում RSI-ի իջնելը 40-ի մոտ կարող է լինել հետընթաց, ոչ թե շրջադարձ",
+     "query": ""
+    }
+   ],
+   "recap": "RSI-ը|հարմարվում է|trend-ին",
+   "summary": "RSI-ը trend-ում. ինչու 30 և 70 մակարդակները միշտ չէ, որ աշխատում են, և ինչ են trend-ի գոտիները։",
+   "question": "Քեզ համար նո՞ր էր այս մոտեցումը։",
+   "keywords": [
+    "RSI",
+    "trend",
+    "ինդիկատոր",
+    "տեխնիկական վերլուծություն"
+   ],
+   "facts": [
+    "In uptrends RSI often holds roughly between 40 and 80."
+   ],
+   "quiz": {
+    "q": "Աճման trend-ում RSI-ը հաճախ մնում է",
+    "options": [
+     "40–80 միջակայքում",
+     "0–20 միջակայքում",
+     "Միշտ 50-ում"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-069",
+   "module": 3,
+   "n": 69,
+   "status": "script",
+   "series": "Ինդիկատորներ պարզ լեզվով",
+   "style": "marker",
+   "season": 2
+  },
+  {
+   "title": "Ցածր լիկվիդության ժամեր",
+   "type": "explain",
+   "hook": "Կիրակի գիշեր.|գինը|«խելագարվում է»",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Հանգստյան օրերին և գիշերային ժամերին առևտրի ծավալը հաճախ ավելի փոքր է",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Քիչ հայտերի դեպքում նույնիսկ միջին չափի գործարքը կարող է կտրուկ շարժել գինը",
+     "query": ""
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Բարձր լիկվիդություն",
+      "Հարթ շարժումներ, փոքր spread"
+     ],
+     "b": [
+      "Ցածր լիկվիդություն",
+      "Կտրուկ շարժումներ, slippage"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Ցածր լիկվիդության ժամերին նվազեցրու չափը կամ սպասիր",
+     "query": ""
+    }
+   ],
+   "recap": "Քիչ հայտեր՝|մեծ|ցատկեր",
+   "summary": "Ինչու է crypto-ն հանգստյան օրերին և գիշերը երբեմն շարժվում կտրուկ և անկանխատեսելի։",
+   "question": "Դու առևտուր անո՞ւմ ես հանգստյան օրերին։",
+   "keywords": [
+    "liquidity",
+    "weekend trading",
+    "slippage",
+    "crypto հայերեն"
+   ],
+   "facts": [
+    "Lower liquidity allows smaller orders to move price more."
+   ],
+   "quiz": {
+    "q": "Ցածր լիկվիդության դեպքում",
+    "options": [
+     "Գինը կարող է կտրուկ շարժվել",
+     "Spread-ը վերանում է",
+     "Ռիսկը զրո է"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-070",
+   "module": 4,
+   "n": 70,
+   "status": "script",
+   "series": "Շուկան իրականում",
+   "style": "neon",
+   "season": 2
+  },
+  {
+   "title": "Բարդ տոկոսի միֆը",
+   "type": "explain",
+   "hook": "1% օրական|= 3700%|տարեկան",
+   "beats": [
+    {
+     "kind": "stat",
+     "value": "37.8",
+     "label": "անգամ աճ մեկ տարում",
+     "sub": "Եթե ամեն օր վաստակես 1%",
+     "pre": "×",
+     "post": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Թիվը գեղեցիկ է, բայց այն ենթադրում է 365 օր առանց որևէ կորստի",
+     "query": ""
+    },
+    {
+     "kind": "myth",
+     "myth": "Պետք է վաստակել ամեն օր",
+     "truth": "Կայուն փոքր արդյունքը և փոքր կորուստները ավելի կարևոր են"
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Մի՛ կառուցիր պլանը անհնար սպասումների վրա",
+     "query": ""
+    }
+   ],
+   "recap": "Կայունություն|>|արագություն",
+   "summary": "1% օրական միֆը. ինչու բարդ տոկոսի գեղեցիկ թվերը իրականությունից հեռու են։",
+   "question": "Ինչպիսի՞ սպասումներ ունեիր, երբ սկսեցիր։",
+   "keywords": [
+    "compounding",
+    "բարդ տոկոս",
+    "սպասումներ",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "1.01 to the power of 365 is about 37.8."
+   ],
+   "quiz": {
+    "q": "1% օրական 365 օրում տալիս է մոտավորապես",
+    "options": [
+     "37.8 անգամ",
+     "3.65 անգամ",
+     "2 անգամ"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-071",
+   "module": 5,
+   "n": 71,
+   "status": "script",
+   "series": "Ռիսկ առանց ձանձրույթի",
+   "style": "editorial",
+   "season": 2
+  },
+  {
+   "title": "Trendline",
+   "type": "explain",
+   "hook": "Ինչպես գծել|trendline|ճիշտ",
+   "beats": [
+    {
+     "kind": "chart",
+     "title": "Trendline",
+     "text": "Աճման trend-ում գիծը միացնում է բարձրացող հատակները",
+     "pattern": "uptrend",
+     "source": "ideal",
+     "query": ""
+    },
+    {
+     "kind": "steps",
+     "title": "Կանոններ",
+     "items": [
+      "Առնվազն երկու հատակ, ավելի լավ է՝ երեք",
+      "Մի՛ կտրիր մոմերի մարմինները",
+      "Մի՛ ստիպիր գիծը տեղավորվել"
+     ]
+    },
+    {
+     "kind": "broll",
+     "text": "Որքան շատ են հպումները, այնքան ավելի շատ մարդիկ են տեսնում այդ գիծը",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Եթե գիծը գծելու համար պետք է «հնարել», ուրեմն այն չկա",
+     "query": ""
+    }
+   ],
+   "recap": "Մի՛ գծիր|այն,|ինչ ուզում ես տեսնել",
+   "summary": "Trendline. ինչպես ճիշտ գծել trend-ի գիծը և ամենահաճախ սխալները։",
+   "question": "Քանի՞ հպում ես սպասում trendline-ը վստահելի համարելու համար։",
+   "keywords": [
+    "trendline",
+    "trend",
+    "տեխնիկական վերլուծություն",
+    "crypto հայերեն"
+   ],
+   "facts": [
+    "A trendline needs at least two touches; three confirm it better."
+   ],
+   "quiz": {
+    "q": "Քանի՞ հպում է պետք նվազագույնը",
+    "options": [
+     "Երկու",
+     "Մեկ",
+     "Տասը"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-072",
+   "module": 1,
+   "n": 72,
+   "status": "script",
+   "series": "Գրաֆիկի գաղտնիքները",
+   "style": "glass",
+   "season": 2
+  },
+  {
+   "title": "Ռազմավարության փոփոխում",
+   "type": "explain",
+   "hook": "Ամեն շաբաթ|նոր|ռազմավարություն",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Երեք կորուստից հետո շատերը փոխում են ռազմավարությունը",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Բայց նույնիսկ լավ ռազմավարությունը կարող է ունենալ կորուստների շարք",
+     "query": ""
+    },
+    {
+     "kind": "stat",
+     "value": "30",
+     "label": "գործարք",
+     "sub": "Առնվազն այսքանն է պետք նախնական եզրակացության համար",
+     "pre": "",
+     "post": "+"
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Գնահատիր ռազմավարությունը բավարար քանակի գործարքներից հետո",
+     "query": ""
+    }
+   ],
+   "recap": "Համբերություն|>|նոր ինդիկատոր",
+   "summary": "Ինչու է ռազմավարությունը անընդհատ փոխելը խանգարում հասկանալ, թե որն է իրականում աշխատում։",
+   "question": "Քանի՞ անգամ ես փոխել ռազմավարությունը վերջին ամսում։",
+   "keywords": [
+    "trading strategy",
+    "թրեյդերի սխալներ",
+    "backtest",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "Small samples of trades are dominated by randomness."
+   ],
+   "quiz": {
+    "q": "Ինչո՞ւ է 3 գործարքը քիչ",
+    "options": [
+     "Արդյունքը պատահական է",
+     "Միջնորդավճարը մեծ է",
+     "Գինը չի շարժվում"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-073",
+   "module": 2,
+   "n": 73,
+   "status": "script",
+   "series": "Թրեյդերի սխալները",
+   "style": "marker",
+   "season": 2
+  },
+  {
+   "title": "Ծավալի բացակայությունը",
+   "type": "explain",
+   "hook": "Գինը աճում է,|իսկ ծավալը|իջնում",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Եթե գինը նոր գագաթներ է անում, իսկ ծավալը փոքրանում է, մասնակիցները քիչ են",
+     "query": ""
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Աճ + աճող ծավալ",
+      "Շարժումն ունի աջակցություն"
+     ],
+     "b": [
+      "Աճ + ընկնող ծավալ",
+      "Շարժումը կարող է թուլանալ"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "quiz",
+     "q": "Breakout-ը տեղի ունեցավ շատ փոքր ծավալով։ Ի՞նչ է սա նշանակում",
+     "options": [
+      "Շատ ուժեղ ազդանշան է",
+      "Հաստատումը թույլ է",
+      "Ծավալը կարևոր չէ"
+     ],
+     "a": 1
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Մեծ որոշումից առաջ ստուգիր ծավալը",
+     "query": ""
+    }
+   ],
+   "recap": "Ծավալը|հաստատում է|շարժումը",
+   "summary": "Ինչ է նշանակում, երբ գինը աճում է, իսկ ծավալը փոքրանում։",
+   "question": "Դու ստուգո՞ւմ ես ծավալը breakout-ի ժամանակ։",
+   "keywords": [
+    "volume",
+    "breakout",
+    "ծավալ",
+    "տեխնիկական վերլուծություն"
+   ],
+   "facts": [
+    "Breakouts on low volume are weaker confirmations."
+   ],
+   "quiz": {
+    "q": "Breakout փոքր ծավալով",
+    "options": [
+     "Թույլ հաստատում է",
+     "Ամենաուժեղ ազդանշանն է",
+     "Անհնար է"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-074",
+   "module": 3,
+   "n": 74,
+   "status": "script",
+   "series": "Ինդիկատորներ պարզ լեզվով",
+   "style": "neon",
+   "season": 2
+  },
+  {
+   "title": "Շուկայի 4 փուլ",
+   "type": "explain",
+   "hook": "Յուրաքանչյուր ցիկլ|ունի|4 փուլ",
+   "beats": [
+    {
+     "kind": "steps",
+     "title": "Շուկայի ցիկլի փուլերը",
+     "items": [
+      "Կուտակում. գինը կողային է",
+      "Աճ. նոր գագաթներ",
+      "Բաշխում. աճը դանդաղում է",
+      "Անկում. նոր հատակներ"
+     ]
+    },
+    {
+     "kind": "broll",
+     "text": "Այս մոդելը հայտնի է Wyckoff անունով",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Փուլերը հեշտ է տեսնել անցյալում, բայց դժվար է ճանաչել իրական ժամանակում",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Օգտագործիր փուլերը համատեքստի համար, ոչ թե ճշգրիտ մուտքի",
+     "query": ""
+    }
+   ],
+   "recap": "Նույն պատմությունը,|տարբեր|դերասաններ",
+   "summary": "Շուկայի 4 փուլը. կուտակում, աճ, բաշխում և անկում. ինչպես մտածել ցիկլերով։",
+   "question": "Ո՞ր փուլում է, քո կարծիքով, շուկան հիմա։",
+   "keywords": [
+    "market cycle",
+    "Wyckoff",
+    "crypto շուկա",
+    "crypto հայերեն"
+   ],
+   "facts": [
+    "Market cycles are commonly described as accumulation, markup, distribution and markdown."
+   ],
+   "quiz": {
+    "q": "Ո՞րն է կուտակման փուլի նշանը",
+    "options": [
+     "Կողային գին",
+     "Նոր գագաթներ",
+     "Կտրուկ անկում"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-075",
+   "module": 4,
+   "n": 75,
+   "status": "script",
+   "series": "Շուկան իրականում",
+   "style": "editorial",
+   "season": 2
+  },
+  {
+   "title": "Ամբողջ հաշվի կորստի ռիսկ",
+   "type": "explain",
+   "hook": "Ինչքա՞ն է|հավանականությունը|կորցնել ամեն ինչ",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Risk of ruin-ը հաշիվը կորցնելու հավանականությունն է",
+     "query": ""
+    },
+    {
+     "kind": "bars",
+     "title": "Ինչ է կատարվում 20 կորստից հետո",
+     "items": [
+      [
+       "1% ռիսկ",
+       18,
+       "−18%"
+      ],
+      [
+       "5% ռիսկ",
+       64,
+       "−64%"
+      ],
+      [
+       "10% ռիսկ",
+       88,
+       "−88%",
+       "bad"
+      ]
+     ]
+    },
+    {
+     "kind": "broll",
+     "text": "Ռիսկը փոքրացնելը կտրուկ նվազեցնում է ամեն ինչ կորցնելու հավանականությունը",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Առաջին նպատակը շուկայում մնալն է",
+     "query": ""
+    }
+   ],
+   "recap": "Մնա|խաղի|մեջ",
+   "summary": "Risk of ruin. ինչպես է մեկ գործարքի ռիսկը որոշում ամբողջ հաշիվը կորցնելու հավանականությունը։",
+   "question": "Որքա՞ն ես ռիսկի դնում մեկ գործարքում։",
+   "keywords": [
+    "risk of ruin",
+    "ռիսկի կառավարում",
+    "drawdown",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "At 10% risk, twenty consecutive losses cut an account by about 88%."
+   ],
+   "quiz": {
+    "q": "10% ռիսկով 20 կորուստը",
+    "options": [
+     "Մոտ −88%",
+     "Մոտ −20%",
+     "Մոտ −50%"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-076",
+   "module": 5,
+   "n": 76,
+   "status": "script",
+   "series": "Ռիսկ առանց ձանձրույթի",
+   "style": "terminal",
+   "season": 2
+  },
+  {
+   "title": "Ժամանակահատվածներ",
+   "type": "explain",
+   "hook": "15 րոպեում աճ,|օրականում|անկում",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Նույն coin-ը տարբեր ժամանակահատվածներում կարող է ունենալ տարբեր trend",
+     "query": ""
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "Մեծ գրաֆիկ",
+      "Ցույց է տալիս հիմնական ուղղությունը"
+     ],
+     "b": [
+      "Փոքր գրաֆիկ",
+      "Օգնում է գտնել մուտքի կետը"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "steps",
+     "title": "Պարզ մոտեցում",
+     "items": [
+      "Օրականում որոշիր ուղղությունը",
+      "4 ժամում գտիր մակարդակը",
+      "Ավելի փոքրում գտիր մուտքը"
+     ]
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Մեծ ժամանակահատվածի trend-ը սովորաբար ավելի ուժեղ է",
+     "query": ""
+    }
+   ],
+   "recap": "Նախ մեծ պատկերը,|հետո|մանրամասները",
+   "summary": "Ժամանակահատվածներ. ինչպես համադրել օրական, 4 ժամյա և փոքր գրաֆիկները։",
+   "question": "Ո՞ր ժամանակահատվածն ես օգտագործում ամենաշատը։",
+   "keywords": [
+    "timeframe",
+    "multi timeframe",
+    "տեխնիկական վերլուծություն",
+    "crypto հայերեն"
+   ],
+   "facts": [
+    "Higher-timeframe trends usually carry more weight."
+   ],
+   "quiz": {
+    "q": "Որտե՞ղ է ավելի լավ որոշել ուղղությունը",
+    "options": [
+     "Մեծ ժամանակահատվածում",
+     "1 րոպեում",
+     "Կարևոր չէ"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-077",
+   "module": 1,
+   "n": 77,
+   "status": "script",
+   "series": "Գրաֆիկի գաղտնիքները",
+   "style": "marker",
+   "season": 2
+  },
+  {
+   "title": "Դեմո և իրական գումար",
+   "type": "explain",
+   "hook": "Դեմոյում|ամեն ինչ աշխատում էր.|ինչո՞ւ ոչ հիմա",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Դեմո հաշվում որոշումները հեշտ են, որովհետև կորուստը իրական չէ",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Իրական գումարի դեպքում հայտնվում են վախը, ագահությունը և շտապողականությունը",
+     "query": ""
+    },
+    {
+     "kind": "steps",
+     "title": "Անցումը",
+     "items": [
+      "Սկսիր շատ փոքր չափով",
+      "Պահիր նույն կանոնները",
+      "Մեծացրու չափը աստիճանաբար"
+     ]
+    },
+    {
+     "kind": "card",
+     "title": "Հիշիր",
+     "text": "Հոգեբանությունը նույնպես հմտություն է, որը պետք է մարզել",
+     "query": ""
+    }
+   ],
+   "recap": "Փոքր չափ,|իրական|փորձ",
+   "summary": "Ինչու են դեմո հաշվի արդյունքները տարբերվում իրական գումարով առևտրից և ինչպես ճիշտ անցում կատարել։",
+   "question": "Դու սկսե՞լ ես դեմո հաշվից։",
+   "keywords": [
+    "demo account",
+    "trading psychology",
+    "հոգեբանություն",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "Real money adds emotional pressure that demo trading lacks."
+   ],
+   "quiz": {
+    "q": "Ինչպե՞ս անցնել իրական գումարի",
+    "options": [
+     "Շատ փոքր չափով",
+     "Միանգամից մեծ չափով",
+     "Առանց կանոնների"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-078",
+   "module": 2,
+   "n": 78,
+   "status": "script",
+   "series": "Թրեյդերի սխալները",
+   "style": "neon",
+   "season": 2
+  },
+  {
+   "title": "Ինդիկատորների համադրում",
+   "type": "explain",
+   "hook": "3 ինդիկատոր|համաձայն են.|բայց դա նույն տեղեկությունն է",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "RSI-ը, Stochastic-ը և MACD-ը բոլորը հաշվարկվում են գնից",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Երբ դրանք համաձայն են, դա միշտ չէ, որ երեք անկախ հաստատում է",
+     "query": ""
+    },
+    {
+     "kind": "checklist",
+     "title": "Ավելի լավ համադրություն",
+     "items": [
+      "Գնի մակարդակ",
+      "Trend",
+      "Ծավալ"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Համադրիր տարբեր տեսակի տեղեկություն, ոչ թե նույնի պատճենները",
+     "query": ""
+    }
+   ],
+   "recap": "Տարբեր տեղեկություն|>|ավելի շատ ինդիկատոր",
+   "summary": "Ինչպես համադրել ինդիկատորները, որ դրանք իրականում լրացնեն միմյանց։",
+   "question": "Ո՞ր ինդիկատորներն ես համադրում դու։",
+   "keywords": [
+    "indicators",
+    "confluence",
+    "ինդիկատոր",
+    "տեխնիկական վերլուծություն"
+   ],
+   "facts": [
+    "Many oscillators are derived from the same price data."
+   ],
+   "quiz": {
+    "q": "Ինչ համադրել",
+    "options": [
+     "Մակարդակ, trend և ծավալ",
+     "Միայն երեք oscillator",
+     "Ոչինչ"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-079",
+   "module": 3,
+   "n": 79,
+   "status": "script",
+   "series": "Ինդիկատորներ պարզ լեզվով",
+   "style": "editorial",
+   "season": 2
+  },
+  {
+   "title": "Stablecoin-ների մատակարարում",
+   "type": "explain",
+   "hook": "Ինչ է նշանակում,|երբ USDT-ն|ավելանում է",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Stablecoin-ները, օրինակ USDT-ն և USDC-ն, crypto շուկայի «կանխիկն» են",
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Երբ դրանց ընդհանուր քանակը աճում է, շատերը դա համարում են հնարավոր գնողունակություն",
+     "query": ""
+    },
+    {
+     "kind": "myth",
+     "myth": "Stablecoin-ների աճը անպայման կբարձրացնի գինը",
+     "truth": "Դա միայն անուղղակի ցուցանիշ է, որը կարող է չազդել"
+    },
+    {
+     "kind": "card",
+     "title": "Հուշում",
+     "text": "Օգտագործիր այն որպես համատեքստ այլ տվյալների հետ",
+     "query": ""
+    }
+   ],
+   "recap": "Կանխիկ|կողքին,|բայց ոչ անպայման շուկայում",
+   "summary": "Stablecoin-ների մատակարարումը. ինչու են դրան հետևում և ինչու դա ուղղակի ազդանշան չէ։",
+   "question": "Դու հետևո՞ւմ ես stablecoin-ների տվյալներին։",
+   "keywords": [
+    "stablecoin",
+    "USDT",
+    "on-chain",
+    "crypto հայերեն"
+   ],
+   "facts": [
+    "Stablecoin supply is an indirect indicator of potential buying power."
+   ],
+   "quiz": {
+    "q": "Stablecoin-ների աճը",
+    "options": [
+     "Անուղղակի ցուցանիշ է",
+     "Երաշխավորում է աճ",
+     "Bitcoin-ի գինն է"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-080",
+   "module": 4,
+   "n": 80,
+   "status": "script",
+   "series": "Շուկան իրականում",
+   "style": "terminal",
+   "season": 2
+  },
+  {
+   "title": "Ռիսկը գործարքից առաջ",
+   "type": "explain",
+   "hook": "3 հարց,|որոնք փրկում են|հաշիվը",
+   "beats": [
+    {
+     "kind": "quiz",
+     "q": "Մտնում ես գործարք առանց stop-ի։ Որն է առաջին խնդիրը",
+     "options": [
+      "Չգիտես առավելագույն կորուստը",
+      "Չգիտես coin-ի անունը",
+      "Խնդիր չկա"
+     ],
+     "a": 0
+    },
+    {
+     "kind": "steps",
+     "title": "Նախքան «Գնել» սեղմելը",
+     "items": [
+      "Որտե՞ղ եմ սխալ",
+      "Որքա՞ն եմ կորցնում այդ դեպքում",
+      "Արժե՞ արդյոք պոտենցիալ շահույթը այդ ռիսկին"
+     ]
+    },
+    {
+     "kind": "broll",
+     "text": "Եթե չես կարող պատասխանել այս հարցերին, գործարքը դեռ պատրաստ չէ",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Նախ ռիսկը, հետո շահույթը",
+     "query": ""
+    }
+   ],
+   "recap": "Նախ|ռիսկը,|հետո շահույթը",
+   "summary": "Երեք հարց, որոնց պետք է պատասխանել նախքան որևէ գործարք բացելը։",
+   "question": "Ո՞ր հարցն ես ամենահաճախ մոռանում։",
+   "keywords": [
+    "risk management",
+    "ռիսկի կառավարում",
+    "trading plan",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "Defining the maximum loss before entry is the core of risk management."
+   ],
+   "quiz": {
+    "q": "Ո՞րն է առաջին հարցը",
+    "options": [
+     "Որտե՞ղ եմ սխալ",
+     "Որքա՞ն կաճի",
+     "Ով է գնում"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-081",
+   "module": 5,
+   "n": 81,
+   "status": "script",
+   "series": "Ռիսկ առանց ձանձրույթի",
+   "style": "glass",
+   "season": 2
+  },
+  {
+   "title": "Կլոր թվեր",
+   "type": "explain",
+   "hook": "Ինչու է|$100,000-ը|այդքան կարևոր",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Կլոր թվերի մոտ սովորաբար կուտակվում են շատ հայտեր և stop-եր",
+     "query": ""
+    },
+    {
+     "kind": "stat",
+     "value": "100000",
+     "label": "հոգեբանական մակարդակ",
+     "sub": "Կլոր թվերը հիշվում են և դառնում թիրախներ",
+     "pre": "$",
+     "post": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Դրա համար կլոր թվերի մոտ գինը հաճախ դանդաղում է կամ տատանվում",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Հուշում",
+     "text": "Stop-ը մի՛ դիր ճիշտ կլոր թվի վրա, այլ մի փոքր հեռու",
+     "query": ""
+    }
+   ],
+   "recap": "Կլոր թվեր՝|ամբոխի|մագնիսներ",
+   "summary": "Ինչու են կլոր թվերը, օրինակ $100,000-ը, դառնում կարևոր մակարդակներ գրաֆիկում։",
+   "question": "Ո՞ր կլոր թիվն է հիմա կարևոր BTC-ի համար։",
+   "keywords": [
+    "round numbers",
+    "psychological levels",
+    "support resistance",
+    "crypto հայերեն"
+   ],
+   "facts": [
+    "Orders tend to cluster around round-number price levels."
+   ],
+   "quiz": {
+    "q": "Ինչո՞ւ են կլոր թվերը կարևոր",
+    "options": [
+     "Այնտեղ կուտակվում են հայտեր",
+     "Բորսան է որոշում",
+     "Կարևոր չեն"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-082",
+   "module": 1,
+   "n": 82,
+   "status": "script",
+   "series": "Գրաֆիկի գաղտնիքները",
+   "style": "neon",
+   "season": 2
+  },
+  {
+   "title": "Թրեյդերի 5 սխալը",
+   "type": "explain",
+   "hook": "5 սխալ,|որոնք արել է|գրեթե յուրաքանչյուրը",
+   "beats": [
+    {
+     "kind": "checklist",
+     "title": "Թրեյդերի 5 սխալը",
+     "items": [
+      "Առանց stop-ի",
+      "Մեծ leverage",
+      "FOMO",
+      "Revenge trading",
+      "Առանց պլանի"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Այս սխալները կապված են ոչ թե գիտելիքի, այլ զգացմունքների հետ",
+     "query": ""
+    },
+    {
+     "kind": "quiz",
+     "q": "Ո՞րն է ամենավտանգավորը",
+     "options": [
+      "Առանց stop-ի",
+      "Փոքր ռիսկ",
+      "Օրագիր պահել"
+     ],
+     "a": 0
+    },
+    {
+     "kind": "card",
+     "title": "Հիշիր",
+     "text": "Սխալը ճանաչելը արդեն կեսն է",
+     "query": ""
+    }
+   ],
+   "recap": "Ճանաչիր|սխալը,|որ չկրկնես",
+   "summary": "Թրեյդերի 5 ամենատարածված սխալը մեկ Reel-ում։ Պահիր, որ ձեռքի տակ լինի։",
+   "question": "Ո՞ր սխալն ես դու արել ամենաշատը։",
+   "keywords": [
+    "թրեյդերի սխալներ",
+    "trading mistakes",
+    "ռիսկ",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "Most trading mistakes are emotional rather than technical."
+   ],
+   "quiz": {
+    "q": "Ինչի հետ են կապված այս սխալները",
+    "options": [
+     "Զգացմունքների",
+     "Միայն գիտելիքի",
+     "Բորսայի"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-083",
+   "module": 2,
+   "n": 83,
+   "status": "script",
+   "series": "Թրեյդերի սխալները",
+   "style": "editorial",
+   "season": 2
+  },
+  {
+   "title": "Stochastic",
+   "type": "explain",
+   "hook": "Մեկ այլ|«գերգնված»|ինդիկատոր",
+   "beats": [
+    {
+     "kind": "broll",
+     "text": "Stochastic-ը համեմատում է փակման գինը վերջին միջակայքի բարձր և ցածր կետերի հետ",
+     "query": ""
+    },
+    {
+     "kind": "compare",
+     "a": [
+      "80-ից բարձր",
+      "Գինը մոտ է միջակայքի վերին մասին"
+     ],
+     "b": [
+      "20-ից ցածր",
+      "Գինը մոտ է միջակայքի ստորին մասին"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Կողային շուկայում այն կարող է օգտակար լինել, իսկ ուժեղ trend-ում՝ մոլորեցնող",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Համադրիր trend-ի հետ, ոչ թե օգտագործիր միայնակ",
+     "query": ""
+    }
+   ],
+   "recap": "Միջակայքում՝|օգնական,|trend-ում՝ զգույշ",
+   "summary": "Stochastic ինդիկատորը. ինչ է ցույց տալիս և երբ է այն օգտակար։",
+   "question": "Դու օգտագործո՞ւմ ես Stochastic։",
+   "keywords": [
+    "stochastic",
+    "oscillator",
+    "ինդիկատոր",
+    "տեխնիկական վերլուծություն"
+   ],
+   "facts": [
+    "Stochastic compares the close to the recent high-low range."
+   ],
+   "quiz": {
+    "q": "Որտե՞ղ է Stochastic-ը ավելի օգտակար",
+    "options": [
+     "Կողային շուկայում",
+     "Ուժեղ trend-ում",
+     "Երբեք"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-084",
+   "module": 3,
+   "n": 84,
+   "status": "script",
+   "series": "Ինդիկատորներ պարզ լեզվով",
+   "style": "terminal",
+   "season": 2
+  },
+  {
+   "title": "Ինչու 90%-ը կորցնում է",
+   "type": "explain",
+   "hook": "Ինչո՞ւ է|թրեյդերների մեծ մասը|կորցնում",
+   "beats": [
+    {
+     "kind": "myth",
+     "myth": "Թրեյդերների մեծ մասը կորցնում է, որովհետև շուկան կեղծված է",
+     "truth": "Ավելի հաճախ պատճառը ռիսկի կառավարման բացակայությունն է"
+    },
+    {
+     "kind": "checklist",
+     "title": "Հիմնական պատճառները",
+     "items": [
+      "Մեծ ռիսկ մեկ գործարքում",
+      "Զգացմունքային որոշումներ",
+      "Չափազանց շատ գործարքներ",
+      "Ծախսեր և միջնորդավճարներ"
+     ],
+     "query": ""
+    },
+    {
+     "kind": "broll",
+     "text": "Լավ նորությունն այն է, որ այս պատճառները կախված են քեզնից",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Կանոն",
+     "text": "Վերահսկիր այն, ինչ կարող ես վերահսկել",
+     "query": ""
+    }
+   ],
+   "recap": "Պատճառը|հաճախ|ներսում է",
+   "summary": "Ինչու է թրեյդերների մեծ մասը կորցնում և ինչ է կախված հենց քեզնից։",
+   "question": "Ո՞ր պատճառն է քեզ համար ամենամոտը։",
+   "keywords": [
+    "trading psychology",
+    "risk management",
+    "թրեյդերի սխալներ",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "Risk management failures are a common cause of trading losses."
+   ],
+   "quiz": {
+    "q": "Ո՞րն է կորուստների հաճախակի պատճառը",
+    "options": [
+     "Ռիսկի կառավարման բացակայությունը",
+     "Լավ պլանը",
+     "Փոքր ռիսկը"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-085",
+   "module": 4,
+   "n": 85,
+   "status": "script",
+   "series": "Շուկան իրականում",
+   "style": "glass",
+   "season": 2
+  },
+  {
+   "title": "Պլանը մեկ էկրանում",
+   "type": "explain",
+   "hook": "Պահիր այս|թրեյդինգային|պլանը",
+   "beats": [
+    {
+     "kind": "steps",
+     "title": "Թրեյդինգային պլան",
+     "items": [
+      "Ուղղությունը մեծ ժամանակահատվածից",
+      "Մակարդակը և մուտքի պատճառը",
+      "Stop և ռիսկ՝ 1%",
+      "Թիրախ՝ առնվազն 2R",
+      "Գրառում օրագրում"
+     ]
+    },
+    {
+     "kind": "broll",
+     "text": "Պլանը չի երաշխավորում շահույթ, բայց պաշտպանում է զգացմունքային որոշումներից",
+     "query": ""
+    },
+    {
+     "kind": "card",
+     "title": "Հուշում",
+     "text": "Պահիր այս Reel-ը և օգտագործիր որպես checklist յուրաքանչյուր գործարքից առաջ",
+     "query": ""
+    }
+   ],
+   "recap": "Պլան|ամեն|գործարքից առաջ",
+   "summary": "Թրեյդինգային պլանը 5 քայլով։ Պահիր այս Reel-ը և օգտագործիր յուրաքանչյուր գործարքից առաջ։",
+   "question": "Ո՞ր քայլն ես դու ամենահաճախ բաց թողնում։",
+   "keywords": [
+    "trading plan",
+    "checklist",
+    "ռիսկի կառավարում",
+    "թրեյդինգ հայերեն"
+   ],
+   "facts": [
+    "A written plan reduces emotional decision-making."
+   ],
+   "quiz": {
+    "q": "Ինչ է անում պլանը",
+    "options": [
+     "Պաշտպանում է զգացմունքային որոշումներից",
+     "Երաշխավորում է շահույթ",
+     "Կանխատեսում է գինը"
+    ],
+    "a": 0
+   },
+   "introduces": [],
+   "uses": [],
+   "negative": false,
+   "id": "H-086",
+   "module": 5,
+   "n": 86,
+   "status": "script",
+   "series": "Ռիսկ առանց ձանձրույթի",
+   "style": "marker",
+   "season": 2
   }
  ]
 }

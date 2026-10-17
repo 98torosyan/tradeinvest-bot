@@ -31,7 +31,7 @@ function line(t,s){const c=D.candles,n=90,off=Math.floor((s.seed*7)%Math.max(1,c
 function depth(t,s){const mid=W/2,base=1560,top=600,k=t-s.a;
  for(const side of [-1,1]){ctx.beginPath();ctx.moveTo(mid,base);let acc=0;
   for(let i=0;i<=40;i++){const x=mid+side*i*(mid/40);acc+=8+14*Math.abs(Math.sin(i*1.7+s.seed+k*.8))+i*.9;ctx.lineTo(x,base-Math.min(base-top,acc*1.1));}
-  ctx.lineTo(side<0?0:W,base);ctx.closePath();ctx.fillStyle=rgba(side<0?UP:DN,.22);ctx.fill();ctx.strokeStyle=rgba(side<0?UP:DN,.6);ctx.lineWidth=4;ctx.stroke();}
+  ctx.lineTo(side<0?0:W,base);ctx.closePath();ctx.fillStyle=rgba(side<0?UP:DN,.09);ctx.fill();ctx.strokeStyle=rgba(side<0?UP:DN,.38);ctx.lineWidth=3;ctx.stroke();}
  ctx.fillStyle='rgba(255,255,255,.35)';ctx.font='600 30px ArmSans,sans-serif';ctx.fillText('BID',70,base+60);ctx.fillText('ASK',W-140,base+60);}
 function tape(t,s){const rows=D.coins,k=(t-s.a)*38;ctx.font='700 46px ArmSans,sans-serif';
  for(let r=0;r<16;r++){const y=((r*128+k)%(16*128))-60;const q=rows[(r+Math.floor(s.seed))%rows.length];

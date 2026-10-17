@@ -99,7 +99,11 @@ def do_hit(st, now, rid, publish):
                                                        "date": now.strftime("%Y-%m-%d"), "hour": now.hour}
         st["course_index"] += 1
         return "dedupe"
-    pal = palettes.MODULE[SERIES_PALETTE.get(lesson["module"], 5)]
+    if lesson.get("style"):
+        from . import styles
+        pal = styles.get(lesson["style"])["pal"]
+    else:
+        pal = palettes.MODULE[SERIES_PALETTE.get(lesson["module"], 5)]
     track = music.pick("lesson", lesson["module"], st, now.strftime("%Y-%m-%d"))
     mp4, cover = os.path.join(OUT, rid + ".mp4"), os.path.join(OUT, rid + ".jpg")
     res = lesson_video.render_lesson(lesson, {"module_size": 0, "next_title": None}, pal, mp4, cover, music=track,
