@@ -341,11 +341,11 @@ def do_carousel(st, now, rid, publish):
     from delivery.media_hosting import wait_until_reachable
     cur = {l["id"]: l for l in curriculum.load()["lessons"]}
     since = (now - dt.timedelta(days=7)).strftime("%Y-%m-%d")
-    ls = [cur[i] for i, p in sorted(st.get("published", {}).items(), key=lambda kv: kv[1].get("date", "")) if p.get("date", "") >= since and i in cur]
+    ls = [cur[i] for i, p in sorted(st.get("published", {}).items(), key=lambda kv: kv[1].get("date", "")) if p.get("date", "") >= since and i in cur and not p.get("skipped")]
     if len(ls) < 2:
         summary("ℹ️ Carousel չկա՝ քիչ դասեր այս շաբաթ"); return "skipped"
     ls = ls[-24:]
-    pages = carousel.slides(ls, palettes.for_lesson(ls[-1]), f"{since} → {now:%Y-%m-%d}")
+    pages = carousel.slides(ls, None, f"{since} → {now:%Y-%m-%d}")
     imgs = carousel.render(pages, os.path.join(OUT, rid + "-car"))
     if not publish:
         return "dry-run"
