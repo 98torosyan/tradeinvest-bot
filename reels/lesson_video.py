@@ -483,8 +483,10 @@ def overlay_html(lesson, cur_info, palette, beats, total):
     oa = total - OUTRO
     nxt = cur_info.get("next_title") if settings.SHOW_COURSE_LABEL else None
     if not settings.SHOW_COURSE_LABEL:
-        scenes_cta = ('<div class="nxt" data-fx="rise" data-at=".1" data-dur=".5">Ամեն օր՝ նոր թրեյդինգ դաս</div>'
-                      '<div class="nxt2" data-fx="rise" data-at=".25" data-dur=".6">Հետևիր @armtradeinvest</div>')
+        from .captions import OUTRO_CTA
+        top, big = OUTRO_CTA.get(lesson.get("_cta"), ("Ամեն օր՝ նոր թրեյդինգ դաս", "Հետևիր @armtradeinvest"))
+        scenes_cta = (f'<div class="nxt" data-fx="rise" data-at=".1" data-dur=".5">{esc(top)}</div>'
+                      f'<div class="nxt2" data-fx="rise" data-at=".25" data-dur=".6">{esc(big)}</div>')
     else:
         scenes_cta = ""
     nxt_html = (f'<div class="nxt" data-fx="rise" data-at=".1" data-dur=".5">Հաջորդ դասը</div>'

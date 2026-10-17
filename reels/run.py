@@ -106,9 +106,11 @@ def do_hit(st, now, rid, publish):
         pal = palettes.MODULE[SERIES_PALETTE.get(lesson["module"], 5)]
     track = music.pick("lesson", lesson["module"], st, now.strftime("%Y-%m-%d"))
     mp4, cover = os.path.join(OUT, rid + ".mp4"), os.path.join(OUT, rid + ".jpg")
+    arm = captions.choose_cta(st)
+    lesson = dict(lesson, _cta=arm)                     # the Reel's last screen shows the same call to action
     res = lesson_video.render_lesson(lesson, {"module_size": 0, "next_title": None}, pal, mp4, cover, music=track,
                                      used_ids=[], clip_cache={})
-    caption, arm = captions.hit_caption(lesson, title_line, st)
+    caption, arm = captions.hit_caption(lesson, title_line, st, arm)
     errs, warns = qa.post_render(lesson, res, caption)
     for w in warns:
         summary("[qa warning] " + w)

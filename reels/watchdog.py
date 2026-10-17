@@ -13,7 +13,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 from delivery.telegram_sender import send_text  # noqa: E402
 
-LESSON_HOURS = [9, 14, 20]
+LESSON_SLOTS = [(12, 37), (19, 7), (21, 37)]          # Yerevan time of the Reels
 
 
 def gh(*args):
@@ -31,7 +31,7 @@ def last_runs(workflow, n=10):
 
 def check_lessons(now, st, mem):
     alerts = []
-    due = [h for h in LESSON_HOURS if h * 60 + 7 + 50 <= now.hour * 60 + now.minute]      # 50 min grace after each slot
+    due = [f"{h}:{m:02d}" for h, m in LESSON_SLOTS if h * 60 + m + 50 <= now.hour * 60 + now.minute]   # 50 min grace
     if not due or control.paused():
         return alerts
     last_slot = due[-1]
@@ -42,10 +42,10 @@ def check_lessons(now, st, mem):
     if len(pubs_today) < len(due) and curriculum.scripted_left(cur, st.get("course_index", 0)) > 0 and key not in mem.get("retried", []):
         gh("workflow", "run", "reels.yml", "-f", "kind=lesson")
         mem.setdefault("retried", []).append(key); mem["retried"] = mem["retried"][-40:]
-        alerts.append(f"⚠️ {last_slot}:07-ի դասը չհրապարակվեց։ Ավտոմատ նոր փորձ է գործարկվել։")
+        alerts.append(f"⚠️ {last_slot}-ի դասը չհրապարակվեց։ Ավտոմատ նոր փորձ է գործարկվել։")
     elif len(pubs_today) < len(due) and key in mem.get("retried", []) and key not in mem.get("alerted", []):
         mem.setdefault("alerted", []).append(key); mem["alerted"] = mem["alerted"][-40:]
-        alerts.append(f"❌ {last_slot}:07-ի դասը չհրապարակվեց նաև կրկին փորձից հետո։ Ստուգիր reels/last_run.md-ն կամ գրիր /status։")
+        alerts.append(f"❌ {last_slot}-ի դասը չհրապարակվեց նաև կրկին փորձից հետո։ Ստուգիր reels/last_run.md-ն կամ գրիր /status։")
     return alerts
 
 

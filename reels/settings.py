@@ -2,7 +2,7 @@
 TZ = "Asia/Yerevan"
 KEEP_DAYS = 3                    # media kept on the history-less `media` branch
 MEDIA_BRANCH = "media"
-TEASER_HOURS = {14, 20}          # lessons published at these hours also get a Story teaser
+TEASER_HOURS = {12, 21}          # lessons published at these hours also get a Story teaser
 YOUTUBE_ENABLED = False          # ready, switched off (Instagram only)
 VOICE_ENABLED = False            # Gemini TTS ready, switched off
 MAX_HASHTAGS = 5
