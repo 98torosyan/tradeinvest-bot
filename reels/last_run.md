@@ -1,3 +1,6 @@
+**2026-10-17 15:00** `lesson` ✅ published
+- ✅ H-031 «Range» published (41s, cta=send)
+---
 **2026-10-17 13:15** `lesson` ✅ published
 - 📚 Մնացել է 2 պատրաստի Reel (~0.7 օր)։ Ժամանակն է գրել նորերը։
 - ✅ H-030 «Կորուստների շարք» published (44s, cta=send)
@@ -80,8 +83,3 @@
 **2026-10-15 09:35** `lesson` ✅ published
 - 📚 Մնացել է 9 պատրաստի Reel (~3.0 օր)։ Ժամանակն է գրել նորերը։
 - ✅ H-023 «Whale-եր» published (40s, cta=send)
----
-**2026-10-15 09:04** `story` ✅ published
-- [market] src_stooq failed: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=%5Espx&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(h
-- [market] SPX row dropped, sources: {'yahoo': 7718.94}
-- ✅ Story published
