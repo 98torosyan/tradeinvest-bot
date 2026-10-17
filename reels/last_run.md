@@ -1,3 +1,6 @@
+**2026-10-17 21:56** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-17 19:54** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -79,9 +82,3 @@
 ---
 **2026-10-15 20:08** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-15 17:18** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 35 items
-- ✅ News published: Sberbank-ը թույլտվություն է ստացել Bitcoin-ով առևտրի համար
