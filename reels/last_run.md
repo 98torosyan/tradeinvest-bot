@@ -1,3 +1,8 @@
+**2026-10-17 12:47** `story` ✅ published
+- [market] src_stooq failed: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=%5Espx&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(h
+- [market] SPX row dropped, sources: {'yahoo': 7659.44}
+- ✅ Story published
+---
 **2026-10-16 23:33** `lesson` ✅ published
 - ✅ H-029 «Ինդիկատորների 3 սխալ» published (43s, cta=save)
 ---
@@ -82,7 +87,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 34 items
 - ✅ News published: Kraken-ի մայր ընկերությունը գնում է ԵՄ բանկ
----
-**2026-10-14 20:40** `lesson` ✅ published
-- 📚 Մնացել է 10 պատրաստի Reel (~3.3 օր)։ Ժամանակն է գրել նորերը։
-- ✅ H-022 «Մեծ leverage» published (42s, cta=save)
