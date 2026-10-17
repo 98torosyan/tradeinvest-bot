@@ -335,10 +335,10 @@ def teaser_overlay(palette, kind):
     text = "Ամբողջ դասը՝ էջում" if kind == "lesson" else "Ամբողջ լուրը՝ էջում"
     return (f'<!doctype html><html lang="hy"><head><meta charset="utf-8"><link rel="stylesheet" href="{ASSETS}/fonts.css">'
             f'<style>html,body{{margin:0;width:1080px;height:1920px;background:transparent;font-family:ArmSans,sans-serif}}'
-            f'.b{{position:absolute;left:50%;top:1395px;transform:translateX(-50%);display:flex;align-items:center;gap:22px;'
+            f'.b{{position:absolute;left:50%;top:1575px;transform:translateX(-50%);display:flex;align-items:center;gap:22px;'
             f'padding:26px 44px;border-radius:60px;background:linear-gradient(135deg,{palette["a2"]},{palette["a"]});'
             f'color:#0B1220;font-size:46px;font-weight:800;box-shadow:0 20px 60px rgba(0,0,0,.45);white-space:nowrap}}'
-            f'.h{{position:absolute;left:0;right:0;top:1515px;text-align:center;color:#fff;font-size:34px;font-weight:700;'
+            f'.h{{position:absolute;left:0;right:0;top:1690px;text-align:center;color:#fff;font-size:34px;font-weight:700;'
             f'text-shadow:0 2px 12px rgba(0,0,0,.6)}}</style></head><body>'
             f'<div class="b"><svg width="44" height="44" viewBox="0 0 24 24"><path d="M12 20V5M5 11l7-7 7 7" fill="none" '
             f'stroke="#0B1220" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>{text}</div>'

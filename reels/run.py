@@ -18,6 +18,12 @@ RUN_LOG = []
 sys.path.insert(0, ROOT)
 
 
+def teaser_due(now):
+    """True for the teaser slots, even when GitHub starts the run late (its cron is often 10-60 min behind)."""
+    m = now.hour * 60 + now.minute
+    return any(-30 <= m - (h * 60 + mm) <= 100 for h, mm in settings.TEASER_SLOTS)   # windows never touch 19:07
+
+
 def summary(text):
     print(text); RUN_LOG.append(str(text))
     p = os.environ.get("GITHUB_STEP_SUMMARY")
@@ -100,7 +106,6 @@ def do_hit(st, now, rid, publish):
         st["course_index"] += 1
         return "dedupe"
     if lesson.get("style"):
-        from . import styles
         pal = palettes.for_lesson(lesson)
     else:
         pal = palettes.MODULE[SERIES_PALETTE.get(lesson["module"], 5)]
@@ -123,7 +128,7 @@ def do_hit(st, now, rid, publish):
             notify(f"⚠️ {lesson['id']} Reel-ը չանցավ ստուգումը (կփորձվի նորից).\n" + "\n".join(errs[:6]))
         return "qa-fail"
     teaser = None
-    if now.hour in settings.TEASER_HOURS:
+    if teaser_due(now):
         try:
             teaser = os.path.join(OUT, rid + "-teaser.mp4")
             render.make_teaser(mp4, builder.teaser_overlay(pal, "lesson"), teaser)
@@ -213,7 +218,7 @@ def do_lesson(st, now, rid, publish):
             notify(f"⚠️ {lesson['id']} դասը չանցավ ստուգումը (կփորձվի նորից).\n" + "\n".join(errs[:6]))
         return "qa-fail"
     teaser = None
-    if now.hour in settings.TEASER_HOURS:
+    if teaser_due(now):
         try:
             teaser = os.path.join(OUT, rid + "-teaser.mp4")
             render.make_teaser(mp4, builder.teaser_overlay(pal, "lesson"), teaser)

@@ -21,7 +21,6 @@ def main():
     st = state.load()
     lesson = next((l for l in cur["lessons"] if l.get("style")), cur["lessons"][0])
     size = curriculum.module_size(cur, 1)
-    from . import styles as _st
     res = lesson_video.render_lesson(lesson, {"module_size": size, "next_title": None},
                                      palettes.for_lesson(lesson), f"{OUT}/t.mp4", f"{OUT}/t.jpg")
     if cur.get("series"):
@@ -62,7 +61,6 @@ def main():
         print("manim missing"); return 1
     charts.ideal("support"); media_checks.lut_for(palettes.MODULE[5])
     # season 2: every visual style lays out correctly (one Reel per style, steady moments)
-    from . import styles
     seen = set()
     for l in cur["lessons"]:
         sname = l.get("style")

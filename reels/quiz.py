@@ -33,7 +33,7 @@ body{{background:var(--bg);color:var(--txt);font-family:ArmSans,sans-serif}}
 .cd{{position:absolute;top:1400px;left:0;right:0;text-align:center;font-size:150px;font-weight:800;color:var(--a2)}}
 .lesson{{position:absolute;top:1450px;left:80px;right:80px;text-align:center;font-size:36px;color:var(--mut)}}
 </style></head><body style="{css_vars(palette)}"><div class="glow"></div>{story_head("Quiz", "երեկվա դասից")}
-<section class="scene" data-in="-1" data-out="13"><div class="top"><i></i>{esc(lesson.get("series") or "")}</div>
+<section class="scene" data-in="-1" data-out="13">{f'<div class="top"><i></i>{esc(lesson["series"])}</div>' if lesson.get("series") else ""}
 <div class="q" data-fx="rise" data-at=".2" data-dur=".6">{esc(q["q"])}</div><div class="opts">{opts}</div>
 <div class="cd" id="cd"></div><div class="lesson" id="ls">Դաս՝ «{esc(lesson["title"])}»</div></section>
 <script src="{ASSETS}/engine.js"></script><script>window.DURATION=12;
