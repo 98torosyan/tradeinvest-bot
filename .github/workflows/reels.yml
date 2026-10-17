@@ -20,7 +20,7 @@ on:
         required: true
         default: "lesson"
         type: choice
-        options: [lesson, news, story, chart, quiz, carousel, music]
+        options: [lesson, news, story, chart, quiz, carousel, music, selftest]
 
 permissions:
   contents: write
@@ -80,6 +80,7 @@ jobs:
           git config user.name "tradeinvest-bot"
           git config user.email "actions@users.noreply.github.com"
           [ -z "$GEMINI_MODEL" ] && unset GEMINI_MODEL
+          if [ "$KIND" = "selftest" ]; then python -m reels.selftest; exit $?; fi      # checks only, publishes nothing
           python -m reels.run --kind "$KIND"
       - uses: actions/upload-artifact@v4
         if: always()
