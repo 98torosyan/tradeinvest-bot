@@ -101,7 +101,7 @@ def do_hit(st, now, rid, publish):
         return "dedupe"
     if lesson.get("style"):
         from . import styles
-        pal = styles.get(lesson["style"])["pal"]
+        pal = palettes.for_lesson(lesson)
     else:
         pal = palettes.MODULE[SERIES_PALETTE.get(lesson["module"], 5)]
     track = music.pick("lesson", lesson["module"], st, now.strftime("%Y-%m-%d"))
@@ -260,7 +260,7 @@ def do_news(st, now, rid, publish):
     if not ok:
         notify(f"⚠️ Լուրը չհրապարակվեց՝ ուղղագրական ստուգումը չանցավ. {', '.join(bad[:8])}\n"
                f"Եթե բառերը ճիշտ են, գրիր՝ /allow {' '.join(bad[:8])}"); return "qa-fail"
-    k = st.setdefault("palette", {}).get("news", 0); pal = palettes.NEWS[k % len(palettes.NEWS)]
+    k = st.setdefault("palette", {}).get("news", 0); pal = palettes.BRAND
     bg, vid = (None, None) if settings.BG_MODE == "charts" else \
         pexels.fetch(spec.get("broll", ""), set(st.get("used_broll", [])), check=lesson_video._clip_ok(False, st.setdefault("clip_checks", {})))
     RUN_LOG.extend(pexels.NOTES)
@@ -302,7 +302,7 @@ def do_news(st, now, rid, publish):
 # ---------------------------------------------------------------- stories
 def do_story(st, now, rid, publish, chart=False):
     from . import market
-    pal = palettes.NEWS[0]
+    pal = palettes.BRAND
     if chart:
         spec = market.build_chart_spec(); html = builder.build_chart_story(spec, pal, builder.arm_date(now))
     else:
@@ -323,7 +323,7 @@ def do_quiz(st, now, rid, publish):
     if not lesson:
         summary("ℹ️ Quiz չկա՝ երեկ դաս չի հրապարակվել"); return "skipped"
     mp4 = os.path.join(OUT, rid + ".mp4")
-    render.render(quiz.html(lesson, palettes.MODULE[lesson["module"]]), mp4,
+    render.render(quiz.html(lesson, palettes.for_lesson(lesson)), mp4,
                   music.pick("quiz", lesson["module"], st, now.strftime("%Y-%m-%d")))
     if not publish:
         return "dry-run"
@@ -340,7 +340,7 @@ def do_carousel(st, now, rid, publish):
     if len(ls) < 2:
         summary("ℹ️ Carousel չկա՝ քիչ դասեր այս շաբաթ"); return "skipped"
     ls = ls[-24:]
-    pages = carousel.slides(ls, palettes.MODULE[ls[-1]["module"]], f"{since} → {now:%Y-%m-%d}")
+    pages = carousel.slides(ls, palettes.for_lesson(ls[-1]), f"{since} → {now:%Y-%m-%d}")
     imgs = carousel.render(pages, os.path.join(OUT, rid + "-car"))
     if not publish:
         return "dry-run"

@@ -12,7 +12,7 @@ def _page(body, palette):
 *{{margin:0;padding:0;box-sizing:border-box}}html,body{{width:{W}px;height:{H}px;overflow:hidden}}
 body{{background:var(--bg);color:var(--txt);font-family:ArmSans,sans-serif;padding:90px 80px;display:flex;flex-direction:column;justify-content:center;gap:34px}}
 .tag{{align-self:flex-start;font-size:32px;font-weight:700;color:var(--onacc);background:linear-gradient(135deg,var(--a2),var(--a));padding:12px 26px;border-radius:40px}}
-h1{{font-family:ArmSerif,serif;font-size:96px;line-height:1.08}}p.s{{font-size:40px;color:var(--mut)}}
+h1{{font-weight:800;letter-spacing:-.02em;font-size:96px;line-height:1.08}}p.s{{font-size:40px;color:var(--mut)}}
 .it{{padding:30px 34px;border-radius:28px;background:rgba(255,255,255,.06);border:2px solid rgba(255,255,255,.12)}}
 .it b{{display:block;font-size:44px;margin-bottom:10px;color:var(--a2)}}.it span{{font-size:34px;line-height:1.35}}
 .cta{{font-size:52px;font-weight:800;line-height:1.3}}</style></head><body style="{css_vars(palette)}">{body}</body></html>'''

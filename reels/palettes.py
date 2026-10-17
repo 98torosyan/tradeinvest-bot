@@ -68,3 +68,33 @@ MODULE = {
  11: _mod("m11-gold", "#16301F", "#0D1D14", "#08120C", "#E8C766", "#F6E3A1", "#F2F7EE", "#A7B8A0", "#E3EDDD",
           ("rgba(232,199,102,.18)", "rgba(110,200,140,.12)", "rgba(246,227,161,.08)")),
 }
+
+
+# ===================== TradeInvest brand system (v2) =====================
+# One ink background and one neutral text scale for every format. Colour carries meaning:
+# the accent says which SERIES a lesson belongs to; green/red only ever mean up/down.
+INK = "linear-gradient(175deg,#0F1521 0%,#0A0E17 58%,#06090F 100%)"
+UP, DOWN = "#2FD18B", "#FF5F6D"
+
+
+def _brand(name, a, a2):
+    r, g, b = int(a[1:3], 16), int(a[3:5], 16), int(a[5:7], 16)
+    return {"name": name, "bg": INK, "a": a, "a2": a2, "ar": f"{r},{g},{b}",
+            "txt": "#F5F7FA", "mut": "#8E98AB", "p": "#DCE2EC", "em": a2,
+            "blob1": f"rgba({r},{g},{b},.20)", "blob2": f"rgba({r},{g},{b},.09)", "blob3": "rgba(255,255,255,.04)",
+            "pt": a2, "onacc": "#0A0E17", "grid": "rgba(255,255,255,.04)",
+            "card": "rgba(255,255,255,.065)", "cardb": "rgba(255,255,255,.12)"}
+
+
+SERIES = {
+    1: _brand("s1-charts", "#4DA3FF", "#9CCBFF"),       # Գրաֆիկի գաղտնիքները
+    2: _brand("s2-mistakes", "#FF7A66", "#FFB8AB"),     # Թրեյդերի սխալները
+    3: _brand("s3-indicators", "#A08BFF", "#CEC3FF"),   # Ինդիկատորներ պարզ լեզվով
+    4: _brand("s4-market", "#2ED3B7", "#97F1E1"),       # Շուկան իրականում
+    5: _brand("s5-risk", "#F5B941", "#FFD98A"),         # Ռիսկ առանց ձանձրույթի
+}
+BRAND = _brand("brand", "#4DA3FF", "#9CCBFF")           # Stories that are not tied to a series (news, market)
+
+
+def for_lesson(lesson):
+    return SERIES.get(lesson.get("module"), BRAND)

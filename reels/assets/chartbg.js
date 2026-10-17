@@ -35,12 +35,12 @@ function depth(t,s){const mid=W/2,base=1560,top=600,k=t-s.a;
  ctx.fillStyle='rgba(255,255,255,.35)';ctx.font='600 30px ArmSans,sans-serif';ctx.fillText('BID',70,base+60);ctx.fillText('ASK',W-140,base+60);}
 function tape(t,s){const rows=D.coins,k=(t-s.a)*38;ctx.font='700 46px ArmSans,sans-serif';
  for(let r=0;r<16;r++){const y=((r*128+k)%(16*128))-60;const q=rows[(r+Math.floor(s.seed))%rows.length];
-  ctx.fillStyle='rgba(255,255,255,.22)';ctx.fillText(q.s,90,y);if(q.p){ctx.fillStyle='rgba(255,255,255,.30)';ctx.fillText(q.p,420,y);}
-  ctx.fillStyle=rgba(q.ch>=0?UP:DN,.6);ctx.fillText((q.ch>=0?'+':'')+q.ch.toFixed(2)+'%',W-310,y);}}
+  ctx.fillStyle='rgba(255,255,255,.12)';ctx.fillText(q.s,90,y);if(q.p){ctx.fillStyle='rgba(255,255,255,.16)';ctx.fillText(q.p,420,y);}
+  ctx.fillStyle=rgba(q.ch>=0?UP:DN,.32);ctx.fillText((q.ch>=0?'+':'')+q.ch.toFixed(2)+'%',W-310,y);}}
 function heat(t,s){const rows=D.coins,cols=3,cw=W/cols,ch=230,k=t-s.a;
  for(let i=0;i<24;i++){const q=rows[(i+Math.floor(s.seed))%rows.length],x=(i%cols)*cw,y=300+Math.floor(i/cols)*ch;
-  const a=.10+.18*Math.min(1,Math.abs(q.ch)/6)*(0.85+.15*Math.sin(k*2+i));ctx.fillStyle=rgba(q.ch>=0?UP:DN,a);ctx.fillRect(x+8,y+8,cw-16,ch-16);
-  ctx.fillStyle='rgba(255,255,255,.38)';ctx.font='800 50px ArmSans,sans-serif';ctx.fillText(q.s,x+34,y+100);
+  const a=.07+.12*Math.min(1,Math.abs(q.ch)/6)*(0.85+.15*Math.sin(k*2+i));ctx.fillStyle=rgba(q.ch>=0?UP:DN,a);ctx.fillRect(x+8,y+8,cw-16,ch-16);
+  ctx.fillStyle='rgba(255,255,255,.2)';ctx.font='800 50px ArmSans,sans-serif';ctx.fillText(q.s,x+34,y+100);
   ctx.font='600 34px ArmSans,sans-serif';ctx.fillText((q.ch>=0?'+':'')+q.ch.toFixed(1)+'%',x+34,y+160);}}
 function plain(){}
 const STY={candles,line,depth,tape,heat,plain};

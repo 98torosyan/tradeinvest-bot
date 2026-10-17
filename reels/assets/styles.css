@@ -37,10 +37,10 @@ svg.icon *{fill:none;stroke:var(--a2);stroke-width:5;stroke-linecap:round;stroke
 .lesson .series{position:absolute;left:0;right:0;top:278px;text-align:center}
 .lesson .series span{display:inline-block;font-size:36px;font-weight:700;color:var(--onacc);background:linear-gradient(135deg,var(--a2),var(--a));padding:14px 30px;border-radius:40px}
 .lesson .scene{left:80px;top:390px;width:920px;height:1060px;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center}
-.lesson .t1{font-family:'ArmSerif',serif;font-weight:800;font-size:116px;line-height:1.08}
-.lesson .t2{font-family:'ArmSerif',serif;font-weight:700;font-size:82px;line-height:1.14;margin-top:26px}
+.lesson .t1{font-weight:800;font-size:116px;line-height:1.08}
+.lesson .t2{font-weight:700;font-size:82px;line-height:1.14;margin-top:26px}
 .lesson .head{display:flex;align-items:center;gap:40px}
-.lesson .ord{width:160px;height:160px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-family:'ArmSerif',serif;font-weight:800;font-size:90px;color:var(--onacc);background:linear-gradient(135deg,var(--a2),var(--a));box-shadow:0 0 60px var(--blob1)}
+.lesson .ord{width:160px;height:160px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:90px;color:var(--onacc);background:linear-gradient(135deg,var(--a2),var(--a));box-shadow:0 0 60px var(--blob1)}
 .lesson .quote{position:relative;display:inline-block;margin-top:40px;font-size:48px;font-weight:700;padding:26px 40px;border-radius:22px;white-space:nowrap;background:rgba(242,112,95,.12);border:2.5px solid rgba(242,112,95,.6)}
 .lesson .quote .strike{position:absolute;left:26px;right:26px;top:52%;height:8px;border-radius:4px;background:#F2705F;transform-origin:left;transform:scaleX(0)}
 
@@ -51,7 +51,7 @@ svg.icon *{fill:none;stroke:var(--a2);stroke-width:5;stroke-linecap:round;stroke
 .outro .name{font-size:90px;font-weight:800;margin-top:40px;letter-spacing:-.01em}
 .outro .tag{font-size:46px;font-weight:500;margin-top:16px;color:var(--mut)}
 .outro .handle{font-size:46px;font-weight:700;margin-top:60px;padding:18px 40px;border-radius:50px;border:2.5px solid var(--a);color:var(--a2)}
-.outro .cta{font-family:'ArmSerif',serif;font-weight:700;font-size:70px;line-height:1.18;margin-bottom:70px}
+.outro .cta{font-weight:700;font-size:70px;line-height:1.18;margin-bottom:70px}
 .news .outro .cta{font-family:'ArmSans',sans-serif;font-weight:800}
 
 /* STORY: morning market snapshot */
@@ -129,3 +129,12 @@ body.footage .blob,body.footage .gridlines{display:none}
 body.footage .card{background:rgba(6,12,24,.55);border-color:rgba(255,255,255,.16)}
 body.footage .card{background:rgba(4,8,18,.78)}
 body.footage .h1,body.footage .h2{text-shadow:0 4px 24px rgba(0,0,0,.6)}
+
+/* ===== brand system v2: Stories share one header (.sx-head) and one vertical rhythm ===== */
+.market .scene.mscene{top:350px;height:1330px}
+.market .mstack{justify-content:center}
+.market .mh1{font-size:96px;letter-spacing:-.02em}
+.market .rows{margin-top:46px}
+.news .card{background:rgba(255,255,255,.075);border-color:rgba(255,255,255,.14)}
+.news .rail{top:360px;height:1100px}
+

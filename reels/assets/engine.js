@@ -7,7 +7,9 @@ function setupReel(){
   document.querySelectorAll('[data-fx="draw"]').forEach(p=>{const L=p.getTotalLength();p.dataset.len=L;p.style.strokeDasharray=L;p.style.strokeDashoffset=L;});
   // split hero lines into letters for the "chars" style (Armenian marks stay with their letter)
   document.querySelectorAll('[data-fx="chars"]').forEach(el=>{const t=el.textContent;el.textContent='';
-    [...t].forEach(c=>{const s=document.createElement('span');s.className='ch';s.textContent=c;el.appendChild(s);});});
+    t.split(/( )/).forEach(part=>{if(part===' '){el.appendChild(document.createTextNode(' '));return;}   // words never break inside
+      const w=document.createElement('span');w.className='cw';
+      [...part].forEach(c=>{const s=document.createElement('span');s.className='ch';s.textContent=c;w.appendChild(s);});el.appendChild(w);});});
   document.querySelectorAll('[data-fx="type"]').forEach(el=>{el.dataset.full=el.textContent;});
 }
 // deterministic flicker for neon (same frame -> same value)
@@ -91,12 +93,12 @@ function captionFx(){
         else if(mode==='mark'){const k=EASE.out(clamp01((l-s)/.25));c.style.transform=`translateY(${(1-k)*30}px)`;c.style.opacity=k;}
       });
       sc.el.querySelectorAll('.w').forEach(w=>{const s=+w.dataset.s,e=+w.dataset.e,on=l>=s&&l<e;w.classList.toggle('on',on);
-        if(mode==='mark'){const k=on?EASE.out(clamp01((l-s)/.25)):0;w.style.backgroundSize=`${k*100}% 100%`;w.style.color=k>=.98?'#141100':'#fff';}});
+        if(mode==='mark'){const k=on?EASE.out(clamp01((l-s)/.25)):0;w.style.backgroundSize=`${k*100}% 100%`;w.style.color=k>=.98?'var(--onacc)':'#fff';}});
     }});
 }
 // Logo: blocks drop in one by one, then the accent block rises.
 function logoFx(t0){
-  HOOKS.push(t=>{document.querySelectorAll('.logo rect').forEach((r,i)=>{
+  HOOKS.push(t=>{document.querySelectorAll('.scene .logo rect').forEach((r,i)=>{
     const a=t0+(+r.dataset.i)*.16, k=prog(t,a,.75);
     const e=k<=0?0:EASE.back(k); const drop=(1-e)*-260;
     const lift=r.dataset.lift?-34*EASE.inOut(prog(t,t0+1.25,.55)):0;

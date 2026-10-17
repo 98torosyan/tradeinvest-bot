@@ -23,7 +23,7 @@ def main():
     size = curriculum.module_size(cur, 1)
     from . import styles as _st
     res = lesson_video.render_lesson(lesson, {"module_size": size, "next_title": None},
-                                     _st.get(lesson["style"])["pal"] if lesson.get("style") else palettes.MODULE[5], f"{OUT}/t.mp4", f"{OUT}/t.jpg")
+                                     palettes.for_lesson(lesson), f"{OUT}/t.mp4", f"{OUT}/t.jpg")
     if cur.get("series"):
         cap, _ = captions.hit_caption(lesson, f"📈 {lesson['series']} · {lesson['title']}", {})
     else:
@@ -70,7 +70,7 @@ def main():
             continue
         seen.add(sname)
         beats, total = lesson_video.plan(l, None)
-        h = lesson_video.overlay_html(l, {"module_size": 0, "next_title": None}, styles.get(sname)["pal"], beats, total)
+        h = lesson_video.overlay_html(l, {"module_size": 0, "next_title": None}, palettes.for_lesson(l), beats, total)
         lay = qa.layout(h, [b["_t"] + b["_d"] * f for b in beats for f in (0.5, 0.8)])
         print(f"style {sname} ({l['id']}):", lay[:2] or "ok")
         if lay:

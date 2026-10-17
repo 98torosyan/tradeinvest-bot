@@ -114,6 +114,22 @@ def logo_svg():
             f'<stop offset="0" style="stop-color:var(--a2)"/><stop offset="1" style="stop-color:var(--a)"/></linearGradient></defs>{rects}</svg>')
 
 
+STORY_HEAD_CSS = (".sx-head{position:absolute;left:70px;right:70px;top:236px;height:72px;display:flex;align-items:center;gap:16px;z-index:20}"
+                  ".sx-head .logo{width:52px;height:52px;overflow:visible}.sx-head b{font-size:32px;font-weight:800;letter-spacing:-.01em;color:var(--txt)}"
+                  ".sx-head .lab{margin-left:auto;display:flex;align-items:center;gap:14px;font-size:30px;font-weight:700;color:var(--txt);"
+                  "padding:12px 24px;border-radius:40px;background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.12)}"
+                  ".sx-head .lab i{width:14px;height:14px;border-radius:50%;background:var(--a);box-shadow:0 0 14px var(--a)}"
+                  ".sx-head .lab em{font-style:normal;font-weight:500;color:var(--mut)}")
+
+
+def story_head(label, date_label="", live=False):
+    """The same header on every Story, so consecutive Stories read as one series of episodes."""
+    dot = '<i id="live"></i>' if live else "<i></i>"
+    date = f"<em>{esc(date_label)}</em>" if date_label else ""
+    return (f'<div class="sx-head" id="sxh">{logo_svg().replace("opacity:0", "opacity:1")}<b>TradeInvest</b>'
+            f'<span class="lab">{dot}{esc(label)}{date}</span></div>')
+
+
 def outro(tl, tag, cta=""):
     o = .7 if cta else 0.0
     h = (fx("div", "cta", esc(cta), "rise", 0, .9) if cta else "") + logo_svg()
@@ -142,7 +158,7 @@ def ambient(kind, seed):
 
 def page(kind, palette, tl, persistent, hooks, seed=1, transparent=False):
     return (f'<!doctype html><html lang="hy"><head><meta charset="utf-8">'
-            f'<link rel="stylesheet" href="{ASSETS}/fonts.css"><link rel="stylesheet" href="{ASSETS}/styles.css"></head>'
+            f'<link rel="stylesheet" href="{ASSETS}/fonts.css"><link rel="stylesheet" href="{ASSETS}/styles.css"><style>{STORY_HEAD_CSS}</style></head>'
             f'<body class="{kind}{" footage" if transparent else ""}" style="{css_vars(palette)}">{ambient(kind, seed)}{persistent}{"".join(tl.scenes)}'
             f'<script src="{ASSETS}/engine.js"></script><script>window.DURATION={tl.t:.2f};{AMBIENT_HOOK}{hooks}setupReel();</script></body></html>')
 
@@ -177,11 +193,10 @@ def build_news(spec, palette, date_label, footage=False):
         tl.add(h, t + 1.9)
     end = tl.t
     logo_t = outro(tl, "Crypto լուրերը՝ հայերեն և պարզ")
-    persistent = (f'<div class="rail"><i id="railfill"></i></div><div class="mast" id="mast"><span class="dot" id="live"></span>'
-                  f'<span>Լուր</span><span class="date">{esc(date_label)}</span></div>')
+    persistent = f'<div class="rail"><i id="railfill"></i></div>{story_head("Լուր", date_label, live=True)}'
     hooks = (f"logoFx({logo_t:.2f});HOOKS.push(t=>{{document.getElementById('railfill').style.transform=`scaleY(${{Math.min(1,t/{end:.2f})}})`;"
              f"document.getElementById('live').style.opacity=.4+.6*Math.abs(Math.cos(t*2.4));"
-             f"const o=1-EASE.inOut(prog(t,{end:.2f}-.5,.5));document.getElementById('mast').style.opacity=Math.min(o,EASE.out(prog(t,0,.7)));"
+             f"const o=1-EASE.inOut(prog(t,{end:.2f}-.5,.5));document.getElementById('sxh').style.opacity=Math.min(o,EASE.out(prog(t,0,.7)));"
              f"document.querySelector('.rail').style.opacity=o;}});")
     return page("news", palette, tl, persistent, hooks, seed=len(spec["headline"]), transparent=footage)
 
@@ -253,7 +268,7 @@ def build_story(spec, palette, date_label):
                       f'{sparkline(r.get("closes")).replace("{at}", f"{at + .3:.2f}")}'
                       f'<div class="val"><div class="pr">{fmt_price(a, r["price"])}</div>'
                       f'<div class="ch {cls}">{arrow} {abs(chg):.1f}%</div></div></div>')
-    head = (fx("div", "mh1", "Շուկան այսօր", "rise", .1, .8) + fx("div", "mdate", esc(date_label), "rise", .3, .8))
+    head = fx("div", "mh1", "Շուկան այսօր", "rise", .1, .8)
     fng = spec.get("fng")
     fng_html = ""
     if fng is not None:
@@ -266,9 +281,7 @@ def build_story(spec, palette, date_label):
                  f'<div class="disc" data-fx="fade" data-at="6.4" data-dur=".8">Հիմնված է BTC-ի և ETH-ի 24 ժամվա և 7 օրվա շարժման, '
                  f'ինչպես նաև Fear &amp; Greed ինդեքսի վրա։ Կանխատեսում կամ ֆինանսական խորհուրդ չէ։</div>')
     tl.add(f'<div class="mstack">{head}<div class="rows">{rows_html}</div>{fng_html}{mood_html}</div>', 15.0, "mscene")
-    logo = f'<div class="mlogo">{logo_svg()}<span>TradeInvest</span></div>'
-    hooks = "logoFx(0.2);"
-    return page("market", palette, tl, logo, hooks, seed=7)
+    return page("market", palette, tl, story_head("Շուկա", date_label), "", seed=7)
 
 
 # ---------------- "Bitcoin 24 ժամում" candle Story ----------------
@@ -280,7 +293,7 @@ def _hhmm(ts):
 
 def build_chart_story(spec, palette, date_label):
     cs = spec["candles"]; n = len(cs)
-    W, H, PAD = 940, 760, 30
+    W, H, PAD = 940, 660, 30
     lo = min(c["l"] for c in cs); hi = max(c["h"] for c in cs); rng = (hi - lo) or 1
     y = lambda v: PAD + (hi - v) / rng * (H - 2 * PAD)
     step = W / n; bw = step * .62
@@ -298,7 +311,7 @@ def build_chart_story(spec, palette, date_label):
              f'<rect x="{bx - step * .75:.1f}" y="4" width="{step * 1.5:.1f}" height="{H - 8}" rx="12" fill="none" stroke="var(--a2)" stroke-width="4" data-fx="fade" data-at="8.2" data-dur=".6"/>')
     chg = spec["chg"]; cls = "up" if chg >= 0 else "down"; arrow = "▲" if chg >= 0 else "▼"
     bp = spec["big_pct"]
-    head = (fx("div", "mh1", "Bitcoin 24 ժամում", "rise", .1, .8) + fx("div", "mdate", esc(date_label), "rise", .3, .8)
+    head = (fx("div", "mh1", "Bitcoin 24 ժամում", "rise", .1, .8)
             + f'<div class="cprice"><span data-fx="count" data-at=".6" data-dur="1.4" data-from="{spec["price"] * .98:.0f}" '
               f'data-to="{spec["price"]:.0f}" data-grp="1" data-pre="$">0</span>'
               f'<span class="ch {cls}" data-fx="pop" data-at="1.4" data-dur=".7">{arrow} {abs(chg):.1f}%</span></div>')
@@ -309,10 +322,9 @@ def build_chart_story(spec, palette, date_label):
             f'<div data-fx="rise" data-at="8.3" data-dur=".6"><b>Ամենամեծ ժամային շարժումը</b>'
             f'<span>{_hhmm(spec["big_t"])}-ին՝ {"+" if bp >= 0 else "−"}{abs(bp):.1f}%</span></div></div>')
     tl = Timeline()
-    brand = f'<div class="cbrand" data-fx="fade" data-at="9.0" data-dur=".8">{logo_svg()}<span>@armtradeinvest</span></div>'
-    tl.add(f'<div class="mstack">{head}{chart}{info}{brand}</div>', 16.0, "mscene")
-    logo = ""
-    hooks = ("logoFx(9.0);HOOKS.push(t=>{document.querySelectorAll('.cd').forEach(g=>{"
+    tl.add(f'<div class="mstack">{head}{chart}{info}</div>', 16.0, "mscene")
+    logo = story_head("Գրաֆիկ", date_label)
+    hooks = ("HOOKS.push(t=>{document.querySelectorAll('.cd').forEach(g=>{"
              "const k=EASE.out(prog(t,1.6+(+g.dataset.i)*.17,.45));g.style.opacity=k;"
              "g.style.transform=`translateY(${(1-k)*30}px)`;});});")
     return page("market", palette, tl, logo, hooks, seed=11)

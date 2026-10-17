@@ -273,7 +273,7 @@ def _hero(b, mode="slam"):
     html = ""
     for i, p in enumerate(parts):
         last = i == len(parts) - 1 and len(parts) > 1
-        k = 0.78 if mode == "glow" else 0.92                     # condensed neon type is narrower
+        k = 0.92
         size = _fit(max(p.split(), key=len) if len(p) > 14 else p, 150 if last else 128, width=880, k=k)
         style = f' style="font-size:{size}px"'
         if b.get("first") and i == 0:
@@ -545,31 +545,48 @@ HOOKS.push(t=>{{const end={oa:.2f};const o=1-EASE.inOut(prog(t,end-.35,.35));
 
 
 def cover_html(lesson, cur_info, palette):
-    from . import styles
+    """Reel cover = one brand template for every lesson (the profile grid reads as one library).
+    Only the series colour changes. Everything important sits inside the 3:4 crop the grid shows (y 240-1680)."""
     sname = lesson.get("style") or "marker"
-    title = "<br>".join(esc(p) for p in lesson["hook"].split("|"))
-    longest = max(lesson["hook"].replace("|", " ").split(), key=len)
-    tsize = min(150 if sname == "neon" else 112, _fit(longest, 150, width=900, k=0.62 if sname == "neon" else 0.78))
+    parts = [p.strip() for p in lesson["hook"].split("|") if p.strip()]
+    words = lambda t: " ".join(f'<span class="w">{esc(w)}</span>' for w in t.split())
+    title = "".join(f'<span class="ln{" acc" if i == len(parts) - 1 and len(parts) > 1 else ""}">{words(p)}</span>'
+                    for i, p in enumerate(parts))
     label = lesson.get("series") or f'Մոդուլ {lesson["module"]} · Դաս {lesson["n"]}'
-    css = open(os.path.join(ASSETS, "themes.css"), encoding="utf-8").read()
-    fonts = f"@font-face{{font-family:'ArmCond';src:url('file://{ASSETS}/ttf/NotoSansArmenian.ttf');font-weight:100 900;font-stretch:62.5% 100%}}"
-    tfont = {"neon": "font-family:ArmCond,ArmSans;font-stretch:62.5%;font-weight:900;font-size:150px;text-shadow:0 0 30px var(--a),0 0 80px var(--a)",
-             "editorial": "font-family:ArmSerif,serif;font-weight:800",
-             "terminal": "font-family:ArmSans,sans-serif;font-weight:800;text-shadow:0 0 40px rgba(31,214,122,.4)",
-             "glass": "font-family:ArmSans,sans-serif;font-weight:800",
-             "marker": "font-family:ArmSans,sans-serif;font-weight:800"}.get(sname, "")
+    sub = lesson["title"]
+    sub_cls = "sub mono" if sub.isascii() else "sub"
+    fonts = (f"@font-face{{font-family:'JBMono';font-weight:600;src:url('file://{ASSETS}/fonts/jetbrains-mono-latin-500-normal.woff2')}}"
+             f"@font-face{{font-family:'JBMono';font-weight:800;src:url('file://{ASSETS}/fonts/jetbrains-mono-latin-800-normal.woff2')}}")
     return (f'<!doctype html><html lang="hy"><head><meta charset="utf-8"><link rel="stylesheet" href="{ASSETS}/fonts.css">'
-            f'<style>{fonts}{css}*{{margin:0;padding:0;box-sizing:border-box}}html,body{{width:1080px;height:1920px;overflow:hidden}}'
-            f'body{{background:var(--bg);color:var(--txt);font-family:ArmSans,sans-serif;display:flex;flex-direction:column;'
-            f'align-items:center;justify-content:center;gap:56px;text-align:center}}'
-            f'.m{{font-size:40px;font-weight:700;letter-spacing:.06em;color:var(--onacc);background:linear-gradient(135deg,var(--a2),var(--a));padding:16px 34px;border-radius:50px}}'
-            f'.t{{font-size:112px;line-height:1.1;padding:0 70px;{tfont}}}.t .acc{{color:var(--a2)}}.t{{font-size:{tsize}px}}'
-            f'.s{{font-size:46px;color:var(--mut);font-weight:600;padding:0 90px}}.logo{{width:120px;height:120px}}'
-            f'.glow{{position:absolute;inset:0;background:radial-gradient(circle at 50% 42%,var(--blob1),transparent 60%);z-index:-1}}</style></head>'
-            f'<body class="st-{sname}" style="{css_vars(palette)}"><div class="glow"></div>{"<div class=scan></div>" if sname == "terminal" else ""}'
-            f'<div class="m">{esc(label)}</div>'
-            f'<div class="t">{title}</div><div class="s">{esc(lesson["title"])}</div>'
-            f'{logo_svg().replace("opacity:0", "opacity:1")}</body></html>')
+            f'<style>{fonts}*{{margin:0;padding:0;box-sizing:border-box}}html,body{{width:1080px;height:1920px;overflow:hidden}}'
+            f'body{{background:var(--bg);color:var(--txt);font-family:ArmSans,sans-serif;position:relative;-webkit-font-smoothing:antialiased}}'
+            f'.glow{{position:absolute;right:-380px;top:-160px;width:1300px;height:1300px;border-radius:50%;'
+            f'background:radial-gradient(circle,var(--blob1),transparent 62%)}}'
+            f'.grid{{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 2px,transparent 2px),'
+            f'linear-gradient(90deg,rgba(255,255,255,.035) 2px,transparent 2px);background-size:120px 120px;background-position:-2px 58px;'
+            f'-webkit-mask-image:linear-gradient(180deg,transparent 8%,#000 30%,#000 70%,transparent 92%)}}'
+            f'.edge{{position:absolute;left:0;top:300px;bottom:300px;width:10px;background:var(--a)}}'
+            f'.box{{position:absolute;left:96px;right:84px;top:330px;bottom:470px;display:flex;flex-direction:column;justify-content:center}}'
+            f'.ser{{display:flex;align-items:center;gap:18px;font-size:38px;font-weight:700;color:var(--a2);letter-spacing:.01em}}'
+            f'.ser i{{width:18px;height:18px;border-radius:4px;background:var(--a);flex:none}}'
+            f'.t{{margin-top:44px;font-weight:800;line-height:1.06;letter-spacing:-.025em;font-size:118px}}'
+            f'.t .ln{{display:block}}.t .w{{white-space:nowrap;display:inline-block}}.t .acc{{color:var(--a2)}}'
+            f'.bar{{width:132px;height:8px;border-radius:4px;background:var(--a);margin-top:56px}}'
+            f'.sub{{margin-top:34px;font-size:44px;font-weight:600;color:var(--mut);line-height:1.25}}'
+            f'.sub.mono{{font-family:JBMono,ArmSans,monospace;text-transform:uppercase;letter-spacing:.04em;font-size:40px}}'
+            f'.foot{{position:absolute;left:96px;right:84px;top:1500px;display:flex;align-items:center;gap:20px;'
+            f'padding-top:34px;border-top:2px solid rgba(255,255,255,.10)}}'
+            f'.foot .logo{{width:66px;height:66px;overflow:visible}}.foot b{{font-size:38px;font-weight:800;letter-spacing:-.01em}}'
+            f'.foot span{{margin-left:auto;font-size:32px;font-weight:600;color:var(--mut)}}</style></head>'
+            f'<body class="st-{sname}" style="{css_vars(palette)}"><div class="glow"></div><div class="grid"></div><div class="edge"></div>'
+            f'<div class="box"><div class="ser"><i></i>{esc(label)}</div><div class="t" id="t">{title}</div>'
+            f'<div class="bar"></div><div class="{sub_cls}">{esc(sub)}</div></div>'
+            f'<div class="foot">{logo_svg().replace("opacity:0", "opacity:1")}<b>TradeInvest</b><span>@armtradeinvest</span></div>'
+            # auto-fit: biggest size at which no word overflows and the block keeps clear of the footer
+            f'''<script>function fit(){{const t=document.getElementById('t'),box=document.querySelector('.box');let s=118;
+ const ok=()=>[...t.querySelectorAll('.w')].every(w=>w.getBoundingClientRect().right<=1080-84+1)&&box.scrollHeight<=box.clientHeight;
+ while(s>64&&!ok()){{s-=2;t.style.fontSize=s+'px';}}}}
+fit();document.fonts.ready.then(fit);</script></body></html>''')
 
 
 # ---------------- main ----------------
