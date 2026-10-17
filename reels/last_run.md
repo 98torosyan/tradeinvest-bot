@@ -1,3 +1,9 @@
+**2026-10-17 15:12** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 57 items
+- ✅ News published: Circle-ը ծրագրում է մուտք գործել 40 զարգացող շուկա
+---
 **2026-10-17 15:00** `lesson` ✅ published
 - ✅ H-031 «Range» published (41s, cta=send)
 ---
@@ -79,7 +85,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 35 items
 - ✅ News published: ԵՄ-ն Circle-ի USDC-ն դասակարգել է որպես կարևոր stablecoin
----
-**2026-10-15 09:35** `lesson` ✅ published
-- 📚 Մնացել է 9 պատրաստի Reel (~3.0 օր)։ Ժամանակն է գրել նորերը։
-- ✅ H-023 «Whale-եր» published (40s, cta=send)
