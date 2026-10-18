@@ -1,3 +1,6 @@
+**2026-10-18 13:02** `lesson` ✅ published
+- ✅ H-032 «Head and Shoulders» published (44s, cta=send)
+---
 **2026-10-18 11:58** `carousel` ❌ failed
 - ❌ carousel սխալ՝ InstagramPublishError: 17841424152621072/media_publish failed: {'error': {'message': 'Media ID is not available', 'type': 'OAuthException', 'code': 9007, 'error_subcode': 2207027, 'is_transient': False, 'error_user_title': 'Cannot Publish', 'error_user_msg': 'The media is not ready for publishing, please wait for a moment
 ---
@@ -77,8 +80,3 @@
 **2026-10-16 09:35** `lesson` ✅ published
 - 📚 Մնացել է 6 պատրաստի Reel (~2.0 օր)։ Ժամանակն է գրել նորերը։
 - ✅ H-026 «Double Top» published (47s, cta=question)
----
-**2026-10-16 09:06** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7744.06}
-- ✅ Story published
