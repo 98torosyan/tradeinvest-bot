@@ -1,3 +1,6 @@
+**2026-10-18 13:19** `carousel` ✅ published
+- ✅ Weekly carousel published
+---
 **2026-10-18 13:14** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7659.44}
@@ -75,9 +78,3 @@
 ---
 **2026-10-16 14:08** `quiz` ✅ published
 - ✅ Quiz Story from H-025
----
-**2026-10-16 11:17** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 35 items
-- ✅ News published: Mastercard-ը գործարկում է fiat-ի և stablecoin-ների հարթակ
