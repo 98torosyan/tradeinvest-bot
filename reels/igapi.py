@@ -10,11 +10,23 @@ Error = ig.InstagramPublishError
 configured = ig._configured
 
 
+def _publish_ready(creation_id, tries=8, wait=10):
+    """media_publish, retried while Instagram still says the container is not ready (code 9007 / 2207027)."""
+    import time
+    for k in range(tries):
+        try:
+            return ig._publish(creation_id)
+        except Error as exc:
+            if ("2207027" not in str(exc) and "'code': 9007" not in str(exc)) or k == tries - 1:
+                raise
+            time.sleep(wait)
+
+
 def _publish_container(**params):
     c = ig._post(f"{IG_USER_ID}/media", **params)
     if params.get("media_type") in ("REELS", "STORIES", "VIDEO") or params.get("video_url"):
         ig._wait_until_finished(c["id"], timeout=300)
-    return ig._publish(c["id"])
+    return _publish_ready(c["id"])
 
 
 def publish_reel(video_url, caption, cover_url=None, share_to_feed=True):
@@ -30,8 +42,11 @@ def publish_story_video(video_url):
 
 def publish_carousel(image_urls, caption):
     kids = [ig._post(f"{IG_USER_ID}/media", image_url=u, is_carousel_item="true")["id"] for u in image_urls]
+    for k in kids:                                   # every slide must be processed before the album is built
+        ig._wait_until_finished(k, timeout=180, interval=4)
     c = ig._post(f"{IG_USER_ID}/media", media_type="CAROUSEL", children=",".join(kids), caption=caption)
-    return ig._publish(c["id"])
+    ig._wait_until_finished(c["id"], timeout=180, interval=5)
+    return _publish_ready(c["id"])
 
 
 def recent_media(limit=25):
