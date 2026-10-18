@@ -1,3 +1,9 @@
+**2026-10-19 00:35** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 37 items
+- ✅ News published: Bitcoin ETF-ներից 2 շաբաթում մոտ $1 մլրդ է արտահոսել
+---
 **2026-10-18 23:37** `lesson` ✅ published
 - ✅ H-035 «BTC dominance» published (45s, cta=question)
 ---
@@ -75,8 +81,3 @@
 **2026-10-17 13:15** `lesson` ✅ published
 - 📚 Մնացել է 2 պատրաստի Reel (~0.7 օր)։ Ժամանակն է գրել նորերը։
 - ✅ H-030 «Կորուստների շարք» published (44s, cta=send)
----
-**2026-10-17 12:47** `story` ✅ published
-- [market] src_stooq failed: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=%5Espx&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(h
-- [market] SPX row dropped, sources: {'yahoo': 7659.44}
-- ✅ Story published
