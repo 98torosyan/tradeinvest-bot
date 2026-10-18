@@ -1,3 +1,6 @@
+**2026-10-18 22:17** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-18 22:01** `lesson` ✅ published
 - ✅ H-034 «Bollinger Bands» published (49s, cta=save)
 ---
@@ -77,9 +80,3 @@
 ---
 **2026-10-16 23:33** `lesson` ✅ published
 - ✅ H-029 «Ինդիկատորների 3 սխալ» published (43s, cta=save)
----
-**2026-10-16 22:39** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 37 items
-- ✅ News published: Deutsche Bank-ը մուտք է գործում կրիպտո շուկա
