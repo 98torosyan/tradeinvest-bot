@@ -1,5 +1,5 @@
 {
- "course_index": 34,
+ "course_index": 35,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -627,6 +627,13 @@
    "hour": 22,
    "cta": "save",
    "insights_done": true
+  },
+  "H-035": {
+   "media": "18059912213552192",
+   "permalink": "https://www.instagram.com/reel/DepeOiPzYhb/",
+   "date": "2026-10-18",
+   "hour": 23,
+   "cta": "question"
   }
  },
  "palette": {
@@ -794,7 +801,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "save",
+ "last_cta": "question",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -1366,14 +1373,13 @@
  },
  "music_bag": {
   "lesson": [
-   "user_momotmusic-inspiring-reels-406484.mp3",
    "user_soundsurfer-trading-254548.mp3"
   ],
   "news": [],
   "story": []
  },
  "music_last": {
-  "lesson": "user_the-mountain-market-systems-146118.mp3",
+  "lesson": "user_momotmusic-inspiring-reels-406484.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -1447,7 +1453,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 56,
+  "user_momotmusic-inspiring-reels-406484.mp3": 57,
   "user_the-mountain-tech-corporate-593075.mp3": 10,
   "story_mixkit-electropop-870.mp3": 56,
   "user_the-mountain-finance-background-449885.mp3": 10,

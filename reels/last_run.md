@@ -1,3 +1,6 @@
+**2026-10-18 23:37** `lesson` ✅ published
+- ✅ H-035 «BTC dominance» published (45s, cta=question)
+---
 **2026-10-18 22:17** `chart` ✅ published
 - ✅ Story published
 ---
@@ -77,6 +80,3 @@
 - [market] src_stooq failed: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=%5Espx&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(h
 - [market] SPX row dropped, sources: {'yahoo': 7659.44}
 - ✅ Story published
----
-**2026-10-16 23:33** `lesson` ✅ published
-- ✅ H-029 «Ինդիկատորների 3 սխալ» published (43s, cta=save)
