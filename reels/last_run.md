@@ -1,3 +1,6 @@
+**2026-10-20 01:45** `lesson` ✅ published
+- ✅ H-039 «EMA, թե՞ SMA» published (39s, cta=send)
+---
 **2026-10-20 00:46** `chart` ✅ published
 - ✅ Story published
 ---
@@ -73,9 +76,3 @@
 ---
 **2026-10-18 11:58** `carousel` ❌ failed
 - ❌ carousel սխալ՝ InstagramPublishError: 17841424152621072/media_publish failed: {'error': {'message': 'Media ID is not available', 'type': 'OAuthException', 'code': 9007, 'error_subcode': 2207027, 'is_transient': False, 'error_user_title': 'Cannot Publish', 'error_user_msg': 'The media is not ready for publishing, please wait for a moment
----
-**2026-10-18 00:32** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 37 items
-- ✅ News published: Circle-ը նախատեսում է մուտք գործել 40 զարգացող շուկա
