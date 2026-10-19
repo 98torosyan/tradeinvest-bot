@@ -1,3 +1,8 @@
+**2026-10-19 14:15** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7659.44}
+- ✅ Story published
+---
 **2026-10-19 00:35** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -77,7 +82,3 @@
 ---
 **2026-10-17 15:00** `lesson` ✅ published
 - ✅ H-031 «Range» published (41s, cta=send)
----
-**2026-10-17 13:15** `lesson` ✅ published
-- 📚 Մնացել է 2 պատրաստի Reel (~0.7 օր)։ Ժամանակն է գրել նորերը։
-- ✅ H-030 «Կորուստների շարք» published (44s, cta=send)
