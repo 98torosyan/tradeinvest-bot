@@ -1,3 +1,6 @@
+**2026-10-19 21:36** `lesson` ✅ published
+- ✅ H-037 «Double Bottom» published (45s, cta=save)
+---
 **2026-10-19 20:38** `quiz` ✅ published
 - ✅ Quiz Story from H-032
 ---
@@ -76,9 +79,3 @@
 ---
 **2026-10-17 21:56** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-17 19:54** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 37 items
-- ✅ News published: Stablecoin փոխանցումները 84%-ով ավելի էժան են ավանդականից
