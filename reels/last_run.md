@@ -1,3 +1,9 @@
+**2026-10-19 17:52** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 56 items
+- ✅ News published: JPMorgan-ը JPM Coin-ը տեղափոխում է Ethereum
+---
 **2026-10-19 14:59** `lesson` ✅ published
 - ✅ H-036 «Expectancy» published (52s, cta=save)
 ---
@@ -76,9 +82,3 @@
 ---
 **2026-10-17 17:10** `quiz` ✅ published
 - ✅ Quiz Story from H-028
----
-**2026-10-17 15:12** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 57 items
-- ✅ News published: Circle-ը ծրագրում է մուտք գործել 40 զարգացող շուկա

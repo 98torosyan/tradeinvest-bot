@@ -644,7 +644,7 @@
   }
  },
  "palette": {
-  "news": 50
+  "news": 51
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -703,7 +703,8 @@
   "https://cointelegraph.com/news/circles-allaire-says-stablecoin-issuer-looking-to-enter-40-developing-markets-report?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/news/solana-shows-resilience-but-some-areas-need-continued-observation-fidelity-says?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://www.coindesk.com/business/2026/10/18/stablecoin-supply-stalls-but-payments-jump-45-as-visa-mastercard-and-stripe-connect-crypto-to-cash",
-  "https://decrypt.co/381246/bitcoin-etfs-shed-nearly-1-billion-two-weeks-uptober-red"
+  "https://decrypt.co/381246/bitcoin-etfs-shed-nearly-1-billion-two-weeks-uptober-red",
+  "https://cointelegraph.com/news/jpmorgan-jpm-coin-ethereum-institutional-clients?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
   17238361,
@@ -1009,6 +1010,10 @@
   },
   {
    "media": "18383144263229831",
+   "date": "2026-10-19"
+  },
+  {
+   "media": "18096395987451716",
    "date": "2026-10-19"
   }
  ],
@@ -1463,7 +1468,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 58,
+  "user_momotmusic-inspiring-reels-406484.mp3": 59,
   "user_the-mountain-tech-corporate-593075.mp3": 10,
   "story_mixkit-electropop-870.mp3": 57,
   "user_the-mountain-finance-background-449885.mp3": 10,
