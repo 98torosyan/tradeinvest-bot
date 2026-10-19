@@ -1,3 +1,6 @@
+**2026-10-20 00:46** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-20 00:33** `lesson` ✅ published
 - ✅ H-038 «Stop loss-ի տեղափոխում» published (51s, cta=question)
 ---
@@ -76,5 +79,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 37 items
 - ✅ News published: Circle-ը նախատեսում է մուտք գործել 40 զարգացող շուկա
----
-**2026-10-17 22:26** `lesson` ✅ no-script
