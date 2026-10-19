@@ -1,3 +1,6 @@
+**2026-10-20 00:33** `lesson` ✅ published
+- ✅ H-038 «Stop loss-ի տեղափոխում» published (51s, cta=question)
+---
 **2026-10-19 21:36** `lesson` ✅ published
 - ✅ H-037 «Double Bottom» published (45s, cta=save)
 ---
@@ -75,7 +78,3 @@
 - ✅ News published: Circle-ը նախատեսում է մուտք գործել 40 զարգացող շուկա
 ---
 **2026-10-17 22:26** `lesson` ✅ no-script
-
----
-**2026-10-17 21:56** `chart` ✅ published
-- ✅ Story published
