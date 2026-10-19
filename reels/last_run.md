@@ -1,3 +1,6 @@
+**2026-10-19 14:59** `lesson` ✅ published
+- ✅ H-036 «Expectancy» published (52s, cta=save)
+---
 **2026-10-19 14:15** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7659.44}
@@ -79,6 +82,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 57 items
 - ✅ News published: Circle-ը ծրագրում է մուտք գործել 40 զարգացող շուկա
----
-**2026-10-17 15:00** `lesson` ✅ published
-- ✅ H-031 «Range» published (41s, cta=send)
