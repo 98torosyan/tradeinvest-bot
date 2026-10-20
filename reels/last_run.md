@@ -1,3 +1,6 @@
+**2026-10-20 18:29** `quiz` ✅ published
+- ✅ Quiz Story from H-037
+---
 **2026-10-20 17:50** `lesson` ✅ published
 - ✅ H-040 «Altseason» published (48s, cta=save)
 ---
@@ -76,9 +79,3 @@
 ---
 **2026-10-18 16:47** `lesson` ✅ published
 - ✅ H-033 «Միջինացում կորստի մեջ» published (39s, cta=send)
----
-**2026-10-18 15:38** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 37 items
-- ✅ News published: Fidelity. Solana-ն 2 տարի աշխատում է առանց mainnet-ի խափանումների
