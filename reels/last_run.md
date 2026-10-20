@@ -1,3 +1,6 @@
+**2026-10-20 23:34** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-20 23:10** `lesson` ✅ published
 - ✅ H-041 «Մասնակի շահույթ» published (43s, cta=save)
 ---
@@ -76,9 +79,3 @@
 ---
 **2026-10-18 22:01** `lesson` ✅ published
 - ✅ H-034 «Bollinger Bands» published (49s, cta=save)
----
-**2026-10-18 20:07** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 37 items
-- ✅ News published: Stablecoin-ով վճարումներն աճել են 45%-ով
