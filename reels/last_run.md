@@ -1,3 +1,9 @@
+**2026-10-20 16:02** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 39 items
+- ✅ News published: Mt. Gox-ը հետաձգել է փոխհատուցման ժամկետը
+---
 **2026-10-20 13:37** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7690.73}
@@ -76,8 +82,3 @@
 ---
 **2026-10-18 13:19** `carousel` ✅ published
 - ✅ Weekly carousel published
----
-**2026-10-18 13:14** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7659.44}
-- ✅ Story published
