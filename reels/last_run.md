@@ -1,3 +1,6 @@
+**2026-10-20 17:50** `lesson` ✅ published
+- ✅ H-040 «Altseason» published (48s, cta=save)
+---
 **2026-10-20 16:02** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -79,6 +82,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 37 items
 - ✅ News published: Fidelity. Solana-ն 2 տարի աշխատում է առանց mainnet-ի խափանումների
----
-**2026-10-18 13:19** `carousel` ✅ published
-- ✅ Weekly carousel published
