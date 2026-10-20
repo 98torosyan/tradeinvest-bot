@@ -1,3 +1,6 @@
+**2026-10-21 00:50** `lesson` ✅ published
+- ✅ H-042 «Եռանկյուն» published (45s, cta=question)
+---
 **2026-10-20 23:34** `chart` ✅ published
 - ✅ Story published
 ---
@@ -76,6 +79,3 @@
 ---
 **2026-10-18 22:17** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-18 22:01** `lesson` ✅ published
-- ✅ H-034 «Bollinger Bands» published (49s, cta=save)
