@@ -1,3 +1,9 @@
+**2026-10-21 01:34** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- ✅ News published: Bitcoin ETF-ները հավաքել են 526 մլն դոլար
+---
 **2026-10-21 00:50** `lesson` ✅ published
 - ✅ H-042 «Եռանկյուն» published (45s, cta=question)
 ---
@@ -76,6 +82,3 @@
 ---
 **2026-10-18 23:37** `lesson` ✅ published
 - ✅ H-035 «BTC dominance» published (45s, cta=question)
----
-**2026-10-18 22:17** `chart` ✅ published
-- ✅ Story published
