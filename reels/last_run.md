@@ -1,3 +1,8 @@
+**2026-10-20 13:37** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7690.73}
+- ✅ Story published
+---
 **2026-10-20 02:19** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -76,6 +81,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7659.44}
 - ✅ Story published
----
-**2026-10-18 13:02** `lesson` ✅ published
-- ✅ H-032 «Head and Shoulders» published (44s, cta=send)
