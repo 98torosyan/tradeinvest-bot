@@ -672,7 +672,7 @@
   }
  },
  "palette": {
-  "news": 53
+  "news": 54
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -734,7 +734,8 @@
   "https://decrypt.co/381246/bitcoin-etfs-shed-nearly-1-billion-two-weeks-uptober-red",
   "https://cointelegraph.com/news/jpmorgan-jpm-coin-ethereum-institutional-clients?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/news/visa-mesh-partner-crypto-spending-175m-merchant-locations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://cointelegraph.com/news/mt-gox-creditor-repayment-deadline-extended-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  "https://cointelegraph.com/news/mt-gox-creditor-repayment-deadline-extended-2027?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://cointelegraph.com/news/finma-approves-switzerlands-first-bitcoin-etf-retail?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
   17238361,
@@ -1052,6 +1053,10 @@
   },
   {
    "media": "18065426060788683",
+   "date": "2026-10-20"
+  },
+  {
+   "media": "17890944531653921",
    "date": "2026-10-20"
   }
  ],
@@ -1509,7 +1514,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 62,
+  "user_momotmusic-inspiring-reels-406484.mp3": 63,
   "user_the-mountain-tech-corporate-593075.mp3": 11,
   "story_mixkit-electropop-870.mp3": 61,
   "user_the-mountain-finance-background-449885.mp3": 11,

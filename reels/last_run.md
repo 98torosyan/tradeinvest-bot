@@ -1,3 +1,9 @@
+**2026-10-20 21:29** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- ✅ News published: Շվեյցարիայում հաստատվել է առաջին մանրածախ Bitcoin ETF-ը
+---
 **2026-10-20 18:29** `quiz` ✅ published
 - ✅ Quiz Story from H-037
 ---
@@ -76,6 +82,3 @@
 ---
 **2026-10-18 17:32** `quiz` ✅ published
 - ✅ Quiz Story from H-031
----
-**2026-10-18 16:47** `lesson` ✅ published
-- ✅ H-033 «Միջինացում կորստի մեջ» published (39s, cta=send)
