@@ -1,3 +1,6 @@
+**2026-10-21 18:38** `quiz` ✅ published
+- ✅ Quiz Story from H-040
+---
 **2026-10-21 18:06** `lesson` ✅ published
 - ✅ H-043 «Շահույթը շուտ փակելը» published (41s, cta=save)
 ---
@@ -79,6 +82,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 56 items
 - ✅ News published: JPMorgan-ը JPM Coin-ը տեղափոխում է Ethereum
----
-**2026-10-19 14:59** `lesson` ✅ published
-- ✅ H-036 «Expectancy» published (52s, cta=save)
