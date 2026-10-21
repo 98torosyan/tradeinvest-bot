@@ -1,3 +1,6 @@
+**2026-10-22 00:52** `lesson` ✅ published
+- ✅ H-046 «Trailing stop» published (47s, cta=save)
+---
 **2026-10-21 23:34** `chart` ✅ published
 - ✅ Story published
 ---
@@ -79,6 +82,3 @@
 ---
 **2026-10-20 00:46** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-20 00:33** `lesson` ✅ published
-- ✅ H-038 «Stop loss-ի տեղափոխում» published (51s, cta=question)
