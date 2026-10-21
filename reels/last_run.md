@@ -1,3 +1,6 @@
+**2026-10-21 23:34** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-21 23:14** `lesson` ✅ published
 - ✅ H-045 «Spot, թե՞ Futures» published (48s, cta=send)
 ---
@@ -79,6 +82,3 @@
 ---
 **2026-10-20 00:33** `lesson` ✅ published
 - ✅ H-038 «Stop loss-ի տեղափոխում» published (51s, cta=question)
----
-**2026-10-19 21:36** `lesson` ✅ published
-- ✅ H-037 «Double Bottom» published (45s, cta=save)
