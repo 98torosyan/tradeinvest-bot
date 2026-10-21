@@ -1,3 +1,6 @@
+**2026-10-21 23:14** `lesson` ✅ published
+- ✅ H-045 «Spot, թե՞ Futures» published (48s, cta=send)
+---
 **2026-10-21 22:48** `lesson` ✅ published
 - ✅ H-044 «Fibonacci» published (47s, cta=save)
 ---
@@ -79,6 +82,3 @@
 ---
 **2026-10-19 21:36** `lesson` ✅ published
 - ✅ H-037 «Double Bottom» published (45s, cta=save)
----
-**2026-10-19 20:38** `quiz` ✅ published
-- ✅ Quiz Story from H-032
