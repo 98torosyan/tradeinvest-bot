@@ -1,3 +1,9 @@
+**2026-10-22 01:36** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 39 items
+- ✅ News published: Solana-ն գործարկել է Alpenglow խոշոր թարմացումը
+---
 **2026-10-22 00:52** `lesson` ✅ published
 - ✅ H-046 «Trailing stop» published (47s, cta=save)
 ---
@@ -79,6 +85,3 @@
 ---
 **2026-10-20 01:45** `lesson` ✅ published
 - ✅ H-039 «EMA, թե՞ SMA» published (39s, cta=send)
----
-**2026-10-20 00:46** `chart` ✅ published
-- ✅ Story published
