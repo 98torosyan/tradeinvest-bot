@@ -1,3 +1,9 @@
+**2026-10-21 16:17** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- ✅ News published: Շվեյցարիան հաստատել է Bitcoin ուղիղ պահող առաջին մանրածախ ֆոնդը
+---
 **2026-10-21 13:36** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7712.57}
@@ -78,9 +84,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7659.44}
 - ✅ Story published
----
-**2026-10-19 00:35** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 37 items
-- ✅ News published: Bitcoin ETF-ներից 2 շաբաթում մոտ $1 մլրդ է արտահոսել
