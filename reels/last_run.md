@@ -1,3 +1,6 @@
+**2026-10-21 22:48** `lesson` ✅ published
+- ✅ H-044 «Fibonacci» published (47s, cta=save)
+---
 **2026-10-21 21:37** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -79,6 +82,3 @@
 ---
 **2026-10-19 20:38** `quiz` ✅ published
 - ✅ Quiz Story from H-032
----
-**2026-10-19 19:51** `lesson` ❌ failed
-- ❌ lesson սխալ՝ RuntimeError: video is not reachable on GitHub Pages
