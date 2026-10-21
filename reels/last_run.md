@@ -1,3 +1,8 @@
+**2026-10-21 13:36** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7712.57}
+- ✅ Story published
+---
 **2026-10-21 01:34** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -79,6 +84,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 37 items
 - ✅ News published: Bitcoin ETF-ներից 2 շաբաթում մոտ $1 մլրդ է արտահոսել
----
-**2026-10-18 23:37** `lesson` ✅ published
-- ✅ H-035 «BTC dominance» published (45s, cta=question)
