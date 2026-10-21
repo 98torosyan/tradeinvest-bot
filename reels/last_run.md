@@ -1,3 +1,6 @@
+**2026-10-21 18:06** `lesson` ✅ published
+- ✅ H-043 «Շահույթը շուտ փակելը» published (41s, cta=save)
+---
 **2026-10-21 16:17** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -79,8 +82,3 @@
 ---
 **2026-10-19 14:59** `lesson` ✅ published
 - ✅ H-036 «Expectancy» published (52s, cta=save)
----
-**2026-10-19 14:15** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7659.44}
-- ✅ Story published
