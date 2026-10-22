@@ -1,3 +1,6 @@
+**2026-10-22 23:10** `lesson` ✅ published
+- ✅ H-048 «Կույր կրկնօրինակում» published (50s, cta=save)
+---
 **2026-10-22 22:40** `lesson` ✅ published
 - ✅ H-047 «Դրոշ ֆիգուրը» published (41s, cta=send)
 ---
@@ -82,6 +85,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 38 items
 - ✅ News published: Շվեյցարիայում հաստատվել է առաջին մանրածախ Bitcoin ETF-ը
----
-**2026-10-20 18:29** `quiz` ✅ published
-- ✅ Quiz Story from H-037
