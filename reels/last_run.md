@@ -1,3 +1,6 @@
+**2026-10-22 23:27** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-22 23:10** `lesson` ✅ published
 - ✅ H-048 «Կույր կրկնօրինակում» published (50s, cta=save)
 ---
@@ -79,9 +82,3 @@
 ---
 **2026-10-20 23:10** `lesson` ✅ published
 - ✅ H-041 «Մասնակի շահույթ» published (43s, cta=save)
----
-**2026-10-20 21:29** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- ✅ News published: Շվեյցարիայում հաստատվել է առաջին մանրածախ Bitcoin ETF-ը
