@@ -1,3 +1,8 @@
+**2026-10-22 13:37** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7757.17}
+- ✅ Story published
+---
 **2026-10-22 01:36** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -82,6 +87,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 38 items
 - ✅ News published: Visa-ն և Mesh-ը կրիպտո վճարումներ են բացում 175 մլն վայրում
----
-**2026-10-20 01:45** `lesson` ✅ published
-- ✅ H-039 «EMA, թե՞ SMA» published (39s, cta=send)
