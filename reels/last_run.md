@@ -1,3 +1,9 @@
+**2026-10-22 16:19** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 39 items
+- ✅ News published: SoFi-ն թողարկել է 4.4% եկամտաբերությամբ թոքենացված ավանդ
+---
 **2026-10-22 13:37** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7757.17}
@@ -81,9 +87,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7690.73}
 - ✅ Story published
----
-**2026-10-20 02:19** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- ✅ News published: Visa-ն և Mesh-ը կրիպտո վճարումներ են բացում 175 մլն վայրում
