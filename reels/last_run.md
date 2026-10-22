@@ -1,3 +1,9 @@
+**2026-10-22 21:34** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 39 items
+- ✅ News published: Coinbase-ը տուգանվել է Իռլանդիայում
+---
 **2026-10-22 18:59** `quiz` ✅ published
 - ✅ Quiz Story from H-045
 ---
@@ -79,9 +85,3 @@
 ---
 **2026-10-20 17:50** `lesson` ✅ published
 - ✅ H-040 «Altseason» published (48s, cta=save)
----
-**2026-10-20 16:02** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 39 items
-- ✅ News published: Mt. Gox-ը հետաձգել է փոխհատուցման ժամկետը
