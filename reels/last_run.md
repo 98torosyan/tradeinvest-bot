@@ -1,3 +1,9 @@
+**2026-10-23 01:30** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 60 items
+- ✅ News published: Coinbase-ը տուգանվել է Իռլանդիայում
+---
 **2026-10-23 00:46** `lesson` ✅ published
 - ✅ H-049 «VWAP» published (45s, cta=send)
 ---
@@ -79,6 +85,3 @@
 ---
 **2026-10-21 00:50** `lesson` ✅ published
 - ✅ H-042 «Եռանկյուն» published (45s, cta=question)
----
-**2026-10-20 23:34** `chart` ✅ published
-- ✅ Story published
