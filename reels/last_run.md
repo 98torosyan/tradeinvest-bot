@@ -1,3 +1,6 @@
+**2026-10-22 22:40** `lesson` ✅ published
+- ✅ H-047 «Դրոշ ֆիգուրը» published (41s, cta=send)
+---
 **2026-10-22 21:34** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -82,6 +85,3 @@
 ---
 **2026-10-20 18:29** `quiz` ✅ published
 - ✅ Quiz Story from H-037
----
-**2026-10-20 17:50** `lesson` ✅ published
-- ✅ H-040 «Altseason» published (48s, cta=save)
