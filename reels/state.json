@@ -1,5 +1,5 @@
 {
- "course_index": 48,
+ "course_index": 49,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -725,6 +725,13 @@
    "date": "2026-10-22",
    "hour": 23,
    "cta": "save"
+  },
+  "H-049": {
+   "media": "18139180249725222",
+   "permalink": "https://www.instagram.com/reel/Dez5IWDkUAU/",
+   "date": "2026-10-23",
+   "hour": 0,
+   "cta": "send"
   }
  },
  "palette": {
@@ -903,7 +910,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "save",
+ "last_cta": "send",
  "news_media": [
   {
    "media": "17960540055208000",
@@ -1518,14 +1525,12 @@
   "29205869.mp4:face": false
  },
  "music_bag": {
-  "lesson": [
-   "user_soundsurfer-trading-254548.mp3"
-  ],
+  "lesson": [],
   "news": [],
   "story": []
  },
  "music_last": {
-  "lesson": "user_the-mountain-finance-background-449885.mp3",
+  "lesson": "user_soundsurfer-trading-254548.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -1606,7 +1611,7 @@
   "user_starostin-investment-finance-trading-mon.mp3": 12,
   "user_apalonbeats-finance-money-trading-invest.mp3": 12,
   "user_the-mountain-market-systems-146118.mp3": 12,
-  "user_soundsurfer-trading-254548.mp3": 11
+  "user_soundsurfer-trading-254548.mp3": 12
  },
  "low_alert": "2026-10-07",
  "hits_low_alert": "2026-10-17"

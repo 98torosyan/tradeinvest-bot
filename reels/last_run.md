@@ -1,3 +1,6 @@
+**2026-10-23 00:46** `lesson` ✅ published
+- ✅ H-049 «VWAP» published (45s, cta=send)
+---
 **2026-10-22 23:27** `chart` ✅ published
 - ✅ Story published
 ---
@@ -79,6 +82,3 @@
 ---
 **2026-10-20 23:34** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-20 23:10** `lesson` ✅ published
-- ✅ H-041 «Մասնակի շահույթ» published (43s, cta=save)
