@@ -1,3 +1,6 @@
+**2026-10-23 23:59** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-23 23:06** `lesson` ✅ published
 - ✅ H-051 «Break-even stop» published (45s, cta=question)
 ---
@@ -82,6 +85,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 39 items
 - ✅ News published: Բլոկչեյն կազմակերպությունները դիմել են SEC-ին
----
-**2026-10-21 18:38** `quiz` ✅ published
-- ✅ Quiz Story from H-040
