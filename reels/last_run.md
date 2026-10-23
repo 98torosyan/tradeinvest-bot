@@ -1,3 +1,9 @@
+**2026-10-23 16:00** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 40 items
+- ✅ News published: HSBC-ը թողարկել է իր առաջին stablecoin-ը
+---
 **2026-10-23 13:33** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7663.43}
@@ -81,9 +87,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7712.57}
 - ✅ Story published
----
-**2026-10-21 01:34** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- ✅ News published: Bitcoin ETF-ները հավաքել են 526 մլն դոլար

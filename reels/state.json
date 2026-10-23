@@ -735,7 +735,7 @@
   }
  },
  "palette": {
-  "news": 61
+  "news": 62
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -805,7 +805,8 @@
   "https://cointelegraph.com/news/solanas-alpenglow-launches-mainnet-99-faster-finality?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://decrypt.co/381174/sofi-launches-tokenized-deposit-that-earns-4-4-and-moves-like-a-stablecoin",
   "https://www.coindesk.com/policy/2026/10/22/irish-central-bank-fines-coinbase-ireland-usd3-6-million-over-fund-safeguarding-failures",
-  "https://cointelegraph.com/news/ireland-central-bank-coinbase-oversight-safeguard-failure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  "https://cointelegraph.com/news/ireland-central-bank-coinbase-oversight-safeguard-failure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://www.coindesk.com/business/2026/10/23/hsbc-rolls-out-its-first-stablecoin-to-over-3-million-everyday-app-users"
  ],
  "used_broll": [
   17238361,
@@ -913,10 +914,6 @@
  "last_track": "story_mixkit-electropop-870.mp3",
  "last_cta": "send",
  "news_media": [
-  {
-   "media": "18099342152551166",
-   "date": "2026-09-29"
-  },
   {
    "media": "17949711753318101",
    "date": "2026-09-30"
@@ -1151,6 +1148,10 @@
   },
   {
    "media": "18056547821801910",
+   "date": "2026-10-23"
+  },
+  {
+   "media": "17994420447022673",
    "date": "2026-10-23"
   }
  ],
@@ -1605,7 +1606,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 71,
+  "user_momotmusic-inspiring-reels-406484.mp3": 72,
   "user_the-mountain-tech-corporate-593075.mp3": 12,
   "story_mixkit-electropop-870.mp3": 69,
   "user_the-mountain-finance-background-449885.mp3": 12,
