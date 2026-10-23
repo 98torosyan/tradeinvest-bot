@@ -1,3 +1,8 @@
+**2026-10-23 13:33** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7663.43}
+- ✅ Story published
+---
 **2026-10-23 01:30** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -82,6 +87,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 38 items
 - ✅ News published: Bitcoin ETF-ները հավաքել են 526 մլն դոլար
----
-**2026-10-21 00:50** `lesson` ✅ published
-- ✅ H-042 «Եռանկյուն» published (45s, cta=question)
