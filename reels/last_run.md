@@ -1,3 +1,6 @@
+**2026-10-23 22:32** `lesson` ✅ published
+- ✅ H-050 «Order book-ի պատերը» published (48s, cta=send)
+---
 **2026-10-23 21:24** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -82,9 +85,3 @@
 ---
 **2026-10-21 18:06** `lesson` ✅ published
 - ✅ H-043 «Շահույթը շուտ փակելը» published (41s, cta=save)
----
-**2026-10-21 16:17** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- ✅ News published: Շվեյցարիան հաստատել է Bitcoin ուղիղ պահող առաջին մանրածախ ֆոնդը
