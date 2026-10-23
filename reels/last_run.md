@@ -1,3 +1,6 @@
+**2026-10-23 23:06** `lesson` ✅ published
+- ✅ H-051 «Break-even stop» published (45s, cta=question)
+---
 **2026-10-23 22:32** `lesson` ✅ published
 - ✅ H-050 «Order book-ի պատերը» published (48s, cta=send)
 ---
@@ -82,6 +85,3 @@
 ---
 **2026-10-21 18:38** `quiz` ✅ published
 - ✅ Quiz Story from H-040
----
-**2026-10-21 18:06** `lesson` ✅ published
-- ✅ H-043 «Շահույթը շուտ փակելը» published (41s, cta=save)
