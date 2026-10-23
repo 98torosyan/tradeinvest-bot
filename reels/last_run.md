@@ -1,3 +1,6 @@
+**2026-10-24 00:38** `lesson` ✅ published
+- ✅ H-052 «Retest» published (42s, cta=save)
+---
 **2026-10-23 23:59** `chart` ✅ published
 - ✅ Story published
 ---
@@ -79,9 +82,3 @@
 ---
 **2026-10-21 22:48** `lesson` ✅ published
 - ✅ H-044 «Fibonacci» published (47s, cta=save)
----
-**2026-10-21 21:37** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 39 items
-- ✅ News published: Բլոկչեյն կազմակերպությունները դիմել են SEC-ին
