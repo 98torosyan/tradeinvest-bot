@@ -1,3 +1,6 @@
+**2026-10-24 23:44** `lesson` ✅ published
+- ✅ H-055 «Halving» published (47s, cta=save)
+---
 **2026-10-24 22:22** `chart` ✅ published
 - ✅ Story published
 ---
@@ -79,9 +82,3 @@
 ---
 **2026-10-22 22:40** `lesson` ✅ published
 - ✅ H-047 «Դրոշ ֆիգուրը» published (41s, cta=send)
----
-**2026-10-22 21:34** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 39 items
-- ✅ News published: Coinbase-ը տուգանվել է Իռլանդիայում
