@@ -1,3 +1,6 @@
+**2026-10-24 22:04** `lesson` ✅ published
+- ✅ H-054 «ATR» published (44s, cta=send)
+---
 **2026-10-24 20:13** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -82,9 +85,3 @@
 ---
 **2026-10-22 18:59** `quiz` ✅ published
 - ✅ Quiz Story from H-045
----
-**2026-10-22 16:19** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 39 items
-- ✅ News published: SoFi-ն թողարկել է 4.4% եկամտաբերությամբ թոքենացված ավանդ
