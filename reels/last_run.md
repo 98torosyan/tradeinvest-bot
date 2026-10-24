@@ -1,3 +1,6 @@
+**2026-10-24 17:35** `quiz` ✅ published
+- ✅ Quiz Story from H-049
+---
 **2026-10-24 16:59** `lesson` ✅ published
 - ✅ H-053 «Լուրերի վրա առևտուր» published (43s, cta=save)
 ---
@@ -84,9 +87,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7757.17}
 - ✅ Story published
----
-**2026-10-22 01:36** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 39 items
-- ✅ News published: Solana-ն գործարկել է Alpenglow խոշոր թարմացումը
