@@ -1,3 +1,9 @@
+**2026-10-24 20:13** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 40 items
+- ✅ News published: HSBC-ն սթեյբլքոին է գործարկել
+---
 **2026-10-24 17:35** `quiz` ✅ published
 - ✅ Quiz Story from H-049
 ---
@@ -82,8 +88,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 39 items
 - ✅ News published: SoFi-ն թողարկել է 4.4% եկամտաբերությամբ թոքենացված ավանդ
----
-**2026-10-22 13:37** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7757.17}
-- ✅ Story published
