@@ -1,3 +1,6 @@
+**2026-10-24 22:22** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-24 22:04** `lesson` ✅ published
 - ✅ H-054 «ATR» published (44s, cta=send)
 ---
@@ -82,6 +85,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 39 items
 - ✅ News published: Coinbase-ը տուգանվել է Իռլանդիայում
----
-**2026-10-22 18:59** `quiz` ✅ published
-- ✅ Quiz Story from H-045
