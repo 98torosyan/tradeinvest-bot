@@ -1,3 +1,9 @@
+**2026-10-25 00:43** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 40 items
+- ✅ News published: Bitcoin Core-ը փոխում է անվտանգության կանոնները AI-ի պատճառով
+---
 **2026-10-24 23:44** `lesson` ✅ published
 - ✅ H-055 «Halving» published (47s, cta=save)
 ---
@@ -79,6 +85,3 @@
 ---
 **2026-10-22 23:10** `lesson` ✅ published
 - ✅ H-048 «Կույր կրկնօրինակում» published (50s, cta=save)
----
-**2026-10-22 22:40** `lesson` ✅ published
-- ✅ H-047 «Դրոշ ֆիգուրը» published (41s, cta=send)
