@@ -1,3 +1,8 @@
+**2026-10-24 13:06** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7623.68}
+- ✅ Story published
+---
 **2026-10-24 01:21** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -82,6 +87,3 @@
 ---
 **2026-10-21 23:34** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-21 23:14** `lesson` ✅ published
-- ✅ H-045 «Spot, թե՞ Futures» published (48s, cta=send)
