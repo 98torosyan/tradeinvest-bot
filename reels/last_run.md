@@ -1,3 +1,6 @@
+**2026-10-24 16:59** `lesson` ✅ published
+- ✅ H-053 «Լուրերի վրա առևտուր» published (43s, cta=save)
+---
 **2026-10-24 15:31** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -87,6 +90,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 39 items
 - ✅ News published: Solana-ն գործարկել է Alpenglow խոշոր թարմացումը
----
-**2026-10-22 00:52** `lesson` ✅ published
-- ✅ H-046 «Trailing stop» published (47s, cta=save)

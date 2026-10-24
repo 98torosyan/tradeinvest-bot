@@ -1,5 +1,5 @@
 {
- "course_index": 52,
+ "course_index": 53,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -752,6 +752,13 @@
    "permalink": "https://www.instagram.com/reel/De2cw35CXCC/",
    "date": "2026-10-24",
    "hour": 0,
+   "cta": "save"
+  },
+  "H-053": {
+   "media": "18135785932718817",
+   "permalink": "https://www.instagram.com/reel/De4NHmTsfqA/",
+   "date": "2026-10-24",
+   "hour": 16,
    "cta": "save"
   }
  },
@@ -1552,7 +1559,6 @@
  },
  "music_bag": {
   "lesson": [
-   "user_apalonbeats-finance-money-trading-invest.mp3",
    "user_the-mountain-finance-background-449885.mp3",
    "user_the-mountain-market-systems-146118.mp3",
    "user_the-mountain-tech-corporate-593075.mp3"
@@ -1561,7 +1567,7 @@
   "story": []
  },
  "music_last": {
-  "lesson": "user_momotmusic-inspiring-reels-406484.mp3",
+  "lesson": "user_apalonbeats-finance-money-trading-invest.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -1640,7 +1646,7 @@
   "story_mixkit-electropop-870.mp3": 71,
   "user_the-mountain-finance-background-449885.mp3": 12,
   "user_starostin-investment-finance-trading-mon.mp3": 13,
-  "user_apalonbeats-finance-money-trading-invest.mp3": 12,
+  "user_apalonbeats-finance-money-trading-invest.mp3": 13,
   "user_the-mountain-market-systems-146118.mp3": 12,
   "user_soundsurfer-trading-254548.mp3": 13
  },
