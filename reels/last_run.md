@@ -1,3 +1,6 @@
+**2026-10-25 23:56** `lesson` ✅ published
+- ✅ H-059 «Golden Cross» published (49s, cta=send)
+---
 **2026-10-25 22:33** `chart` ✅ published
 - ✅ Story published
 ---
@@ -79,6 +82,3 @@
 ---
 **2026-10-24 00:38** `lesson` ✅ published
 - ✅ H-052 «Retest» published (42s, cta=save)
----
-**2026-10-23 23:59** `chart` ✅ published
-- ✅ Story published
