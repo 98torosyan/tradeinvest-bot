@@ -777,7 +777,7 @@
   }
  },
  "palette": {
-  "news": 67
+  "news": 68
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -853,7 +853,8 @@
   "https://cointelegraph.com/news/initia-halts-blockchain-exploit-drained?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://decrypt.co/381700/bitcoin-etfs-bleed-october-turns-red-again",
   "https://decrypt.co/381760/hong-kong-bank-hsbc-stablecoin-3-million-wallets",
-  "https://decrypt.co/381715/bitcoin-core-security-policy-ai-threats"
+  "https://decrypt.co/381715/bitcoin-core-security-policy-ai-threats",
+  "https://cointelegraph.com/news/sec-adds-tokenized-securities-to-2027-examination-priorities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
   17238361,
@@ -961,10 +962,6 @@
  "last_track": "story_mixkit-electropop-870.mp3",
  "last_cta": "save",
  "news_media": [
-  {
-   "media": "17989315617100875",
-   "date": "2026-10-02"
-  },
   {
    "media": "18103300760316456",
    "date": "2026-10-03"
@@ -1199,6 +1196,10 @@
   },
   {
    "media": "18078063014449998",
+   "date": "2026-10-25"
+  },
+  {
+   "media": "18227866627333007",
    "date": "2026-10-25"
   }
  ],
@@ -1655,7 +1656,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 78,
+  "user_momotmusic-inspiring-reels-406484.mp3": 79,
   "user_the-mountain-tech-corporate-593075.mp3": 12,
   "story_mixkit-electropop-870.mp3": 74,
   "user_the-mountain-finance-background-449885.mp3": 13,
