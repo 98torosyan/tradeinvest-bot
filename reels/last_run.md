@@ -1,3 +1,6 @@
+**2026-10-25 22:22** `lesson` ✅ published
+- ✅ H-058 «Ամեն ինչ մեկ coin-ում» published (46s, cta=question)
+---
 **2026-10-25 20:46** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -79,6 +82,3 @@
 ---
 **2026-10-23 23:06** `lesson` ✅ published
 - ✅ H-051 «Break-even stop» published (45s, cta=question)
----
-**2026-10-23 22:32** `lesson` ✅ published
-- ✅ H-050 «Order book-ի պատերը» published (48s, cta=send)
