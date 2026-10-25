@@ -1,3 +1,6 @@
+**2026-10-25 22:33** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-25 22:22** `lesson` ✅ published
 - ✅ H-058 «Ամեն ինչ մեկ coin-ում» published (46s, cta=question)
 ---
@@ -79,6 +82,3 @@
 ---
 **2026-10-23 23:59** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-23 23:06** `lesson` ✅ published
-- ✅ H-051 «Break-even stop» published (45s, cta=question)
