@@ -1,3 +1,6 @@
+**2026-10-25 16:40** `lesson` ✅ published
+- ✅ H-056 «Օրական կորստի սահման» published (43s, cta=save)
+---
 **2026-10-25 15:57** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -87,6 +90,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 60 items
 - ✅ News published: Coinbase-ը տուգանվել է Իռլանդիայում
----
-**2026-10-23 00:46** `lesson` ✅ published
-- ✅ H-049 «VWAP» published (45s, cta=send)
