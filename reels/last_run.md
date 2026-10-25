@@ -1,3 +1,6 @@
+**2026-10-25 17:21** `lesson` ✅ published
+- ✅ H-057 «Doji» published (47s, cta=send)
+---
 **2026-10-25 16:53** `carousel` ✅ published
 - ✅ Weekly carousel published
 ---
@@ -82,8 +85,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 40 items
 - ✅ News published: HSBC-ը թողարկել է իր առաջին stablecoin-ը
----
-**2026-10-23 13:33** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7663.43}
-- ✅ Story published
