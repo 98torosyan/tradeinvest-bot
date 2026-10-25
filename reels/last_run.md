@@ -1,3 +1,6 @@
+**2026-10-25 17:55** `quiz` ✅ published
+- ✅ Quiz Story from H-053
+---
 **2026-10-25 17:21** `lesson` ✅ published
 - ✅ H-057 «Doji» published (47s, cta=send)
 ---
@@ -79,9 +82,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 40 items
 - ✅ News published: Bitcoin Core-ը փոխում է անվտանգության կանոնները
----
-**2026-10-23 16:00** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 40 items
-- ✅ News published: HSBC-ը թողարկել է իր առաջին stablecoin-ը
