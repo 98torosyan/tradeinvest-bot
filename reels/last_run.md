@@ -1,3 +1,9 @@
+**2026-10-26 00:47** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 60 items
+- ✅ News published: Եվրոպական կենտրոնական բանկը պատրաստում է թվային եվրո
+---
 **2026-10-25 23:56** `lesson` ✅ published
 - ✅ H-059 «Golden Cross» published (49s, cta=send)
 ---
@@ -79,6 +85,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 40 items
 - ✅ News published: Initia-ն դադարեցրել է բլոկչեյնի աշխատանքը
----
-**2026-10-24 00:38** `lesson` ✅ published
-- ✅ H-052 «Retest» published (42s, cta=save)
