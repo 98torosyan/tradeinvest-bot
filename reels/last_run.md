@@ -1,3 +1,8 @@
+**2026-10-25 13:23** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7623.68}
+- ✅ Story published
+---
 **2026-10-25 00:43** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -82,6 +87,3 @@
 ---
 **2026-10-22 23:27** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-22 23:10** `lesson` ✅ published
-- ✅ H-048 «Կույր կրկնօրինակում» published (50s, cta=save)
