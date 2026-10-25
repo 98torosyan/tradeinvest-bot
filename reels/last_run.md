@@ -1,3 +1,9 @@
+**2026-10-25 20:46** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 40 items
+- ✅ News published: Bitcoin ETF-ները դուրս եկան պլյուս
+---
 **2026-10-25 17:55** `quiz` ✅ published
 - ✅ Quiz Story from H-053
 ---
@@ -76,9 +82,3 @@
 ---
 **2026-10-23 22:32** `lesson` ✅ published
 - ✅ H-050 «Order book-ի պատերը» published (48s, cta=send)
----
-**2026-10-23 21:24** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 40 items
-- ✅ News published: Bitcoin Core-ը փոխում է անվտանգության կանոնները
