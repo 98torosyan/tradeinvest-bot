@@ -829,7 +829,7 @@
   }
  },
  "palette": {
-  "news": 70
+  "news": 71
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -908,7 +908,8 @@
   "https://decrypt.co/381715/bitcoin-core-security-policy-ai-threats",
   "https://cointelegraph.com/news/sec-adds-tokenized-securities-to-2027-examination-priorities?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://decrypt.co/381777/bitcoin-etfs-snap-two-week-losing-streak-despite-late-week-slide",
-  "https://cointelegraph.com/news/ecb-official-sees-digital-euro-tool-to-protect-eu-sovereignty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  "https://cointelegraph.com/news/ecb-official-sees-digital-euro-tool-to-protect-eu-sovereignty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://cointelegraph.com/markets/bitcoin-etfs-rebound-weekly-inflow-301-million?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
   17238361,
@@ -1016,10 +1017,6 @@
  "last_track": "story_mixkit-electropop-870.mp3",
  "last_cta": "send",
  "news_media": [
-  {
-   "media": "18120229091300091",
-   "date": "2026-10-04"
-  },
   {
    "media": "18630175420059865",
    "date": "2026-10-04"
@@ -1254,6 +1251,10 @@
   },
   {
    "media": "18016563836953055",
+   "date": "2026-10-26"
+  },
+  {
+   "media": "17913608640520626",
    "date": "2026-10-26"
   }
  ],
@@ -1713,7 +1714,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 81,
+  "user_momotmusic-inspiring-reels-406484.mp3": 82,
   "user_the-mountain-tech-corporate-593075.mp3": 13,
   "story_mixkit-electropop-870.mp3": 77,
   "user_the-mountain-finance-background-449885.mp3": 14,

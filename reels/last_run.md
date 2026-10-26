@@ -1,3 +1,9 @@
+**2026-10-26 17:30** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 40 items
+- ✅ News published: Bitcoin ETF-ները վերադարձել են հոսքերին
+---
 **2026-10-26 14:29** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7623.68}
@@ -79,8 +85,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 40 items
 - ✅ News published: Bitcoin ETF-ներից մեկ օրում $635.6 մլն է դուրս բերվել
----
-**2026-10-24 13:06** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7623.68}
-- ✅ Story published
