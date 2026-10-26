@@ -1,3 +1,6 @@
+**2026-10-27 01:58** `lesson` ✅ published
+- ✅ H-063 «Առանց օրագրի» published (44s, cta=save)
+---
 **2026-10-27 00:45** `chart` ✅ published
 - ✅ Story published
 ---
@@ -76,6 +79,3 @@
 ---
 **2026-10-24 23:44** `lesson` ✅ published
 - ✅ H-055 «Halving» published (47s, cta=save)
----
-**2026-10-24 22:22** `chart` ✅ published
-- ✅ Story published

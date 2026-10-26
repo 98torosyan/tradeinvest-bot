@@ -1,5 +1,5 @@
 {
- "course_index": 62,
+ "course_index": 63,
  "published": {
   "M1-01": {
    "media": "18115788139795811",
@@ -847,6 +847,13 @@
    "date": "2026-10-27",
    "hour": 0,
    "cta": "save"
+  },
+  "H-063": {
+   "media": "18157528201521046",
+   "permalink": "https://www.instagram.com/reel/De-UYSGNnRM/",
+   "date": "2026-10-27",
+   "hour": 1,
+   "cta": "save"
   }
  },
  "palette": {
@@ -1651,14 +1658,12 @@
   "29205869.mp4:face": false
  },
  "music_bag": {
-  "lesson": [
-   "user_momotmusic-inspiring-reels-406484.mp3"
-  ],
+  "lesson": [],
   "news": [],
   "story": []
  },
  "music_last": {
-  "lesson": "user_the-mountain-market-systems-146118.mp3",
+  "lesson": "user_momotmusic-inspiring-reels-406484.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -1732,7 +1737,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 82,
+  "user_momotmusic-inspiring-reels-406484.mp3": 83,
   "user_the-mountain-tech-corporate-593075.mp3": 14,
   "story_mixkit-electropop-870.mp3": 79,
   "user_the-mountain-finance-background-449885.mp3": 14,
