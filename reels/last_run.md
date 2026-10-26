@@ -1,3 +1,8 @@
+**2026-10-26 14:29** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7623.68}
+- ✅ Story published
+---
 **2026-10-26 00:47** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -79,9 +84,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7623.68}
 - ✅ Story published
----
-**2026-10-24 01:21** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 40 items
-- ✅ News published: Initia-ն դադարեցրել է բլոկչեյնի աշխատանքը
