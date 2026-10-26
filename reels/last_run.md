@@ -1,3 +1,6 @@
+**2026-10-26 19:27** `lesson` ✅ published
+- ✅ H-061 «Leverage ≠ ռիսկ» published (45s, cta=send)
+---
 **2026-10-26 18:27** `lesson` ✅ published
 - ✅ H-060 «Fear & Greed» published (42s, cta=save)
 ---
@@ -79,6 +82,3 @@
 ---
 **2026-10-24 17:35** `quiz` ✅ published
 - ✅ Quiz Story from H-049
----
-**2026-10-24 16:59** `lesson` ✅ published
-- ✅ H-053 «Լուրերի վրա առևտուր» published (43s, cta=save)
