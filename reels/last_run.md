@@ -1,3 +1,6 @@
+**2026-10-27 00:45** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-27 00:26** `lesson` ✅ published
 - ✅ H-062 «Hammer» published (43s, cta=save)
 ---
@@ -76,6 +79,3 @@
 ---
 **2026-10-24 22:22** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-24 22:04** `lesson` ✅ published
-- ✅ H-054 «ATR» published (44s, cta=send)
