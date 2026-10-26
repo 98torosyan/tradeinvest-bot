@@ -1,3 +1,9 @@
+**2026-10-27 02:37** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 40 items
+- ✅ News published: Կանադան ներկայացրել է stablecoin-ների նոր կանոնների նախագիծ
+---
 **2026-10-27 01:58** `lesson` ✅ published
 - ✅ H-063 «Առանց օրագրի» published (44s, cta=save)
 ---
@@ -76,6 +82,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 40 items
 - ✅ News published: Bitcoin Core-ը փոխում է անվտանգության կանոնները AI-ի պատճառով
----
-**2026-10-24 23:44** `lesson` ✅ published
-- ✅ H-055 «Halving» published (47s, cta=save)
