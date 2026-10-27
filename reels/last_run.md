@@ -1,3 +1,6 @@
+**2026-10-28 00:01** `lesson` ✅ published
+- ✅ H-065 «Short squeeze» published (46s, cta=save)
+---
 **2026-10-27 22:20** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -79,6 +82,3 @@
 ---
 **2026-10-25 17:55** `quiz` ✅ published
 - ✅ Quiz Story from H-053
----
-**2026-10-25 17:21** `lesson` ✅ published
-- ✅ H-057 «Doji» published (47s, cta=send)
