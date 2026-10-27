@@ -1,3 +1,6 @@
+**2026-10-28 00:15** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-28 00:01** `lesson` ✅ published
 - ✅ H-065 «Short squeeze» published (46s, cta=save)
 ---
@@ -79,6 +82,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 40 items
 - ✅ News published: Bitcoin ETF-ները դուրս եկան պլյուս
----
-**2026-10-25 17:55** `quiz` ✅ published
-- ✅ Quiz Story from H-053
