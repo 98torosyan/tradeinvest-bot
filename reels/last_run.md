@@ -1,3 +1,9 @@
+**2026-10-27 22:20** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 35 items
+- ✅ News published: USDC-ն առաջ է անցել USDT-ից
+---
 **2026-10-27 19:32** `quiz` ✅ published
 - ✅ Quiz Story from H-061
 ---
@@ -76,6 +82,3 @@
 ---
 **2026-10-25 17:21** `lesson` ✅ published
 - ✅ H-057 «Doji» published (47s, cta=send)
----
-**2026-10-25 16:53** `carousel` ✅ published
-- ✅ Weekly carousel published
