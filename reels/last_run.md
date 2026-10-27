@@ -1,3 +1,6 @@
+**2026-10-27 19:32** `quiz` ✅ published
+- ✅ Quiz Story from H-061
+---
 **2026-10-27 18:53** `lesson` ✅ published
 - ✅ H-064 «Open Interest» published (44s, cta=save)
 ---
@@ -76,6 +79,3 @@
 ---
 **2026-10-25 16:53** `carousel` ✅ published
 - ✅ Weekly carousel published
----
-**2026-10-25 16:40** `lesson` ✅ published
-- ✅ H-056 «Օրական կորստի սահման» published (43s, cta=save)
