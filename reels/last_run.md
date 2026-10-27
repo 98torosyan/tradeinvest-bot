@@ -1,3 +1,6 @@
+**2026-10-27 18:53** `lesson` ✅ published
+- ✅ H-064 «Open Interest» published (44s, cta=save)
+---
 **2026-10-27 16:38** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -76,9 +79,3 @@
 ---
 **2026-10-25 16:40** `lesson` ✅ published
 - ✅ H-056 «Օրական կորստի սահման» published (43s, cta=save)
----
-**2026-10-25 15:57** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 40 items
-- ✅ News published: SEC-ը թոքենավորումը որակել է որպես բարձր ռիսկային
