@@ -1,3 +1,9 @@
+**2026-10-27 16:38** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 39 items
+- ✅ News published: Ripple-ը ստացել է ԱՄՆ-ի բանկային հաստատումը
+---
 **2026-10-27 14:02** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7676.77}
@@ -76,8 +82,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 40 items
 - ✅ News published: SEC-ը թոքենավորումը որակել է որպես բարձր ռիսկային
----
-**2026-10-25 13:23** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7623.68}
-- ✅ Story published

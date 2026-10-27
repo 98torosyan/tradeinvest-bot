@@ -857,7 +857,7 @@
   }
  },
  "palette": {
-  "news": 72
+  "news": 73
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -938,7 +938,8 @@
   "https://decrypt.co/381777/bitcoin-etfs-snap-two-week-losing-streak-despite-late-week-slide",
   "https://cointelegraph.com/news/ecb-official-sees-digital-euro-tool-to-protect-eu-sovereignty?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/markets/bitcoin-etfs-rebound-weekly-inflow-301-million?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://decrypt.co/381889/canada-draft-stablecoin-rules-redemption-fees-ban-yield"
+  "https://decrypt.co/381889/canada-draft-stablecoin-rules-redemption-fees-ban-yield",
+  "https://cointelegraph.com/news/ripple-wins-final-us-approval-for-national-trust-bank?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
   17238361,
@@ -1046,10 +1047,6 @@
  "last_track": "story_mixkit-electropop-870.mp3",
  "last_cta": "save",
  "news_media": [
-  {
-   "media": "18107932133072673",
-   "date": "2026-10-05"
-  },
   {
    "media": "18146419552562876",
    "date": "2026-10-05"
@@ -1284,6 +1281,10 @@
   },
   {
    "media": "18091563800242615",
+   "date": "2026-10-27"
+  },
+  {
+   "media": "18114270010859594",
    "date": "2026-10-27"
   }
  ],
@@ -1738,7 +1739,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 84,
+  "user_momotmusic-inspiring-reels-406484.mp3": 85,
   "user_the-mountain-tech-corporate-593075.mp3": 14,
   "story_mixkit-electropop-870.mp3": 80,
   "user_the-mountain-finance-background-449885.mp3": 14,
