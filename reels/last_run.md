@@ -1,3 +1,8 @@
+**2026-10-28 14:48** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7722.6}
+- ✅ Story published
+---
 **2026-10-28 02:08** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -79,6 +84,3 @@
 ---
 **2026-10-25 23:56** `lesson` ✅ published
 - ✅ H-059 «Golden Cross» published (49s, cta=send)
----
-**2026-10-25 22:33** `chart` ✅ published
-- ✅ Story published
