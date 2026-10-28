@@ -1,3 +1,6 @@
+**2026-10-29 00:33** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-29 00:13** `lesson` ✅ published
 - ✅ H-068 «Հոգնած առևտուր» published (45s, cta=save)
 ---
@@ -76,6 +79,3 @@
 ---
 **2026-10-26 19:27** `lesson` ✅ published
 - ✅ H-061 «Leverage ≠ ռիսկ» published (45s, cta=send)
----
-**2026-10-26 18:27** `lesson` ✅ published
-- ✅ H-060 «Fear & Greed» published (42s, cta=save)
