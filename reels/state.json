@@ -878,7 +878,7 @@
   }
  },
  "palette": {
-  "news": 75
+  "news": 76
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -962,7 +962,8 @@
   "https://decrypt.co/381889/canada-draft-stablecoin-rules-redemption-fees-ban-yield",
   "https://cointelegraph.com/news/ripple-wins-final-us-approval-for-national-trust-bank?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/news/usdc-overtakes-usdt-euro-stablecoin-trading-mica-kaiko?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://cointelegraph.com/news/vaneck-launches-diversified-etf-combining-stocks-bonds-and-bitcoin-exposure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  "https://cointelegraph.com/news/vaneck-launches-diversified-etf-combining-stocks-bonds-and-bitcoin-exposure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://cointelegraph.com/news/coinbase-analytics-provider-customer-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
   17238361,
@@ -1070,10 +1071,6 @@
  "last_track": "story_mixkit-electropop-870.mp3",
  "last_cta": "send",
  "news_media": [
-  {
-   "media": "18032963672671378",
-   "date": "2026-10-05"
-  },
   {
    "media": "18130346521705931",
    "date": "2026-10-06"
@@ -1308,6 +1305,10 @@
   },
   {
    "media": "18144122725608057",
+   "date": "2026-10-28"
+  },
+  {
+   "media": "18194621188395594",
    "date": "2026-10-28"
   }
  ],
@@ -1767,7 +1768,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 88,
+  "user_momotmusic-inspiring-reels-406484.mp3": 89,
   "user_the-mountain-tech-corporate-593075.mp3": 14,
   "story_mixkit-electropop-870.mp3": 83,
   "user_the-mountain-finance-background-449885.mp3": 15,

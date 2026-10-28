@@ -1,3 +1,9 @@
+**2026-10-28 17:29** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 35 items
+- ✅ News published: Coinbase-ի տվյալների արտահոսք
+---
 **2026-10-28 14:48** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7722.6}
@@ -81,6 +87,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 60 items
 - ✅ News published: Եվրոպական կենտրոնական բանկը պատրաստում է թվային եվրո
----
-**2026-10-25 23:56** `lesson` ✅ published
-- ✅ H-059 «Golden Cross» published (49s, cta=send)
