@@ -1,3 +1,6 @@
+**2026-10-28 20:16** `quiz` ✅ published
+- ✅ Quiz Story from H-063
+---
 **2026-10-28 19:24** `lesson` ✅ published
 - ✅ H-067 «Engulfing» published (47s, cta=send)
 ---
@@ -79,8 +82,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 40 items
 - ✅ News published: Bitcoin ETF-ները վերադարձել են հոսքերին
----
-**2026-10-26 14:29** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7623.68}
-- ✅ Story published
