@@ -1,3 +1,6 @@
+**2026-10-29 01:54** `lesson` ✅ published
+- ✅ H-069 «RSI-ի trend գոտիները» published (40s, cta=send)
+---
 **2026-10-29 00:33** `chart` ✅ published
 - ✅ Story published
 ---
@@ -76,6 +79,3 @@
 ---
 **2026-10-26 20:18** `quiz` ✅ published
 - ✅ Quiz Story from H-058
----
-**2026-10-26 19:27** `lesson` ✅ published
-- ✅ H-061 «Leverage ≠ ռիսկ» published (45s, cta=send)
