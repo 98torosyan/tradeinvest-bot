@@ -1,3 +1,6 @@
+**2026-10-28 19:24** `lesson` ✅ published
+- ✅ H-067 «Engulfing» published (47s, cta=send)
+---
 **2026-10-28 17:29** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -81,9 +84,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7623.68}
 - ✅ Story published
----
-**2026-10-26 00:47** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 60 items
-- ✅ News published: Եվրոպական կենտրոնական բանկը պատրաստում է թվային եվրո
