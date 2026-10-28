@@ -7,7 +7,7 @@ from . import curriculum, settings
 
 BANNED = ["երաշխավորված շահույթ", "երաշխավորում ենք", "100% շահույթ", "guaranteed", "risk-free", "անպայման կաճի",
           "անպայման կբարձրանա", "գնիր հիմա", "վաճառիր հիմա", "ֆինանսական խորհուրդ է"]
-SAFE = {"x0": 40, "x1": 1040, "y0": 225, "y1": 1700}
+SAFE = {"x0": 65, "x1": 1015, "y0": 270, "y1": 1250}   # Instagram UI covers the bottom of a Reel
 
 
 def _text_of(lesson):

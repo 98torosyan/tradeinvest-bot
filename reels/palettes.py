@@ -73,16 +73,16 @@ MODULE = {
 # ===================== TradeInvest brand system (v2) =====================
 # One ink background and one neutral text scale for every format. Colour carries meaning:
 # the accent says which SERIES a lesson belongs to; green/red only ever mean up/down.
-INK = "linear-gradient(175deg,#0F1521 0%,#0A0E17 58%,#06090F 100%)"
+INK = "linear-gradient(175deg,#141416 0%,#0B0B0C 58%,#070708 100%)"   # v3 ink
 UP, DOWN = "#2FD18B", "#FF5F6D"
 
 
 def _brand(name, a, a2):
     r, g, b = int(a[1:3], 16), int(a[3:5], 16), int(a[5:7], 16)
     return {"name": name, "bg": INK, "a": a, "a2": a2, "ar": f"{r},{g},{b}",
-            "txt": "#F5F7FA", "mut": "#8E98AB", "p": "#DCE2EC", "em": a2,
-            "blob1": f"rgba({r},{g},{b},.20)", "blob2": f"rgba({r},{g},{b},.09)", "blob3": "rgba(255,255,255,.04)",
-            "pt": a2, "onacc": "#0A0E17", "grid": "rgba(255,255,255,.04)",
+            "txt": "#F4F2EE", "mut": "#A3A09A", "p": "#E4E0D8", "em": a2,
+            "blob1": f"rgba({r},{g},{b},.06)", "blob2": "rgba(255,255,255,.02)", "blob3": "rgba(255,255,255,.015)",
+            "pt": "rgba(255,255,255,.25)", "onacc": "#0B0B0C", "grid": "rgba(255,255,255,.035)",
             "card": "rgba(255,255,255,.065)", "cardb": "rgba(255,255,255,.12)"}
 
 
@@ -93,8 +93,16 @@ SERIES = {
     4: _brand("s4-market", "#2ED3B7", "#97F1E1"),       # Շուկան իրականում
     5: _brand("s5-risk", "#F5B941", "#FFD98A"),         # Ռիսկ առանց ձանձրույթի
 }
-BRAND = _brand("brand", "#4DA3FF", "#9CCBFF")           # Stories that are not tied to a series (news, market)
+BRAND = _brand("brand", "#FF8A00", "#FFA640")           # Stories that are not tied to a series (news, market)
+
+
+V3 = {"name": "v3", "bg": "linear-gradient(175deg,#141416 0%,#0B0B0C 60%,#070708 100%)", "a": "#FF8A00", "a2": "#FFA640",
+      "ar": "255,138,0", "txt": "#F4F2EE", "mut": "#A3A09A", "p": "#E4E0D8", "em": "#FFA640",
+      "blob1": "rgba(255,138,0,.10)", "blob2": "rgba(255,255,255,.03)", "blob3": "rgba(255,255,255,.02)",
+      "pt": "#FFA640", "onacc": "#0B0B0C", "grid": "rgba(255,255,255,.035)",
+      "card": "rgba(255,255,255,.06)", "cardb": "rgba(255,255,255,.12)"}
 
 
 def for_lesson(lesson):
-    return SERIES.get(lesson.get("module"), BRAND)
+    """Brand system v3: one palette for everything (series are told apart by number, not colour)."""
+    return V3

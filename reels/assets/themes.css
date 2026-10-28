@@ -131,3 +131,23 @@
 .st-neon .wte{background:rgba(10,14,23,.6);color:var(--a2);border:2.5px solid var(--a2);box-shadow:0 0 24px rgba(var(--ar),.45),inset 0 0 18px rgba(var(--ar),.15)}
 .st-glass .wte{background:rgba(255,255,255,.12);color:var(--txt);border:1.5px solid rgba(255,255,255,.3);backdrop-filter:blur(18px)}
 .st-marker .wte{border-radius:8px}
+
+/* ===== v3 layout: everything readable stays inside x 65-1015, y 270-1250 (Instagram UI covers the bottom).
+   Side insets are 90px because scenes zoom up to 3% during their life. ===== */
+.cap{top:1000px !important;height:235px !important;left:90px !important;right:90px !important}
+.graphic.beat .cap{top:1000px !important}
+.hero .hstack{top:290px !important;height:830px !important;left:90px !important;right:90px !important}
+.gcard,.cmp{top:330px !important;left:90px !important;right:90px !important}
+.chk,.myth,.quiz,.steps,.bars,.stat{left:90px !important;right:90px !important}
+.chk{top:300px !important}.chk .it{font-size:48px !important;padding:18px 26px !important;margin-bottom:14px !important}.stat{top:330px !important}.myth{top:310px !important}.quiz{top:300px !important}
+.steps{top:310px !important}.bars{top:320px !important}
+.ctitle{top:290px !important;left:90px !important;right:90px !important}
+.lwc{top:370px !important;height:590px !important}
+.ptag{top:330px !important}
+.wte{top:1110px !important;max-width:860px !important}
+.rbar{top:252px !important;left:90px !important;right:90px !important}
+.outro .nxt{top:420px !important}.outro .nxt2{top:480px !important;left:100px !important;right:100px !important}.outro .logo{top:700px !important}.outro .name{top:1010px !important}
+.st-marker .gcard,.st-marker .chk .it,.st-marker .cmp .side,.st-marker .quiz .op{background:#F2EFE8 !important;color:#0B0B0C !important}
+
+/* v3: hero text block centred inside the Reel safe zone (y 270-1250) */
+.hero .hstack{top:290px !important;height:940px !important}

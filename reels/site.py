@@ -24,20 +24,20 @@ def _font_css():
 
 
 CSS = """*{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0A0E17;--bg2:#0F1521;--card:rgba(255,255,255,.045);--line:rgba(255,255,255,.09);--txt:#F5F7FA;--mut:#8E98AB;--a:#4DA3FF;--a2:#9CCBFF}
+:root{--bg:#0B0B0C;--bg2:#141416;--card:rgba(255,255,255,.045);--line:rgba(255,255,255,.09);--txt:#F4F2EE;--mut:#A3A09A;--a:#FF8A00;--a2:#FFA640}
 html{scroll-behavior:smooth}body{background:var(--bg);color:var(--txt);font-family:Arm,system-ui,-apple-system,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
 a{color:inherit}.wrap{max-width:760px;margin:0 auto;padding:0 18px}
-.top{display:flex;align-items:center;gap:10px;padding:18px 0}.top svg{width:30px;height:30px}.top b{font-size:17px;font-weight:800;letter-spacing:-.01em}
-.top .ig{margin-left:auto;font-size:14px;font-weight:700;color:var(--a2);text-decoration:none;padding:8px 14px;border:1px solid rgba(77,163,255,.35);border-radius:99px}
+.top{display:flex;align-items:center;gap:10px;padding:18px 0}.top svg{width:24px;height:30px}.top b{font-size:17px;font-weight:800;letter-spacing:-.01em}
+.top .ig{margin-left:auto;font-size:14px;font-weight:700;color:var(--a2);text-decoration:none;padding:8px 14px;border:1px solid rgba(255,138,0,.4);border-radius:99px}
 .hero{position:relative;padding:34px 0 30px;overflow:hidden}
-.hero::before{content:"";position:absolute;right:-260px;top:-260px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(77,163,255,.20),transparent 62%);pointer-events:none}
+.hero::before{content:"";position:absolute;right:-260px;top:-260px;width:620px;height:620px;border-radius:50%;background:radial-gradient(circle,rgba(255,138,0,.10),transparent 62%);pointer-events:none}
 .kick{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:700;color:var(--a2)}.kick i{width:9px;height:9px;border-radius:2px;background:var(--a)}
 h1{margin-top:14px;font-size:clamp(34px,9vw,54px);font-weight:800;line-height:1.05;letter-spacing:-.03em}h1 span{color:var(--a2)}
 .lead{margin-top:14px;font-size:17px;color:var(--mut);max-width:560px}
 .stats{margin-top:24px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
 .stat{padding:14px;border-radius:14px;background:var(--card);border:1px solid var(--line)}.stat b{display:block;font-family:Mono,Arm,monospace;font-size:24px;font-weight:700}
 .stat span{font-size:13px;color:var(--mut)}
-.cta{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:14px 22px;border-radius:14px;background:var(--a);color:#0A0E17;font-weight:800;text-decoration:none;font-size:16px}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:22px;padding:14px 22px;border-radius:14px;background:var(--a);color:#0B0B0C;font-weight:800;text-decoration:none;font-size:16px}
 .cta:hover{filter:brightness(1.08)}
 .bar{margin-top:22px;height:8px;border-radius:8px;background:rgba(255,255,255,.08);overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--a),var(--a2))}
 .barl{margin-top:8px;font-size:13px;color:var(--mut)}
@@ -62,6 +62,8 @@ li::before{content:counter(n,decimal-leading-zero);font-family:Mono,Arm,monospac
 li a{color:var(--txt);text-decoration:none;font-weight:600;flex:1}li a::after{content:" ↗";color:var(--c2)}li a:hover{color:var(--c2)}
 li em{margin-left:auto;font-style:normal;font-size:12px;color:rgba(255,255,255,.35);white-space:nowrap}
 li.hide{display:none}
+.course{margin-top:26px;padding:20px;border-radius:16px;background:#FF8A00;color:#0B0B0C}.course b{display:block;font-size:20px;font-weight:800}
+.course span{display:block;margin-top:6px;font-size:15px;line-height:1.45}.course a{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:12px;background:#0B0B0C;color:#F4F2EE;font-weight:800;text-decoration:none}
 footer{margin-top:44px;padding:26px 0 44px;border-top:1px solid var(--line);font-size:13px;color:var(--mut)}footer a{color:var(--a2)}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}"""
 
@@ -69,15 +71,13 @@ JS = """const q=document.getElementById('q');q&&q.addEventListener('input',()=>{
 document.querySelectorAll('details').forEach(d=>{let any=false;d.querySelectorAll('li').forEach(li=>{const m=!v||li.textContent.toLowerCase().includes(v);
 li.classList.toggle('hide',!m);any=any||m;});d.style.display=any?'':'none';if(v)d.open=any;});});"""
 
-LOGO = ('<svg viewBox="0 0 34 34" aria-hidden="true"><rect x="0" y="0" width="10" height="10" rx="2.5" fill="#F5F7FA"/>'
-        '<rect x="12" y="0" width="10" height="10" rx="2.5" fill="#F5F7FA"/><rect x="12" y="12" width="10" height="10" rx="2.5" fill="#F5F7FA"/>'
-        '<rect x="12" y="24" width="10" height="10" rx="2.5" fill="#F5F7FA"/><rect x="24" y="-3" width="10" height="10" rx="2.5" fill="#4DA3FF"/></svg>')
+LOGO = ('<svg viewBox="0 -96 366 436" aria-hidden="true"><rect x="0" y="0" width="252" height="78" rx="16" fill="#F4F2EE"/>'
+        '<rect x="84" y="0" width="84" height="340" rx="16" fill="#F4F2EE"/><rect x="282" y="-96" width="84" height="436" rx="16" fill="#FF8A00"/></svg>')
 
 
-FAVICON = ("%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-2 -5 38 40'%3E%3Crect width='38' height='40' x='-2' y='-5' rx='8' fill='%230A0E17'/%3E"
-           "%3Crect x='0' y='0' width='10' height='10' rx='2.5' fill='%23F5F7FA'/%3E%3Crect x='12' y='0' width='10' height='10' rx='2.5' fill='%23F5F7FA'/%3E"
-           "%3Crect x='12' y='12' width='10' height='10' rx='2.5' fill='%23F5F7FA'/%3E%3Crect x='12' y='24' width='10' height='10' rx='2.5' fill='%23F5F7FA'/%3E"
-           "%3Crect x='24' y='-3' width='10' height='10' rx='2.5' fill='%234DA3FF'/%3E%3C/svg%3E")
+FAVICON = ("%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-60 -150 486 560'%3E%3Crect x='-60' y='-150' width='486' height='560' rx='90' fill='%230B0B0C'/%3E"
+           "%3Crect x='0' y='0' width='252' height='78' rx='16' fill='%23F4F2EE'/%3E%3Crect x='84' y='0' width='84' height='340' rx='16' fill='%23F4F2EE'/%3E"
+           "%3Crect x='282' y='-96' width='84' height='436' rx='16' fill='%23FF8A00'/%3E%3C/svg%3E")
 
 
 def analytics():
@@ -93,8 +93,7 @@ def analytics():
 
 
 def _col(n):
-    p = SERIES.get(n, BRAND)
-    return f'--c:{p["a"]};--c2:{p["a2"]}'
+    return "--c:#FF8A00;--c2:#FFA640"          # v3: one accent; series are told apart by number
 
 
 def build(cur, state, out_dir):
@@ -136,6 +135,8 @@ def build(cur, state, out_dir):
             f'<a class="cta" href="{IG}" target="_blank" rel="noopener">Դիտել Instagram-ում →</a>'
             f'<div class="bar"><i style="width:{100 * done_all / max(1, total):.0f}%"></i></div>'
             f'<div class="barl">Հրապարակված է {done_all}՝ {total}-ից</div></section>'
+            + '<div class="course"><b>Անհատական դասընթաց</b><span>3 ամիս՝ տեսություն, վերլուծություն, պրակտիկա և ռիսկի կառավարում։ Բոնուս՝ բոտ քո ռազմավարությամբ։</span>'
+              f'<a href="https://ig.me/m/armtradeinvest" target="_blank" rel="noopener">Գրիր DM «ԴԱՍ» →</a></div>'
             + (f'<h2>Վերջին դասերը</h2><div class="latest">{latest}</div>' if latest else "")
             + f'<h2>Բոլոր դասերը</h2><input class="find" id="q" type="search" placeholder="Գտնել դասը. օրինակ՝ RSI" aria-label="Գտնել դասը">'
             f'{"".join(parts)}'

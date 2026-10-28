@@ -274,10 +274,11 @@ def _hero(b, mode="slam"):
     for i, p in enumerate(parts):
         last = i == len(parts) - 1 and len(parts) > 1
         k = 0.92
-        size = _fit(max(p.split(), key=len) if len(p) > 14 else p, 150 if last else 128, width=880, k=k)
+        sc = 1.0 if len(b["text"].replace("|", "")) <= 40 else 0.84          # long hero texts stay inside the safe zone
+        size = _fit(max(p.split(), key=len) if len(p) > 14 else p, int((150 if last else 128) * sc), width=880, k=k)
         style = f' style="font-size:{size}px"'
-        if b.get("first") and i == 0:
-            html += f'<div class="hl"{style}>{esc(p)}</div>'                      # visible on frame 0 (hook)
+        if b.get("first"):
+            html += f'<div class="hl"{style}>{esc(p)}</div>'                      # the whole hook is readable on frame 0
             continue
         at = (0.55 + 0.8 if b.get("first") else 0.2) + i * 0.62   # first scene starts 0.8 s "early" (hook on frame 0)
         if mode == "mask":
@@ -451,7 +452,7 @@ CHART_JS = r"""
 (function(){const Ch=window.LightweightCharts;
 document.querySelectorAll('.lwc').forEach(el=>{const d=JSON.parse(el.dataset.chart);const sc=el.closest('.scene');
  const cs=getComputedStyle(document.body);
- const chart=Ch.createChart(el,{width:980,height:820,localization:{locale:'en-US'},layout:{background:{type:'solid',color:'rgba(0,0,0,0)'},textColor:'#dfe6f2',fontSize:24,fontFamily:'ArmSans'},
+ const chart=Ch.createChart(el,{width:980,height:590,localization:{locale:'en-US'},layout:{background:{type:'solid',color:'rgba(0,0,0,0)'},textColor:'#dfe6f2',fontSize:24,fontFamily:'ArmSans'},
   grid:{vertLines:{color:'rgba(255,255,255,.05)'},horzLines:{color:'rgba(255,255,255,.07)'}},rightPriceScale:{borderVisible:false,scaleMargins:{top:.12,bottom:.1}},
   timeScale:{visible:false,borderVisible:false},crosshair:{mode:2,vertLine:{visible:false},horzLine:{visible:false}},handleScroll:false,handleScale:false});
  const s=chart.addSeries(Ch.CandlestickSeries,{upColor:'#3DDC97',downColor:'#FF6B6B',wickUpColor:'#3DDC97',wickDownColor:'#FF6B6B',borderVisible:false,priceLineVisible:false,lastValueVisible:false});
@@ -468,7 +469,7 @@ document.querySelectorAll('.lottie').forEach(el=>{const sc=el.closest('.scene');
 
 def overlay_html(lesson, cur_info, palette, beats, total):
     from . import styles
-    sname = lesson.get("style") or "marker"
+    sname = "marker"                                   # v3: one motion language for every Reel
     sty = styles.get(sname)
     scenes = []
     for i, b in enumerate(beats):
@@ -544,49 +545,10 @@ HOOKS.push(t=>{{const end={oa:.2f};const o=1-EASE.inOut(prog(t,end-.35,.35));
 }});logoFx({oa + 0.55:.2f});setupReel();</script></body></html>''')
 
 
-def cover_html(lesson, cur_info, palette):
-    """Reel cover = one brand template for every lesson (the profile grid reads as one library).
-    Only the series colour changes. Everything important sits inside the 3:4 crop the grid shows (y 240-1680)."""
-    sname = lesson.get("style") or "marker"
-    parts = [p.strip() for p in lesson["hook"].split("|") if p.strip()]
-    words = lambda t: " ".join(f'<span class="w">{esc(w)}</span>' for w in t.split())
-    title = "".join(f'<span class="ln{" acc" if i == len(parts) - 1 and len(parts) > 1 else ""}">{words(p)}</span>'
-                    for i, p in enumerate(parts))
-    label = lesson.get("series") or f'Մոդուլ {lesson["module"]} · Դաս {lesson["n"]}'
-    sub = lesson["title"]
-    sub_cls = "sub mono" if sub.isascii() else "sub"
-    fonts = (f"@font-face{{font-family:'JBMono';font-weight:600;src:url('file://{ASSETS}/fonts/jetbrains-mono-latin-500-normal.woff2')}}"
-             f"@font-face{{font-family:'JBMono';font-weight:800;src:url('file://{ASSETS}/fonts/jetbrains-mono-latin-800-normal.woff2')}}")
-    return (f'<!doctype html><html lang="hy"><head><meta charset="utf-8"><link rel="stylesheet" href="{ASSETS}/fonts.css">'
-            f'<style>{fonts}*{{margin:0;padding:0;box-sizing:border-box}}html,body{{width:1080px;height:1920px;overflow:hidden}}'
-            f'body{{background:var(--bg);color:var(--txt);font-family:ArmSans,sans-serif;position:relative;-webkit-font-smoothing:antialiased}}'
-            f'.glow{{position:absolute;right:-380px;top:-160px;width:1300px;height:1300px;border-radius:50%;'
-            f'background:radial-gradient(circle,var(--blob1),transparent 62%)}}'
-            f'.grid{{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 2px,transparent 2px),'
-            f'linear-gradient(90deg,rgba(255,255,255,.035) 2px,transparent 2px);background-size:120px 120px;background-position:-2px 58px;'
-            f'-webkit-mask-image:linear-gradient(180deg,transparent 8%,#000 30%,#000 70%,transparent 92%)}}'
-            f'.edge{{position:absolute;left:0;top:300px;bottom:300px;width:10px;background:var(--a)}}'
-            f'.box{{position:absolute;left:96px;right:84px;top:330px;bottom:470px;display:flex;flex-direction:column;justify-content:center}}'
-            f'.ser{{display:flex;align-items:center;gap:18px;font-size:38px;font-weight:700;color:var(--a2);letter-spacing:.01em}}'
-            f'.ser i{{width:18px;height:18px;border-radius:4px;background:var(--a);flex:none}}'
-            f'.t{{margin-top:44px;font-weight:800;line-height:1.06;letter-spacing:-.025em;font-size:118px}}'
-            f'.t .ln{{display:block}}.t .w{{white-space:nowrap;display:inline-block}}.t .acc{{color:var(--a2)}}'
-            f'.bar{{width:132px;height:8px;border-radius:4px;background:var(--a);margin-top:56px}}'
-            f'.sub{{margin-top:34px;font-size:44px;font-weight:600;color:var(--mut);line-height:1.25}}'
-            f'.sub.mono{{font-family:JBMono,ArmSans,monospace;text-transform:uppercase;letter-spacing:.04em;font-size:40px}}'
-            f'.foot{{position:absolute;left:96px;right:84px;top:1500px;display:flex;align-items:center;gap:20px;'
-            f'padding-top:34px;border-top:2px solid rgba(255,255,255,.10)}}'
-            f'.foot .logo{{width:66px;height:66px;overflow:visible}}.foot b{{font-size:38px;font-weight:800;letter-spacing:-.01em}}'
-            f'.foot span{{margin-left:auto;font-size:32px;font-weight:600;color:var(--mut)}}</style></head>'
-            f'<body class="st-{sname}" style="{css_vars(palette)}"><div class="glow"></div><div class="grid"></div><div class="edge"></div>'
-            f'<div class="box"><div class="ser"><i></i>{esc(label)}</div><div class="t" id="t">{title}</div>'
-            f'<div class="bar"></div><div class="{sub_cls}">{esc(sub)}</div></div>'
-            f'<div class="foot">{logo_svg().replace("opacity:0", "opacity:1")}<b>TradeInvest</b><span>@armtradeinvest</span></div>'
-            # auto-fit: biggest size at which no word overflows and the block keeps clear of the footer
-            f'''<script>function fit(){{const t=document.getElementById('t'),box=document.querySelector('.box');let s=118;
- const ok=()=>[...t.querySelectorAll('.w')].every(w=>w.getBoundingClientRect().right<=1080-84+1)&&box.scrollHeight<=box.clientHeight;
- while(s>64&&!ok()){{s-=2;t.style.fontSize=s+'px';}}}}
-fit();document.fonts.ready.then(fit);</script></body></html>''')
+def cover_html(lesson, cur_info=None, palette=None):
+    """Brand system v3 covers live in reels/cover.py (Ink/Paper checkerboard, number or price-tag template)."""
+    from . import cover
+    return cover.cover_html(lesson)
 
 
 # ---------------- main ----------------
@@ -656,7 +618,7 @@ def render_lesson(lesson, cur_info, palette, out_mp4, out_cover, music=None, use
         idx = 3 + len(extra_in) // 2
         extra_in += ["-i", mov]
         a0 = b["_t"] + 0.15
-        chain += (f";[{idx}:v]setpts=PTS+{a0:.3f}/TB[m{j}];{last}[m{j}]overlay=x=40:y=470:eof_action=pass:"
+        chain += (f";[{idx}:v]setpts=PTS+{a0:.3f}/TB,scale=800:720[m{j}];{last}[m{j}]overlay=x=140:y=280:eof_action=pass:"
                   f"enable='between(t,{a0:.2f},{b['_t'] + b['_d']:.2f})'[b{j + 1}]")
         last = f"[b{j + 1}]"
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", foot, "-framerate", str(FPS), "-i", pattern, "-i", wav, *extra_in,

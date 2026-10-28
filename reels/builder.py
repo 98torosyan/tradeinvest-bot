@@ -40,7 +40,7 @@ MONTHS = ["հունվարի", "փետրվարի", "մարտի", "ապրիլի", 
 
 
 def arm_date(d):
-    return f"{d.day} {MONTHS[d.month - 1]}"
+    return f"{MONTHS[d.month - 1]} {d.day}"      # Armenian order: «հոկտեմբերի 28»
 
 
 def esc(s):
@@ -103,15 +103,11 @@ LOGO_U, LOGO_G, LOGO_R = 100, 18, 22
 
 
 def logo_svg():
-    S = LOGO_U + LOGO_G; W = 3 * LOGO_U + 2 * LOGO_G
-    blocks = [(0, 0, False), (S, 0, False), (S, S, False), (S, 2 * S, False), (2 * S, 0, True)]
-    rects = ""
-    for i, (x, y, acc) in enumerate(blocks):
-        fill = "url(#lg)" if acc else "var(--txt)"
-        lift = ' data-lift="1"' if acc else ""
-        rects += f'<rect data-i="{i}"{lift} x="{x}" y="{y}" width="{LOGO_U}" height="{LOGO_U}" rx="{LOGO_R}" style="fill:{fill};opacity:0"/>'
-    return (f'<svg class="logo" viewBox="-10 -44 {W + 20} {W + 54}"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">'
-            f'<stop offset="0" style="stop-color:var(--a2)"/><stop offset="1" style="stop-color:var(--a)"/></linearGradient></defs>{rects}</svg>')
+    """Logo «TI Rise» (brand v3): T in the text colour, the raised I in the accent. The I drops in last and lifts (logoFx)."""
+    rects = (f'<rect data-i="0" x="0" y="0" width="252" height="78" rx="16" style="fill:var(--txt);opacity:0"/>'
+             f'<rect data-i="1" x="84" y="0" width="84" height="340" rx="16" style="fill:var(--txt);opacity:0"/>'
+             f'<rect data-i="2" data-lift="1" x="282" y="-62" width="84" height="436" rx="16" style="fill:var(--a);opacity:0"/>')
+    return f'<svg class="logo" viewBox="-20 -150 406 520">{rects}</svg>'
 
 
 STORY_HEAD_CSS = (".sx-head{position:absolute;left:70px;right:70px;top:236px;height:72px;display:flex;align-items:center;gap:16px;z-index:20}"
@@ -181,7 +177,7 @@ def build_news(spec, palette, date_label, footage=False):
         shown = f'{big.get("prefix", "")}{big["value"]:,.{dec}f}{big.get("suffix", "")}'
         size = 220 if len(shown) <= 7 else 170 if len(shown) <= 10 else 130
         h += fx("div", "big grad", "0", "count", t, 1.6,
-                f'style="font-size:{size}px" data-grp="1" data-from="0" data-to="{big["value"]}" data-dec="{dec}" data-pre="{esc(big.get("prefix",""))}" data-post="{esc(big.get("suffix",""))}"')
+                f'style="font-size:{size}px" data-grp="1" data-from="{big["value"] * 0.8:.4g}" data-to="{big["value"]}" data-dec="{dec}" data-pre="{esc(big.get("prefix",""))}" data-post="{esc(big.get("suffix",""))}"')
         t += 1.6
     tl.add(h, t + 1.8)
     for n, st in enumerate(spec["steps"], 1):

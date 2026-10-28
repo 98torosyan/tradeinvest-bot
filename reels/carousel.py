@@ -5,8 +5,9 @@ import datetime as dt
 import os
 import re
 
-from .builder import ASSETS, MONTHS, esc, logo_svg
-from .palettes import BRAND, css_vars, for_lesson
+from .builder import ASSETS, MONTHS, esc
+from . import brand
+from .palettes import BRAND, css_vars, for_lesson  # noqa: F401
 
 W, H = 1080, 1350
 MAX_SLIDES = 10                  # Instagram limit
@@ -52,14 +53,32 @@ h1{margin-top:36px;font-size:124px;font-weight:800;line-height:1.04;letter-spaci
 '''
 
 
-def _page(body, n, total, last=False):
+def _page(body, n, total, last=False, ground="ink"):
     fonts = f"@font-face{{font-family:'JBMono';font-weight:700;src:url('file://{ASSETS}/fonts/jetbrains-mono-latin-700-normal.woff2')}}"
-    top = (f'<div class="top">{logo_svg().replace("opacity:0", "opacity:1")}<b>TradeInvest</b>'
+    top = (f'<div class="top">{brand.logo("var(--txt)", "var(--a)")}<b>TradeInvest</b>'
            f'<span class="pg">{n:02d} / {total:02d}</span></div>')
     foot = '<div class="foot">@armtradeinvest' + ('' if last else '<span class="sw">Սահեցրու<i></i></span>') + '</div>'
     return (f'<!doctype html><html lang="hy"><head><meta charset="utf-8"><link rel="stylesheet" href="{ASSETS}/fonts.css">'
-            f'<style>{fonts}{CSS}</style></head><body style="{css_vars(BRAND)}"><div class="glow"></div><div class="grid"></div>'
+            f'<style>{fonts}{brand.font_css()}{CSS}{V3}</style></head><body class="g-{ground}" style="{css_vars(BRAND)};{_ground(ground)}"><div class="grid"></div>'
             f'{top}{body}{foot}</body></html>')
+
+
+V3 = """body{font-family:ArmV,ArmSans,sans-serif}h1{font-stretch:75%;font-weight:800;letter-spacing:-.02em}
+.glow{display:none}.edge{background:var(--a)}.ser i{background:var(--a)}
+.g-paper .grid{display:none}.g-paper .it{background:rgba(11,11,12,.04);border-color:rgba(11,11,12,.12)}
+.g-amber .grid,.g-amber .edge{display:none}.g-amber h1 .acc{color:#0B0B0C;text-decoration:underline;text-decoration-thickness:10px;text-underline-offset:14px}
+.g-amber .act span{background:rgba(11,11,12,.10);border-color:rgba(11,11,12,.3)}.g-amber .act svg *{stroke:#0B0B0C !important}
+.it::before{background:var(--a) !important}.it .s{color:var(--mut) !important;font-family:ArmV;font-weight:700;letter-spacing:.04em}
+.it .s{display:flex;align-items:center;gap:12px;font-size:26px !important}.it .s b{display:inline;font-family:Mono;color:var(--a)}
+.top .ti{width:34px;height:42px}"""
+
+
+def _ground(g):
+    if g == "paper":
+        return "--bg:#F2EFE8;--txt:#0B0B0C;--mut:#5C5850;--p:#2B2A28;--a:#FF8A00;--a2:#D96F00"
+    if g == "amber":
+        return "--bg:#FF8A00;--txt:#0B0B0C;--mut:#3A2A10;--p:#0B0B0C;--a:#0B0B0C;--a2:#0B0B0C"
+    return "--bg:#0B0B0C;--txt:#F4F2EE;--mut:#A3A09A;--p:#E4E0D8;--a:#FF8A00;--a2:#FFA640"
 
 
 def _range(date_range):
@@ -69,13 +88,12 @@ def _range(date_range):
         return date_range or ""
     a, b = (dt.date(*map(int, x)) for x in m)
     if a.month == b.month:
-        return f"{a.day}–{b.day} {MONTHS[b.month - 1]}"
-    return f"{a.day} {MONTHS[a.month - 1]} – {b.day} {MONTHS[b.month - 1]}"
+        return f"{MONTHS[b.month - 1]} {a.day}–{b.day}"
+    return f"{MONTHS[a.month - 1]} {a.day} – {MONTHS[b.month - 1]} {b.day}"
 
 
 def _item(l):
-    p = for_lesson(l)
-    return (f'<div class="it" style="--c:{p["a"]};--c2:{p["a2"]}"><div class="s">{esc(l.get("series") or "")}</div>'
+    return (f'<div class="it"><div class="s"><b>{l.get("module", 0):02d}</b>{brand.SERIES.get(l.get("module"), "")}</div>'
             f'<b>{esc(l["title"])}</b><p>{esc(l["summary"])}</p></div>')
 
 
@@ -93,14 +111,14 @@ def slides(lessons, palette=None, date_range=""):
              f'<h1>Շաբաթը<br><span class="acc">մեկ էջով</span></h1>'
              f'<div class="meta"><em>{esc(_range(date_range))}</em><span>·</span><span>{len(lessons)} դաս</span></div>'
              f'<div class="dots">{dots}</div></div>')
-    out = [_page(cover, 1, total)]
+    out = [_page(cover, 1, total, ground="paper")]
     for k, g in enumerate(groups, 2):
         out.append(_page(f'<div class="list">{"".join(_item(l) for l in g)}</div>', k, total))
     end = ('<div class="edge"></div><div class="end"><h1>Պահիր։<br>Կրկնիր։<br><span class="acc">Կիսվիր։</span></h1><div class="acts">'
            f'<div class="act"><span>{_icon("book")}</span>Պահիր այս ամփոփումը</div>'
            f'<div class="act"><span>{_icon("users")}</span>Ուղարկիր ընկերոջդ</div>'
-           f'<div class="act"><span>{_icon("school")}</span>Ամբողջ դասընթացը՝ bio-ի հղումով</div></div></div>')
-    out.append(_page(end, total, total, last=True))
+           f'<div class="act"><span>{_icon("school")}</span>Անհատական դասընթաց՝ գրիր DM «ԴԱՍ»</div></div></div>')
+    out.append(_page(end, total, total, last=True, ground="amber"))
     return out
 
 
