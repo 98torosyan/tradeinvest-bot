@@ -1,3 +1,9 @@
+**2026-10-29 02:31** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 34 items
+- ✅ News published: Ամերիկացիների 22%-ը երբևէ ունեցել կամ օգտագործել է կրիպտո
+---
 **2026-10-29 01:54** `lesson` ✅ published
 - ✅ H-069 «RSI-ի trend գոտիները» published (40s, cta=send)
 ---
@@ -76,6 +82,3 @@
 ---
 **2026-10-27 00:26** `lesson` ✅ published
 - ✅ H-062 «Hammer» published (43s, cta=save)
----
-**2026-10-26 20:18** `quiz` ✅ published
-- ✅ Quiz Story from H-058

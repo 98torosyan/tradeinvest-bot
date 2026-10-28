@@ -899,7 +899,7 @@
   }
  },
  "palette": {
-  "news": 76
+  "news": 77
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -984,7 +984,8 @@
   "https://cointelegraph.com/news/ripple-wins-final-us-approval-for-national-trust-bank?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/news/usdc-overtakes-usdt-euro-stablecoin-trading-mica-kaiko?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/news/vaneck-launches-diversified-etf-combining-stocks-bonds-and-bitcoin-exposure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://cointelegraph.com/news/coinbase-analytics-provider-customer-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  "https://cointelegraph.com/news/coinbase-analytics-provider-customer-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://decrypt.co/382100/more-americans-tried-crypto-few-staying-survey"
  ],
  "used_broll": [
   17238361,
@@ -1092,10 +1093,6 @@
  "last_track": "story_mixkit-electropop-870.mp3",
  "last_cta": "send",
  "news_media": [
-  {
-   "media": "18130346521705931",
-   "date": "2026-10-06"
-  },
   {
    "media": "17938154397384528",
    "date": "2026-10-06"
@@ -1331,6 +1328,10 @@
   {
    "media": "18194621188395594",
    "date": "2026-10-28"
+  },
+  {
+   "media": "18051954347606024",
+   "date": "2026-10-29"
   }
  ],
  "quiz_count": 29,
@@ -1786,7 +1787,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 89,
+  "user_momotmusic-inspiring-reels-406484.mp3": 90,
   "user_the-mountain-tech-corporate-593075.mp3": 15,
   "story_mixkit-electropop-870.mp3": 85,
   "user_the-mountain-finance-background-449885.mp3": 15,
