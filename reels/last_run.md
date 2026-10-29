@@ -1,3 +1,9 @@
+**2026-10-30 02:43** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- ✅ News published: Binance-ը հետաքննում է 5.8 մլրդ դոլարի հաքերային հարձակումը
+---
 **2026-10-30 02:00** `lesson` ✅ published
 - ✅ H-071 «Բարդ տոկոսի միֆը» published (43s, cta=save)
 ---
@@ -78,6 +84,3 @@ layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 35 items
 - ✅ News published: USDC-ն առաջ է անցել USDT-ից
----
-**2026-10-27 19:32** `quiz` ✅ published
-- ✅ Quiz Story from H-061
