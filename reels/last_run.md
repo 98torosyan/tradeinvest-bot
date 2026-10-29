@@ -1,3 +1,6 @@
+**2026-10-30 00:32** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-30 00:12** `lesson` ✅ qa-fail
 - ⏭ H-070 Reel-ը 2 անգամ չանցավ ստուգումը և բաց է թողնվում.
 layout t=21.0s: chunk: կտրուկ շարժել գինը  @80,1026,1000,1254
@@ -78,9 +81,3 @@ layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
 ---
 **2026-10-27 18:53** `lesson` ✅ published
 - ✅ H-064 «Open Interest» published (44s, cta=save)
----
-**2026-10-27 16:38** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 39 items
-- ✅ News published: Ripple-ը ստացել է ԱՄՆ-ի բանկային հաստատումը
