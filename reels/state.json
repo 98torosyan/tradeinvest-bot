@@ -899,7 +899,7 @@
   }
  },
  "palette": {
-  "news": 77
+  "news": 78
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -985,7 +985,8 @@
   "https://cointelegraph.com/news/usdc-overtakes-usdt-euro-stablecoin-trading-mica-kaiko?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/news/vaneck-launches-diversified-etf-combining-stocks-bonds-and-bitcoin-exposure?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/news/coinbase-analytics-provider-customer-data?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://decrypt.co/382100/more-americans-tried-crypto-few-staying-survey"
+  "https://decrypt.co/382100/more-americans-tried-crypto-few-staying-survey",
+  "https://cointelegraph.com/news/htx-halt-unlawful-uk-crypto-promotions-fca?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
   17238361,
@@ -1093,10 +1094,6 @@
  "last_track": "story_mixkit-electropop-870.mp3",
  "last_cta": "send",
  "news_media": [
-  {
-   "media": "17938154397384528",
-   "date": "2026-10-06"
-  },
   {
    "media": "18115063952328163",
    "date": "2026-10-07"
@@ -1331,6 +1328,10 @@
   },
   {
    "media": "18051954347606024",
+   "date": "2026-10-29"
+  },
+  {
+   "media": "18030896321915138",
    "date": "2026-10-29"
   }
  ],
@@ -1787,7 +1788,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 90,
+  "user_momotmusic-inspiring-reels-406484.mp3": 91,
   "user_the-mountain-tech-corporate-593075.mp3": 15,
   "story_mixkit-electropop-870.mp3": 86,
   "user_the-mountain-finance-background-449885.mp3": 15,
