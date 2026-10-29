@@ -1,3 +1,8 @@
+**2026-10-29 15:05** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7743.98}
+- ✅ Story published
+---
 **2026-10-29 02:31** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -79,6 +84,3 @@
 ---
 **2026-10-27 00:45** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-27 00:26** `lesson` ✅ published
-- ✅ H-062 «Hammer» published (43s, cta=save)
