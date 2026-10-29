@@ -1,3 +1,7 @@
+**2026-10-30 00:12** `lesson` ✅ qa-fail
+- ⏭ H-070 Reel-ը 2 անգամ չանցավ ստուգումը և բաց է թողնվում.
+layout t=21.0s: chunk: կտրուկ շարժել գինը  @80,1026,1000,1254
+---
 **2026-10-29 20:24** `quiz` ✅ published
 - ✅ Quiz Story from H-067
 ---
@@ -80,8 +84,3 @@ layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 39 items
 - ✅ News published: Ripple-ը ստացել է ԱՄՆ-ի բանկային հաստատումը
----
-**2026-10-27 14:02** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7676.77}
-- ✅ Story published
