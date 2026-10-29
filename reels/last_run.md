@@ -1,3 +1,6 @@
+**2026-10-30 02:00** `lesson` ✅ published
+- ✅ H-071 «Բարդ տոկոսի միֆը» published (43s, cta=save)
+---
 **2026-10-30 00:32** `chart` ✅ published
 - ✅ Story published
 ---
@@ -78,6 +81,3 @@ layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
 ---
 **2026-10-27 19:32** `quiz` ✅ published
 - ✅ Quiz Story from H-061
----
-**2026-10-27 18:53** `lesson` ✅ published
-- ✅ H-064 «Open Interest» published (44s, cta=save)
