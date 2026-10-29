@@ -138,3 +138,5 @@ body.footage .h1,body.footage .h2{text-shadow:0 4px 24px rgba(0,0,0,.6)}
 .news .card{background:rgba(255,255,255,.075);border-color:rgba(255,255,255,.14)}
 .news .rail{top:360px;height:1100px}
 
+
+.market .adisc{margin-top:22px;font-size:26px;line-height:1.35;color:var(--mut);text-align:center}

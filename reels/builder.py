@@ -311,6 +311,29 @@ def build_chart_story(spec, palette, date_label):
             + f'<div class="cprice"><span data-fx="count" data-at=".6" data-dur="1.4" data-from="{spec["price"] * .98:.0f}" '
               f'data-to="{spec["price"]:.0f}" data-grp="1" data-pre="$">0</span>'
               f'<span class="ch {cls}" data-fx="pop" data-at="1.4" data-dur=".7">{arrow} {abs(chg):.1f}%</span></div>')
+    if spec.get("sup") and spec.get("res"):
+        # daily analysis: nearest support / resistance as amber price tags + two if/then scenarios (not signals)
+        S, R = spec["sup"], spec["res"]
+        marks = ""
+        for v, lab, at in ((R, "R", 6.0), (S, "S", 7.0)):
+            yy = min(H - 24, max(24, y(v)))
+            marks += (f'<g data-fx="fade" data-at="{at}" data-dur=".6"><line x1="0" x2="{W - 250}" y1="{yy:.1f}" y2="{yy:.1f}" '
+                      f'stroke="#FF8A00" stroke-dasharray="10 10" stroke-width="3"/>'
+                      f'<path d="M{W - 250} {yy:.1f} l18 -24 h232 v48 h-232 z" fill="#FF8A00"/>'
+                      f'<text x="{W - 128}" y="{yy + 11:.1f}" text-anchor="middle" font-family="ArmSans" font-weight="800" font-size="30" fill="#0B0B0C">'
+                      f'{lab} ${v:,.0f}</text></g>')
+        chart = f'<svg class="cchart" viewBox="0 0 {W} {H}">{candles}{marks}</svg>'
+        info = (f'<div class="cinfo">'
+                f'<div data-fx="rise" data-at="8.0" data-dur=".6"><b>Եթե մնա ${S:,.0f}-ից վեր</b><span>→ ${R:,.0f}</span></div>'
+                f'<div data-fx="rise" data-at="8.8" data-dur=".6"><b>Եթե կոտրի ${S:,.0f}-ը</b><span>→ ներքև</span></div>'
+                f'<div data-fx="rise" data-at="9.6" data-dur=".6"><b>Եթե կոտրի ${R:,.0f}-ը</b><span>→ վերև</span></div></div>'
+                f'<div class="adisc" data-fx="fade" data-at="10.2" data-dur=".8">Կրթական վերլուծություն է, ոչ թե ֆինանսական խորհուրդ</div>')
+        tl = Timeline()
+        tl.add(f'<div class="mstack">{head}{chart}{info}</div>', 16.0, "mscene")
+        hooks = ("HOOKS.push(t=>{document.querySelectorAll('.cd').forEach(g=>{"
+                 "const k=EASE.out(prog(t,1.6+(+g.dataset.i)*.17,.45));g.style.opacity=k;"
+                 "g.style.transform=`translateY(${(1-k)*30}px)`;});});")
+        return page("market", palette, tl, story_head("Վերլուծություն", date_label), hooks, seed=11)
     chart = f'<svg class="cchart" viewBox="0 0 {W} {H}">{candles}{marks}</svg>'
     info = (f'<div class="cinfo">'
             f'<div data-fx="rise" data-at="6.1" data-dur=".6"><b>Առավելագույն</b><span>${spec["high"]:,.0f} · {_hhmm(spec["high_t"])}</span></div>'

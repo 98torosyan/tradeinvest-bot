@@ -180,6 +180,19 @@ def price_coingecko_btc():
                       params={"ids": "bitcoin", "vs_currencies": "usd"})["bitcoin"]["usd"])
 
 
+def levels(cs, k=2):
+    """Nearest support below and resistance above the last close, from swing pivots (a high/low that is the
+    extreme of k candles on each side). Falls back to the window's low/high. Pure arithmetic on real candles."""
+    last = cs[-1]["c"]
+    ph = [c["h"] for i, c in enumerate(cs[k:-k], k) if c["h"] == max(x["h"] for x in cs[i - k:i + k + 1])]
+    pl = [c["l"] for i, c in enumerate(cs[k:-k], k) if c["l"] == min(x["l"] for x in cs[i - k:i + k + 1])]
+    above = [v for v in ph if v > last * 1.001]
+    below = [v for v in pl if v < last * 0.999]
+    res = min(above) if above else max(c["h"] for c in cs)
+    sup = max(below) if below else min(c["l"] for c in cs)
+    return sup, res
+
+
 def build_chart_spec():
     """24 hourly BTC candles, used only if the latest price is confirmed by a second source."""
     NOTES.clear()
@@ -200,7 +213,8 @@ def build_chart_spec():
     name, cs = chosen
     hi = max(cs, key=lambda c: c["h"]); lo = min(cs, key=lambda c: c["l"])
     big = max(cs, key=lambda c: abs(c["c"] / c["o"] - 1))
-    return {"candles": cs, "source": name, "price": cs[-1]["c"],
+    sup, res = levels(cs)
+    return {"candles": cs, "source": name, "price": cs[-1]["c"], "sup": sup, "res": res,
             "chg": (cs[-1]["c"] / cs[0]["o"] - 1) * 100,
             "high": hi["h"], "high_t": hi["t"], "low": lo["l"], "low_t": lo["t"],
             "big_t": big["t"], "big_pct": (big["c"] / big["o"] - 1) * 100}
