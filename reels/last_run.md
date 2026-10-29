@@ -1,3 +1,7 @@
+**2026-10-29 19:31** `lesson` ✅ qa-fail
+- ⚠️ H-070 Reel-ը չանցավ ստուգումը (կփորձվի նորից).
+layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
+---
 **2026-10-29 17:39** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -84,6 +88,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 40 items
 - ✅ News published: Կանադան ներկայացրել է stablecoin-ների նոր կանոնների նախագիծ
----
-**2026-10-27 01:58** `lesson` ✅ published
-- ✅ H-063 «Առանց օրագրի» published (44s, cta=save)

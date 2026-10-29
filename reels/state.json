@@ -1092,7 +1092,7 @@
   ]
  },
  "last_track": "story_mixkit-electropop-870.mp3",
- "last_cta": "send",
+ "last_cta": "save",
  "news_media": [
   {
    "media": "18115063952328163",
@@ -1707,14 +1707,12 @@
   "29205869.mp4:face": false
  },
  "music_bag": {
-  "lesson": [
-   "user_starostin-investment-finance-trading-mon.mp3"
-  ],
+  "lesson": [],
   "news": [],
   "story": []
  },
  "music_last": {
-  "lesson": "user_soundsurfer-trading-254548.mp3",
+  "lesson": "user_starostin-investment-finance-trading-mon.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "story_mixkit-electropop-870.mp3"
  },
@@ -1792,11 +1790,14 @@
   "user_the-mountain-tech-corporate-593075.mp3": 15,
   "story_mixkit-electropop-870.mp3": 86,
   "user_the-mountain-finance-background-449885.mp3": 15,
-  "user_starostin-investment-finance-trading-mon.mp3": 14,
+  "user_starostin-investment-finance-trading-mon.mp3": 15,
   "user_apalonbeats-finance-money-trading-invest.mp3": 15,
   "user_the-mountain-market-systems-146118.mp3": 15,
   "user_soundsurfer-trading-254548.mp3": 15
  },
  "low_alert": "2026-10-07",
- "hits_low_alert": "2026-10-17"
+ "hits_low_alert": "2026-10-17",
+ "qa_fail": {
+  "H-070": 1
+ }
 }
