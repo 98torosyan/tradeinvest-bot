@@ -1,3 +1,6 @@
+**2026-10-29 20:24** `quiz` ✅ published
+- ✅ Quiz Story from H-067
+---
 **2026-10-29 19:31** `lesson` ✅ qa-fail
 - ⚠️ H-070 Reel-ը չանցավ ստուգումը (կփորձվի նորից).
 layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
@@ -82,9 +85,3 @@ layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7676.77}
 - ✅ Story published
----
-**2026-10-27 02:37** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 40 items
-- ✅ News published: Կանադան ներկայացրել է stablecoin-ների նոր կանոնների նախագիծ
