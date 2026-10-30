@@ -1,3 +1,6 @@
+**2026-10-30 20:12** `quiz` ✅ published
+- ✅ Quiz Story from H-068
+---
 **2026-10-30 19:18** `lesson` ✅ published
 - ✅ H-072 «Trendline» published (45s, cta=save)
 ---
@@ -83,6 +86,3 @@ layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 35 items
 - ✅ News published: VanEck-ը թողարկել է նոր ETF
----
-**2026-10-28 01:29** `lesson` ✅ published
-- ✅ H-066 «Կոռելյացիա» published (41s, cta=send)
