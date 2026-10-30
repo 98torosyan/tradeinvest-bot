@@ -1,3 +1,8 @@
+**2026-10-30 15:01** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7720.39}
+- ✅ Story published
+---
 **2026-10-30 02:43** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -78,9 +83,3 @@ layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
 ---
 **2026-10-28 00:01** `lesson` ✅ published
 - ✅ H-065 «Short squeeze» published (46s, cta=save)
----
-**2026-10-27 22:20** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 35 items
-- ✅ News published: USDC-ն առաջ է անցել USDT-ից
