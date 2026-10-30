@@ -1,3 +1,6 @@
+**2026-10-31 01:42** `lesson` ✅ published
+- ✅ H-074 «Ծավալի բացակայությունը» published (48s, cta=question)
+---
 **2026-10-31 00:16** `chart` ❌ failed
 - ❌ chart սխալ՝ RuntimeError: not reachable on Pages: https://98torosyan.github.io/tradeinvest-bot/reels/20261031-0016-chart.mp4
 ---
@@ -75,9 +78,3 @@ layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
 ---
 **2026-10-28 19:24** `lesson` ✅ published
 - ✅ H-067 «Engulfing» published (47s, cta=send)
----
-**2026-10-28 17:29** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 35 items
-- ✅ News published: Coinbase-ի տվյալների արտահոսք
