@@ -1,3 +1,6 @@
+**2026-10-30 23:56** `lesson` ✅ published
+- ✅ H-073 «Ռազմավարության փոփոխում» published (40s, cta=send)
+---
 **2026-10-30 20:12** `quiz` ✅ published
 - ✅ Quiz Story from H-068
 ---
@@ -80,9 +83,3 @@ layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7722.6}
 - ✅ Story published
----
-**2026-10-28 02:08** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 35 items
-- ✅ News published: VanEck-ը թողարկել է նոր ETF
