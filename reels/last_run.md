@@ -1,3 +1,6 @@
+**2026-10-31 00:16** `chart` ❌ failed
+- ❌ chart սխալ՝ RuntimeError: not reachable on Pages: https://98torosyan.github.io/tradeinvest-bot/reels/20261031-0016-chart.mp4
+---
 **2026-10-30 23:56** `lesson` ✅ published
 - ✅ H-073 «Ռազմավարության փոփոխում» published (40s, cta=send)
 ---
@@ -78,8 +81,3 @@ layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 35 items
 - ✅ News published: Coinbase-ի տվյալների արտահոսք
----
-**2026-10-28 14:48** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7722.6}
-- ✅ Story published
