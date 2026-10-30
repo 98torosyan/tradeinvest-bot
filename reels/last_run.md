@@ -1,3 +1,6 @@
+**2026-10-30 19:18** `lesson` ✅ published
+- ✅ H-072 «Trendline» published (45s, cta=save)
+---
 **2026-10-30 17:28** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -83,6 +86,3 @@ layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
 ---
 **2026-10-28 01:29** `lesson` ✅ published
 - ✅ H-066 «Կոռելյացիա» published (41s, cta=send)
----
-**2026-10-28 00:15** `chart` ✅ published
-- ✅ Story published
