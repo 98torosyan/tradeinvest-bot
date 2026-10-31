@@ -1,3 +1,6 @@
+**2026-10-31 23:16** `lesson` ✅ published
+- ✅ H-077 «Ժամանակահատվածներ» published (43s, cta=save)
+---
 **2026-10-31 22:40** `lesson` ✅ published
 - ✅ H-076 «Ամբողջ հաշվի կորստի ռիսկ» published (40s, cta=send)
 ---
@@ -78,8 +81,3 @@ layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 35 items
 - ✅ News published: HTX-ը դադարեցնում է կրիպտոգովազդը Մեծ Բրիտանիայում
----
-**2026-10-29 15:05** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7743.98}
-- ✅ Story published
