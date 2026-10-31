@@ -1,3 +1,9 @@
+**2026-10-31 17:00** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- ✅ News published: FBI-ը և Secret Service-ը միացել են Binance-ի գործին
+---
 **2026-10-31 14:35** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7580.07}
@@ -80,6 +86,3 @@ layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
 ---
 **2026-10-29 00:33** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-29 00:13** `lesson` ✅ published
-- ✅ H-068 «Հոգնած առևտուր» published (45s, cta=save)
