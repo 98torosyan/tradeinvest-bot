@@ -1,3 +1,9 @@
+**2026-11-01 01:28** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 39 items
+- ✅ News published: Tether-ի հավելյալ պահուստները հասել են 8 միլիարդ դոլարի
+---
 **2026-11-01 00:40** `lesson` ✅ published
 - ✅ H-078 «Դեմո և իրական գումար» published (42s, cta=save)
 ---
@@ -74,6 +80,3 @@
 **2026-10-30 00:12** `lesson` ✅ qa-fail
 - ⏭ H-070 Reel-ը 2 անգամ չանցավ ստուգումը և բաց է թողնվում.
 layout t=21.0s: chunk: կտրուկ շարժել գինը  @80,1026,1000,1254
----
-**2026-10-29 20:24** `quiz` ✅ published
-- ✅ Quiz Story from H-067

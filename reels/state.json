@@ -959,7 +959,7 @@
   }
  },
  "palette": {
-  "news": 82
+  "news": 83
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -1050,7 +1050,8 @@
   "https://cointelegraph.com/news/binance-linked-wallet-faces-possible-exploit-blockchain-researcher-warns?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/news/trezor-cryptobilis-wallet-implant-funds-warning?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://decrypt.co/382237/binance-sets-aside-6-34b-to-cover-hack-losses-ceo-says-your-assets-are-safe",
-  "https://decrypt.co/382268/secret-service-fbi-binance-hack-probe"
+  "https://decrypt.co/382268/secret-service-fbi-binance-hack-probe",
+  "https://cointelegraph.com/news/tethers-excess-reserves-nearly-double-to-8b-as-q3-profit-hits-15b?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
  ],
  "used_broll": [
   17238361,
@@ -1158,10 +1159,6 @@
  "last_track": "story_mixkit-electropop-870.mp3",
  "last_cta": "save",
  "news_media": [
-  {
-   "media": "18631301449049797",
-   "date": "2026-10-09"
-  },
   {
    "media": "17982514457904411",
    "date": "2026-10-09"
@@ -1397,6 +1394,10 @@
   {
    "media": "17961479493011759",
    "date": "2026-10-31"
+  },
+  {
+   "media": "18071529071789872",
+   "date": "2026-11-01"
   }
  ],
  "quiz_count": 32,
@@ -1856,7 +1857,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 96,
+  "user_momotmusic-inspiring-reels-406484.mp3": 97,
   "user_the-mountain-tech-corporate-593075.mp3": 16,
   "story_mixkit-electropop-870.mp3": 94,
   "user_the-mountain-finance-background-449885.mp3": 16,
