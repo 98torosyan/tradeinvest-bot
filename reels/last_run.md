@@ -1,3 +1,6 @@
+**2026-10-31 19:30** `quiz` ✅ published
+- ✅ Quiz Story from H-073
+---
 **2026-10-31 18:43** `lesson` ✅ published
 - ✅ H-075 «Շուկայի 4 փուլ» published (42s, cta=save)
 ---
@@ -83,6 +86,3 @@ layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 34 items
 - ✅ News published: Ամերիկացիների 22%-ը երբևէ ունեցել կամ օգտագործել է կրիպտո
----
-**2026-10-29 01:54** `lesson` ✅ published
-- ✅ H-069 «RSI-ի trend գոտիները» published (40s, cta=send)
