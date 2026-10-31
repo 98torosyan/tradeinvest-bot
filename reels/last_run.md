@@ -1,3 +1,6 @@
+**2026-10-31 23:33** `chart` ✅ published
+- ✅ Story published
+---
 **2026-10-31 23:16** `lesson` ✅ published
 - ✅ H-077 «Ժամանակահատվածներ» published (43s, cta=save)
 ---
@@ -75,9 +78,3 @@ layout t=21.0s: chunk: կտրուկ շարժել գինը  @80,1026,1000,1254
 **2026-10-29 19:31** `lesson` ✅ qa-fail
 - ⚠️ H-070 Reel-ը չանցավ ստուգումը (կփորձվի նորից).
 layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
----
-**2026-10-29 17:39** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 35 items
-- ✅ News published: HTX-ը դադարեցնում է կրիպտոգովազդը Մեծ Բրիտանիայում
