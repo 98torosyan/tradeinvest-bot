@@ -1,3 +1,6 @@
+**2026-10-31 18:43** `lesson` ✅ published
+- ✅ H-075 «Շուկայի 4 փուլ» published (42s, cta=save)
+---
 **2026-10-31 17:00** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -83,6 +86,3 @@ layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
 ---
 **2026-10-29 01:54** `lesson` ✅ published
 - ✅ H-069 «RSI-ի trend գոտիները» published (40s, cta=send)
----
-**2026-10-29 00:33** `chart` ✅ published
-- ✅ Story published
