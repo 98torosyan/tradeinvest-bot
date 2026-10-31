@@ -1,3 +1,6 @@
+**2026-10-31 22:40** `lesson` ✅ published
+- ✅ H-076 «Ամբողջ հաշվի կորստի ռիսկ» published (40s, cta=send)
+---
 **2026-10-31 19:30** `quiz` ✅ published
 - ✅ Quiz Story from H-073
 ---
@@ -80,9 +83,3 @@ layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7743.98}
 - ✅ Story published
----
-**2026-10-29 02:31** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 34 items
-- ✅ News published: Ամերիկացիների 22%-ը երբևէ ունեցել կամ օգտագործել է կրիպտո
