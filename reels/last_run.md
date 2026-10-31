@@ -1,3 +1,6 @@
+**2026-11-01 00:40** `lesson` ✅ published
+- ✅ H-078 «Դեմո և իրական գումար» published (42s, cta=save)
+---
 **2026-10-31 23:33** `chart` ✅ published
 - ✅ Story published
 ---
@@ -74,7 +77,3 @@ layout t=21.0s: chunk: կտրուկ շարժել գինը  @80,1026,1000,1254
 ---
 **2026-10-29 20:24** `quiz` ✅ published
 - ✅ Quiz Story from H-067
----
-**2026-10-29 19:31** `lesson` ✅ qa-fail
-- ⚠️ H-070 Reel-ը չանցավ ստուգումը (կփորձվի նորից).
-layout t=20.9s: chunk: կտրուկ շարժել գինը  @80,1027,1000,1254
