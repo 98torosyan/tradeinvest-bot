@@ -1,3 +1,6 @@
+**2026-11-01 20:20** `quiz` ✅ published
+- ✅ Quiz Story from H-074
+---
 **2026-11-01 19:27** `lesson` ✅ published
 - ✅ H-079 «Ինդիկատորների համադրում» published (43s, cta=save)
 ---
@@ -76,8 +79,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 38 items
 - ✅ News published: Trezor-ը զգուշացնում է սարքերի հնարավոր խնդրի մասին
----
-**2026-10-30 15:01** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7720.39}
-- ✅ Story published
