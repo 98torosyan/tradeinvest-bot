@@ -1,3 +1,6 @@
+**2026-11-02 01:22** `lesson` ✅ published
+- ✅ H-081 «Ռիսկը գործարքից առաջ» published (44s, cta=save)
+---
 **2026-11-01 23:54** `chart` ✅ published
 - ✅ Story published
 ---
@@ -73,6 +76,3 @@
 ---
 **2026-10-30 23:56** `lesson` ✅ published
 - ✅ H-073 «Ռազմավարության փոփոխում» published (40s, cta=send)
----
-**2026-10-30 20:12** `quiz` ✅ published
-- ✅ Quiz Story from H-068
