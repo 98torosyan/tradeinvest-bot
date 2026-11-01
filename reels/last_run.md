@@ -1,3 +1,6 @@
+**2026-11-01 19:27** `lesson` ✅ published
+- ✅ H-079 «Ինդիկատորների համադրում» published (43s, cta=save)
+---
 **2026-11-01 18:28** `carousel` ✅ published
 - ✅ Weekly carousel published
 ---
@@ -78,9 +81,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7720.39}
 - ✅ Story published
----
-**2026-10-30 02:43** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- ✅ News published: Binance-ը հետաքննում է 5.8 մլրդ դոլարի հաքերային հարձակումը
