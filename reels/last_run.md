@@ -1,3 +1,6 @@
+**2026-11-01 23:32** `lesson` ✅ published
+- ✅ H-080 «Stablecoin-ների մատակարարում» published (49s, cta=send)
+---
 **2026-11-01 20:20** `quiz` ✅ published
 - ✅ Quiz Story from H-074
 ---
@@ -73,9 +76,3 @@
 ---
 **2026-10-30 19:18** `lesson` ✅ published
 - ✅ H-072 «Trendline» published (45s, cta=save)
----
-**2026-10-30 17:28** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- ✅ News published: Trezor-ը զգուշացնում է սարքերի հնարավոր խնդրի մասին
