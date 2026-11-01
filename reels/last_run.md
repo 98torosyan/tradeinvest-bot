@@ -1,3 +1,9 @@
+**2026-11-02 01:58** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 39 items
+- ✅ News published: Binance-ը վերականգնում է կրիպտոհանումները
+---
 **2026-11-02 01:22** `lesson` ✅ published
 - ✅ H-081 «Ռիսկը գործարքից առաջ» published (44s, cta=save)
 ---
@@ -73,6 +79,3 @@
 ---
 **2026-10-31 00:16** `chart` ❌ failed
 - ❌ chart սխալ՝ RuntimeError: not reachable on Pages: https://98torosyan.github.io/tradeinvest-bot/reels/20261031-0016-chart.mp4
----
-**2026-10-30 23:56** `lesson` ✅ published
-- ✅ H-073 «Ռազմավարության փոփոխում» published (40s, cta=send)
