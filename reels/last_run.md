@@ -1,3 +1,6 @@
+**2026-11-01 18:28** `carousel` ✅ published
+- ✅ Weekly carousel published
+---
 **2026-11-01 17:46** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -81,6 +84,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 38 items
 - ✅ News published: Binance-ը հետաքննում է 5.8 մլրդ դոլարի հաքերային հարձակումը
----
-**2026-10-30 02:00** `lesson` ✅ published
-- ✅ H-071 «Բարդ տոկոսի միֆը» published (43s, cta=save)
