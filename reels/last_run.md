@@ -1,3 +1,6 @@
+**2026-11-01 23:54** `chart` ✅ published
+- ✅ Story published
+---
 **2026-11-01 23:32** `lesson` ✅ published
 - ✅ H-080 «Stablecoin-ների մատակարարում» published (49s, cta=send)
 ---
@@ -73,6 +76,3 @@
 ---
 **2026-10-30 20:12** `quiz` ✅ published
 - ✅ Quiz Story from H-068
----
-**2026-10-30 19:18** `lesson` ✅ published
-- ✅ H-072 «Trendline» published (45s, cta=save)
