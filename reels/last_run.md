@@ -1,3 +1,8 @@
+**2026-11-01 15:29** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7580.07}
+- ✅ Story published
+---
 **2026-11-01 01:28** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -76,7 +81,3 @@
 ---
 **2026-10-30 00:32** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-30 00:12** `lesson` ✅ qa-fail
-- ⏭ H-070 Reel-ը 2 անգամ չանցավ ստուգումը և բաց է թողնվում.
-layout t=21.0s: chunk: կտրուկ շարժել գինը  @80,1026,1000,1254
