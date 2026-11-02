@@ -980,7 +980,7 @@
   }
  },
  "palette": {
-  "news": 85
+  "news": 86
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -1074,7 +1074,8 @@
   "https://decrypt.co/382268/secret-service-fbi-binance-hack-probe",
   "https://cointelegraph.com/news/tethers-excess-reserves-nearly-double-to-8b-as-q3-profit-hits-15b?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/news/binance-says-phase-one-of-withdrawals-opens-after-63b-hack?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://www.coindesk.com/markets/2026/11/01/binance-opens-crypto-withdrawals-in-phases-starting-with-bitcoin-following-usd6-3-billion-hack"
+  "https://www.coindesk.com/markets/2026/11/01/binance-opens-crypto-withdrawals-in-phases-starting-with-bitcoin-following-usd6-3-billion-hack",
+  "https://www.coindesk.com/business/2026/11/02/brazil-s-mercado-bitcoin-halts-withdrawals-after-usd40-million-drained-across-10-chains"
  ],
  "used_broll": [
   17238361,
@@ -1182,10 +1183,6 @@
  "last_track": "story_mixkit-electropop-870.mp3",
  "last_cta": "save",
  "news_media": [
-  {
-   "media": "18123910732787465",
-   "date": "2026-10-10"
-  },
   {
    "media": "18012604052760832",
    "date": "2026-10-10"
@@ -1420,6 +1417,10 @@
   },
   {
    "media": "18134122243687801",
+   "date": "2026-11-02"
+  },
+  {
+   "media": "18652481023038775",
    "date": "2026-11-02"
   }
  ],
@@ -1877,7 +1878,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 100,
+  "user_momotmusic-inspiring-reels-406484.mp3": 101,
   "user_the-mountain-tech-corporate-593075.mp3": 16,
   "story_mixkit-electropop-870.mp3": 98,
   "user_the-mountain-finance-background-449885.mp3": 17,
