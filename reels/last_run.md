@@ -1,3 +1,6 @@
+**2026-11-02 22:49** `lesson` ✅ published
+- ✅ H-083 «Թրեյդերի 5 սխալը» published (44s, cta=save)
+---
 **2026-11-02 22:37** `lesson` ✅ published
 - ✅ H-082 «Կլոր թվեր» published (43s, cta=send)
 ---
@@ -76,8 +79,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 38 items
 - ✅ News published: FBI-ը և Secret Service-ը միացել են Binance-ի գործին
----
-**2026-10-31 14:35** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7580.07}
-- ✅ Story published
