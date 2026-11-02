@@ -1,3 +1,6 @@
+**2026-11-03 03:06** `lesson` ✅ published
+- ✅ H-084 «Stochastic» published (46s, cta=send)
+---
 **2026-11-02 23:45** `quiz` ✅ published
 - ✅ Quiz Story from H-078
 ---
@@ -73,6 +76,3 @@
 ---
 **2026-10-31 19:30** `quiz` ✅ published
 - ✅ Quiz Story from H-073
----
-**2026-10-31 18:43** `lesson` ✅ published
-- ✅ H-075 «Շուկայի 4 փուլ» published (42s, cta=save)
