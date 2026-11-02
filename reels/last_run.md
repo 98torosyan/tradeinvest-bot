@@ -1,3 +1,6 @@
+**2026-11-02 23:45** `quiz` ✅ published
+- ✅ Quiz Story from H-078
+---
 **2026-11-02 22:49** `lesson` ✅ published
 - ✅ H-083 «Թրեյդերի 5 սխալը» published (44s, cta=save)
 ---
@@ -73,9 +76,3 @@
 ---
 **2026-10-31 18:43** `lesson` ✅ published
 - ✅ H-075 «Շուկայի 4 փուլ» published (42s, cta=save)
----
-**2026-10-31 17:00** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- ✅ News published: FBI-ը և Secret Service-ը միացել են Binance-ի գործին
