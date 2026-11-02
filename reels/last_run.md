@@ -1,3 +1,6 @@
+**2026-11-03 03:18** `chart` ✅ published
+- ✅ Story published
+---
 **2026-11-03 03:06** `lesson` ✅ published
 - ✅ H-084 «Stochastic» published (46s, cta=send)
 ---
@@ -73,6 +76,3 @@
 ---
 **2026-10-31 22:40** `lesson` ✅ published
 - ✅ H-076 «Ամբողջ հաշվի կորստի ռիսկ» published (40s, cta=send)
----
-**2026-10-31 19:30** `quiz` ✅ published
-- ✅ Quiz Story from H-073
