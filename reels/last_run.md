@@ -1,3 +1,6 @@
+**2026-11-02 22:37** `lesson` ✅ published
+- ✅ H-082 «Կլոր թվեր» published (43s, cta=send)
+---
 **2026-11-02 20:30** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -78,9 +81,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7580.07}
 - ✅ Story published
----
-**2026-10-31 02:15** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- ✅ News published: Binance-ը առանձնացրել է 6.34 մլրդ դոլար
