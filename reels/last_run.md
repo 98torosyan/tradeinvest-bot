@@ -1,3 +1,8 @@
+**2026-11-02 16:50** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7580.07}
+- ✅ Story published
+---
 **2026-11-02 01:58** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -76,6 +81,3 @@
 ---
 **2026-10-31 01:42** `lesson` ✅ published
 - ✅ H-074 «Ծավալի բացակայությունը» published (48s, cta=question)
----
-**2026-10-31 00:16** `chart` ❌ failed
-- ❌ chart սխալ՝ RuntimeError: not reachable on Pages: https://98torosyan.github.io/tradeinvest-bot/reels/20261031-0016-chart.mp4
