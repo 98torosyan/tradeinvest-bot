@@ -23,3 +23,6 @@ BG_STYLES = ["candles", "line", "depth", "tape", "heat"]
 CONTENT_MODE = "hits"            # standalone trading Reels (content/hits.json); "course" = the old module course
 NEWS_AS_STORY = True             # news are published as Stories only
 LESSONS_PER_DAY = 3
+
+# No Reels between these Yerevan hours: GitHub cron can be hours late, and a lesson at 03:00 gets almost no reach.
+QUIET_HOURS = (0, 9)

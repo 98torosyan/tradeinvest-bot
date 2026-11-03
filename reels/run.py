@@ -165,7 +165,14 @@ HITS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "content", "hits
 SERIES_PALETTE = {1: 5, 2: 8, 3: 6, 4: 7, 5: 3}
 
 
+def quiet(now):
+    a, b = settings.QUIET_HOURS
+    return a <= now.hour < b
+
+
 def do_lesson(st, now, rid, publish):
+    if publish and quiet(now):
+        summary(f"🌙 {now:%H:%M} is inside quiet hours — the lesson waits for the next slot"); return "skipped-quiet"
     if settings.CONTENT_MODE == "hits":
         return do_hit(st, now, rid, publish)
     from delivery.media_hosting import wait_until_reachable
@@ -372,6 +379,8 @@ def do_analysis(st, now, rid, publish):
     from . import analysis
     from delivery.media_hosting import wait_until_reachable
     today = now.strftime("%Y-%m-%d")
+    if publish and quiet(now):
+        summary("🌙 quiet hours — analysis skipped"); return "skipped-quiet"
     if publish and st.get("analysis_last") == today:
         summary("ℹ️ analysis already published today"); return "skipped"
     asset, info, lv, props, caption = analysis.build(now)
