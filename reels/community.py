@@ -49,8 +49,8 @@ def telegram_commands(st):
         if str(msg.get("chat", {}).get("id")).strip() != str(TELEGRAM_CHAT_ID).strip():
             # only the owner's chat may control the bot; remember who tried (helps to fix a wrong TELEGRAM_CHAT_ID)
             ch = msg.get("chat", {})
-            control.put("tg_last_foreign", {"chat_id": ch.get("id"), "type": ch.get("type"),
-                                            "name": ch.get("first_name") or ch.get("title"), "text": (msg.get("text") or "")[:30],
+            # the repo is public: never store a stranger's id, name or message text — only what helps debug the secret
+            control.put("tg_last_foreign", {"type": ch.get("type"), "id_digits": len(str(ch.get("id") or "")),
                                             "secret_digits": len(str(TELEGRAM_CHAT_ID).strip()),
                                             "secret_has_spaces": str(TELEGRAM_CHAT_ID) != str(TELEGRAM_CHAT_ID).strip()})
             continue
