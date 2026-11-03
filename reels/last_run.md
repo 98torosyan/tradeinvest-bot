@@ -1,3 +1,9 @@
+**2026-11-03 18:37** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 37 items
+- ✅ News published: Մոսկվայի բորսան գործարկում է կրիպտո
+---
 **2026-11-03 16:19** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7541.4}
@@ -78,6 +84,3 @@
 ---
 **2026-11-01 00:40** `lesson` ✅ published
 - ✅ H-078 «Դեմո և իրական գումար» published (42s, cta=save)
----
-**2026-10-31 23:33** `chart` ✅ published
-- ✅ Story published
