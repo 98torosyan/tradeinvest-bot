@@ -1,3 +1,6 @@
+**2026-11-03 21:19** `quiz` ✅ published
+- ✅ Quiz Story from H-082
+---
 **2026-11-03 20:30** `lesson` ✅ slot-done
 - ℹ️ 2/2 lessons already out today — nothing to do
 ---
@@ -76,8 +79,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 59 items
 - ✅ News published: Binance-ը սկսել է ելքագրումները 6․3 մլրդ դոլարի հաքից հետո
----
-**2026-11-01 15:29** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7580.07}
-- ✅ Story published
