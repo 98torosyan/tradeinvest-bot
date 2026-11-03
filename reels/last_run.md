@@ -1,3 +1,6 @@
+**2026-11-03 21:43** `lesson` ✅ published
+- ✅ H-086 «Պլանը մեկ էկրանում» published (39s, cta=save)
+---
 **2026-11-03 21:19** `quiz` ✅ published
 - ✅ Quiz Story from H-082
 ---
@@ -73,9 +76,3 @@
 ---
 **2026-11-01 18:28** `carousel` ✅ published
 - ✅ Weekly carousel published
----
-**2026-11-01 17:46** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 59 items
-- ✅ News published: Binance-ը սկսել է ելքագրումները 6․3 մլրդ դոլարի հաքից հետո
