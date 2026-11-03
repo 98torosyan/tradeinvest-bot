@@ -1,4 +1,4 @@
-"""TradeInvest v1.0 entry point:  python -m reels.run --kind lesson|news|story|chart|quiz|carousel [--no-publish]"""
+"""TradeInvest v1.0 entry point:  python -m reels.run --kind lesson|news|story|chart|quiz|carousel|analysis [--no-publish]"""
 import argparse
 import datetime as dt
 import json
@@ -367,8 +367,34 @@ def do_music(st, now, rid, publish):
     summary(f"🎵 music candidates sent to Telegram: {n}"); return "done"
 
 
+def do_analysis(st, now, rid, publish):
+    """Daily analysis Reel (Remotion) on real candles; asset rotates by weekday."""
+    from . import analysis
+    from delivery.media_hosting import wait_until_reachable
+    today = now.strftime("%Y-%m-%d")
+    if publish and st.get("analysis_last") == today:
+        summary("ℹ️ analysis already published today"); return "skipped"
+    asset, info, lv, props, caption = analysis.build(now)
+    RUN_LOG.append(f"[analysis] {asset} {lv['kind']} zone={lv['zone'][0]:.2f}-{lv['zone'][1]:.2f} touches={len(lv['touches'])} other={lv['other']:.2f}")
+    mp4, cover = os.path.join(OUT, rid + ".mp4"), os.path.join(OUT, rid + ".jpg")
+    analysis.render(props, mp4, cover, music.pick("story", None, st, today))
+    if analysis.DISCLAIMER not in caption:
+        raise RuntimeError("analysis caption has no disclaimer")
+    if not publish:
+        summary(f"[dry-run] analysis {asset} rendered"); return "dry-run"
+    urls = hosting.publish([(mp4, f"reels/{rid}.mp4"), (cover, f"reels/{rid}.jpg")])
+    if not wait_until_reachable(urls[f"reels/{rid}.mp4"], timeout=300):
+        raise RuntimeError("video is not reachable on GitHub Pages")
+    from . import igapi
+    media = igapi.publish_reel(urls[f"reels/{rid}.mp4"], caption, cover_url=urls.get(f"reels/{rid}.jpg"))
+    st["analysis_last"] = today
+    st.setdefault("analysis_media", []).append({"media": media, "asset": asset, "date": today})
+    st["analysis_media"] = st["analysis_media"][-60:]
+    summary(f"✅ Analysis Reel {asset} published"); return "published"
+
+
 HANDLERS = {"music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
-            "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel}
+            "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel, "analysis": do_analysis}
 
 
 def main():

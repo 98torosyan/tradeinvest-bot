@@ -1,0 +1,11 @@
+{
+  "name": "tradeinvest-motion",
+  "private": true,
+  "description": "Remotion compositions for TradeInvest (daily analysis Reel). Rendered by reels/analysis.py.",
+  "dependencies": {
+    "@remotion/cli": "4.0.250",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.250"
+  }
+}

@@ -3,6 +3,7 @@ name: TradeInvest Reels
 # UTC times. Yerevan = UTC+4 (no DST). Odd minutes on purpose (GitHub delays runs on the hour).
 #   08:37 market story | 12:37 19:07 21:37 trading Reels | 10:37 16:37 22:07 news Stories
 #   13:37 quiz story   | 19:37 BTC 24h story | Sunday 11:37 weekly carousel
+#   17:37 daily analysis Reel (Remotion, real candles; before the US open)
 on:
   schedule:
     - cron: "37 4 * * *"
@@ -13,6 +14,7 @@ on:
     - cron: "37 9 * * *"
     - cron: "37 15 * * *"
     - cron: "37 7 * * 0"
+    - cron: "37 13 * * *"
   workflow_dispatch:
     inputs:
       kind:
@@ -20,7 +22,7 @@ on:
         required: true
         default: "lesson"
         type: choice
-        options: [lesson, news, story, chart, quiz, carousel, music, selftest]
+        options: [lesson, news, story, chart, quiz, carousel, analysis, music, selftest]
 
 permissions:
   contents: write
@@ -51,10 +53,20 @@ jobs:
               "37 9 * * *") KIND=quiz ;;
               "37 15 * * *") KIND=chart ;;
               "37 7 * * 0") KIND=carousel ;;
+              "37 13 * * *") KIND=analysis ;;
               *) KIND=news ;;
             esac
           fi
           echo "KIND=$KIND" >> "$GITHUB_ENV"
+      - uses: actions/setup-node@v4
+        if: env.KIND == 'analysis'
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: remotion/package-lock.json
+      - name: Install Remotion
+        if: env.KIND == 'analysis'
+        run: cd remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
       - name: Install system tools, Python deps and headless Chromium
         run: |
           sudo apt-get update -qq
