@@ -1,3 +1,6 @@
+**2026-11-04 00:16** `analysis` ✅ skipped-quiet
+- 🌙 quiet hours — analysis skipped
+---
 **2026-11-03 21:43** `lesson` ✅ published
 - ✅ H-086 «Պլանը մեկ էկրանում» published (39s, cta=save)
 ---
@@ -73,6 +76,3 @@
 ---
 **2026-11-01 19:27** `lesson` ✅ published
 - ✅ H-079 «Ինդիկատորների համադրում» published (43s, cta=save)
----
-**2026-11-01 18:28** `carousel` ✅ published
-- ✅ Weekly carousel published
