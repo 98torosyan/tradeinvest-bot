@@ -1,3 +1,6 @@
+**2026-11-04 02:31** `lesson` ✅ skipped-quiet
+- 🌙 02:31 is inside quiet hours — the lesson waits for the next slot
+---
 **2026-11-04 01:15** `chart` ✅ published
 - ✅ Story published
 ---
@@ -73,6 +76,3 @@
 ---
 **2026-11-01 23:54** `chart` ✅ published
 - ✅ Story published
----
-**2026-11-01 23:32** `lesson` ✅ published
-- ✅ H-080 «Stablecoin-ների մատակարարում» published (49s, cta=send)
