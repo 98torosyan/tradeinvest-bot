@@ -1,3 +1,8 @@
+**2026-11-03 16:19** `story` ✅ published
+- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
+- [market] SPX row dropped, sources: {'yahoo': 7541.4}
+- ✅ Story published
+---
 **2026-11-03 04:55** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -76,6 +81,3 @@
 ---
 **2026-10-31 23:33** `chart` ✅ published
 - ✅ Story published
----
-**2026-10-31 23:16** `lesson` ✅ published
-- ✅ H-077 «Ժամանակահատվածներ» published (43s, cta=save)
