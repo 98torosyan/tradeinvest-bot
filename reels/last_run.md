@@ -1,3 +1,6 @@
+**2026-11-03 20:30** `lesson` ✅ slot-done
+- ℹ️ 2/2 lessons already out today — nothing to do
+---
 **2026-11-03 19:11** `lesson` ✅ published
 - ✅ H-085 «Ինչու է մեծ մասը կորցնում» published (45s, cta=save)
 ---
@@ -78,9 +81,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7580.07}
 - ✅ Story published
----
-**2026-11-01 01:28** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 39 items
-- ✅ News published: Tether-ի հավելյալ պահուստները հասել են 8 միլիարդ դոլարի
