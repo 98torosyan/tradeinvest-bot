@@ -1,3 +1,6 @@
+**2026-11-03 19:11** `lesson` ✅ published
+- ✅ H-085 «Ինչու է մեծ մասը կորցնում» published (45s, cta=save)
+---
 **2026-11-03 18:37** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -81,6 +84,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 39 items
 - ✅ News published: Tether-ի հավելյալ պահուստները հասել են 8 միլիարդ դոլարի
----
-**2026-11-01 00:40** `lesson` ✅ published
-- ✅ H-078 «Դեմո և իրական գումար» published (42s, cta=save)
