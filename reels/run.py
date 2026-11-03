@@ -173,6 +173,13 @@ def quiet(now):
 def do_lesson(st, now, rid, publish):
     if publish and quiet(now):
         summary(f"🌙 {now:%H:%M} is inside quiet hours — the lesson waits for the next slot"); return "skipped-quiet"
+    if publish:                                       # the exact trigger (Cloudflare) and the late GitHub cron may both fire
+        from .watchdog import LESSON_SLOTS
+        mins = now.hour * 60 + now.minute + 20
+        allowed = sum(1 for h, m in LESSON_SLOTS if h * 60 + m <= mins)
+        done_today = sum(1 for p in st.get("published", {}).values() if p.get("date") == now.strftime("%Y-%m-%d") and not p.get("skipped"))
+        if done_today >= allowed:
+            summary(f"ℹ️ {done_today}/{allowed} lessons already out today — nothing to do"); return "slot-done"
     if settings.CONTENT_MODE == "hits":
         return do_hit(st, now, rid, publish)
     from delivery.media_hosting import wait_until_reachable
