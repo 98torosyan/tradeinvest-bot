@@ -1,3 +1,9 @@
+**2026-11-04 03:16** `news` ✅ published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 37 items
+- ✅ News published: ԱՄՆ-ի ընտրություններ և կրիպտո
+---
 **2026-11-04 02:31** `lesson` ✅ skipped-quiet
 - 🌙 02:31 is inside quiet hours — the lesson waits for the next slot
 ---
@@ -73,6 +79,3 @@
 ---
 **2026-11-02 01:22** `lesson` ✅ published
 - ✅ H-081 «Ռիսկը գործարքից առաջ» published (44s, cta=save)
----
-**2026-11-01 23:54** `chart` ✅ published
-- ✅ Story published
