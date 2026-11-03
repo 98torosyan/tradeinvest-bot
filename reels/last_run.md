@@ -1,3 +1,6 @@
+**2026-11-04 00:54** `lesson` ✅ skipped-quiet
+- 🌙 00:54 is inside quiet hours — the lesson waits for the next slot
+---
 **2026-11-04 00:16** `analysis` ✅ skipped-quiet
 - 🌙 quiet hours — analysis skipped
 ---
@@ -73,6 +76,3 @@
 ---
 **2026-11-01 20:20** `quiz` ✅ published
 - ✅ Quiz Story from H-074
----
-**2026-11-01 19:27** `lesson` ✅ published
-- ✅ H-079 «Ինդիկատորների համադրում» published (43s, cta=save)
