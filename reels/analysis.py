@@ -29,7 +29,7 @@ ASSETS_INFO = {
     "NDX":  {"symbol": "NASDAQ 100", "tf": "1D", "src": ("yahoo", "^NDX", "^ndx"), "tags": "#nasdaq #stocks #ndx"},
 }
 # Mon..Sun. Stock indices and gold only on weekdays (their markets are closed at the weekend).
-ROTATION = ["BTC", "GOLD", "ETH", "NDX", "SPX", "BTC", "ETH"]
+ROTATION = ["GOLD", "BTC", "GOLD", "ETH", "NDX", "BTC", "ETH"]   # gold is the most watched chart topic (Apify study, Nov 2026)
 NAME_HY = {"BTC": "Bitcoin", "ETH": "Ethereum", "GOLD": "Ոսկի", "SPX": "S&P 500", "NDX": "Nasdaq 100"}
 
 
@@ -142,13 +142,13 @@ def caption(asset, info, lv, head, acc, sc):
         "",
         f"{head} {acc}։",
         "",
-        *[f"🔸 {s['text']} → {s['strong']}" for s in sc],
+        *[f"{'⚪' if n == 0 else '🟠'} {s['text']} → {s['strong']}" for n, s in enumerate(sc)],
         f"📐 Fibonacci՝ {fib}",
         "",
         "Մակարդակները հաշվարկված են իրական գրաֆիկից։",
         f"⚠️ {DISCLAIMER}։",
         "",
-        "💬 Քո կարծիքով՝ ո՞ր սցենարը կիրականանա։ Գրիր comment-ում",
+        "💬 ⚪ թե՞ 🟠։ Գրիր comment-ում քո սցենարը",
         "📚 Ուզում ես ինքդ կարդալ գրաֆիկը՝ գրիր DM «ԴԱՍ»",
         "",
         f"{info['tags']} #trading #վերլուծություն #հայերեն #technicalanalysis",
