@@ -20,6 +20,8 @@ def _label(st):
         lab[p.get("media")] = ("Կարճ դաս", sid)
     for p in st.get("analysis_media", []):
         lab[p.get("media")] = ("Վերլուծություն", p.get("asset", ""))
+    for pid, p in st.get("posters_done", {}).items():
+        lab[p.get("media")] = ("Պոստեր", pid)
     for p in st.get("monthly_media", []):
         lab[p.get("media")] = ("Ամսական ինֆոգրաֆիկա", p.get("date", ""))
     for p in st.get("weekly_media", []):

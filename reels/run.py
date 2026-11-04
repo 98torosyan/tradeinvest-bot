@@ -712,12 +712,42 @@ def do_fact(st, now, rid, publish):
     summary(f"✅ Daily {kind} Story"); return "published"
 
 
+def do_poster(st, now, rid, publish):
+    """Typographic poster (feed image) on the days without a carousel, 15:07."""
+    from . import posters
+    from delivery.media_hosting import wait_until_reachable
+    today = now.strftime("%Y-%m-%d")
+    done = st.setdefault("posters_done", {})
+    if publish and any(v.get("date") == today for v in done.values()):
+        summary("ℹ️ poster already published today"); return "skipped"
+    if publish and quiet(now):
+        return "skipped-quiet"
+    L = [p for p in posters.load() if p["id"] not in done]
+    if not L:
+        notify("🖼 Պոստերների ցանկը վերջացավ։ Ժամանակն է նորերը գրել։"); return "skipped"
+    p = L[0]
+    img = posters.render(posters.page(p, len(done)), os.path.join(OUT, rid + ".jpg"))
+    cap = posters.caption(p)
+    if posters.DISCLAIMER not in cap:
+        raise RuntimeError("poster caption has no disclaimer")
+    if not publish:
+        summary(f"[dry-run] poster {p['id']}"); return "dry-run"
+    urls = hosting.publish([(img, f"reels/{rid}.jpg")])
+    u = urls[f"reels/{rid}.jpg"]
+    if not wait_until_reachable(u, timeout=300):
+        raise RuntimeError("poster image not reachable")
+    from . import igapi
+    media = igapi.publish_image(u, cap)
+    done[p["id"]] = {"media": media, "date": today}
+    summary(f"✅ Poster {p['id']} published"); return "published"
+
+
 def do_report_dry(st, now, rid, publish):
     from . import report
     report.main(dry=True); return "done"
 
 
-HANDLERS = {"fact": do_fact, "econ_dry": do_econ_dry, "monthly": do_monthly, "challenge": do_challenge, "alert": do_alert, "weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
+HANDLERS = {"poster": do_poster, "fact": do_fact, "econ_dry": do_econ_dry, "monthly": do_monthly, "challenge": do_challenge, "alert": do_alert, "weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
             "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel, "analysis": do_analysis}
 
 
