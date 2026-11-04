@@ -444,7 +444,9 @@ def do_analysis(st, now, rid, publish):
         raise RuntimeError("analysis caption has no disclaimer")
     if not publish:
         summary(f"[dry-run] analysis {asset} rendered"); return "dry-run"
-    urls = hosting.publish([(mp4, f"reels/{rid}.mp4"), (cover, f"reels/{rid}.jpg")])
+    from . import site
+    site_dir = os.path.join(OUT, "site"); site.build(curriculum.load(), st, site_dir)
+    urls = hosting.publish([(mp4, f"reels/{rid}.mp4"), (cover, f"reels/{rid}.jpg")], site_dir)
     if not wait_until_reachable(urls[f"reels/{rid}.mp4"], timeout=300):
         raise RuntimeError("video is not reachable on GitHub Pages")
     from . import igapi
