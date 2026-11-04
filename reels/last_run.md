@@ -1,3 +1,6 @@
+**2026-11-04 12:40** `lesson` ✅ published
+- ✅ short S-001 published (18s, kw=True)
+---
 **2026-11-04 03:16** `news` ✅ published
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
 - [news] https://cointelegraph.com/rss: 30 items
@@ -76,6 +79,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 39 items
 - ✅ News published: Binance-ը վերականգնում է կրիպտոհանումները
----
-**2026-11-02 01:22** `lesson` ✅ published
-- ✅ H-081 «Ռիսկը գործարքից առաջ» published (44s, cta=save)
