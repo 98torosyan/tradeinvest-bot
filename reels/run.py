@@ -742,13 +742,76 @@ def do_poster(st, now, rid, publish):
     summary(f"✅ Poster {p['id']} published"); return "published"
 
 
+NAMES_HY = {"lesson": "Կարճ դաս / վերլուծություն", "analysis": "Վերլուծություն", "carousel": "Կարուսել", "poster": "Պոստեր",
+            "challenge": "Չելենջ story", "fact": "Օրվա story", "weekly": "Շաբաթվա ամփոփում", "monthly": "Ամսական ինֆոգրաֆիկա",
+            "alert": "Ազդանշան story", "news": "Լուրեր story", "story": "Շուկայի story", "quiz": "Quiz story"}
+
+
+def do_digest(st, now, rid, publish):
+    """21:53 Telegram digest for the owner: what went out today, failures, followers today."""
+    import re
+    from . import igapi
+    today = now.strftime("%Y-%m-%d")
+    txt = open(LOG, encoding="utf-8").read() if os.path.exists(LOG) else ""
+    ok, bad = [], []
+    for m in re.finditer(r"\*\*(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2})\*\* `(\w+)` (✅|❌) ([^\n]*)", txt):
+        d, hm, kind, mark, status = m.groups()
+        if d != today:
+            continue
+        if mark == "❌":
+            bad.append(f"• {hm} {NAMES_HY.get(kind, kind)}")
+        elif status.strip().startswith("published"):
+            ok.append(f"• {hm} {NAMES_HY.get(kind, kind)}")
+    try:
+        fol = igapi.me().get("followers_count")
+    except Exception:  # noqa: BLE001
+        fol = None
+    prev = st.get("digest_followers")
+    lines = [f"🌙 Օրվա ամփոփում · {today}", ""]
+    lines += [f"✅ Հրապարակվեց՝ {len(ok)}"] + sorted(ok)
+    if bad:
+        lines += ["", f"❌ Սխալներ՝ {len(bad)}"] + sorted(bad)
+    if fol is not None:
+        lines += ["", f"👥 Հետևորդներ՝ {fol}" + (f" ({fol - prev:+d} օրում)" if prev is not None else "")]
+    lines += ["", "Վաղը նույն ժամերին՝ ավտոմատ 🤖"]
+    if not publish:
+        print("\n".join(lines)); return "dry-run"
+    notify("\n".join(lines))
+    if fol is not None:
+        st["digest_followers"] = fol
+    return "sent"
+
+
 def do_report_dry(st, now, rid, publish):
     from . import report
     report.main(dry=True); return "done"
 
 
-HANDLERS = {"poster": do_poster, "fact": do_fact, "econ_dry": do_econ_dry, "monthly": do_monthly, "challenge": do_challenge, "alert": do_alert, "weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
+HANDLERS = {"digest": do_digest, "poster": do_poster, "fact": do_fact, "econ_dry": do_econ_dry, "monthly": do_monthly, "challenge": do_challenge, "alert": do_alert, "weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
             "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel, "analysis": do_analysis}
+
+
+ALWAYS = {"digest", "report_dry", "econ_dry", "music", "stories_pack"}     # allowed at any hour
+MAX_LATE_MIN = 120                                                        # GitHub cron can start hours late
+
+
+def _late_minutes(cron):
+    """Minutes since the most recent UTC time matching a simple 'M H * * *' cron (H may be a list). None if unknown."""
+    try:
+        m, h = cron.split()[:2]
+        if not m.isdigit():
+            return None
+        nowu = dt.datetime.now(dt.timezone.utc)
+        hours = range(24) if h == "*" else [int(x) for x in h.split(",")]
+        best = None
+        for d in (0, 1):
+            for hh in hours:
+                t = (nowu - dt.timedelta(days=d)).replace(hour=hh, minute=int(m), second=0, microsecond=0)
+                if t <= nowu and (best is None or t > best):
+                    best = t
+        return int((nowu - best).total_seconds() // 60) if best else None
+    except Exception:  # noqa: BLE001
+        return None
 
 
 def main():
@@ -773,6 +836,13 @@ def main():
             print("[music] approved tracks not installed:", exc)
     st = state.load()
     rid = now.strftime("%Y%m%d-%H%M") + f"-{a.kind}"
+    if publish and a.kind not in ALWAYS and quiet(now):
+        summary(f"🌙 {now:%H:%M} — quiet hours, {a.kind} skipped"); write_log(a.kind, "✅ skipped-quiet", now)
+        control.commit(["reels/last_run.md"], f"run: {rid} quiet"); return 0
+    late = _late_minutes(os.environ.get("SCHEDULED", ""))
+    if publish and late is not None and late > MAX_LATE_MIN:
+        summary(f"⏰ GitHub started this {a.kind} run {late} min late — skipped (the next slot will post)")
+        write_log(a.kind, "✅ skipped-late", now); control.commit(["reels/last_run.md"], f"run: {rid} late"); return 0
     status = "❌ failed"
     try:
         status = "✅ " + HANDLERS[a.kind](st, now, rid, publish)

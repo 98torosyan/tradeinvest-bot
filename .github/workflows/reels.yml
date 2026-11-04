@@ -18,6 +18,7 @@ on:
     - cron: "7 8 1 * *"
     - cron: "7 12 * * *"
     - cron: "7 11 * * 0,2,4,6"
+    - cron: "53 17 * * *"
     - cron: "23 * * * *"
     - cron: "37 13 * * *"
   workflow_dispatch:
@@ -27,7 +28,7 @@ on:
         required: true
         default: "lesson"
         type: choice
-        options: [lesson, news, story, chart, quiz, carousel, analysis, music, selftest, stories_pack, report_dry, weekly, challenge, alert, monthly, econ_dry, fact, poster]
+        options: [lesson, news, story, chart, quiz, carousel, analysis, music, selftest, stories_pack, report_dry, weekly, challenge, alert, monthly, econ_dry, fact, poster, digest]
 
 permissions:
   contents: write
@@ -62,6 +63,7 @@ jobs:
               "7 8 1 * *") KIND=monthly ;;
               "7 12 * * *") KIND=fact ;;
               "7 11 * * 0,2,4,6") KIND=poster ;;
+              "53 17 * * *") KIND=digest ;;
               "23 * * * *") KIND=alert ;;
               "37 13 * * *") KIND=analysis ;;
               *) KIND=news ;;
@@ -110,6 +112,7 @@ jobs:
           HEALTHCHECK_URL: ${{ secrets.HEALTHCHECK_URL }}
           CF_ANALYTICS_TOKEN: ${{ vars.CF_ANALYTICS_TOKEN }}
           GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE }}
+          SCHEDULED: ${{ github.event.schedule }}
         run: |
           git config user.name "tradeinvest-bot"
           git config user.email "actions@users.noreply.github.com"
