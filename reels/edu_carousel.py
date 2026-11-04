@@ -124,6 +124,26 @@ def slides(c, n):
     return [_page(EXTRA + b, i, total, last=(i == total), ground=g) for i, (b, g) in enumerate(body, 1)]
 
 
+def alts(c, total):
+    """Alt text per slide (read by screen readers and by Instagram search)."""
+    plain = lambda x: re.sub(r"\*", "", x)  # noqa: E731
+    out = [f"TradeInvest կարուսել՝ {plain(c['title'])}։ {c['sub']}"]
+    for sl in c["slides"]:
+        t = sl["type"]
+        out.append({"point": lambda: f"{sl.get('n', '')} {sl.get('title', '')}՝ {sl.get('text', '')}",
+                    "myth": lambda: f"Միֆ՝ {sl['myth']}։ Փաստ՝ {sl['fact']}",
+                    "quote": lambda: f"Միտք՝ {plain(sl['text'])}",
+                    "rule": lambda: f"Կանոն՝ {plain(sl['text'])}",
+                    "list": lambda: f"{sl['head']}՝ " + "; ".join(sl["items"]),
+                    "table": lambda: f"{sl['head']}՝ " + "; ".join(f"{a} {b}" for a, b in sl["rows"]),
+                    "formula": lambda: f"{sl.get('head', '')}՝ {sl['formula']}",
+                    "candle": lambda: "Ճապոնական մոմի կառուցվածքը՝ High, Close, Open, Low, մարմին և պատրույգ"}.get(t, lambda: plain(c["title"]))())
+    while len(out) < total - 1:
+        out.append(f"Ամփոփում՝ {plain(c['title'])}")
+    out.append("Պահիր, կիսվիր։ Անվճար մինի դասընթաց՝ հղումը bio-ում։ @armtradeinvest")
+    return out[:total]
+
+
 def caption(c):
     plain = re.sub(r"\*", "", c["title"])
     return (f"{plain}\n\n{c['caption']}\n\n{'' if 'comment' in c['caption'] else '🔖 Պահիր՝ կրկնելու համար' + chr(10) + chr(10)}⚠️ {DISCLAIMER}\n\n"

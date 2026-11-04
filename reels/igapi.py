@@ -44,8 +44,13 @@ def publish_story_video(video_url):
     return _publish_container(media_type="STORIES", video_url=video_url)
 
 
-def publish_image(image_url, caption):
+def publish_image(image_url, caption, alt_text=None):
     caption = _lint(caption)
+    if alt_text:
+        try:
+            return _publish_container(image_url=image_url, caption=caption, alt_text=alt_text[:1000])
+        except Error as exc:                        # alt_text not accepted -> publish without it
+            print("[igapi] alt_text rejected:", str(exc)[:160])
     return _publish_container(image_url=image_url, caption=caption)
 
 
@@ -53,9 +58,17 @@ def publish_story_image(image_url):
     return _publish_container(media_type="STORIES", image_url=image_url)
 
 
-def publish_carousel(image_urls, caption):
+def publish_carousel(image_urls, caption, alts=None):
     caption = _lint(caption)
-    kids = [ig._post(f"{IG_USER_ID}/media", image_url=u, is_carousel_item="true")["id"] for u in image_urls]
+    alts = alts or [None] * len(image_urls)
+    def _kid(u, a):
+        if a:
+            try:
+                return ig._post(f"{IG_USER_ID}/media", image_url=u, is_carousel_item="true", alt_text=a[:1000])["id"]
+            except Error as exc:                    # alt_text not accepted -> item without it
+                print("[igapi] alt_text rejected:", str(exc)[:160])
+        return ig._post(f"{IG_USER_ID}/media", image_url=u, is_carousel_item="true")["id"]
+    kids = [_kid(u, a) for u, a in zip(image_urls, alts)]
     for k in kids:                                   # every slide must be processed before the album is built
         ig._wait_until_finished(k, timeout=180, interval=4)
     c = ig._post(f"{IG_USER_ID}/media", media_type="CAROUSEL", children=",".join(kids), caption=caption)

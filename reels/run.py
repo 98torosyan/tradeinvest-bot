@@ -430,7 +430,7 @@ def do_carousel(st, now, rid, publish):
     if not wait_until_reachable(ordered[-1], timeout=300):
         raise RuntimeError("carousel images not reachable")
     from . import igapi
-    media = igapi.publish_carousel(ordered, cap)
+    media = igapi.publish_carousel(ordered, cap, ec.alts(c, len(ordered)))
     st.setdefault("edu_carousels_done", {})[c["id"]] = {"media": media, "date": today}
     st["edu_carousel_last"] = today
     summary(f"✅ Carousel {c['id']} published ({len(imgs)} slides)"); return "published"
@@ -670,7 +670,7 @@ def do_monthly(st, now, rid, publish):
     if not wait_until_reachable(u, timeout=300):
         raise RuntimeError("image not reachable")
     from . import igapi
-    media = igapi.publish_image(u, cap)
+    media = igapi.publish_image(u, cap, f"Bitcoin-ի {key} ամսվա օրական փոփոխությունների օրացույց և հիմնական թվեր")
     st["monthly_last"] = key
     st.setdefault("monthly_media", []).append({"media": media, "date": now.strftime("%Y-%m-%d")})
     summary(f"✅ Monthly infographic {key} published"); return "published"
@@ -737,7 +737,8 @@ def do_poster(st, now, rid, publish):
     if not wait_until_reachable(u, timeout=300):
         raise RuntimeError("poster image not reachable")
     from . import igapi
-    media = igapi.publish_image(u, cap)
+    alt = "TradeInvest պոստեր՝ " + (p.get("text") or f'{p["big"]} — {p["title"]}').replace("*", "") + "։ " + p["why"]
+    media = igapi.publish_image(u, cap, alt)
     done[p["id"]] = {"media": media, "date": today}
     summary(f"✅ Poster {p['id']} published"); return "published"
 
