@@ -83,6 +83,18 @@ def main(dry=False):
     lines += ["", "🏆 Ամենաշատ դիտված."] + [f"• {r['kind']} {r['id']}՝ {r['views']} դիտում" for r in top]
     best = max(rows, key=lambda r: r["eng"])
     lines += ["", f"💎 Ամենաշատ պահված/կիսված՝ {best['kind']} {best['id']} ({100 * best['eng']:.1f}%)"]
+    try:                                                   # which hook formulas work best (shorts only)
+        from . import shorts as _sh
+        fm = {x["id"]: x.get("formula") for x in _sh.load() if x.get("formula")}
+        byf = {}
+        for r in rows:
+            if r["kind"] == "Կարճ դաս" and fm.get(r["id"]):
+                byf.setdefault(fm[r["id"]], []).append(r["views"])
+        if byf:
+            best_f = sorted(byf.items(), key=lambda kv: -statistics.mean(kv[1]))[:3]
+            lines += ["", "🪝 Hook-ի բանաձևեր (միջին դիտում)."] + [f"• {k}՝ {statistics.mean(v):.0f}" for k, v in best_f]
+    except Exception as exc:  # noqa: BLE001
+        print("[report] formulas", exc)
     reels = [r for r in rows if r["watch"]]
     if reels:
         lines.append(f"⏱ Reel-ի միջին դիտման ժամանակ՝ {statistics.mean(r['watch'] for r in reels) / 1000:.1f} վրկ")
