@@ -1,3 +1,6 @@
+**2026-11-04 20:38** `carousel` ✅ published
+- ✅ Carousel C-01 published (7 slides)
+---
 **2026-11-04 20:32** `lesson` ✅ skipped
 - ℹ️ analysis already published today
 ---
@@ -86,6 +89,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 39 items
 - ✅ News published: Նյու Ջերսին հանեց Coinbase-ի սթեյքինգի արգելքը
----
-**2026-11-03 03:18** `chart` ✅ published
-- ✅ Story published
