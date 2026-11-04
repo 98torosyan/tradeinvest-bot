@@ -1,5 +1,5 @@
 {
- "_note": "Short lesson Reels (12–20 s), brand «Գիշերային Սևան». hook ≤ ~8 words, legible at frame 0. *word* = brass, _word_ = marker. big = huge number card. Numbers are arithmetic examples (tag ՕՐԻՆԱԿ).",
+ "_note": "Short lesson Reels (7–20 s), brand TI Rise. hook ≤ ~8 words, legible at frame 0. *word* = amber, _word_ = marker. big = huge number card. Numbers are arithmetic examples (tag EXAMPLE).",
  "shorts": [
   {
    "id": "S-001",
@@ -318,6 +318,308 @@
    "tags": "#overtrading #tradingpsychology #թրեյդինգ",
    "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
    "visual": "grid"
+  },
+  {
+   "id": "S-015",
+   "series": "RISK",
+   "tag": "EXAMPLE",
+   "theme": "auto",
+   "hook": "Stop-ը 2%, թիրախը 6%՝ *1:3*",
+   "beats": [
+    {
+     "big": "−2%",
+     "text": "Եթե սխալ ես",
+     "loss": true
+    },
+    {
+     "big": "+6%",
+     "text": "Եթե ճիշտ ես"
+    }
+   ],
+   "rule": "Թիրախը դիր _իրական_ մակարդակի վրա։",
+   "caption": "R/R 1:3 նշանակում է՝ մեկ ճիշտ գործարքը ծածկում է երեք սխալը։ Բայց թիրախը պետք է լինի իրական մակարդակի վրա, ոչ թե ցանկալի թվի։",
+   "tags": "#riskreward #trading #ռիսկ",
+   "kind": "ՌԻՍԿ",
+   "visual": "rr"
+  },
+  {
+   "id": "S-016",
+   "series": "MINDSET",
+   "tag": "MISTAKE",
+   "theme": "auto",
+   "hook": "Կանաչ մոմ տեսար ու *միանգամից* մտար",
+   "beats": [
+    {
+     "text": "Մուտք առանց մակարդակի։"
+    },
+    {
+     "text": "Գինը հետ է գալիս, դու՝ վնասում։"
+    }
+   ],
+   "rule": "Սպասիր _քո_ գոտուն։",
+   "caption": "Մեծ կանաչ մոմից հետո գինը հաճախ հետ է գալիս։ Մտիր քո նախօրոք նշած գոտում, ոչ թե շարժման գագաթին։",
+   "tags": "#fomo #tradingpsychology #crypto",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "fomo"
+  },
+  {
+   "id": "S-017",
+   "series": "RISK",
+   "tag": "RULE",
+   "theme": "auto",
+   "hook": "Stop-ը տեղափոխում ես *ներքև*՝ սխալ է",
+   "beats": [
+    {
+     "text": "Գինը մոտենում է stop-ին։"
+    },
+    {
+     "text": "«Մի քիչ էլ տամ»՝ և վնասը կրկնապատկվում է։"
+    }
+   ],
+   "rule": "Stop-ը շարժվում է միայն _քո օգտին_։",
+   "caption": "Stop-loss-ը կարելի է տեղափոխել միայն շահույթի ուղղությամբ։ Վնասի ուղղությամբ տեղափոխելը պլանից հրաժարվել է։",
+   "tags": "#stoploss #riskmanagement #trading",
+   "kind": "ՌԻՍԿ",
+   "visual": "stop"
+  },
+  {
+   "id": "S-018",
+   "series": "MINDSET",
+   "tag": "HABIT",
+   "theme": "auto",
+   "hook": "Լավագույն թրեյդերները *շատ են սպասում*",
+   "beats": [
+    {
+     "text": "Օրվա մեծ մասը՝ դիտում։"
+    },
+    {
+     "text": "Գործարք՝ միայն իրենց setup-ի վրա։"
+    }
+   ],
+   "rule": "Սպասելը նույնպես _որոշում_ է։",
+   "caption": "Պրոֆեսիոնալ թրեյդինգը հիմնականում սպասում է։ Գործարքը բացվում է միայն այն ժամանակ, երբ շուկան տալիս է քո setup-ը։",
+   "tags": "#patience #tradingpsychology #թրեյդինգ",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "chart"
+  },
+  {
+   "id": "S-019",
+   "series": "RISK",
+   "tag": "EXAMPLE",
+   "theme": "auto",
+   "hook": "5 վնաս անընդմեջ՝ 1% ռիսկով",
+   "beats": [
+    {
+     "big": "≈ −5%",
+     "text": "Հաշիվը դեռ կենդանի է",
+     "loss": true
+    },
+    {
+     "big": "≈ −41%",
+     "text": "Նույնը 10% ռիսկով",
+     "loss": true
+    }
+   ],
+   "rule": "Վատ շարքը _կգա_։ Պատրաստ եղիր։",
+   "caption": "5 վնաս անընդմեջ պատահում է նույնիսկ լավ ռազմավարության դեպքում։ 1% ռիսկի դեպքում դա մոտ −5% է, 10%-ի դեպքում՝ մոտ −41%։",
+   "tags": "#riskmanagement #drawdown #ռիսկ",
+   "kind": "ՌԻՍԿ",
+   "visual": "chart"
+  },
+  {
+   "id": "S-020",
+   "series": "MINDSET",
+   "tag": "RULE",
+   "theme": "auto",
+   "hook": "Գինը քո մակարդակին է հասել։ *Հետո՞ ինչ*",
+   "beats": [
+    {
+     "text": "Մակարդակը մուտքի ազդանշան չէ։"
+    },
+    {
+     "text": "Սպասիր հաստատման՝ ռեակցիա, մոմ, ծավալ։"
+    }
+   ],
+   "rule": "Մակարդակը ասում է _որտեղ_, ոչ թե _երբ_։",
+   "caption": "Support/resistance գոտին ցույց է տալիս, թե որտեղ նայել։ Մուտքի համար պետք է տեսնել գնի ռեակցիան այդ գոտում։",
+   "tags": "#supportandresistance #technicalanalysis #թրեյդինգ",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "level"
+  },
+  {
+   "id": "S-021",
+   "series": "RISK",
+   "tag": "EXAMPLE",
+   "theme": "auto",
+   "hook": "Winrate 40%, բայց հաշիվը *աճում է*",
+   "beats": [
+    {
+     "big": "−6",
+     "text": "6 վնաս × 1R",
+     "loss": true
+    },
+    {
+     "big": "+8",
+     "text": "4 շահույթ × 2R"
+    },
+    {
+     "big": "+2R",
+     "text": "10 գործարքից հետո"
+    }
+   ],
+   "rule": "Կարևորը _winrate × R/R_ է։",
+   "caption": "40% winrate-ը և R/R 1:2-ը միասին տալիս են դրական արդյունք։ Հաշվարկը պարզեցված է՝ առանց միջնորդավճարների։",
+   "tags": "#winrate #riskreward #trading",
+   "kind": "ՌԻՍԿ",
+   "visual": "chart"
+  },
+  {
+   "id": "S-022",
+   "series": "MINDSET",
+   "tag": "MISTAKE",
+   "theme": "auto",
+   "hook": "Ընկերոջդ *ազդանշանով* մտար",
+   "beats": [
+    {
+     "text": "Չգիտես, որտեղ է նրա stop-ը։"
+    },
+    {
+     "text": "Չգիտես, երբ է նա դուրս գալիս։"
+    }
+   ],
+   "rule": "Ուրիշի գործարքը _քո պլանը_ չէ։",
+   "caption": "Եթե չգիտես մուտքի պատճառը, stop-ը և թիրախը, ապա դու չես թրեյդ անում, այլ հետևում ես։",
+   "tags": "#tradingsignals #tradingpsychology #crypto",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "chart"
+  },
+  {
+   "id": "S-023",
+   "series": "RISK",
+   "tag": "RULE",
+   "theme": "auto",
+   "hook": "Օրվա *վնասի սահման*՝ 3%",
+   "beats": [
+    {
+     "big": "−3%",
+     "text": "Հասար՝ փակում ես հավելվածը",
+     "loss": true
+    },
+    {
+     "text": "Վաղը՝ նոր օր, թարմ գլուխ։"
+    }
+   ],
+   "rule": "Սահմանը որոշիր _մինչև_ առաջին գործարքը։",
+   "caption": "Օրվա առավելագույն վնասի սահմանը պաշտպանում է վատ օրը աղետալի օրի վերածվելուց։ Թիվը ընտրիր քո ռիսկին համապատասխան։",
+   "tags": "#riskmanagement #discipline #ռիսկ",
+   "kind": "ՌԻՍԿ",
+   "visual": "stop"
+  },
+  {
+   "id": "S-024",
+   "series": "MINDSET",
+   "tag": "HABIT",
+   "theme": "auto",
+   "hook": "Մեկ ակտիվ, մեկ setup, *մեկ ամիս*",
+   "beats": [
+    {
+     "text": "Ոչ թե 20 կոին միաժամանակ։"
+    },
+    {
+     "text": "Խորը ճանաչիր մեկը։"
+    }
+   ],
+   "rule": "Պարզությունը _առավելություն_ է։",
+   "caption": "Սկսնակի համար լավագույն ճանապարհը մեկ ակտիվն ու մեկ setup-ն է։ Այդպես ավելի արագ ես տեսնում, թե ինչն է աշխատում։",
+   "tags": "#tradingtips #focus #թրեյդինգ",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "chart"
+  },
+  {
+   "id": "S-025",
+   "series": "RISK",
+   "tag": "EXAMPLE",
+   "theme": "auto",
+   "hook": "Մուտքը մակարդակից *հեռու*՝ stop-ը մեծ",
+   "beats": [
+    {
+     "text": "Մեծ stop → փոքր position size։"
+    },
+    {
+     "text": "Մոտ մուտք → ավելի լավ R/R։"
+    }
+   ],
+   "rule": "Լավ մուտքը _մակարդակի մոտ_ է։",
+   "caption": "Որքան մոտ ես մտնում մակարդակին, այնքան փոքր է stop-ը և լավ R/R-ը։ Գնի հետևից վազելը վատացնում է երկուսն էլ։",
+   "tags": "#entry #riskreward #trading",
+   "kind": "ՌԻՍԿ",
+   "visual": "level"
+  },
+  {
+   "id": "S-026",
+   "series": "MINDSET",
+   "tag": "FOMO",
+   "theme": "auto",
+   "hook": "«Այս անգամ ուրիշ է»՝ *ամենավտանգավոր* միտքը",
+   "beats": [
+    {
+     "text": "Կանոնները անտեսում ես մեկ գործարքի համար։"
+    },
+    {
+     "text": "Հենց այդ մեկն է լինում ամենամեծ վնասը։"
+    }
+   ],
+   "rule": "Կանոնը կանոն է՝ _ամեն_ գործարքում։",
+   "caption": "Կանոններից բացառություն անելը սովորաբար ավարտվում է ամենամեծ վնասով։ Պլանը աշխատում է միայն, եթե այն միշտ կիրառվում է։",
+   "tags": "#tradingrules #discipline #tradingpsychology",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "fomo"
+  },
+  {
+   "id": "S-027",
+   "series": "RISK",
+   "tag": "RULE",
+   "theme": "auto",
+   "hook": "Մասնակի *take profit*՝ պարզ կանոն",
+   "beats": [
+    {
+     "text": "Մի մասը փակիր առաջին թիրախում։"
+    },
+    {
+     "text": "Stop-ը տեղափոխիր մուտքի կետ։"
+    }
+   ],
+   "rule": "Պլանը գրիր _մինչև_ մուտքը։",
+   "caption": "Մասնակի փակումը և stop-ը breakeven-ում պահելը նվազեցնում են ճնշումը։ Կարևորն այն է, որ այս քայլերը որոշված լինեն նախօրոք։",
+   "tags": "#takeprofit #riskmanagement #trading",
+   "kind": "ՌԻՍԿ",
+   "visual": "rr"
+  },
+  {
+   "id": "S-028",
+   "series": "MINDSET",
+   "tag": "CHECKLIST",
+   "theme": "auto",
+   "hook": "3 հարց *մինչև* «Buy» սեղմելը",
+   "beats": [
+    {
+     "big": "1",
+     "text": "Որտե՞ղ է stop-ը։"
+    },
+    {
+     "big": "2",
+     "text": "Որքա՞ն եմ ռիսկի դնում։"
+    },
+    {
+     "big": "3",
+     "text": "Ինչու՞ հենց հիմա։"
+    }
+   ],
+   "rule": "Պատասխան չկա՝ _գործարք_ չկա։",
+   "caption": "Եթե այս 3 հարցից մեկին պատասխան չունես, գործարքը պետք չէ։ Պահիր այս Reel-ը։",
+   "tags": "#tradingchecklist #discipline #թրեյդինգ",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "chart"
   }
  ]
 }
