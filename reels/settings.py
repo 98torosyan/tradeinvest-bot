@@ -28,4 +28,4 @@ LESSONS_PER_DAY = 3
 QUIET_HOURS = (0, 9)
 
 # Nov 2026 format: 12:37 short lesson (reels/content/shorts.json), 19:07 analysis Reel, no 21:37 Reel.
-SHORTS_ENABLED = True
+SHORTS_ENABLED = False   # paused until the owner approves the reworked visuals
