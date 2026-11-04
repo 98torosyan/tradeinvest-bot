@@ -151,4 +151,6 @@ def build(cur, state, out_dir):
     open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8").write(page)
     from . import minicourse
     minicourse.build(out_dir)
+    from . import tools as _tools
+    _tools.build(out_dir)
     return os.path.join(out_dir, "index.html")

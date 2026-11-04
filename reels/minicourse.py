@@ -120,13 +120,14 @@ def build(out_dir):
             f'<p class="lead">{html.escape(c["subtitle"])}։ Կարդա հերթով, պատասխանիր հարցերին և ստուգիր քեզ։</p>'
             f'<div class="meta"><span class="chip"><b>{len(ls)}</b> դաս</span><span class="chip"><b>~{mins}</b> րոպե</span><span class="chip"><b>{len(ls)}</b> ինքնաստուգում</span></div>'
             f'<a class="go" href="#l1">Սկսել առաջին դասից →</a>'
-            f'<a class="pdf" href="{PDF}" download>⬇ Անվճար PDF՝ «Ռիսկի կառավարում. 6 կանոն»</a></section>'
+            f'<a class="pdf" href="{PDF}" download>⬇ Անվճար PDF՝ «Ռիսկի կառավարում. 6 կանոն»</a>'
+            f'<a class="pdf" href="../tools/">🧮 Թրեյդերի հաշվիչներ՝ position size, R/R →</a></section>'
             f'<nav class="toc" aria-label="Դասերի ցանկ">{toc}</nav>'
             f'{"".join(_lesson(l) for l in ls)}'
             f'<section class="end"><h2>Ուզում ես սովորել համակարգված՝ պրակտիկայով</h2>'
             f'<p>Անհատական դասընթաց՝ 3 ամիս, տեսություն, վերլուծություն, պրակտիկա և ռիսկի կառավարում։ Բոնուս՝ բոտ քո ռազմավարությամբ։</p>'
             f'<a href="{DM}" target="_blank" rel="noopener">Գրիր DM «ԴԱՍ» →</a><small>Պատասխանում ենք 24 ժամվա ընթացքում</small></section>'
-            f'<footer><a href="{IG}" target="_blank" rel="noopener">@armtradeinvest</a> · <a href="../">Բոլոր դասերը</a><br>'
+            f'<footer><a href="{IG}" target="_blank" rel="noopener">@armtradeinvest</a> · <a href="../tools/">Հաշվիչներ</a> · <a href="../">Բոլոր դասերը</a><br>'
             f'Կրթական բովանդակություն է, ոչ թե ֆինանսական խորհուրդ։ Թրեյդինգը կապված է կորստի ռիսկի հետ։</footer>'
             f'</div><script>{JS}</script>{analytics()}</body></html>')
     os.makedirs(os.path.join(out_dir, "start"), exist_ok=True)
