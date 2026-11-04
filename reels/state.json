@@ -1855,7 +1855,6 @@
   ],
   "news": [],
   "story": [
-   "user_px-house-flying-580004.mp3",
    "user_px-gym-phonk-620567.mp3",
    "user_px-phonk-reel-614877.mp3",
    "user_px-cinematic-hiphop-315904.mp3",
@@ -1871,7 +1870,7 @@
  "music_last": {
   "lesson": "user_px-gym-phonk-620567.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
-  "story": "user_px-trap-instrumental-560466.mp3"
+  "story": "user_px-house-flying-580004.mp3"
  },
  "music_sections": {
   "delayed-flight.mp3": [
@@ -1948,6 +1947,11 @@
    18.0,
    30.0,
    42.0
+  ],
+  "user_px-house-flying-580004.mp3": [
+   28.0,
+   40.0,
+   52.0
   ]
  },
  "music_uses": {
@@ -1961,7 +1965,8 @@
   "user_the-mountain-market-systems-146118.mp3": 18,
   "user_soundsurfer-trading-254548.mp3": 18,
   "user_px-trap-instrumental-560466.mp3": 1,
-  "user_px-gym-phonk-620567.mp3": 1
+  "user_px-gym-phonk-620567.mp3": 1,
+  "user_px-house-flying-580004.mp3": 1
  },
  "low_alert": "2026-10-07",
  "hits_low_alert": "2026-10-17",

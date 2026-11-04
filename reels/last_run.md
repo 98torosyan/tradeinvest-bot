@@ -1,3 +1,6 @@
+**2026-11-04 21:29** `quiz` ❌ failed
+- ❌ quiz սխալ՝ RuntimeError: not reachable on Pages: https://98torosyan.github.io/tradeinvest-bot/reels/20261104-2129-quiz.mp4
+---
 **2026-11-04 20:38** `carousel` ✅ published
 - ✅ Carousel C-01 published (7 slides)
 ---
@@ -83,9 +86,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7541.4}
 - ✅ Story published
----
-**2026-11-03 04:55** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 39 items
-- ✅ News published: Նյու Ջերսին հանեց Coinbase-ի սթեյքինգի արգելքը
