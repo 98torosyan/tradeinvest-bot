@@ -1,5 +1,5 @@
 {
- "_note": "Short lesson Reels (7–20 s), brand TI Rise. hook ≤ ~8 words, legible at frame 0. *word* = amber, _word_ = marker. big = huge number card. Numbers are arithmetic examples (tag EXAMPLE).",
+ "_note": "Short lesson Reels (7–20 s), brand TI Rise. hook ≤ ~8 words, legible at frame 0. *word* = amber, _word_ = marker. big = huge number card. Numbers are arithmetic examples (tag EXAMPLE). Hooks S-029+ follow the 26 hook formulas of Jakeschincariol/instagram-agent-skill (MIT); field 'formula' names the one used.",
  "shorts": [
   {
    "id": "S-001",
@@ -620,6 +620,335 @@
    "tags": "#tradingchecklist #discipline #թրեյդինգ",
    "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
    "visual": "chart"
+  },
+  {
+   "id": "S-029",
+   "series": "RISK",
+   "tag": "RULE",
+   "theme": "auto",
+   "hook": "Դադարեցրու stop-ը դնել *կլոր թվի* վրա",
+   "beats": [
+    {
+     "text": "Բոլորը դնում են $100 000-ի վրա։"
+    },
+    {
+     "text": "Գինը հաճախ «դիպչում» է հենց այնտեղ։"
+    },
+    {
+     "text": "Դիր stop-ը մակարդակից այն կողմ, տրամաբանական տեղում։"
+    }
+   ],
+   "rule": "Stop-ը դիր այնտեղ, որտեղ գաղափարը _սխալ_ է դառնում։",
+   "caption": "Կլոր թվերի մոտ կուտակվում են շատ հայտեր։ Stop-ը պետք է կապված լինի գրաֆիկի տրամաբանության հետ, ոչ թե գեղեցիկ թվի։",
+   "tags": "#stoploss #riskmanagement #trading",
+   "kind": "ՌԻՍԿ",
+   "visual": "stop",
+   "formula": "Negative Command"
+  },
+  {
+   "id": "S-030",
+   "series": "MINDSET",
+   "tag": "TRUTH",
+   "theme": "auto",
+   "hook": "Ոչ ոք չի ասում, որ առաջին ամիսները *սովորելու* համար են",
+   "beats": [
+    {
+     "text": "Ոչ թե վաստակելու։"
+    },
+    {
+     "text": "Փոքր ռիսկ, շատ գրառումներ, շատ դասեր։"
+    }
+   ],
+   "rule": "Սկզբում նպատակը _փորձն_ է, ոչ թե շահույթը։",
+   "caption": "Սկզբնական շրջանում ամենակարևորը կապիտալը պահելն ու փորձ կուտակելն է։ Շահույթը գալիս է հմտությունից հետո։",
+   "tags": "#tradingjourney #tradingpsychology #թրեյդինգ",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "chart",
+   "formula": "Nobody Tells You"
+  },
+  {
+   "id": "S-031",
+   "series": "RISK",
+   "tag": "MISTAKE",
+   "theme": "auto",
+   "hook": "Support-ը սխալ ես գծում, և դա *քո մեղքը չէ*",
+   "beats": [
+    {
+     "text": "Գծում ես մեկ գիծ՝ մոմի ծայրով։"
+    },
+    {
+     "text": "Իսկ գինը արձագանքում է գոտում։"
+    },
+    {
+     "text": "Նշիր գոտի՝ պատրույգներից մինչև մարմիններ։"
+    }
+   ],
+   "rule": "Մակարդակը _գոտի_ է, ոչ թե գիծ։",
+   "caption": "Գինը հազվադեպ է կանգնում ճիշտ նույն կետում։ Գոտին ավելի իրատեսական է և քիչ կեղծ ազդանշան է տալիս։",
+   "tags": "#supportandresistance #technicalanalysis #թրեյդինգ",
+   "kind": "ՌԻՍԿ",
+   "visual": "level",
+   "formula": "Wrong Way, Right Way"
+  },
+  {
+   "id": "S-032",
+   "series": "MINDSET",
+   "tag": "CHECKLIST",
+   "theme": "auto",
+   "hook": "4 նշան, որ պետք է *փակել* գրաֆիկը։ 4-րդը բոլորը անտեսում են",
+   "beats": [
+    {
+     "big": "1",
+     "text": "Արդեն 2 վնաս ունես այսօր։"
+    },
+    {
+     "big": "2",
+     "text": "Չես կարող բացատրել մուտքի պատճառը։"
+    },
+    {
+     "big": "3",
+     "text": "Հոգնած ես։"
+    },
+    {
+     "big": "4",
+     "text": "Ուզում ես «հետ բերել»։"
+    }
+   ],
+   "rule": "Փակել գրաֆիկը նույնպես _որոշում_ է։",
+   "caption": "Ամենավտանգավորը 4-րդն է. «հետ բերելու» ցանկությունը ամենաշատ է մեծացնում ռիսկը։",
+   "tags": "#tradingpsychology #discipline #թրեյդինգ",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "chart",
+   "formula": "Numbered With A Favourite"
+  },
+  {
+   "id": "S-033",
+   "series": "RISK",
+   "tag": "OBJECTION",
+   "theme": "auto",
+   "hook": "«Stop-ը միշտ կպչում է»։ *Լավ*։ Ահա թե ինչու",
+   "beats": [
+    {
+     "text": "Stop-ը չափազանց մոտ է՝ սովորական տատանման մեջ։"
+    },
+    {
+     "text": "Դիր մակարդակից այն կողմ և փոքրացրու չափը։"
+    }
+   ],
+   "rule": "Մեծ stop + փոքր չափ = _նույն_ ռիսկ։",
+   "caption": "Եթե stop-ը հաճախ է կպչում, հաճախ խնդիրը նրա տեղն է, ոչ թե stop-ի գաղափարը։ Ռիսկը կառավարվում է չափով։",
+   "tags": "#stoploss #positionsizing #trading",
+   "kind": "ՌԻՍԿ",
+   "visual": "stop",
+   "formula": "The Objection"
+  },
+  {
+   "id": "S-034",
+   "series": "RISK",
+   "tag": "EXAMPLE",
+   "theme": "auto",
+   "hook": "50% winrate, և հաշիվը *կրկնակի* արագ է աճում",
+   "beats": [
+    {
+     "big": "1:1",
+     "text": "10 գործարք՝ 0R արդյունք"
+    },
+    {
+     "big": "1:3",
+     "text": "Նույն 10 գործարքը՝ +10R"
+    }
+   ],
+   "rule": "Winrate-ը նույնն է, _R/R_-ն է տարբերությունը։",
+   "caption": "5 շահույթ × 3R − 5 վնաս × 1R = +10R։ Նույն ճշտությամբ, բայց լավ R/R-ով։ Հաշվարկը պարզեցված է։",
+   "tags": "#riskreward #winrate #trading",
+   "kind": "ՌԻՍԿ",
+   "visual": "rr",
+   "formula": "The Statistic"
+  },
+  {
+   "id": "S-035",
+   "series": "MINDSET",
+   "tag": "FLIP",
+   "theme": "auto",
+   "hook": "Շատ գործարքը շատ փող չէ։ *Շատ սխալ* է",
+   "beats": [
+    {
+     "text": "Ամեն գործարք՝ միջնորդավճար և որոշում։"
+    },
+    {
+     "text": "Ամեն որոշում՝ սխալվելու հնարավորություն։"
+    }
+   ],
+   "rule": "Քիչ, բայց _ընտրված_ գործարքներ։",
+   "caption": "Գործարքների քանակը մեծացնում է ծախսերն ու էմոցիոնալ բեռը։ Որակը կարևոր է քանակից։",
+   "tags": "#overtrading #tradingpsychology #թրեյդինգ",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "split",
+   "formula": "Contrarian Flip"
+  },
+  {
+   "id": "S-036",
+   "series": "RISK",
+   "tag": "CALLOUT",
+   "theme": "auto",
+   "hook": "Leverage-ով սկսնակներ, *սա ձեզ համար է*",
+   "beats": [
+    {
+     "big": "x20",
+     "text": "5% շարժումը կարող է ջնջել մարժան",
+     "loss": true
+    },
+    {
+     "text": "Սկսիր առանց leverage-ի կամ շատ փոքրով։"
+    }
+   ],
+   "rule": "Leverage-ը _արագացնում_ է ամեն ինչ, նաև սխալը։",
+   "caption": "x20 leverage-ի դեպքում մոտ 5% շարժումը դեմ քեզ կարող է ջնջել ամբողջ մարժան։ Պարզեցված հաշվարկ՝ առանց միջնորդավճարների։",
+   "tags": "#leverage #futures #ռիսկ",
+   "kind": "ՌԻՍԿ",
+   "visual": "multiplier",
+   "formula": "The Callout",
+   "visual_labels": {
+    "caption": "LEVERAGE × 20",
+    "a": "−5%",
+    "b": "−100%",
+    "sb": "× 20",
+    "mult": "×20"
+   }
+  },
+  {
+   "id": "S-037",
+   "series": "MINDSET",
+   "tag": "PERMISSION",
+   "theme": "auto",
+   "hook": "Պետք չէ ամեն օր *թրեյդ* անել",
+   "beats": [
+    {
+     "text": "Լավ setup ամեն օր չկա։"
+    },
+    {
+     "text": "Դիտելը և սպասելը նույնպես աշխատանք է։"
+    }
+   ],
+   "rule": "Գործարք չանելը նույնպես _դիրք_ է։",
+   "caption": "Ամեն օր գործարք անելու ճնշումը տանում է թույլ մուտքերի։ Սպասիր քո պայմաններին։",
+   "tags": "#patience #tradingpsychology #թրեյդինգ",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "chart",
+   "formula": "Permission"
+  },
+  {
+   "id": "S-038",
+   "series": "RISK",
+   "tag": "HEAD TO HEAD",
+   "theme": "auto",
+   "hook": "Market order ընդդեմ *Limit order*",
+   "beats": [
+    {
+     "text": "Market՝ հիմա, ընթացիկ գնով, հնարավոր slippage։"
+    },
+    {
+     "text": "Limit՝ քո գնով, բայց կարող է չկատարվել։"
+    }
+   ],
+   "rule": "Ընտրիր՝ _արագություն_, թե _գին_։",
+   "caption": "Market order-ը երաշխավորում է կատարումը, Limit-ը՝ գինը։ Երկուսն էլ գործիքներ են, կարևորն այն է՝ երբ որն օգտագործել։",
+   "tags": "#orders #tradingbasics #crypto",
+   "kind": "ՌԻՍԿ",
+   "visual": "rr",
+   "formula": "Head To Head"
+  },
+  {
+   "id": "S-039",
+   "series": "MINDSET",
+   "tag": "QUESTION",
+   "theme": "auto",
+   "hook": "«Որքա՞ն փողով սկսել»։ Այս հարցը *ամեն շաբաթ* է գալիս",
+   "beats": [
+    {
+     "text": "Սկսիր այն գումարով, որը պատրաստ ես կորցնել։"
+    },
+    {
+     "text": "Նախ դեմո, հետո փոքր իրական հաշիվ։"
+    }
+   ],
+   "rule": "Սկզբում կարևոր է _հմտությունը_, ոչ թե գումարը։",
+   "caption": "Առաջին նպատակը սովորելն է առանց մեծ վնասի։ Գումարը մեծացնում են, երբ արդյունքը կայուն է։",
+   "tags": "#tradingbasics #crypto #թրեյդինգ",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "chart",
+   "formula": "The Verbatim Question"
+  },
+  {
+   "id": "S-040",
+   "series": "RISK",
+   "tag": "STEAL",
+   "theme": "auto",
+   "hook": "Վերցրու այս *3 տողը* և գրիր ամեն գործարքից առաջ",
+   "beats": [
+    {
+     "big": "1",
+     "text": "Մուտք՝ ինչու հենց այստեղ"
+    },
+    {
+     "big": "2",
+     "text": "Stop՝ որտեղ եմ սխալ"
+    },
+    {
+     "big": "3",
+     "text": "Թիրախ՝ R/R ≥ 1:2"
+    }
+   ],
+   "rule": "3 տող՝ _մինչև_ կոճակը սեղմելը։",
+   "caption": "Այս երեք տողը պլանի նվազագույնն է։ Պահիր Reel-ը և օգտագործիր հաջորդ գործարքից։",
+   "tags": "#tradingplan #riskmanagement #trading",
+   "kind": "ՌԻՍԿ",
+   "visual": "stop",
+   "formula": "The Steal"
+  },
+  {
+   "id": "S-041",
+   "series": "MINDSET",
+   "tag": "FIX",
+   "theme": "auto",
+   "hook": "Եթե գնում ես գագաթին և վաճառում հատակին, *սա* քեզ համար է",
+   "beats": [
+    {
+     "text": "Մուտքը որոշում է էմոցիան, ոչ թե պլանը։"
+    },
+    {
+     "text": "Գրիր մուտքի կանոնը նախօրոք և սպասիր դրան։"
+    }
+   ],
+   "rule": "Էմոցիան չի կարող _պլան_ լինել։",
+   "caption": "FOMO-ն և վախը տանում են ամենավատ գներին։ Նախօրոք գրված կանոնը պաշտպանում է այդ ծուղակից։",
+   "tags": "#fomo #tradingpsychology #crypto",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "fomo",
+   "formula": "If This, Then Watch"
+  },
+  {
+   "id": "S-042",
+   "series": "RISK",
+   "tag": "RULE",
+   "theme": "auto",
+   "hook": "Ամենաարագ ճանապարհը հաշիվը պահելու համար՝ *փոքր ռիսկն* է",
+   "beats": [
+    {
+     "big": "1%",
+     "text": "մեկ գործարքում"
+    },
+    {
+     "big": "3%",
+     "text": "օրվա առավելագույն վնաս (օրինակ)"
+    }
+   ],
+   "rule": "Փոքր ռիսկը քեզ _խաղի մեջ_ է պահում։",
+   "caption": "Կապիտալը պահելը առաջին քայլն է։ Թվերը օրինակ են, ընտրիր քո ռիսկին համապատասխան։",
+   "tags": "#riskmanagement #discipline #ռիսկ",
+   "kind": "ՌԻՍԿ",
+   "visual": "chart",
+   "formula": "The Superlative"
   }
  ]
 }

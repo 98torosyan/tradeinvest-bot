@@ -56,7 +56,7 @@ export const Visual: React.FC<{v: VisualSpec; starts: number[]; body: number}> =
           <text x={c.x + 135} y={base - Math.max(c.h * c.p, 0) - 26} textAnchor="middle" fontSize={64} fontWeight={800} fill={loss} opacity={c.p} fontFamily={ff(t, "display")}>{c.lab}</text>
           <text x={c.x + 135} y={base + 52} textAnchor="middle" fontSize={30} fontWeight={700} letterSpacing="0.14em" fill={t.c.muted} fontFamily={ff(t, "body")}>{c.sub}</text>
         </g>)}
-      <text x={540} y={base - H / 2} textAnchor="middle" fontSize={120} fontWeight={900} fill={acc} opacity={pr(f, s2 - 10, s2 + 6) * (1 - pr(f, s2 + 30, s2 + 44))} fontFamily={ff(t, "display")}>×10</text>
+      <text x={540} y={base - H / 2} textAnchor="middle" fontSize={120} fontWeight={900} fill={acc} opacity={pr(f, s2 - 10, s2 + 6) * (1 - pr(f, s2 + 30, s2 + 44))} fontFamily={ff(t, "display")}>{L.mult ?? "×10"}</text>
     </svg>;
   }
 

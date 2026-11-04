@@ -112,7 +112,7 @@ def visual(s, n):
     if kind.startswith("image:"):
         return {"kind": "image", "image": kind.split(":", 1)[1]}
     if kind in ("multiplier", "grid"):
-        return {"kind": kind}
+        return {"kind": kind, **({"labels": s["visual_labels"]} if s.get("visual_labels") else {})}
     sym, label = ASSETS[n % len(ASSETS)]
     tf = TFS[(n // len(ASSETS)) % len(TFS)]
     allc = _klines(sym, tf)
