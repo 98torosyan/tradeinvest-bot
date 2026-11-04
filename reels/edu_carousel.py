@@ -90,11 +90,32 @@ def _slide(s):
     raise ValueError(f"unknown slide type {t}")
 
 
+def _recap(c):
+    """The screenshot slide (instagram-agent-skill/ig-carousel, MIT): the whole carousel as one list."""
+    items = []
+    for sl in c["slides"]:
+        t = sl["type"]
+        if t == "point":
+            items.append(sl["title"])
+        elif t == "myth":
+            items.append("❌ " + sl["myth"])
+        elif t == "list":
+            items += sl["items"]
+    items = [re.sub(r"\*", "", x) for x in items][:7]
+    if len(items) < 3:
+        return None
+    rows = "".join(f'<div class="li"><em>{i:02d}</em>{esc(x)}</div>' for i, x in enumerate(items, 1))
+    return (f'<div class="box"><div class="hd">ԱՄՓՈՓՈՒՄ · ՊԱՀԻՐ ՍՔՐԻՆՇՈԹՈՎ</div><div class="ls" style="font-size:36px">{rows}</div></div>', "ink")
+
+
 def slides(c, n):
     body = [(f'<div class="edge"></div><div class="box"><div class="kick">{esc(c["kicker"])}</div>'
              f'<div class="cvh">{_acc(c["title"])}</div><div class="sub">{esc(c["sub"])}</div></div>',
              "paper" if n % 2 else "ink")]
     body += [_slide(s) for s in c["slides"]]
+    rc = _recap(c)
+    if rc and len(body) + 2 <= 10:                    # Graph API carousels take at most 10 items
+        body.append(rc)
     body.append(('<div class="edge"></div><div class="end"><h1>Պահիր։<br><span class="acc">Կիսվիր։</span></h1><div class="acts">'
                  f'<div class="act"><span>{_icon("book")}</span>Պահիր՝ կրկնելու համար</div>'
                  f'<div class="act"><span>{_icon("users")}</span>Ուղարկիր ընկերոջդ</div>'
