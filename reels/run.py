@@ -170,6 +170,19 @@ def quiet(now):
     return a <= now.hour < b
 
 
+def to_youtube(mp4, title, caption, tags=None):
+    """Cross-post a fresh Reel as a YouTube Short when the YT_* secrets exist; never fails the run."""
+    try:
+        from . import youtube
+        if not youtube.configured():
+            return
+        vid = youtube.upload(mp4, title, caption, tags)
+        if vid:
+            summary(f"✅ YouTube Short https://youtube.com/shorts/{vid}")
+    except Exception as exc:  # noqa: BLE001
+        summary(f"⚠️ YouTube upload failed (Instagram is fine): {str(exc)[:160]}")
+
+
 def reel_to_story(urls, rid):
     """Re-share the fresh Reel as a Story (more reach; the owner adds good ones to Highlights by hand)."""
     if not getattr(settings, "REEL_TO_STORY", False):
@@ -211,7 +224,8 @@ def do_short(st, now, rid, publish):
     st.setdefault("shorts_done", {})[s["id"]] = {"media": media, "date": today, "kw": kw}
     st.setdefault("published", {})[s["id"]] = {"media": media, "date": today, "hour": now.hour}
     summary(f"✅ short {s['id']} published ({dur:.0f}s, kw={kw})")
-    reel_to_story(urls, rid); return "published"
+    reel_to_story(urls, rid)
+    to_youtube(mp4, s["hook"], cap, ["trading", "թրեյդինգ", "crypto", "risk management"]); return "published"
 
 
 def do_lesson(st, now, rid, publish):
@@ -497,7 +511,8 @@ def do_analysis(st, now, rid, publish):
     st.setdefault("analysis_media", []).append({"media": media, "asset": asset, "date": today})
     st["analysis_media"] = st["analysis_media"][-60:]
     summary(f"✅ Analysis Reel {asset} published")
-    reel_to_story(urls, rid); return "published"
+    reel_to_story(urls, rid)
+    to_youtube(mp4, caption.split("\n")[0], caption, ["technical analysis", asset, "trading", "վերլուծություն"]); return "published"
 
 
 def do_stories_pack(st, now, rid, publish):
@@ -545,7 +560,8 @@ def do_weekly(st, now, rid, publish):
     st["weekly_last"] = today
     st.setdefault("weekly_media", []).append({"media": media, "date": today})
     summary("✅ Weekly recap Reel published")
-    reel_to_story(urls, rid); return "published"
+    reel_to_story(urls, rid)
+    to_youtube(mp4, "Շաբաթը մեկ հայացքով՝ BTC, ETH, ոսկի, Nasdaq", cap, ["bitcoin", "crypto", "weekly recap"]); return "published"
 
 
 def _story_video(img, mp4, track, secs=8):

@@ -113,6 +113,9 @@ jobs:
           CF_ANALYTICS_TOKEN: ${{ vars.CF_ANALYTICS_TOKEN }}
           GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE }}
           SCHEDULED: ${{ github.event.schedule }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
         run: |
           git config user.name "tradeinvest-bot"
           git config user.email "actions@users.noreply.github.com"
