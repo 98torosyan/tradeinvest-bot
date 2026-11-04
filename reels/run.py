@@ -656,12 +656,39 @@ def do_econ_dry(st, now, rid, publish):
     return "done"
 
 
+def do_fact(st, now, rid, publish):
+    """16:07 rotating Story: did-you-know fact → glossary term → number of the day."""
+    from . import story_cards as sc
+    today = now.strftime("%Y-%m-%d")
+    d = st.setdefault("daily_fact", {"n": 0, "last": "", "fact": 0, "term": 0, "num": 0})
+    if publish and d.get("last") == today:
+        summary("ℹ️ daily fact already published"); return "skipped"
+    F = sc.facts()
+    kind = ("fact", "term", "num")[d["n"] % 3]
+    if kind == "fact" and d["fact"] >= len(F["facts"]):
+        kind = "num"
+    if kind == "term" and d["term"] >= len(F["terms"]):
+        kind = "num"
+    if kind == "fact":
+        page = sc.fact_page(F["facts"][d["fact"]])
+    elif kind == "term":
+        page = sc.term_page(F["terms"][d["term"]], d["term"] + 1, len(F["terms"]))
+    else:
+        page = sc.number_of_day(d["num"])
+    img = sc.render(page, os.path.join(OUT, rid + ".jpg"))
+    if not publish:
+        summary(f"[dry-run] daily {kind}"); return "dry-run"
+    _story_image(img, rid)
+    d[kind] += 1; d["n"] += 1; d["last"] = today
+    summary(f"✅ Daily {kind} Story"); return "published"
+
+
 def do_report_dry(st, now, rid, publish):
     from . import report
     report.main(dry=True); return "done"
 
 
-HANDLERS = {"econ_dry": do_econ_dry, "monthly": do_monthly, "challenge": do_challenge, "alert": do_alert, "weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
+HANDLERS = {"fact": do_fact, "econ_dry": do_econ_dry, "monthly": do_monthly, "challenge": do_challenge, "alert": do_alert, "weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
             "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel, "analysis": do_analysis}
 
 

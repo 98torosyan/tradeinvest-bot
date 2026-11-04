@@ -88,3 +88,57 @@ def alert_page(name, sym, pct, price, hi, lo, zone_txt, other_txt):
             f'<div class="cta">Մանրամասները՝ 19:07-ի վերլուծության մեջ</div>'
             f'<div class="foot">{DISCLAIMER} Սա կանխատեսում չէ։</div>')
     return _page(body)
+
+
+# ---------------------------------------------------------------- daily 16:07 rotating Story: fact / term / number
+FACTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "content", "daily_facts.json")
+
+
+def facts():
+    return json.load(open(FACTS, encoding="utf-8"))
+
+
+def fact_page(f):
+    body = (f'<div class="k"><i></i>ԳԻՏԵ՞Ր</div><div class="day" style="font-size:{220 if len(f["big"]) <= 4 else 170}px">{esc(f["big"])}</div>'
+            f'<h1 style="top:800px;font-size:64px;color:#A3A09A">{esc(f["when"])}</h1>'
+            f'<div class="p" style="top:920px;font-size:58px;line-height:1.3;color:#F2EFE8;font-weight:700">{esc(f["text"])}</div>'
+            f'<div class="cta">Ուղարկիր ընկերոջդ, ով սա չգիտեր 📤</div>')
+    return _page(body)
+
+
+def term_page(t, n, total):
+    body = (f'<div class="k"><i></i>ԲԱՌԱՐԱՆ · {n:02d}/{total}</div>'
+            f'<div class="day" style="font-size:{150 if len(t["en"]) <= 10 else 112}px;color:#F2EFE8">{esc(t["en"])}</div>'
+            f'<h1 style="top:720px;color:#FF8A00">{esc(t["hy"])}</h1>'
+            f'<div class="p" style="top:900px;font-size:56px;line-height:1.3;color:#F2EFE8;font-weight:600">{esc(t["text"])}</div>'
+            f'<div class="cta">Պահիր բառարանը՝ ամեն օր նոր տերմին 🔖</div>')
+    return _page(body)
+
+
+def number_page(big, title, text, src):
+    body = (f'<div class="k"><i></i>ՕՐՎԱ ԹԻՎԸ</div><div class="day" style="font-size:{230 if len(big) <= 4 else 170}px">{esc(big)}</div>'
+            f'<h1 style="top:770px;font-size:76px">{_acc(title)}</h1>'
+            f'<div class="p" style="top:1110px;font-size:42px">{esc(text)}</div>'
+            f'<div class="cta">Ինչ ես կարծում՝ սա շատ է, թե քիչ։ Պատասխանիր 💬</div>'
+            f'<div class="foot">Աղբյուր՝ {esc(src)}։ {DISCLAIMER}</div>')
+    return _page(body)
+
+
+def number_of_day(k):
+    """Three live statistics from Binance BTC daily candles, rotated by k."""
+    import requests
+    rows = requests.get("https://data-api.binance.vision/api/v3/klines", params={"symbol": "BTCUSDT", "interval": "1d", "limit": 366}, timeout=25).json()[:-1]
+    c = [float(r[4]) for r in rows]; o = [float(r[1]) for r in rows]; h = [float(r[2]) for r in rows]; lo = [float(r[3]) for r in rows]
+    src = "Binance, BTC/USDT օրական գներ"
+    if k % 3 == 0:
+        g = sum(c[i] > o[i] for i in range(len(c) - 30, len(c)))
+        return number_page(f"{g}/30", "Վերջին 30 օրից այսքանն է BTC-ն փակվել *կանաչ*",
+                           "Նույնիսկ աճող շուկայում կարմիր օրերը շատ են։ Ահա թե ինչու է ամեն գործարքի համար պետք stop-loss։", src)
+    if k % 3 == 1:
+        top = max(h)
+        d = (c[-1] / top - 1) * 100
+        return number_page(f"{d:.0f}%", "Այսքան է BTC-ն հիմա հեռու *տարեկան գագաթից*",
+                           f"Տարվա ամենաբարձր գինը՝ ${top:,.0f}, հիմա՝ ${c[-1]:,.0f}։ Գագաթից գնելը ամենաթանկ սխալներից է։".replace(",", " "), src)
+    rng = sum((h[i] - lo[i]) / c[i - 1] * 100 for i in range(len(c) - 30, len(c))) / 30
+    return number_page(f"{rng:.1f}%", "BTC-ի միջին *օրական* տատանումը վերջին 30 օրում",
+                       "Եթե stop-ը դնում ես ավելի մոտ, քան օրական սովորական տատանումը, այն կարող է կպչել պատահաբար։", src)
