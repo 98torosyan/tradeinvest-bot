@@ -1846,12 +1846,24 @@
    "user_the-mountain-tech-corporate-593075.mp3"
   ],
   "news": [],
-  "story": []
+  "story": [
+   "user_px-house-flying-580004.mp3",
+   "user_px-gym-phonk-620567.mp3",
+   "user_px-phonk-reel-614877.mp3",
+   "user_px-cinematic-hiphop-315904.mp3",
+   "user_px-action-trailer-624648.mp3",
+   "user_px-danger-music-620575.mp3",
+   "user_px-dark-suspense-trailer-488322.mp3",
+   "user_px-epic-motivation-618588.mp3",
+   "user_px-urban-hiphop-beat-623450.mp3",
+   "user_px-into-the-night-drill-20928.mp3",
+   "user_px-adrenaline-sport-620584.mp3"
+  ]
  },
  "music_last": {
   "lesson": "user_the-mountain-market-systems-146118.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
-  "story": "story_mixkit-electropop-870.mp3"
+  "story": "user_px-trap-instrumental-560466.mp3"
  },
  "music_sections": {
   "delayed-flight.mp3": [
@@ -1919,6 +1931,10 @@
    38.0,
    53.0,
    65.0
+  ],
+  "user_px-trap-instrumental-560466.mp3": [
+   13.0,
+   25.0
   ]
  },
  "music_uses": {
@@ -1930,7 +1946,8 @@
   "user_starostin-investment-finance-trading-mon.mp3": 17,
   "user_apalonbeats-finance-money-trading-invest.mp3": 17,
   "user_the-mountain-market-systems-146118.mp3": 18,
-  "user_soundsurfer-trading-254548.mp3": 18
+  "user_soundsurfer-trading-254548.mp3": 18,
+  "user_px-trap-instrumental-560466.mp3": 1
  },
  "low_alert": "2026-10-07",
  "hits_low_alert": "2026-10-17",
