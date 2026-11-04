@@ -53,7 +53,7 @@ MODULE = {
          ("rgba(255,122,107,.22)", "rgba(255,190,120,.10)", "rgba(255,194,184,.08)")),
  4: _mod("m4-blue", "#0B1834", "#07101F", "#050A15", "#5B9BFF", "#9CC2FF", "#F2F6FC", "#93A3C4", "#DDE6F5",
          ("rgba(70,120,255,.26)", "rgba(90,220,240,.12)", "rgba(120,90,255,.10)")),
- 5: _mod("m5-green", "#0E2A1B", "#081A10", "#040F09", "#7BC47F", "#A8F0CB", "#EEFAF3", "#95B8A4", "#D8EFE2",
+ 5: _mod("m5-green", "#0E2A1B", "#081A10", "#040F09", "#34C98A", "#A8F0CB", "#EEFAF3", "#95B8A4", "#D8EFE2",
          ("rgba(61,220,151,.20)", "rgba(80,170,255,.10)", "rgba(168,240,203,.08)")),
  6: _mod("m6-violet", "#1B1830", "#110F20", "#0A0914", "#9B8CFF", "#D4CCFF", "#F4F2FF", "#A19CC0", "#E2DFF5",
          ("rgba(155,140,255,.24)", "rgba(255,120,200,.10)", "rgba(100,160,255,.10)")),
@@ -74,7 +74,7 @@ MODULE = {
 # One ink background and one neutral text scale for every format. Colour carries meaning:
 # the accent says which SERIES a lesson belongs to; green/red only ever mean up/down.
 INK = "linear-gradient(175deg,#141416 0%,#0B0B0C 58%,#070708 100%)"   # v3 ink
-UP, DOWN = "#7BC47F", "#E25B4B"
+UP, DOWN = "#34C98A", "#F2505E"
 
 
 def _brand(name, a, a2):

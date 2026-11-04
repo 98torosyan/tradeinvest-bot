@@ -37,7 +37,7 @@ def page(year, month, D, name="Bitcoin"):
     m = max(abs(x["ret"]) for x in D["days"]) or 1
     for x in D["days"]:
         a = 0.18 + 0.82 * min(1, abs(x["ret"]) / m)
-        col = f"rgba(123,196,127,{a:.2f})" if x["ret"] >= 0 else f"rgba(226,91,75,{a:.2f})"
+        col = f"rgba(52,201,138,{a:.2f})" if x["ret"] >= 0 else f"rgba(242,80,94,{a:.2f})"
         cells.append(f'<div class="cell" style="background:{col}"><b>{x["d"]}</b><span>{"+" if x["ret"] >= 0.05 else ("−" if x["ret"] <= -0.05 else "")}{abs(x["ret"]):.1f}</span></div>')
     up = D["pct"] >= 0
     css = """*{margin:0;box-sizing:border-box}html,body{width:1080px;height:1350px;overflow:hidden}
@@ -46,18 +46,18 @@ body{background:#0B0B0C;color:#F2EFE8;font-family:ArmV,ArmSans,sans-serif;positi
 h1{margin-top:44px;font-size:76px;line-height:1.02;font-weight:800;font-stretch:80%;letter-spacing:-.02em}h1 b{color:#FF8A00}
 .kp{margin-top:34px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .k{background:#141416;border:1.5px solid rgba(242,239,232,.1);border-radius:18px;padding:20px 20px}
-.k small{display:block;font-size:20px;color:#A3A09A;font-weight:700;letter-spacing:.04em}.k b{display:block;margin-top:8px;font-family:Mono;font-size:34px;font-weight:800}
+.k small{display:block;font-family:ArmV,sans-serif;font-size:21px;color:#A3A09A;font-weight:700;letter-spacing:.02em}.k b{display:block;margin-top:8px;font-family:Mono;font-size:34px;font-weight:800}
 .wd{margin-top:34px;display:grid;grid-template-columns:repeat(7,1fr);gap:10px;font-size:20px;color:#A3A09A;font-weight:700;text-align:center}
 .cal{margin-top:10px;display:grid;grid-template-columns:repeat(7,1fr);gap:10px}
 .cell{height:92px;border-radius:12px;padding:10px 12px;display:flex;flex-direction:column;justify-content:space-between}.cell.e{background:transparent}
 .cell b{font-size:20px;font-weight:800;color:rgba(255,255,255,.85)}.cell span{font-family:Mono;font-size:22px;font-weight:800;text-align:right}
 .ft{position:absolute;left:80px;right:80px;bottom:46px;display:flex;font-size:20px;color:#8E8A83}.ft span{margin-left:auto}"""
     wd = "".join(f"<div>{d}</div>" for d in ["Երկ", "Երք", "Չրք", "Հնգ", "Ուր", "Շբթ", "Կիր"])
-    kp = (f'<div class="k"><small>ԱՄՍՎԱ ԱՐԴՅՈՒՆՔ</small><b style="color:{"#7BC47F" if up else "#E25B4B"}">{"+" if up else "−"}{abs(D["pct"]):.1f}%</b></div>'
+    kp = (f'<div class="k"><small>ԱՄՍՎԱ ԱՐԴՅՈՒՆՔ</small><b style="color:{"#34C98A" if up else "#F2505E"}">{"+" if up else "−"}{abs(D["pct"]):.1f}%</b></div>'
           f'<div class="k"><small>ԲԱՐՁՐ / ՑԱԾՐ</small><b style="font-size:24px">{_money(D["high"])}<br>{_money(D["low"])}</b></div>'
           f'<div class="k"><small>ԿԱՆԱՉ ՕՐԵՐ</small><b>{D["green"]}/{len(D["days"])}</b></div>'
-          f'<div class="k"><small>ԼԱՎ / ՎԱՏ ՕՐ</small><b style="font-size:24px"><span style="color:#7BC47F">{D["best"]["d"]}՝ +{D["best"]["ret"]:.1f}%</span><br>'
-          f'<span style="color:#E25B4B">{D["worst"]["d"]}՝ −{abs(D["worst"]["ret"]):.1f}%</span></b></div>')
+          f'<div class="k"><small>ԼԱՎ / ՎԱՏ ՕՐ</small><b style="font-size:24px"><span style="color:#34C98A">{D["best"]["d"]}՝ +{D["best"]["ret"]:.1f}%</span><br>'
+          f'<span style="color:#F2505E">{D["worst"]["d"]}՝ −{abs(D["worst"]["ret"]):.1f}%</span></b></div>')
     small = MARK.replace('width="64" height="74"', 'width="40" height="46"')
     return (f'<!doctype html><html lang="hy"><head><meta charset="utf-8"><link rel="stylesheet" href="{ASSETS}/fonts.css">'
             f'<style>{brand.font_css()}{css}</style></head><body>'

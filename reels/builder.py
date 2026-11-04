@@ -227,8 +227,8 @@ def build_lesson(spec, palette):
 
 # ---------------- Market Story ----------------
 ASSET_LABEL = {"BTC": ("BTC", "Bitcoin"), "ETH": ("ETH", "Ethereum"), "GOLD": ("XAU", "Ոսկի"), "SPX": ("S&P", "S&P 500")}
-MOOD = {"bull": ("Bullish", "Crypto շուկայում գերակշռում է աճի տրամադրությունը", "#7BC47F"),
-        "bear": ("Bearish", "Crypto շուկայում գերակշռում է անկման տրամադրությունը", "#E25B4B"),
+MOOD = {"bull": ("Bullish", "Crypto շուկայում գերակշռում է աճի տրամադրությունը", "#34C98A"),
+        "bear": ("Bearish", "Crypto շուկայում գերակշռում է անկման տրամադրությունը", "#F2505E"),
         "neutral": ("Neutral", "Crypto շուկան հիմա չեզոք է, հստակ ուղղություն չկա", "#F4C95D")}
 
 
@@ -295,7 +295,7 @@ def build_chart_story(spec, palette, date_label):
     step = W / n; bw = step * .62
     candles = ""
     for i, c in enumerate(cs):
-        x = i * step + step / 2; up = c["c"] >= c["o"]; col = "#7BC47F" if up else "#E25B4B"
+        x = i * step + step / 2; up = c["c"] >= c["o"]; col = "#34C98A" if up else "#F2505E"
         top, bot = y(max(c["o"], c["c"])), y(min(c["o"], c["c"]))
         candles += (f'<g class="cd" data-i="{i}" style="opacity:0">'
                     f'<line x1="{x:.1f}" x2="{x:.1f}" y1="{y(c["h"]):.1f}" y2="{y(c["l"]):.1f}" stroke="{col}" stroke-width="4"/>'

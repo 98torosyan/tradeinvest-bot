@@ -76,7 +76,7 @@ def challenge_page(day):
 # ---------------------------------------------------------------- big move alert
 def alert_page(name, sym, pct, price, hi, lo, zone_txt, other_txt):
     up = pct >= 0
-    color = "#7BC47F" if up else "#E25B4B"
+    color = "#34C98A" if up else "#F2505E"
     sign = "+" if up else "−"
     body = (f'<div class="k"><i></i>ԿԱՐԵՎՈՐ ՇԱՐԺՈՒՄ · 24 ԺԱՄ</div>'
             f'<div class="big" style="color:{color}">{sign}{abs(pct):.1f}%</div>'

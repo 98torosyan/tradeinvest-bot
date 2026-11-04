@@ -161,7 +161,7 @@ export const TI: Theme = {
   c: {
     bg: "#0B0B0C", surface: "#1B1C1F", fg: "#F2EFE8", muted: "#A3A09A", grid: "rgba(242,239,232,0.06)",
     accent: "#FF8A00", onAccent: "#0B0B0C", up: "#FF8A00", down: "#5C5A56",
-    a: "#7FA6C9", b: "#E25B4B", warn: "#E25B4B", zone: "rgba(255,138,0,0.14)", hero: "#1B1C1F",
+    a: "#FFA640", b: "#F2505E", warn: "#F2505E", zone: "rgba(255,138,0,0.14)", hero: "#1B1C1F",
   },
   fx: {...SEVAN.fx!, light: {color: "#FFD3A0", x: 0.15, y: 0.2, r: 0.95, alpha: 0.14}, rim: {color: "#FF9A3C", alpha: 0.06},
     sculpt: {upTop: "#FFC27A", upBot: "#B5651A", dnTop: "#2A2B2F", dnBot: "#0B0B0C", glow: "rgba(255,138,0,0.30)", dnStroke: "#8A5A2A"}},
@@ -172,7 +172,7 @@ export const TI_PAPER: Theme = {
   c: {
     bg: "#F2EFE8", surface: "#E7E2D8", fg: "#0B0B0C", muted: "#5C5850", grid: "rgba(17,18,20,0.07)",
     accent: "#FF8A00", accentText: "#C25E00", onAccent: "#0B0B0C", up: "#FF8A00", down: "#1B1C1F",
-    a: "#2F4E78", b: "#C03A2B", warn: "#C03A2B", zone: "rgba(255,138,0,0.2)", hero: "#E7E2D8",
+    a: "#2F4E78", b: "#C9303F", warn: "#C9303F", zone: "rgba(255,138,0,0.2)", hero: "#E7E2D8",
   },
 };
 

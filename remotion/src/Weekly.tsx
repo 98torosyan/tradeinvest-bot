@@ -11,7 +11,7 @@ import {getTheme} from "./theme";
 export type WeeklyRow = {name: string; sym: string; closes: number[]; pct: number};
 export type WeeklyProps = {range: string; rows: WeeklyRow[]};
 
-const UP = "#7BC47F", DOWN = "#E25B4B";
+const UP = "#34C98A", DOWN = "#F2505E";
 const INTRO = 50, STEP = 24, HOLD = 40, SUM = 75, ASK = 60;
 export const weeklyTotal = (n: number) => INTRO + n * STEP + HOLD + SUM + ASK + END_FRAMES;
 

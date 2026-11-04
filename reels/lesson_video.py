@@ -455,13 +455,13 @@ document.querySelectorAll('.lwc').forEach(el=>{const d=JSON.parse(el.dataset.cha
  const chart=Ch.createChart(el,{width:980,height:590,localization:{locale:'en-US'},layout:{background:{type:'solid',color:'rgba(0,0,0,0)'},textColor:'#dfe6f2',fontSize:24,fontFamily:'ArmSans'},
   grid:{vertLines:{color:'rgba(255,255,255,.05)'},horzLines:{color:'rgba(255,255,255,.07)'}},rightPriceScale:{borderVisible:false,scaleMargins:{top:.12,bottom:.1}},
   timeScale:{visible:false,borderVisible:false},crosshair:{mode:2,vertLine:{visible:false},horzLine:{visible:false}},handleScroll:false,handleScale:false});
- const s=chart.addSeries(Ch.CandlestickSeries,{upColor:'#7BC47F',downColor:'#E25B4B',wickUpColor:'#7BC47F',wickDownColor:'#E25B4B',borderVisible:false,priceLineVisible:false,lastValueVisible:false});
+ const s=chart.addSeries(Ch.CandlestickSeries,{upColor:'#34C98A',downColor:'#F2505E',wickUpColor:'#34C98A',wickDownColor:'#F2505E',borderVisible:false,priceLineVisible:false,lastValueVisible:false});
  el._c={chart,s,d,n:-1,lines:[]};
  HOOKS.push(t=>{const a=+sc.dataset.in,b=+sc.dataset.out;if(t<a||t>=b)return;const l=t-a,span=(b-a)*.55;
   const n=Math.max(1,Math.ceil(clamp01((l-.3)/span)*d.bars.length));
   if(n!==el._c.n){s.setData(d.bars.slice(0,n));chart.timeScale().setVisibleLogicalRange({from:-1,to:d.bars.length});el._c.n=n;}
   d.levels.forEach((lv,i)=>{if(l>=.3+span+.2+i*.4&&!el._c.lines[i]){el._c.lines[i]=s.createPriceLine({price:lv.price,
-   color:lv.kind==='support'?'#7BC47F':'#E25B4B',lineWidth:4,lineStyle:2,axisLabelVisible:true,title:lv.label});}});});});
+   color:lv.kind==='support'?'#34C98A':'#F2505E',lineWidth:4,lineStyle:2,axisLabelVisible:true,title:lv.label});}});});});
 document.querySelectorAll('.lottie').forEach(el=>{const sc=el.closest('.scene');const anim=lottie.loadAnimation({container:el,renderer:'svg',loop:false,autoplay:false,animationData:JSON.parse(el.dataset.lottie)});
  HOOKS.push(t=>{const a=+sc.dataset.in;if(!anim.totalFrames)return;anim.goToAndStop(Math.min(anim.totalFrames-1,Math.max(0,(t-a-.2)*anim.frameRate)),true);});});
 })();"""

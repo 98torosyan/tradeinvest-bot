@@ -15,7 +15,7 @@ config.background_opacity = 0.0
 config.pixel_width, config.pixel_height, config.frame_rate = 1000, 900, P["fps"]
 config.frame_width = 10; config.frame_height = 9
 A, A2, TXT = P["a"], P["a2"], P["txt"]
-RED, GREEN = "#E25B4B", "#7BC47F"
+RED, GREEN = "#F2505E", "#34C98A"
 F = "Noto Sans Armenian"
 
 class Recovery(Scene):

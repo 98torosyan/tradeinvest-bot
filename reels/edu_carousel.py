@@ -28,10 +28,10 @@ EXTRA = """<style>
 .li em{font-style:normal;font-family:Mono,monospace;font-weight:800;color:var(--a);font-size:34px;min-width:56px}
 .rl{font-size:92px;font-weight:800;line-height:1.08;letter-spacing:-.02em;font-stretch:78%}
 .rl .acc{text-decoration:underline;text-decoration-thickness:10px;text-underline-offset:14px}
-.my{padding:44px 44px;border-radius:28px;background:rgba(226,91,75,.10);border:2px solid rgba(226,91,75,.45)}
-.fc{margin-top:34px;padding:44px 44px;border-radius:28px;background:rgba(123,196,127,.10);border:2px solid rgba(123,196,127,.45)}
-.my span,.fc span{display:block;font-size:30px;font-weight:800;letter-spacing:.08em;margin-bottom:18px}.my span{color:#E25B4B}.fc span{color:#7BC47F}
-.my div{font-size:58px;font-weight:800;line-height:1.12;text-decoration:line-through;text-decoration-color:rgba(226,91,75,.7);text-decoration-thickness:5px}
+.my{padding:44px 44px;border-radius:28px;background:rgba(242,80,94,.10);border:2px solid rgba(242,80,94,.45)}
+.fc{margin-top:34px;padding:44px 44px;border-radius:28px;background:rgba(52,201,138,.10);border:2px solid rgba(52,201,138,.45)}
+.my span,.fc span{display:block;font-size:30px;font-weight:800;letter-spacing:.08em;margin-bottom:18px}.my span{color:#F2505E}.fc span{color:#34C98A}
+.my div{font-size:58px;font-weight:800;line-height:1.12;text-decoration:line-through;text-decoration-color:rgba(242,80,94,.7);text-decoration-thickness:5px}
 .fc div{font-size:40px;line-height:1.38;color:var(--p)}
 .qm{font-size:260px;line-height:.6;color:var(--a);font-weight:800;height:120px}
 .qt{font-size:84px;font-weight:800;line-height:1.12;letter-spacing:-.02em;font-stretch:80%}.qt .acc{color:var(--a2)}
