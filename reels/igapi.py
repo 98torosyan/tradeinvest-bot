@@ -40,6 +40,10 @@ def publish_story_video(video_url):
     return _publish_container(media_type="STORIES", video_url=video_url)
 
 
+def publish_story_image(image_url):
+    return _publish_container(media_type="STORIES", image_url=image_url)
+
+
 def publish_carousel(image_urls, caption):
     kids = [ig._post(f"{IG_USER_ID}/media", image_url=u, is_carousel_item="true")["id"] for u in image_urls]
     for k in kids:                                   # every slide must be processed before the album is built

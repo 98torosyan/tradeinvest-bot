@@ -470,7 +470,29 @@ def do_analysis(st, now, rid, publish):
     reel_to_story(urls, rid); return "published"
 
 
-HANDLERS = {"music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
+def do_stories_pack(st, now, rid, publish):
+    """One-off: publish every image in reels/assets/stories_pack/ (sorted) as Stories, once."""
+    import glob, time
+    from . import igapi
+    from delivery.media_hosting import wait_until_reachable
+    d = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "stories_pack")
+    done = st.setdefault("stories_pack_done", [])
+    files = [f for f in sorted(glob.glob(os.path.join(d, "*.jpg"))) if os.path.basename(f) not in done]
+    if not files:
+        summary("ℹ️ stories pack: nothing new"); return "skipped"
+    if not publish:
+        summary(f"[dry-run] stories pack: {len(files)} images"); return "dry-run"
+    urls = hosting.publish([(f, f"reels/{rid}-{os.path.basename(f)}") for f in files])
+    for f in files:
+        u = urls[f"reels/{rid}-{os.path.basename(f)}"]
+        if not wait_until_reachable(u, timeout=300):
+            raise RuntimeError(f"{u} is not reachable")
+        igapi.publish_story_image(u); done.append(os.path.basename(f))
+        summary(f"✅ Story {os.path.basename(f)}"); time.sleep(8)
+    return "published"
+
+
+HANDLERS = {"stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
             "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel, "analysis": do_analysis}
 
 
