@@ -1,3 +1,11 @@
+**2026-11-04 16:18** `stories_pack` ✅ published
+- ✅ Story Story_3_Shuka_1.jpg
+- ✅ Story Story_3_Shuka_2.jpg
+- ✅ Story Story_4_Quiz_1.jpg
+- ✅ Story Story_4_Quiz_2.jpg
+- ✅ Story Story_4_Quiz_3.jpg
+- ✅ Story Story_4_Quiz_4.jpg
+---
 **2026-11-04 16:03** `stories_pack` ✅ published
 - ✅ Story Story_1_Sksir_1.jpg
 - ✅ Story Story_1_Sksir_2.jpg
@@ -77,8 +85,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 40 items
 - ✅ News published: Mercado Bitcoin-ը դադարեցրել է գումարների դուրսբերումը
----
-**2026-11-02 16:50** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7580.07}
-- ✅ Story published
