@@ -26,7 +26,7 @@ on:
         required: true
         default: "lesson"
         type: choice
-        options: [lesson, news, story, chart, quiz, carousel, analysis, music, selftest, stories_pack, report_dry, weekly, challenge, alert, monthly]
+        options: [lesson, news, story, chart, quiz, carousel, analysis, music, selftest, stories_pack, report_dry, weekly, challenge, alert, monthly, econ_dry]
 
 permissions:
   contents: write
@@ -118,6 +118,8 @@ jobs:
         if: always()
         with:
           name: reel-${{ github.run_id }}
-          path: output/reels/*.mp4
+          path: |
+            output/reels/*.mp4
+            output/reels/*-week.jpg
           retention-days: 5
           if-no-files-found: ignore

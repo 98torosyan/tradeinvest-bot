@@ -573,7 +573,18 @@ def do_challenge(st, now, rid, publish):
         summary(f"[dry-run] challenge day {day}"); return "dry-run"
     _story_image(img, rid)
     ch.update(day=day, last=today)
-    summary(f"✅ Challenge Story day {day}/{n}"); return "published"
+    summary(f"✅ Challenge Story day {day}/{n}")
+    try:                                         # economic calendar Story: Monday = the week, other days = today's events
+        from . import econ
+        kind, evs = econ.plan(now)
+        if kind and st.get("econ_last") != today:
+            page = econ.week_page(evs) if kind == "week" else econ.today_page(evs)
+            _story_image(sc.render(page, os.path.join(OUT, rid + "-econ.jpg")), rid + "-econ")
+            st["econ_last"] = today
+            summary(f"✅ Economic calendar Story ({kind}, {len(evs)} events)")
+    except Exception as exc:  # noqa: BLE001
+        summary(f"⚠️ economic calendar skipped: {str(exc)[:160]}")
+    return "published"
 
 
 def do_alert(st, now, rid, publish):
@@ -636,12 +647,21 @@ def do_monthly(st, now, rid, publish):
     summary(f"✅ Monthly infographic {key} published"); return "published"
 
 
+def do_econ_dry(st, now, rid, publish):
+    from . import econ, story_cards as sc
+    evs = econ.events()
+    for e in evs:
+        print(f"{e['t']:%a %d %H:%M}  {e['name']}")
+    sc.render(econ.week_page(evs), os.path.join(OUT, rid + "-week.jpg"))
+    return "done"
+
+
 def do_report_dry(st, now, rid, publish):
     from . import report
     report.main(dry=True); return "done"
 
 
-HANDLERS = {"monthly": do_monthly, "challenge": do_challenge, "alert": do_alert, "weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
+HANDLERS = {"econ_dry": do_econ_dry, "monthly": do_monthly, "challenge": do_challenge, "alert": do_alert, "weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
             "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel, "analysis": do_analysis}
 
 
