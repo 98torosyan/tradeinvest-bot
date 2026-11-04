@@ -407,6 +407,35 @@ def do_quiz(st, now, rid, publish):
 
 
 def do_carousel(st, now, rid, publish):
+    """Educational carousel (TI Rise), Mon/Wed/Fri 15:07. Falls back to nothing when the scripts run out."""
+    from . import edu_carousel as ec
+    from delivery.media_hosting import wait_until_reachable
+    today = now.strftime("%Y-%m-%d")
+    if publish and quiet(now):
+        summary("🌙 quiet hours — carousel skipped"); return "skipped-quiet"
+    if publish and st.get("edu_carousel_last") == today:
+        summary("ℹ️ carousel already published today"); return "skipped"
+    c, n = ec.next_one(st)
+    if not c:
+        notify("📚 Կարուսելների սցենարները վերջացան։ Ժամանակն է գրել նորերը։"); return "skipped"
+    imgs = ec.render(ec.slides(c, n), os.path.join(OUT, rid + "-car"))
+    cap = ec.caption(c)
+    if ec.DISCLAIMER not in cap:
+        raise RuntimeError("carousel caption has no disclaimer")
+    if not publish:
+        summary(f"[dry-run] carousel {c['id']} {len(imgs)} slides"); return "dry-run"
+    urls = hosting.publish([(p, f"reels/{rid}-{i}.jpg") for i, p in enumerate(imgs)])
+    ordered = [urls[f"reels/{rid}-{i}.jpg"] for i in range(len(imgs))]
+    if not wait_until_reachable(ordered[-1], timeout=300):
+        raise RuntimeError("carousel images not reachable")
+    from . import igapi
+    media = igapi.publish_carousel(ordered, cap)
+    st.setdefault("edu_carousels_done", {})[c["id"]] = {"media": media, "date": today}
+    st["edu_carousel_last"] = today
+    summary(f"✅ Carousel {c['id']} published ({len(imgs)} slides)"); return "published"
+
+
+def do_weekly_carousel_legacy(st, now, rid, publish):
     from . import carousel
     from delivery.media_hosting import wait_until_reachable
     cur = {l["id"]: l for l in curriculum.load()["lessons"]}
