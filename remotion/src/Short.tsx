@@ -85,6 +85,18 @@ const Scene: React.FC<ShortProps & {starts: number[]; body: number}> = (P) => {
   </>;
 };
 
+// Retention: the Level line doubles as a progress bar (bright fill + glowing head), so viewers see the Reel is short.
+const Progress: React.FC<{body: number}> = ({body}) => {
+  const f = useCurrentFrame();
+  const t = useTheme();
+  const y = t.fx?.floorY ?? 1720;
+  const w = 1080 * Math.min(1, f / body);
+  return <>
+    <div style={{position: "absolute", left: 0, top: y - 3, width: w, height: 6, background: t.c.fg, opacity: 0.9}} />
+    <div style={{position: "absolute", left: w - 7, top: y - 7, width: 14, height: 14, borderRadius: 7, background: t.c.fg, boxShadow: `0 0 16px ${t.c.accent}`}} />
+  </>;
+};
+
 export const Short: React.FC<ShortProps> = (P) => {
   const theme = getTheme(P.theme ?? "ti");
   const {starts, body} = timeline(P);
@@ -93,6 +105,7 @@ export const Short: React.FC<ShortProps> = (P) => {
     <ThemeRoot theme={theme}>
       <Sequence durationInFrames={body} layout="none"><Scene {...P} starts={starts} body={body} />
         {starts.slice(1).map((s, i) => <LevelWipe key={i} at={s - 4} y={1720} />)}
+        <Progress body={body} />
       </Sequence>
       <Sequence from={body} layout="none"><EndCard cta={P.cta ?? "none"} /></Sequence>
       <Cue at={0} name={`hook${k2}`} volume={0.45} />
