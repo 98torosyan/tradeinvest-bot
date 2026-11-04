@@ -1,3 +1,6 @@
+**2026-11-05 00:33** `analysis` ✅ skipped-quiet
+- 🌙 quiet hours — analysis skipped
+---
 **2026-11-05 00:03** `report_dry` ✅ done
 
 ---
@@ -78,6 +81,3 @@
 ---
 **2026-11-03 20:30** `lesson` ✅ slot-done
 - ℹ️ 2/2 lessons already out today — nothing to do
----
-**2026-11-03 19:11** `lesson` ✅ published
-- ✅ H-085 «Ինչու է մեծ մասը կորցնում» published (45s, cta=save)
