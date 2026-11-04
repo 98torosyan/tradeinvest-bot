@@ -10,7 +10,7 @@ from .story_cards import MARK
 
 SRC = os.path.join(os.path.dirname(os.path.abspath(__file__)), "content", "posters.json")
 DISCLAIMER = "Կրթական բովանդակություն է, ոչ թե ֆինանսական խորհուրդ"
-GROUNDS = [("#0B0B0C", "#F2EFE8", "#FF8A00", "#A3A09A"), ("#F2EFE8", "#0B0B0C", "#D96F00", "#5C5850"), ("#FF8A00", "#0B0B0C", "#0B0B0C", "#3A2A10")]
+GROUNDS = [("#0B0B0C", "#F2EFE8", "#FF8A00", "#A3A09A"), ("#F2EFE8", "#0B0B0C", "#C25E00", "#5C5850"), ("#FF8A00", "#0B0B0C", "#0B0B0C", "#3A2A10")]
 
 
 def load():

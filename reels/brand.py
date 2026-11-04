@@ -7,7 +7,7 @@ import re
 ASSETS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
 
 INK, INK2, PAPER, PAPER2 = "#0B0B0C", "#16171A", "#F2EFE8", "#E6E1D6"
-TXT_D, MUT_D = "#F4F2EE", "#A3A09A"          # on ink   (MUT 7.6:1)
+TXT_D, MUT_D = "#F2EFE8", "#A3A09A"          # on ink   (MUT 7.6:1)
 TXT_L, MUT_L = "#0B0B0C", "#5C5850"          # on paper (MUT 6.4:1)
 AMBER = "#FF8A00"                            # Signal amber: the only accent
 UP, DOWN = "#22B573", "#E5484D"              # price data only

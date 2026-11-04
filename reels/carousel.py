@@ -75,10 +75,10 @@ V3 = """body{font-family:ArmV,ArmSans,sans-serif}h1{font-stretch:75%;font-weight
 
 def _ground(g):
     if g == "paper":
-        return "--bg:#F2EFE8;--txt:#0B0B0C;--mut:#5C5850;--p:#2B2A28;--a:#FF8A00;--a2:#D96F00"
+        return "--bg:#F2EFE8;--txt:#0B0B0C;--mut:#5C5850;--p:#2B2A28;--a:#FF8A00;--a2:#C25E00"
     if g == "amber":
         return "--bg:#FF8A00;--txt:#0B0B0C;--mut:#3A2A10;--p:#0B0B0C;--a:#0B0B0C;--a2:#0B0B0C"
-    return "--bg:#0B0B0C;--txt:#F4F2EE;--mut:#A3A09A;--p:#E4E0D8;--a:#FF8A00;--a2:#FFA640"
+    return "--bg:#0B0B0C;--txt:#F2EFE8;--mut:#A3A09A;--p:#E4E0D8;--a:#FF8A00;--a2:#FFA640"
 
 
 def _range(date_range):

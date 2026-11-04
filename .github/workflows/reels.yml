@@ -9,10 +9,9 @@ on:
     - cron: "37 4 * * *"
     - cron: "37 8,17 * * *"
     - cron: "7 15 * * *"
-    - cron: "37 6,12 * * *"
+    - cron: "37 6 * * *"
     - cron: "7 18 * * *"
     - cron: "37 9 * * *"
-    - cron: "37 15 * * *"
     - cron: "7 11 * * 1,3,5"
     - cron: "7 13 * * 0"
     - cron: "7 6 * * *"
@@ -57,7 +56,6 @@ jobs:
               "37 8,17 * * *") KIND=lesson ;;
               "7 15 * * *") KIND=lesson ;;
               "37 9 * * *") KIND=quiz ;;
-              "37 15 * * *") KIND=chart ;;
               "7 11 * * 1,3,5") KIND=carousel ;;
               "7 13 * * 0") KIND=weekly ;;
               "7 6 * * *") KIND=challenge ;;

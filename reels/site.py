@@ -24,7 +24,7 @@ def _font_css():
 
 
 CSS = """*{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0B0B0C;--bg2:#141416;--card:rgba(255,255,255,.045);--line:rgba(255,255,255,.09);--txt:#F4F2EE;--mut:#A3A09A;--a:#FF8A00;--a2:#FFA640}
+:root{--bg:#0B0B0C;--bg2:#141416;--card:rgba(255,255,255,.045);--line:rgba(255,255,255,.09);--txt:#F2EFE8;--mut:#A3A09A;--a:#FF8A00;--a2:#FFA640}
 html{scroll-behavior:smooth}body{background:var(--bg);color:var(--txt);font-family:Arm,system-ui,-apple-system,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
 a{color:inherit}.wrap{max-width:760px;margin:0 auto;padding:0 18px}
 .top{display:flex;align-items:center;gap:10px;padding:18px 0}.top svg{width:24px;height:30px}.top b{font-size:17px;font-weight:800;letter-spacing:-.01em}
@@ -63,7 +63,7 @@ li a{color:var(--txt);text-decoration:none;font-weight:600;flex:1}li a::after{co
 li em{margin-left:auto;font-style:normal;font-size:12px;color:rgba(255,255,255,.35);white-space:nowrap}
 li.hide{display:none}
 .course{margin-top:26px;padding:20px;border-radius:16px;background:#FF8A00;color:#0B0B0C}.course b{display:block;font-size:20px;font-weight:800}
-.course span{display:block;margin-top:6px;font-size:15px;line-height:1.45}.course a{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:12px;background:#0B0B0C;color:#F4F2EE;font-weight:800;text-decoration:none}
+.course span{display:block;margin-top:6px;font-size:15px;line-height:1.45}.course a{display:inline-block;margin-top:12px;padding:10px 16px;border-radius:12px;background:#0B0B0C;color:#F2EFE8;font-weight:800;text-decoration:none}
 footer{margin-top:44px;padding:26px 0 44px;border-top:1px solid var(--line);font-size:13px;color:var(--mut)}footer a{color:var(--a2)}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}"""
 
@@ -71,8 +71,8 @@ JS = """const q=document.getElementById('q');q&&q.addEventListener('input',()=>{
 document.querySelectorAll('details').forEach(d=>{let any=false;d.querySelectorAll('li').forEach(li=>{const m=!v||li.textContent.toLowerCase().includes(v);
 li.classList.toggle('hide',!m);any=any||m;});d.style.display=any?'':'none';if(v)d.open=any;});});"""
 
-LOGO = ('<svg viewBox="0 -96 366 436" aria-hidden="true"><rect x="0" y="0" width="252" height="78" rx="16" fill="#F4F2EE"/>'
-        '<rect x="84" y="0" width="84" height="340" rx="16" fill="#F4F2EE"/><rect x="282" y="-96" width="84" height="436" rx="16" fill="#FF8A00"/></svg>')
+LOGO = ('<svg viewBox="0 -96 366 436" aria-hidden="true"><rect x="0" y="0" width="252" height="78" rx="16" fill="#F2EFE8"/>'
+        '<rect x="84" y="0" width="84" height="340" rx="16" fill="#F2EFE8"/><rect x="282" y="-96" width="84" height="436" rx="16" fill="#FF8A00"/></svg>')
 
 
 FAVICON = ("%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-60 -150 486 560'%3E%3Crect x='-60' y='-150' width='486' height='560' rx='90' fill='%230B0B0C'/%3E"

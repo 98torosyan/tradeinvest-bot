@@ -40,5 +40,5 @@ body{{background:var(--bg);color:var(--txt);font-family:ArmSans,sans-serif}}
 HOOKS.push(t=>{{const cd=document.getElementById('cd');const n=3-Math.floor(t-3.2);
  cd.textContent=(t>=3.2&&t<6.2)?n:'';cd.style.display=(t>=3.2&&t<6.2)?'block':'none';
  document.getElementById('ls').style.opacity=t>=6.4?1:0;
- document.querySelectorAll('.o').forEach(o=>{{if(t>=6.2){{if(o.classList.contains('ok')){{o.style.background='rgba(47,209,139,.18)';o.style.borderColor='#2FD18B';}}
+ document.querySelectorAll('.o').forEach(o=>{{if(t>=6.2){{if(o.classList.contains('ok')){{o.style.background='rgba(47,209,139,.18)';o.style.borderColor='#7BC47F';}}
   else o.style.opacity=.35;}}}});}});setupReel();</script></body></html>'''

@@ -53,7 +53,7 @@ MODULE = {
          ("rgba(255,122,107,.22)", "rgba(255,190,120,.10)", "rgba(255,194,184,.08)")),
  4: _mod("m4-blue", "#0B1834", "#07101F", "#050A15", "#5B9BFF", "#9CC2FF", "#F2F6FC", "#93A3C4", "#DDE6F5",
          ("rgba(70,120,255,.26)", "rgba(90,220,240,.12)", "rgba(120,90,255,.10)")),
- 5: _mod("m5-green", "#0E2A1B", "#081A10", "#040F09", "#3DDC97", "#A8F0CB", "#EEFAF3", "#95B8A4", "#D8EFE2",
+ 5: _mod("m5-green", "#0E2A1B", "#081A10", "#040F09", "#7BC47F", "#A8F0CB", "#EEFAF3", "#95B8A4", "#D8EFE2",
          ("rgba(61,220,151,.20)", "rgba(80,170,255,.10)", "rgba(168,240,203,.08)")),
  6: _mod("m6-violet", "#1B1830", "#110F20", "#0A0914", "#9B8CFF", "#D4CCFF", "#F4F2FF", "#A19CC0", "#E2DFF5",
          ("rgba(155,140,255,.24)", "rgba(255,120,200,.10)", "rgba(100,160,255,.10)")),
@@ -74,13 +74,13 @@ MODULE = {
 # One ink background and one neutral text scale for every format. Colour carries meaning:
 # the accent says which SERIES a lesson belongs to; green/red only ever mean up/down.
 INK = "linear-gradient(175deg,#141416 0%,#0B0B0C 58%,#070708 100%)"   # v3 ink
-UP, DOWN = "#2FD18B", "#FF5F6D"
+UP, DOWN = "#7BC47F", "#E25B4B"
 
 
 def _brand(name, a, a2):
     r, g, b = int(a[1:3], 16), int(a[3:5], 16), int(a[5:7], 16)
     return {"name": name, "bg": INK, "a": a, "a2": a2, "ar": f"{r},{g},{b}",
-            "txt": "#F4F2EE", "mut": "#A3A09A", "p": "#E4E0D8", "em": a2,
+            "txt": "#F2EFE8", "mut": "#A3A09A", "p": "#E4E0D8", "em": a2,
             "blob1": f"rgba({r},{g},{b},.06)", "blob2": "rgba(255,255,255,.02)", "blob3": "rgba(255,255,255,.015)",
             "pt": "rgba(255,255,255,.25)", "onacc": "#0B0B0C", "grid": "rgba(255,255,255,.035)",
             "card": "rgba(255,255,255,.065)", "cardb": "rgba(255,255,255,.12)"}
@@ -97,7 +97,7 @@ BRAND = _brand("brand", "#FF8A00", "#FFA640")           # Stories that are not t
 
 
 V3 = {"name": "v3", "bg": "linear-gradient(175deg,#141416 0%,#0B0B0C 60%,#070708 100%)", "a": "#FF8A00", "a2": "#FFA640",
-      "ar": "255,138,0", "txt": "#F4F2EE", "mut": "#A3A09A", "p": "#E4E0D8", "em": "#FFA640",
+      "ar": "255,138,0", "txt": "#F2EFE8", "mut": "#A3A09A", "p": "#E4E0D8", "em": "#FFA640",
       "blob1": "rgba(255,138,0,.10)", "blob2": "rgba(255,255,255,.03)", "blob3": "rgba(255,255,255,.02)",
       "pt": "#FFA640", "onacc": "#0B0B0C", "grid": "rgba(255,255,255,.035)",
       "card": "rgba(255,255,255,.06)", "cardb": "rgba(255,255,255,.12)"}
