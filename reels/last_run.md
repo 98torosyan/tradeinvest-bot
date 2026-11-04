@@ -1,3 +1,6 @@
+**2026-11-05 01:19** `econ_dry` ✅ done
+
+---
 **2026-11-05 01:15** `lesson` ✅ skipped-quiet
 - 🌙 01:15 is inside quiet hours — the lesson waits for the next slot
 ---
@@ -78,6 +81,3 @@
 ---
 **2026-11-03 21:43** `lesson` ✅ published
 - ✅ H-086 «Պլանը մեկ էկրանում» published (39s, cta=save)
----
-**2026-11-03 21:19** `quiz` ✅ published
-- ✅ Quiz Story from H-082
