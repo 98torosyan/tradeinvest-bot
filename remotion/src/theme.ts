@@ -57,6 +57,12 @@ const SFX = {
   resolve: "sfx/chime.mp3",   // payoff / rule lands
   hit: "sfx/impact.mp3",      // low drop: price hits the level / a loss lands
   ident: "sfx/logo.mp3",      // end-card ident (brand v2 should replace with a 2-note ident)
+  // second kit: UI SFX by Yuki Capital (CC0, github.com/romainsimon/uisfx), used on alternate days
+  swap2: "sfx/uisfx/cinematic_swipe.mp3",
+  hit2: "sfx/uisfx/cinematic_warning.mp3",
+  resolve2: "sfx/uisfx/cinematic_success.mp3",
+  hook2: "sfx/uisfx/cinematic_snap.mp3",
+  tap: "sfx/uisfx/studio_press.mp3",
 };
 
 export const PLACEHOLDER: Theme = {

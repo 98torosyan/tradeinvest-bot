@@ -1,4 +1,4 @@
-// Short lesson Reel (12–20 s) in brand «Գիշերային Սևան». Content comes from reels/content/shorts.json via props.
+// Short lesson Reel (7–20 s) in brand TI Rise. Content comes from reels/content/shorts.json via props.
 // Structure: hook (legible at frame 0) → 2–4 beats (big number or a line) → rule (marker on the key word) → 1 s end card.
 // Timing follows the executive rule: ≥ 0.5 s per word + 0.5 s per card, minimum 1.6 s per card.
 import React from "react";
@@ -9,6 +9,7 @@ import {EditorialMarks, LevelWipe} from "./lib/Atmosphere";
 import {EndCard, END_FRAMES} from "./lib/EndCard";
 import {getTheme} from "./theme";
 import {Visual, VisualSpec} from "./Visuals";
+import {enterStyle, shake, Particles, Backdrop, TRANSITIONS} from "./lib/Fx";
 
 export type Beat = {big?: string; text?: string; loss?: boolean};
 export type ShortProps = {
@@ -59,13 +60,19 @@ const Scene: React.FC<ShortProps & {starts: number[]; body: number}> = (P) => {
   const t = useTheme();
   const n = P.beats.length;
   const ruleAt = P.starts[n + 1];
+  const v = P.variant ?? 0;
+  const trans = TRANSITIONS[(v + 1) % TRANSITIONS.length];
   const block = (i: number, child: React.ReactNode) => {
     const a = P.starts[i], b = i + 1 < P.starts.length ? P.starts[i + 1] : P.body + 99;
     if (f < a - 2 || f > b + 10) return null;
     const fadeOut = i + 1 < P.starts.length ? 1 - pr(f, b - 6, b + 4) : 1;
-    return <div key={i} style={{position: "absolute", left: 65, right: 65, top: 372, opacity: fadeOut}}>{child}</div>;
+    const enter = i === 0 ? {} : enterStyle(trans, f, a);       // hook stays legible at frame 0
+    const hitLoss = i > 0 && i <= n && P.beats[i - 1]?.loss;
+    return <div key={i} style={{position: "absolute", left: 65, right: 65, top: 372, opacity: fadeOut}}>
+      <div style={{...enter, translate: hitLoss ? shake(f, a + 2) : enter.translate}}>{child}</div></div>;
   };
   return <>
+    <Backdrop kind={v % 4} />
     {P.visual ? <Visual v={P.visual} starts={P.starts} body={P.body} /> : <Hero src={P.hero ?? "coins2"} body={P.body} v={(P.variant ?? 0) % 4} orange={(P.theme ?? "ti").startsWith("ti")} />}
     <EditorialMarks index={P.index} left={P.series} right={P.tag} y0={276} />
     {block(0, <Words text={P.hook} mode="settle" size={124} lh={1.02} />)}
@@ -74,21 +81,23 @@ const Scene: React.FC<ShortProps & {starts: number[]; body: number}> = (P) => {
       {b.text && <div style={{marginTop: b.big ? 26 : 0}}><Words text={b.text} start={P.starts[k + 1] + (b.big ? 10 : 2)} mode={mode} size={b.big ? 76 : 100} lh={1.04} /></div>}
     </>))}
     {block(n + 1, <Words text={P.rule} start={ruleAt + 2} mode={mode} size={116} lh={1.04} markAt={ruleAt + 26} />)}
+    {v % 2 === 0 && <Particles at={ruleAt + 26} x={300} y={640} />}
   </>;
 };
 
 export const Short: React.FC<ShortProps> = (P) => {
   const theme = getTheme(P.theme ?? "ti");
   const {starts, body} = timeline(P);
+  const k2 = (P.variant ?? 0) % 2 ? "2" : "";      // alternate sound kit on odd variants
   return (
     <ThemeRoot theme={theme}>
       <Sequence durationInFrames={body} layout="none"><Scene {...P} starts={starts} body={body} />
         {starts.slice(1).map((s, i) => <LevelWipe key={i} at={s - 4} y={1720} />)}
       </Sequence>
       <Sequence from={body} layout="none"><EndCard cta={P.cta ?? "none"} /></Sequence>
-      <Cue at={0} name="hook" volume={0.45} />
-      {starts.slice(1, -1).map((s, i) => <Cue key={i} at={s} name={P.beats[i]?.big ? "hit" : "swap"} volume={0.5} />)}
-      <Cue at={starts[starts.length - 1] + 26} name="resolve" volume={0.45} />
+      <Cue at={0} name={`hook${k2}`} volume={0.45} />
+      {starts.slice(1, -1).map((s, i) => <Cue key={i} at={s} name={(P.beats[i]?.loss || P.beats[i]?.big ? "hit" : "swap") + k2} volume={0.5} />)}
+      <Cue at={starts[starts.length - 1] + 26} name={`resolve${k2}`} volume={0.45} />
       <Cue at={body} name="ident" volume={0.7} />
     </ThemeRoot>
   );
