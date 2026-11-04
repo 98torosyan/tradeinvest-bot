@@ -188,7 +188,9 @@ def do_short(st, now, rid, publish):
     cap = shorts.caption(s, kw)
     if not publish:
         summary(f"[dry-run] short {s['id']} rendered {dur:.1f}s"); return "dry-run"
-    urls = hosting.publish([(mp4, f"reels/{rid}.mp4"), (cover, f"reels/{rid}.jpg")])
+    from . import site
+    site_dir = os.path.join(OUT, "site"); site.build(curriculum.load(), st, site_dir)     # keeps /start/ (mini course) live
+    urls = hosting.publish([(mp4, f"reels/{rid}.mp4"), (cover, f"reels/{rid}.jpg")], site_dir)
     if not wait_until_reachable(urls[f"reels/{rid}.mp4"], timeout=300):
         raise RuntimeError("video is not reachable on GitHub Pages")
     from . import igapi

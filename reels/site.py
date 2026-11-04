@@ -131,8 +131,8 @@ def build(cur, state, out_dir):
             f'<h1>Թրեյդինգ հայերեն՝<br><span>պարզ և կարճ</span></h1>'
             f'<p class="lead">Կարճ Reels դասեր գրաֆիկների, ինդիկատորների, ռիսկի և թրեյդերների սխալների մասին։ Ամեն օր՝ նոր դաս։</p>'
             f'<div class="stats"><div class="stat"><b>{total}</b><span>դաս</span></div><div class="stat"><b>{n_series}</b><span>շարք</span></div>'
-            f'<div class="stat"><b>3</b><span>դաս օրական</span></div></div>'
-            f'<a class="cta" href="{IG}" target="_blank" rel="noopener">Դիտել Instagram-ում →</a>'
+            f'<div class="stat"><b>7</b><span>քայլ՝ անվճար</span></div></div>'
+            f'<a class="cta" href="start/">Սկսել անվճար մինի դասընթացը →</a>'
             f'<div class="bar"><i style="width:{100 * done_all / max(1, total):.0f}%"></i></div>'
             f'<div class="barl">Հրապարակված է {done_all}՝ {total}-ից</div></section>'
             + '<div class="course"><b>Անհատական դասընթաց</b><span>3 ամիս՝ տեսություն, վերլուծություն, պրակտիկա և ռիսկի կառավարում։ Բոնուս՝ բոտ քո ռազմավարությամբ։</span>'
@@ -149,4 +149,6 @@ def build(cur, state, out_dir):
         if os.path.exists(src):
             shutil.copy(src, os.path.join(out_dir, "fonts", f))
     open(os.path.join(out_dir, "index.html"), "w", encoding="utf-8").write(page)
+    from . import minicourse
+    minicourse.build(out_dir)
     return os.path.join(out_dir, "index.html")
