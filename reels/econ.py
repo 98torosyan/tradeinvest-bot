@@ -15,7 +15,8 @@ NAMES = [("FOMC Press", "Ֆեդի մամուլի ասուլիս"), ("Federal Fun
          ("Non-Farm", "Աշխատատեղեր (NFP)"), ("Unemployment Rate", "Գործազրկություն"), ("Unemployment Claims", "Գործազրկության հայտեր"),
          ("Core PCE", "PCE գնաճ"), ("CPI", "Գնաճ (CPI)"), ("PPI", "Արտադրողի գներ (PPI)"), ("GDP", "ՀՆԱ (GDP)"),
          ("Retail Sales", "Մանրածախ վաճառք"), ("ISM", "ISM PMI"), ("JOLTS", "JOLTS աշխատատեղեր"), ("Fed Chair", "Ֆեդի նախագահի ելույթ"),
-         ("FOMC Meeting Minutes", "FOMC արձանագրություն")]
+         ("FOMC Meeting Minutes", "FOMC արձանագրություն"), ("Average Hourly Earnings", "Աշխատավարձերի աճ"),
+         ("Elections", "ԱՄՆ ընտրություններ")]
 
 
 def _name(title):
