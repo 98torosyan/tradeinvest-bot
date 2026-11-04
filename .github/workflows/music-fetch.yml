@@ -15,7 +15,7 @@ jobs:
           while IFS=$'\t' read -r id url name; do
             [ -z "$id" ] && continue
             out="reels/assets/music/lesson/user_px-${name}-${id}.mp3"
-            [ -f "$out" ] && continue
+            [ -n "$(find reels/assets/music -name "*-${id}.mp3")" ] && continue
             curl -fsSL -A "Mozilla/5.0" -e "https://pixabay.com/" -o "$out" "$url" && echo "ok $name" || echo "FAIL $name"
           done < reels/assets/music/pixabay_list.tsv
           ls -la reels/assets/music/lesson

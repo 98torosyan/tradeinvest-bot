@@ -193,7 +193,8 @@ def do_short(st, now, rid, publish):
         notify(f"📚 Մնացել է {left} կարճ դասի սցենար։ Ժամանակն է գրել նորերը։")
     kw = now.weekday() in shorts.KW_DAYS
     mp4, cover = os.path.join(OUT, rid + ".mp4"), os.path.join(OUT, rid + ".jpg")
-    dur = shorts.render(s, kw, mp4, cover, music.pick("lesson", None, st, now.strftime("%Y-%m-%d"), need=25))
+    mood = "mood:inspire" if s.get("series") == "MINDSET" else "mood:tense"
+    dur = shorts.render(s, kw, mp4, cover, music.pick(mood, None, st, now.strftime("%Y-%m-%d"), need=25))
     if not 8 <= dur <= 25:
         raise RuntimeError(f"short {s['id']} has a bad duration: {dur:.1f}s")
     cap = shorts.caption(s, kw)
@@ -480,7 +481,7 @@ def do_analysis(st, now, rid, publish):
     asset, info, lv, props, caption = analysis.build(now)
     RUN_LOG.append(f"[analysis] {asset} {lv['kind']} zone={lv['zone'][0]:.2f}-{lv['zone'][1]:.2f} touches={len(lv['touches'])} other={lv['other']:.2f}")
     mp4, cover = os.path.join(OUT, rid + ".mp4"), os.path.join(OUT, rid + ".jpg")
-    analysis.render(props, mp4, cover, music.pick("lesson", None, st, today, need=40))
+    analysis.render(props, mp4, cover, music.pick("mood:tech", None, st, today, need=40))
     if analysis.DISCLAIMER not in caption:
         raise RuntimeError("analysis caption has no disclaimer")
     if not publish:
@@ -530,7 +531,7 @@ def do_weekly(st, now, rid, publish):
         summary("ℹ️ weekly recap already published today"); return "skipped"
     props = weekly.build(now)
     mp4, cover = os.path.join(OUT, rid + ".mp4"), os.path.join(OUT, rid + ".jpg")
-    weekly.render(props, mp4, cover, music.pick("lesson", None, st, today, need=25))
+    weekly.render(props, mp4, cover, music.pick("mood:energy", None, st, today, need=25))
     cap = weekly.caption(props)
     if weekly.DISCLAIMER not in cap:
         raise RuntimeError("weekly caption has no disclaimer")
@@ -547,9 +548,37 @@ def do_weekly(st, now, rid, publish):
     reel_to_story(urls, rid); return "published"
 
 
-def _story_image(path, rid):
+def _story_video(img, mp4, track, secs=8):
+    """Still card -> 8 s vertical video: slow push-in + mood music (fade in/out, loudness-normalised)."""
+    vf = (f"scale=1080:1920,zoompan=z='min(zoom+0.0005,1.05)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)'"
+          f":d={secs * 30}:s=1080x1920:fps=30,format=yuv420p")
+    af = f"afade=t=in:d=0.5,afade=t=out:st={secs - 1.2}:d=1.2,volume=0.8,loudnorm=I=-15:TP=-1.5:LRA=11"
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-loop", "1", "-i", img, "-i", track, "-vf", vf, "-af", af,
+                    "-t", str(secs), "-c:v", "libx264", "-preset", "veryfast", "-crf", "20", "-c:a", "aac", "-b:a", "160k",
+                    "-shortest", "-movflags", "+faststart", mp4], check=True)
+    return mp4
+
+
+def _story_image(path, rid, mood=None, st=None):
+    """Publish a card as a Story: a short video with mood music when possible, else the still image."""
     from . import igapi
     from delivery.media_hosting import wait_until_reachable
+    track = None
+    if mood and st is not None and getattr(settings, "STORY_VIDEO", True):
+        try:
+            track = music.pick(mood, None, st, dt.datetime.now().strftime("%Y-%m-%d"), need=10)
+        except Exception as exc:  # noqa: BLE001
+            print("[story] music", exc)
+    if track:
+        try:
+            mp4 = _story_video(path, path.rsplit(".", 1)[0] + ".mp4", track)
+            urls = hosting.publish([(mp4, f"reels/{rid}.mp4")])
+            u = urls[f"reels/{rid}.mp4"]
+            if not wait_until_reachable(u, timeout=300):
+                raise RuntimeError(f"{u} is not reachable")
+            return igapi.publish_story_video(u)
+        except Exception as exc:  # noqa: BLE001
+            summary(f"⚠️ video Story failed, posting the image: {str(exc)[:120]}")
     urls = hosting.publish([(path, f"reels/{rid}.jpg")])
     u = urls[f"reels/{rid}.jpg"]
     if not wait_until_reachable(u, timeout=300):
@@ -571,7 +600,7 @@ def do_challenge(st, now, rid, publish):
     img = sc.render(sc.challenge_page(day), os.path.join(OUT, rid + ".jpg"))
     if not publish:
         summary(f"[dry-run] challenge day {day}"); return "dry-run"
-    _story_image(img, rid)
+    _story_image(img, rid, "mood:inspire", st)
     ch.update(day=day, last=today)
     summary(f"✅ Challenge Story day {day}/{n}")
     try:                                         # economic calendar Story: Monday = the week, other days = today's events
@@ -579,7 +608,7 @@ def do_challenge(st, now, rid, publish):
         kind, evs = econ.plan(now)
         if kind and st.get("econ_last") != today:
             page = econ.week_page(evs) if kind == "week" else econ.today_page(evs)
-            _story_image(sc.render(page, os.path.join(OUT, rid + "-econ.jpg")), rid + "-econ")
+            _story_image(sc.render(page, os.path.join(OUT, rid + "-econ.jpg")), rid + "-econ", "mood:tech", st)
             st["econ_last"] = today
             summary(f"✅ Economic calendar Story ({kind}, {len(evs)} events)")
     except Exception as exc:  # noqa: BLE001
@@ -610,7 +639,7 @@ def do_alert(st, now, rid, publish):
                         os.path.join(OUT, f"{rid}-{asset}.jpg"))
         if not publish:
             summary(f"[dry-run] alert {asset} {pct:+.1f}%"); done.append(asset); continue
-        _story_image(img, f"{rid}-{asset}")
+        _story_image(img, f"{rid}-{asset}", "mood:tense", st)
         st["alerts"][asset] = now.timestamp()
         summary(f"✅ Alert Story {asset} {pct:+.1f}%"); done.append(asset)
     return "published" if done else "no-move"
@@ -678,7 +707,7 @@ def do_fact(st, now, rid, publish):
     img = sc.render(page, os.path.join(OUT, rid + ".jpg"))
     if not publish:
         summary(f"[dry-run] daily {kind}"); return "dry-run"
-    _story_image(img, rid)
+    _story_image(img, rid, {"fact": "mood:calm", "term": "mood:calm", "num": "mood:tech"}[kind], st)
     d[kind] += 1; d["n"] += 1; d["last"] = today
     summary(f"✅ Daily {kind} Story"); return "published"
 

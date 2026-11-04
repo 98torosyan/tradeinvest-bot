@@ -19,8 +19,20 @@ def _files(folder):
     return sorted(glob.glob(os.path.join(DIR, folder, "*.mp3")) + glob.glob(os.path.join(DIR, folder, "*.wav")))
 
 
+MOODS = ("tense", "inspire", "tech", "energy", "calm")
+
+
+def _key(kind):
+    return f"moods/{kind[5:]}" if kind.startswith("mood:") else FOLDER.get(kind, "lesson")
+
+
 def library(kind):
-    folder = FOLDER.get(kind, "lesson")
+    folder = _key(kind)
+    if folder.startswith("moods/") or not _files(folder):
+        files = _files(folder) if folder.startswith("moods/") else []
+        if not files:                                   # empty folder -> the whole mood library
+            files = [f for m in MOODS for f in _files(f"moods/{m}")]
+        return files
     files = _files(folder)
     if not files and folder == "story":
         files = _files("lesson") or _files("news")
@@ -55,7 +67,7 @@ def pick(kind, module, state, today, need=70):
     files = library(kind)
     if not files:
         return None
-    key = FOLDER.get(kind, "lesson")
+    key = _key(kind)
     bags = state.setdefault("music_bag", {})
     bag = [b for b in bags.get(key, []) if b in map(os.path.basename, files)]
     last = state.setdefault("music_last", {}).get(key)
@@ -67,7 +79,7 @@ def pick(kind, module, state, today, need=70):
     name = bag.pop(0)
     bags[key] = bag
     state["music_last"][key] = name
-    path = os.path.join(os.path.dirname(files[0]), name)
+    path = next(f for f in files if os.path.basename(f) == name)
     # a different section each time this track is used
     secs = state.setdefault("music_sections", {})
     if name not in secs:
