@@ -151,7 +151,8 @@ def caption(asset, info, lv, head, acc, sc):
         "💬 ⚪ թե՞ 🟠։ Գրիր comment-ում քո սցենարը",
         "📚 Ուզում ես ինքդ կարդալ գրաֆիկը՝ գրիր DM «ԴԱՍ»",
         "",
-        f"{info['tags']} #trading #վերլուծություն #հայերեն #technicalanalysis",
+        "Տեխնիկական վերլուծություն հայերեն · support/resistance · օրվա վերլուծություն",
+        f"{info['tags']} #trading #վերլուծություն #հայերեն #technicalanalysis #թրեյդինգհայերեն",
     ]
     return "\n".join(lines)
 

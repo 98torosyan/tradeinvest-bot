@@ -32,16 +32,21 @@ def _plain(s):
     return s.replace("*", "").replace("_", "").replace("|", " ")
 
 
+SEO = {"RISK": "Թրեյդինգ հայերեն · ռիսկի կառավարում · risk management · stop-loss",
+       "MINDSET": "Թրեյդինգ հայերեն · թրեյդինգի հոգեբանություն · trading psychology · discipline"}
+
+
 def caption(s, kw):
     lines = [_plain(s["hook"]), "", s.get("caption", ""), ""]
     for b in s["beats"]:
         lines.append("▪️ " + " ".join(x for x in (b.get("big"), _plain(b.get("text", ""))) if x))
     lines += ["", "👉 " + _plain(s["rule"]), ""]
     if kw:
-        lines.append("📩 Ուզում ես սովորել համակարգված՝ գրիր «ԴԱՍ» comment-ում կամ DM-ում")
+        lines.append("📩 Ուզում ես սովորել համակարգված՝ գրիր «ԴԱՍ» DM-ում")
     else:
         lines.append("🔖 Պահիր, որ չմոռանաս  ·  📤 Ուղարկիր ընկերոջդ")
-    lines += ["", f"⚠️ {DISCLAIMER}։", "", (s.get("tags", "") + " #հայերեն").strip()]
+    lines += ["🎓 Անվճար մինի դասընթաց և PDF՝ հղումը bio-ում", "", f"⚠️ {DISCLAIMER}։", "",
+              SEO.get(s.get("series"), SEO["RISK"]), (s.get("tags", "") + " #հայերեն #թրեյդինգհայերեն").strip()]
     return "\n".join(lines)
 
 
