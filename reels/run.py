@@ -170,9 +170,51 @@ def quiet(now):
     return a <= now.hour < b
 
 
+def do_short(st, now, rid, publish):
+    """12:37 short lesson Reel (Remotion, brand «Գիշերային Սևան»)."""
+    from . import shorts
+    from delivery.media_hosting import wait_until_reachable
+    s, left = shorts.next_script(st)
+    if not s:
+        return None
+    if left <= 5 and st.get("shorts_low_alert") != now.strftime("%Y-%m-%d"):
+        st["shorts_low_alert"] = now.strftime("%Y-%m-%d")
+        notify(f"📚 Մնացել է {left} կարճ դասի սցենար։ Ժամանակն է գրել նորերը։")
+    kw = now.weekday() in shorts.KW_DAYS
+    mp4, cover = os.path.join(OUT, rid + ".mp4"), os.path.join(OUT, rid + ".jpg")
+    dur = shorts.render(s, kw, mp4, cover, music.pick("story", None, st, now.strftime("%Y-%m-%d")))
+    if not 8 <= dur <= 25:
+        raise RuntimeError(f"short {s['id']} has a bad duration: {dur:.1f}s")
+    cap = shorts.caption(s, kw)
+    if not publish:
+        summary(f"[dry-run] short {s['id']} rendered {dur:.1f}s"); return "dry-run"
+    urls = hosting.publish([(mp4, f"reels/{rid}.mp4"), (cover, f"reels/{rid}.jpg")])
+    if not wait_until_reachable(urls[f"reels/{rid}.mp4"], timeout=300):
+        raise RuntimeError("video is not reachable on GitHub Pages")
+    from . import igapi
+    media = igapi.publish_reel(urls[f"reels/{rid}.mp4"], cap, cover_url=urls.get(f"reels/{rid}.jpg"))
+    today = now.strftime("%Y-%m-%d")
+    st.setdefault("shorts_done", {})[s["id"]] = {"media": media, "date": today, "kw": kw}
+    st.setdefault("published", {})[s["id"]] = {"media": media, "date": today, "hour": now.hour}
+    summary(f"✅ short {s['id']} published ({dur:.0f}s, kw={kw})"); return "published"
+
+
 def do_lesson(st, now, rid, publish):
+    # Schedule (executive decision, Nov 2026): 12:37 short lesson · 19:07 analysis Reel · no 21:37 Reel.
+    if settings.SHORTS_ENABLED and now.hour >= 18:
+        if now.hour < 21:
+            return do_analysis(st, now, rid, publish)
+        summary("ℹ️ the 21:37 Reel slot is retired"); return "slot-retired"
     if publish and quiet(now):
         summary(f"🌙 {now:%H:%M} is inside quiet hours — the lesson waits for the next slot"); return "skipped-quiet"
+    if settings.SHORTS_ENABLED and (not publish or st.get("shorts_last") != now.strftime("%Y-%m-%d")):
+        res = do_short(st, now, rid, publish)
+        if res:
+            if publish:
+                st["shorts_last"] = now.strftime("%Y-%m-%d")
+            return res
+    elif settings.SHORTS_ENABLED:
+        summary("ℹ️ today's short is already out"); return "slot-done"
     if publish:                                       # the exact trigger (Cloudflare) and the late GitHub cron may both fire
         from .watchdog import LESSON_SLOTS
         mins = now.hour * 60 + now.minute + 20
@@ -388,6 +430,8 @@ def do_analysis(st, now, rid, publish):
     today = now.strftime("%Y-%m-%d")
     if publish and quiet(now):
         summary("🌙 quiet hours — analysis skipped"); return "skipped-quiet"
+    if publish and settings.SHORTS_ENABLED and now.hour < 18:
+        summary("ℹ️ the analysis Reel moved to 19:07"); return "moved"
     if publish and st.get("analysis_last") == today:
         summary("ℹ️ analysis already published today"); return "skipped"
     asset, info, lv, props, caption = analysis.build(now)

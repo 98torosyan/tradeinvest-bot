@@ -26,3 +26,6 @@ LESSONS_PER_DAY = 3
 
 # No Reels between these Yerevan hours: GitHub cron can be hours late, and a lesson at 03:00 gets almost no reach.
 QUIET_HOURS = (0, 9)
+
+# Nov 2026 format: 12:37 short lesson (reels/content/shorts.json), 19:07 analysis Reel, no 21:37 Reel.
+SHORTS_ENABLED = True

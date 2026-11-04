@@ -59,13 +59,13 @@ jobs:
           fi
           echo "KIND=$KIND" >> "$GITHUB_ENV"
       - uses: actions/setup-node@v4
-        if: env.KIND == 'analysis'
+        if: env.KIND == 'analysis' || env.KIND == 'lesson'
         with:
           node-version: "22"
           cache: npm
           cache-dependency-path: remotion/package-lock.json
       - name: Install Remotion
-        if: env.KIND == 'analysis'
+        if: env.KIND == 'analysis' || env.KIND == 'lesson'
         run: cd remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
       - name: Install system tools, Python deps and headless Chromium
         run: |

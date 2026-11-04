@@ -1,6 +1,7 @@
 // Daily analysis Reel (1080x1920, 10 s). All numbers come from props.json, written by reels/analysis.py
 // from real candles; nothing here is invented. Text stays inside the Reel safe zone (x 65-1015, y 270-1250).
 import React from "react";
+import {Short, ShortProps, timeline} from "./Short";
 import {registerRoot, Composition, AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig, staticFile, Easing, getInputProps} from "remotion";
 
 type C = {o: number; h: number; l: number; c: number};
@@ -14,7 +15,7 @@ export type Props = {
   fmt: {other: string; zone: string; last: string};
 };
 
-const INK = "#0B0B0C", PAPER = "#F4F2EE", AMB = "#FF8A00", AMB2 = "#FFA640", MUT = "#8E8A83", DN = "#5A5650";
+const INK = "#0F1E22", PAPER = "#EDE4D3", AMB = "#D6AE66", AMB2 = "#E8C98A", MUT = "#9FB0AE", DN = "#4E6266";
 const X0 = 70, X1 = 840, XC = 750, Y0 = 600, Y1 = 1035, AX = 858;
 const E = Easing.bezier(0.2, 0.8, 0.2, 1);
 const pr = (f: number, a: number, b: number) => interpolate(f, [a, b], [0, 1], {extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: E});
@@ -135,7 +136,17 @@ const DEMO: Props = {
   head: "Demo", headAccent: "", scenarios: [], fmt: {other: "2.2", zone: "0.5", last: "1.2"},
 };
 
-registerRoot(() => (
+const SHORT_DEMO: ShortProps = {
+  index: "07", series: "ՌԻՍԿ ԱՌԱՆՑ ՁԱՆՁՐՈՒՅԹԻ", tag: "ՕՐԻՆԱԿ", hero: "coins2", theme: "sevan",
+  hook: "10 գործարքից 7-ը շահույթով է, իսկ հաշիվը՝ *մինուսում*։",
+  beats: [{big: "+7", text: "7 × (+1)"}, {big: "−12", text: "3 × (−4)", loss: true}, {big: "−5", text: "+7 − 12", loss: true}],
+  rule: "Կարևորը ոչ թե «որքան հաճախ», այլ _«որքան»_ է։",
+};
+const shortProps = {...SHORT_DEMO, ...(getInputProps() as Partial<ShortProps>)} as ShortProps;
+
+registerRoot(() => (<>
+  <Composition id="Short" component={Short as any} fps={30} width={1080} height={1920}
+    durationInFrames={timeline(shortProps).total} defaultProps={shortProps} />
   <Composition id="Analysis" component={Analysis as any} durationInFrames={300} fps={30} width={1080} height={1920}
     defaultProps={{...DEMO, ...(getInputProps() as Partial<Props>)}} />
-));
+</>));

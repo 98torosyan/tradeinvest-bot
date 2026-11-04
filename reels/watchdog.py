@@ -13,7 +13,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 from delivery.telegram_sender import send_text  # noqa: E402
 
-LESSON_SLOTS = [(12, 37), (19, 7), (21, 37)]          # Yerevan time of the Reels
+LESSON_SLOTS = [(12, 37)]          # Yerevan time of the short lesson Reel (19:07 is the analysis Reel)
 
 
 def gh(*args):
