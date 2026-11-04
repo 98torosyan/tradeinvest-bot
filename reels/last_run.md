@@ -1,3 +1,6 @@
+**2026-11-04 17:39** `analysis` ✅ moved
+- ℹ️ the analysis Reel moved to 19:07
+---
 **2026-11-04 16:30** `story` ✅ published
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7568.92}
@@ -81,6 +84,3 @@
 ---
 **2026-11-02 22:49** `lesson` ✅ published
 - ✅ H-083 «Թրեյդերի 5 սխալը» published (44s, cta=save)
----
-**2026-11-02 22:37** `lesson` ✅ published
-- ✅ H-082 «Կլոր թվեր» published (43s, cta=send)
