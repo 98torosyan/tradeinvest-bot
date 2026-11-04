@@ -17,7 +17,7 @@ export const weeklyTotal = (n: number) => INTRO + n * STEP + HOLD + SUM + ASK + 
 
 const Spark: React.FC<{closes: number[]; at: number; color: string}> = ({closes, at, color}) => {
   const f = useCurrentFrame();
-  const W = 300, H = 90;
+  const W = 250, H = 90;
   const lo = Math.min(...closes), hi = Math.max(...closes), k = hi - lo || 1;
   const pts = closes.map((c, i) => [i * W / (closes.length - 1), H - (c - lo) / k * H]);
   const d = pts.map((p, i) => `${i ? "L" : "M"}${p[0].toFixed(1)} ${p[1].toFixed(1)}`).join(" ");
@@ -30,6 +30,22 @@ const Spark: React.FC<{closes: number[]; at: number; color: string}> = ({closes,
   </svg>;
 };
 
+const ICON_BG: Record<string, string> = {BTC: "#F7931A", ETH: "#627EEA", SOL: "#14F195", XAU: "#D4AF37", NDX: "#3B82F6"};
+// Simple drawn glyphs (no official logo files): ₿-style B, diamond, slanted bars, gold bars, index chart.
+const Icon: React.FC<{sym: string}> = ({sym}) => {
+  const bg = ICON_BG[sym] ?? "#FF8A00";
+  const W = "#FFFFFF", K = "#0B0B0C";
+  let g: React.ReactNode = null;
+  if (sym === "BTC") g = <g fill="none" stroke={W} strokeWidth={6} strokeLinejoin="round" strokeLinecap="round">
+    <path d="M38 28 V68 M38 28 H54 Q64 28 64 38 Q64 47 54 47 H38 M38 47 H56 Q67 47 67 57.5 Q67 68 56 68 H38" />
+    <path d="M45 21 V28 M53 21 V28 M45 68 V75 M53 68 V75" /></g>;
+  if (sym === "ETH") g = <g fill={W}><path d="M48 16 L68 49 L48 60 L28 49 Z" opacity={0.95} /><path d="M48 64 L68 53 L48 81 L28 53 Z" opacity={0.75} /></g>;
+  if (sym === "SOL") g = <g fill={K}>{[30, 45, 60].map((y, i) => <path key={i} d={`M${i === 1 ? 26 : 32} ${y} H72 L${i === 1 ? 72 : 66} ${y + 9} H${i === 1 ? 20 : 26} Z`} transform={i === 1 ? "scale(-1 1) translate(-96 0)" : undefined} />)}</g>;
+  if (sym === "XAU") g = <g fill={K} opacity={0.85}><path d="M22 66 L28 54 H46 L52 66 Z" /><path d="M46 66 L52 54 H70 L76 66 Z" /><path d="M34 52 L40 40 H58 L64 52 Z" /></g>;
+  if (sym === "NDX") g = <g fill="none" stroke={W} strokeWidth={6} strokeLinecap="round" strokeLinejoin="round"><path d="M24 66 L40 50 L52 58 L72 34" /><path d="M60 34 H72 V46" /></g>;
+  return <svg width={96} height={96} viewBox="0 0 96 96" style={{flex: "none", marginRight: 26}}><circle cx={48} cy={48} r={46} fill={bg} />{g}</svg>;
+};
+
 const Row: React.FC<{r: WeeklyRow; at: number; y: number; dim: number}> = ({r, at, y, dim}) => {
   const f = useCurrentFrame();
   const t = useTheme();
@@ -38,12 +54,13 @@ const Row: React.FC<{r: WeeklyRow; at: number; y: number; dim: number}> = ({r, a
   const v = r.pct * pr(f, at + 4, at + 26, (x) => 1 - Math.pow(1 - x, 3));
   return <div style={{position: "absolute", left: 70, right: 70, top: y, height: 190, display: "flex", alignItems: "center",
     borderTop: `2px solid ${t.c.fg}1A`, opacity: a * dim, translate: `${(1 - a) * 80}px 0px`}}>
-    <div style={{width: 300}}>
-      <div style={{fontFamily: ff(t, "display"), fontVariationSettings: t.type.displayVar, fontSize: 64, lineHeight: 1}}>{r.name}</div>
+    <Icon sym={r.sym} />
+    <div style={{width: 280}}>
+      <div style={{fontFamily: ff(t, "display"), fontVariationSettings: t.type.displayVar, fontSize: 58, lineHeight: 1}}>{r.name}</div>
       <div style={{fontFamily: ff(t, "mono"), fontSize: 26, color: t.c.muted, marginTop: 10, letterSpacing: "0.08em"}}>{r.sym}</div>
     </div>
     <Spark closes={r.closes} at={at + 2} color={color} />
-    <div style={{marginLeft: "auto", fontFamily: ff(t, "mono"), fontWeight: 800, fontSize: 70, color}}>
+    <div style={{marginLeft: "auto", fontFamily: ff(t, "mono"), fontWeight: 800, fontSize: 62, color}}>
       {r.pct >= 0 ? "+" : "−"}{Math.abs(v).toFixed(1)}%</div>
   </div>;
 };
@@ -81,7 +98,7 @@ const Scene: React.FC<WeeklyProps> = ({range, rows}) => {
       <Words text={"Ո՞ր ակտիվն էր *քոնը* այս շաբաթ։"} start={askAt} mode="rise" size={110} lh={1.04} />
       <div style={{marginTop: 50, fontSize: 46, color: t.c.muted, opacity: pr(f, askAt + 18, askAt + 30)}}>Գրիր comment-ում 👇</div>
     </div>}
-    <div style={{position: "absolute", left: 70, right: 70, bottom: 190, fontSize: 24, color: t.c.muted}}>
+    <div style={{position: "absolute", left: 70, right: 70, bottom: 225, fontSize: 24, color: t.c.muted}}>
       Կրթական բովանդակություն է, ոչ թե ֆինանսական խորհուրդ։ Տվյալները՝ օրական փակման գներով։</div>
   </>;
 };
