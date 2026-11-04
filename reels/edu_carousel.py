@@ -28,6 +28,14 @@ EXTRA = """<style>
 .li em{font-style:normal;font-family:Mono,monospace;font-weight:800;color:var(--a);font-size:34px;min-width:56px}
 .rl{font-size:92px;font-weight:800;line-height:1.08;letter-spacing:-.02em;font-stretch:78%}
 .rl .acc{text-decoration:underline;text-decoration-thickness:10px;text-underline-offset:14px}
+.my{padding:44px 44px;border-radius:28px;background:rgba(226,91,75,.10);border:2px solid rgba(226,91,75,.45)}
+.fc{margin-top:34px;padding:44px 44px;border-radius:28px;background:rgba(123,196,127,.10);border:2px solid rgba(123,196,127,.45)}
+.my span,.fc span{display:block;font-size:30px;font-weight:800;letter-spacing:.08em;margin-bottom:18px}.my span{color:#E25B4B}.fc span{color:#7BC47F}
+.my div{font-size:58px;font-weight:800;line-height:1.12;text-decoration:line-through;text-decoration-color:rgba(226,91,75,.7);text-decoration-thickness:5px}
+.fc div{font-size:40px;line-height:1.38;color:var(--p)}
+.qm{font-size:260px;line-height:.6;color:var(--a);font-weight:800;height:120px}
+.qt{font-size:84px;font-weight:800;line-height:1.12;letter-spacing:-.02em;font-stretch:80%}.qt .acc{color:var(--a2)}
+.qs{margin-top:50px;font-size:32px;color:var(--mut);font-weight:700;letter-spacing:.06em}
 .g-paper .tr,.g-paper .tb,.g-paper .li{border-color:rgba(11,11,12,.14)}
 </style>"""
 
@@ -71,6 +79,12 @@ def _slide(s):
     if t == "list":
         items = "".join(f'<div class="li"><em>{i:02d}</em>{esc(x)}</div>' for i, x in enumerate(s["items"], 1))
         return f'<div class="box"><div class="hd">{esc(s["head"])}</div><div class="ls">{items}</div></div>', "ink"
+    if t == "myth":
+        return (f'<div class="box"><div class="my"><span>❌ ՄԻՖ</span><div>{esc(s["myth"])}</div></div>'
+                f'<div class="fc"><span>✅ ՓԱՍՏ</span><div>{esc(s["fact"])}</div></div></div>'), "ink"
+    if t == "quote":
+        return (f'<div class="box"><div class="qm">“</div><div class="qt">{_acc(s["text"])}</div>'
+                f'<div class="qs">— TradeInvest</div></div>'), "ink"
     if t == "rule":
         return f'<div class="edge"></div><div class="box"><div class="kick">ԿԱՆՈՆ</div><div class="rl" style="margin-top:30px">{_acc(s["text"])}</div></div>', "amber"
     raise ValueError(f"unknown slide type {t}")
