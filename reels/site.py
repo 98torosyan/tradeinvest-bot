@@ -153,4 +153,5 @@ def build(cur, state, out_dir):
     minicourse.build(out_dir)
     from . import tools as _tools
     _tools.build(out_dir)
-    return os.path.join(out_dir, "index.html")
+    from . import hub as _hub                       # the home page is now a clean hub (old lesson library retired)
+    return _hub.build(out_dir)

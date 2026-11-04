@@ -14,7 +14,7 @@ PDF_SRC = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", PDF
 
 CSS = """
 :root{--ink:#0B0B0C;--ink2:#141416;--ink3:#1C1C1F;--line:rgba(242,239,232,.10);--paper:#F2EFE8;--mut:#A3A09A;--amb:#FF8A00;--amb2:#FFA640;--ok:#34C98A;--bad:#F2505E}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}html,body{overflow-x:hidden}
 body{background:var(--ink);color:var(--paper);font-family:Arm,system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55}
 a{color:inherit}
 .wrap{max-width:760px;margin:0 auto;padding:0 20px 80px}
