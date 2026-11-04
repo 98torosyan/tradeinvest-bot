@@ -20,6 +20,8 @@ def _label(st):
         lab[p.get("media")] = ("Կարճ դաս", sid)
     for p in st.get("analysis_media", []):
         lab[p.get("media")] = ("Վերլուծություն", p.get("asset", ""))
+    for p in st.get("weekly_media", []):
+        lab[p.get("media")] = ("Շաբաթվա ամփոփում", p.get("date", ""))
     for cid, p in st.get("edu_carousels_done", {}).items():
         lab[p.get("media")] = ("Կարուսել", cid)
     return lab

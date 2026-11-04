@@ -2,6 +2,7 @@
 // from real candles; nothing here is invented. Text stays inside the Reel safe zone (x 65-1015, y 270-1250).
 import React from "react";
 import {Short, ShortProps, timeline} from "./Short";
+import {Weekly, WeeklyProps, weeklyTotal} from "./Weekly";
 import {registerRoot, Composition, AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig, staticFile, Easing, getInputProps} from "remotion";
 
 type C = {o: number; h: number; l: number; c: number};
@@ -144,7 +145,17 @@ const SHORT_DEMO: ShortProps = {
 };
 const shortProps = {...SHORT_DEMO, ...(getInputProps() as Partial<ShortProps>)} as ShortProps;
 
+const WEEKLY_DEMO: WeeklyProps = {range: "OCT 27 – NOV 2", rows: [
+  {name: "Bitcoin", sym: "BTC", closes: [100, 102, 99, 104, 106, 103, 108], pct: 8},
+  {name: "Ethereum", sym: "ETH", closes: [100, 98, 97, 101, 99, 96, 95], pct: -5},
+  {name: "Ոսկի", sym: "XAU", closes: [100, 101, 101, 102, 103, 102, 104], pct: 4},
+  {name: "Nasdaq", sym: "NDX", closes: [100, 99, 101, 100, 102, 103, 102], pct: 2},
+  {name: "Solana", sym: "SOL", closes: [100, 104, 108, 103, 99, 101, 98], pct: -2}]};
+const weeklyProps = {...WEEKLY_DEMO, ...(getInputProps() as Partial<WeeklyProps>)} as WeeklyProps;
+
 registerRoot(() => (<>
+  <Composition id="Weekly" component={Weekly as any} fps={30} width={1080} height={1920}
+    durationInFrames={weeklyTotal(weeklyProps.rows.length)} defaultProps={weeklyProps} />
   <Composition id="Short" component={Short as any} fps={30} width={1080} height={1920}
     durationInFrames={timeline(shortProps).total} defaultProps={shortProps} />
   <Composition id="Analysis" component={Analysis as any} durationInFrames={300} fps={30} width={1080} height={1920}

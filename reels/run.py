@@ -521,12 +521,38 @@ def do_stories_pack(st, now, rid, publish):
     return "published"
 
 
+def do_weekly(st, now, rid, publish):
+    """Sunday «Շաբաթը մեկ հայացքով» Reel (real daily closes)."""
+    from . import weekly
+    from delivery.media_hosting import wait_until_reachable
+    today = now.strftime("%Y-%m-%d")
+    if publish and st.get("weekly_last") == today:
+        summary("ℹ️ weekly recap already published today"); return "skipped"
+    props = weekly.build(now)
+    mp4, cover = os.path.join(OUT, rid + ".mp4"), os.path.join(OUT, rid + ".jpg")
+    weekly.render(props, mp4, cover, music.pick("lesson", None, st, today, need=25))
+    cap = weekly.caption(props)
+    if weekly.DISCLAIMER not in cap:
+        raise RuntimeError("weekly caption has no disclaimer")
+    if not publish:
+        summary("[dry-run] weekly recap rendered"); return "dry-run"
+    urls = hosting.publish([(mp4, f"reels/{rid}.mp4"), (cover, f"reels/{rid}.jpg")])
+    if not wait_until_reachable(urls[f"reels/{rid}.mp4"], timeout=300):
+        raise RuntimeError("video is not reachable on GitHub Pages")
+    from . import igapi
+    media = igapi.publish_reel(urls[f"reels/{rid}.mp4"], cap, cover_url=urls.get(f"reels/{rid}.jpg"))
+    st["weekly_last"] = today
+    st.setdefault("weekly_media", []).append({"media": media, "date": today})
+    summary("✅ Weekly recap Reel published")
+    reel_to_story(urls, rid); return "published"
+
+
 def do_report_dry(st, now, rid, publish):
     from . import report
     report.main(dry=True); return "done"
 
 
-HANDLERS = {"report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
+HANDLERS = {"weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
             "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel, "analysis": do_analysis}
 
 

@@ -14,6 +14,7 @@ on:
     - cron: "37 9 * * *"
     - cron: "37 15 * * *"
     - cron: "7 11 * * 1,3,5"
+    - cron: "7 13 * * 0"
     - cron: "37 13 * * *"
   workflow_dispatch:
     inputs:
@@ -22,7 +23,7 @@ on:
         required: true
         default: "lesson"
         type: choice
-        options: [lesson, news, story, chart, quiz, carousel, analysis, music, selftest, stories_pack, report_dry]
+        options: [lesson, news, story, chart, quiz, carousel, analysis, music, selftest, stories_pack, report_dry, weekly]
 
 permissions:
   contents: write
@@ -53,19 +54,20 @@ jobs:
               "37 9 * * *") KIND=quiz ;;
               "37 15 * * *") KIND=chart ;;
               "7 11 * * 1,3,5") KIND=carousel ;;
+              "7 13 * * 0") KIND=weekly ;;
               "37 13 * * *") KIND=analysis ;;
               *) KIND=news ;;
             esac
           fi
           echo "KIND=$KIND" >> "$GITHUB_ENV"
       - uses: actions/setup-node@v4
-        if: env.KIND == 'analysis' || env.KIND == 'lesson'
+        if: env.KIND == 'analysis' || env.KIND == 'lesson' || env.KIND == 'weekly'
         with:
           node-version: "22"
           cache: npm
           cache-dependency-path: remotion/package-lock.json
       - name: Install Remotion
-        if: env.KIND == 'analysis' || env.KIND == 'lesson'
+        if: env.KIND == 'analysis' || env.KIND == 'lesson' || env.KIND == 'weekly'
         run: cd remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
       - name: Install system tools, Python deps and headless Chromium
         run: |
