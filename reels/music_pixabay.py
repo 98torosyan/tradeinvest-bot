@@ -1,4 +1,4 @@
-"""Fill the mood music library from Pixabay Music (Pixabay Content License; tracks with YouTube Content ID are skipped).
+"""Fill the mood music library from Pixabay Music (no YouTube Content ID) and Mixkit (Mixkit Stock Music Free License).
 Run in GitHub Actions (python -m reels.music_pixabay). Files: reels/assets/music/moods/<mood>/user_px-<slug>-<id>.mp3"""
 import json
 import os
@@ -43,6 +43,54 @@ def _items(q):
     return found
 
 
+MIXKIT = {
+    "tense":   ["mood/tension", "mood/suspenseful", "mood/dark"],
+    "inspire": ["mood/inspiring", "mood/uplifting", "mood/hopeful"],
+    "tech":    ["techno", "house", "mood/serious"],
+    "energy":  ["mood/energetic", "hip-hop", "mood/powerful"],
+    "calm":    ["mood/chill", "mood/calm", "mood/relaxing"],
+}
+
+
+def _mixkit(path):
+    html = requests.get(f"https://mixkit.co/free-stock-music/{path}/", headers=UA, timeout=30).text
+    urls = []
+    for u in re.findall(r"https://assets\.mixkit\.co/music/[^\"'\s]+?\.mp3", html):
+        if u not in urls:
+            urls.append(u)
+    print(f"[mk] {path}: {len(urls)} tracks, html {len(html)}")
+    return urls
+
+
+def mixkit_fill():
+    for mood, paths in MIXKIT.items():
+        d = os.path.join(ROOT, mood); os.makedirs(d, exist_ok=True)
+        have = {f for f in os.listdir(d) if f.endswith(".mp3")}
+        need = PER_MOOD - len(have)
+        for p in paths:
+            if need <= 0:
+                break
+            try:
+                urls = _mixkit(p)
+            except Exception as exc:  # noqa: BLE001
+                print("[mk]", p, exc); continue
+            for u in urls:
+                if need <= 0:
+                    break
+                tid = re.findall(r"(\d+)", u.rsplit("/", 1)[-1]) or ["x"]
+                out = os.path.join(d, f"user_mk-{p.replace('/', '-')}-{tid[0]}.mp3")
+                if os.path.basename(out) in have or any(f.endswith(f"-{tid[0]}.mp3") for f in have):
+                    continue
+                try:
+                    r = requests.get(u, headers=UA, timeout=60); r.raise_for_status()
+                    if len(r.content) < 300_000:          # skip short stingers
+                        continue
+                    open(out, "wb").write(r.content); have.add(os.path.basename(out)); need -= 1
+                    print(f"[mk] {mood}: {u} ({len(r.content) // 1024} KB)")
+                except Exception as exc:  # noqa: BLE001
+                    print("[mk] download", u, exc)
+
+
 def main():
     seen = set()
     for mood, qs in MOODS.items():
@@ -75,6 +123,7 @@ def main():
                 print(f"[px] {mood}: {o.get('name')} ({o.get('likeCount')} likes)")
             except Exception as exc:  # noqa: BLE001
                 print("[px] download", o.get("name"), exc)
+    mixkit_fill()
     return 0
 
 
