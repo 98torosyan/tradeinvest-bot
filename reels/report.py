@@ -42,7 +42,7 @@ def main(dry=False):
         ins = igapi.insights(m["id"])
         if not ins:
             continue
-        kind, sid = lab.get(m["id"], ("Այլ", ""))
+        kind, sid = lab.get(m["id"], ("Հին գրառում", ""))
         reach = max(1, ins.get("reach", 0))
         rows.append({"id": sid or m["id"][-5:], "kind": kind, "reach": reach, "views": ins.get("views", 0),
                      "saved": ins.get("saved", 0), "shares": ins.get("shares", 0), "likes": ins.get("likes", 0),
