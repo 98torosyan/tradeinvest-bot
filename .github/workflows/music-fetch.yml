@@ -1,0 +1,27 @@
+name: music-fetch
+# Downloads the curated Pixabay tracks listed in reels/assets/music/pixabay_list.tsv (Pixabay Content License,
+# no Content ID) into reels/assets/music/lesson/ and commits them. Run manually.
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download tracks
+        run: |
+          mkdir -p reels/assets/music/lesson
+          while IFS=$'\t' read -r id url name; do
+            [ -z "$id" ] && continue
+            out="reels/assets/music/lesson/user_px-${name}-${id}.mp3"
+            [ -f "$out" ] && continue
+            curl -fsSL -A "Mozilla/5.0" -e "https://pixabay.com/" -o "$out" "$url" && echo "ok $name" || echo "FAIL $name"
+          done < reels/assets/music/pixabay_list.tsv
+          ls -la reels/assets/music/lesson
+      - name: Commit
+        run: |
+          git config user.name "tradeinvest-bot"; git config user.email "actions@users.noreply.github.com"
+          git add reels/assets/music/lesson
+          git commit -m "music: Pixabay tracks" || echo "nothing to commit"
+          git pull --rebase && git push
