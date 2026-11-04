@@ -13,47 +13,89 @@ sys.path.insert(0, ROOT)
 from delivery.telegram_sender import send_text  # noqa: E402
 
 
-def main():
+def _label(st):
+    """media id -> (kind, our id) for everything the bot published."""
+    lab = {}
+    for sid, p in st.get("shorts_done", {}).items():
+        lab[p.get("media")] = ("Կարճ դաս", sid)
+    for p in st.get("analysis_media", []):
+        lab[p.get("media")] = ("Վերլուծություն", p.get("asset", ""))
+    for cid, p in st.get("edu_carousels_done", {}).items():
+        lab[p.get("media")] = ("Կարուսել", cid)
+    return lab
+
+
+def main(dry=False):
     from . import igapi
+    global send_text
+    if dry:
+        send_text = print  # noqa: F811
     now = dt.datetime.now(ZoneInfo(settings.TZ))
-    since = (now - dt.timedelta(days=7)).strftime("%Y-%m-%d")
+    since_dt = now - dt.timedelta(days=7)
+    since = since_dt.strftime("%Y-%m-%d")
     st = state.load()
+    lab = _label(st)
     rows = []
-    for lid, p in st.get("published", {}).items():
-        if p.get("date", "") < since or p.get("insights_done"):
+    for m in igapi.recent_media(50):
+        if (m.get("timestamp") or "")[:10] < since:
             continue
-        ins = igapi.insights(p["media"])
+        ins = igapi.insights(m["id"])
         if not ins:
             continue
+        kind, sid = lab.get(m["id"], ("Այլ", ""))
         reach = max(1, ins.get("reach", 0))
-        rows.append({"id": lid, "hour": p.get("hour"), "cta": p.get("cta"), "reach": reach,
-                     "send_rate": ins.get("shares", 0) / reach, "save_rate": ins.get("saved", 0) / reach,
-                     "watch": ins.get("ig_reels_avg_watch_time", 0), **ins})
-    if not rows:
-        send_text("📈 Շաբաթական հաշվետվություն. տվյալներ դեռ չկան (կամ insights-ի թույլտվությունը բացակայում է token-ում)։")
-        return
-    med = statistics.median(r["send_rate"] + r["save_rate"] for r in rows)
-    for r in rows:
-        if r.get("cta"):
-            bandit.update(st, "cta", r["cta"], r["send_rate"] + r["save_rate"] > med)
-        st["published"][r["id"]]["insights_done"] = True
-    top = sorted(rows, key=lambda r: r["send_rate"] + r["save_rate"], reverse=True)[:3]
-    by_hour = {}
-    for r in rows:
-        by_hour.setdefault(r["hour"], []).append(r["reach"])
-    best_hour = max(by_hour, key=lambda h: statistics.mean(by_hour[h])) if by_hour else "?"
+        rows.append({"id": sid or m["id"][-5:], "kind": kind, "reach": reach, "views": ins.get("views", 0),
+                     "saved": ins.get("saved", 0), "shares": ins.get("shares", 0), "likes": ins.get("likes", 0),
+                     "eng": (ins.get("saved", 0) + ins.get("shares", 0)) / reach,
+                     "watch": ins.get("ig_reels_avg_watch_time", 0), "hour": int((m.get("timestamp") or "T00")[11:13] or 0)})
     try:
         fol = igapi.me().get("followers_count")
     except Exception:  # noqa: BLE001
-        fol = "?"
-    lines = [f"📈 Շաբաթական հաշվետվություն ({since} → {now:%Y-%m-%d})",
-             f"Հետևորդներ՝ {fol}", f"Դասեր՝ {len(rows)}, ընդհանուր reach՝ {sum(r['reach'] for r in rows)}",
-             f"Միջին դիտման ժամանակ՝ {statistics.mean(r['watch'] or 0 for r in rows) / 1000:.1f} վրկ",
-             f"Ամենաարդյունավետ ժամը՝ {best_hour}:07", "", "🏆 Լավագույն դասերը (ուղարկումներ + save-եր / reach)."]
-    lines += [f"• {r['id']}՝ {100 * (r['send_rate'] + r['save_rate']):.1f}% (reach {r['reach']})" for r in top]
-    arms = st.get("bandit", {}).get("cta", {})
-    lines += ["", "🎯 CTA-ներ՝ " + ", ".join(f"{k} {a / (a + n):.0%}" for k, (a, n) in arms.items())]
+        fol = None
+    prev = st.get("followers_last")
+    if fol is not None:
+        st["followers_last"] = fol
+        st.setdefault("followers_hist", []).append({"date": now.strftime("%Y-%m-%d"), "n": fol})
+        st["followers_hist"] = st["followers_hist"][-60:]
+    if not rows:
+        send_text("📈 Շաբաթական հաշվետվություն. այս շաբաթ տվյալներ դեռ չկան (կամ insights-ի թույլտվությունը բացակայում է token-ում)։")
+        if not dry:
+            state.save(st)
+        return
+    delta = f" ({fol - prev:+d} շաբաթում)" if fol is not None and prev is not None else ""
+    lines = [f"📈 Շաբաթական հաշվետվություն · {since} → {now:%Y-%m-%d}", "",
+             f"👥 Հետևորդներ՝ {fol if fol is not None else '?'}{delta}",
+             f"👁 Դիտումներ՝ {sum(r['views'] for r in rows)} · Reach՝ {sum(r['reach'] for r in rows)}",
+             f"📌 Save՝ {sum(r['saved'] for r in rows)} · 📩 Share՝ {sum(r['shares'] for r in rows)}", "", "Ըստ տեսակի (միջինը).",]
+    kinds = {}
+    for r in rows:
+        kinds.setdefault(r["kind"], []).append(r)
+    for k, rs in sorted(kinds.items(), key=lambda kv: -statistics.mean(r["views"] for r in kv[1])):
+        lines.append(f"• {k} ({len(rs)})՝ {statistics.mean(r['views'] for r in rs):.0f} դիտում, "
+                     f"{100 * statistics.mean(r['eng'] for r in rs):.1f}% save+share")
+    top = sorted(rows, key=lambda r: r["views"], reverse=True)[:3]
+    lines += ["", "🏆 Ամենաշատ դիտված."] + [f"• {r['kind']} {r['id']}՝ {r['views']} դիտում" for r in top]
+    best = max(rows, key=lambda r: r["eng"])
+    lines += ["", f"💎 Ամենաշատ պահված/կիսված՝ {best['kind']} {best['id']} ({100 * best['eng']:.1f}%)"]
+    reels = [r for r in rows if r["watch"]]
+    if reels:
+        lines.append(f"⏱ Reel-ի միջին դիտման ժամանակ՝ {statistics.mean(r['watch'] for r in reels) / 1000:.1f} վրկ")
+    # simple, honest recommendations
+    rec = []
+    if len(kinds) > 1:
+        k_best = max(kinds, key=lambda k: statistics.mean(r["views"] for r in kinds[k]))
+        rec.append(f"«{k_best}» տեսակն այս շաբաթ ամենաշատն է դիտվել")
+    if reels and statistics.mean(r["watch"] for r in reels) < 4000:
+        rec.append("Reel-երի դիտման ժամանակը կարճ է. hook-ը պետք է ավելի ուժեղ լինի առաջին 1 վրկ-ում")
+    if sum(r["shares"] for r in rows) == 0:
+        rec.append("Share չկա. caption-ում ավելի հաճախ խնդրենք «ուղարկիր ընկերոջդ»")
+    if rec:
+        lines += ["", "💡 Եզրակացություն."] + [f"• {x}" for x in rec]
     send_text("\n".join(lines))
+    if dry:
+        return
+    st.setdefault("weekly_reports", []).append({"date": now.strftime("%Y-%m-%d"), "rows": rows[:30], "followers": fol})
+    st["weekly_reports"] = st["weekly_reports"][-12:]
     state.save(st)
     from .control import commit
     commit(["reels/state.json"], "weekly report")

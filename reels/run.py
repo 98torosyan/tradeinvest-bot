@@ -521,7 +521,12 @@ def do_stories_pack(st, now, rid, publish):
     return "published"
 
 
-HANDLERS = {"stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
+def do_report_dry(st, now, rid, publish):
+    from . import report
+    report.main(dry=True); return "done"
+
+
+HANDLERS = {"report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
             "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel, "analysis": do_analysis}
 
 
