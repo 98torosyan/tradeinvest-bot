@@ -1,3 +1,6 @@
+**2026-11-04 20:32** `lesson` ✅ skipped
+- ℹ️ analysis already published today
+---
 **2026-11-04 19:10** `lesson` ✅ published
 - [analysis] GOLD S zone=3879.30-3931.84 touches=1 other=4061.50
 - ✅ Analysis Reel GOLD published
@@ -86,6 +89,3 @@
 ---
 **2026-11-03 03:18** `chart` ✅ published
 - ✅ Story published
----
-**2026-11-03 03:06** `lesson` ✅ published
-- ✅ H-084 «Stochastic» published (46s, cta=send)
