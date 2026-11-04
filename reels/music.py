@@ -23,7 +23,7 @@ def library(kind):
     folder = FOLDER.get(kind, "lesson")
     files = _files(folder)
     if not files and folder == "story":
-        files = _files("news")
+        files = _files("lesson") or _files("news")
     own = [f for f in files if os.path.basename(f).startswith(settings.USER_TRACK_PREFIX)]
     return own or files
 
