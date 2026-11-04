@@ -111,7 +111,7 @@ def build(out_dir):
         '<p class="note">Պարզեցված հաշվարկ։ Իրականում liquidation-ը տեղի է ունենում ավելի շուտ (maintenance margin, միջնորդավճարներ)։</p></section>')
     page = (f'<!doctype html><html lang="hy"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             f'<title>{title}</title><meta name="description" content="{desc}"><meta name="theme-color" content="#0B0B0C">'
-            f'<link rel="icon" href="data:image/svg+xml,{FAVICON}"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}">'
+            f'<link rel="icon" href="data:image/svg+xml,{FAVICON}"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:image" content="https://98torosyan.github.io/tradeinvest-bot/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">'
             f'<style>{_font_css().replace("url(fonts/", "url(../fonts/")}{CSS}</style></head><body><div class="wrap">'
             f'<div class="top">{LOGO}<b>Trade<span>Invest</span></b><a class="bk" href="../start/">← Մինի դասընթաց</a></div>'
             '<section class="hero"><div class="kick"><i></i>Free tools</div><h1>Թրեյդերի <span>հաշվիչներ</span></h1>'

@@ -57,7 +57,7 @@ def build(out_dir):
         ("Շաբաթվա ամփոփում", "Կիրակի 17:07")])
     page = (f'<!doctype html><html lang="hy"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
             f'<title>{title}</title><meta name="description" content="{desc}"><meta name="theme-color" content="#0B0B0C">'
-            f'<link rel="icon" href="data:image/svg+xml,{FAVICON}"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}">'
+            f'<link rel="icon" href="data:image/svg+xml,{FAVICON}"><meta property="og:title" content="{title}"><meta property="og:description" content="{desc}"><meta property="og:image" content="https://98torosyan.github.io/tradeinvest-bot/og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image">'
             f'<style>{_font_css()}{CSS}</style></head><body><div class="wrap">'
             f'<div class="top">{LOGO}<b>Trade<span>Invest</span></b><a class="ig" href="{IG}" target="_blank" rel="noopener">@armtradeinvest</a></div>'
             '<section class="hero"><div class="kick"><i></i>Trading Academy</div>'
@@ -69,4 +69,13 @@ def build(out_dir):
             f'</div>{analytics()}</body></html>')
     path = os.path.join(out_dir, "index.html")
     open(path, "w", encoding="utf-8").write(page)
+    import shutil
+    og = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "og.png")
+    if os.path.exists(og):
+        shutil.copy(og, os.path.join(out_dir, "og.png"))
+    base = "https://98torosyan.github.io/tradeinvest-bot/"
+    open(os.path.join(out_dir, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\nSitemap: {base}sitemap.xml\n")
+    open(os.path.join(out_dir, "sitemap.xml"), "w").write(
+        '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+        + "".join(f"<url><loc>{base}{u}</loc></url>" for u in ("", "start/", "tools/")) + "</urlset>")
     return path
