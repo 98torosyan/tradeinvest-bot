@@ -181,8 +181,9 @@ def build(now, asset=None):
 
 
 def _npx(*args):
+    # The v2 Analysis composition uses the brand library, whose fonts, SFX and logo live in remotion/public (the default).
     extra = [f"--browser-executable={os.environ['REMOTION_BROWSER']}"] if os.environ.get("REMOTION_BROWSER") else []
-    subprocess.run(["npx", "--yes", "remotion", *args, "--public-dir", ASSETS, *extra], cwd=MOTION, check=True)
+    subprocess.run(["npx", "--yes", "remotion", *args, *extra], cwd=MOTION, check=True)
 
 
 def render(props, mp4, cover, music=None):
@@ -192,10 +193,13 @@ def render(props, mp4, cover, music=None):
     json.dump(props, open(pj, "w", encoding="utf-8"), ensure_ascii=False)
     raw = mp4 + ".raw.mp4"
     _npx("render", "src/index.tsx", "Analysis", raw, f"--props={pj}", "--crf=18")
-    _npx("still", "src/index.tsx", "Analysis", cover, f"--props={pj}", "--frame=299", "--image-format=jpeg")
+    _npx("still", "src/index.tsx", "Analysis", cover, f"--props={pj}", "--frame=299", "--image-format=jpeg")   # finished chart, before the end card
     if music:
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-i", music, "-map", "0:v", "-map", "1:a",
-                        "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-af", "afade=t=out:st=8.8:d=1.2", "-shortest", mp4], check=True)
+        # Keep the Reel's own SFX (impacts, whooshes, ident) and lay the music bed under them; 11 s = 10 s body + 1 s end card.
+        mix = ("[1:a]volume=0.55,afade=t=out:st=9.6:d=1.4[m];"
+               "[0:a][m]amix=inputs=2:duration=first:dropout_transition=0:normalize=0,alimiter=limit=0.95[a]")
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-i", music, "-filter_complex", mix, "-map", "0:v", "-map", "[a]",
+                        "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", mp4], check=True)
         os.remove(raw)
     else:
         shutil.move(raw, mp4)
