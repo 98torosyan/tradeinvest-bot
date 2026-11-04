@@ -40,6 +40,10 @@ def publish_story_video(video_url):
     return _publish_container(media_type="STORIES", video_url=video_url)
 
 
+def publish_image(image_url, caption):
+    return _publish_container(image_url=image_url, caption=caption)
+
+
 def publish_story_image(image_url):
     return _publish_container(media_type="STORIES", image_url=image_url)
 

@@ -593,7 +593,7 @@ def do_alert(st, now, rid, publish):
         if abs(pct) < settings.ALERT_PCT or now.timestamp() - prev < 12 * 3600:
             continue
         lv = analysis.levels(analysis.candles(asset))
-        f = lambda v: analysis.fmt(asset, v)  # noqa: E731
+        f = lambda v: (lambda x: x if x.startswith("$") else "$" + x)(analysis.fmt(asset, v))  # noqa: E731
         z = f"{f(lv['zone'][0])}–{f(lv['zone'][1])}"
         img = sc.render(sc.alert_page(analysis.NAME_HY[asset], asset, pct, f(last), f(hi), f(lo), z, f(lv["other"])),
                         os.path.join(OUT, f"{rid}-{asset}.jpg"))
@@ -605,12 +605,43 @@ def do_alert(st, now, rid, publish):
     return "published" if done else "no-move"
 
 
+def do_monthly(st, now, rid, publish):
+    """1st of the month: «Bitcoin-ի <ամիս>ը մեկ նկարում» infographic for the previous month (feed image post)."""
+    from . import monthly
+    from delivery.media_hosting import wait_until_reachable
+    from playwright.sync_api import sync_playwright
+    first = now.date().replace(day=1)
+    prev = first - dt.timedelta(days=1)
+    key = f"{prev.year}-{prev.month:02d}"
+    if publish and st.get("monthly_last") == key:
+        summary("ℹ️ monthly infographic already published"); return "skipped"
+    D = monthly.data(prev.year, prev.month)
+    html = os.path.join(OUT, rid + ".html"); img = os.path.join(OUT, rid + ".jpg")
+    open(html, "w", encoding="utf-8").write(monthly.page(prev.year, prev.month, D))
+    with sync_playwright() as p:
+        b = p.chromium.launch(); pg = b.new_page(viewport={"width": 1080, "height": 1350})
+        pg.goto(f"file://{html}"); pg.evaluate("document.fonts.ready"); pg.wait_for_timeout(300)
+        pg.screenshot(path=img, type="jpeg", quality=92); b.close()
+    cap = monthly.caption(prev.year, prev.month, D)
+    if not publish:
+        summary(f"[dry-run] monthly {key}"); return "dry-run"
+    urls = hosting.publish([(img, f"reels/{rid}.jpg")])
+    u = urls[f"reels/{rid}.jpg"]
+    if not wait_until_reachable(u, timeout=300):
+        raise RuntimeError("image not reachable")
+    from . import igapi
+    media = igapi.publish_image(u, cap)
+    st["monthly_last"] = key
+    st.setdefault("monthly_media", []).append({"media": media, "date": now.strftime("%Y-%m-%d")})
+    summary(f"✅ Monthly infographic {key} published"); return "published"
+
+
 def do_report_dry(st, now, rid, publish):
     from . import report
     report.main(dry=True); return "done"
 
 
-HANDLERS = {"challenge": do_challenge, "alert": do_alert, "weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
+HANDLERS = {"monthly": do_monthly, "challenge": do_challenge, "alert": do_alert, "weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
             "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel, "analysis": do_analysis}
 
 

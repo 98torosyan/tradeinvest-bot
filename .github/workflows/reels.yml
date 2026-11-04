@@ -16,6 +16,7 @@ on:
     - cron: "7 11 * * 1,3,5"
     - cron: "7 13 * * 0"
     - cron: "7 6 * * *"
+    - cron: "7 8 1 * *"
     - cron: "23 * * * *"
     - cron: "37 13 * * *"
   workflow_dispatch:
@@ -25,7 +26,7 @@ on:
         required: true
         default: "lesson"
         type: choice
-        options: [lesson, news, story, chart, quiz, carousel, analysis, music, selftest, stories_pack, report_dry, weekly, challenge, alert]
+        options: [lesson, news, story, chart, quiz, carousel, analysis, music, selftest, stories_pack, report_dry, weekly, challenge, alert, monthly]
 
 permissions:
   contents: write
@@ -58,6 +59,7 @@ jobs:
               "7 11 * * 1,3,5") KIND=carousel ;;
               "7 13 * * 0") KIND=weekly ;;
               "7 6 * * *") KIND=challenge ;;
+              "7 8 1 * *") KIND=monthly ;;
               "23 * * * *") KIND=alert ;;
               "37 13 * * *") KIND=analysis ;;
               *) KIND=news ;;
