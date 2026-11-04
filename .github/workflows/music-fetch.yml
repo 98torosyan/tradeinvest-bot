@@ -19,9 +19,17 @@ jobs:
             curl -fsSL -A "Mozilla/5.0" -e "https://pixabay.com/" -o "$out" "$url" && echo "ok $name" || echo "FAIL $name"
           done < reels/assets/music/pixabay_list.tsv
           ls -la reels/assets/music/lesson
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Mood library from Pixabay search
+        run: |
+          pip install -q requests
+          python -m reels.music_pixabay
+          find reels/assets/music/moods -name "*.mp3" | sort
       - name: Commit
         run: |
           git config user.name "tradeinvest-bot"; git config user.email "actions@users.noreply.github.com"
-          git add reels/assets/music/lesson
+          git add reels/assets/music/lesson reels/assets/music/moods
           git commit -m "music: Pixabay tracks" || echo "nothing to commit"
           git pull --rebase && git push
