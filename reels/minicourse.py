@@ -3,11 +3,14 @@ Brand TI Rise (Ink / Paper / Amber). Static, self-contained, mobile-first, no co
 import html
 import json
 import os
+import shutil
 
 from .site import LOGO, FAVICON, IG, _font_css, analytics
 
 SRC = os.path.join(os.path.dirname(os.path.abspath(__file__)), "content", "minicourse.json")
 DM = "https://ig.me/m/armtradeinvest"
+PDF = "TradeInvest-Risk-Guide.pdf"
+PDF_SRC = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", PDF)
 
 CSS = """
 :root{--ink:#0B0B0C;--ink2:#141416;--ink3:#1C1C1F;--line:rgba(242,239,232,.10);--paper:#F2EFE8;--mut:#A3A09A;--amb:#FF8A00;--amb2:#FFA640;--ok:#7BC47F;--bad:#E25B4B}
@@ -30,6 +33,7 @@ h1 span{color:var(--amb)}
 .chip{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;color:var(--mut)}.chip b{color:var(--paper)}
 .go{display:inline-flex;align-items:center;gap:10px;margin-top:28px;background:var(--amb);color:var(--ink);font-weight:800;font-size:17px;padding:15px 26px;border-radius:14px;text-decoration:none;transition:transform .2s,box-shadow .2s}
 .go:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,138,0,.25)}
+.pdf{display:block;margin-top:16px;color:var(--amb2);font-weight:700;font-size:15px;text-decoration:none}.pdf:hover{text-decoration:underline}
 .toc{margin:10px 0 34px;display:grid;gap:8px}
 .toc a{display:flex;align-items:center;gap:14px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;text-decoration:none;color:#D9D5CC;font-size:15px;transition:border-color .2s,background .2s}
 .toc a:hover{border-color:rgba(255,138,0,.5);background:var(--ink2)}
@@ -115,7 +119,8 @@ def build(out_dir):
             f'<h1>{html.escape(c["title"])}<br><span>պարզ հայերենով</span></h1>'
             f'<p class="lead">{html.escape(c["subtitle"])}։ Կարդա հերթով, պատասխանիր հարցերին և ստուգիր քեզ։</p>'
             f'<div class="meta"><span class="chip"><b>{len(ls)}</b> դաս</span><span class="chip"><b>~{mins}</b> րոպե</span><span class="chip"><b>{len(ls)}</b> ինքնաստուգում</span></div>'
-            f'<a class="go" href="#l1">Սկսել առաջին դասից →</a></section>'
+            f'<a class="go" href="#l1">Սկսել առաջին դասից →</a>'
+            f'<a class="pdf" href="{PDF}" download>⬇ Անվճար PDF՝ «Ռիսկի կառավարում. 6 կանոն»</a></section>'
             f'<nav class="toc" aria-label="Դասերի ցանկ">{toc}</nav>'
             f'{"".join(_lesson(l) for l in ls)}'
             f'<section class="end"><h2>Ուզում ես սովորել համակարգված՝ պրակտիկայով</h2>'
@@ -125,6 +130,8 @@ def build(out_dir):
             f'Կրթական բովանդակություն է, ոչ թե ֆինանսական խորհուրդ։ Թրեյդինգը կապված է կորստի ռիսկի հետ։</footer>'
             f'</div><script>{JS}</script>{analytics()}</body></html>')
     os.makedirs(os.path.join(out_dir, "start"), exist_ok=True)
+    if os.path.exists(PDF_SRC):
+        shutil.copy(PDF_SRC, os.path.join(out_dir, "start", PDF))
     path = os.path.join(out_dir, "start", "index.html")
     open(path, "w", encoding="utf-8").write(page)
     return path
