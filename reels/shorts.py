@@ -72,8 +72,10 @@ def render(s, kw, mp4, cover, music=None):
     _npx("still", "src/index.tsx", "Short", cover, f"--props={pj}", "--frame=20", "--image-format=jpeg")
     if music:
         # keep the SFX track and lay the music bed under it
+        rd = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", raw],
+                                  capture_output=True, text=True).stdout or 15)
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-i", music, "-filter_complex",
-                        "[1:a]volume=0.35,afade=t=in:d=0.4[m];[0:a][m]amix=inputs=2:duration=first:dropout_transition=0[a]",
+                        f"[1:a]volume=0.35,afade=t=in:d=0.4,afade=t=out:st={max(0, rd - 1.2):.2f}:d=1.2[m];[0:a][m]amix=inputs=2:duration=first:dropout_transition=0[a]",
                         "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", mp4], check=True)
         os.remove(raw)
     else:

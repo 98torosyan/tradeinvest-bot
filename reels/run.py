@@ -182,7 +182,7 @@ def do_short(st, now, rid, publish):
         notify(f"📚 Մնացել է {left} կարճ դասի սցենար։ Ժամանակն է գրել նորերը։")
     kw = now.weekday() in shorts.KW_DAYS
     mp4, cover = os.path.join(OUT, rid + ".mp4"), os.path.join(OUT, rid + ".jpg")
-    dur = shorts.render(s, kw, mp4, cover, music.pick("story", None, st, now.strftime("%Y-%m-%d")))
+    dur = shorts.render(s, kw, mp4, cover, music.pick("lesson", None, st, now.strftime("%Y-%m-%d"), need=25))
     if not 8 <= dur <= 25:
         raise RuntimeError(f"short {s['id']} has a bad duration: {dur:.1f}s")
     cap = shorts.caption(s, kw)
@@ -439,7 +439,7 @@ def do_analysis(st, now, rid, publish):
     asset, info, lv, props, caption = analysis.build(now)
     RUN_LOG.append(f"[analysis] {asset} {lv['kind']} zone={lv['zone'][0]:.2f}-{lv['zone'][1]:.2f} touches={len(lv['touches'])} other={lv['other']:.2f}")
     mp4, cover = os.path.join(OUT, rid + ".mp4"), os.path.join(OUT, rid + ".jpg")
-    analysis.render(props, mp4, cover, music.pick("story", None, st, today))
+    analysis.render(props, mp4, cover, music.pick("lesson", None, st, today, need=40))
     if analysis.DISCLAIMER not in caption:
         raise RuntimeError("analysis caption has no disclaimer")
     if not publish:
