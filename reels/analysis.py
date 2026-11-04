@@ -195,7 +195,7 @@ def render(props, mp4, cover, music=None):
     _npx("still", "src/index.tsx", "Analysis", cover, f"--props={pj}", "--frame=299", "--image-format=jpeg")
     if music:
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-i", music, "-map", "0:v", "-map", "1:a",
-                        "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-af", "afade=t=out:st=8.8:d=1.2", "-shortest", mp4], check=True)
+                        "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-af", "afade=t=in:d=0.3,afade=t=out:st=8.8:d=1.2,loudnorm=I=-15:TP=-1.5:LRA=11", "-shortest", mp4], check=True)
         os.remove(raw)
     else:
         shutil.move(raw, mp4)
