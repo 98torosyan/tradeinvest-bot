@@ -57,8 +57,7 @@ body{{background:{bg};color:{fg};font-family:ArmV,ArmSans,sans-serif;position:re
 
 def caption(p):
     head = re.sub(r"\*", "", p.get("text") or f'{p["big"]} — {p["title"]}')
-    return "\n".join([head, "", p["why"], "", "🔖 Պահիր՝ որպես հիշեցում (կամ դիր wallpaper)",
-                      "📤 Ուղարկիր ընկերոջդ, ում սա պետք է լսել այսօր", "🎓 Անվճար մինի դասընթաց և PDF՝ հղումը bio-ում", "",
+    return "\n".join([head, "", p["why"], "", "🔖 Պահիր՝ որպես հիշեցում (կամ դիր wallpaper)", "",
                       f"⚠️ {DISCLAIMER}։", "", "Թրեյդինգ հայերեն · թրեյդերի մտքեր · կարգապահություն",
                       "#tradingquotes #tradingmindset #discipline #թրեյդինգ #հայերեն #թրեյդինգհայերեն"])
 

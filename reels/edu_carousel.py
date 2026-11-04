@@ -105,8 +105,7 @@ def slides(c, n):
 
 def caption(c):
     plain = re.sub(r"\*", "", c["title"])
-    return (f"{plain}\n\n{c['caption']}\n\n📌 Պահիր՝ կրկնելու համար\n📩 Ուղարկիր նրան, ով սովորում է թրեյդինգ\n"
-            f"🎓 Անվճար մինի դասընթաց և PDF՝ հղումը bio-ում\n\n⚠️ {DISCLAIMER}\n\n"
+    return (f"{plain}\n\n{c['caption']}\n\n{'' if 'comment' in c['caption'] else '🔖 Պահիր՝ կրկնելու համար' + chr(10) + chr(10)}⚠️ {DISCLAIMER}\n\n"
             f"Թրեյդինգ հայերեն · տեխնիկական վերլուծություն · ռիսկի կառավարում\n{c['tags']} #հայերեն #թրեյդինգհայերեն")
 
 

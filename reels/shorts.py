@@ -44,8 +44,8 @@ def caption(s, kw):
     if kw:
         lines.append("📩 Ուզում ես սովորել համակարգված՝ գրիր «ԴԱՍ» DM-ում")
     else:
-        lines.append("🔖 Պահիր, որ չմոռանաս  ·  📤 Ուղարկիր ընկերոջդ")
-    lines += ["🎓 Անվճար մինի դասընթաց և PDF՝ հղումը bio-ում", "", f"⚠️ {DISCLAIMER}։", "",
+        lines.append("🔖 Պահիր, որ չմոռանաս")
+    lines += ["", f"⚠️ {DISCLAIMER}։", "",
               SEO.get(s.get("series"), SEO["RISK"]), (s.get("tags", "") + " #հայերեն #թրեյդինգհայերեն").strip()]
     return "\n".join(lines)
 

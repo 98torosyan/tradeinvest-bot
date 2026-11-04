@@ -61,8 +61,7 @@ def caption(props):
     sign = lambda v: f"+{v:.1f}%" if v >= 0 else f"−{abs(v):.1f}%"  # noqa: E731
     lines = ["📊 Շաբաթը մեկ հայացքով", "", *[f"{'🟢' if r['pct'] >= 0 else '🔴'} {r['name']} ({r['sym']})՝ {sign(r['pct'])}" for r in rs], "",
              f"🏆 Հաղթող՝ {best['name']} · 📉 Պարտվող՝ {worst['name']}", "",
-             "💬 Ո՞ր ակտիվն էր քոնը այս շաբաթ։ Գրիր comment-ում",
-             "🎓 Անվճար մինի դասընթաց և PDF՝ հղումը bio-ում", "",
+             "💬 Ո՞ր ակտիվն էր քոնը այս շաբաթ։ Գրիր comment-ում", "",
              f"⚠️ {DISCLAIMER}։ Տվյալները՝ օրական փակման գներով։", "",
              "Շաբաթական ամփոփում · crypto · ոսկի · Nasdaq · թրեյդինգ հայերեն",
              "#bitcoin #crypto #gold #nasdaq #weeklyrecap #հայերեն #թրեյդինգհայերեն"]

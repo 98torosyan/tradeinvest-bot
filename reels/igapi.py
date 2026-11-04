@@ -29,7 +29,11 @@ def _publish_container(**params):
     return _publish_ready(c["id"])
 
 
+from .caption_lint import lint as _lint  # noqa: E402
+
+
 def publish_reel(video_url, caption, cover_url=None, share_to_feed=True):
+    caption = _lint(caption)
     p = dict(media_type="REELS", video_url=video_url, caption=caption, share_to_feed="true" if share_to_feed else "false")
     if cover_url:
         p["cover_url"] = cover_url
@@ -41,6 +45,7 @@ def publish_story_video(video_url):
 
 
 def publish_image(image_url, caption):
+    caption = _lint(caption)
     return _publish_container(image_url=image_url, caption=caption)
 
 
@@ -49,6 +54,7 @@ def publish_story_image(image_url):
 
 
 def publish_carousel(image_urls, caption):
+    caption = _lint(caption)
     kids = [ig._post(f"{IG_USER_ID}/media", image_url=u, is_carousel_item="true")["id"] for u in image_urls]
     for k in kids:                                   # every slide must be processed before the album is built
         ig._wait_until_finished(k, timeout=180, interval=4)
