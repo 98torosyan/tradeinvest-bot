@@ -1,3 +1,6 @@
+**2026-11-04 21:39** `lesson` ✅ slot-retired
+- ℹ️ the 21:37 Reel slot is retired
+---
 **2026-11-04 21:29** `quiz` ❌ failed
 - ❌ quiz սխալ՝ RuntimeError: not reachable on Pages: https://98torosyan.github.io/tradeinvest-bot/reels/20261104-2129-quiz.mp4
 ---
@@ -81,8 +84,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 37 items
 - ✅ News published: Մոսկվայի բորսան գործարկում է կրիպտո
----
-**2026-11-03 16:19** `story` ✅ published
-- [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
-- [market] SPX row dropped, sources: {'yahoo': 7541.4}
-- ✅ Story published
