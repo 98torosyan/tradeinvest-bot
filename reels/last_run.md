@@ -1,3 +1,6 @@
+**2026-11-05 01:15** `lesson` ✅ skipped-quiet
+- 🌙 01:15 is inside quiet hours — the lesson waits for the next slot
+---
 **2026-11-05 00:33** `analysis` ✅ skipped-quiet
 - 🌙 quiet hours — analysis skipped
 ---
@@ -78,6 +81,3 @@
 ---
 **2026-11-03 21:19** `quiz` ✅ published
 - ✅ Quiz Story from H-082
----
-**2026-11-03 20:30** `lesson` ✅ slot-done
-- ℹ️ 2/2 lessons already out today — nothing to do
