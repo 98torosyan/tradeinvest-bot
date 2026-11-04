@@ -228,12 +228,26 @@ def do_short(st, now, rid, publish):
     to_youtube(mp4, s["hook"], cap, ["trading", "թրեյդինգ", "crypto", "risk management"]); return "published"
 
 
+def _catch_up(st, now, rid, publish, kinds):
+    """Exact Cloudflare triggers also run the day's GitHub-cron items that have not happened yet
+    (GitHub cron often starts hours late and late runs are skipped). Every job checks 'done today' itself."""
+    for k in kinds:
+        try:
+            res = HANDLERS[k](st, now, f"{rid}-cu-{k}", publish)
+            summary(f"↺ catch-up {k}: {res}")
+        except Exception as exc:  # noqa: BLE001
+            summary(f"⚠️ catch-up {k} failed: {str(exc)[:160]}")
+
+
 def do_lesson(st, now, rid, publish):
     # Schedule (executive decision, Nov 2026): 12:37 short lesson · 19:07 analysis Reel · no 21:37 Reel.
     if settings.SHORTS_ENABLED and now.hour >= 18:
         if now.hour < 21:
             return do_analysis(st, now, rid, publish)
-        summary("ℹ️ the 21:37 Reel slot is retired"); return "slot-retired"
+        summary("ℹ️ the 21:37 Reel slot is retired")
+        if publish:
+            _catch_up(st, now, rid, publish, (["weekly"] if now.weekday() == 6 else []) + ["digest"])
+        return "slot-retired"
     if publish and quiet(now):
         summary(f"🌙 {now:%H:%M} is inside quiet hours — the lesson waits for the next slot"); return "skipped-quiet"
     if settings.SHORTS_ENABLED and (not publish or st.get("shorts_last") != now.strftime("%Y-%m-%d")):
@@ -241,6 +255,7 @@ def do_lesson(st, now, rid, publish):
         if res:
             if publish:
                 st["shorts_last"] = now.strftime("%Y-%m-%d")
+                _catch_up(st, now, rid, publish, ["challenge"])
             return res
     elif settings.SHORTS_ENABLED:
         summary("ℹ️ today's short is already out"); return "slot-done"
@@ -489,7 +504,9 @@ def do_analysis(st, now, rid, publish):
     if publish and quiet(now):
         summary("🌙 quiet hours — analysis skipped"); return "skipped-quiet"
     if publish and settings.SHORTS_ENABLED and now.hour < 18:
-        summary("ℹ️ the analysis Reel moved to 19:07"); return "moved"
+        summary("ℹ️ the analysis Reel moved to 19:07")
+        _catch_up(st, now, rid, publish, ["carousel" if now.weekday() in (0, 2, 4) else "poster", "fact"])
+        return "moved"
     if publish and st.get("analysis_last") == today:
         summary("ℹ️ analysis already published today"); return "skipped"
     asset, info, lv, props, caption = analysis.build(now)
@@ -769,6 +786,8 @@ def do_digest(st, now, rid, publish):
     import re
     from . import igapi
     today = now.strftime("%Y-%m-%d")
+    if publish and st.get("digest_last") == today:
+        return "skipped"
     txt = open(LOG, encoding="utf-8").read() if os.path.exists(LOG) else ""
     ok, bad = [], []
     for m in re.finditer(r"\*\*(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2})\*\* `(\w+)` (✅|❌) ([^\n]*)", txt):
@@ -794,6 +813,7 @@ def do_digest(st, now, rid, publish):
     if not publish:
         print("\n".join(lines)); return "dry-run"
     notify("\n".join(lines))
+    st["digest_last"] = today
     if fol is not None:
         st["digest_followers"] = fol
     return "sent"
