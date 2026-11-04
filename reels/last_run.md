@@ -1,3 +1,6 @@
+**2026-11-05 03:39** `news` ✅ skipped-quiet
+- 🌙 03:39 — quiet hours, news skipped
+---
 **2026-11-05 02:52** `lesson` ✅ skipped-quiet
 - 🌙 02:52 — quiet hours, lesson skipped
 ---
@@ -78,6 +81,3 @@
 ---
 **2026-11-04 02:31** `lesson` ✅ skipped-quiet
 - 🌙 02:31 is inside quiet hours — the lesson waits for the next slot
----
-**2026-11-04 01:15** `chart` ✅ published
-- ✅ Story published
