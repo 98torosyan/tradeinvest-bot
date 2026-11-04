@@ -547,12 +547,70 @@ def do_weekly(st, now, rid, publish):
     reel_to_story(urls, rid); return "published"
 
 
+def _story_image(path, rid):
+    from . import igapi
+    from delivery.media_hosting import wait_until_reachable
+    urls = hosting.publish([(path, f"reels/{rid}.jpg")])
+    u = urls[f"reels/{rid}.jpg"]
+    if not wait_until_reachable(u, timeout=300):
+        raise RuntimeError(f"{u} is not reachable")
+    return igapi.publish_story_image(u)
+
+
+def do_challenge(st, now, rid, publish):
+    """«30 օր, 30 կանոն» daily Story at 10:07."""
+    from . import story_cards as sc
+    today = now.strftime("%Y-%m-%d")
+    ch = st.setdefault("challenge30", {"day": 0, "last": ""})
+    if publish and ch.get("last") == today:
+        summary("ℹ️ challenge story already published today"); return "skipped"
+    n = len(sc.challenge_rules())
+    if ch["day"] >= n:
+        summary("ℹ️ the 30-day challenge is finished"); return "skipped"
+    day = ch["day"] + 1
+    img = sc.render(sc.challenge_page(day), os.path.join(OUT, rid + ".jpg"))
+    if not publish:
+        summary(f"[dry-run] challenge day {day}"); return "dry-run"
+    _story_image(img, rid)
+    ch.update(day=day, last=today)
+    summary(f"✅ Challenge Story day {day}/{n}"); return "published"
+
+
+def do_alert(st, now, rid, publish):
+    """Hourly: if BTC/ETH moved ≥ 5 % in 24 h, publish one alert Story (max one per asset per 12 h)."""
+    import requests
+    from . import analysis, story_cards as sc
+    if quiet(now):
+        return "skipped-quiet"
+    done = []
+    for asset, sym in (("BTC", "BTCUSDT"), ("ETH", "ETHUSDT")):
+        try:
+            t = requests.get("https://data-api.binance.vision/api/v3/ticker/24hr", params={"symbol": sym}, timeout=20).json()
+            pct, last, hi, lo = float(t["priceChangePercent"]), float(t["lastPrice"]), float(t["highPrice"]), float(t["lowPrice"])
+        except Exception as exc:  # noqa: BLE001
+            summary(f"[alert] {asset}: {exc}"); continue
+        prev = st.setdefault("alerts", {}).get(asset, 0)
+        if abs(pct) < settings.ALERT_PCT or now.timestamp() - prev < 12 * 3600:
+            continue
+        lv = analysis.levels(analysis.candles(asset))
+        f = lambda v: analysis.fmt(asset, v)  # noqa: E731
+        z = f"{f(lv['zone'][0])}–{f(lv['zone'][1])}"
+        img = sc.render(sc.alert_page(analysis.NAME_HY[asset], asset, pct, f(last), f(hi), f(lo), z, f(lv["other"])),
+                        os.path.join(OUT, f"{rid}-{asset}.jpg"))
+        if not publish:
+            summary(f"[dry-run] alert {asset} {pct:+.1f}%"); done.append(asset); continue
+        _story_image(img, f"{rid}-{asset}")
+        st["alerts"][asset] = now.timestamp()
+        summary(f"✅ Alert Story {asset} {pct:+.1f}%"); done.append(asset)
+    return "published" if done else "no-move"
+
+
 def do_report_dry(st, now, rid, publish):
     from . import report
     report.main(dry=True); return "done"
 
 
-HANDLERS = {"weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
+HANDLERS = {"challenge": do_challenge, "alert": do_alert, "weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
             "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel, "analysis": do_analysis}
 
 

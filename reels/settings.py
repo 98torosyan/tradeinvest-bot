@@ -30,3 +30,4 @@ QUIET_HOURS = (0, 9)
 # Nov 2026 format: 12:37 short lesson (reels/content/shorts.json), 19:07 analysis Reel, no 21:37 Reel.
 SHORTS_ENABLED = True
 REEL_TO_STORY = True            # every new Reel (12:37 short, 19:07 analysis) is also shared as a Story
+ALERT_PCT = 5.0                 # big-move alert Story when BTC/ETH moves at least this much in 24 h
