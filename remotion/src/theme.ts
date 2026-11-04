@@ -147,6 +147,29 @@ export const TUFF: Theme = {
     sculpt: {upTop: "#E9C987", upBot: "#A07A38", dnTop: "#2B3F43", dnBot: "#0A1517", glow: "rgba(15,30,34,0.18)", dnStroke: "#18282C"}},
 };
 
+
+// ---------------------------------------------------------------- «TI Rise» (owner's logo: ink + white + orange) — Nov 2026 production theme
+export const TI: Theme = {
+  ...SEVAN,
+  name: "ti",
+  c: {
+    bg: "#0B0B0C", surface: "#1B1C1F", fg: "#F2EFE8", muted: "#A3A09A", grid: "rgba(242,239,232,0.06)",
+    accent: "#FF8A00", onAccent: "#0B0B0C", up: "#FF8A00", down: "#5C5A56",
+    a: "#7FA6C9", b: "#E25B4B", warn: "#E25B4B", zone: "rgba(255,138,0,0.14)", hero: "#1B1C1F",
+  },
+  fx: {...SEVAN.fx!, light: {color: "#FFD3A0", x: 0.15, y: 0.2, r: 0.95, alpha: 0.14}, rim: {color: "#FF9A3C", alpha: 0.06},
+    sculpt: {upTop: "#FFC27A", upBot: "#B5651A", dnTop: "#2A2B2F", dnBot: "#0B0B0C", glow: "rgba(255,138,0,0.30)", dnStroke: "#8A5A2A"}},
+};
+export const TI_PAPER: Theme = {
+  ...TUFF,
+  name: "ti_paper",
+  c: {
+    bg: "#F2EFE8", surface: "#E7E2D8", fg: "#0B0B0C", muted: "#5C5850", grid: "rgba(17,18,20,0.07)",
+    accent: "#FF8A00", accentText: "#C25E00", onAccent: "#0B0B0C", up: "#FF8A00", down: "#1B1C1F",
+    a: "#2F4E78", b: "#C03A2B", warn: "#C03A2B", zone: "rgba(255,138,0,0.2)", hero: "#E7E2D8",
+  },
+};
+
 // The outgoing "v3" brand, kept only to prove a re-skin is one object.
 export const V3: Theme = {
   ...PLACEHOLDER,
@@ -158,7 +181,7 @@ export const V3: Theme = {
   },
 };
 
-export const THEMES: Record<string, Theme> = {placeholder: PLACEHOLDER, v3: V3, "editorial-demo": EDITORIAL_DEMO, "paper-demo": PAPER_DEMO, sevan: SEVAN, tuff: TUFF};
+export const THEMES: Record<string, Theme> = {placeholder: PLACEHOLDER, v3: V3, "editorial-demo": EDITORIAL_DEMO, "paper-demo": PAPER_DEMO, sevan: SEVAN, tuff: TUFF, ti: TI, ti_paper: TI_PAPER};
 export const getTheme = (t?: string | Theme): Theme => (typeof t === "object" ? t : THEMES[t ?? "placeholder"] ?? PLACEHOLDER);
 
 // Instagram Reel safe zone (1080x1920). All text must sit inside it.

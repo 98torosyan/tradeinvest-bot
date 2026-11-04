@@ -3,9 +3,8 @@
  "shorts": [
   {
    "id": "S-001",
-   "series": "ՌԻՍԿ",
-   "tag": "ՕՐԻՆԱԿ",
-   "hero": "coins2",
+   "series": "RISK",
+   "tag": "EXAMPLE",
    "theme": "auto",
    "hook": "10 գործարքից 7-ը շահույթով է, իսկ հաշիվը՝ *մինուսում*։",
    "beats": [
@@ -26,35 +25,37 @@
    ],
    "rule": "Կարևորը ոչ թե «որքան հաճախ», այլ _«որքան»_ է։",
    "caption": "Շահող գործարքների տոկոսը մենակ ոչինչ չի ասում։ Կարևորն այն է, թե որքան ես շահում և որքան ես կորցնում։",
-   "tags": "#ռիսկ #riskmanagement #trading"
+   "tags": "#ռիսկ #riskmanagement #trading",
+   "kind": "ՌԻՍԿ",
+   "visual": "image:coins2"
   },
   {
    "id": "S-002",
-   "series": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
-   "tag": "Ա / Բ",
-   "hero": "tokens",
+   "series": "MINDSET",
+   "tag": "TRADER A / B",
    "theme": "auto",
    "hook": "Նույն շուկան։ Նույն վնասը։ *Երկու* թրեյդեր։",
    "beats": [
     {
-     "text": "Ա-ն փակում է հավելվածը։"
+     "text": "*Trader* A-ն փակում է հավելվածը։"
     },
     {
-     "text": "Բ-ն բացում է նոր գործարք՝ «հետ բերելու» համար։"
+     "text": "*Trader* B-ն բացում է նոր գործարք՝ «հետ բերելու» համար։"
     },
     {
-     "text": "Տարբերությունը ռազմավարությունը չէ, այլ ռեակցիան։"
+     "text": "Տարբերությունը strategy-ն չէ, այլ ռեակցիան։"
     }
    ],
    "rule": "Դու _ո՞րն_ ես։",
    "caption": "Վնասից հետո առաջին 10 րոպեն որոշում է ամբողջ օրը։",
-   "tags": "#tradingpsychology #թրեյդինգ #հոգեբանություն"
+   "tags": "#tradingpsychology #թրեյդինգ #հոգեբանություն",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "split"
   },
   {
    "id": "S-003",
-   "series": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
-   "tag": "ԿԱՆՈՆ",
-   "hero": "scale",
+   "series": "MINDSET",
+   "tag": "RULE",
    "theme": "auto",
    "hook": "Ամենադժվար կոճակը ոչ BUY է, ոչ *SELL*։",
    "beats": [
@@ -67,13 +68,14 @@
    ],
    "rule": "Հասա՞ր սահմանին՝ _դադար_ մինչև վաղը։",
    "caption": "Օրվա վնասի սահմանը պաշտպանում է հաշիվը քո իսկ էմոցիաներից։",
-   "tags": "#tradingpsychology #riskmanagement #թրեյդինգ"
+   "tags": "#tradingpsychology #riskmanagement #թրեյդինգ",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "level"
   },
   {
    "id": "S-004",
-   "series": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
-   "tag": "ՍԽԱԼ",
-   "hero": "coins89",
+   "series": "MINDSET",
+   "tag": "MISTAKE",
    "theme": "auto",
    "hook": "Ամենավտանգավոր պահը *շահույթից հետո* է։",
    "beats": [
@@ -89,13 +91,14 @@
    ],
    "rule": "Շահույթից հետո՝ _նույն_ չափը։",
    "caption": "Հաջողությունից հետո ռիսկը մեծացնելը ամենահաճախ հանդիպող սխալներից է։",
-   "tags": "#tradingpsychology #tradingmistakes #թրեյդինգ"
+   "tags": "#tradingpsychology #tradingmistakes #թրեյդինգ",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "fomo"
   },
   {
    "id": "S-005",
-   "series": "ՌԻՍԿ",
-   "tag": "ԿԱՆՈՆ",
-   "hero": "tokens_down",
+   "series": "RISK",
+   "tag": "RULE",
    "theme": "auto",
    "hook": "Stop-loss-ը որոշվում է *մուտքից առաջ*։",
    "beats": [
@@ -108,13 +111,14 @@
    ],
    "rule": "Մուտք, stop, թիրախ՝ _նախքան_ սեղմելը։",
    "caption": "Պլանը գրվում է մինչև գործարքը, ոչ թե գործարքի ընթացքում։",
-   "tags": "#stoploss #riskmanagement #trading"
+   "tags": "#stoploss #riskmanagement #trading",
+   "kind": "ՌԻՍԿ",
+   "visual": "stop"
   },
   {
    "id": "S-006",
-   "series": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
-   "tag": "ՍՏՈՒԳԻՐ",
-   "hero": "scale",
+   "series": "MINDSET",
+   "tag": "CHECKLIST",
    "theme": "auto",
    "hook": "3 նշան, որ այսօր պետք է *դադար* տաս",
    "beats": [
@@ -133,15 +137,16 @@
    ],
    "rule": "Ուղարկիր _ընկերոջդ_։",
    "caption": "Երբեմն լավագույն գործարքը այն է, որը չես բացում։",
-   "tags": "#tradingpsychology #overtrading #թրեյդինգ"
+   "tags": "#tradingpsychology #overtrading #թրեյդինգ",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "chart"
   },
   {
    "id": "S-007",
-   "series": "ՌԻՍԿ",
-   "tag": "ՕՐԻՆԱԿ",
-   "hero": "coins2",
+   "series": "RISK",
+   "tag": "EXAMPLE",
    "theme": "auto",
-   "hook": "1% ռիսկ $1 000 հաշվի վրա՝ *որքա՞ն է*",
+   "hook": "1% ռիսկ $1 000 հաշվի վրա՝ *հաշվենք*",
    "beats": [
     {
      "big": "$10",
@@ -155,13 +160,14 @@
    ],
    "rule": "Փոքր ռիսկը քեզ _խաղի մեջ_ է պահում։",
    "caption": "1% ռիսկի դեպքում նույնիսկ վատ շարքից հետո հաշիվը մնում է կենդանի։",
-   "tags": "#riskmanagement #positionsizing #ռիսկ"
+   "tags": "#riskmanagement #positionsizing #ռիսկ",
+   "kind": "ՌԻՍԿ",
+   "visual": "image:scale"
   },
   {
    "id": "S-008",
-   "series": "ՌԻՍԿ",
-   "tag": "ՕՐԻՆԱԿ",
-   "hero": "coins89",
+   "series": "RISK",
+   "tag": "EXAMPLE",
    "theme": "auto",
    "hook": "−50%-ից հետո պետք է *+100%*",
    "beats": [
@@ -177,13 +183,14 @@
    ],
    "rule": "Վնասը վերականգնելը _ավելի դժվար_ է, քան կորցնելը։",
    "caption": "Մեծ վնասից հետո վերականգնման համար պետք է շատ ավելի մեծ շահույթ։ Դրա համար ռիսկը սահմանափակվում է նախօրոք։",
-   "tags": "#riskmanagement #drawdown #ռիսկ"
+   "tags": "#riskmanagement #drawdown #ռիսկ",
+   "kind": "ՌԻՍԿ",
+   "visual": "image:coins89"
   },
   {
    "id": "S-009",
-   "series": "ՌԻՍԿ",
-   "tag": "ՕՐԻՆԱԿ",
-   "hero": "coins2",
+   "series": "RISK",
+   "tag": "EXAMPLE",
    "theme": "auto",
    "hook": "4 գործարքից 3-ը վնասով, իսկ արդյունքը՝ *զրո*",
    "beats": [
@@ -194,7 +201,7 @@
     },
     {
      "big": "+3",
-     "text": "1 շահույթ՝ R/R 1:3"
+     "text": "1 շահույթ՝ Risk/Reward 1:3"
     },
     {
      "big": "0",
@@ -203,13 +210,14 @@
    ],
    "rule": "Մեծ թիրախը թույլ է տալիս _սխալվել_։",
    "caption": "Ռիսկի և շահույթի հարաբերակցությունը (R/R) որոշում է, թե քանի անգամ կարող ես սխալվել։",
-   "tags": "#riskreward #trading #ռիսկ"
+   "tags": "#riskreward #trading #ռիսկ",
+   "kind": "ՌԻՍԿ",
+   "visual": "rr"
   },
   {
    "id": "S-010",
-   "series": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "series": "MINDSET",
    "tag": "FOMO",
-   "hero": "tokens",
    "theme": "auto",
    "hook": "Գինը արդեն թռել է, իսկ դու *գնում ես*",
    "beats": [
@@ -222,13 +230,14 @@
    ],
    "rule": "Բաց թողնված գործարքը _վնաս չէ_։",
    "caption": "FOMO-ն ստիպում է մտնել ամենավատ գնով։ Շուկան վաղն էլ հնարավորություններ կտա։",
-   "tags": "#fomo #tradingpsychology #crypto"
+   "tags": "#fomo #tradingpsychology #crypto",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "fomo"
   },
   {
    "id": "S-011",
-   "series": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
-   "tag": "ՍԽԱԼ",
-   "hero": "tokens_down",
+   "series": "MINDSET",
+   "tag": "MISTAKE",
    "theme": "auto",
    "hook": "«Հետ կգա» ամենաթանկ *միտքն* է",
    "beats": [
@@ -241,15 +250,16 @@
    ],
    "rule": "Փակիր stop-ով, _ոչ թե_ հույսով։",
    "caption": "Հույսը ռազմավարություն չէ։ Stop-loss-ը պաշտպանում է այն օրերից, երբ գինը չի վերադառնում։",
-   "tags": "#stoploss #tradingmistakes #թրեյդինգ"
+   "tags": "#stoploss #tradingmistakes #թրեյդինգ",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "stop"
   },
   {
    "id": "S-012",
-   "series": "ՌԻՍԿ",
-   "tag": "ՕՐԻՆԱԿ",
-   "hero": "coins89",
+   "series": "RISK",
+   "tag": "EXAMPLE",
    "theme": "auto",
-   "hook": "Լևերիջ x10 և ընդամենը *10%* շարժում",
+   "hook": "Leverage x10 և ընդամենը *10%* շարժում",
    "beats": [
     {
      "big": "−10%",
@@ -262,17 +272,18 @@
      "loss": true
     }
    ],
-   "rule": "Լևերիջը մեծացնում է _ամեն ինչ_, նաև սխալը։",
+   "rule": "Leverage-ը մեծացնում է _ամեն ինչ_, նաև սխալը։",
    "caption": "Լևերիջը չի փոխում ճիշտ լինելու հավանականությունը, միայն մեծացնում է հետևանքը։",
-   "tags": "#leverage #futures #ռիսկ"
+   "tags": "#leverage #futures #ռիսկ",
+   "kind": "ՌԻՍԿ",
+   "visual": "multiplier"
   },
   {
    "id": "S-013",
-   "series": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
-   "tag": "ՍՈՎՈՐՈՒԹՅՈՒՆ",
-   "hero": "scale",
+   "series": "MINDSET",
+   "tag": "HABIT",
    "theme": "auto",
-   "hook": "Ամենաէժան ուսուցիչը քո *ժուռնալն* է",
+   "hook": "Ամենաէժան ուսուցիչը քո *trading journal*-ն է",
    "beats": [
     {
      "text": "Գրիր մուտքը, պատճառը և արդյունքը։"
@@ -283,19 +294,20 @@
    ],
    "rule": "Չգրված գործարքը _դաս չէ_։",
    "caption": "Թրեյդինգ ժուռնալը ցույց է տալիս այն, ինչ հիշողությունը թաքցնում է։",
-   "tags": "#tradingjournal #թրեյդինգ #discipline"
+   "tags": "#tradingjournal #թրեյդինգ #discipline",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "level"
   },
   {
    "id": "S-014",
-   "series": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
-   "tag": "ՍԽԱԼ",
-   "hero": "coins2",
+   "series": "MINDSET",
+   "tag": "MISTAKE",
    "theme": "auto",
-   "hook": "Օրական 20 գործարք՝ *ավելի շատ* շահույթ չէ",
+   "hook": "Օրական 20 trade՝ *ավելի շատ* շահույթ չէ",
    "beats": [
     {
      "big": "20",
-     "text": "գործարք օրական"
+     "text": "trade օրական՝ overtrading"
     },
     {
      "text": "Միջնորդավճար, հոգնածություն և էմոցիա։"
@@ -303,7 +315,9 @@
    ],
    "rule": "Ավելի քիչ, բայց _ավելի լավ_։",
    "caption": "Գործարքների քանակը չի որոշում արդյունքը։ Որոշում է յուրաքանչյուրի որակը։",
-   "tags": "#overtrading #tradingpsychology #թրեյդինգ"
+   "tags": "#overtrading #tradingpsychology #թրեյդինգ",
+   "kind": "ՀՈԳԵԲԱՆՈՒԹՅՈՒՆ",
+   "visual": "grid"
   }
  ]
 }

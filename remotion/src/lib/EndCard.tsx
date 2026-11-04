@@ -4,7 +4,7 @@ import React from "react";
 import {Img, staticFile, useCurrentFrame} from "remotion";
 import {useTheme, pr, ThemeProvider, ff} from "./core";
 import {Label, Viewfinder} from "./Atmosphere";
-import {SEVAN, Theme} from "../theme";
+import {SEVAN, TI, Theme} from "../theme";
 
 export const CTA_TEXT = {kw: "Գրիր «ԴԱՍ»", dm: "Գրիր DM «ԴԱՍ»"} as const;   // keyword stays exactly «ԴԱՍ» (community bot)
 export const END_FRAMES = 30;
@@ -21,8 +21,8 @@ const Card: React.FC<{cta: "kw" | "dm" | "none"; tagline?: string}> = ({cta, tag
       <div style={{position: "absolute", inset: 0, background: `radial-gradient(700px 900px at 50% 38%, ${t.c.accent}22, transparent 70%)`}} />
       <div style={{position: "absolute", left: 0, right: 0, top: 330, display: "flex", flexDirection: "column", alignItems: "center", gap: 30}}>
         <Img src={staticFile("brand/mark-on-ink.svg")} style={{width: 330, opacity: a, translate: `0px ${(1 - a) * 20}px`, scale: String(0.96 + 0.04 * a)}} />
-        <Label text="ARM TRADE INVEST" color={t.c.fg} size={34} />
-        {tagline && <div style={{fontFamily: ff(t, "display"), fontVariationSettings: "'wght' 300, 'wdth' 62.5", fontSize: 64, color: t.c.fg, opacity: a}}>{tagline}</div>}
+        <div style={{fontFamily: ff(t, "body"), fontVariationSettings: "'wght' 800, 'wdth' 100", fontSize: 64, letterSpacing: "-0.01em"}}><span style={{color: t.c.fg}}>Trade</span><span style={{color: t.c.accent, fontVariationSettings: "'wght' 400, 'wdth' 100"}}>Invest</span></div>
+        {tagline && <div style={{fontFamily: ff(t, "body"), fontVariationSettings: "'wght' 600, 'wdth' 100", fontSize: 30, letterSpacing: "0.42em", color: t.c.muted, opacity: a, marginTop: -6}}>{tagline}</div>}
         {cta !== "none" && <div style={{opacity: pr(f, 4, 12), marginTop: 18, border: `2px solid ${t.c.fg}`, borderRadius: 999, padding: "12px 36px",
           display: "flex", alignItems: "center", fontFamily: ff(t, "body"), fontVariationSettings: t.type.bodyVar, fontSize: 40, color: t.c.fg}}>
           {CTA_TEXT[cta]}<Arrow color={t.c.fg} /></div>}
@@ -33,8 +33,8 @@ const Card: React.FC<{cta: "kw" | "dm" | "none"; tagline?: string}> = ({cta, tag
   );
 };
 
-export const EndCard: React.FC<{cta?: "kw" | "dm" | "none"; tagline?: string; theme?: Theme}> = ({cta = "dm", tagline = "Թրեյդինգ՝ այբից ֆե", theme}) => {
+export const EndCard: React.FC<{cta?: "kw" | "dm" | "none"; tagline?: string; theme?: Theme}> = ({cta = "dm", tagline = "TRADING ACADEMY", theme}) => {
   const t = useTheme();
-  const th = theme ?? (t.name === "tuff" ? SEVAN : t);
+  const th = theme ?? (t.name === "tuff" ? SEVAN : t.name === "ti_paper" ? TI : t);
   return <ThemeProvider value={th}><Card cta={cta} tagline={tagline} /></ThemeProvider>;
 };

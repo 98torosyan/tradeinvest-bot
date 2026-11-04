@@ -15,7 +15,7 @@ export type Props = {
   fmt: {other: string; zone: string; last: string};
 };
 
-const INK = "#0F1E22", PAPER = "#EDE4D3", AMB = "#D6AE66", AMB2 = "#E8C98A", MUT = "#9FB0AE", DN = "#4E6266";
+const INK = "#0B0B0C", PAPER = "#F2EFE8", AMB = "#FF8A00", AMB2 = "#FFA640", MUT = "#A3A09A", DN = "#5C5A56";
 const X0 = 70, X1 = 840, XC = 750, Y0 = 600, Y1 = 1035, AX = 858;
 const E = Easing.bezier(0.2, 0.8, 0.2, 1);
 const pr = (f: number, a: number, b: number) => interpolate(f, [a, b], [0, 1], {extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: E});
@@ -137,7 +137,7 @@ const DEMO: Props = {
 };
 
 const SHORT_DEMO: ShortProps = {
-  index: "07", series: "ՌԻՍԿ ԱՌԱՆՑ ՁԱՆՁՐՈՒՅԹԻ", tag: "ՕՐԻՆԱԿ", hero: "coins2", theme: "sevan",
+  index: "07", series: "ՌԻՍԿ ԱՌԱՆՑ ՁԱՆՁՐՈՒՅԹԻ", tag: "ՕՐԻՆԱԿ", hero: "coins2", theme: "ti",
   hook: "10 գործարքից 7-ը շահույթով է, իսկ հաշիվը՝ *մինուսում*։",
   beats: [{big: "+7", text: "7 × (+1)"}, {big: "−12", text: "3 × (−4)", loss: true}, {big: "−5", text: "+7 − 12", loss: true}],
   rule: "Կարևորը ոչ թե «որքան հաճախ», այլ _«որքան»_ է։",

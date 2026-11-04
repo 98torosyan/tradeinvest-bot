@@ -8,11 +8,12 @@ import {Words} from "./lib/Kinetic";
 import {EditorialMarks, LevelWipe} from "./lib/Atmosphere";
 import {EndCard, END_FRAMES} from "./lib/EndCard";
 import {getTheme} from "./theme";
+import {Visual, VisualSpec} from "./Visuals";
 
 export type Beat = {big?: string; text?: string; loss?: boolean};
 export type ShortProps = {
-  variant?: number; theme?: "sevan" | "tuff"; index: string; series: string; tag?: string;
-  hook: string; beats: Beat[]; rule: string; hero: string; cta?: "kw" | "dm" | "none";
+  variant?: number; theme?: string; index: string; series: string; tag?: string;
+  hook: string; beats: Beat[]; rule: string; hero?: string; visual?: VisualSpec; cta?: "kw" | "dm" | "none";
 };
 
 const FPS = 30;
@@ -28,7 +29,7 @@ export const timeline = (P: ShortProps) => {
 };
 
 // Four camera moves so consecutive days never feel the same; the hero never stops moving.
-const Hero: React.FC<{src: string; body: number; v: number}> = ({src, body, v}) => {
+const Hero: React.FC<{src: string; body: number; v: number; orange?: boolean}> = ({src, body, v, orange}) => {
   const f = useCurrentFrame();
   const lin = pr(f, 0, body, (x) => x);
   const bob = Math.sin(f / 22);
@@ -39,7 +40,7 @@ const Hero: React.FC<{src: string; body: number; v: number}> = ({src, body, v}) 
   if (v === 3) {scale = 1 + 0.12 * Math.pow(lin, 1.6); x = -20 * lin; rot = -1.2 * lin;}  // accelerating dolly
   const beat = Math.max(0, 1 - Math.abs((f % 90) - 45) / 12);                  // a light pulse every 3 s
   return <div style={{position: "absolute", inset: 0, scale: String(scale), translate: `${x}px ${y}px`, rotate: `${rot}deg`, transformOrigin: "50% 78%"}}>
-    <Img src={staticFile(`hero/${src}.png`)} style={{position: "absolute", left: 0, top: 160, width: 1080, height: 1920, filter: `brightness(${1 + 0.12 * beat})`}} />
+    <Img src={staticFile(`hero/${src}.png`)} style={{position: "absolute", left: 0, top: 160, width: 1080, height: 1920, filter: `brightness(${1 + 0.12 * beat})${orange ? " sepia(0.25) saturate(1.45) hue-rotate(-12deg)" : ""}`}} />
   </div>;
 };
 
@@ -51,7 +52,7 @@ const Big: React.FC<{text: string; color: string; at: number}> = ({text, color, 
     letterSpacing: "-0.02em", color, opacity: a, translate: `0px ${(1 - a) * 40}px`}}>{text}</div>;
 };
 
-const MODES = ["rise", "pop", "slam", "mask"] as const;
+const MODES = ["rise", "pop", "mask", "pop"] as const;
 const Scene: React.FC<ShortProps & {starts: number[]; body: number}> = (P) => {
   const f = useCurrentFrame();
   const mode = MODES[Math.floor((P.variant ?? 0) / 4) % 4];
@@ -65,7 +66,7 @@ const Scene: React.FC<ShortProps & {starts: number[]; body: number}> = (P) => {
     return <div key={i} style={{position: "absolute", left: 65, right: 65, top: 372, opacity: fadeOut}}>{child}</div>;
   };
   return <>
-    <Hero src={P.hero} body={P.body} v={(P.variant ?? 0) % 4} />
+    {P.visual ? <Visual v={P.visual} starts={P.starts} body={P.body} /> : <Hero src={P.hero ?? "coins2"} body={P.body} v={(P.variant ?? 0) % 4} orange={(P.theme ?? "ti").startsWith("ti")} />}
     <EditorialMarks index={P.index} left={P.series} right={P.tag} y0={276} />
     {block(0, <Words text={P.hook} mode="settle" size={124} lh={1.02} />)}
     {P.beats.map((b, k) => block(k + 1, <>
@@ -77,14 +78,14 @@ const Scene: React.FC<ShortProps & {starts: number[]; body: number}> = (P) => {
 };
 
 export const Short: React.FC<ShortProps> = (P) => {
-  const theme = getTheme(P.theme ?? "sevan");
+  const theme = getTheme(P.theme ?? "ti");
   const {starts, body} = timeline(P);
   return (
     <ThemeRoot theme={theme}>
       <Sequence durationInFrames={body} layout="none"><Scene {...P} starts={starts} body={body} />
         {starts.slice(1).map((s, i) => <LevelWipe key={i} at={s - 4} y={1720} />)}
       </Sequence>
-      <Sequence from={body} layout="none"><EndCard cta={P.cta ?? "none"} tagline="Թրեյդինգ՝ պարզ հայերենով" /></Sequence>
+      <Sequence from={body} layout="none"><EndCard cta={P.cta ?? "none"} /></Sequence>
       <Cue at={0} name="hook" volume={0.45} />
       {starts.slice(1, -1).map((s, i) => <Cue key={i} at={s} name={P.beats[i]?.big ? "hit" : "swap"} volume={0.5} />)}
       <Cue at={starts[starts.length - 1] + 26} name="resolve" volume={0.45} />
