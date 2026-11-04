@@ -170,6 +170,17 @@ def quiet(now):
     return a <= now.hour < b
 
 
+def reel_to_story(urls, rid):
+    """Re-share the fresh Reel as a Story (more reach; the owner adds good ones to Highlights by hand)."""
+    if not getattr(settings, "REEL_TO_STORY", False):
+        return
+    from . import igapi
+    try:
+        igapi.publish_story_video(urls[f"reels/{rid}.mp4"]); summary("✅ Story published")
+    except Exception as exc:  # noqa: BLE001
+        summary(f"⚠️ Story failed (the Reel is fine): {str(exc)[:160]}")
+
+
 def do_short(st, now, rid, publish):
     """12:37 short lesson Reel (Remotion, brand «Գիշերային Սևան»)."""
     from . import shorts
@@ -198,7 +209,8 @@ def do_short(st, now, rid, publish):
     today = now.strftime("%Y-%m-%d")
     st.setdefault("shorts_done", {})[s["id"]] = {"media": media, "date": today, "kw": kw}
     st.setdefault("published", {})[s["id"]] = {"media": media, "date": today, "hour": now.hour}
-    summary(f"✅ short {s['id']} published ({dur:.0f}s, kw={kw})"); return "published"
+    summary(f"✅ short {s['id']} published ({dur:.0f}s, kw={kw})")
+    reel_to_story(urls, rid); return "published"
 
 
 def do_lesson(st, now, rid, publish):
@@ -454,7 +466,8 @@ def do_analysis(st, now, rid, publish):
     st["analysis_last"] = today
     st.setdefault("analysis_media", []).append({"media": media, "asset": asset, "date": today})
     st["analysis_media"] = st["analysis_media"][-60:]
-    summary(f"✅ Analysis Reel {asset} published"); return "published"
+    summary(f"✅ Analysis Reel {asset} published")
+    reel_to_story(urls, rid); return "published"
 
 
 HANDLERS = {"music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
