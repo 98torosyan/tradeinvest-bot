@@ -1,3 +1,6 @@
+**2026-11-05 20:45** `lesson` ✅ skipped-late
+- ⏰ GitHub started this lesson run 488 min late — skipped (the next slot will post)
+---
 **2026-11-05 19:09** `lesson` ✅ published
 - [analysis] ETH R zone=2433.44-2450.00 touches=1 other=2405.23
 - ✅ Analysis Reel ETH published
@@ -68,8 +71,3 @@
 ---
 **2026-11-04 20:32** `lesson` ✅ skipped
 - ℹ️ analysis already published today
----
-**2026-11-04 19:10** `lesson` ✅ published
-- [analysis] GOLD S zone=3879.30-3931.84 touches=1 other=4061.50
-- ✅ Analysis Reel GOLD published
-- ✅ Story published
