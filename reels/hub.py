@@ -69,6 +69,21 @@ def build(out_dir):
             f'</div>{analytics()}</body></html>')
     path = os.path.join(out_dir, "index.html")
     open(path, "w", encoding="utf-8").write(page)
+    privacy = ('<!doctype html><html lang="hy"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">'
+               '<title>Privacy Policy · TradeInvest</title><style>body{background:#0B0B0C;color:#F2EFE8;font-family:system-ui,sans-serif;line-height:1.6;'
+               'max-width:720px;margin:0 auto;padding:32px 20px}h1{color:#FF8A00}a{color:#FFA640}</style></head><body>'
+               '<h1>Privacy Policy</h1><p>Last updated: November 2026</p>'
+               '<p>TradeInvest (@armtradeinvest) publishes educational trading content to its own Instagram and YouTube accounts. '
+               'The "TradeInvest Uploader" application is used only by the account owner to upload the owner\'s own videos to the owner\'s own '
+               'YouTube channel through the YouTube Data API.</p>'
+               '<p>The application does not collect, store, sell or share personal data of other users. It accesses only the owner\'s channel '
+               'with the youtube.upload scope, and the access token is stored as an encrypted secret used solely for uploads.</p>'
+               '<p>This website does not use advertising cookies. Basic, privacy-friendly page statistics may be counted without identifying visitors.</p>'
+               '<p>Use of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements.</p>'
+               '<p>Contact: Instagram <a href="https://www.instagram.com/armtradeinvest/">@armtradeinvest</a>.</p>'
+               '<p lang="hy">Կրթական բովանդակություն է, ոչ թե ֆինանսական խորհուրդ։</p></body></html>')
+    os.makedirs(os.path.join(out_dir, "privacy"), exist_ok=True)
+    open(os.path.join(out_dir, "privacy", "index.html"), "w", encoding="utf-8").write(privacy)
     import shutil
     og = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets", "og.png")
     if os.path.exists(og):
@@ -77,5 +92,5 @@ def build(out_dir):
     open(os.path.join(out_dir, "robots.txt"), "w").write(f"User-agent: *\nAllow: /\nSitemap: {base}sitemap.xml\n")
     open(os.path.join(out_dir, "sitemap.xml"), "w").write(
         '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-        + "".join(f"<url><loc>{base}{u}</loc></url>" for u in ("", "start/", "tools/")) + "</urlset>")
+        + "".join(f"<url><loc>{base}{u}</loc></url>" for u in ("", "start/", "tools/", "privacy/")) + "</urlset>")
     return path
