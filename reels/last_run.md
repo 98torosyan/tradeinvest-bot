@@ -1,3 +1,6 @@
+**2026-11-05 16:44** `story` ✅ skipped-late
+- ⏰ GitHub started this story run 487 min late — skipped (the next slot will post)
+---
 **2026-11-05 12:39** `lesson` ✅ published
 - ✅ short S-002 published (18s, kw=False)
 - ✅ Story published
@@ -73,12 +76,3 @@
 - ✅ Story Story_4_Quiz_2.jpg
 - ✅ Story Story_4_Quiz_3.jpg
 - ✅ Story Story_4_Quiz_4.jpg
----
-**2026-11-04 16:03** `stories_pack` ✅ published
-- ✅ Story Story_1_Sksir_1.jpg
-- ✅ Story Story_1_Sksir_2.jpg
-- ✅ Story Story_1_Sksir_3.jpg
-- ✅ Story Story_2_Dasyntac_1.jpg
-- ✅ Story Story_2_Dasyntac_2.jpg
-- ✅ Story Story_5_FAQ_1.jpg
-- ✅ Story Story_5_FAQ_2.jpg
