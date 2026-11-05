@@ -28,7 +28,7 @@ on:
         required: true
         default: "lesson"
         type: choice
-        options: [lesson, news, story, chart, quiz, carousel, analysis, music, selftest, stories_pack, report_dry, weekly, challenge, alert, monthly, econ_dry, fact, poster, digest]
+        options: [lesson, news, story, chart, quiz, carousel, analysis, music, selftest, stories_pack, report_dry, weekly, challenge, alert, monthly, econ_dry, fact, poster, digest, yt_check]
 
 permissions:
   contents: write

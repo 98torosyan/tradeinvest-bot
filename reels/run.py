@@ -819,16 +819,25 @@ def do_digest(st, now, rid, publish):
     return "sent"
 
 
+def do_yt_check(st, now, rid, publish):
+    """Checks that the YouTube secrets work (token refresh only, uploads nothing)."""
+    from . import youtube
+    if not youtube.configured():
+        summary("❌ YouTube secrets are missing"); return "missing"
+    youtube._access_token()
+    summary("✅ YouTube token OK — Reels will be cross-posted"); return "ok"
+
+
 def do_report_dry(st, now, rid, publish):
     from . import report
     report.main(dry=True); return "done"
 
 
-HANDLERS = {"digest": do_digest, "poster": do_poster, "fact": do_fact, "econ_dry": do_econ_dry, "monthly": do_monthly, "challenge": do_challenge, "alert": do_alert, "weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
+HANDLERS = {"yt_check": do_yt_check, "digest": do_digest, "poster": do_poster, "fact": do_fact, "econ_dry": do_econ_dry, "monthly": do_monthly, "challenge": do_challenge, "alert": do_alert, "weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
             "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel, "analysis": do_analysis}
 
 
-ALWAYS = {"digest", "report_dry", "econ_dry", "music", "stories_pack"}     # allowed at any hour
+ALWAYS = {"yt_check", "digest", "report_dry", "econ_dry", "music", "stories_pack"}     # allowed at any hour
 MAX_LATE_MIN = 120                                                        # GitHub cron can start hours late
 
 
