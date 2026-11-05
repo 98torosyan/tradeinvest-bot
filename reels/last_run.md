@@ -1,3 +1,6 @@
+**2026-11-05 18:56** `news` ✅ skipped-late
+- ⏰ GitHub started this news run 499 min late — skipped (the next slot will post)
+---
 **2026-11-05 18:33** `challenge` ✅ skipped-late
 - ⏰ GitHub started this challenge run 507 min late — skipped (the next slot will post)
 ---
@@ -70,6 +73,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 35 items
 - ✅ News published: Ֆրանսիայում առաջարկում են հայտարարագրել կրիպտոն
----
-**2026-11-04 17:39** `analysis` ✅ moved
-- ℹ️ the analysis Reel moved to 19:07
