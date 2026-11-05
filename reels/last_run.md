@@ -1,3 +1,7 @@
+**2026-11-05 22:10** `alert` ✅ published
+- ✅ Alert Story BTC -5.6%
+- ✅ Alert Story ETH -7.2%
+---
 **2026-11-05 21:39** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - 🌙 Օրվա ամփոփում · 2026-11-05
@@ -79,6 +83,3 @@
 ---
 **2026-11-04 21:39** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
----
-**2026-11-04 21:29** `quiz` ❌ failed
-- ❌ quiz սխալ՝ RuntimeError: not reachable on Pages: https://98torosyan.github.io/tradeinvest-bot/reels/20261104-2129-quiz.mp4
