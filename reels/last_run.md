@@ -1,3 +1,9 @@
+**2026-11-05 19:09** `lesson` ✅ published
+- [analysis] ETH R zone=2433.44-2450.00 touches=1 other=2405.23
+- ✅ Analysis Reel ETH published
+- ✅ Story published
+- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
+---
 **2026-11-05 18:56** `news` ✅ skipped-late
 - ⏰ GitHub started this news run 499 min late — skipped (the next slot will post)
 ---
@@ -67,9 +73,3 @@
 - [analysis] GOLD S zone=3879.30-3931.84 touches=1 other=4061.50
 - ✅ Analysis Reel GOLD published
 - ✅ Story published
----
-**2026-11-04 18:51** `news` ✅ published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 35 items
-- ✅ News published: Ֆրանսիայում առաջարկում են հայտարարագրել կրիպտոն
