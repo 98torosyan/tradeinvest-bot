@@ -1,3 +1,6 @@
+**2026-11-05 22:42** `poster` ✅ skipped-late
+- ⏰ GitHub started this poster run 455 min late — skipped (the next slot will post)
+---
 **2026-11-05 22:10** `alert` ✅ published
 - ✅ Alert Story BTC -5.6%
 - ✅ Alert Story ETH -7.2%
@@ -79,7 +82,3 @@
 - 🌙 quiet hours — analysis skipped
 ---
 **2026-11-05 00:03** `report_dry` ✅ done
-
----
-**2026-11-04 21:39** `lesson` ✅ slot-retired
-- ℹ️ the 21:37 Reel slot is retired
