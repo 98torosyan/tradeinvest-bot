@@ -1017,6 +1017,11 @@
    "media": "18132988048830003",
    "date": "2026-11-04",
    "hour": 12
+  },
+  "S-002": {
+   "media": "18137159797718813",
+   "date": "2026-11-05",
+   "hour": 12
   }
  },
  "palette": {
@@ -1864,12 +1869,22 @@
    "user_px-urban-hiphop-beat-623450.mp3",
    "user_px-into-the-night-drill-20928.mp3",
    "user_px-adrenaline-sport-620584.mp3"
+  ],
+  "moods/inspire": [
+   "user_mk-mood-uplifting-839.mp3",
+   "user_mk-mood-uplifting-32.mp3",
+   "user_px-epic-motivation-618588.mp3",
+   "user_mk-mood-uplifting-1001.mp3",
+   "user_px-cinematic-hiphop-315904.mp3",
+   "user_mk-mood-uplifting-684.mp3",
+   "user_mk-mood-uplifting-963.mp3"
   ]
  },
  "music_last": {
   "lesson": "user_px-gym-phonk-620567.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
-  "story": "user_px-gym-phonk-620567.mp3"
+  "story": "user_px-gym-phonk-620567.mp3",
+  "moods/inspire": "user_mk-mood-uplifting-31.mp3"
  },
  "music_sections": {
   "delayed-flight.mp3": [
@@ -1951,6 +1966,22 @@
    28.0,
    40.0,
    52.0
+  ],
+  "user_mk-mood-uplifting-682.mp3": [
+   3.0,
+   15.0,
+   29.0,
+   52.0,
+   64.0,
+   79.0
+  ],
+  "user_mk-mood-uplifting-31.mp3": [
+   33.0,
+   45.0,
+   57.0,
+   69.0,
+   81.0,
+   93.0
   ]
  },
  "music_uses": {
@@ -1965,7 +1996,9 @@
   "user_soundsurfer-trading-254548.mp3": 18,
   "user_px-trap-instrumental-560466.mp3": 1,
   "user_px-gym-phonk-620567.mp3": 2,
-  "user_px-house-flying-580004.mp3": 1
+  "user_px-house-flying-580004.mp3": 1,
+  "user_mk-mood-uplifting-682.mp3": 1,
+  "user_mk-mood-uplifting-31.mp3": 1
  },
  "low_alert": "2026-10-07",
  "hits_low_alert": "2026-10-17",
@@ -1977,9 +2010,14 @@
    "media": "18132988048830003",
    "date": "2026-11-04",
    "kw": true
+  },
+  "S-002": {
+   "media": "18137159797718813",
+   "date": "2026-11-05",
+   "kw": false
   }
  },
- "shorts_last": "2026-11-04",
+ "shorts_last": "2026-11-05",
  "stories_pack_done": [
   "Story_1_Sksir_1.jpg",
   "Story_1_Sksir_2.jpg",
@@ -2009,5 +2047,9 @@
    "date": "2026-11-04"
   }
  },
- "edu_carousel_last": "2026-11-04"
+ "edu_carousel_last": "2026-11-04",
+ "challenge30": {
+  "day": 1,
+  "last": "2026-11-05"
+ }
 }

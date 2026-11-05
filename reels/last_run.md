@@ -1,3 +1,10 @@
+**2026-11-05 12:39** `lesson` ✅ published
+- ✅ short S-002 published (18s, kw=False)
+- ✅ Story published
+- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
+- ✅ Challenge Story day 1/30
+- ↺ catch-up challenge: published
+---
 **2026-11-05 12:05** `yt_check` ✅ ok
 - ✅ YouTube token OK — Reels will be cross-posted
 ---
@@ -75,6 +82,3 @@
 - ✅ Story Story_2_Dasyntac_2.jpg
 - ✅ Story Story_5_FAQ_1.jpg
 - ✅ Story Story_5_FAQ_2.jpg
----
-**2026-11-04 12:40** `lesson` ✅ published
-- ✅ short S-001 published (18s, kw=True)
