@@ -1,3 +1,10 @@
+**2026-11-05 17:39** `analysis` ✅ moved
+- ℹ️ the analysis Reel moved to 19:07
+- ✅ Poster P-01 published
+- ↺ catch-up poster: published
+- ✅ Daily fact Story
+- ↺ catch-up fact: published
+---
 **2026-11-05 16:44** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 487 min late — skipped (the next slot will post)
 ---
@@ -68,11 +75,3 @@
 - [market] src_stooq failed: could not convert string to float: 'e.encode(c+n))'
 - [market] SPX row dropped, sources: {'yahoo': 7568.92}
 - ✅ Story published
----
-**2026-11-04 16:18** `stories_pack` ✅ published
-- ✅ Story Story_3_Shuka_1.jpg
-- ✅ Story Story_3_Shuka_2.jpg
-- ✅ Story Story_4_Quiz_1.jpg
-- ✅ Story Story_4_Quiz_2.jpg
-- ✅ Story Story_4_Quiz_3.jpg
-- ✅ Story Story_4_Quiz_4.jpg
