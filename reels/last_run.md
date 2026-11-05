@@ -1,3 +1,6 @@
+**2026-11-05 05:34** `alert` ✅ skipped-quiet
+- 🌙 05:34 — quiet hours, alert skipped
+---
 **2026-11-05 03:39** `news` ✅ skipped-quiet
 - 🌙 03:39 — quiet hours, news skipped
 ---
@@ -78,6 +81,3 @@
 - [news] https://cointelegraph.com/rss: 30 items
 - [news] https://decrypt.co/feed: 37 items
 - ✅ News published: ԱՄՆ-ի ընտրություններ և կրիպտո
----
-**2026-11-04 02:31** `lesson` ✅ skipped-quiet
-- 🌙 02:31 is inside quiet hours — the lesson waits for the next slot
