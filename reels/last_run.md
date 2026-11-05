@@ -1,3 +1,17 @@
+**2026-11-05 21:39** `lesson` ✅ slot-retired
+- ℹ️ the 21:37 Reel slot is retired
+- 🌙 Օրվա ամփոփում · 2026-11-05
+
+✅ Հրապարակվեց՝ 3
+• 01:28 chart
+• 12:39 Կարճ դաս / վերլուծություն
+• 19:09 Կարճ դաս / վերլուծություն
+
+👥 Հետևորդներ՝ 28
+
+Վաղը նույն ժամերին՝ ավտոմատ 🤖
+- ↺ catch-up digest: sent
+---
 **2026-11-05 21:37** `quiz` ✅ skipped-late
 - ⏰ GitHub started this quiz run 480 min late — skipped (the next slot will post)
 ---
@@ -68,6 +82,3 @@
 ---
 **2026-11-04 21:29** `quiz` ❌ failed
 - ❌ quiz սխալ՝ RuntimeError: not reachable on Pages: https://98torosyan.github.io/tradeinvest-bot/reels/20261104-2129-quiz.mp4
----
-**2026-11-04 20:38** `carousel` ✅ published
-- ✅ Carousel C-01 published (7 slides)
