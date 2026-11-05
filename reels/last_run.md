@@ -1,3 +1,6 @@
+**2026-11-06 03:45** `news` ✅ skipped-quiet
+- 🌙 03:45 — quiet hours, news skipped
+---
 **2026-11-06 02:20** `lesson` ✅ skipped-quiet
 - 🌙 02:20 — quiet hours, lesson skipped
 ---
@@ -80,5 +83,3 @@
 ---
 **2026-11-05 01:28** `chart` ✅ published
 - ✅ Story published
----
-**2026-11-05 01:19** `econ_dry` ✅ done
