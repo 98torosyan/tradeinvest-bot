@@ -50,7 +50,7 @@ def build(out_dir):
         _card("start/TradeInvest-Risk-Guide.pdf", "📄", "PDF՝ Ռիսկի կառավարում", "6 կանոն, բանաձև և checklist մեկ էջում"),
         _card("tools/", "🧮", "Թրեյդերի հաշվիչներ", "Position size, Risk/Reward, leverage"),
         _card(IG, "📊", "Ամենօրյա դասեր և վերլուծություն", "@armtradeinvest Instagram-ում", ext=True),
-        _card(DM, "✉️", "Անհատական դասընթաց", "Գրիր DM «ԴԱՍ»՝ օնլայն կամ օֆլայն, հայերեն", ext=True),
+        _card(DM, "✉️", "Դասընթաց՝ 3 ամիս, օֆլայն", "Անհատական կամ խմբային, հայերեն։ Գրիր DM «ԴԱՍ»", ext=True),
     ])
     sched = "".join(f"<div>{a}<span>{b}</span></div>" for a, b in [
         ("Կարճ դաս (Reel)", "12:37"), ("Կարուսել կամ պոստեր", "15:07"), ("Օրվա վերլուծություն (Reel)", "19:07"),
