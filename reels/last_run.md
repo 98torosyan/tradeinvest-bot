@@ -1,3 +1,6 @@
+**2026-11-07 00:14** `analysis` ✅ skipped-quiet
+- 🌙 00:14 — quiet hours, analysis skipped
+---
 **2026-11-06 21:39** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - 🌙 Օրվա ամփոփում · 2026-11-06
@@ -94,6 +97,3 @@
 ---
 **2026-11-05 18:56** `news` ✅ skipped-late
 - ⏰ GitHub started this news run 499 min late — skipped (the next slot will post)
----
-**2026-11-05 18:33** `challenge` ✅ skipped-late
-- ⏰ GitHub started this challenge run 507 min late — skipped (the next slot will post)
