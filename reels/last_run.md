@@ -1,3 +1,6 @@
+**2026-11-06 19:06** `news` ✅ skipped-late
+- ⏰ GitHub started this news run 510 min late — skipped (the next slot will post)
+---
 **2026-11-06 17:39** `analysis` ✅ moved
 - ℹ️ the analysis Reel moved to 19:07
 - ✅ Carousel T-01 published (9 slides)
@@ -89,6 +92,3 @@
 ---
 **2026-11-05 12:05** `yt_check` ✅ ok
 - ✅ YouTube token OK — Reels will be cross-posted
----
-**2026-11-05 05:34** `alert` ✅ skipped-quiet
-- 🌙 05:34 — quiet hours, alert skipped
