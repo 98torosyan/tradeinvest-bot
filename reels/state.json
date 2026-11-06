@@ -1890,7 +1890,6 @@
    "user_mk-mood-calm-127.mp3"
   ],
   "moods/tech": [
-   "user_mk-house-623.mp3",
    "user_mk-techno-160.mp3",
    "user_mk-techno-133.mp3",
    "user_px-house-flying-580004.mp3",
@@ -1916,7 +1915,7 @@
   "story": "user_px-gym-phonk-620567.mp3",
   "moods/inspire": "user_mk-mood-uplifting-32.mp3",
   "moods/calm": "user_mk-mood-calm-682.mp3",
-  "moods/tech": "user_mk-techno-134.mp3",
+  "moods/tech": "user_mk-house-623.mp3",
   "moods/tense": "user_mk-mood-tension-680.mp3"
  },
  "music_sections": {
@@ -2078,6 +2077,23 @@
    64.0,
    79.0,
    91.0
+  ],
+  "user_mk-house-623.mp3": [
+   15.0,
+   27.0,
+   39.0,
+   51.0,
+   63.0,
+   118.0,
+   130.0,
+   142.0,
+   157.0,
+   169.0,
+   181.0,
+   193.0,
+   205.0,
+   217.0,
+   229.0
   ]
  },
  "music_uses": {
@@ -2101,7 +2117,8 @@
   "user_mk-mood-uplifting-839.mp3": 1,
   "user_mk-mood-uplifting-32.mp3": 1,
   "user_mk-techno-134.mp3": 1,
-  "user_mk-mood-calm-682.mp3": 1
+  "user_mk-mood-calm-682.mp3": 1,
+  "user_mk-house-623.mp3": 1
  },
  "low_alert": "2026-10-07",
  "hits_low_alert": "2026-10-17",
@@ -2141,7 +2158,7 @@
   "Story_4_Quiz_3.jpg",
   "Story_4_Quiz_4.jpg"
  ],
- "analysis_last": "2026-11-05",
+ "analysis_last": "2026-11-06",
  "analysis_media": [
   {
    "media": "17981228451129133",
@@ -2152,6 +2169,11 @@
    "media": "18394099744228321",
    "asset": "ETH",
    "date": "2026-11-05"
+  },
+  {
+   "media": "18044020793835236",
+   "asset": "NDX",
+   "date": "2026-11-06"
   }
  ],
  "edu_carousels_done": {
