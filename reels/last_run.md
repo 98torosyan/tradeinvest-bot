@@ -1,3 +1,6 @@
+**2026-11-06 20:14** `lesson` ✅ skipped-late
+- ⏰ GitHub started this lesson run 457 min late — skipped (the next slot will post)
+---
 **2026-11-06 19:09** `lesson` ✅ published
 - [analysis] NDX S zone=26606.43-26891.73 touches=1 other=27316.09
 - ✅ Analysis Reel NDX published
@@ -88,10 +91,3 @@
 ---
 **2026-11-05 16:44** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 487 min late — skipped (the next slot will post)
----
-**2026-11-05 12:39** `lesson` ✅ published
-- ✅ short S-002 published (18s, kw=False)
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
-- ✅ Challenge Story day 1/30
-- ↺ catch-up challenge: published
