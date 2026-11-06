@@ -1,3 +1,6 @@
+**2026-11-07 00:50** `lesson` ✅ skipped-quiet
+- 🌙 00:50 — quiet hours, lesson skipped
+---
 **2026-11-07 00:14** `analysis` ✅ skipped-quiet
 - 🌙 00:14 — quiet hours, analysis skipped
 ---
@@ -94,6 +97,3 @@
 - ✅ Analysis Reel ETH published
 - ✅ Story published
 - ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
----
-**2026-11-05 18:56** `news` ✅ skipped-late
-- ⏰ GitHub started this news run 499 min late — skipped (the next slot will post)
