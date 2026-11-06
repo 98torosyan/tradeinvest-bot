@@ -1,3 +1,6 @@
+**2026-11-06 16:26** `story` ✅ skipped-late
+- ⏰ GitHub started this story run 470 min late — skipped (the next slot will post)
+---
 **2026-11-06 12:39** `lesson` ✅ published
 - ✅ short S-003 published (15s, kw=True)
 - ✅ Story published
@@ -85,6 +88,3 @@
 ---
 **2026-11-05 03:39** `news` ✅ skipped-quiet
 - 🌙 03:39 — quiet hours, news skipped
----
-**2026-11-05 02:52** `lesson` ✅ skipped-quiet
-- 🌙 02:52 — quiet hours, lesson skipped
