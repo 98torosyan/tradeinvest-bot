@@ -1,3 +1,9 @@
+**2026-11-07 19:09** `lesson` ✅ published
+- [analysis] BTC S zone=74888.00-75312.98 touches=2 other=76249.99
+- ✅ Analysis Reel BTC published
+- ✅ Story published
+- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
+---
 **2026-11-07 19:05** `lesson` ✅ skipped-late
 - ⏰ GitHub started this lesson run 388 min late — skipped (the next slot will post)
 ---
@@ -88,6 +94,3 @@
 ---
 **2026-11-06 03:47** `alert` ✅ skipped-quiet
 - 🌙 03:47 — quiet hours, alert skipped
----
-**2026-11-06 03:45** `news` ✅ skipped-quiet
-- 🌙 03:45 — quiet hours, news skipped
