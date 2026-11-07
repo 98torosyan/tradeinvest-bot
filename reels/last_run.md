@@ -1,3 +1,6 @@
+**2026-11-07 20:50** `poster` ✅ skipped-late
+- ⏰ GitHub started this poster run 344 min late — skipped (the next slot will post)
+---
 **2026-11-07 19:54** `quiz` ✅ skipped-late
 - ⏰ GitHub started this quiz run 377 min late — skipped (the next slot will post)
 ---
@@ -86,11 +89,3 @@
 ---
 **2026-11-06 16:26** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 470 min late — skipped (the next slot will post)
----
-**2026-11-06 12:39** `lesson` ✅ published
-- ✅ short S-003 published (15s, kw=True)
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
-- ✅ Challenge Story day 2/30
-- ✅ Economic calendar Story (today, 3 events)
-- ↺ catch-up challenge: published
