@@ -1,3 +1,6 @@
+**2026-11-07 21:44** `fact` ✅ skipped-late
+- ⏰ GitHub started this fact run 338 min late — skipped (the next slot will post)
+---
 **2026-11-07 21:39** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - 🌙 Օրվա ամփոփում · 2026-11-07
@@ -92,10 +95,3 @@
 ---
 **2026-11-06 19:06** `news` ✅ skipped-late
 - ⏰ GitHub started this news run 510 min late — skipped (the next slot will post)
----
-**2026-11-06 17:39** `analysis` ✅ moved
-- ℹ️ the analysis Reel moved to 19:07
-- ✅ Carousel T-01 published (9 slides)
-- ↺ catch-up carousel: published
-- ✅ Daily term Story
-- ↺ catch-up fact: published
