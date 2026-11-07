@@ -1,3 +1,6 @@
+**2026-11-07 15:18** `story` ✅ skipped-late
+- ⏰ GitHub started this story run 402 min late — skipped (the next slot will post)
+---
 **2026-11-07 12:39** `lesson` ✅ published
 - ✅ short S-004 published (16s, kw=False)
 - ✅ Story published
@@ -83,7 +86,3 @@
 ---
 **2026-11-05 22:42** `poster` ✅ skipped-late
 - ⏰ GitHub started this poster run 455 min late — skipped (the next slot will post)
----
-**2026-11-05 22:10** `alert` ✅ published
-- ✅ Alert Story BTC -5.6%
-- ✅ Alert Story ETH -7.2%
