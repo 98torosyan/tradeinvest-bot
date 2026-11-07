@@ -1,3 +1,11 @@
+**2026-11-07 17:39** `analysis` ✅ moved
+- ℹ️ the analysis Reel moved to 19:07
+- ✅ Poster P-02 published
+- ↺ catch-up poster: published
+- ⚠️ video Story failed, posting the image: https://98torosyan.github.io/tradeinvest-bot/reels/20261107-1739-analysis-cu-fact.mp4 is not reachable
+- ✅ Daily num Story
+- ↺ catch-up fact: published
+---
 **2026-11-07 17:30** `news` ✅ skipped-late
 - ⏰ GitHub started this news run 413 min late — skipped (the next slot will post)
 ---
@@ -83,6 +91,3 @@
 ---
 **2026-11-06 02:20** `lesson` ✅ skipped-quiet
 - 🌙 02:20 — quiet hours, lesson skipped
----
-**2026-11-06 00:49** `analysis` ✅ skipped-quiet
-- 🌙 00:49 — quiet hours, analysis skipped
