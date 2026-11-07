@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://98torosyan.github.io/tradeinvest-bot/sitemap.xml
