@@ -1,3 +1,6 @@
+**2026-11-07 22:15** `analysis` ✅ skipped-late
+- ⏰ GitHub started this analysis run 279 min late — skipped (the next slot will post)
+---
 **2026-11-07 21:44** `fact` ✅ skipped-late
 - ⏰ GitHub started this fact run 338 min late — skipped (the next slot will post)
 ---
@@ -92,6 +95,3 @@
 - ✅ Analysis Reel NDX published
 - ✅ Story published
 - ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
----
-**2026-11-06 19:06** `news` ✅ skipped-late
-- ⏰ GitHub started this news run 510 min late — skipped (the next slot will post)
