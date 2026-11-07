@@ -1,3 +1,10 @@
+**2026-11-07 12:39** `lesson` ✅ published
+- ✅ short S-004 published (16s, kw=False)
+- ✅ Story published
+- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
+- ✅ Challenge Story day 3/30
+- ↺ catch-up challenge: published
+---
 **2026-11-07 03:03** `news` ✅ skipped-quiet
 - 🌙 03:03 — quiet hours, news skipped
 ---
@@ -80,17 +87,3 @@
 **2026-11-05 22:10** `alert` ✅ published
 - ✅ Alert Story BTC -5.6%
 - ✅ Alert Story ETH -7.2%
----
-**2026-11-05 21:39** `lesson` ✅ slot-retired
-- ℹ️ the 21:37 Reel slot is retired
-- 🌙 Օրվա ամփոփում · 2026-11-05
-
-✅ Հրապարակվեց՝ 3
-• 01:28 chart
-• 12:39 Կարճ դաս / վերլուծություն
-• 19:09 Կարճ դաս / վերլուծություն
-
-👥 Հետևորդներ՝ 28
-
-Վաղը նույն ժամերին՝ ավտոմատ 🤖
-- ↺ catch-up digest: sent
