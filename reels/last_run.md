@@ -1,3 +1,6 @@
+**2026-11-08 21:01** `poster` ✅ skipped-late
+- ⏰ GitHub started this poster run 355 min late — skipped (the next slot will post)
+---
 **2026-11-08 20:17** `quiz` ✅ skipped-late
 - ⏰ GitHub started this quiz run 400 min late — skipped (the next slot will post)
 ---
@@ -86,6 +89,3 @@
 - ⚠️ video Story failed, posting the image: https://98torosyan.github.io/tradeinvest-bot/reels/20261107-1739-analysis-cu-fact.mp4 is not reachable
 - ✅ Daily num Story
 - ↺ catch-up fact: published
----
-**2026-11-07 17:30** `news` ✅ skipped-late
-- ⏰ GitHub started this news run 413 min late — skipped (the next slot will post)
