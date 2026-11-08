@@ -2327,5 +2327,200 @@
    "media": "18115134854594387",
    "date": "2026-11-08"
   }
+ ],
+ "followers_last": 29,
+ "followers_hist": [
+  {
+   "date": "2026-11-09",
+   "n": 29
+  }
+ ],
+ "weekly_reports": [
+  {
+   "date": "2026-11-09",
+   "rows": [
+    {
+     "id": "2026-11-08",
+     "kind": "Շաբաթվա ամփոփում",
+     "reach": 75,
+     "views": 95,
+     "saved": 0,
+     "shares": 0,
+     "likes": 0,
+     "eng": 0.0,
+     "watch": 5135,
+     "hour": 17
+    },
+    {
+     "id": "ETH",
+     "kind": "Վերլուծություն",
+     "reach": 109,
+     "views": 141,
+     "saved": 0,
+     "shares": 0,
+     "likes": 2,
+     "eng": 0.0,
+     "watch": 3702,
+     "hour": 15
+    },
+    {
+     "id": "P-03",
+     "kind": "Պոստեր",
+     "reach": 13,
+     "views": 27,
+     "saved": 0,
+     "shares": 0,
+     "likes": 0,
+     "eng": 0.0,
+     "watch": 0,
+     "hour": 13
+    },
+    {
+     "id": "S-005",
+     "kind": "Կարճ դաս",
+     "reach": 116,
+     "views": 143,
+     "saved": 0,
+     "shares": 0,
+     "likes": 4,
+     "eng": 0.0,
+     "watch": 5251,
+     "hour": 8
+    },
+    {
+     "id": "BTC",
+     "kind": "Վերլուծություն",
+     "reach": 119,
+     "views": 158,
+     "saved": 0,
+     "shares": 0,
+     "likes": 1,
+     "eng": 0.0,
+     "watch": 4226,
+     "hour": 15
+    },
+    {
+     "id": "P-02",
+     "kind": "Պոստեր",
+     "reach": 13,
+     "views": 30,
+     "saved": 0,
+     "shares": 0,
+     "likes": 1,
+     "eng": 0.0,
+     "watch": 0,
+     "hour": 13
+    },
+    {
+     "id": "S-004",
+     "kind": "Կարճ դաս",
+     "reach": 119,
+     "views": 145,
+     "saved": 1,
+     "shares": 0,
+     "likes": 2,
+     "eng": 0.008403361344537815,
+     "watch": 4974,
+     "hour": 8
+    },
+    {
+     "id": "NDX",
+     "kind": "Վերլուծություն",
+     "reach": 118,
+     "views": 153,
+     "saved": 0,
+     "shares": 0,
+     "likes": 0,
+     "eng": 0.0,
+     "watch": 4274,
+     "hour": 15
+    },
+    {
+     "id": "T-01",
+     "kind": "Կարուսել",
+     "reach": 18,
+     "views": 38,
+     "saved": 0,
+     "shares": 0,
+     "likes": 1,
+     "eng": 0.0,
+     "watch": 0,
+     "hour": 13
+    },
+    {
+     "id": "S-003",
+     "kind": "Կարճ դաս",
+     "reach": 117,
+     "views": 153,
+     "saved": 0,
+     "shares": 0,
+     "likes": 1,
+     "eng": 0.0,
+     "watch": 6264,
+     "hour": 8
+    },
+    {
+     "id": "ETH",
+     "kind": "Վերլուծություն",
+     "reach": 111,
+     "views": 146,
+     "saved": 0,
+     "shares": 0,
+     "likes": 0,
+     "eng": 0.0,
+     "watch": 4867,
+     "hour": 15
+    },
+    {
+     "id": "P-01",
+     "kind": "Պոստեր",
+     "reach": 15,
+     "views": 27,
+     "saved": 0,
+     "shares": 0,
+     "likes": 0,
+     "eng": 0.0,
+     "watch": 0,
+     "hour": 13
+    },
+    {
+     "id": "S-002",
+     "kind": "Կարճ դաս",
+     "reach": 14,
+     "views": 27,
+     "saved": 0,
+     "shares": 0,
+     "likes": 1,
+     "eng": 0.0,
+     "watch": 9007,
+     "hour": 8
+    },
+    {
+     "id": "C-01",
+     "kind": "Կարուսել",
+     "reach": 26,
+     "views": 80,
+     "saved": 2,
+     "shares": 1,
+     "likes": 4,
+     "eng": 0.11538461538461539,
+     "watch": 0,
+     "hour": 16
+    },
+    {
+     "id": "GOLD",
+     "kind": "Վերլուծություն",
+     "reach": 123,
+     "views": 170,
+     "saved": 0,
+     "shares": 0,
+     "likes": 0,
+     "eng": 0.0,
+     "watch": 5328,
+     "hour": 15
+    }
+   ],
+   "followers": 29
+  }
  ]
 }
