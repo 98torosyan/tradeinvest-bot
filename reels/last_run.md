@@ -1,3 +1,6 @@
+**2026-11-08 21:54** `fact` ✅ skipped-late
+- ⏰ GitHub started this fact run 348 min late — skipped (the next slot will post)
+---
 **2026-11-08 21:39** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - ✅ Weekly recap Reel published
@@ -95,6 +98,3 @@
 - ✅ Analysis Reel BTC published
 - ✅ Story published
 - ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
----
-**2026-11-07 19:05** `lesson` ✅ skipped-late
-- ⏰ GitHub started this lesson run 388 min late — skipped (the next slot will post)
