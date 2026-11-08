@@ -1,3 +1,20 @@
+**2026-11-08 21:39** `lesson` ✅ slot-retired
+- ℹ️ the 21:37 Reel slot is retired
+- ✅ Weekly recap Reel published
+- ✅ Story published
+- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
+- ↺ catch-up weekly: published
+- 🌙 Օրվա ամփոփում · 2026-11-08
+
+✅ Հրապարակվեց՝ 2
+• 12:39 Կարճ դաս / վերլուծություն
+• 19:09 Կարճ դաս / վերլուծություն
+
+👥 Հետևորդներ՝ 29 (+0 օրում)
+
+Վաղը նույն ժամերին՝ ավտոմատ 🤖
+- ↺ catch-up digest: sent
+---
 **2026-11-08 21:01** `poster` ✅ skipped-late
 - ⏰ GitHub started this poster run 355 min late — skipped (the next slot will post)
 ---
@@ -81,11 +98,3 @@
 ---
 **2026-11-07 19:05** `lesson` ✅ skipped-late
 - ⏰ GitHub started this lesson run 388 min late — skipped (the next slot will post)
----
-**2026-11-07 17:39** `analysis` ✅ moved
-- ℹ️ the analysis Reel moved to 19:07
-- ✅ Poster P-02 published
-- ↺ catch-up poster: published
-- ⚠️ video Story failed, posting the image: https://98torosyan.github.io/tradeinvest-bot/reels/20261107-1739-analysis-cu-fact.mp4 is not reachable
-- ✅ Daily num Story
-- ↺ catch-up fact: published

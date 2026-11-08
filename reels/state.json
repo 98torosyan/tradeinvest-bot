@@ -1909,6 +1909,18 @@
    "user_mk-mood-tension-281.mp3",
    "user_px-action-trailer-624648.mp3",
    "user_px-into-the-night-drill-20928.mp3"
+  ],
+  "moods/energy": [
+   "user_mk-mood-energetic-80.mp3",
+   "user_px-urban-hiphop-beat-623450.mp3",
+   "user_px-adrenaline-sport-620584.mp3",
+   "user_mk-mood-energetic-989.mp3",
+   "user_mk-mood-energetic-706.mp3",
+   "user_mk-mood-energetic-1068.mp3",
+   "user_mk-mood-energetic-51.mp3",
+   "user_px-phonk-reel-614877.mp3",
+   "user_mk-mood-energetic-126.mp3",
+   "user_mk-mood-energetic-1077.mp3"
   ]
  },
  "music_last": {
@@ -1918,7 +1930,8 @@
   "moods/inspire": "user_px-cinematic-hiphop-315904.mp3",
   "moods/calm": "user_mk-mood-chill-494.mp3",
   "moods/tech": "user_px-house-flying-580004.mp3",
-  "moods/tense": "user_mk-mood-tension-671.mp3"
+  "moods/tense": "user_mk-mood-tension-671.mp3",
+  "moods/energy": "user_px-gym-phonk-620567.mp3"
  },
  "music_sections": {
   "delayed-flight.mp3": [
@@ -2169,7 +2182,7 @@
   "user_the-mountain-market-systems-146118.mp3": 18,
   "user_soundsurfer-trading-254548.mp3": 18,
   "user_px-trap-instrumental-560466.mp3": 2,
-  "user_px-gym-phonk-620567.mp3": 2,
+  "user_px-gym-phonk-620567.mp3": 3,
   "user_px-house-flying-580004.mp3": 2,
   "user_mk-mood-uplifting-682.mp3": 1,
   "user_mk-mood-uplifting-31.mp3": 1,
@@ -2301,11 +2314,18 @@
   "term": 1,
   "num": 1
  },
- "digest_last": "2026-11-07",
+ "digest_last": "2026-11-08",
  "digest_followers": 29,
  "alerts": {
   "BTC": 1793902232.241263,
   "ETH": 1793902232.241263
  },
- "econ_last": "2026-11-06"
+ "econ_last": "2026-11-06",
+ "weekly_last": "2026-11-08",
+ "weekly_media": [
+  {
+   "media": "18115134854594387",
+   "date": "2026-11-08"
+  }
+ ]
 }
