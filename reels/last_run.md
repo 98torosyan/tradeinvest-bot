@@ -1,3 +1,6 @@
+**2026-11-08 20:17** `quiz` ✅ skipped-late
+- ⏰ GitHub started this quiz run 400 min late — skipped (the next slot will post)
+---
 **2026-11-08 19:34** `lesson` ✅ skipped-late
 - ⏰ GitHub started this lesson run 418 min late — skipped (the next slot will post)
 ---
@@ -86,6 +89,3 @@
 ---
 **2026-11-07 17:30** `news` ✅ skipped-late
 - ⏰ GitHub started this news run 413 min late — skipped (the next slot will post)
----
-**2026-11-07 16:54** `challenge` ✅ skipped-late
-- ⏰ GitHub started this challenge run 407 min late — skipped (the next slot will post)
