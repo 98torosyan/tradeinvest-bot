@@ -1,3 +1,6 @@
+**2026-11-08 17:49** `news` ✅ skipped-late
+- ⏰ GitHub started this news run 433 min late — skipped (the next slot will post)
+---
 **2026-11-08 17:40** `analysis` ✅ moved
 - ℹ️ the analysis Reel moved to 19:07
 - ✅ Poster P-03 published
@@ -87,6 +90,3 @@
 - ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
 - ✅ Challenge Story day 3/30
 - ↺ catch-up challenge: published
----
-**2026-11-07 03:03** `news` ✅ skipped-quiet
-- 🌙 03:03 — quiet hours, news skipped
