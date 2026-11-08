@@ -1,3 +1,6 @@
+**2026-11-08 23:31** `lesson` ✅ skipped-late
+- ⏰ GitHub started this lesson run 264 min late — skipped (the next slot will post)
+---
 **2026-11-08 22:28** `analysis` ✅ skipped-late
 - ⏰ GitHub started this analysis run 292 min late — skipped (the next slot will post)
 ---
@@ -92,6 +95,3 @@
 
 Վաղը նույն ժամերին՝ ավտոմատ 🤖
 - ↺ catch-up digest: sent
----
-**2026-11-07 20:50** `poster` ✅ skipped-late
-- ⏰ GitHub started this poster run 344 min late — skipped (the next slot will post)
