@@ -1,3 +1,11 @@
+**2026-11-09 12:39** `lesson` ✅ published
+- ✅ short S-006 published (18s, kw=True)
+- ✅ Story published
+- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
+- ✅ Challenge Story day 5/30
+- ✅ Economic calendar Story (week, 2 events)
+- ↺ catch-up challenge: published
+---
 **2026-11-09 12:12** `alert` ✅ published
 - ✅ Alert Story ETH -6.6%
 ---
@@ -82,6 +90,3 @@
 ---
 **2026-11-08 01:07** `digest` ✅ skipped-late
 - ⏰ GitHub started this digest run 195 min late — skipped (the next slot will post)
----
-**2026-11-08 01:05** `lesson` ✅ skipped-quiet
-- 🌙 01:05 — quiet hours, lesson skipped
