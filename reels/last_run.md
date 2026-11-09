@@ -1,3 +1,7 @@
+**2026-11-09 23:05** `lesson` ✅ slot-retired
+- ℹ️ the 21:37 Reel slot is retired
+- ↺ catch-up digest: skipped
+---
 **2026-11-09 21:39** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - 🌙 Օրվա ամփոփում · 2026-11-09
@@ -97,6 +101,3 @@
 - ✅ Analysis Reel ETH published
 - ✅ Story published
 - ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
----
-**2026-11-08 17:49** `news` ✅ skipped-late
-- ⏰ GitHub started this news run 433 min late — skipped (the next slot will post)
