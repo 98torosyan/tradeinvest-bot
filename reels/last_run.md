@@ -1,3 +1,10 @@
+**2026-11-09 17:40** `analysis` ✅ moved
+- ℹ️ the analysis Reel moved to 19:07
+- ✅ Carousel C-02 published (6 slides)
+- ↺ catch-up carousel: published
+- ✅ Daily term Story
+- ↺ catch-up fact: published
+---
 **2026-11-09 17:20** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 523 min late — skipped (the next slot will post)
 ---
@@ -87,6 +94,3 @@
 - ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
 - ✅ Challenge Story day 4/30
 - ↺ catch-up challenge: published
----
-**2026-11-08 01:45** `news` ✅ skipped-quiet
-- 🌙 01:45 — quiet hours, news skipped

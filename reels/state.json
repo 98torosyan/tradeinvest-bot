@@ -1892,7 +1892,6 @@
   ],
   "moods/inspire": [],
   "moods/calm": [
-   "user_mk-mood-chill-256.mp3",
    "user_mk-mood-calm-443.mp3",
    "user_mk-mood-chill-25.mp3",
    "user_mk-mood-calm-127.mp3"
@@ -1928,7 +1927,7 @@
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "user_px-gym-phonk-620567.mp3",
   "moods/inspire": "user_mk-mood-uplifting-963.mp3",
-  "moods/calm": "user_mk-mood-chill-494.mp3",
+  "moods/calm": "user_mk-mood-chill-256.mp3",
   "moods/tech": "user_mk-house-371.mp3",
   "moods/tense": "user_px-danger-music-620575.mp3",
   "moods/energy": "user_px-gym-phonk-620567.mp3"
@@ -2207,6 +2206,16 @@
    81.0,
    93.0,
    105.0
+  ],
+  "user_mk-mood-chill-256.mp3": [
+   1.0,
+   13.0,
+   25.0,
+   37.0,
+   49.0,
+   61.0,
+   73.0,
+   85.0
   ]
  },
  "music_uses": {
@@ -2242,7 +2251,8 @@
   "user_px-danger-music-620575.mp3": 1,
   "user_mk-mood-uplifting-684.mp3": 1,
   "user_mk-mood-uplifting-963.mp3": 1,
-  "user_mk-house-371.mp3": 1
+  "user_mk-house-371.mp3": 1,
+  "user_mk-mood-chill-256.mp3": 1
  },
  "low_alert": "2026-10-07",
  "hits_low_alert": "2026-10-17",
@@ -2333,9 +2343,13 @@
   "T-01": {
    "media": "18099462002397626",
    "date": "2026-11-06"
+  },
+  "C-02": {
+   "media": "18090488090270311",
+   "date": "2026-11-09"
   }
  },
- "edu_carousel_last": "2026-11-06",
+ "edu_carousel_last": "2026-11-09",
  "challenge30": {
   "day": 5,
   "last": "2026-11-09"
@@ -2355,10 +2369,10 @@
   }
  },
  "daily_fact": {
-  "n": 4,
-  "last": "2026-11-08",
+  "n": 5,
+  "last": "2026-11-09",
   "fact": 2,
-  "term": 1,
+  "term": 2,
   "num": 1
  },
  "digest_last": "2026-11-08",
