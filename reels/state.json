@@ -1900,7 +1900,6 @@
    "user_mk-techno-162.mp3"
   ],
   "moods/tense": [
-   "user_px-danger-music-620575.mp3",
    "user_mk-mood-tension-871.mp3",
    "user_mk-mood-tension-676.mp3",
    "user_mk-mood-tension-188.mp3",
@@ -1930,7 +1929,7 @@
   "moods/inspire": "user_px-cinematic-hiphop-315904.mp3",
   "moods/calm": "user_mk-mood-chill-494.mp3",
   "moods/tech": "user_px-house-flying-580004.mp3",
-  "moods/tense": "user_mk-mood-tension-671.mp3",
+  "moods/tense": "user_px-danger-music-620575.mp3",
   "moods/energy": "user_px-gym-phonk-620567.mp3"
  },
  "music_sections": {
@@ -2169,6 +2168,15 @@
    62.0,
    74.0,
    86.0
+  ],
+  "user_px-danger-music-620575.mp3": [
+   18.0,
+   30.0,
+   42.0,
+   54.0,
+   66.0,
+   78.0,
+   90.0
   ]
  },
  "music_uses": {
@@ -2200,7 +2208,8 @@
   "user_mk-techno-133.mp3": 1,
   "user_mk-mood-tension-671.mp3": 1,
   "user_px-cinematic-hiphop-315904.mp3": 1,
-  "user_mk-mood-chill-494.mp3": 1
+  "user_mk-mood-chill-494.mp3": 1,
+  "user_px-danger-music-620575.mp3": 1
  },
  "low_alert": "2026-10-07",
  "hits_low_alert": "2026-10-17",
@@ -2318,7 +2327,7 @@
  "digest_followers": 29,
  "alerts": {
   "BTC": 1793902232.241263,
-  "ETH": 1793902232.241263
+  "ETH": 1794211961.952096
  },
  "econ_last": "2026-11-06",
  "weekly_last": "2026-11-08",
