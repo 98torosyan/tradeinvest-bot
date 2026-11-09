@@ -1,3 +1,6 @@
+**2026-11-09 20:06** `challenge` ✅ skipped-late
+- ⏰ GitHub started this challenge run 600 min late — skipped (the next slot will post)
+---
 **2026-11-09 19:09** `lesson` ✅ published
 - [analysis] GOLD S zone=3879.30-3931.84 touches=1 other=4155.80
 - ✅ Analysis Reel GOLD published
@@ -90,6 +93,3 @@
 ---
 **2026-11-08 17:16** `challenge` ✅ skipped-late
 - ⏰ GitHub started this challenge run 429 min late — skipped (the next slot will post)
----
-**2026-11-08 15:30** `story` ✅ skipped-late
-- ⏰ GitHub started this story run 413 min late — skipped (the next slot will post)
