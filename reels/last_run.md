@@ -1,3 +1,6 @@
+**2026-11-10 00:11** `quiz` ✅ skipped-quiet
+- 🌙 00:11 — quiet hours, quiz skipped
+---
 **2026-11-09 23:05** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - ↺ catch-up digest: skipped
@@ -95,9 +98,3 @@
 ---
 **2026-11-08 19:34** `lesson` ✅ skipped-late
 - ⏰ GitHub started this lesson run 418 min late — skipped (the next slot will post)
----
-**2026-11-08 19:09** `lesson` ✅ published
-- [analysis] ETH R zone=2433.44-2450.00 touches=1 other=2206.28
-- ✅ Analysis Reel ETH published
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
