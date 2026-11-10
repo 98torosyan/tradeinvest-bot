@@ -1,3 +1,12 @@
+**2026-11-10 12:39** `lesson` ✅ published
+- ✅ short S-007 published (16s, kw=False)
+- ✅ Story published
+- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
+- ✅ Challenge Story day 6/30
+- ⚠️ video Story failed, posting the image: https://98torosyan.github.io/tradeinvest-bot/reels/20261110-1239-lesson-cu-challenge-econ.mp4 is not reachable
+- ✅ Economic calendar Story (today, 1 events)
+- ↺ catch-up challenge: published
+---
 **2026-11-10 05:29** `news` ✅ skipped-quiet
 - 🌙 05:29 — quiet hours, news skipped
 ---
@@ -81,6 +90,3 @@
 ---
 **2026-11-08 23:31** `lesson` ✅ skipped-late
 - ⏰ GitHub started this lesson run 264 min late — skipped (the next slot will post)
----
-**2026-11-08 22:28** `analysis` ✅ skipped-late
-- ⏰ GitHub started this analysis run 292 min late — skipped (the next slot will post)
