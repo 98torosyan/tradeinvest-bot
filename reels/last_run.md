@@ -1,3 +1,6 @@
+**2026-11-10 21:17** `quiz` ✅ skipped-late
+- ⏰ GitHub started this quiz run 460 min late — skipped (the next slot will post)
+---
 **2026-11-10 20:37** `lesson` ✅ skipped-late
 - ⏰ GitHub started this lesson run 480 min late — skipped (the next slot will post)
 ---
@@ -89,6 +92,3 @@
 - ↺ catch-up carousel: published
 - ✅ Daily term Story
 - ↺ catch-up fact: published
----
-**2026-11-09 17:20** `story` ✅ skipped-late
-- ⏰ GitHub started this story run 523 min late — skipped (the next slot will post)
