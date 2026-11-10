@@ -1,3 +1,6 @@
+**2026-11-10 18:48** `challenge` ✅ skipped-late
+- ⏰ GitHub started this challenge run 521 min late — skipped (the next slot will post)
+---
 **2026-11-10 17:39** `analysis` ✅ moved
 - ℹ️ the analysis Reel moved to 19:07
 - ✅ Poster P-04 published
@@ -91,6 +94,3 @@
 ---
 **2026-11-09 01:59** `news` ✅ skipped-quiet
 - 🌙 01:59 — quiet hours, news skipped
----
-**2026-11-09 01:25** `digest` ✅ skipped-late
-- ⏰ GitHub started this digest run 212 min late — skipped (the next slot will post)
