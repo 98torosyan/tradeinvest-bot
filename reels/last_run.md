@@ -1,3 +1,6 @@
+**2026-11-10 19:22** `news` ✅ skipped-late
+- ⏰ GitHub started this news run 525 min late — skipped (the next slot will post)
+---
 **2026-11-10 19:14** `lesson` ✅ published
 - [analysis] BTC S zone=73510.00-73971.16 touches=2 other=75599.22
 - ✅ Analysis Reel BTC published
@@ -94,6 +97,3 @@
 - ✅ Challenge Story day 5/30
 - ✅ Economic calendar Story (week, 2 events)
 - ↺ catch-up challenge: published
----
-**2026-11-09 12:12** `alert` ✅ published
-- ✅ Alert Story ETH -6.6%
