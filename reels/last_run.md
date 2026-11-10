@@ -1,3 +1,6 @@
+**2026-11-10 22:39** `poster` ✅ skipped-late
+- ⏰ GitHub started this poster run 452 min late — skipped (the next slot will post)
+---
 **2026-11-10 21:39** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - 🌙 Օրվա ամփոփում · 2026-11-10
@@ -92,9 +95,3 @@
 ---
 **2026-11-09 20:06** `challenge` ✅ skipped-late
 - ⏰ GitHub started this challenge run 600 min late — skipped (the next slot will post)
----
-**2026-11-09 19:09** `lesson` ✅ published
-- [analysis] GOLD S zone=3879.30-3931.84 touches=1 other=4155.80
-- ✅ Analysis Reel GOLD published
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
