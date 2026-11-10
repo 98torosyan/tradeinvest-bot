@@ -1,3 +1,6 @@
+**2026-11-11 01:16** `lesson` ✅ skipped-quiet
+- 🌙 01:16 — quiet hours, lesson skipped
+---
 **2026-11-11 00:35** `analysis` ✅ skipped-quiet
 - 🌙 00:35 — quiet hours, analysis skipped
 ---
@@ -81,17 +84,3 @@
 **2026-11-09 23:05** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - ↺ catch-up digest: skipped
----
-**2026-11-09 21:39** `lesson` ✅ slot-retired
-- ℹ️ the 21:37 Reel slot is retired
-- 🌙 Օրվա ամփոփում · 2026-11-09
-
-✅ Հրապարակվեց՝ 3
-• 12:12 Ազդանշան story
-• 12:39 Կարճ դաս / վերլուծություն
-• 19:09 Կարճ դաս / վերլուծություն
-
-👥 Հետևորդներ՝ 30 (+1 օրում)
-
-Վաղը նույն ժամերին՝ ավտոմատ 🤖
-- ↺ catch-up digest: sent
