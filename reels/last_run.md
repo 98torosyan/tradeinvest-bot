@@ -1,3 +1,6 @@
+**2026-11-11 02:31** `lesson` ✅ skipped-quiet
+- 🌙 02:31 — quiet hours, lesson skipped
+---
 **2026-11-11 01:16** `lesson` ✅ skipped-quiet
 - 🌙 01:16 — quiet hours, lesson skipped
 ---
@@ -80,7 +83,3 @@
 ---
 **2026-11-10 00:11** `quiz` ✅ skipped-quiet
 - 🌙 00:11 — quiet hours, quiz skipped
----
-**2026-11-09 23:05** `lesson` ✅ slot-retired
-- ℹ️ the 21:37 Reel slot is retired
-- ↺ catch-up digest: skipped
