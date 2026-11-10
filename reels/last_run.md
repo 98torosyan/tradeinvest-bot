@@ -1,3 +1,6 @@
+**2026-11-11 02:35** `digest` ✅ skipped-late
+- ⏰ GitHub started this digest run 283 min late — skipped (the next slot will post)
+---
 **2026-11-11 02:31** `lesson` ✅ skipped-quiet
 - 🌙 02:31 — quiet hours, lesson skipped
 ---
@@ -80,6 +83,3 @@
 ---
 **2026-11-10 01:24** `carousel` ✅ skipped-quiet
 - 🌙 01:24 — quiet hours, carousel skipped
----
-**2026-11-10 00:11** `quiz` ✅ skipped-quiet
-- 🌙 00:11 — quiet hours, quiz skipped
