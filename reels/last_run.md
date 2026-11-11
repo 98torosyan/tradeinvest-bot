@@ -1,3 +1,6 @@
+**2026-11-11 21:26** `quiz` ✅ skipped-late
+- ⏰ GitHub started this quiz run 469 min late — skipped (the next slot will post)
+---
 **2026-11-11 20:57** `lesson` ✅ skipped-late
 - ⏰ GitHub started this lesson run 500 min late — skipped (the next slot will post)
 ---
@@ -88,6 +91,3 @@
 - ⚠️ video Story failed, posting the image: https://98torosyan.github.io/tradeinvest-bot/reels/20261110-1239-lesson-cu-challenge-econ.mp4 is not reachable
 - ✅ Economic calendar Story (today, 1 events)
 - ↺ catch-up challenge: published
----
-**2026-11-10 05:29** `news` ✅ skipped-quiet
-- 🌙 05:29 — quiet hours, news skipped
