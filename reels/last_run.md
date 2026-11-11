@@ -1,3 +1,6 @@
+**2026-11-11 20:57** `lesson` ✅ skipped-late
+- ⏰ GitHub started this lesson run 500 min late — skipped (the next slot will post)
+---
 **2026-11-11 17:39** `analysis` ✅ moved
 - ℹ️ the analysis Reel moved to 19:07
 - ✅ Carousel Q-01 published (9 slides)
@@ -88,6 +91,3 @@
 ---
 **2026-11-10 05:29** `news` ✅ skipped-quiet
 - 🌙 05:29 — quiet hours, news skipped
----
-**2026-11-10 04:54** `digest` ✅ skipped-late
-- ⏰ GitHub started this digest run 421 min late — skipped (the next slot will post)
