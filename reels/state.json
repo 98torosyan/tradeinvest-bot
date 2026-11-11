@@ -1910,7 +1910,6 @@
    "user_mk-mood-uplifting-32.mp3"
   ],
   "moods/calm": [
-   "user_mk-mood-calm-443.mp3",
    "user_mk-mood-chill-25.mp3",
    "user_mk-mood-calm-127.mp3"
   ],
@@ -1947,7 +1946,7 @@
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "user_px-gym-phonk-620567.mp3",
   "moods/inspire": "user_px-epic-motivation-618588.mp3",
-  "moods/calm": "user_mk-mood-chill-256.mp3",
+  "moods/calm": "user_mk-mood-calm-443.mp3",
   "moods/tech": "user_mk-house-371.mp3",
   "moods/tense": "user_mk-mood-tension-676.mp3",
   "moods/energy": "user_px-gym-phonk-620567.mp3"
@@ -2258,6 +2257,15 @@
    54.0,
    66.0,
    78.0
+  ],
+  "user_mk-mood-calm-443.mp3": [
+   14.0,
+   26.0,
+   38.0,
+   50.0,
+   62.0,
+   74.0,
+   86.0
   ]
  },
  "music_uses": {
@@ -2297,7 +2305,8 @@
   "user_mk-mood-chill-256.mp3": 1,
   "user_mk-techno-162.mp3": 1,
   "user_mk-mood-tension-871.mp3": 1,
-  "user_mk-mood-tension-676.mp3": 1
+  "user_mk-mood-tension-676.mp3": 1,
+  "user_mk-mood-calm-443.mp3": 1
  },
  "low_alert": "2026-10-07",
  "hits_low_alert": "2026-10-17",
@@ -2412,9 +2421,13 @@
   "C-02": {
    "media": "18090488090270311",
    "date": "2026-11-09"
+  },
+  "Q-01": {
+   "media": "18195933376394402",
+   "date": "2026-11-11"
   }
  },
- "edu_carousel_last": "2026-11-09",
+ "edu_carousel_last": "2026-11-11",
  "challenge30": {
   "day": 7,
   "last": "2026-11-11"
@@ -2438,9 +2451,9 @@
   }
  },
  "daily_fact": {
-  "n": 6,
-  "last": "2026-11-10",
-  "fact": 2,
+  "n": 7,
+  "last": "2026-11-11",
+  "fact": 3,
   "term": 2,
   "num": 2
  },
