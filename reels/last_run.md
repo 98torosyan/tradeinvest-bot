@@ -1,3 +1,6 @@
+**2026-11-12 01:53** `lesson` ✅ skipped-quiet
+- 🌙 01:53 — quiet hours, lesson skipped
+---
 **2026-11-11 23:33** `fact` ✅ skipped-late
 - ⏰ GitHub started this fact run 446 min late — skipped (the next slot will post)
 ---
@@ -87,6 +90,3 @@
 - ✅ Analysis Reel BTC published
 - ✅ Story published
 - ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
----
-**2026-11-10 18:48** `challenge` ✅ skipped-late
-- ⏰ GitHub started this challenge run 521 min late — skipped (the next slot will post)
