@@ -1,3 +1,6 @@
+**2026-11-11 23:33** `fact` ✅ skipped-late
+- ⏰ GitHub started this fact run 446 min late — skipped (the next slot will post)
+---
 **2026-11-11 22:36** `carousel` ✅ skipped-late
 - ⏰ GitHub started this carousel run 449 min late — skipped (the next slot will post)
 ---
@@ -87,10 +90,3 @@
 ---
 **2026-11-10 18:48** `challenge` ✅ skipped-late
 - ⏰ GitHub started this challenge run 521 min late — skipped (the next slot will post)
----
-**2026-11-10 17:39** `analysis` ✅ moved
-- ℹ️ the analysis Reel moved to 19:07
-- ✅ Poster P-04 published
-- ↺ catch-up poster: published
-- ✅ Daily num Story
-- ↺ catch-up fact: published
