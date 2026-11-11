@@ -1,3 +1,15 @@
+**2026-11-11 21:39** `lesson` ✅ slot-retired
+- ℹ️ the 21:37 Reel slot is retired
+- 🌙 Օրվա ամփոփում · 2026-11-11
+
+✅ Հրապարակվեց՝ 1
+• 12:39 Կարճ դաս / վերլուծություն
+
+👥 Հետևորդներ՝ 31 (+0 օրում)
+
+Վաղը նույն ժամերին՝ ավտոմատ 🤖
+- ↺ catch-up digest: sent
+---
 **2026-11-11 21:26** `quiz` ✅ skipped-late
 - ⏰ GitHub started this quiz run 469 min late — skipped (the next slot will post)
 ---
@@ -82,12 +94,3 @@
 ---
 **2026-11-10 17:14** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 517 min late — skipped (the next slot will post)
----
-**2026-11-10 12:39** `lesson` ✅ published
-- ✅ short S-007 published (16s, kw=False)
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
-- ✅ Challenge Story day 6/30
-- ⚠️ video Story failed, posting the image: https://98torosyan.github.io/tradeinvest-bot/reels/20261110-1239-lesson-cu-challenge-econ.mp4 is not reachable
-- ✅ Economic calendar Story (today, 1 events)
-- ↺ catch-up challenge: published
