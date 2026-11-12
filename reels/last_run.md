@@ -1,3 +1,6 @@
+**2026-11-13 02:52** `lesson` ✅ skipped-quiet
+- 🌙 02:52 — quiet hours, lesson skipped
+---
 **2026-11-13 01:50** `lesson` ✅ skipped-quiet
 - 🌙 01:50 — quiet hours, lesson skipped
 ---
@@ -87,6 +90,3 @@
 
 Վաղը նույն ժամերին՝ ավտոմատ 🤖
 - ↺ catch-up digest: sent
----
-**2026-11-11 21:26** `quiz` ✅ skipped-late
-- ⏰ GitHub started this quiz run 469 min late — skipped (the next slot will post)
