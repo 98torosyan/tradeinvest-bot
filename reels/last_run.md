@@ -1,3 +1,6 @@
+**2026-11-12 19:34** `news` ✅ skipped-late
+- ⏰ GitHub started this news run 537 min late — skipped (the next slot will post)
+---
 **2026-11-12 19:09** `lesson` ❌ failed
 - [analysis] ETH S zone=2006.00-2032.64 touches=2 other=2103.78
 - ❌ lesson սխալ՝ RuntimeError: video is not reachable on GitHub Pages
@@ -83,6 +86,3 @@
 ---
 **2026-11-11 02:31** `lesson` ✅ skipped-quiet
 - 🌙 02:31 — quiet hours, lesson skipped
----
-**2026-11-11 01:16** `lesson` ✅ skipped-quiet
-- 🌙 01:16 — quiet hours, lesson skipped
