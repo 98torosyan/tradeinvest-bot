@@ -1,3 +1,10 @@
+**2026-11-12 17:39** `analysis` ✅ moved
+- ℹ️ the analysis Reel moved to 19:07
+- ✅ Poster P-05 published
+- ↺ catch-up poster: published
+- ✅ Daily term Story
+- ↺ catch-up fact: published
+---
 **2026-11-12 17:13** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 516 min late — skipped (the next slot will post)
 ---
@@ -78,6 +85,3 @@
 ---
 **2026-11-10 23:40** `fact` ✅ skipped-late
 - ⏰ GitHub started this fact run 453 min late — skipped (the next slot will post)
----
-**2026-11-10 22:39** `poster` ✅ skipped-late
-- ⏰ GitHub started this poster run 452 min late — skipped (the next slot will post)
