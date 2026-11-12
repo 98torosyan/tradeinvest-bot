@@ -1,3 +1,6 @@
+**2026-11-12 21:45** `quiz` ✅ skipped-late
+- ⏰ GitHub started this quiz run 488 min late — skipped (the next slot will post)
+---
 **2026-11-12 21:39** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - 🌙 Օրվա ամփոփում · 2026-11-12
@@ -95,6 +98,3 @@
 - ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
 - ✅ Challenge Story day 7/30
 - ↺ catch-up challenge: published
----
-**2026-11-11 03:14** `news` ✅ skipped-quiet
-- 🌙 03:14 — quiet hours, news skipped
