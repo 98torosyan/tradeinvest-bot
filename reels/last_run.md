@@ -1,3 +1,6 @@
+**2026-11-13 02:54** `digest` ✅ skipped-late
+- ⏰ GitHub started this digest run 302 min late — skipped (the next slot will post)
+---
 **2026-11-13 02:52** `lesson` ✅ skipped-quiet
 - 🌙 02:52 — quiet hours, lesson skipped
 ---
@@ -78,15 +81,3 @@
 ---
 **2026-11-11 22:36** `carousel` ✅ skipped-late
 - ⏰ GitHub started this carousel run 449 min late — skipped (the next slot will post)
----
-**2026-11-11 21:39** `lesson` ✅ slot-retired
-- ℹ️ the 21:37 Reel slot is retired
-- 🌙 Օրվա ամփոփում · 2026-11-11
-
-✅ Հրապարակվեց՝ 1
-• 12:39 Կարճ դաս / վերլուծություն
-
-👥 Հետևորդներ՝ 31 (+0 օրում)
-
-Վաղը նույն ժամերին՝ ավտոմատ 🤖
-- ↺ catch-up digest: sent
