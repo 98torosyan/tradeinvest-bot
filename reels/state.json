@@ -1052,6 +1052,11 @@
    "media": "18459480046120071",
    "date": "2026-11-11",
    "hour": 12
+  },
+  "S-009": {
+   "media": "18153528811541138",
+   "date": "2026-11-12",
+   "hour": 12
   }
  },
  "palette": {
@@ -1901,7 +1906,6 @@
    "user_px-adrenaline-sport-620584.mp3"
   ],
   "moods/inspire": [
-   "user_mk-mood-uplifting-684.mp3",
    "user_px-cinematic-hiphop-315904.mp3",
    "user_mk-mood-uplifting-839.mp3",
    "user_mk-mood-uplifting-963.mp3",
@@ -1921,7 +1925,6 @@
    "user_mk-techno-162.mp3"
   ],
   "moods/tense": [
-   "user_mk-mood-tension-188.mp3",
    "user_px-dark-suspense-trailer-488322.mp3",
    "user_mk-mood-tension-565.mp3",
    "user_mk-mood-tension-281.mp3",
@@ -1945,10 +1948,10 @@
   "lesson": "user_px-gym-phonk-620567.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "user_px-gym-phonk-620567.mp3",
-  "moods/inspire": "user_px-epic-motivation-618588.mp3",
+  "moods/inspire": "user_mk-mood-uplifting-684.mp3",
   "moods/calm": "user_mk-mood-calm-443.mp3",
   "moods/tech": "user_mk-house-371.mp3",
-  "moods/tense": "user_mk-mood-tension-676.mp3",
+  "moods/tense": "user_mk-mood-tension-188.mp3",
   "moods/energy": "user_px-gym-phonk-620567.mp3"
  },
  "music_sections": {
@@ -2266,6 +2269,22 @@
    62.0,
    74.0,
    86.0
+  ],
+  "user_mk-mood-tension-188.mp3": [
+   26.0,
+   42.0,
+   54.0,
+   66.0,
+   78.0,
+   91.0,
+   107.0,
+   119.0,
+   136.0,
+   148.0,
+   162.0,
+   174.0,
+   186.0,
+   198.0
   ]
  },
  "music_uses": {
@@ -2299,14 +2318,15 @@
   "user_px-cinematic-hiphop-315904.mp3": 1,
   "user_mk-mood-chill-494.mp3": 1,
   "user_px-danger-music-620575.mp3": 1,
-  "user_mk-mood-uplifting-684.mp3": 1,
+  "user_mk-mood-uplifting-684.mp3": 2,
   "user_mk-mood-uplifting-963.mp3": 1,
   "user_mk-house-371.mp3": 2,
   "user_mk-mood-chill-256.mp3": 1,
   "user_mk-techno-162.mp3": 1,
   "user_mk-mood-tension-871.mp3": 1,
   "user_mk-mood-tension-676.mp3": 1,
-  "user_mk-mood-calm-443.mp3": 1
+  "user_mk-mood-calm-443.mp3": 1,
+  "user_mk-mood-tension-188.mp3": 1
  },
  "low_alert": "2026-10-07",
  "hits_low_alert": "2026-10-17",
@@ -2353,9 +2373,14 @@
    "media": "18459480046120071",
    "date": "2026-11-11",
    "kw": true
+  },
+  "S-009": {
+   "media": "18153528811541138",
+   "date": "2026-11-12",
+   "kw": false
   }
  },
- "shorts_last": "2026-11-11",
+ "shorts_last": "2026-11-12",
  "stories_pack_done": [
   "Story_1_Sksir_1.jpg",
   "Story_1_Sksir_2.jpg",
@@ -2429,8 +2454,8 @@
  },
  "edu_carousel_last": "2026-11-11",
  "challenge30": {
-  "day": 7,
-  "last": "2026-11-11"
+  "day": 8,
+  "last": "2026-11-12"
  },
  "posters_done": {
   "P-01": {
