@@ -1,3 +1,6 @@
+**2026-11-13 01:04** `analysis` ✅ skipped-quiet
+- 🌙 01:04 — quiet hours, analysis skipped
+---
 **2026-11-12 23:51** `fact` ✅ skipped-late
 - ⏰ GitHub started this fact run 465 min late — skipped (the next slot will post)
 ---
@@ -87,10 +90,3 @@
 ---
 **2026-11-11 20:57** `lesson` ✅ skipped-late
 - ⏰ GitHub started this lesson run 500 min late — skipped (the next slot will post)
----
-**2026-11-11 17:39** `analysis` ✅ moved
-- ℹ️ the analysis Reel moved to 19:07
-- ✅ Carousel Q-01 published (9 slides)
-- ↺ catch-up carousel: published
-- ✅ Daily fact Story
-- ↺ catch-up fact: published
