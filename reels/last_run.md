@@ -1,3 +1,6 @@
+**2026-11-13 20:43** `lesson` ✅ skipped-late
+- ⏰ GitHub started this lesson run 487 min late — skipped (the next slot will post)
+---
 **2026-11-13 19:09** `lesson` ✅ published
 - [analysis] NDX S zone=26606.43-26891.73 touches=1 other=28593.52
 - ✅ Analysis Reel NDX published
@@ -83,10 +86,3 @@
 ---
 **2026-11-12 19:05** `challenge` ✅ skipped-late
 - ⏰ GitHub started this challenge run 538 min late — skipped (the next slot will post)
----
-**2026-11-12 17:39** `analysis` ✅ moved
-- ℹ️ the analysis Reel moved to 19:07
-- ✅ Poster P-05 published
-- ↺ catch-up poster: published
-- ✅ Daily term Story
-- ↺ catch-up fact: published
