@@ -1,3 +1,10 @@
+**2026-11-13 17:39** `analysis` ✅ moved
+- ℹ️ the analysis Reel moved to 19:07
+- ✅ Carousel C-03 published (9 slides)
+- ↺ catch-up carousel: published
+- ✅ Daily num Story
+- ↺ catch-up fact: published
+---
 **2026-11-13 16:35** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 479 min late — skipped (the next slot will post)
 ---
@@ -84,6 +91,3 @@
 ---
 **2026-11-12 04:35** `news` ✅ skipped-quiet
 - 🌙 04:35 — quiet hours, news skipped
----
-**2026-11-12 03:45** `digest` ✅ skipped-late
-- ⏰ GitHub started this digest run 352 min late — skipped (the next slot will post)

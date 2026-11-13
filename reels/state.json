@@ -1920,7 +1920,6 @@
    "user_mk-mood-calm-127.mp3"
   ],
   "moods/tech": [
-   "user_mk-techno-134.mp3",
    "user_mk-techno-117.mp3",
    "user_mk-techno-162.mp3"
   ],
@@ -1948,7 +1947,7 @@
   "story": "user_px-gym-phonk-620567.mp3",
   "moods/inspire": "user_mk-mood-uplifting-839.mp3",
   "moods/calm": "user_mk-mood-chill-25.mp3",
-  "moods/tech": "user_mk-techno-160.mp3",
+  "moods/tech": "user_mk-techno-134.mp3",
   "moods/tense": "user_mk-mood-tension-565.mp3",
   "moods/energy": "user_px-gym-phonk-620567.mp3"
  },
@@ -2343,7 +2342,7 @@
   "user_mk-mood-tension-680.mp3": 1,
   "user_mk-mood-uplifting-839.mp3": 2,
   "user_mk-mood-uplifting-32.mp3": 1,
-  "user_mk-techno-134.mp3": 1,
+  "user_mk-techno-134.mp3": 2,
   "user_mk-mood-calm-682.mp3": 1,
   "user_mk-house-623.mp3": 2,
   "user_px-epic-motivation-618588.mp3": 2,
@@ -2494,9 +2493,13 @@
   "Q-01": {
    "media": "18195933376394402",
    "date": "2026-11-11"
+  },
+  "C-03": {
+   "media": "18121908247777343",
+   "date": "2026-11-13"
   }
  },
- "edu_carousel_last": "2026-11-11",
+ "edu_carousel_last": "2026-11-13",
  "challenge30": {
   "day": 9,
   "last": "2026-11-13"
@@ -2524,11 +2527,11 @@
   }
  },
  "daily_fact": {
-  "n": 8,
-  "last": "2026-11-12",
+  "n": 9,
+  "last": "2026-11-13",
   "fact": 3,
   "term": 3,
-  "num": 2
+  "num": 3
  },
  "digest_last": "2026-11-12",
  "digest_followers": 31,
