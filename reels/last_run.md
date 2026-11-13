@@ -1,3 +1,6 @@
+**2026-11-13 22:30** `carousel` ✅ skipped-late
+- ⏰ GitHub started this carousel run 443 min late — skipped (the next slot will post)
+---
 **2026-11-13 21:39** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - 🌙 Օրվա ամփոփում · 2026-11-13
@@ -93,6 +96,3 @@
 ---
 **2026-11-12 21:03** `lesson` ✅ skipped-late
 - ⏰ GitHub started this lesson run 506 min late — skipped (the next slot will post)
----
-**2026-11-12 19:34** `news` ✅ skipped-late
-- ⏰ GitHub started this news run 537 min late — skipped (the next slot will post)
