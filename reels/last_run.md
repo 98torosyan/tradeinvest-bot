@@ -1,3 +1,6 @@
+**2026-11-13 18:30** `challenge` ✅ skipped-late
+- ⏰ GitHub started this challenge run 503 min late — skipped (the next slot will post)
+---
 **2026-11-13 17:39** `analysis` ✅ moved
 - ℹ️ the analysis Reel moved to 19:07
 - ✅ Carousel C-03 published (9 slides)
@@ -88,6 +91,3 @@
 - ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
 - ✅ Challenge Story day 8/30
 - ↺ catch-up challenge: published
----
-**2026-11-12 04:35** `news` ✅ skipped-quiet
-- 🌙 04:35 — quiet hours, news skipped
