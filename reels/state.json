@@ -1057,6 +1057,11 @@
    "media": "18153528811541138",
    "date": "2026-11-12",
    "hour": 12
+  },
+  "S-010": {
+   "media": "17989171341092896",
+   "date": "2026-11-13",
+   "hour": 12
   }
  },
  "palette": {
@@ -1906,8 +1911,6 @@
    "user_px-adrenaline-sport-620584.mp3"
   ],
   "moods/inspire": [
-   "user_px-cinematic-hiphop-315904.mp3",
-   "user_mk-mood-uplifting-839.mp3",
    "user_mk-mood-uplifting-963.mp3",
    "user_mk-mood-uplifting-682.mp3",
    "user_mk-mood-uplifting-1001.mp3",
@@ -1917,7 +1920,6 @@
    "user_mk-mood-calm-127.mp3"
   ],
   "moods/tech": [
-   "user_mk-techno-160.mp3",
    "user_mk-techno-134.mp3",
    "user_mk-techno-117.mp3",
    "user_mk-techno-162.mp3"
@@ -1946,9 +1948,9 @@
   "lesson": "user_px-gym-phonk-620567.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "user_px-gym-phonk-620567.mp3",
-  "moods/inspire": "user_mk-mood-uplifting-684.mp3",
+  "moods/inspire": "user_mk-mood-uplifting-839.mp3",
   "moods/calm": "user_mk-mood-chill-25.mp3",
-  "moods/tech": "user_px-house-flying-580004.mp3",
+  "moods/tech": "user_mk-techno-160.mp3",
   "moods/tense": "user_mk-mood-tension-188.mp3",
   "moods/energy": "user_px-gym-phonk-620567.mp3"
  },
@@ -2313,17 +2315,17 @@
   "user_mk-mood-chill-16.mp3": 1,
   "user_mk-techno-117.mp3": 1,
   "user_mk-mood-tension-680.mp3": 1,
-  "user_mk-mood-uplifting-839.mp3": 1,
+  "user_mk-mood-uplifting-839.mp3": 2,
   "user_mk-mood-uplifting-32.mp3": 1,
   "user_mk-techno-134.mp3": 1,
   "user_mk-mood-calm-682.mp3": 1,
   "user_mk-house-623.mp3": 2,
   "user_px-epic-motivation-618588.mp3": 2,
   "user_mk-mood-uplifting-1001.mp3": 1,
-  "user_mk-techno-160.mp3": 1,
+  "user_mk-techno-160.mp3": 2,
   "user_mk-techno-133.mp3": 2,
   "user_mk-mood-tension-671.mp3": 1,
-  "user_px-cinematic-hiphop-315904.mp3": 1,
+  "user_px-cinematic-hiphop-315904.mp3": 2,
   "user_mk-mood-chill-494.mp3": 1,
   "user_px-danger-music-620575.mp3": 1,
   "user_mk-mood-uplifting-684.mp3": 2,
@@ -2387,9 +2389,14 @@
    "media": "18153528811541138",
    "date": "2026-11-12",
    "kw": false
+  },
+  "S-010": {
+   "media": "17989171341092896",
+   "date": "2026-11-13",
+   "kw": true
   }
  },
- "shorts_last": "2026-11-12",
+ "shorts_last": "2026-11-13",
  "stories_pack_done": [
   "Story_1_Sksir_1.jpg",
   "Story_1_Sksir_2.jpg",
@@ -2463,8 +2470,8 @@
  },
  "edu_carousel_last": "2026-11-11",
  "challenge30": {
-  "day": 8,
-  "last": "2026-11-12"
+  "day": 9,
+  "last": "2026-11-13"
  },
  "posters_done": {
   "P-01": {
@@ -2501,7 +2508,7 @@
   "BTC": 1793902232.241263,
   "ETH": 1794211961.952096
  },
- "econ_last": "2026-11-10",
+ "econ_last": "2026-11-13",
  "weekly_last": "2026-11-08",
  "weekly_media": [
   {
