@@ -1,3 +1,17 @@
+**2026-11-13 21:39** `lesson` ✅ slot-retired
+- ℹ️ the 21:37 Reel slot is retired
+- 🌙 Օրվա ամփոփում · 2026-11-13
+
+✅ Հրապարակվեց՝ 3
+• 12:40 Կարճ դաս / վերլուծություն
+• 13:48 Ազդանշան story
+• 19:09 Կարճ դաս / վերլուծություն
+
+👥 Հետևորդներ՝ 31 (+0 օրում)
+
+Վաղը նույն ժամերին՝ ավտոմատ 🤖
+- ↺ catch-up digest: sent
+---
 **2026-11-13 21:23** `quiz` ✅ skipped-late
 - ⏰ GitHub started this quiz run 466 min late — skipped (the next slot will post)
 ---
@@ -82,7 +96,3 @@
 ---
 **2026-11-12 19:34** `news` ✅ skipped-late
 - ⏰ GitHub started this news run 537 min late — skipped (the next slot will post)
----
-**2026-11-12 19:09** `lesson` ❌ failed
-- [analysis] ETH S zone=2006.00-2032.64 touches=2 other=2103.78
-- ❌ lesson սխալ՝ RuntimeError: video is not reachable on GitHub Pages
