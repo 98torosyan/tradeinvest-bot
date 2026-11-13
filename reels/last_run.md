@@ -1,3 +1,7 @@
+**2026-11-13 13:48** `alert` ✅ published
+- ✅ Alert Story BTC -6.0%
+- ✅ Alert Story ETH -5.3%
+---
 **2026-11-13 12:40** `lesson` ✅ published
 - ✅ short S-010 published (16s, kw=True)
 - ✅ Story published
@@ -83,6 +87,3 @@
 ---
 **2026-11-12 03:41** `lesson` ✅ skipped-quiet
 - 🌙 03:41 — quiet hours, lesson skipped
----
-**2026-11-12 01:53** `lesson` ✅ skipped-quiet
-- 🌙 01:53 — quiet hours, lesson skipped
