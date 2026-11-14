@@ -1,3 +1,6 @@
+**2026-11-14 23:53** `lesson` ✅ skipped-late
+- ⏰ GitHub started this lesson run 287 min late — skipped (the next slot will post)
+---
 **2026-11-14 23:23** `alert` ✅ published
 - ✅ Alert Story BTC -5.2%
 - ✅ Alert Story ETH -6.1%
@@ -79,17 +82,3 @@
 ---
 **2026-11-13 22:30** `carousel` ✅ skipped-late
 - ⏰ GitHub started this carousel run 443 min late — skipped (the next slot will post)
----
-**2026-11-13 21:39** `lesson` ✅ slot-retired
-- ℹ️ the 21:37 Reel slot is retired
-- 🌙 Օրվա ամփոփում · 2026-11-13
-
-✅ Հրապարակվեց՝ 3
-• 12:40 Կարճ դաս / վերլուծություն
-• 13:48 Ազդանշան story
-• 19:09 Կարճ դաս / վերլուծություն
-
-👥 Հետևորդներ՝ 31 (+0 օրում)
-
-Վաղը նույն ժամերին՝ ավտոմատ 🤖
-- ↺ catch-up digest: sent
