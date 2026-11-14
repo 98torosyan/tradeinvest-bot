@@ -1,3 +1,6 @@
+**2026-11-14 20:05** `quiz` ✅ skipped-late
+- ⏰ GitHub started this quiz run 388 min late — skipped (the next slot will post)
+---
 **2026-11-14 19:20** `lesson` ✅ skipped-late
 - ⏰ GitHub started this lesson run 403 min late — skipped (the next slot will post)
 ---
@@ -82,10 +85,3 @@
 ---
 **2026-11-13 18:30** `challenge` ✅ skipped-late
 - ⏰ GitHub started this challenge run 503 min late — skipped (the next slot will post)
----
-**2026-11-13 17:39** `analysis` ✅ moved
-- ℹ️ the analysis Reel moved to 19:07
-- ✅ Carousel C-03 published (9 slides)
-- ↺ catch-up carousel: published
-- ✅ Daily num Story
-- ↺ catch-up fact: published
