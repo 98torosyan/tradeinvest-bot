@@ -1919,9 +1919,7 @@
    "user_mk-mood-uplifting-1001.mp3",
    "user_mk-mood-uplifting-32.mp3"
   ],
-  "moods/calm": [
-   "user_mk-mood-calm-127.mp3"
-  ],
+  "moods/calm": [],
   "moods/tech": [
    "user_mk-techno-162.mp3"
   ],
@@ -1948,7 +1946,7 @@
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "user_px-gym-phonk-620567.mp3",
   "moods/inspire": "user_mk-mood-uplifting-682.mp3",
-  "moods/calm": "user_mk-mood-chill-25.mp3",
+  "moods/calm": "user_mk-mood-calm-127.mp3",
   "moods/tech": "user_mk-techno-117.mp3",
   "moods/tense": "user_mk-mood-tension-565.mp3",
   "moods/energy": "user_px-gym-phonk-620567.mp3"
@@ -2322,6 +2320,16 @@
    250.0,
    263.0,
    275.0
+  ],
+  "user_mk-mood-calm-127.mp3": [
+   5.0,
+   17.0,
+   29.0,
+   41.0,
+   53.0,
+   65.0,
+   81.0,
+   93.0
   ]
  },
  "music_uses": {
@@ -2366,7 +2374,8 @@
   "user_mk-mood-tension-188.mp3": 1,
   "user_mk-mood-chill-25.mp3": 1,
   "user_px-dark-suspense-trailer-488322.mp3": 1,
-  "user_mk-mood-tension-565.mp3": 1
+  "user_mk-mood-tension-565.mp3": 1,
+  "user_mk-mood-calm-127.mp3": 1
  },
  "low_alert": "2026-10-07",
  "hits_low_alert": "2026-10-17",
@@ -2536,12 +2545,16 @@
   "P-05": {
    "media": "18126435724926344",
    "date": "2026-11-12"
+  },
+  "P-06": {
+   "media": "18116384054158760",
+   "date": "2026-11-14"
   }
  },
  "daily_fact": {
-  "n": 9,
-  "last": "2026-11-13",
-  "fact": 3,
+  "n": 10,
+  "last": "2026-11-14",
+  "fact": 4,
   "term": 3,
   "num": 3
  },

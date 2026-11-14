@@ -1,3 +1,10 @@
+**2026-11-14 17:39** `analysis` ✅ moved
+- ℹ️ the analysis Reel moved to 19:07
+- ✅ Poster P-06 published
+- ↺ catch-up poster: published
+- ✅ Daily fact Story
+- ↺ catch-up fact: published
+---
 **2026-11-14 17:26** `challenge` ✅ skipped-late
 - ⏰ GitHub started this challenge run 439 min late — skipped (the next slot will post)
 ---
@@ -85,6 +92,3 @@
 - ✅ Challenge Story day 9/30
 - ✅ Economic calendar Story (today, 1 events)
 - ↺ catch-up challenge: published
----
-**2026-11-13 03:33** `news` ✅ skipped-quiet
-- 🌙 03:33 — quiet hours, news skipped
