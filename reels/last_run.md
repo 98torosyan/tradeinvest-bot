@@ -1,3 +1,6 @@
+**2026-11-14 21:57** `fact` ✅ skipped-late
+- ⏰ GitHub started this fact run 350 min late — skipped (the next slot will post)
+---
 **2026-11-14 21:39** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - 🌙 Օրվա ամփոփում · 2026-11-14
@@ -89,9 +92,3 @@
 ---
 **2026-11-13 20:43** `lesson` ✅ skipped-late
 - ⏰ GitHub started this lesson run 487 min late — skipped (the next slot will post)
----
-**2026-11-13 19:09** `lesson` ✅ published
-- [analysis] NDX S zone=26606.43-26891.73 touches=1 other=28593.52
-- ✅ Analysis Reel NDX published
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
