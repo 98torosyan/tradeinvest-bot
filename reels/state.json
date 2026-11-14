@@ -1922,8 +1922,6 @@
   "moods/calm": [],
   "moods/tech": [],
   "moods/tense": [
-   "user_mk-mood-tension-281.mp3",
-   "user_px-action-trailer-624648.mp3",
    "user_px-into-the-night-drill-20928.mp3"
   ],
   "moods/energy": [
@@ -1946,7 +1944,7 @@
   "moods/inspire": "user_mk-mood-uplifting-682.mp3",
   "moods/calm": "user_mk-mood-calm-127.mp3",
   "moods/tech": "user_mk-techno-162.mp3",
-  "moods/tense": "user_mk-mood-tension-565.mp3",
+  "moods/tense": "user_px-action-trailer-624648.mp3",
   "moods/energy": "user_px-gym-phonk-620567.mp3"
  },
  "music_sections": {
@@ -2328,6 +2326,24 @@
    65.0,
    81.0,
    93.0
+  ],
+  "user_mk-mood-tension-281.mp3": [
+   21.0,
+   33.0,
+   45.0,
+   58.0,
+   70.0,
+   82.0,
+   94.0
+  ],
+  "user_px-action-trailer-624648.mp3": [
+   22.0,
+   44.0,
+   56.0,
+   68.0,
+   80.0,
+   92.0,
+   104.0
   ]
  },
  "music_uses": {
@@ -2373,7 +2389,9 @@
   "user_mk-mood-chill-25.mp3": 1,
   "user_px-dark-suspense-trailer-488322.mp3": 1,
   "user_mk-mood-tension-565.mp3": 1,
-  "user_mk-mood-calm-127.mp3": 1
+  "user_mk-mood-calm-127.mp3": 1,
+  "user_mk-mood-tension-281.mp3": 1,
+  "user_px-action-trailer-624648.mp3": 1
  },
  "low_alert": "2026-10-07",
  "hits_low_alert": "2026-10-17",
@@ -2564,8 +2582,8 @@
  "digest_last": "2026-11-14",
  "digest_followers": 31,
  "alerts": {
-  "BTC": 1794563334.323704,
-  "ETH": 1794563334.323704
+  "BTC": 1794684236.73807,
+  "ETH": 1794684236.73807
  },
  "econ_last": "2026-11-13",
  "weekly_last": "2026-11-08",

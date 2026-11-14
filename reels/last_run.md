@@ -1,3 +1,7 @@
+**2026-11-14 23:23** `alert` ✅ published
+- ✅ Alert Story BTC -5.2%
+- ✅ Alert Story ETH -6.1%
+---
 **2026-11-14 22:51** `analysis` ✅ skipped-late
 - ⏰ GitHub started this analysis run 314 min late — skipped (the next slot will post)
 ---
@@ -89,6 +93,3 @@
 
 Վաղը նույն ժամերին՝ ավտոմատ 🤖
 - ↺ catch-up digest: sent
----
-**2026-11-13 21:23** `quiz` ✅ skipped-late
-- ⏰ GitHub started this quiz run 466 min late — skipped (the next slot will post)
