@@ -1,3 +1,6 @@
+**2026-11-14 17:46** `news` ✅ skipped-late
+- ⏰ GitHub started this news run 429 min late — skipped (the next slot will post)
+---
 **2026-11-14 17:39** `analysis` ✅ moved
 - ℹ️ the analysis Reel moved to 19:07
 - ✅ Poster P-06 published
@@ -84,11 +87,3 @@
 **2026-11-13 13:48** `alert` ✅ published
 - ✅ Alert Story BTC -6.0%
 - ✅ Alert Story ETH -5.3%
----
-**2026-11-13 12:40** `lesson` ✅ published
-- ✅ short S-010 published (16s, kw=True)
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
-- ✅ Challenge Story day 9/30
-- ✅ Economic calendar Story (today, 1 events)
-- ↺ catch-up challenge: published
