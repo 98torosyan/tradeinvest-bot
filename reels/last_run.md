@@ -1,3 +1,6 @@
+**2026-11-16 02:03** `lesson` ✅ skipped-quiet
+- 🌙 02:03 — quiet hours, lesson skipped
+---
 **2026-11-16 00:20** `lesson` ✅ skipped-quiet
 - 🌙 00:20 — quiet hours, lesson skipped
 ---
@@ -82,7 +85,3 @@
 ---
 **2026-11-14 23:53** `lesson` ✅ skipped-late
 - ⏰ GitHub started this lesson run 287 min late — skipped (the next slot will post)
----
-**2026-11-14 23:23** `alert` ✅ published
-- ✅ Alert Story BTC -5.2%
-- ✅ Alert Story ETH -6.1%
