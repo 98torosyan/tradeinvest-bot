@@ -1,3 +1,6 @@
+**2026-11-15 21:46** `poster` ✅ skipped-late
+- ⏰ GitHub started this poster run 400 min late — skipped (the next slot will post)
+---
 **2026-11-15 21:39** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - ✅ Weekly recap Reel published
@@ -93,6 +96,3 @@
 ---
 **2026-11-14 21:00** `poster` ✅ skipped-late
 - ⏰ GitHub started this poster run 353 min late — skipped (the next slot will post)
----
-**2026-11-14 20:05** `quiz` ✅ skipped-late
-- ⏰ GitHub started this quiz run 388 min late — skipped (the next slot will post)
