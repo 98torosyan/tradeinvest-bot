@@ -1,3 +1,6 @@
+**2026-11-15 22:48** `fact` ✅ skipped-late
+- ⏰ GitHub started this fact run 401 min late — skipped (the next slot will post)
+---
 **2026-11-15 21:46** `poster` ✅ skipped-late
 - ⏰ GitHub started this poster run 400 min late — skipped (the next slot will post)
 ---
@@ -93,6 +96,3 @@
 
 Վաղը նույն ժամերին՝ ավտոմատ 🤖
 - ↺ catch-up digest: sent
----
-**2026-11-14 21:00** `poster` ✅ skipped-late
-- ⏰ GitHub started this poster run 353 min late — skipped (the next slot will post)
