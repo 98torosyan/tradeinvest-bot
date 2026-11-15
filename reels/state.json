@@ -1923,7 +1923,14 @@
   "moods/inspire": [
    "user_mk-mood-uplifting-32.mp3"
   ],
-  "moods/calm": [],
+  "moods/calm": [
+   "user_mk-mood-chill-16.mp3",
+   "user_mk-mood-calm-682.mp3",
+   "user_mk-mood-calm-443.mp3",
+   "user_mk-mood-chill-256.mp3",
+   "user_mk-mood-chill-25.mp3",
+   "user_mk-mood-calm-127.mp3"
+  ],
   "moods/tech": [],
   "moods/tense": [],
   "moods/energy": [
@@ -1944,7 +1951,7 @@
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "user_px-gym-phonk-620567.mp3",
   "moods/inspire": "user_mk-mood-uplifting-1001.mp3",
-  "moods/calm": "user_mk-mood-calm-127.mp3",
+  "moods/calm": "user_mk-mood-chill-494.mp3",
   "moods/tech": "user_mk-techno-162.mp3",
   "moods/tense": "user_px-into-the-night-drill-20928.mp3",
   "moods/energy": "user_px-gym-phonk-620567.mp3"
@@ -2387,7 +2394,7 @@
   "user_mk-techno-133.mp3": 2,
   "user_mk-mood-tension-671.mp3": 1,
   "user_px-cinematic-hiphop-315904.mp3": 2,
-  "user_mk-mood-chill-494.mp3": 1,
+  "user_mk-mood-chill-494.mp3": 2,
   "user_px-danger-music-620575.mp3": 1,
   "user_mk-mood-uplifting-684.mp3": 2,
   "user_mk-mood-uplifting-963.mp3": 2,
@@ -2588,13 +2595,17 @@
   "P-06": {
    "media": "18116384054158760",
    "date": "2026-11-14"
+  },
+  "P-07": {
+   "media": "17890919082687910",
+   "date": "2026-11-15"
   }
  },
  "daily_fact": {
-  "n": 10,
-  "last": "2026-11-14",
+  "n": 11,
+  "last": "2026-11-15",
   "fact": 4,
-  "term": 3,
+  "term": 4,
   "num": 3
  },
  "digest_last": "2026-11-14",
