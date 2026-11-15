@@ -1067,6 +1067,11 @@
    "media": "18019753376953944",
    "date": "2026-11-14",
    "hour": 12
+  },
+  "S-012": {
+   "media": "18137034946663722",
+   "date": "2026-11-15",
+   "hour": 12
   }
  },
  "palette": {
@@ -1916,14 +1921,11 @@
    "user_px-adrenaline-sport-620584.mp3"
   ],
   "moods/inspire": [
-   "user_mk-mood-uplifting-1001.mp3",
    "user_mk-mood-uplifting-32.mp3"
   ],
   "moods/calm": [],
   "moods/tech": [],
-  "moods/tense": [
-   "user_px-into-the-night-drill-20928.mp3"
-  ],
+  "moods/tense": [],
   "moods/energy": [
    "user_mk-mood-energetic-80.mp3",
    "user_px-urban-hiphop-beat-623450.mp3",
@@ -1941,10 +1943,10 @@
   "lesson": "user_px-gym-phonk-620567.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "user_px-gym-phonk-620567.mp3",
-  "moods/inspire": "user_mk-mood-uplifting-682.mp3",
+  "moods/inspire": "user_mk-mood-uplifting-1001.mp3",
   "moods/calm": "user_mk-mood-calm-127.mp3",
   "moods/tech": "user_mk-techno-162.mp3",
-  "moods/tense": "user_px-action-trailer-624648.mp3",
+  "moods/tense": "user_px-into-the-night-drill-20928.mp3",
   "moods/energy": "user_px-gym-phonk-620567.mp3"
  },
  "music_sections": {
@@ -2344,6 +2346,16 @@
    80.0,
    92.0,
    104.0
+  ],
+  "user_px-into-the-night-drill-20928.mp3": [
+   14.0,
+   26.0,
+   38.0,
+   50.0,
+   62.0,
+   83.0,
+   95.0,
+   107.0
   ]
  },
  "music_uses": {
@@ -2370,7 +2382,7 @@
   "user_mk-mood-calm-682.mp3": 1,
   "user_mk-house-623.mp3": 2,
   "user_px-epic-motivation-618588.mp3": 2,
-  "user_mk-mood-uplifting-1001.mp3": 1,
+  "user_mk-mood-uplifting-1001.mp3": 2,
   "user_mk-techno-160.mp3": 2,
   "user_mk-techno-133.mp3": 2,
   "user_mk-mood-tension-671.mp3": 1,
@@ -2391,7 +2403,8 @@
   "user_mk-mood-tension-565.mp3": 1,
   "user_mk-mood-calm-127.mp3": 1,
   "user_mk-mood-tension-281.mp3": 1,
-  "user_px-action-trailer-624648.mp3": 1
+  "user_px-action-trailer-624648.mp3": 1,
+  "user_px-into-the-night-drill-20928.mp3": 1
  },
  "low_alert": "2026-10-07",
  "hits_low_alert": "2026-10-17",
@@ -2453,9 +2466,14 @@
    "media": "18019753376953944",
    "date": "2026-11-14",
    "kw": false
+  },
+  "S-012": {
+   "media": "18137034946663722",
+   "date": "2026-11-15",
+   "kw": true
   }
  },
- "shorts_last": "2026-11-14",
+ "shorts_last": "2026-11-15",
  "stories_pack_done": [
   "Story_1_Sksir_1.jpg",
   "Story_1_Sksir_2.jpg",
@@ -2543,8 +2561,8 @@
  },
  "edu_carousel_last": "2026-11-13",
  "challenge30": {
-  "day": 10,
-  "last": "2026-11-14"
+  "day": 11,
+  "last": "2026-11-15"
  },
  "posters_done": {
   "P-01": {
