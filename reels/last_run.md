@@ -1,3 +1,6 @@
+**2026-11-16 23:51** `quiz` ✅ skipped-late
+- ⏰ GitHub started this quiz run 614 min late — skipped (the next slot will post)
+---
 **2026-11-16 22:52** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - ↺ catch-up digest: skipped
@@ -97,6 +100,3 @@
 - ✅ Analysis Reel ETH published
 - ✅ Story published
 - ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
----
-**2026-11-15 18:17** `news` ✅ skipped-late
-- ⏰ GitHub started this news run 460 min late — skipped (the next slot will post)
