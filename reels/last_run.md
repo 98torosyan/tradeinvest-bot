@@ -1,3 +1,16 @@
+**2026-11-16 21:39** `lesson` ✅ slot-retired
+- ℹ️ the 21:37 Reel slot is retired
+- 🌙 Օրվա ամփոփում · 2026-11-16
+
+✅ Հրապարակվեց՝ 2
+• 12:39 Կարճ դաս / վերլուծություն
+• 19:10 Կարճ դաս / վերլուծություն
+
+👥 Հետևորդներ՝ 34 (+2 օրում)
+
+Վաղը նույն ժամերին՝ ավտոմատ 🤖
+- ↺ catch-up digest: sent
+---
 **2026-11-16 20:22** `news` ✅ skipped-late
 - ⏰ GitHub started this news run 585 min late — skipped (the next slot will post)
 ---
@@ -86,10 +99,3 @@
 ---
 **2026-11-15 17:53** `challenge` ✅ skipped-late
 - ⏰ GitHub started this challenge run 466 min late — skipped (the next slot will post)
----
-**2026-11-15 17:39** `analysis` ✅ moved
-- ℹ️ the analysis Reel moved to 19:07
-- ✅ Poster P-07 published
-- ↺ catch-up poster: published
-- ✅ Daily term Story
-- ↺ catch-up fact: published
