@@ -1,3 +1,6 @@
+**2026-11-16 20:22** `news` ✅ skipped-late
+- ⏰ GitHub started this news run 585 min late — skipped (the next slot will post)
+---
 **2026-11-16 19:37** `challenge` ✅ skipped-late
 - ⏰ GitHub started this challenge run 570 min late — skipped (the next slot will post)
 ---
@@ -90,6 +93,3 @@
 - ↺ catch-up poster: published
 - ✅ Daily term Story
 - ↺ catch-up fact: published
----
-**2026-11-15 16:14** `story` ✅ skipped-late
-- ⏰ GitHub started this story run 457 min late — skipped (the next slot will post)
