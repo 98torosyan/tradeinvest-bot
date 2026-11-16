@@ -1,3 +1,11 @@
+**2026-11-16 12:39** `lesson` ✅ published
+- ✅ short S-013 published (15s, kw=True)
+- ✅ Story published
+- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
+- ✅ Challenge Story day 12/30
+- ✅ Economic calendar Story (week, 3 events)
+- ↺ catch-up challenge: published
+---
 **2026-11-16 02:46** `news` ✅ skipped-quiet
 - 🌙 02:46 — quiet hours, news skipped
 ---
@@ -82,6 +90,3 @@
 ---
 **2026-11-15 02:17** `news` ✅ skipped-quiet
 - 🌙 02:17 — quiet hours, news skipped
----
-**2026-11-15 01:43** `digest` ✅ skipped-late
-- ⏰ GitHub started this digest run 231 min late — skipped (the next slot will post)
