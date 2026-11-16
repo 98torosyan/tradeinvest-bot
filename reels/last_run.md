@@ -1,3 +1,6 @@
+**2026-11-17 03:44** `lesson` ✅ skipped-quiet
+- 🌙 03:44 — quiet hours, lesson skipped
+---
 **2026-11-17 03:01** `analysis` ✅ skipped-quiet
 - 🌙 03:01 — quiet hours, analysis skipped
 ---
@@ -80,20 +83,3 @@
 ---
 **2026-11-15 21:46** `poster` ✅ skipped-late
 - ⏰ GitHub started this poster run 400 min late — skipped (the next slot will post)
----
-**2026-11-15 21:39** `lesson` ✅ slot-retired
-- ℹ️ the 21:37 Reel slot is retired
-- ✅ Weekly recap Reel published
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
-- ↺ catch-up weekly: published
-- 🌙 Օրվա ամփոփում · 2026-11-15
-
-✅ Հրապարակվեց՝ 2
-• 12:39 Կարճ դաս / վերլուծություն
-• 19:09 Կարճ դաս / վերլուծություն
-
-👥 Հետևորդներ՝ 32 (+1 օրում)
-
-Վաղը նույն ժամերին՝ ավտոմատ 🤖
-- ↺ catch-up digest: sent
