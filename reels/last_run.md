@@ -1,3 +1,6 @@
+**2026-11-17 20:27** `news` ✅ skipped-late
+- ⏰ GitHub started this news run 591 min late — skipped (the next slot will post)
+---
 **2026-11-17 19:55** `challenge` ✅ skipped-late
 - ⏰ GitHub started this challenge run 588 min late — skipped (the next slot will post)
 ---
@@ -92,6 +95,3 @@
 - ✅ Challenge Story day 12/30
 - ✅ Economic calendar Story (week, 3 events)
 - ↺ catch-up challenge: published
----
-**2026-11-16 02:46** `news` ✅ skipped-quiet
-- 🌙 02:46 — quiet hours, news skipped
