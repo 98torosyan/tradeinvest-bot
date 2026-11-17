@@ -1,3 +1,6 @@
+**2026-11-17 17:49** `story` ✅ skipped-late
+- ⏰ GitHub started this story run 552 min late — skipped (the next slot will post)
+---
 **2026-11-17 17:40** `analysis` ✅ moved
 - ℹ️ the analysis Reel moved to 19:07
 - ✅ Poster P-08 published
@@ -89,6 +92,3 @@
 ---
 **2026-11-16 02:03** `lesson` ✅ skipped-quiet
 - 🌙 02:03 — quiet hours, lesson skipped
----
-**2026-11-16 00:20** `lesson` ✅ skipped-quiet
-- 🌙 00:20 — quiet hours, lesson skipped
