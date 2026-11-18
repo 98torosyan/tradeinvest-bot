@@ -1943,7 +1943,6 @@
    "user_mk-mood-uplifting-684.mp3"
   ],
   "moods/calm": [
-   "user_mk-mood-calm-682.mp3",
    "user_mk-mood-calm-443.mp3",
    "user_mk-mood-chill-256.mp3",
    "user_mk-mood-chill-25.mp3",
@@ -1982,7 +1981,7 @@
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "user_px-gym-phonk-620567.mp3",
   "moods/inspire": "user_mk-mood-uplifting-682.mp3",
-  "moods/calm": "user_mk-mood-chill-16.mp3",
+  "moods/calm": "user_mk-mood-calm-682.mp3",
   "moods/tech": "user_mk-techno-162.mp3",
   "moods/tense": "user_px-action-trailer-624648.mp3",
   "moods/energy": "user_mk-mood-energetic-80.mp3"
@@ -2424,7 +2423,7 @@
   "user_mk-mood-uplifting-839.mp3": 3,
   "user_mk-mood-uplifting-32.mp3": 2,
   "user_mk-techno-134.mp3": 3,
-  "user_mk-mood-calm-682.mp3": 1,
+  "user_mk-mood-calm-682.mp3": 2,
   "user_mk-house-623.mp3": 3,
   "user_px-epic-motivation-618588.mp3": 2,
   "user_mk-mood-uplifting-1001.mp3": 2,
@@ -2637,9 +2636,13 @@
   "M-01": {
    "media": "17978512725154673",
    "date": "2026-11-16"
+  },
+  "T-02": {
+   "media": "18182654944444451",
+   "date": "2026-11-18"
   }
  },
- "edu_carousel_last": "2026-11-16",
+ "edu_carousel_last": "2026-11-18",
  "challenge30": {
   "day": 14,
   "last": "2026-11-18"
@@ -2679,10 +2682,10 @@
   }
  },
  "daily_fact": {
-  "n": 13,
-  "last": "2026-11-17",
+  "n": 14,
+  "last": "2026-11-18",
   "fact": 5,
-  "term": 4,
+  "term": 5,
   "num": 4
  },
  "digest_last": "2026-11-17",
