@@ -1,3 +1,6 @@
+**2026-11-19 00:26** `fact` ✅ skipped-quiet
+- 🌙 00:26 — quiet hours, fact skipped
+---
 **2026-11-18 23:23** `carousel` ✅ skipped-late
 - ⏰ GitHub started this carousel run 496 min late — skipped (the next slot will post)
 ---
@@ -90,6 +93,3 @@
 ---
 **2026-11-17 20:27** `news` ✅ skipped-late
 - ⏰ GitHub started this news run 591 min late — skipped (the next slot will post)
----
-**2026-11-17 19:55** `challenge` ✅ skipped-late
-- ⏰ GitHub started this challenge run 588 min late — skipped (the next slot will post)
