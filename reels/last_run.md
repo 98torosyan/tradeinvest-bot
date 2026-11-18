@@ -1,3 +1,6 @@
+**2026-11-18 23:23** `carousel` ✅ skipped-late
+- ⏰ GitHub started this carousel run 496 min late — skipped (the next slot will post)
+---
 **2026-11-18 22:23** `quiz` ✅ skipped-late
 - ⏰ GitHub started this quiz run 526 min late — skipped (the next slot will post)
 ---
@@ -90,9 +93,3 @@
 ---
 **2026-11-17 19:55** `challenge` ✅ skipped-late
 - ⏰ GitHub started this challenge run 588 min late — skipped (the next slot will post)
----
-**2026-11-17 19:10** `lesson` ✅ published
-- [analysis] BTC S zone=62006.00-62857.64 touches=1 other=66132.01
-- ✅ Analysis Reel BTC published
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
