@@ -1,3 +1,6 @@
+**2026-11-18 22:23** `quiz` ✅ skipped-late
+- ⏰ GitHub started this quiz run 526 min late — skipped (the next slot will post)
+---
 **2026-11-18 22:00** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - 🌙 Օրվա ամփոփում · 2026-11-18
@@ -93,6 +96,3 @@
 - ✅ Analysis Reel BTC published
 - ✅ Story published
 - ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
----
-**2026-11-17 17:49** `story` ✅ skipped-late
-- ⏰ GitHub started this story run 552 min late — skipped (the next slot will post)
