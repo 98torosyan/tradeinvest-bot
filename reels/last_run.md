@@ -1,3 +1,9 @@
+**2026-11-19 19:33** `lesson` ✅ published
+- [analysis] ETH S zone=1711.08-1737.53 touches=2 other=1866.89
+- ✅ Analysis Reel ETH published
+- ✅ Story published
+- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
+---
 **2026-11-19 18:08** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 572 min late — skipped (the next slot will post)
 ---
@@ -86,6 +92,3 @@
 ---
 **2026-11-18 05:11** `news` ✅ skipped-quiet
 - 🌙 05:11 — quiet hours, news skipped
----
-**2026-11-18 04:01** `digest` ✅ skipped-late
-- ⏰ GitHub started this digest run 368 min late — skipped (the next slot will post)
