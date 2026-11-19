@@ -1087,6 +1087,11 @@
    "media": "18057150050592194",
    "date": "2026-11-18",
    "hour": 12
+  },
+  "S-016": {
+   "media": "18122132231283128",
+   "date": "2026-11-19",
+   "hour": 13
   }
  },
  "palette": {
@@ -1936,8 +1941,6 @@
    "user_px-adrenaline-sport-620584.mp3"
   ],
   "moods/inspire": [
-   "user_mk-mood-uplifting-963.mp3",
-   "user_px-epic-motivation-618588.mp3",
    "user_mk-mood-uplifting-1001.mp3",
    "user_mk-mood-uplifting-32.mp3",
    "user_mk-mood-uplifting-684.mp3"
@@ -1978,7 +1981,7 @@
   "lesson": "user_px-gym-phonk-620567.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "user_px-gym-phonk-620567.mp3",
-  "moods/inspire": "user_mk-mood-uplifting-682.mp3",
+  "moods/inspire": "user_px-epic-motivation-618588.mp3",
   "moods/calm": "user_mk-mood-calm-682.mp3",
   "moods/tech": "user_mk-techno-160.mp3",
   "moods/tense": "user_px-action-trailer-624648.mp3",
@@ -2423,7 +2426,7 @@
   "user_mk-techno-134.mp3": 3,
   "user_mk-mood-calm-682.mp3": 2,
   "user_mk-house-623.mp3": 3,
-  "user_px-epic-motivation-618588.mp3": 2,
+  "user_px-epic-motivation-618588.mp3": 3,
   "user_mk-mood-uplifting-1001.mp3": 2,
   "user_mk-techno-160.mp3": 3,
   "user_mk-techno-133.mp3": 3,
@@ -2432,7 +2435,7 @@
   "user_mk-mood-chill-494.mp3": 2,
   "user_px-danger-music-620575.mp3": 1,
   "user_mk-mood-uplifting-684.mp3": 2,
-  "user_mk-mood-uplifting-963.mp3": 2,
+  "user_mk-mood-uplifting-963.mp3": 3,
   "user_mk-house-371.mp3": 3,
   "user_mk-mood-chill-256.mp3": 1,
   "user_mk-techno-162.mp3": 3,
@@ -2529,9 +2532,14 @@
    "media": "18057150050592194",
    "date": "2026-11-18",
    "kw": true
+  },
+  "S-016": {
+   "media": "18122132231283128",
+   "date": "2026-11-19",
+   "kw": false
   }
  },
- "shorts_last": "2026-11-18",
+ "shorts_last": "2026-11-19",
  "stories_pack_done": [
   "Story_1_Sksir_1.jpg",
   "Story_1_Sksir_2.jpg",
@@ -2647,8 +2655,8 @@
  },
  "edu_carousel_last": "2026-11-18",
  "challenge30": {
-  "day": 14,
-  "last": "2026-11-18"
+  "day": 15,
+  "last": "2026-11-19"
  },
  "posters_done": {
   "P-01": {
