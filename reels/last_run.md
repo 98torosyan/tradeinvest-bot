@@ -1,3 +1,7 @@
+**2026-11-19 22:01** `lesson` ✅ slot-retired
+- ℹ️ the 21:37 Reel slot is retired
+- ↺ catch-up digest: skipped
+---
 **2026-11-19 21:37** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - 🌙 Օրվա ամփոփում · 2026-11-19
@@ -90,10 +94,3 @@
 - ✅ Analysis Reel GOLD published
 - ✅ Story published
 - ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
----
-**2026-11-18 17:55** `analysis` ✅ moved
-- ℹ️ the analysis Reel moved to 19:07
-- ✅ Carousel T-02 published (8 slides)
-- ↺ catch-up carousel: published
-- ✅ Daily term Story
-- ↺ catch-up fact: published
