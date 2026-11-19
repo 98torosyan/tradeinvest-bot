@@ -1,3 +1,6 @@
+**2026-11-20 03:00** `lesson` ✅ skipped-quiet
+- 🌙 03:00 — quiet hours, lesson skipped
+---
 **2026-11-20 01:46** `analysis` ✅ skipped-quiet
 - 🌙 01:46 — quiet hours, analysis skipped
 ---
@@ -78,16 +81,3 @@
 ---
 **2026-11-18 22:23** `quiz` ✅ skipped-late
 - ⏰ GitHub started this quiz run 526 min late — skipped (the next slot will post)
----
-**2026-11-18 22:00** `lesson` ✅ slot-retired
-- ℹ️ the 21:37 Reel slot is retired
-- 🌙 Օրվա ամփոփում · 2026-11-18
-
-✅ Հրապարակվեց՝ 2
-• 12:39 Կարճ դաս / վերլուծություն
-• 19:35 Կարճ դաս / վերլուծություն
-
-👥 Հետևորդներ՝ 35 (+0 օրում)
-
-Վաղը նույն ժամերին՝ ավտոմատ 🤖
-- ↺ catch-up digest: sent
