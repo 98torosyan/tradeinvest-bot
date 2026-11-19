@@ -1,3 +1,6 @@
+**2026-11-19 18:08** `story` ✅ skipped-late
+- ⏰ GitHub started this story run 572 min late — skipped (the next slot will post)
+---
 **2026-11-19 17:48** `analysis` ✅ moved
 - ℹ️ the analysis Reel moved to 19:07
 - ⚠️ catch-up poster failed: poster image not reachable
@@ -86,6 +89,3 @@
 ---
 **2026-11-18 04:01** `digest` ✅ skipped-late
 - ⏰ GitHub started this digest run 368 min late — skipped (the next slot will post)
----
-**2026-11-18 03:14** `lesson` ✅ skipped-quiet
-- 🌙 03:14 — quiet hours, lesson skipped
