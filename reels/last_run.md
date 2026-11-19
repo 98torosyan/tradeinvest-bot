@@ -1,3 +1,6 @@
+**2026-11-19 22:38** `quiz` ✅ skipped-late
+- ⏰ GitHub started this quiz run 541 min late — skipped (the next slot will post)
+---
 **2026-11-19 22:01** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - ↺ catch-up digest: skipped
@@ -88,9 +91,3 @@
 ---
 **2026-11-18 20:03** `challenge` ✅ skipped-late
 - ⏰ GitHub started this challenge run 596 min late — skipped (the next slot will post)
----
-**2026-11-18 19:35** `lesson` ✅ published
-- [analysis] GOLD S zone=3744.60-3803.78 touches=1 other=4730.90
-- ✅ Analysis Reel GOLD published
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
