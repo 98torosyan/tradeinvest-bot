@@ -1,3 +1,9 @@
+**2026-11-19 17:48** `analysis` ✅ moved
+- ℹ️ the analysis Reel moved to 19:07
+- ⚠️ catch-up poster failed: poster image not reachable
+- ✅ Daily num Story
+- ↺ catch-up fact: published
+---
 **2026-11-19 13:14** `lesson` ✅ published
 - ✅ short S-016 published (12s, kw=False)
 - ✅ Story published
@@ -83,6 +89,3 @@
 ---
 **2026-11-18 03:14** `lesson` ✅ skipped-quiet
 - 🌙 03:14 — quiet hours, lesson skipped
----
-**2026-11-18 01:54** `analysis` ✅ skipped-quiet
-- 🌙 01:54 — quiet hours, analysis skipped
