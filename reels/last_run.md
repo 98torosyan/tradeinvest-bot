@@ -1,3 +1,9 @@
+**2026-11-20 19:09** `lesson` ✅ published
+- [analysis] NDX S zone=26044.37-26363.39 touches=1 other=31361.37
+- ✅ Analysis Reel NDX published
+- ✅ Story published
+- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
+---
 **2026-11-20 17:40** `analysis` ✅ moved
 - ℹ️ the analysis Reel moved to 19:07
 - ✅ Carousel C-04 published (6 slides)
@@ -86,6 +92,3 @@
 ---
 **2026-11-19 04:49** `news` ✅ skipped-quiet
 - 🌙 04:49 — quiet hours, news skipped
----
-**2026-11-19 04:09** `digest` ✅ skipped-late
-- ⏰ GitHub started this digest run 376 min late — skipped (the next slot will post)
