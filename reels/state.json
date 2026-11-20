@@ -1092,6 +1092,11 @@
    "media": "18122132231283128",
    "date": "2026-11-19",
    "hour": 13
+  },
+  "S-017": {
+   "media": "18184152307431709",
+   "date": "2026-11-20",
+   "hour": 12
   }
  },
  "palette": {
@@ -1941,7 +1946,6 @@
    "user_px-adrenaline-sport-620584.mp3"
   ],
   "moods/inspire": [
-   "user_mk-mood-uplifting-1001.mp3",
    "user_mk-mood-uplifting-32.mp3",
    "user_mk-mood-uplifting-684.mp3"
   ],
@@ -1960,7 +1964,6 @@
    "user_mk-techno-160.mp3"
   ],
   "moods/tense": [
-   "user_mk-mood-tension-281.mp3",
    "user_px-into-the-night-drill-20928.mp3",
    "user_mk-mood-tension-680.mp3",
    "user_mk-mood-tension-676.mp3",
@@ -1988,10 +1991,10 @@
   "lesson": "user_px-gym-phonk-620567.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "user_px-gym-phonk-620567.mp3",
-  "moods/inspire": "user_px-epic-motivation-618588.mp3",
+  "moods/inspire": "user_mk-mood-uplifting-1001.mp3",
   "moods/calm": "user_mk-mood-calm-682.mp3",
   "moods/tech": "user_mk-techno-134.mp3",
-  "moods/tense": "user_px-action-trailer-624648.mp3",
+  "moods/tense": "user_mk-mood-tension-281.mp3",
   "moods/energy": "user_mk-mood-energetic-80.mp3"
  },
  "music_sections": {
@@ -2434,7 +2437,7 @@
   "user_mk-mood-calm-682.mp3": 2,
   "user_mk-house-623.mp3": 3,
   "user_px-epic-motivation-618588.mp3": 3,
-  "user_mk-mood-uplifting-1001.mp3": 2,
+  "user_mk-mood-uplifting-1001.mp3": 3,
   "user_mk-techno-160.mp3": 3,
   "user_mk-techno-133.mp3": 3,
   "user_mk-mood-tension-671.mp3": 1,
@@ -2454,7 +2457,7 @@
   "user_px-dark-suspense-trailer-488322.mp3": 1,
   "user_mk-mood-tension-565.mp3": 1,
   "user_mk-mood-calm-127.mp3": 1,
-  "user_mk-mood-tension-281.mp3": 1,
+  "user_mk-mood-tension-281.mp3": 2,
   "user_px-action-trailer-624648.mp3": 2,
   "user_px-into-the-night-drill-20928.mp3": 1,
   "user_mk-mood-energetic-80.mp3": 1
@@ -2544,9 +2547,14 @@
    "media": "18122132231283128",
    "date": "2026-11-19",
    "kw": false
+  },
+  "S-017": {
+   "media": "18184152307431709",
+   "date": "2026-11-20",
+   "kw": true
   }
  },
- "shorts_last": "2026-11-19",
+ "shorts_last": "2026-11-20",
  "stories_pack_done": [
   "Story_1_Sksir_1.jpg",
   "Story_1_Sksir_2.jpg",
@@ -2667,8 +2675,8 @@
  },
  "edu_carousel_last": "2026-11-18",
  "challenge30": {
-  "day": 15,
-  "last": "2026-11-19"
+  "day": 16,
+  "last": "2026-11-20"
  },
  "posters_done": {
   "P-01": {
