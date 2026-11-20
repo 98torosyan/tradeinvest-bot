@@ -1,3 +1,6 @@
+**2026-11-21 01:22** `alert` ✅ skipped-quiet
+- 🌙 01:22 — quiet hours, alert skipped
+---
 **2026-11-21 00:01** `fact` ✅ skipped-quiet
 - 🌙 00:01 — quiet hours, fact skipped
 ---
@@ -89,6 +92,3 @@
 
 Վաղը նույն ժամերին՝ ավտոմատ 🤖
 - ↺ catch-up digest: sent
----
-**2026-11-19 20:08** `news` ✅ skipped-late
-- ⏰ GitHub started this news run 571 min late — skipped (the next slot will post)
