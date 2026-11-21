@@ -1,3 +1,6 @@
+**2026-11-21 21:57** `poster` ✅ skipped-late
+- ⏰ GitHub started this poster run 411 min late — skipped (the next slot will post)
+---
 **2026-11-21 21:39** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - 🌙 Օրվա ամփոփում · 2026-11-21
@@ -80,16 +83,3 @@
 ---
 **2026-11-20 22:18** `quiz` ✅ skipped-late
 - ⏰ GitHub started this quiz run 522 min late — skipped (the next slot will post)
----
-**2026-11-20 22:15** `lesson` ✅ slot-retired
-- ℹ️ the 21:37 Reel slot is retired
-- 🌙 Օրվա ամփոփում · 2026-11-20
-
-✅ Հրապարակվեց՝ 2
-• 12:39 Կարճ դաս / վերլուծություն
-• 19:09 Կարճ դաս / վերլուծություն
-
-👥 Հետևորդներ՝ 37 (+1 օրում)
-
-Վաղը նույն ժամերին՝ ավտոմատ 🤖
-- ↺ catch-up digest: sent
