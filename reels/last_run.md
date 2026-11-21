@@ -1,3 +1,6 @@
+**2026-11-21 20:22** `lesson` ✅ skipped-late
+- ⏰ GitHub started this lesson run 465 min late — skipped (the next slot will post)
+---
 **2026-11-21 19:09** `lesson` ✅ published
 - [analysis] BTC S zone=55130.00-56310.89 touches=1 other=58637.49
 - ✅ Analysis Reel BTC published
@@ -79,9 +82,3 @@
 ---
 **2026-11-20 20:17** `news` ✅ skipped-late
 - ⏰ GitHub started this news run 581 min late — skipped (the next slot will post)
----
-**2026-11-20 19:09** `lesson` ✅ published
-- [analysis] NDX S zone=26044.37-26363.39 touches=1 other=31361.37
-- ✅ Analysis Reel NDX published
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
