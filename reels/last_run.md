@@ -1,3 +1,6 @@
+**2026-11-21 16:59** `story` ✅ skipped-late
+- ⏰ GitHub started this story run 502 min late — skipped (the next slot will post)
+---
 **2026-11-21 15:30** `alert` ✅ published
 - ✅ Alert Story BTC -6.2%
 - ✅ Alert Story ETH -5.8%
@@ -83,6 +86,3 @@
 ---
 **2026-11-20 04:51** `news` ✅ skipped-quiet
 - 🌙 04:51 — quiet hours, news skipped
----
-**2026-11-20 04:18** `digest` ✅ skipped-late
-- ⏰ GitHub started this digest run 385 min late — skipped (the next slot will post)
