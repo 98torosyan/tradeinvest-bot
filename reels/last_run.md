@@ -1,3 +1,9 @@
+**2026-11-21 19:09** `lesson` ✅ published
+- [analysis] BTC S zone=55130.00-56310.89 touches=1 other=58637.49
+- ✅ Analysis Reel BTC published
+- ✅ Story published
+- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
+---
 **2026-11-21 18:55** `news` ✅ skipped-late
 - ⏰ GitHub started this news run 498 min late — skipped (the next slot will post)
 ---
@@ -79,10 +85,3 @@
 - ✅ Analysis Reel NDX published
 - ✅ Story published
 - ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
----
-**2026-11-20 17:40** `analysis` ✅ moved
-- ℹ️ the analysis Reel moved to 19:07
-- ✅ Carousel C-04 published (6 slides)
-- ↺ catch-up carousel: published
-- ✅ Daily fact Story
-- ↺ catch-up fact: published
