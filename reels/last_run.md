@@ -1,3 +1,6 @@
+**2026-11-21 18:35** `challenge` ✅ skipped-late
+- ⏰ GitHub started this challenge run 508 min late — skipped (the next slot will post)
+---
 **2026-11-21 17:39** `analysis` ✅ moved
 - ℹ️ the analysis Reel moved to 19:07
 - ✅ Poster P-09 published
@@ -83,10 +86,3 @@
 ---
 **2026-11-20 17:33** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 536 min late — skipped (the next slot will post)
----
-**2026-11-20 12:39** `lesson` ✅ published
-- ✅ short S-017 published (16s, kw=True)
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
-- ✅ Challenge Story day 16/30
-- ↺ catch-up challenge: published
