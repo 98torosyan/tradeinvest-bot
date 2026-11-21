@@ -1,3 +1,6 @@
+**2026-11-22 00:15** `analysis` ✅ skipped-quiet
+- 🌙 00:15 — quiet hours, analysis skipped
+---
 **2026-11-21 23:35** `alert` ✅ no-move
 
 ---
@@ -80,6 +83,3 @@
 ---
 **2026-11-21 01:22** `alert` ✅ skipped-quiet
 - 🌙 01:22 — quiet hours, alert skipped
----
-**2026-11-21 00:01** `fact` ✅ skipped-quiet
-- 🌙 00:01 — quiet hours, fact skipped
