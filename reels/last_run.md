@@ -1,3 +1,6 @@
+**2026-11-22 00:53** `lesson` ✅ skipped-quiet
+- 🌙 00:53 — quiet hours, lesson skipped
+---
 **2026-11-22 00:15** `analysis` ✅ skipped-quiet
 - 🌙 00:15 — quiet hours, analysis skipped
 ---
@@ -80,6 +83,3 @@
 ---
 **2026-11-21 01:30** `analysis` ✅ skipped-quiet
 - 🌙 01:30 — quiet hours, analysis skipped
----
-**2026-11-21 01:22** `alert` ✅ skipped-quiet
-- 🌙 01:22 — quiet hours, alert skipped
