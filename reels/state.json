@@ -1097,6 +1097,11 @@
    "media": "18184152307431709",
    "date": "2026-11-20",
    "hour": 12
+  },
+  "S-018": {
+   "media": "17866965276692451",
+   "date": "2026-11-21",
+   "hour": 12
   }
  },
  "palette": {
@@ -1945,10 +1950,7 @@
    "user_px-into-the-night-drill-20928.mp3",
    "user_px-adrenaline-sport-620584.mp3"
   ],
-  "moods/inspire": [
-   "user_mk-mood-uplifting-32.mp3",
-   "user_mk-mood-uplifting-684.mp3"
-  ],
+  "moods/inspire": [],
   "moods/calm": [
    "user_mk-mood-chill-256.mp3",
    "user_mk-mood-chill-25.mp3",
@@ -1989,7 +1991,7 @@
   "lesson": "user_px-gym-phonk-620567.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "user_px-gym-phonk-620567.mp3",
-  "moods/inspire": "user_mk-mood-uplifting-1001.mp3",
+  "moods/inspire": "user_mk-mood-uplifting-684.mp3",
   "moods/calm": "user_mk-mood-calm-443.mp3",
   "moods/tech": "user_mk-techno-117.mp3",
   "moods/tense": "user_mk-mood-tension-281.mp3",
@@ -2430,7 +2432,7 @@
   "user_mk-techno-117.mp3": 4,
   "user_mk-mood-tension-680.mp3": 1,
   "user_mk-mood-uplifting-839.mp3": 3,
-  "user_mk-mood-uplifting-32.mp3": 2,
+  "user_mk-mood-uplifting-32.mp3": 3,
   "user_mk-techno-134.mp3": 4,
   "user_mk-mood-calm-682.mp3": 2,
   "user_mk-house-623.mp3": 3,
@@ -2442,7 +2444,7 @@
   "user_px-cinematic-hiphop-315904.mp3": 3,
   "user_mk-mood-chill-494.mp3": 2,
   "user_px-danger-music-620575.mp3": 1,
-  "user_mk-mood-uplifting-684.mp3": 2,
+  "user_mk-mood-uplifting-684.mp3": 3,
   "user_mk-mood-uplifting-963.mp3": 3,
   "user_mk-house-371.mp3": 3,
   "user_mk-mood-chill-256.mp3": 1,
@@ -2550,9 +2552,14 @@
    "media": "18184152307431709",
    "date": "2026-11-20",
    "kw": true
+  },
+  "S-018": {
+   "media": "17866965276692451",
+   "date": "2026-11-21",
+   "kw": false
   }
  },
- "shorts_last": "2026-11-20",
+ "shorts_last": "2026-11-21",
  "stories_pack_done": [
   "Story_1_Sksir_1.jpg",
   "Story_1_Sksir_2.jpg",
@@ -2682,8 +2689,8 @@
  },
  "edu_carousel_last": "2026-11-20",
  "challenge30": {
-  "day": 16,
-  "last": "2026-11-20"
+  "day": 17,
+  "last": "2026-11-21"
  },
  "posters_done": {
   "P-01": {
