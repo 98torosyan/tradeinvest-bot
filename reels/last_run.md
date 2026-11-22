@@ -1,3 +1,6 @@
+**2026-11-22 22:28** `poster` ✅ skipped-late
+- ⏰ GitHub started this poster run 441 min late — skipped (the next slot will post)
+---
 **2026-11-22 21:40** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - ✅ Weekly recap Reel published
@@ -93,9 +96,3 @@
 ---
 **2026-11-21 20:22** `lesson` ✅ skipped-late
 - ⏰ GitHub started this lesson run 465 min late — skipped (the next slot will post)
----
-**2026-11-21 19:09** `lesson` ✅ published
-- [analysis] BTC S zone=55130.00-56310.89 touches=1 other=58637.49
-- ✅ Analysis Reel BTC published
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
