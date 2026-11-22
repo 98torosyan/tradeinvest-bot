@@ -1983,7 +1983,6 @@
    "user_mk-mood-tension-871.mp3"
   ],
   "moods/energy": [
-   "user_px-urban-hiphop-beat-623450.mp3",
    "user_px-adrenaline-sport-620584.mp3",
    "user_mk-mood-energetic-989.mp3",
    "user_mk-mood-energetic-706.mp3",
@@ -2002,7 +2001,7 @@
   "moods/calm": "user_mk-mood-chill-256.mp3",
   "moods/tech": "user_mk-techno-133.mp3",
   "moods/tense": "user_mk-mood-tension-676.mp3",
-  "moods/energy": "user_mk-mood-energetic-80.mp3"
+  "moods/energy": "user_px-urban-hiphop-beat-623450.mp3"
  },
  "music_sections": {
   "delayed-flight.mp3": [
@@ -2418,6 +2417,16 @@
    44.0,
    56.0,
    68.0
+  ],
+  "user_px-urban-hiphop-beat-623450.mp3": [
+   3.0,
+   15.0,
+   27.0,
+   42.0,
+   54.0,
+   66.0,
+   83.0,
+   95.0
   ]
  },
  "music_uses": {
@@ -2467,7 +2476,8 @@
   "user_mk-mood-tension-281.mp3": 2,
   "user_px-action-trailer-624648.mp3": 2,
   "user_px-into-the-night-drill-20928.mp3": 2,
-  "user_mk-mood-energetic-80.mp3": 1
+  "user_mk-mood-energetic-80.mp3": 1,
+  "user_px-urban-hiphop-beat-623450.mp3": 1
  },
  "low_alert": "2026-10-07",
  "hits_low_alert": "2026-10-17",
@@ -2763,14 +2773,14 @@
   "term": 6,
   "num": 6
  },
- "digest_last": "2026-11-21",
- "digest_followers": 37,
+ "digest_last": "2026-11-22",
+ "digest_followers": 40,
  "alerts": {
   "BTC": 1795260659.218214,
   "ETH": 1795260659.218214
  },
  "econ_last": "2026-11-18",
- "weekly_last": "2026-11-15",
+ "weekly_last": "2026-11-22",
  "weekly_media": [
   {
    "media": "18115134854594387",
@@ -2779,6 +2789,10 @@
   {
    "media": "18090054575301878",
    "date": "2026-11-15"
+  },
+  {
+   "media": "17917286166505683",
+   "date": "2026-11-22"
   }
  ],
  "followers_last": 33,
