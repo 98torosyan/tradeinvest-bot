@@ -1,3 +1,6 @@
+**2026-11-22 20:38** `lesson` ✅ skipped-late
+- ⏰ GitHub started this lesson run 481 min late — skipped (the next slot will post)
+---
 **2026-11-22 19:10** `lesson` ✅ published
 - [analysis] ETH S zone=1538.00-1567.55 touches=1 other=1723.88
 - ✅ Analysis Reel ETH published
@@ -82,10 +85,3 @@
 ---
 **2026-11-21 18:35** `challenge` ✅ skipped-late
 - ⏰ GitHub started this challenge run 508 min late — skipped (the next slot will post)
----
-**2026-11-21 17:39** `analysis` ✅ moved
-- ℹ️ the analysis Reel moved to 19:07
-- ✅ Poster P-09 published
-- ↺ catch-up poster: published
-- ✅ Daily term Story
-- ↺ catch-up fact: published
