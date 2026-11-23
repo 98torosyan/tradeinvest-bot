@@ -1,3 +1,6 @@
+**2026-11-24 02:45** `carousel` ✅ skipped-quiet
+- 🌙 02:45 — quiet hours, carousel skipped
+---
 **2026-11-24 01:46** `quiz` ✅ skipped-quiet
 - 🌙 01:46 — quiet hours, quiz skipped
 ---
@@ -93,9 +96,3 @@
 ---
 **2026-11-22 20:38** `lesson` ✅ skipped-late
 - ⏰ GitHub started this lesson run 481 min late — skipped (the next slot will post)
----
-**2026-11-22 19:10** `lesson` ✅ published
-- [analysis] ETH S zone=1538.00-1567.55 touches=1 other=1723.88
-- ✅ Analysis Reel ETH published
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
