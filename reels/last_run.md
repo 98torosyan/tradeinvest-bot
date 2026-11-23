@@ -1,3 +1,16 @@
+**2026-11-23 21:58** `lesson` ✅ slot-retired
+- ℹ️ the 21:37 Reel slot is retired
+- 🌙 Օրվա ամփոփում · 2026-11-23
+
+✅ Հրապարակվեց՝ 2
+• 12:39 Կարճ դաս / վերլուծություն
+• 19:13 Կարճ դաս / վերլուծություն
+
+👥 Հետևորդներ՝ 40 (+0 օրում)
+
+Վաղը նույն ժամերին՝ ավտոմատ 🤖
+- ↺ catch-up digest: sent
+---
 **2026-11-23 19:23** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 646 min late — skipped (the next slot will post)
 ---
@@ -90,10 +103,3 @@
 ---
 **2026-11-22 16:50** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 493 min late — skipped (the next slot will post)
----
-**2026-11-22 12:39** `lesson` ✅ published
-- ✅ short S-019 published (14s, kw=True)
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
-- ✅ Challenge Story day 18/30
-- ↺ catch-up challenge: published
