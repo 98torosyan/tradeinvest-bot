@@ -1,3 +1,6 @@
+**2026-11-23 22:10** `challenge` ✅ skipped-late
+- ⏰ GitHub started this challenge run 724 min late — skipped (the next slot will post)
+---
 **2026-11-23 21:58** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - 🌙 Օրվա ամփոփում · 2026-11-23
@@ -100,6 +103,3 @@
 - ↺ catch-up poster: published
 - ✅ Daily num Story
 - ↺ catch-up fact: published
----
-**2026-11-22 16:50** `story` ✅ skipped-late
-- ⏰ GitHub started this story run 493 min late — skipped (the next slot will post)
