@@ -1,3 +1,11 @@
+**2026-11-23 12:39** `lesson` ✅ published
+- ✅ short S-020 published (16s, kw=True)
+- ✅ Story published
+- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
+- ✅ Challenge Story day 19/30
+- ✅ Economic calendar Story (week, 2 events)
+- ↺ catch-up challenge: published
+---
 **2026-11-23 03:35** `news` ✅ skipped-quiet
 - 🌙 03:35 — quiet hours, news skipped
 ---
@@ -82,6 +90,3 @@
 ---
 **2026-11-22 02:20** `lesson` ✅ skipped-quiet
 - 🌙 02:20 — quiet hours, lesson skipped
----
-**2026-11-22 00:53** `lesson` ✅ skipped-quiet
-- 🌙 00:53 — quiet hours, lesson skipped
