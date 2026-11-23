@@ -1,3 +1,6 @@
+**2026-11-23 19:23** `story` ✅ skipped-late
+- ⏰ GitHub started this story run 646 min late — skipped (the next slot will post)
+---
 **2026-11-23 19:13** `lesson` ✅ published
 - [analysis] GOLD S zone=3502.90-3566.24 touches=1 other=3691.00
 - ✅ Analysis Reel GOLD published
@@ -94,6 +97,3 @@
 - ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
 - ✅ Challenge Story day 18/30
 - ↺ catch-up challenge: published
----
-**2026-11-22 03:07** `news` ✅ skipped-quiet
-- 🌙 03:07 — quiet hours, news skipped
