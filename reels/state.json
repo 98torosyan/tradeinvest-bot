@@ -1973,7 +1973,15 @@
    "user_px-cinematic-hiphop-315904.mp3"
   ],
   "moods/calm": [],
-  "moods/tech": [],
+  "moods/tech": [
+   "user_px-house-flying-580004.mp3",
+   "user_mk-house-371.mp3",
+   "user_mk-techno-134.mp3",
+   "user_mk-techno-117.mp3",
+   "user_mk-techno-162.mp3",
+   "user_mk-techno-160.mp3",
+   "user_mk-techno-133.mp3"
+  ],
   "moods/tense": [
    "user_mk-mood-tension-671.mp3",
    "user_px-dark-suspense-trailer-488322.mp3",
@@ -1997,7 +2005,7 @@
   "story": "user_px-gym-phonk-620567.mp3",
   "moods/inspire": "user_px-epic-motivation-618588.mp3",
   "moods/calm": "user_mk-mood-calm-127.mp3",
-  "moods/tech": "user_mk-techno-160.mp3",
+  "moods/tech": "user_mk-house-623.mp3",
   "moods/tense": "user_px-trap-instrumental-560466.mp3",
   "moods/energy": "user_px-urban-hiphop-beat-623450.mp3"
  },
@@ -2449,7 +2457,7 @@
   "user_mk-mood-uplifting-32.mp3": 4,
   "user_mk-techno-134.mp3": 4,
   "user_mk-mood-calm-682.mp3": 2,
-  "user_mk-house-623.mp3": 4,
+  "user_mk-house-623.mp3": 5,
   "user_px-epic-motivation-618588.mp3": 4,
   "user_mk-mood-uplifting-1001.mp3": 3,
   "user_mk-techno-160.mp3": 4,
@@ -2605,7 +2613,7 @@
   "Story_4_Quiz_3.jpg",
   "Story_4_Quiz_4.jpg"
  ],
- "analysis_last": "2026-11-23",
+ "analysis_last": "2026-11-24",
  "analysis_media": [
   {
    "media": "17981228451129133",
@@ -2696,6 +2704,11 @@
    "media": "17911502076331660",
    "asset": "GOLD",
    "date": "2026-11-23"
+  },
+  {
+   "media": "18147597643586808",
+   "asset": "BTC",
+   "date": "2026-11-24"
   }
  ],
  "edu_carousels_done": {
