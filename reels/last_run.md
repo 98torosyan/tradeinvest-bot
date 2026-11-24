@@ -1,3 +1,6 @@
+**2026-11-25 03:16** `analysis` ✅ skipped-quiet
+- 🌙 03:16 — quiet hours, analysis skipped
+---
 **2026-11-25 02:21** `fact` ✅ skipped-quiet
 - 🌙 02:21 — quiet hours, fact skipped
 ---
@@ -80,6 +83,3 @@
 ---
 **2026-11-24 00:31** `lesson` ✅ skipped-quiet
 - 🌙 00:31 — quiet hours, lesson skipped
----
-**2026-11-23 22:42** `news` ✅ skipped-late
-- ⏰ GitHub started this news run 726 min late — skipped (the next slot will post)
