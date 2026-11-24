@@ -1,3 +1,6 @@
+**2026-11-24 19:15** `story` ✅ skipped-late
+- ⏰ GitHub started this story run 638 min late — skipped (the next slot will post)
+---
 **2026-11-24 19:09** `lesson` ✅ published
 - [analysis] BTC S zone=55130.00-55861.57 touches=1 other=64603.12
 - ✅ Analysis Reel BTC published
@@ -91,6 +94,3 @@
 ---
 **2026-11-23 03:35** `news` ✅ skipped-quiet
 - 🌙 03:35 — quiet hours, news skipped
----
-**2026-11-23 02:52** `digest` ✅ skipped-late
-- ⏰ GitHub started this digest run 299 min late — skipped (the next slot will post)
