@@ -1,3 +1,6 @@
+**2026-11-24 22:24** `news` ✅ skipped-late
+- ⏰ GitHub started this news run 707 min late — skipped (the next slot will post)
+---
 **2026-11-24 21:39** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - 🌙 Օրվա ամփոփում · 2026-11-24
@@ -93,10 +96,3 @@
 - ✅ Analysis Reel GOLD published
 - ✅ Story published
 - ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
----
-**2026-11-23 17:46** `analysis` ✅ moved
-- ℹ️ the analysis Reel moved to 19:07
-- ✅ Carousel Q-02 published (8 slides)
-- ↺ catch-up carousel: published
-- ✅ Daily fact Story
-- ↺ catch-up fact: published
