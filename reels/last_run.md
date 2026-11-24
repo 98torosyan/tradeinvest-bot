@@ -1,3 +1,7 @@
+**2026-11-24 18:03** `alert` ✅ published
+- ✅ Alert Story BTC -5.0%
+- ✅ Alert Story ETH -5.5%
+---
 **2026-11-24 17:40** `analysis` ✅ moved
 - ℹ️ the analysis Reel moved to 19:07
 - ✅ Poster P-11 published
@@ -87,6 +91,3 @@
 ---
 **2026-11-23 02:46** `lesson` ✅ skipped-quiet
 - 🌙 02:46 — quiet hours, lesson skipped
----
-**2026-11-23 01:02** `lesson` ✅ skipped-quiet
-- 🌙 01:02 — quiet hours, lesson skipped
