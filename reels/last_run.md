@@ -1,3 +1,9 @@
+**2026-11-25 19:09** `lesson` ✅ published
+- [analysis] GOLD S zone=3481.10-3545.74 touches=2 other=4558.50
+- ✅ Analysis Reel GOLD published
+- ✅ Story published
+- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
+---
 **2026-11-25 18:54** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 617 min late — skipped (the next slot will post)
 ---
@@ -89,6 +95,3 @@
 ---
 **2026-11-24 08:31** `news` ✅ skipped-quiet
 - 🌙 08:31 — quiet hours, news skipped
----
-**2026-11-24 07:41** `digest` ✅ skipped-late
-- ⏰ GitHub started this digest run 588 min late — skipped (the next slot will post)
