@@ -1,3 +1,6 @@
+**2026-11-26 01:36** `fact` ✅ skipped-quiet
+- 🌙 01:36 — quiet hours, fact skipped
+---
 **2026-11-26 00:27** `carousel` ✅ skipped-quiet
 - 🌙 00:27 — quiet hours, carousel skipped
 ---
@@ -91,6 +94,3 @@
 
 Վաղը նույն ժամերին՝ ավտոմատ 🤖
 - ↺ catch-up digest: sent
----
-**2026-11-24 21:35** `challenge` ✅ skipped-late
-- ⏰ GitHub started this challenge run 689 min late — skipped (the next slot will post)
