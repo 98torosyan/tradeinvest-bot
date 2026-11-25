@@ -1,3 +1,10 @@
+**2026-11-25 17:40** `analysis` ✅ moved
+- ℹ️ the analysis Reel moved to 19:07
+- ✅ Carousel C-05 published (9 slides)
+- ↺ catch-up carousel: published
+- ✅ Daily num Story
+- ↺ catch-up fact: published
+---
 **2026-11-25 12:40** `lesson` ✅ published
 - ✅ short S-022 published (13s, kw=True)
 - ✅ Story published
@@ -85,6 +92,3 @@
 ---
 **2026-11-24 06:08** `lesson` ✅ skipped-quiet
 - 🌙 06:08 — quiet hours, lesson skipped
----
-**2026-11-24 05:38** `analysis` ✅ skipped-quiet
-- 🌙 05:38 — quiet hours, analysis skipped

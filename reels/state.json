@@ -1977,7 +1977,6 @@
   ],
   "moods/calm": [],
   "moods/tech": [
-   "user_mk-house-371.mp3",
    "user_mk-techno-134.mp3",
    "user_mk-techno-117.mp3",
    "user_mk-techno-162.mp3",
@@ -2007,7 +2006,7 @@
   "story": "user_px-gym-phonk-620567.mp3",
   "moods/inspire": "user_mk-mood-uplifting-963.mp3",
   "moods/calm": "user_mk-mood-calm-127.mp3",
-  "moods/tech": "user_px-house-flying-580004.mp3",
+  "moods/tech": "user_mk-house-371.mp3",
   "moods/tense": "user_px-trap-instrumental-560466.mp3",
   "moods/energy": "user_px-urban-hiphop-beat-623450.mp3"
  },
@@ -2470,7 +2469,7 @@
   "user_px-danger-music-620575.mp3": 2,
   "user_mk-mood-uplifting-684.mp3": 4,
   "user_mk-mood-uplifting-963.mp3": 4,
-  "user_mk-house-371.mp3": 4,
+  "user_mk-house-371.mp3": 5,
   "user_mk-mood-chill-256.mp3": 2,
   "user_mk-techno-162.mp3": 4,
   "user_mk-mood-tension-871.mp3": 1,
@@ -2754,9 +2753,13 @@
   "Q-02": {
    "media": "17882517762632280",
    "date": "2026-11-23"
+  },
+  "C-05": {
+   "media": "18184622650430206",
+   "date": "2026-11-25"
   }
  },
- "edu_carousel_last": "2026-11-23",
+ "edu_carousel_last": "2026-11-25",
  "challenge30": {
   "day": 21,
   "last": "2026-11-25"
@@ -2808,11 +2811,11 @@
   }
  },
  "daily_fact": {
-  "n": 20,
-  "last": "2026-11-24",
+  "n": 21,
+  "last": "2026-11-25",
   "fact": 7,
   "term": 7,
-  "num": 6
+  "num": 7
  },
  "digest_last": "2026-11-24",
  "digest_followers": 41,
