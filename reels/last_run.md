@@ -1,3 +1,7 @@
+**2026-11-25 22:51** `lesson` ✅ slot-retired
+- ℹ️ the 21:37 Reel slot is retired
+- ↺ catch-up digest: skipped
+---
 **2026-11-25 21:42** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - 🌙 Օրվա ամփոփում · 2026-11-25
@@ -93,7 +97,3 @@
 - ✅ Analysis Reel BTC published
 - ✅ Story published
 - ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
----
-**2026-11-24 18:03** `alert` ✅ published
-- ✅ Alert Story BTC -5.0%
-- ✅ Alert Story ETH -5.5%
