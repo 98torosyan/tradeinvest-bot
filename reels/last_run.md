@@ -1,3 +1,6 @@
+**2026-11-25 21:35** `news` ✅ skipped-late
+- ⏰ GitHub started this news run 658 min late — skipped (the next slot will post)
+---
 **2026-11-25 21:08** `challenge` ✅ skipped-late
 - ⏰ GitHub started this challenge run 661 min late — skipped (the next slot will post)
 ---
@@ -88,10 +91,3 @@
 - ↺ catch-up poster: published
 - ✅ Daily term Story
 - ↺ catch-up fact: published
----
-**2026-11-24 12:51** `lesson` ✅ published
-- ✅ short S-021 published (16s, kw=False)
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
-- ✅ Challenge Story day 20/30
-- ↺ catch-up challenge: published
