@@ -16,9 +16,9 @@ def load():
     return json.load(open(SCRIPTS, encoding="utf-8"))["shorts"]
 
 
-def next_script(st):
+def next_script(st, series=None):
     done = set(st.get("shorts_done", {}))
-    left = [s for s in load() if s["id"] not in done]
+    left = [s for s in load() if s["id"] not in done and (s.get("series") == series if series else s.get("series") != "ARM")]
     return (left[0] if left else None), len(left)
 
 
@@ -32,7 +32,8 @@ def _plain(s):
     return s.replace("*", "").replace("_", "").replace("|", " ")
 
 
-SEO = {"RISK": "Թրեյդինգ հայերեն · ռիսկի կառավարում · risk management · stop-loss",
+SEO = {"ARM": "Կրիպտո Հայաստանում · USDT դրամով · P2P · crypto Armenia · անվտանգություն",
+       "RISK": "Թրեյդինգ հայերեն · ռիսկի կառավարում · risk management · stop-loss",
        "MINDSET": "Թրեյդինգ հայերեն · թրեյդինգի հոգեբանություն · trading psychology · discipline"}
 
 
@@ -109,6 +110,8 @@ def _klines(sym, tf, limit=300):
 def visual(s, n):
     """Build the visual spec. n = script number (also picks asset/timeframe so consecutive Reels differ)."""
     kind = s.get("visual", "chart")
+    if kind.startswith("glyph:"):
+        return {"kind": "glyph", "image": kind.split(":", 1)[1]}
     if kind.startswith("image:"):
         return {"kind": "image", "image": kind.split(":", 1)[1]}
     if kind in ("multiplier", "grid"):

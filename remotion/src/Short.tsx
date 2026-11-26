@@ -5,7 +5,6 @@ import React from "react";
 import {Img, Sequence, staticFile, useCurrentFrame} from "remotion";
 import {ThemeRoot, useTheme, Cue, pr, ff} from "./lib/core";
 import {Words} from "./lib/Kinetic";
-import {EditorialMarks, LevelWipe} from "./lib/Atmosphere";
 import {EndCard, END_FRAMES} from "./lib/EndCard";
 import {getTheme} from "./theme";
 import {Visual, VisualSpec} from "./Visuals";
@@ -74,7 +73,6 @@ const Scene: React.FC<ShortProps & {starts: number[]; body: number}> = (P) => {
   return <>
     <Backdrop kind={v % 4} />
     {P.visual ? <Visual v={P.visual} starts={P.starts} body={P.body} /> : <Hero src={P.hero ?? "coins2"} body={P.body} v={(P.variant ?? 0) % 4} orange={(P.theme ?? "ti").startsWith("ti")} />}
-    <EditorialMarks index={P.index} left={P.series} right={P.tag} y0={276} />
     {block(0, <Words text={P.hook} mode="settle" size={124} lh={1.02} />)}
     {P.beats.map((b, k) => block(k + 1, <>
       {b.big && <Big text={b.big} at={P.starts[k + 1] + 2} color={b.loss ? t.c.warn : (t.c.accentText ?? t.c.accent)} />}
@@ -85,29 +83,17 @@ const Scene: React.FC<ShortProps & {starts: number[]; body: number}> = (P) => {
   </>;
 };
 
-// Retention: the Level line doubles as a progress bar (bright fill + glowing head), so viewers see the Reel is short.
-const Progress: React.FC<{body: number}> = ({body}) => {
-  const f = useCurrentFrame();
-  const t = useTheme();
-  const y = t.fx?.floorY ?? 1720;
-  const w = 1080 * Math.min(1, f / body);
-  return <>
-    <div style={{position: "absolute", left: 0, top: y - 3, width: w, height: 6, background: t.c.fg, opacity: 0.9}} />
-    <div style={{position: "absolute", left: w - 7, top: y - 7, width: 14, height: 14, borderRadius: 7, background: t.c.fg, boxShadow: `0 0 16px ${t.c.accent}`}} />
-  </>;
-};
-
 export const Short: React.FC<ShortProps> = (P) => {
-  const theme = getTheme(P.theme ?? "ti");
+  const base = getTheme(P.theme ?? "ti");
+  // clean frame (owner, Nov 2026): no corners, floor line, progress bar or small series/tag labels
+  const theme = {...base, fx: {...base.fx!, corners: undefined, floorY: undefined}} as typeof base;
   const {starts, body} = timeline(P);
   const k2 = (P.variant ?? 0) % 2 ? "2" : "";      // alternate sound kit on odd variants
   return (
     <ThemeRoot theme={theme}>
       <Sequence durationInFrames={body} layout="none"><Scene {...P} starts={starts} body={body} />
-        {starts.slice(1).map((s, i) => <LevelWipe key={i} at={s - 4} y={1720} />)}
-        <Progress body={body} />
       </Sequence>
-      <Sequence from={body} layout="none"><EndCard cta={P.cta ?? "none"} /></Sequence>
+      <Sequence from={body} layout="none"><EndCard cta={P.cta ?? "none"} line={false} /></Sequence>
       <Cue at={0} name={`hook${k2}`} volume={0.45} />
       {starts.slice(1, -1).map((s, i) => <Cue key={i} at={s} name={(P.beats[i]?.loss || P.beats[i]?.big ? "hit" : "swap") + k2} volume={0.5} />)}
       <Cue at={starts[starts.length - 1] + 26} name={`resolve${k2}`} volume={0.45} />

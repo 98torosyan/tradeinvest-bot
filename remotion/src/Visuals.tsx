@@ -7,7 +7,7 @@ import {useTheme, ff, pr} from "./lib/core";
 import {Candles, Level, Zone, Pin, PathArrow, makeScale, Grid, OHLC} from "./lib/Chart";
 
 export type VisualSpec = {
-  kind: "chart" | "level" | "stop" | "fomo" | "rr" | "split" | "multiplier" | "grid" | "image";
+  kind: "chart" | "level" | "stop" | "fomo" | "rr" | "split" | "multiplier" | "grid" | "image" | "glyph";
   cs?: OHLC[]; cs2?: OHLC[]; symbol?: string; tf?: string;
   entry?: number; stop?: number; target?: number; peak?: number; zone?: [number, number]; image?: string;
   labels?: Record<string, string>;
@@ -36,6 +36,32 @@ export const Visual: React.FC<{v: VisualSpec; starts: number[]; body: number}> =
   const s1 = starts[1] ?? 60, s2 = starts[2] ?? s1 + 60, s3 = starts[3] ?? s2 + 60;
   const cam = 1 + 0.05 * pr(f, 0, body, (x) => x);                       // slow, constant push: the frame never freezes
   const L = v.labels ?? {};
+
+  if (v.kind === "glyph") {
+    // calm line icon for non-chart topics (P2P, scams, security, law): soft amber glow that melts into the dark
+    const G: Record<string, string> = {
+      shield: "M0,-200 L170,-130 L170,10 C170,120 90,190 0,230 C-90,190 -170,120 -170,10 L-170,-130 Z M-70,10 L-15,65 L85,-45",
+      lock: "M-150,-20 L150,-20 L150,210 L-150,210 Z M-95,-20 L-95,-95 C-95,-150 -50,-190 0,-190 C50,-190 95,-150 95,-95 L95,-20 M0,70 L0,130",
+      key: "M-60,-60 m-90,0 a90,90 0 1,0 180,0 a90,90 0 1,0 -180,0 M3,3 L190,190 M120,120 L165,75 M160,160 L205,115",
+      chat: "M-190,-150 L190,-150 L190,90 L-40,90 L-120,170 L-120,90 L-190,90 Z M-110,-60 L110,-60 M-110,10 L40,10",
+      phone: "M-120,-220 L120,-220 L120,220 L-120,220 Z M-40,-180 L40,-180 M-25,175 L25,175 M-60,-40 L-10,10 L70,-80",
+      warning: "M0,-210 L210,170 L-210,170 Z M0,-70 L0,60 M0,105 L0,115",
+      bank: "M-210,-60 L0,-190 L210,-60 Z M-170,-30 L-170,150 M-85,-30 L-85,150 M0,-30 L0,150 M85,-30 L85,150 M170,-30 L170,150 M-220,185 L220,185",
+      law: "M0,-200 L0,170 M-150,190 L150,190 M-190,-130 L190,-130 M-190,-130 L-260,30 L-120,30 Z M190,-130 L120,30 L260,30 Z",
+      wallet: "M-200,-120 L170,-120 L170,180 L-200,180 Z M-200,-120 L110,-200 L140,-120 M70,10 L230,10 L230,90 L70,90 Z M120,50 L130,50",
+    };
+    const d = G[v.image ?? "shield"] ?? G.shield;
+    const draw = pr(f, 4, s1 > 30 ? s1 : 40);
+    const bob = 6 * Math.sin(f / 30);
+    return <svg width={1080} height={1920} style={{position: "absolute", inset: 0, scale: String(cam), transformOrigin: "50% 62%"}}>
+      <defs><radialGradient id="gglow"><stop offset="0" stopColor={acc} stopOpacity="0.22" /><stop offset="1" stopColor={acc} stopOpacity="0" /></radialGradient></defs>
+      <circle cx={540} cy={1200} r={430} fill="url(#gglow)" />
+      <g transform={`translate(540,${1200 + bob}) scale(0.9)`} fill="none" strokeLinecap="round" strokeLinejoin="round">
+        {[[44, 0.08], [24, 0.16]].map(([w, o]) => <path key={w} d={d} stroke={acc} strokeWidth={w} strokeOpacity={o} pathLength={1} strokeDasharray={1} strokeDashoffset={1 - draw} />)}
+        <path d={d} stroke={acc} strokeWidth={11} pathLength={1} strokeDasharray={1} strokeDashoffset={1 - draw} />
+      </g>
+    </svg>;
+  }
 
   if (v.kind === "image") {
     const bob = Math.sin(f / 24);

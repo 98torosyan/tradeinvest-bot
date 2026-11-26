@@ -227,17 +227,17 @@ def do_chart_lesson(st, now, rid, publish):
     reel_to_story(urls, rid); return "published"
 
 
-def do_short(st, now, rid, publish):
-    """12:37 short lesson Reel (Remotion, brand «Գիշերային Սևան»)."""
+def do_short(st, now, rid, publish, series=None):
+    """Short lesson Reel (Remotion). series='ARM' = «Կրիպտո Հայաստանում» at 21:37; otherwise the 12:37 fallback."""
     from . import shorts
     from delivery.media_hosting import wait_until_reachable
-    s, left = shorts.next_script(st)
+    s, left = shorts.next_script(st, series)
     if not s:
         return None
     if left <= 5 and st.get("shorts_low_alert") != now.strftime("%Y-%m-%d"):
         st["shorts_low_alert"] = now.strftime("%Y-%m-%d")
         notify(f"📚 Մնացել է {left} կարճ դասի սցենար։ Ժամանակն է գրել նորերը։")
-    kw = now.weekday() in shorts.KW_DAYS
+    kw = series == "ARM" or now.weekday() in shorts.KW_DAYS          # the Armenia series always ends with «ԴԱՍ»
     mp4, cover = os.path.join(OUT, rid + ".mp4"), os.path.join(OUT, rid + ".jpg")
     mood = "mood:inspire" if s.get("series") == "MINDSET" else "mood:tense"
     dur = shorts.render(s, kw, mp4, cover, music.pick(mood, None, st, now.strftime("%Y-%m-%d"), need=25))
@@ -277,10 +277,19 @@ def do_lesson(st, now, rid, publish):
     if settings.SHORTS_ENABLED and now.hour >= 18:
         if now.hour < 21:
             return do_analysis(st, now, rid, publish)
-        summary("ℹ️ the 21:37 Reel slot is retired")
+        res = "slot-retired"
+        if getattr(settings, "LOCAL_SERIES", False) and (not publish or st.get("arm_last") != now.strftime("%Y-%m-%d")):
+            try:                                   # 21:37 «Կրիպտո Հայաստանում»: practical local Reels people save and send
+                res = do_short(st, now, rid, publish, series="ARM") or "no-scripts"
+                if res == "published":
+                    st["arm_last"] = now.strftime("%Y-%m-%d")
+            except Exception as exc:  # noqa: BLE001
+                summary(f"⚠️ Armenia series failed: {str(exc)[:160]}")
+        else:
+            summary("ℹ️ the 21:37 Reel slot is retired")
         if publish:
             _catch_up(st, now, rid, publish, (["weekly"] if now.weekday() == 6 else []) + ["news", "digest"])
-        return "slot-retired"
+        return res
     if publish and quiet(now):
         summary(f"🌙 {now:%H:%M} is inside quiet hours — the lesson waits for the next slot"); return "skipped-quiet"
     if settings.SHORTS_ENABLED and (not publish or st.get("shorts_last") != now.strftime("%Y-%m-%d")):
