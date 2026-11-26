@@ -5,7 +5,7 @@ All times Yerevan (UTC+4). Nothing is published in quiet hours (00:00–09:00); 
 | When | Kind | What | Content source |
 |---|---|---|---|
 | 10:07 daily | `challenge` | «30 օր, 30 կանոն» Story (+ economic calendar on Mondays / event days) | `content/challenge30.json`, `econ.py` |
-| 12:37 daily (Cloudflare) | `lesson` → `do_short` + catch-up challenge/market Story/quiz | Short Reel 7–20 s + Story | `content/shorts.json` (42 scripts, hook formulas) |
+| 12:37 daily (Cloudflare) | `lesson` → `do_chart_lesson` (35 s «Իրական chart դաս» on real candles; short script = fallback) + catch-up challenge/market Story/quiz | Short Reel 7–20 s + Story | `content/shorts.json` (42 scripts, hook formulas) |
 | 15:07 Mon/Wed/Fri | `carousel` | Educational carousel with recap slide | `content/carousels.json` (19) |
 | 15:07 Tue/Thu/Sat/Sun | `poster` | Typographic poster | `content/posters.json` (30) |
 | 16:07 daily | `fact` | Did-you-know / glossary / live number Story | `content/daily_facts.json` |

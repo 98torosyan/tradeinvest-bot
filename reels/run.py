@@ -194,6 +194,34 @@ def reel_to_story(urls, rid):
         summary(f"⚠️ Story failed (the Reel is fine): {str(exc)[:160]}")
 
 
+def do_chart_lesson(st, now, rid, publish):
+    """12:37 «Իրական chart դաս» (35 s): one concept per day, shown on the most recent REAL example (reels/chart_lesson.py)."""
+    from . import chart_lesson as cl
+    from delivery.media_hosting import wait_until_reachable
+    props, cap, meta = cl.build(st, now)
+    RUN_LOG.append(f"[chart-lesson] {meta['topic']} {meta['asset']} {props['date']} {meta['result']}")
+    ok, bad = qa.text_ok(" ".join([cl.plain(props["hook"]), cl.plain(props["rule"]), *props["concept"], *[cl.plain(x) for x in props["outcome"]], cap]))
+    if not ok:
+        raise RuntimeError("chart lesson spell-check: " + ", ".join(bad[:8]))
+    if cl.DISCLAIMER not in cap:
+        raise RuntimeError("chart lesson caption has no disclaimer")
+    mp4, cover = os.path.join(OUT, rid + ".mp4"), os.path.join(OUT, rid + ".jpg")
+    cl.render(props, mp4, cover, music.pick("mood:tech", None, st, now.strftime("%Y-%m-%d"), need=36))
+    if not publish:
+        summary(f"[dry-run] chart lesson {meta['topic']} {meta['asset']} rendered"); return "dry-run"
+    urls = hosting.publish([(mp4, f"reels/{rid}.mp4"), (cover, f"reels/{rid}.jpg")])
+    if not wait_until_reachable(urls[f"reels/{rid}.mp4"], timeout=300):
+        raise RuntimeError("video is not reachable on GitHub Pages")
+    from . import igapi
+    media = igapi.publish_reel(urls[f"reels/{rid}.mp4"], cap, cover_url=urls.get(f"reels/{rid}.jpg"))
+    today = now.strftime("%Y-%m-%d")
+    st["chart_lesson_n"] = meta["n_next"]
+    st["chart_lessons_used"] = (st.get("chart_lessons_used", []) + [meta["key"]])[-200:]
+    st.setdefault("published", {})[f"CL-{today}"] = {"media": media, "date": today, "hour": now.hour, "topic": meta["topic"]}
+    summary(f"✅ Chart lesson published: {meta['topic']} on {meta['asset']} ({props['date']})")
+    reel_to_story(urls, rid); return "published"
+
+
 def do_short(st, now, rid, publish):
     """12:37 short lesson Reel (Remotion, brand «Գիշերային Սևան»)."""
     from . import shorts
@@ -251,7 +279,13 @@ def do_lesson(st, now, rid, publish):
     if publish and quiet(now):
         summary(f"🌙 {now:%H:%M} is inside quiet hours — the lesson waits for the next slot"); return "skipped-quiet"
     if settings.SHORTS_ENABLED and (not publish or st.get("shorts_last") != now.strftime("%Y-%m-%d")):
-        res = do_short(st, now, rid, publish)
+        res = None
+        if getattr(settings, "CHART_LESSONS", False):
+            try:
+                res = do_chart_lesson(st, now, rid, publish)
+            except Exception as exc:  # noqa: BLE001     # no data / no pattern: today's short script keeps the slot alive
+                summary(f"⚠️ chart lesson failed, short Reel instead: {str(exc)[:160]}")
+        res = res or do_short(st, now, rid, publish)
         if res:
             if publish:
                 st["shorts_last"] = now.strftime("%Y-%m-%d")
@@ -796,7 +830,7 @@ NAMES_HY = {"lesson": "Կարճ դաս / վերլուծություն", "analysi
 def _item_hy(line):
     """Short Armenian name for a '✅ …' log line in the owner's digest."""
     low = line.lower()
-    for key, name in (("short", "Կարճ դաս (Reel)"), ("analysis reel", "Վերլուծություն (Reel)"), ("carousel", "Կարուսել"),
+    for key, name in (("chart lesson", "Chart դաս (Reel)"), ("short", "Կարճ դաս (Reel)"), ("analysis reel", "Վերլուծություն (Reel)"), ("carousel", "Կարուսել"),
                       ("poster", "Պոստեր"), ("weekly", "Շաբաթվա Reel"), ("quiz", "Quiz Story"), ("news", "Լուր (Story)"),
                       ("market story", "Շուկայի Story"), ("challenge", "Challenge Story"), ("alert", "Alert Story"), ("economic", "Տնտեսական օրացույց Story"),
                       ("daily", "Փաստ / տերմին Story"), ("story", "Reel-ը Story-ում")):
@@ -864,7 +898,7 @@ def do_report_dry(st, now, rid, publish):
 
 
 HANDLERS = {"yt_check": do_yt_check, "digest": do_digest, "poster": do_poster, "fact": do_fact, "econ_dry": do_econ_dry, "monthly": do_monthly, "challenge": do_challenge, "alert": do_alert, "weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
-            "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel, "analysis": do_analysis}
+            "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel, "analysis": do_analysis, "chart_lesson": do_chart_lesson}
 
 
 ALWAYS = {"yt_check", "digest", "report_dry", "econ_dry", "music", "stories_pack"}     # allowed at any hour

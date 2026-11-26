@@ -3,6 +3,7 @@
 import React from "react";
 import {Short, ShortProps, timeline} from "./Short";
 import {Weekly, WeeklyProps, weeklyTotal} from "./Weekly";
+import {ChartLesson, CL_TOTAL} from "./ChartLesson";
 import {registerRoot, Composition, AbsoluteFill, useCurrentFrame, interpolate, spring, useVideoConfig, staticFile, Easing, getInputProps} from "remotion";
 
 type C = {o: number; h: number; l: number; c: number};
@@ -154,6 +155,8 @@ const WEEKLY_DEMO: WeeklyProps = {range: "OCT 27 – NOV 2", rows: [
 const weeklyProps = {...WEEKLY_DEMO, ...(getInputProps() as Partial<WeeklyProps>)} as WeeklyProps;
 
 registerRoot(() => (<>
+  <Composition id="ChartLesson" component={ChartLesson as any} fps={30} width={1080} height={1920}
+    durationInFrames={CL_TOTAL} defaultProps={getInputProps() as any} />
   <Composition id="Weekly" component={Weekly as any} fps={30} width={1080} height={1920}
     durationInFrames={weeklyTotal(weeklyProps.rows.length)} defaultProps={weeklyProps} />
   <Composition id="Short" component={Short as any} fps={30} width={1080} height={1920}
