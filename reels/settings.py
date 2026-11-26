@@ -29,6 +29,7 @@ QUIET_HOURS = (0, 9)
 
 # Nov 2026 format: 12:37 short lesson (reels/content/shorts.json), 19:07 analysis Reel, no 21:37 Reel.
 SHORTS_ENABLED = True
+COLLABORATORS = []              # Instagram usernames to invite as Collab on every Reel (they accept once per post)
 LOCAL_SERIES = True             # 21:37 = «Կրիպտո Հայաստանում» (shorts.json series ARM)
 CHART_LESSONS = True            # 12:37 = «Իրական chart դաս» on real candles (reels/chart_lesson.py); short scripts are the fallback
 REEL_TO_STORY = True            # every new Reel (12:37 short, 19:07 analysis) is also shared as a Story

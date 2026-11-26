@@ -309,6 +309,23 @@ def do_giveaway(st, now, rid, publish):
     return "waiting"
 
 
+def do_research(st, now, rid, publish):
+    """Mondays: Apify competitor research → takeaways to the owner (and kept in state for the content writers)."""
+    from . import research
+    week = now.strftime("%G-W%V")
+    if now.weekday() != 0 or st.get("research_week") == week:
+        return "not-today"
+    if not research.configured():
+        return "no-APIFY_TOKEN"
+    rows = research.scrape()
+    text, d = research.report(rows)
+    st["research_week"] = week
+    st["research_last"] = {"week": week, **d}
+    if publish:
+        notify(text)
+    summary(f"✅ research: {len(rows)} reels analysed"); return "sent"
+
+
 def _catch_up(st, now, rid, publish, kinds):
     """Exact Cloudflare triggers also run the day's GitHub-cron items that have not happened yet
     (GitHub cron often starts hours late and late runs are skipped). Every job checks 'done today' itself."""
@@ -613,7 +630,7 @@ def do_analysis(st, now, rid, publish):
         summary("🌙 quiet hours — analysis skipped"); return "skipped-quiet"
     if publish and settings.SHORTS_ENABLED and now.hour < 18:
         summary("ℹ️ the analysis Reel moved to 19:07")
-        _catch_up(st, now, rid, publish, ["carousel" if now.weekday() in (0, 2, 4) else "poster", "fact", "news", "giveaway"])
+        _catch_up(st, now, rid, publish, ["carousel" if now.weekday() in (0, 2, 4) else "poster", "fact", "news", "giveaway", "research"])
         return "moved"
     if publish and st.get("analysis_last") == today:
         summary("ℹ️ analysis already published today"); return "skipped"
@@ -960,7 +977,7 @@ def do_report_dry(st, now, rid, publish):
 
 
 HANDLERS = {"yt_check": do_yt_check, "digest": do_digest, "poster": do_poster, "fact": do_fact, "econ_dry": do_econ_dry, "monthly": do_monthly, "challenge": do_challenge, "alert": do_alert, "weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
-            "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel, "analysis": do_analysis, "chart_lesson": do_chart_lesson, "giveaway": do_giveaway}
+            "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel, "analysis": do_analysis, "chart_lesson": do_chart_lesson, "giveaway": do_giveaway, "research": do_research}
 
 
 ALWAYS = {"yt_check", "digest", "report_dry", "econ_dry", "music", "stories_pack"}     # allowed at any hour

@@ -37,6 +37,14 @@ def publish_reel(video_url, caption, cover_url=None, share_to_feed=True):
     p = dict(media_type="REELS", video_url=video_url, caption=caption, share_to_feed="true" if share_to_feed else "false")
     if cover_url:
         p["cover_url"] = cover_url
+    from . import settings
+    collab = [u.lstrip("@") for u in getattr(settings, "COLLABORATORS", []) if u][:3]
+    if collab:                                   # Collab invite: the Reel also shows to the partner page's audience
+        import json as _json
+        try:
+            return _publish_container(**p, collaborators=_json.dumps(collab))
+        except Error as exc:
+            print("[collab] rejected, publishing without collaborators:", str(exc)[:200])
     return _publish_container(**p)
 
 
