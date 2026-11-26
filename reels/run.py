@@ -206,7 +206,7 @@ def do_chart_lesson(st, now, rid, publish):
     if cl.DISCLAIMER not in cap:
         raise RuntimeError("chart lesson caption has no disclaimer")
     mp4, cover = os.path.join(OUT, rid + ".mp4"), os.path.join(OUT, rid + ".jpg")
-    cl.render(props, mp4, cover, music.pick("mood:tech", None, st, now.strftime("%Y-%m-%d"), need=36))
+    cl.render(props, mp4, cover, music.pick("mood:tense", None, st, now.strftime("%Y-%m-%d"), need=36))   # cinematic suspense: «ի՞նչ եղավ հետո»
     if not publish:
         summary(f"[dry-run] chart lesson {meta['topic']} {meta['asset']} rendered"); return "dry-run"
     urls = hosting.publish([(mp4, f"reels/{rid}.mp4"), (cover, f"reels/{rid}.jpg")])

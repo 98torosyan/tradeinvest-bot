@@ -443,18 +443,23 @@ def _npx(*args):
 
 
 def render(props, mp4, cover, music=None):
+    """4K (2160x3840) render. Remotion's own track (SFX cues) is mixed with the background music."""
     if not os.path.isdir(os.path.join(MOTION, "node_modules")):
         subprocess.run(["npm", "install", "--no-audit", "--no-fund", "--silent"], cwd=MOTION, check=True)
     pj = os.path.join(MOTION, "props-chart.json")
     json.dump(props, open(pj, "w", encoding="utf-8"), ensure_ascii=False)
     raw = mp4 + ".raw.mp4"
-    _npx("render", "src/index.tsx", "ChartLesson", raw, f"--props={pj}", "--crf=18")
-    _npx("still", "src/index.tsx", "ChartLesson", cover, f"--props={pj}", "--frame=20", "--image-format=jpeg")
+    _npx("render", "src/index.tsx", "ChartLesson", raw, f"--props={pj}", "--crf=16", "--scale=2")
+    _npx("still", "src/index.tsx", "ChartLesson", cover, f"--props={pj}", "--frame=20", "--image-format=jpeg", "--scale=2", "--jpeg-quality=92")
     if music:
         end = TOTAL / FPS
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-stream_loop", "-1", "-i", music, "-map", "0:v", "-map", "1:a",
-                        "-c:v", "copy", "-c:a", "aac", "-b:a", "160k",
-                        "-af", f"afade=t=in:d=0.3,afade=t=out:st={end - 1.6}:d=1.5,loudnorm=I=-15:TP=-1.5:LRA=11", "-shortest", mp4], check=True)
+        has_sfx = "audio" in subprocess.run(["ffprobe", "-v", "error", "-show_entries", "stream=codec_type", "-of", "csv=p=0", raw],
+                                            capture_output=True, text=True).stdout
+        mus = f"[1:a]atrim=0:{end},afade=t=in:d=0.6,afade=t=out:st={end - 2}:d=2,loudnorm=I=-17:TP=-2:LRA=11,volume=0.85[m]"
+        graph = f"{mus};[0:a]volume=1.0[s];[m][s]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.95[a]" if has_sfx else mus.replace("[m]", "[a]")
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-stream_loop", "-1", "-i", music,
+                        "-filter_complex", graph, "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
+                        "-t", f"{end:.2f}", "-movflags", "+faststart", mp4], check=True)
         os.remove(raw)
     else:
         shutil.move(raw, mp4)

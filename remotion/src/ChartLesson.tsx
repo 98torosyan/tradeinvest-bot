@@ -127,6 +127,37 @@ const Chart: React.FC<{P: ChartLessonProps}> = ({P}) => {
   </svg>;
 };
 
+// Calm, deep background: slow amber light that melts into the black on every side, a giant blurred ghost of the
+// same real chart drifting behind (depth), and a soft vignette. The area behind the text stays the darkest.
+const Backdrop: React.FC<{P: ChartLessonProps}> = ({P}) => {
+  const f = useCurrentFrame();
+  const t = useTheme();
+  const A = t.c.accent;
+  const CS = P.candles, N = CS.length;
+  const lo = Math.min(...CS.map(c => c.l)), hi = Math.max(...CS.map(c => c.h));
+  const gy = (v: number) => 1820 - (v - lo) / (hi - lo || 1) * 560;      // below the real chart, fills the calm lower half
+  const gx = (i: number) => -120 + i * (1560 / (N - 1));
+  const drift = interpolate(f, [0, CL.body], [0, -160]);
+  const breathe = 0.5 + 0.5 * Math.sin(f / 70);
+  const orb = (x: number, y: number, r: number, a: number) =>
+    <div style={{position: "absolute", left: x - r, top: y - r, width: 2 * r, height: 2 * r, borderRadius: "50%",
+      background: `radial-gradient(circle, ${A}${Math.round(a * 255).toString(16).padStart(2, "0")} 0%, ${A}${Math.round(a * 110).toString(16).padStart(2, "0")} 30%, transparent 70%)`}} />;
+  const ghost = CS.map((c, i) => `${i ? "L" : "M"}${gx(i).toFixed(0)},${gy(c.c).toFixed(0)}`).join(" ");
+  return <div style={{position: "absolute", inset: 0, overflow: "hidden"}}>
+    {orb(880 + 60 * Math.sin(f / 90), 1480 + 40 * Math.cos(f / 110), 620, 0.16 + 0.05 * breathe)}
+    {orb(120 + 50 * Math.cos(f / 120), 1750, 520, 0.08)}
+    {orb(1020, 250 + 30 * Math.sin(f / 100), 380, 0.07)}
+    <svg width={1080} height={1920} style={{position: "absolute", inset: 0, opacity: 0.5, translate: `${drift}px 0px`}}>
+      <defs><linearGradient id="gfade" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stopColor={A} stopOpacity="0" /><stop offset=".35" stopColor={A} stopOpacity="1" /><stop offset=".8" stopColor={A} stopOpacity="1" /><stop offset="1" stopColor={A} stopOpacity="0" /></linearGradient></defs>
+      {[[46, 0.05], [26, 0.08], [10, 0.14]].map(([sw, op]) =>       /* stacked strokes = soft glow without an expensive blur filter */
+        <path key={sw} d={ghost} stroke="url(#gfade)" strokeOpacity={op} strokeWidth={sw} fill="none" strokeLinejoin="round" strokeLinecap="round" />)}
+    </svg>
+    <div style={{position: "absolute", inset: 0, background: "radial-gradient(130% 75% at 50% 42%, transparent 35%, rgba(0,0,0,.55) 100%)"}} />
+    <div style={{position: "absolute", left: 0, right: 0, top: 230, height: 470, background: "linear-gradient(180deg, transparent, rgba(11,11,12,.55) 30%, rgba(11,11,12,.55) 75%, transparent)"}} />
+  </div>;
+};
+
 const Block: React.FC<{from: number; to: number; children: React.ReactNode; top?: number}> = ({from, to, children, top = 400}) => {
   const f = useCurrentFrame();
   if (f < from - 1 || f > to + 12) return null;
@@ -146,6 +177,7 @@ const Scene: React.FC<ChartLessonProps> = (P) => {
     border: `3px solid ${t.c.accent}`, color: fill ? t.c.onAccent : t.c.accent, background: fill ? t.c.accent : "transparent", whiteSpace: "nowrap"}}>{txt}</div>;
   const cta = p(f, CL.rule + 80, CL.rule + 96);
   return <>
+    <Backdrop P={P} />
     {/* header */}
     <div style={{position: "absolute", left: 65, right: 65, top: 280, display: "flex", alignItems: "center", gap: 20}}>
       <Icon asset={P.asset} />
