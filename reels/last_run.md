@@ -1,3 +1,9 @@
+**2026-11-26 22:37** `lesson` ✅ slot-retired
+- ℹ️ the 21:37 Reel slot is retired
+- ℹ️ news already out today (2)
+- ↺ catch-up news: skipped
+- ↺ catch-up digest: skipped
+---
 **2026-11-26 21:39** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
@@ -107,10 +113,3 @@
 ---
 **2026-11-25 18:54** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 617 min late — skipped (the next slot will post)
----
-**2026-11-25 17:40** `analysis` ✅ moved
-- ℹ️ the analysis Reel moved to 19:07
-- ✅ Carousel C-05 published (9 slides)
-- ↺ catch-up carousel: published
-- ✅ Daily num Story
-- ↺ catch-up fact: published
