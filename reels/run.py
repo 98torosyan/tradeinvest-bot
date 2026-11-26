@@ -219,6 +219,11 @@ def do_chart_lesson(st, now, rid, publish):
     st["chart_lessons_used"] = (st.get("chart_lessons_used", []) + [meta["key"]])[-200:]
     st.setdefault("published", {})[f"CL-{today}"] = {"media": media, "date": today, "hour": now.hour, "topic": meta["topic"]}
     summary(f"✅ Chart lesson published: {meta['topic']} on {meta['asset']} ({props['date']})")
+    try:                                              # first comment = a question: comments push the Reel in the feed
+        q = cl.QUESTIONS[(st["chart_lesson_n"] + len(st["chart_lessons_used"])) % len(cl.QUESTIONS)]
+        igapi.comment_on(media, q); summary("✅ question comment added")
+    except Exception as exc:  # noqa: BLE001
+        summary(f"⚠️ question comment failed (the Reel is fine): {str(exc)[:120]}")
     reel_to_story(urls, rid); return "published"
 
 

@@ -18,7 +18,8 @@ K = 10                     # candles shown after the signal («ի՞նչ եղավ
 BEFORE = 34                # candles shown before the signal
 FPS = 30
 SCAN_ASSETS = ["BTC", "ETH", "GOLD", "NDX", "SPX"]
-TOPICS = ["sweep", "bos", "pinbar", "ob", "retest", "choch", "divergence", "engulfing", "double", "fvg", "ema"]
+TOPICS = ["sweep", "bos", "fib", "pinbar", "ob", "rsi", "retest", "squeeze", "choch", "divergence", "inside",
+          "engulfing", "macd", "double", "fvg", "ema"]
 
 
 # ------------------------------------------------------------------ data (long history, with timestamps)
@@ -233,6 +234,96 @@ def d_ema(cs, A, E20, E50):
             yield i, -1, [{"type": "ema"}, {"type": "dot", "i": i, "v": E20[i]}]
 
 
+def sma(vals, n):
+    out = []
+    for i in range(len(vals)):
+        w = vals[max(0, i - n + 1):i + 1]
+        out.append(sum(w) / len(w))
+    return out
+
+
+def bollinger(closes, n=20, k=2.0):
+    mid = sma(closes, n)
+    up, dn, bw = [], [], []
+    for i in range(len(closes)):
+        w = closes[max(0, i - n + 1):i + 1]
+        m = mid[i]; sd = (sum((x - m) ** 2 for x in w) / len(w)) ** 0.5
+        up.append(m + k * sd); dn.append(m - k * sd); bw.append((2 * k * sd) / m if m else 0)
+    return mid, up, dn, bw
+
+
+def macd(closes):
+    e12, e26 = ema(closes, 12), ema(closes, 26)
+    line = [a - b for a, b in zip(e12, e26)]
+    sig = ema(line, 9)
+    return line, sig, [a - b for a, b in zip(line, sig)]
+
+
+def d_fib(cs, A):
+    """Golden pocket: after a strong swing, the first pullback into 0.5–0.618 that closes back in the trend direction."""
+    for b in range(30, len(cs)):
+        lo_i = min(range(b - 30, b), key=lambda j: cs[j]["l"]); hi_i = max(range(b - 30, b), key=lambda j: cs[j]["h"])
+        L, H = cs[lo_i]["l"], cs[hi_i]["h"]
+        if H - L < A[b] * 6:
+            continue
+        if lo_i < hi_i and b - hi_i >= 3:                    # up-swing, pullback down
+            z1, z2 = H - (H - L) * 0.618, H - (H - L) * 0.5
+            c = cs[b]
+            if c["l"] <= z2 and c["l"] >= H - (H - L) * 0.786 and c["c"] > z2 and _lowest(cs, hi_i + 1, b) > z2:
+                yield b, 1, [{"type": "seg", "i1": lo_i, "v1": L, "i2": hi_i, "v2": H}, {"type": "zone", "lo": z1, "hi": z2, "i1": hi_i, "label": "Fib 0.5–0.618"},
+                             {"type": "circle", "i": b, "at": "l"}]
+        elif hi_i < lo_i and b - lo_i >= 3:                  # down-swing, pullback up
+            z1, z2 = L + (H - L) * 0.5, L + (H - L) * 0.618
+            c = cs[b]
+            if c["h"] >= z1 and c["h"] <= L + (H - L) * 0.786 and c["c"] < z1 and _highest(cs, lo_i + 1, b) < z1:
+                yield b, -1, [{"type": "seg", "i1": hi_i, "v1": H, "i2": lo_i, "v2": L}, {"type": "zone", "lo": z1, "hi": z2, "i1": lo_i, "label": "Fib 0.5–0.618"},
+                              {"type": "circle", "i": b, "at": "h"}]
+
+
+def d_squeeze(cs, A, BB):
+    mid, up, dn, bw = BB
+    for i in range(60, len(cs)):
+        recent = sorted(bw[i - 60:i])
+        if min(bw[i - 6:i]) > recent[6]:                     # the bands were among the narrowest of the last 60 candles
+            continue
+        c = cs[i]
+        if c["c"] > up[i] and cs[i - 1]["c"] <= up[i - 1] and _body(c) > A[i] * 0.8:
+            yield i, 1, [{"type": "circle", "i": i, "at": "h"}]
+        elif c["c"] < dn[i] and cs[i - 1]["c"] >= dn[i - 1] and _body(c) > A[i] * 0.8:
+            yield i, -1, [{"type": "circle", "i": i, "at": "l"}]
+
+
+def d_macd(cs, M):
+    line, sig, hist = M
+    for i in range(40, len(cs)):
+        if hist[i] > 0 >= hist[i - 1] and line[i] < 0 and all(hist[j] < 0 for j in range(i - 8, i)):
+            yield i, 1, [{"type": "pdot", "i": i}]
+        elif hist[i] < 0 <= hist[i - 1] and line[i] > 0 and all(hist[j] > 0 for j in range(i - 8, i)):
+            yield i, -1, [{"type": "pdot", "i": i}]
+
+
+def d_rsi(cs, R):
+    for i in range(30, len(cs)):
+        if R[i] > 30 >= R[i - 1] and min(R[i - 6:i]) < 27:
+            yield i, 1, [{"type": "pdot", "i": i}, {"type": "circle", "i": i, "at": "l", "small": True}]
+        elif R[i] < 70 <= R[i - 1] and max(R[i - 6:i]) > 73:
+            yield i, -1, [{"type": "pdot", "i": i}, {"type": "circle", "i": i, "at": "h", "small": True}]
+
+
+def d_inside(cs, A):
+    for i in range(20, len(cs)):
+        for m in (i - 2, i - 3):                             # mother candle, inside candle(s), breakout at i
+            M = cs[m]
+            if M["h"] - M["l"] < A[m] * 1.2 or not all(cs[j]["h"] <= M["h"] and cs[j]["l"] >= M["l"] for j in range(m + 1, i)):
+                continue
+            box = {"type": "box", "i1": m, "i2": i - 1, "lo": M["l"], "hi": M["h"]}
+            if cs[i]["c"] > M["h"]:
+                yield i, 1, [box, {"type": "circle", "i": i, "at": "h"}]
+            elif cs[i]["c"] < M["l"]:
+                yield i, -1, [box, {"type": "circle", "i": i, "at": "l"}]
+            break
+
+
 # ---- ICT / SMC concepts from joshyattridge/smart-money-concepts (github.com/joshyattridge/smart-money-concepts, MIT)
 def _smc(cs):
     os.environ.setdefault("SMC_CREDIT", "0")
@@ -294,6 +385,17 @@ def detect(topic, cs):
     if topic == "ema":
         cl = [c["c"] for c in cs]
         return list(d_ema(cs, A, ema(cl, 20), ema(cl, 50)))
+    cl = [c["c"] for c in cs]
+    if topic == "fib":
+        return list(d_fib(cs, A))
+    if topic == "squeeze":
+        return list(d_squeeze(cs, A, bollinger(cl)))
+    if topic == "macd":
+        return list(d_macd(cs, macd(cl)))
+    if topic == "rsi":
+        return list(d_rsi(cs, rsi(cl)))
+    if topic == "inside":
+        return list(d_inside(cs, A))
     if topic in ("bos", "choch"):
         return list(d_structure(cs, topic.upper()))
     if topic == "ob":
@@ -346,8 +448,8 @@ def texts(topic, d):
                      "Retest՝ գինը վերադառնում է ստուգելու նույն մակարդակը։"],
             label="Breakout + retest", rule="Մի՛ շտապիր կոտրման պահին՝ *սպասիր retest-ին*։"),
         "divergence": dict(
-            hook=P(d, "Գինը նոր low արեց, բայց RSI-ը՝ *ոչ*", "Գինը նոր high արեց, բայց RSI-ը՝ *ոչ*"),
-            concept=["Divergence՝ գինը և RSI-ը գնում են տարբեր ուղղություններով։",
+            hook=P(d, "Գինը նոր low արեց, բայց RSI-ն՝ *ոչ*", "Գինը նոր high արեց, բայց RSI-ն՝ *ոչ*"),
+            concept=["Divergence՝ գինը և RSI-ն գնում են տարբեր ուղղություններով։",
                      P(d, "Անկման ուժը թուլանում է, թեև գինը դեռ իջնում է։", "Աճի ուժը թուլանում է, թեև գինը դեռ բարձրանում է։")],
             label=P(d, "Bullish divergence", "Bearish divergence"), rule="Divergence-ը *նախազգուշացում է*, ոչ թե մուտքի ազդանշան։"),
         "double": dict(
@@ -377,6 +479,33 @@ def texts(topic, d):
             concept=["Order Block՝ ուժեղ շարժումից առաջ վերջին հակառակ մոմը։",
                      "Գինը հաճախ վերադառնում է այդ գոտի ու արձագանքում։"],
             label=P(d, "Bullish Order Block", "Bearish Order Block"), rule="Order Block-ը ուժ ունի, երբ դրանից հետո կա *BOS*։"),
+        "fib": dict(
+            hook="Ինչո՞ւ է գինը հաճախ կանգ առնում *հենց այստեղ*",
+            concept=["Ուժեղ շարժումից հետո գինը հաճախ հետ է գալիս մինչև 0.5–0.618 Fibonacci գոտի։",
+                     "Այդ գոտին կոչվում է golden pocket, և այնտեղ շատերն են սպասում մուտքի։"],
+            label="Golden pocket", rule="Fibonacci-ն գոտի է, ոչ թե գիծ՝ *սպասիր մոմի հաստատմանը*։"),
+        "squeeze": dict(
+            hook="Երբ շուկան *լռում է*, պայթյունը մոտ է",
+            concept=["Bollinger Bands-ը նեղանում է, երբ շուկան հանդարտ է։",
+                     "Squeeze-ից հետո հաճախ գալիս է ուժեղ շարժում, և կարևոր է՝ ո՞ր կողմ է փակվում մոմը։"],
+            label=P(d, "Squeeze → ↑", "Squeeze → ↓"), rule="Squeeze-ը ցույց է տալիս *երբ*, բայց ոչ *ուր*։"),
+        "macd": dict(
+            hook=P(d, "MACD-ն ցույց տվեց, որ *անկումը թուլանում է*", "MACD-ն ցույց տվեց, որ *աճը թուլանում է*"),
+            concept=["MACD-ն համեմատում է արագ և դանդաղ EMA-ները։",
+                     P(d, "Երբ MACD-ն հատում է signal գիծը ներքևից վեր, momentum-ը շրջվում է դեպի աճ։",
+                       "Երբ MACD-ն հատում է signal գիծը վերևից ներքև, momentum-ը շրջվում է դեպի անկում։")],
+            label=P(d, "MACD ↑ signal", "MACD ↓ signal"), rule="MACD-ն ուշանում է, դրա համար օգտագործիր այն *տրենդի ուղղությամբ*։"),
+        "rsi": dict(
+            hook=P(d, "RSI-ն 30-ից ցածր էր։ *Ի՞նչ եղավ հետո*", "RSI-ն 70-ից բարձր էր։ *Ի՞նչ եղավ հետո*"),
+            concept=[P(d, "RSI 30-ից ցածր՝ oversold՝ վաճառողները շատ արագ են իջեցրել գինը։",
+                       "RSI 70-ից բարձր՝ overbought՝ գնողները շատ արագ են բարձրացրել գինը։"),
+                     P(d, "Ազդանշանը գալիս է, երբ RSI-ն վերադառնում է 30-ից վեր։", "Ազդանշանը գալիս է, երբ RSI-ն վերադառնում է 70-ից ներքև։")],
+            label=P(d, "RSI 30 ↑", "RSI 70 ↓"), rule="Ուժեղ տրենդում RSI-ն կարող է *երկար մնալ* 30-ից ցածր կամ 70-ից բարձր։"),
+        "inside": dict(
+            hook="Փոքր մոմը մեծի ներսում՝ *շուկան որոշում է կայացնում*",
+            concept=["Inside bar՝ մոմ, որն ամբողջությամբ նախորդ մեծ մոմի ներսում է։",
+                     P(d, "Ազդանշանը մեծ մոմի high-ի կոտրումն է։", "Ազդանշանը մեծ մոմի low-ի կոտրումն է։")],
+            label=P(d, "Inside bar ↑", "Inside bar ↓"), rule="Inside bar-ը ամենաուժեղն է *տրենդի ուղղությամբ*։"),
         "ema": dict(
             hook="Երկու գիծ, որոնք ցույց են տալիս *տրենդի փոփոխությունը*",
             concept=["EMA 20-ը արագ է արձագանքում, EMA 50-ը՝ դանդաղ։",
@@ -474,20 +603,39 @@ def build(st, now, data=None):
         "outcome": outcome_text(topic, d, res), "worked": bool(res.get("filled", res["worked"])),
         "entry": fmt(asset, c["c"]),
     }
-    if topic == "divergence":
-        props["rsi"] = [round(v, 1) for v in rsi([x["c"] for x in cs])[s:e]]
+    cl = [x["c"] for x in cs]
+    if topic in ("divergence", "rsi"):
+        rv = [round(v, 1) for v in rsi(cl)[s:e]]
+        props["panel"] = {"vals": rv, "lo": min(20, min(rv) - 3), "hi": max(80, max(rv) + 3), "levels": [30, 70], "label": "RSI 14"}
+    if topic == "macd":
+        ln, sg, hs = macd(cl)
+        win = ln[s:e] + sg[s:e] + hs[s:e]
+        lo_, hi_ = min(min(win), 0), max(max(win), 0); pad = (hi_ - lo_) * 0.08 or 1
+        props["panel"] = {"vals": ln[s:e], "vals2": sg[s:e], "hist": hs[s:e], "lo": lo_ - pad, "hi": hi_ + pad, "levels": [0], "label": "MACD 12·26·9"}
     if topic == "ema":
-        cl = [x["c"] for x in cs]
-        props["ema20"], props["ema50"] = ema(cl, 20)[s:e], ema(cl, 50)[s:e]
+        props["lines"] = [{"vals": ema(cl, 50)[s:e]}, {"vals": ema(cl, 20)[s:e], "accent": True}]
+    if topic == "squeeze":
+        _, up, dn, _ = bollinger(cl)
+        props["lines"] = [{"vals": up[s:e], "dash": True}, {"vals": dn[s:e], "dash": True}]
     meta = {"topic": topic, "asset": asset, "key": key, "result": res, "n_next": (TOPICS.index(topic) + 1)}
     return props, caption(props, info, res), meta
+
+
+QUESTIONS = [
+    "Դու կմտնեի՞ր այս գործարքին։ Գրիր «այո» կամ «ոչ» 👇",
+    "Որտե՞ղ կդնեիր stop loss-ը այս օրինակում 👇",
+    "Այս ֆիգուրը արդեն տեսե՞լ ես քո գրաֆիկներում 👇",
+    "Ո՞ր թեման բացատրենք հաջորդը։ Գրիր comment-ում 👇",
+]
 
 
 def caption(p, info, res):
     tag = {"sweep": "#liquidity #smartmoney", "pinbar": "#pinbar #priceaction", "retest": "#breakout #supportresistance",
            "divergence": "#rsi #divergence", "engulfing": "#engulfing #candlestick", "double": "#doublebottom #chartpatterns",
            "fvg": "#fvg #ict", "ema": "#ema #movingaverage", "bos": "#bos #marketstructure #smc",
-           "choch": "#choch #marketstructure #smc", "ob": "#orderblock #smc #ict"}[p["topic"]]
+           "choch": "#choch #marketstructure #smc", "ob": "#orderblock #smc #ict", "fib": "#fibonacci #goldenpocket",
+           "squeeze": "#bollingerbands #volatility", "macd": "#macd #momentum", "rsi": "#rsi #oversold",
+           "inside": "#insidebar #priceaction"}[p["topic"]]
     lines = [
         f"📊 {plain(p['hook'])}",
         "",

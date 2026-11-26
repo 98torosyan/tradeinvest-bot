@@ -20,7 +20,8 @@ export type ChartLessonProps = {
   symbol: string; tf: string; asset: string; date: string; dir: number; topic: string;
   candles: C[]; signal: number; marks: Mark[];
   hook: string; concept: string[]; label: string; rule: string; outcome: string[]; worked: boolean; entry: string;
-  rsi?: number[]; ema20?: number[]; ema50?: number[];
+  lines?: {vals: number[]; accent?: boolean; dash?: boolean}[];          // overlays on price (EMA, Bollinger bands)
+  panel?: {vals: number[]; vals2?: number[]; lo: number; hi: number; levels: number[]; label: string; hist?: number[]};   // RSI / MACD
 };
 
 export const CL = {concept: 75, signal: 300, after: 600, rule: 810, body: 1020};
@@ -43,10 +44,11 @@ const Chart: React.FC<{P: ChartLessonProps}> = ({P}) => {
   const f = useCurrentFrame();
   const t = useTheme();
   const A = t.c.accent, FG = t.c.fg, DN = t.c.down, MUT = t.c.muted;
-  const hasR = !!P.rsi;
+  const PN = P.panel, hasR = !!PN;
+  const py = (v: number) => 1155 - (v - (PN ? PN.lo : 0)) / ((PN ? PN.hi - PN.lo : 1) || 1) * 112;
   const Y0 = 690, Y1 = hasR ? 1000 : 1170;
   const CS = P.candles, N = CS.length, S = P.signal;
-  const vals = [...CS.flatMap(c => [c.h, c.l]), ...(P.ema20 ?? []), ...(P.ema50 ?? [])];
+  const vals = [...CS.flatMap(c => [c.h, c.l]), ...(P.lines ?? []).flatMap(l => l.vals)];
   const lo = Math.min(...vals), hi = Math.max(...vals), pad = (hi - lo) * 0.08;
   const ys = (v: number) => Y1 - (v - (lo - pad)) / (hi - lo + 2 * pad) * (Y1 - Y0);
   const xs = (i: number) => X0 + (i + 0.5) * (X1 - X0) / N;
@@ -79,11 +81,11 @@ const Chart: React.FC<{P: ChartLessonProps}> = ({P}) => {
       const x1 = xs((m.i1 ?? 0)) - w, x2 = m.type === "box" ? xs(m.i2 ?? S) + w : X0 + (X1 - X0) * (0.25 + 0.75 * mk);
       return <g key={k} opacity={mk}>
         <rect x={x1} y={ys(m.hi!)} width={Math.max(0, x2 - x1)} height={Math.max(8, ys(m.lo!) - ys(m.hi!))} rx={6} fill={t.c.zone} stroke={A} strokeOpacity={0.7} strokeWidth={2.5} />
-        {m.label && <text x={x1 + 12} y={ys(m.hi!) - 12} fontSize={28} fontWeight={700} fill={A} fontFamily={ff(t, "mono")}>{m.label}</text>}
+        {m.label && <text x={m.type === "zone" ? X1 - 8 : x1 + 12} textAnchor={m.type === "zone" ? "end" : "start"} y={P.dir > 0 ? ys(m.lo!) + 36 : ys(m.hi!) - 12}
+          fontSize={28} fontWeight={700} fill={A} fontFamily={ff(t, "mono")}>{m.label}</text>}
       </g>;
     })}
-    {P.topic === "ema" && line(P.ema50, MUT, 4)}
-    {P.topic === "ema" && line(P.ema20, A, 4)}
+    {(P.lines ?? []).map((l, k) => <React.Fragment key={k}>{line(l.vals, l.accent ? A : MUT, 4, l.dash ? "10 9" : undefined)}</React.Fragment>)}
     {CS.map((c, i) => {
       const a = Math.max(0, Math.min(1, shown - i)); if (a <= 0) return null;
       const up = c.c >= c.o, col = up ? FG : DN;
@@ -117,16 +119,19 @@ const Chart: React.FC<{P: ChartLessonProps}> = ({P}) => {
       <line x1={sx} x2={X1} y1={entryY} y2={entryY} stroke={FG} strokeOpacity={0.5} strokeWidth={2.5} strokeDasharray="6 8" />
       <rect x={sx + w * 1.4} y={Y0 - 10} width={Math.max(0, xs(S + 1 + after) - sx)} height={Y1 - Y0 + 20} rx={10} fill={good} opacity={0.07} />
     </g>}
-    {hasR && <g opacity={ghost}>
+    {PN && <g opacity={ghost}>
       <rect x={X0} y={1025} width={X1 - X0} height={135} rx={12} fill={t.c.surface} opacity={0.55} />
-      {[30, 70].map(v => <line key={v} x1={X0} x2={X1} y1={1155 - v * 1.3} y2={1155 - v * 1.3} stroke={MUT} strokeOpacity={0.35} strokeWidth={2} strokeDasharray="5 8" />)}
-      <path d={P.rsi!.slice(0, Math.ceil(shown)).map((v, i) => `${i ? "L" : "M"}${xs(i).toFixed(1)},${(1155 - v * 1.3).toFixed(1)}`).join(" ")}
-        stroke={FG} strokeWidth={3} fill="none" />
+      {PN.levels.map(v => <line key={v} x1={X0} x2={X1} y1={py(v)} y2={py(v)} stroke={MUT} strokeOpacity={0.35} strokeWidth={2} strokeDasharray="5 8" />)}
+      {PN.hist && PN.hist.slice(0, Math.ceil(shown)).map((v, i) => <rect key={i} x={xs(i) - w / 2} width={w} y={Math.min(py(v), py(0))} height={Math.abs(py(v) - py(0))}
+        fill={v >= 0 ? FG : DN} opacity={0.35} />)}
+      {PN.vals2 && <path d={PN.vals2.slice(0, Math.ceil(shown)).map((v, i) => `${i ? "L" : "M"}${xs(i).toFixed(1)},${py(v).toFixed(1)}`).join(" ")} stroke={A} strokeWidth={3} fill="none" />}
+      <path d={PN.vals.slice(0, Math.ceil(shown)).map((v, i) => `${i ? "L" : "M"}${xs(i).toFixed(1)},${py(v).toFixed(1)}`).join(" ")} stroke={FG} strokeWidth={3} fill="none" />
       {P.marks.filter(m => m.type === "rseg").map((m, k) => {
-        const x1 = xs(m.i1!), y1 = 1155 - P.rsi![m.i1!] * 1.3, x2 = xs(m.i2!), y2 = 1155 - P.rsi![m.i2!] * 1.3;
+        const x1 = xs(m.i1!), y1 = py(PN.vals[m.i1!]), x2 = xs(m.i2!), y2 = py(PN.vals[m.i2!]);
         return <line key={k} x1={x1} y1={y1} x2={x1 + (x2 - x1) * mk} y2={y1 + (y2 - y1) * mk} stroke={A} strokeWidth={5} strokeLinecap="round" />;
       })}
-      <text x={X0 + 14} y={1058} fontSize={26} fontWeight={700} fill={MUT} fontFamily={ff(t, "mono")}>RSI 14</text>
+      {P.marks.filter(m => m.type === "pdot").map((m, k) => <circle key={k} cx={xs(m.i!)} cy={py(PN.vals[m.i!])} r={16 * mk} fill="none" stroke={t.c.a} strokeWidth={4} />)}
+      <text x={X0 + 14} y={1058} fontSize={26} fontWeight={700} fill={MUT} fontFamily={ff(t, "mono")}>{PN.label}</text>
     </g>}
   </svg>;
 };
