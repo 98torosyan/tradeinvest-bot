@@ -8,6 +8,8 @@ def pick(cur, state, yesterday):
     pub = state.get("published", {})
     ids = [lid for lid, p in pub.items() if p.get("date") == yesterday]
     lessons = [l for l in cur["lessons"] if l["id"] in ids and l.get("quiz")]
+    if not lessons:                     # short Reels carry no quiz: rotate through every published course lesson instead
+        lessons = [l for l in cur["lessons"] if l["id"] in pub and l.get("quiz")]
     if not lessons:
         return None
     return lessons[state.get("quiz_count", 0) % len(lessons)]

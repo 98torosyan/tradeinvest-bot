@@ -174,7 +174,7 @@ def to_youtube(mp4, title, caption, tags=None):
     """Cross-post a fresh Reel as a YouTube Short when the YT_* secrets exist; never fails the run."""
     try:
         from . import youtube
-        if not youtube.configured():
+        if not getattr(settings, "YOUTUBE_ENABLED", False) or not youtube.configured():
             return
         vid = youtube.upload(mp4, title, caption, tags)
         if vid:
@@ -246,7 +246,7 @@ def do_lesson(st, now, rid, publish):
             return do_analysis(st, now, rid, publish)
         summary("ℹ️ the 21:37 Reel slot is retired")
         if publish:
-            _catch_up(st, now, rid, publish, (["weekly"] if now.weekday() == 6 else []) + ["digest"])
+            _catch_up(st, now, rid, publish, (["weekly"] if now.weekday() == 6 else []) + ["news", "digest"])
         return "slot-retired"
     if publish and quiet(now):
         summary(f"🌙 {now:%H:%M} is inside quiet hours — the lesson waits for the next slot"); return "skipped-quiet"
@@ -255,7 +255,7 @@ def do_lesson(st, now, rid, publish):
         if res:
             if publish:
                 st["shorts_last"] = now.strftime("%Y-%m-%d")
-                _catch_up(st, now, rid, publish, ["challenge"])
+                _catch_up(st, now, rid, publish, ["challenge", "story", "quiz"])
             return res
     elif settings.SHORTS_ENABLED:
         summary("ℹ️ today's short is already out"); return "slot-done"
@@ -356,6 +356,11 @@ def do_lesson(st, now, rid, publish):
 def do_news(st, now, rid, publish):
     from . import news, pexels
     from delivery.media_hosting import wait_until_reachable
+    today = now.strftime("%Y-%m-%d")
+    if publish:                                   # 2 news Stories a day: one by ~18:00, the second in the evening
+        done = sum(1 for n in st.get("news_media", []) if n.get("date") == today)
+        if done >= (1 if now.hour < 20 else 2):
+            summary(f"ℹ️ news already out today ({done})"); return "skipped"
     spec = news.make_spec(st.get("posted_links", []))
     RUN_LOG.extend(news.NOTES)
     if not spec:
@@ -408,6 +413,9 @@ def do_news(st, now, rid, publish):
 def do_story(st, now, rid, publish, chart=False):
     from . import market
     pal = palettes.BRAND
+    key = "chart_last" if chart else "story_last"
+    if publish and st.get(key) == now.strftime("%Y-%m-%d"):
+        summary("ℹ️ market Story already out today"); return "skipped"
     if chart:
         spec = market.build_chart_spec(); html = builder.build_chart_story(spec, pal, builder.arm_date(now))
     else:
@@ -417,11 +425,15 @@ def do_story(st, now, rid, publish, chart=False):
     render.render(html, mp4, music.pick("story", None, st, now.strftime("%Y-%m-%d")))
     if not publish:
         return "dry-run"
-    publish_story_file(mp4, rid, publish); summary("✅ Story published"); return "published"
+    publish_story_file(mp4, rid, publish); st[key] = now.strftime("%Y-%m-%d")
+    summary("✅ Market Story published"); return "published"
 
 
 def do_quiz(st, now, rid, publish):
     from . import quiz
+    today = now.strftime("%Y-%m-%d")
+    if publish and st.get("quiz_last") == today:
+        summary("ℹ️ quiz already out today"); return "skipped"
     cur = curriculum.load()
     y = (now - dt.timedelta(days=1)).strftime("%Y-%m-%d")
     lesson = quiz.pick(cur, st, y)
@@ -432,7 +444,7 @@ def do_quiz(st, now, rid, publish):
                   music.pick("quiz", lesson["module"], st, now.strftime("%Y-%m-%d")))
     if not publish:
         return "dry-run"
-    publish_story_file(mp4, rid, publish); st["quiz_count"] = st.get("quiz_count", 0) + 1
+    publish_story_file(mp4, rid, publish); st["quiz_count"] = st.get("quiz_count", 0) + 1; st["quiz_last"] = today
     summary(f"✅ Quiz Story from {lesson['id']}"); return "published"
 
 
@@ -505,7 +517,7 @@ def do_analysis(st, now, rid, publish):
         summary("🌙 quiet hours — analysis skipped"); return "skipped-quiet"
     if publish and settings.SHORTS_ENABLED and now.hour < 18:
         summary("ℹ️ the analysis Reel moved to 19:07")
-        _catch_up(st, now, rid, publish, ["carousel" if now.weekday() in (0, 2, 4) else "poster", "fact"])
+        _catch_up(st, now, rid, publish, ["carousel" if now.weekday() in (0, 2, 4) else "poster", "fact", "news"])
         return "moved"
     if publish and st.get("analysis_last") == today:
         summary("ℹ️ analysis already published today"); return "skipped"
@@ -781,6 +793,18 @@ NAMES_HY = {"lesson": "Կարճ դաս / վերլուծություն", "analysi
             "alert": "Ազդանշան story", "news": "Լուրեր story", "story": "Շուկայի story", "quiz": "Quiz story"}
 
 
+def _item_hy(line):
+    """Short Armenian name for a '✅ …' log line in the owner's digest."""
+    low = line.lower()
+    for key, name in (("short", "Կարճ դաս (Reel)"), ("analysis reel", "Վերլուծություն (Reel)"), ("carousel", "Կարուսել"),
+                      ("poster", "Պոստեր"), ("weekly", "Շաբաթվա Reel"), ("quiz", "Quiz Story"), ("news", "Լուր (Story)"),
+                      ("market story", "Շուկայի Story"), ("challenge", "Challenge Story"), ("alert", "Alert Story"), ("economic", "Տնտեսական օրացույց Story"),
+                      ("daily", "Փաստ / տերմին Story"), ("story", "Reel-ը Story-ում")):
+        if key in low:
+            return name
+    return line[:60]
+
+
 def do_digest(st, now, rid, publish):
     """21:53 Telegram digest for the owner: what went out today, failures, followers today."""
     import re
@@ -790,14 +814,20 @@ def do_digest(st, now, rid, publish):
         return "skipped"
     txt = open(LOG, encoding="utf-8").read() if os.path.exists(LOG) else ""
     ok, bad = [], []
-    for m in re.finditer(r"\*\*(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2})\*\* `(\w+)` (✅|❌) ([^\n]*)", txt):
-        d, hm, kind, mark, status = m.groups()
-        if d != today:
+    for block in txt.split("\n---"):
+        m = re.search(r"\*\*(\d{4}-\d{2}-\d{2}) (\d{2}:\d{2})\*\* `(\w+)` (✅|❌) ([^\n]*)", block)
+        if not m or m.group(1) != today:
             continue
+        d, hm, kind, mark, status = m.groups()
         if mark == "❌":
             bad.append(f"• {hm} {NAMES_HY.get(kind, kind)}")
-        elif status.strip().startswith("published"):
-            ok.append(f"• {hm} {NAMES_HY.get(kind, kind)}")
+        for line in block.splitlines():           # every item that went out in this run, catch-ups included
+            line = line.strip()
+            if line.startswith("- ✅") and ("published" in line or "Story" in line) and "YouTube" not in line:
+                ok.append(f"• {hm} {_item_hy(line[3:].strip())}")
+        for line in block.splitlines():
+            if line.strip().startswith("- ⚠️") and "YouTube" not in line:
+                bad.append(f"• {hm} {line.strip()[4:].strip()[:80]}")
     try:
         fol = igapi.me().get("followers_count")
     except Exception:  # noqa: BLE001
