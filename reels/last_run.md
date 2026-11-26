@@ -1,3 +1,8 @@
+**2026-11-26 19:09** `lesson` ✅ published
+- [analysis] ETH S zone=1538.00-1557.73 touches=1 other=1845.07
+- ✅ Analysis Reel ETH published
+- ✅ Story published
+---
 **2026-11-26 18:23** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 586 min late — skipped (the next slot will post)
 ---
@@ -93,6 +98,3 @@
 ---
 **2026-11-25 05:40** `digest` ✅ skipped-late
 - ⏰ GitHub started this digest run 467 min late — skipped (the next slot will post)
----
-**2026-11-25 03:52** `lesson` ✅ skipped-quiet
-- 🌙 03:52 — quiet hours, lesson skipped
