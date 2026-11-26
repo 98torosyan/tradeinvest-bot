@@ -220,7 +220,7 @@ const Scene: React.FC<ChartLessonProps> = (P) => {
       <div style={{fontFamily: ff(t, "body"), fontVariationSettings: "'wght' 600, 'wdth' 100", fontSize: 32, letterSpacing: "0.12em", color: t.c.muted, marginBottom: 14}}>ԿԱՆՈՆ</div>
       <Words text={P.rule} start={CL.rule + 4} mode="rise" size={70} lh={1.06} />
     </Block>
-    {f >= CL.rule + 70 && <div style={{position: "absolute", left: 65, top: 1188, opacity: cta, translate: `0px ${(1 - cta) * 20}px`}}>{chip("Գրիր DM «ԴԱՍ» →", true)}</div>}
+    {f >= CL.rule + 70 && <div style={{position: "absolute", left: 65, top: 1188, opacity: cta, translate: `0px ${(1 - cta) * 20}px`}}>{chip("Գրիր «ԴԱՍ» comment-ում →", true)}</div>}
     <div style={{position: "absolute", left: 65, right: 65, top: 1200, fontFamily: ff(t, "body"), fontSize: 28, fontWeight: 600, color: t.c.muted,
       opacity: f < CL.signal ? 0 : p(f, CL.signal, CL.signal + 20) * (f >= CL.rule + 70 ? 0 : 1)}}>
       Կրթական վերլուծություն է, ոչ թե ֆինանսական խորհուրդ</div>
@@ -232,7 +232,7 @@ const Scene: React.FC<ChartLessonProps> = (P) => {
 export const ChartLesson: React.FC<ChartLessonProps> = (P) => (
   <ThemeRoot theme={CLEAN}>
     <Sequence durationInFrames={CL.body} layout="none"><Scene {...P} /></Sequence>
-    <Sequence from={CL.body} layout="none"><EndCard cta="dm" line={false} /></Sequence>
+    <Sequence from={CL.body} layout="none"><EndCard cta="kw" line={false} /></Sequence>
     <Cue at={0} name="hook" volume={0.45} />
     <Cue at={CL.concept} name="swap" volume={0.4} />
     <Cue at={CL.signal + 20} name="hit" volume={0.5} />

@@ -213,7 +213,7 @@ def do_chart_lesson(st, now, rid, publish):
     if not wait_until_reachable(urls[f"reels/{rid}.mp4"], timeout=300):
         raise RuntimeError("video is not reachable on GitHub Pages")
     from . import igapi
-    media = igapi.publish_reel(urls[f"reels/{rid}.mp4"], cap, cover_url=urls.get(f"reels/{rid}.jpg"))
+    media = igapi.publish_reel(urls[f"reels/{rid}.mp4"], cap, cover_url=urls.get(f"reels/{rid}.jpg"), trial=True)
     today = now.strftime("%Y-%m-%d")
     st["chart_lesson_n"] = meta["n_next"]
     st["chart_lessons_used"] = (st.get("chart_lessons_used", []) + [meta["key"]])[-200:]
@@ -252,7 +252,7 @@ def do_short(st, now, rid, publish, series=None):
     if not wait_until_reachable(urls[f"reels/{rid}.mp4"], timeout=300):
         raise RuntimeError("video is not reachable on GitHub Pages")
     from . import igapi
-    media = igapi.publish_reel(urls[f"reels/{rid}.mp4"], cap, cover_url=urls.get(f"reels/{rid}.jpg"))
+    media = igapi.publish_reel(urls[f"reels/{rid}.mp4"], cap, cover_url=urls.get(f"reels/{rid}.jpg"), trial=(series == "ARM"))
     today = now.strftime("%Y-%m-%d")
     st.setdefault("shorts_done", {})[s["id"]] = {"media": media, "date": today, "kw": kw}
     st.setdefault("published", {})[s["id"]] = {"media": media, "date": today, "hour": now.hour}

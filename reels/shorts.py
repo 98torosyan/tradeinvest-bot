@@ -43,7 +43,7 @@ def caption(s, kw):
         lines.append("▪️ " + " ".join(x for x in (b.get("big"), _plain(b.get("text", ""))) if x))
     lines += ["", "👉 " + _plain(s["rule"]), ""]
     if kw:
-        lines.append("📩 Ուզում ես սովորել համակարգված՝ գրիր «ԴԱՍ» DM-ում")
+        lines.append("📩 Ուզու՞մ ես սովորել համակարգված՝ գրիր «ԴԱՍ» comment-ում, և անվճար մինի դասընթացը կուղարկենք DM-ով")
     else:
         lines.append("🔖 Պահիր, որ չմոռանաս")
     lines += ["", f"⚠️ {DISCLAIMER}։", "",

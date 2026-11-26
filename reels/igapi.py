@@ -32,20 +32,30 @@ def _publish_container(**params):
 from .caption_lint import lint as _lint  # noqa: E402
 
 
-def publish_reel(video_url, caption, cover_url=None, share_to_feed=True):
+def publish_reel(video_url, caption, cover_url=None, share_to_feed=True, trial=False):
+    """trial=True: Trial Reel (Content Publishing API, since Dec 2025) — shown to NON-followers first and shared
+    to everyone automatically if it performs (graduation_strategy SS_PERFORMANCE). Falls back to a normal Reel
+    when the account is not eligible. COLLABORATORS (settings) are invited when set."""
+    import json as _json
+    from . import settings
     caption = _lint(caption)
     p = dict(media_type="REELS", video_url=video_url, caption=caption, share_to_feed="true" if share_to_feed else "false")
     if cover_url:
         p["cover_url"] = cover_url
-    from . import settings
+    extras = []
     collab = [u.lstrip("@") for u in getattr(settings, "COLLABORATORS", []) if u][:3]
-    if collab:                                   # Collab invite: the Reel also shows to the partner page's audience
-        import json as _json
+    if trial and getattr(settings, "TRIAL_REELS", False):
+        extras.append(("trial_params", _json.dumps({"graduation_strategy": "SS_PERFORMANCE"})))
+    if collab:
+        extras.append(("collaborators", _json.dumps(collab)))
+    while True:
         try:
-            return _publish_container(**p, collaborators=_json.dumps(collab))
+            return _publish_container(**p, **dict(extras))
         except Error as exc:
-            print("[collab] rejected, publishing without collaborators:", str(exc)[:200])
-    return _publish_container(**p)
+            if not extras:
+                raise
+            print(f"[reel] {extras[0][0]} rejected, retrying without it:", str(exc)[:200])
+            extras = extras[1:]
 
 
 def publish_story_video(video_url):
