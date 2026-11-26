@@ -1,5 +1,8 @@
-"""Picks one fresh crypto headline and asks Gemini to turn it into the
-'News -> What it means -> What it means for you' Reel script in Armenian."""
+"""News 2.0: many outlets → stories grouped across outlets → only stories confirmed by ≥2 independent sources →
+Gemini writes the Armenian script from ALL confirming texts → every number in it is checked against the sources.
+Script shape: 'News -> What it means -> What it means for you'."""
+import calendar
+import time
 import html
 import re
 from urllib.parse import urlparse
@@ -11,11 +14,20 @@ from . import gemini
 from .builder import ICONS
 
 FEEDS = [
-    "https://www.coindesk.com/arc/outboundfeeds/rss/",
     "https://cointelegraph.com/rss",
+    "https://www.coindesk.com/arc/outboundfeeds/rss/",
     "https://decrypt.co/feed",
+    "https://www.theblock.co/rss.xml",
+    "https://cryptoslate.com/feed/",
+    "https://cryptonews.com/news/feed/",
+    "https://bitcoinist.com/feed/",
+    "https://u.today/rss",
 ]
-SOURCE_NAMES = {"coindesk.com": "CoinDesk", "cointelegraph.com": "Cointelegraph", "decrypt.co": "Decrypt"}
+SOURCE_NAMES = {"coindesk.com": "CoinDesk", "cointelegraph.com": "Cointelegraph", "decrypt.co": "Decrypt",
+                "theblock.co": "The Block", "cryptoslate.com": "CryptoSlate", "cryptonews.com": "Cryptonews",
+                "bitcoinist.com": "Bitcoinist", "u.today": "U.Today"}
+MAX_AGE_H = 18
+MIN_SOURCES = 2
 NOTES = []
 
 
@@ -31,7 +43,7 @@ def _clean(s, n=600):
     return re.sub(r"\s+", " ", s).strip()[:n]
 
 
-def fetch_items(exclude, per_feed=10):
+def fetch_items(exclude, per_feed=25):
     items = []
     for url in FEEDS:
         try:
@@ -46,24 +58,91 @@ def fetch_items(exclude, per_feed=10):
             if not link or link in exclude:
                 continue
             host = urlparse(link).netloc.replace("www.", "")
+            tp = e.get("published_parsed") or e.get("updated_parsed")
+            age_h = (time.time() - calendar.timegm(tp)) / 3600 if tp else 6.0
+            if age_h > MAX_AGE_H:
+                continue
             items.append({"title": _clean(e.get("title"), 200), "summary": _clean(e.get("summary") or e.get("description")),
-                          "link": link, "source": SOURCE_NAMES.get(host, host)})
+                          "link": link, "source": SOURCE_NAMES.get(host, host), "age_h": round(age_h, 1)})
     return items
+
+
+# ---------------------------------------------------------------- cross-source confirmation
+STOP = set("""the a an and or of to in on for with from by at as is are was were be been has have had will would
+can could may might its it this that these those after before over under into amid about than more most new says said
+report reports according week today year crypto cryptocurrency market markets price prices token tokens coin coins
+analyst analysts first first-ever amid just now could their they them what why how when where which while""".split())
+WEIGHTS = {"etf": 4, "sec": 4, "fed": 4, "blackrock": 4, "hack": 4, "hacked": 4, "exploit": 4, "stolen": 4,
+           "binance": 3, "coinbase": 3, "tether": 3, "regulation": 3, "law": 3, "bill": 3, "ban": 3, "approve": 3,
+           "approves": 3, "approved": 3, "reserve": 3, "record": 2, "bitcoin": 2, "ethereum": 2, "stablecoin": 2,
+           "trump": 2, "cpi": 3, "rate": 2, "liquidations": 2, "billion": 2, "lawsuit": 2, "court": 2}
+
+
+def _keys(it):
+    words = re.findall(r"[A-Za-z][A-Za-z0-9.\-]+|\d[\d.,]*", it["title"])
+    return {w.lower().strip(".,") for w in words if w.lower() not in STOP and (len(w) > 3 or w[0].isdigit() or w.isupper())}
+
+
+def clusters(items):
+    """Group items about the same story. Two items match when their titles share ≥3 key words, or ≥2 incl. a name/number."""
+    for it in items:
+        it["keys"] = _keys(it)
+    groups = []
+    for it in items:
+        best = None
+        for g in groups:
+            common = it["keys"] & g["keys"]
+            strong = any(w[0].isdigit() or w in WEIGHTS for w in common) or any(w[:1].isupper() for w in common)
+            if len(common) >= 3 or (len(common) >= 2 and strong):
+                best = g; break
+        if best:
+            best["items"].append(it); best["keys"] |= it["keys"]
+        else:
+            groups.append({"items": [it], "keys": set(it["keys"])})
+    out = []
+    for g in groups:
+        srcs = []
+        for it in g["items"]:
+            if it["source"] not in srcs:
+                srcs.append(it["source"])
+        imp = sum(WEIGHTS.get(w, 0) for w in g["keys"])
+        fresh = min(it["age_h"] for it in g["items"])
+        out.append({"items": g["items"], "sources": srcs, "score": 5 * len(srcs) + min(imp, 12) - fresh / 4})
+    return sorted(out, key=lambda c: c["score"], reverse=True)
+
+
+NUM = re.compile(r"\d+(?:[.,]\d+)?")
+
+
+def _nums(s):
+    return {n.replace(",", ".").rstrip(".0") or "0" for n in NUM.findall(s or "")}
+
+
+def numbers_ok(d, cluster):
+    """Every number in the Armenian script must appear in at least one confirming source text."""
+    src = " ".join(it["title"] + " " + it["summary"] for it in cluster["items"])
+    have = _nums(src.replace(",", ""))
+    blob = " ".join([d.get("headline", ""), d.get("sub", "")] + [p["text"] for st in d.get("steps", []) for p in st.get("paragraphs", [])])
+    if d.get("big"):
+        blob += f" {d['big'].get('value')}"
+    bad = [n for n in _nums(blob.replace(",", "")) if n not in have and n not in ("1", "2", "3")]
+    return bad
 
 
 PROMPT = """You are the editor of TradeInvest (@armtradeinvest), an Armenian-language Instagram page that explains crypto news simply for beginners.
 
-From the numbered news items below, choose ONE item that is most useful and important for an Armenian crypto audience (regulation, major companies, ETFs, adoption, security incidents affecting users, macro events that move crypto).
+Below are numbered STORIES. Each story was reported by several independent outlets (their texts are listed under it).
+Choose ONE story that is most useful and important for an Armenian crypto audience (regulation, major companies, ETFs, adoption, security incidents affecting users, macro events that move crypto).
 NEVER choose: deaths, violence, crimes against persons, personal tragedies, rumors, sponsored/press-release content, price predictions, gossip. If no item is suitable, return {{"skip": true}}.
 
 Write a short vertical-video script in modern, simple, natural Eastern Armenian. Keep well-known terms in Latin letters (Bitcoin, Ethereum, ETF, SEC, stablecoin, blockchain).
-STRICT FACT RULE: use ONLY facts stated in the chosen item's title and summary. Never invent numbers, names, dates, quotes or causes. If a detail is not in the text, do not mention it.
+STRICT FACT RULE: use ONLY facts stated in the chosen story's texts, and prefer facts that more than one outlet states. If outlets disagree on a detail (a number, a name), leave that detail out. Never invent numbers, names, dates, quotes or causes. Copy numbers exactly as the sources write them.
 No financial advice, no predictions, no words like "guaranteed", "risk-free", "buy now", "100%".
 
 Return ONLY this JSON:
 {{
  "skip": false,
- "index": <number of the chosen item>,
+ "index": <number of the chosen story>,
  "headline": "<factual Armenian headline, max 70 characters>",
  "sub": "<optional context line, max 60 characters, or empty string>",
  "big": <null, or {{"value": <number from the text>, "prefix": "<e.g. $ or empty>", "suffix": "<e.g. ' մլն' or '%' or empty>"}} only if one key number is in the text>,
@@ -77,7 +156,7 @@ Return ONLY this JSON:
 }}
 Allowed icons: {icons}
 
-News items:
+Stories:
 {items}
 """
 
@@ -114,22 +193,39 @@ def _validate(d, n_items):
     return errs
 
 
-def make_spec(exclude):
+def make_spec(exclude, min_sources=MIN_SOURCES):
     items = fetch_items(set(exclude))
     if not items:
         note("[news] no fresh items"); return None
-    listing = "\n".join(f"[{i}] {it['source']}: {it['title']}\n    {it['summary']}" for i, it in enumerate(items))
+    cl = [c for c in clusters(items) if len(c["sources"]) >= min_sources][:6]
+    note(f"[news] {len(items)} fresh items → {len(cl)} stories confirmed by ≥{min_sources} sources")
+    if not cl:
+        return None
+    listing = "\n\n".join(f"[{i}] reported by {', '.join(c['sources'])}\n" +
+                           "\n".join(f"    - {it['source']}: {it['title']} — {it['summary'][:350]}" for it in c["items"][:4])
+                           for i, c in enumerate(cl))
     prompt = PROMPT.format(icons=", ".join(ICONS), items=listing)
-    for attempt in range(2):
+    for attempt in range(3):
         d = gemini.generate_json(prompt)
         if d.get("skip"):
             note("[news] Gemini found nothing suitable"); return None
-        errs = _validate(d, len(items))
+        errs = _validate(d, len(cl))
         if not errs:
-            it = items[d["index"]]
-            d["link"], d["source"] = it["link"], it["source"]
-            if "Աղբյուր" not in d.get("caption", ""):
-                d["caption"] = d.get("caption", "") + f"\n\nԱղբյուր՝ {it['source']}"
+            bad = numbers_ok(d, cl[d["index"]])
+            if bad:
+                errs.append(f"numbers not found in the sources: {bad} — remove them or copy them exactly")
+        if not errs:
+            c = cl[d["index"]]
+            d["link"] = c["items"][0]["link"]
+            d["links"] = [it["link"] for it in c["items"]]
+            d["source"] = ", ".join(c["sources"][:3])
+            d["n_sources"] = len(c["sources"])
+            cap = re.sub(r"\n*Աղբյուր[^\n]*", "", d.get("caption", "")).strip()
+            parts = cap.split("\n")
+            tags = [l for l in parts if l.strip().startswith("#")]
+            body = "\n".join(l for l in parts if not l.strip().startswith("#")).strip()
+            d["caption"] = body + f"\n\nԱղբյուրներ՝ {', '.join(c['sources'][:4])}" + ("\n\n" + "\n".join(tags) if tags else "")
+            note(f"[news] chosen story confirmed by {len(c['sources'])}: {', '.join(c['sources'])}")
             return d
         note(f"[news] attempt {attempt + 1} invalid: {errs}")
         prompt += "\n\nYour previous answer had these problems, fix them: " + "; ".join(errs)

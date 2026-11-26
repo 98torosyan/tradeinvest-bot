@@ -29,6 +29,7 @@ QUIET_HOURS = (0, 9)
 
 # Nov 2026 format: 12:37 short lesson (reels/content/shorts.json), 19:07 analysis Reel, no 21:37 Reel.
 SHORTS_ENABLED = True
+NEWS_PER_DAY = 4                # verified news Stories (≥2 independent sources each), ≥2 h apart
 TRIAL_REELS = True              # chart lessons + Armenia series go out as Trial Reels (non-followers first)
 COLLABORATORS = []              # Instagram usernames to invite as Collab on every Reel (they accept once per post)
 LOCAL_SERIES = True             # 21:37 = «Կրիպտո Հայաստանում» (shorts.json series ARM)

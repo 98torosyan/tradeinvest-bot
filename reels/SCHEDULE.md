@@ -21,3 +21,7 @@ All times Yerevan (UTC+4). Nothing is published in quiet hours (00:00–09:00); 
 Every caption passes `caption_lint.py` (≤ 5 hashtags, no emoji/hashtag first, no URLs). Image Stories are rendered as 8 s videos with mood music (`assets/music/moods/<tense|inspire|tech|energy|calm>`). YouTube Shorts cross-post activates when `YT_CLIENT_ID`, `YT_CLIENT_SECRET`, `YT_REFRESH_TOKEN` secrets exist.
 
 Site (GitHub Pages, rebuilt on every Reel run): `/` hub, `/start/` mini course + PDF, `/tools/` calculators.
+
+
+## News 2.0 (Nov 2026)
+8 outlets (Cointelegraph, CoinDesk, Decrypt, The Block, CryptoSlate, Cryptonews, Bitcoinist, U.Today), items ≤18 h old, grouped into stories; only stories reported by ≥2 independent outlets; every number checked against the sources. Up to NEWS_PER_DAY=4 Stories, ≥2 h apart: catch-ups at 12:37, 17:37, 19:07, 21:37 plus the GitHub news crons.

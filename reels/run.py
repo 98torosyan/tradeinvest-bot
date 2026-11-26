@@ -341,7 +341,10 @@ def do_lesson(st, now, rid, publish):
     # Schedule (executive decision, Nov 2026): 12:37 short lesson · 19:07 analysis Reel · no 21:37 Reel.
     if settings.SHORTS_ENABLED and now.hour >= 18:
         if now.hour < 21:
-            return do_analysis(st, now, rid, publish)
+            res = do_analysis(st, now, rid, publish)
+            if publish:
+                _catch_up(st, now, rid, publish, ["news"])
+            return res
         res = "slot-retired"
         if getattr(settings, "LOCAL_SERIES", False) and (not publish or st.get("arm_last") != now.strftime("%Y-%m-%d")):
             try:                                   # 21:37 «Կրիպտո Հայաստանում»: practical local Reels people save and send
@@ -368,7 +371,7 @@ def do_lesson(st, now, rid, publish):
         if res:
             if publish:
                 st["shorts_last"] = now.strftime("%Y-%m-%d")
-                _catch_up(st, now, rid, publish, ["challenge", "story", "quiz"])
+                _catch_up(st, now, rid, publish, ["challenge", "story", "quiz", "news"])
             return res
     elif settings.SHORTS_ENABLED:
         summary("ℹ️ today's short is already out"); return "slot-done"
@@ -470,10 +473,13 @@ def do_news(st, now, rid, publish):
     from . import news, pexels
     from delivery.media_hosting import wait_until_reachable
     today = now.strftime("%Y-%m-%d")
-    if publish:                                   # 2 news Stories a day: one by ~18:00, the second in the evening
-        done = sum(1 for n in st.get("news_media", []) if n.get("date") == today)
-        if done >= (1 if now.hour < 20 else 2):
-            summary(f"ℹ️ news already out today ({done})"); return "skipped"
+    if publish:                                   # up to NEWS_PER_DAY verified news Stories, at least 2 h apart
+        todays = [n for n in st.get("news_media", []) if n.get("date") == today]
+        if len(todays) >= getattr(settings, "NEWS_PER_DAY", 4):
+            summary(f"ℹ️ news: daily limit reached ({len(todays)})"); return "skipped"
+        last = max((n.get("at", "") for n in todays), default="")
+        if last and (now - dt.datetime.fromisoformat(last)).total_seconds() < 2 * 3600:
+            summary("ℹ️ news: the last one is less than 2 h old"); return "skipped"
     spec = news.make_spec(st.get("posted_links", []))
     RUN_LOG.extend(news.NOTES)
     if not spec:
@@ -514,12 +520,14 @@ def do_news(st, now, rid, publish):
         from . import igapi
         media = igapi.publish_reel(urls[f"reels/{rid}.mp4"], caption, share_to_feed=False)
     st["palette"]["news"] = k + 1
-    st.setdefault("posted_links", []).append(spec["link"])
+    st.setdefault("posted_links", []).extend(spec.get("links") or [spec["link"]])    # every outlet's link: no repeats of one story
+    st["posted_links"] = st["posted_links"][-400:]
     if vid:
         st["used_broll"] = (st.get("used_broll", []) + [vid])[-80:]
-    st.setdefault("news_media", []).append({"media": media, "date": now.strftime("%Y-%m-%d")})
+    st.setdefault("news_media", []).append({"media": media, "date": now.strftime("%Y-%m-%d"), "at": now.isoformat(),
+                                            "sources": spec.get("n_sources", 1)})
     st["news_media"] = st["news_media"][-60:]
-    summary(f"✅ News published: {spec['headline']}"); return "published"
+    summary(f"✅ News published ({spec.get('n_sources', 1)} sources: {spec.get('source')}): {spec['headline']}"); return "published"
 
 
 # ---------------------------------------------------------------- stories
