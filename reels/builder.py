@@ -280,6 +280,41 @@ def build_story(spec, palette, date_label):
     return page("market", palette, tl, story_head("Շուկա", date_label), "", seed=7)
 
 
+# ---------------- «Կրիպտոն դրամով» Story ----------------
+def _amd(v):
+    if v >= 1_000_000:
+        return f"{v / 1_000_000:.2f} մլն ֏".replace(".", ",")
+    return f"{v:,.0f} ֏".replace(",", " ")
+
+
+def build_amd_story(spec, palette, date_label):
+    tl = Timeline()
+    rows = [("$", "ԱՄՆ դոլար", spec["usd"], None)]
+    if spec.get("p2p"):
+        rows.append(("₮", "USDT · P2P կուրս", spec["p2p"], None))
+    rows += [("BTC", "Bitcoin", spec["btc"], spec["btc_chg"]), ("ETH", "Ethereum", spec["eth"], spec["eth_chg"])]
+    rows_html = ""
+    for i, (sym, name, v, chg) in enumerate(rows):
+        at = 1.0 + i * 0.45
+        ch = ""
+        if chg is not None:
+            cls = "up" if chg >= 0 else "down"; arrow = "▲" if chg >= 0 else "▼"
+            ch = f'<div class="ch {cls}">{arrow} {abs(chg):.1f}%</div>'
+        rows_html += (f'<div class="row" data-fx="rise" data-at="{at:.2f}" data-dur=".7">'
+                      f'<div class="sym">{esc(sym)}</div><div class="nm">{esc(name)}</div>'
+                      f'<div class="val"><div class="pr">{_amd(v)}</div>{ch}</div></div>')
+    head = fx("div", "mh1", "Կրիպտոն դրամով", "rise", .1, .8)
+    gap = ""
+    if spec.get("p2p"):
+        d = (spec["p2p"] / spec["usd"] - 1) * 100
+        gap = (f'<div class="disc" data-fx="fade" data-at="3.4" data-dur=".8">USDT-ի P2P կուրսը դոլարի կուրսից '
+               f'{"բարձր" if d >= 0 else "ցածր"} է {abs(d):.1f}%-ով։</div>')
+    disc = ('<div class="disc" data-fx="fade" data-at="4.4" data-dur=".8">P2P՝ Binance և Bybit հայտարարությունների միջին։ '
+            'Կուրսերը փոխվում են ամեն րոպե. սա ֆինանսական խորհուրդ չէ։</div>')
+    tl.add(f'<div class="mstack">{head}<div class="rows">{rows_html}</div>{gap}{disc}</div>', 12.0, "mscene")
+    return page("market", palette, tl, story_head("Դրամով", date_label), "", seed=11)
+
+
 # ---------------- "Bitcoin 24 ժամում" candle Story ----------------
 def _hhmm(ts):
     import datetime as _dt

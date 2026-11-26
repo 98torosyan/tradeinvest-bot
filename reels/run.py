@@ -547,7 +547,17 @@ def do_story(st, now, rid, publish, chart=False):
     if not publish:
         return "dry-run"
     publish_story_file(mp4, rid, publish); st[key] = now.strftime("%Y-%m-%d")
-    summary("✅ Market Story published"); return "published"
+    summary("✅ Market Story published")
+    if not chart and st.get("amd_last") != now.strftime("%Y-%m-%d"):
+        try:                                          # local daily: «Կրիպտոն դրամով» (USD/AMD, USDT P2P, BTC/ETH in ֏)
+            a = market.build_amd_spec(spec["rows"]); RUN_LOG.extend(market.NOTES)
+            mp4b = os.path.join(OUT, rid + "-amd.mp4")
+            render.render(builder.build_amd_story(a, pal, builder.arm_date(now)), mp4b, music.pick("story", None, st, now.strftime("%Y-%m-%d")))
+            publish_story_file(mp4b, rid + "-amd", publish); st["amd_last"] = now.strftime("%Y-%m-%d")
+            summary(f"✅ AMD Story published (P2P sources: {a['p2p_sources']})")
+        except Exception as exc:  # noqa: BLE001
+            summary(f"⚠️ AMD Story skipped: {str(exc)[:160]}")
+    return "published"
 
 
 def do_quiz(st, now, rid, publish):

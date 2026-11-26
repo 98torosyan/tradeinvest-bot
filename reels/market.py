@@ -161,6 +161,59 @@ def build_spec():
     return {"rows": rows, "fng": fng, "mood": mood(rows, fng)}
 
 
+# ---------- «Կրիպտոն դրամով»: USD/AMD, USDT P2P in AMD, BTC/ETH in AMD ----------
+def usd_amd_erapi():
+    return float(_get("https://open.er-api.com/v6/latest/USD")["rates"]["AMD"])
+
+
+def usd_amd_floatrates():
+    return float(_get("https://www.floatrates.com/daily/usd.json")["amd"]["rate"])
+
+
+def _post(url, body, headers=None):
+    r = requests.post(url, json=body, headers={**UA, "Content-Type": "application/json", **(headers or {})}, timeout=T)
+    r.raise_for_status()
+    return r.json()
+
+
+def p2p_binance():
+    """Median of the best 5 ads on each side (buy and sell USDT for AMD) → a mid P2P rate."""
+    sides = []
+    for side in ("BUY", "SELL"):
+        d = _post("https://p2p.binance.com/bapi/c2c/v2/friendly/c2c/adv/search",
+                  {"asset": "USDT", "fiat": "AMD", "tradeType": side, "page": 1, "rows": 10, "payTypes": [], "publisherType": None})
+        px = [float(x["adv"]["price"]) for x in d.get("data") or []][:5]
+        if px:
+            sides.append(statistics.median(px))
+    return statistics.mean(sides) if sides else None
+
+
+def p2p_bybit():
+    sides = []
+    for side in ("1", "0"):
+        d = _post("https://api2.bybit.com/fiat/otc/item/online",
+                  {"tokenId": "USDT", "currencyId": "AMD", "side": side, "size": "10", "page": "1", "amount": "", "payment": []})
+        px = [float(x["price"]) for x in (d.get("result") or {}).get("items") or []][:5]
+        if px:
+            sides.append(statistics.median(px))
+    return statistics.mean(sides) if sides else None
+
+
+def build_amd_spec(rows):
+    """rows: the checked BTC/ETH rows of build_spec(). Every number needs two agreeing sources (P2P: one P2P source
+    that sits within 8 % of the official-style USD/AMD rate is enough, two are preferred)."""
+    fx = [v for v in (_safe(usd_amd_erapi), _safe(usd_amd_floatrates)) if v]
+    if len(fx) < 2 or abs(fx[0] / fx[1] - 1) > 0.01:
+        raise RuntimeError(f"USD/AMD not confirmed by two sources: {fx}")
+    usd = statistics.mean(fx)
+    p2p = [v for v in (_safe(p2p_binance), _safe(p2p_bybit)) if v and abs(v / usd - 1) < 0.08]
+    note(f"[amd] usd {fx} p2p {p2p}")
+    out = {"usd": usd, "p2p": statistics.median(p2p) if p2p else None, "p2p_sources": len(p2p),
+           "btc": rows["BTC"]["price"] * usd, "eth": rows["ETH"]["price"] * usd,
+           "btc_chg": rows["BTC"]["chg24"], "eth_chg": rows["ETH"]["chg24"]}
+    return out
+
+
 # ---------- 24h candles for the "Bitcoin 24 ժամում" Story ----------
 def candles_binance():
     k = _get(f"{BINANCE}/klines", params={"symbol": "BTCUSDT", "interval": "1h", "limit": 24})
