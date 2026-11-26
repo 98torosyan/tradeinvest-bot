@@ -1,3 +1,27 @@
+**2026-11-26 21:39** `lesson` ✅ slot-retired
+- ℹ️ the 21:37 Reel slot is retired
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 37 items
+- ✅ News published: Zodia Custody-ն հայտնել է տվյալների արտահոսքի մասին
+- ↺ catch-up news: published
+- 🌙 Օրվա ամփոփում · 2026-11-26
+
+✅ Հրապարակվեց՝ 8
+• 12:39 Challenge Story
+• 12:39 Reel-ը Story-ում
+• 12:39 Կարճ դաս (Reel)
+• 17:39 Լուր (Story)
+• 17:39 Պոստեր
+• 17:39 Փաստ / տերմին Story
+• 19:09 Reel-ը Story-ում
+• 19:09 Վերլուծություն (Reel)
+
+👥 Հետևորդներ՝ 41 (+0 օրում)
+
+Վաղը նույն ժամերին՝ ավտոմատ 🤖
+- ↺ catch-up digest: sent
+---
 **2026-11-26 21:16** `news` ✅ skipped-late
 - ⏰ GitHub started this news run 639 min late — skipped (the next slot will post)
 ---
@@ -90,11 +114,3 @@
 - ↺ catch-up carousel: published
 - ✅ Daily num Story
 - ↺ catch-up fact: published
----
-**2026-11-25 12:40** `lesson` ✅ published
-- ✅ short S-022 published (13s, kw=True)
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
-- ✅ Challenge Story day 21/30
-- ✅ Economic calendar Story (today, 2 events)
-- ↺ catch-up challenge: published

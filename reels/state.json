@@ -1130,7 +1130,7 @@
   }
  },
  "palette": {
-  "news": 91
+  "news": 92
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -1230,7 +1230,8 @@
   "https://cointelegraph.com/news/moscow-exchange-bitcoin-ether-usdt-trading-december?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/news/us-midterms-2026-stake-crypto-election-day?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://cointelegraph.com/news/france-approves-amendment-self-custodied-crypto-wallets-100k?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://cointelegraph.com/news/standard-chartered-zodia-suffers-data-breach?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound"
+  "https://cointelegraph.com/news/standard-chartered-zodia-suffers-data-breach?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://decrypt.co/384033/standard-chartereds-zodia-custody-says-hackers-accessed-client-contact-details"
  ],
  "used_broll": [
   17238361,
@@ -1338,10 +1339,6 @@
  "last_track": "story_mixkit-electropop-870.mp3",
  "last_cta": "save",
  "news_media": [
-  {
-   "media": "17911248405503197",
-   "date": "2026-10-12"
-  },
   {
    "media": "18146111029574686",
    "date": "2026-10-12"
@@ -1576,6 +1573,10 @@
   },
   {
    "media": "18198261601402678",
+   "date": "2026-11-26"
+  },
+  {
+   "media": "17926380795224657",
    "date": "2026-11-26"
   }
  ],
@@ -2447,7 +2448,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 107,
+  "user_momotmusic-inspiring-reels-406484.mp3": 108,
   "user_the-mountain-tech-corporate-593075.mp3": 17,
   "story_mixkit-electropop-870.mp3": 104,
   "user_the-mountain-finance-background-449885.mp3": 17,
@@ -2845,7 +2846,7 @@
   "term": 7,
   "num": 7
  },
- "digest_last": "2026-11-25",
+ "digest_last": "2026-11-26",
  "digest_followers": 41,
  "alerts": {
   "BTC": 1795529022.928176,
