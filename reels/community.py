@@ -144,6 +144,43 @@ Decide an action: "reply" for genuine questions/feedback, "hide" for spam, scams
 Return ONLY JSON: {{"action": "reply|hide|ignore", "reply": "<text or empty>"}}"""
 
 
+# «ԴԱՍ» keyword → private DM with the free mini course (lead magnet); the owner then continues the chat himself.
+import re  # noqa: E402
+KEYWORD = re.compile(r"(?:^|[^\w])(դաս|das|дас)(?:$|[^\w])", re.IGNORECASE)
+DM_TEXT = ("Բարև 👋 Շնորհակալություն հետաքրքրության համար։\n\n"
+           "Ահա անվճար մինի դասընթացը՝ «Թրեյդինգի 7 քայլ»․\n{url}\n\n"
+           "Եթե ուզում ես սովորել անհատապես կամ խմբով, գրիր այստեղ՝ սկսնա՞կ ես, թե՞ արդեն թրեյդինգով զբաղվում ես, "
+           "և ես կպատասխանեմ։")
+PUBLIC_OK = "Ուղարկեցի քեզ DM-ում 📩"
+PUBLIC_NO_DM = "Շնորհակալություն 🙌 Անվճար մինի դասընթացի հղումը bio-ում է, իսկ հարցերի համար գրիր DM։"
+
+
+def is_keyword(text):
+    t = (text or "").strip()
+    return len(t) <= 40 and bool(KEYWORD.search(t.replace("«", " ").replace("»", " ")))
+
+
+def keyword_lead(igapi, c):
+    """DM the mini course to a «ԴԱՍ» comment, then leave a short public reply (that reply also marks it as handled)."""
+    from config import PAGES_BASE_URL
+    url = (PAGES_BASE_URL.rstrip("/") + "/start/") if PAGES_BASE_URL else "հղումը bio-ում է"
+    try:
+        igapi.private_reply(c["id"], DM_TEXT.format(url=url))
+        igapi.reply(c["id"], PUBLIC_OK)
+        send_text(f"📩 Նոր «ԴԱՍ» lead՝ @{c.get('username')} — մինի դասընթացը ուղարկվեց DM-ով։ Շարունակիր զրույցը Instagram-ում։")
+        return True
+    except Exception as exc:  # noqa: BLE001
+        msg = str(exc)
+        print("[keyword] private reply failed:", msg[:300])
+        igapi.reply(c["id"], PUBLIC_NO_DM)
+        perm = any(k in msg for k in ("permission", "(#10)", "(#200)", "(#3)", "OAuthException"))
+        send_text(f"📩 Նոր «ԴԱՍ» lead՝ @{c.get('username')} — " +
+                  ("ավտոմատ DM-ը չաշխատեց, քանի որ token-ը չունի հաղորդագրությունների թույլտվություն "
+                   "(instagram_business_manage_messages)։ Գրիր նրան ձեռքով։" if perm else
+                   f"ավտոմատ DM-ը չուղարկվեց ({msg[:120]})։ Գրիր նրան ձեռքով։"))
+        return False
+
+
 def comments(st):
     from . import igapi
     if not igapi.configured():
@@ -170,6 +207,9 @@ def comments(st):
             if c.get("username") == my_name or c.get("hidden"):
                 continue
             if any(r.get("username") == my_name for r in (c.get("replies") or {}).get("data", [])):
+                continue
+            if is_keyword(c.get("text")):
+                keyword_lead(igapi, c); done += 1
                 continue
             l = cur.get(by_media.get(m["id"], ""), {})
             context = (l.get("title", "") + ". " + l.get("summary", "") + " " +

@@ -98,7 +98,7 @@ const Chart: React.FC<{P: ChartLessonProps}> = ({P}) => {
       if (m.type === "hline") {
         const x1 = xs(m.i1 ?? 0), x2 = x1 + (X1 - x1) * mk;
         return <g key={k}><line x1={x1} x2={x2} y1={ys(m.v!)} y2={ys(m.v!)} stroke={A} strokeWidth={4} strokeDasharray="14 10" strokeLinecap="round" />
-          {m.label && <text x={x1 + 6} y={ys(m.v!) + (P.dir > 0 ? 40 : -16)} fontSize={28} fontWeight={700} fill={A} fontFamily={ff(t, "mono")} opacity={mk}>{m.label}</text>}</g>;
+          {m.label && <text x={x1 + 40} y={ys(m.v!) + (P.dir > 0 ? 40 : -16)} fontSize={28} fontWeight={700} fill={A} fontFamily={ff(t, "mono")} opacity={mk}>{m.label}</text>}</g>;
       }
       if (m.type === "circle") {
         const c = CS[m.i!]; const cy = m.at === "h" ? ys(c.h) : ys(c.l);

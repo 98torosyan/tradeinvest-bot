@@ -101,6 +101,18 @@ def reply(comment_id, text):
     return ig._post(f"{comment_id}/replies", message=text)
 
 
+def private_reply(comment_id, text):
+    """Instagram Private Reply: one DM to the author of a comment (within 7 days of it).
+    Needs the instagram_business_manage_messages permission on the token."""
+    import requests
+    r = requests.post(f"{ig.GRAPH_BASE}/me/messages", params={"access_token": ig.IG_ACCESS_TOKEN},
+                      json={"recipient": {"comment_id": comment_id}, "message": {"text": text}}, timeout=30)
+    data = r.json()
+    if not r.ok or "error" in data:
+        raise Error(f"private reply failed: {data}")
+    return data
+
+
 def hide(comment_id):
     return ig._post(comment_id, hide="true")
 

@@ -18,7 +18,7 @@ K = 10                     # candles shown after the signal («ի՞նչ եղավ
 BEFORE = 34                # candles shown before the signal
 FPS = 30
 SCAN_ASSETS = ["BTC", "ETH", "GOLD", "NDX", "SPX"]
-TOPICS = ["sweep", "pinbar", "retest", "divergence", "engulfing", "double", "fvg", "ema"]
+TOPICS = ["sweep", "bos", "pinbar", "ob", "retest", "choch", "divergence", "engulfing", "double", "fvg", "ema"]
 
 
 # ------------------------------------------------------------------ data (long history, with timestamps)
@@ -233,6 +233,60 @@ def d_ema(cs, A, E20, E50):
             yield i, -1, [{"type": "ema"}, {"type": "dot", "i": i, "v": E20[i]}]
 
 
+# ---- ICT / SMC concepts from joshyattridge/smart-money-concepts (github.com/joshyattridge/smart-money-concepts, MIT)
+def _smc(cs):
+    os.environ.setdefault("SMC_CREDIT", "0")
+    import pandas as pd
+    from smartmoneyconcepts import smc
+    df = pd.DataFrame([{"open": c["o"], "high": c["h"], "low": c["l"], "close": c["c"], "volume": 1.0} for c in cs])
+    sw = smc.swing_highs_lows(df, swing_length=6)
+    return smc, df, sw
+
+
+def d_structure(cs, kind):
+    """kind 'BOS' (trend continues) or 'CHOCH' (first break against the trend). Event = the candle that broke the level."""
+    smc, df, sw = _smc(cs)
+    bc = smc.bos_choch(df, sw, close_break=True)
+    for j, row in bc.iterrows():
+        v = row[kind]
+        if v != v or not v or row["BrokenIndex"] != row["BrokenIndex"]:
+            continue
+        i = int(row["BrokenIndex"])
+        if i - j < 3 or i - j > 30:
+            continue
+        yield i, int(v), [{"type": "hline", "v": float(row["Level"]), "i1": int(j), "i2": i, "label": "BOS" if kind == "BOS" else "CHoCH"},
+                          {"type": "circle", "i": int(j), "at": "h" if v > 0 else "l", "small": True},
+                          {"type": "circle", "i": i, "at": "h" if v > 0 else "l"}]
+
+
+def d_ob(cs, A):
+    """Order Block from the library; the event is the first return into the zone (before it is mitigated)."""
+    smc, df, sw = _smc(cs)
+    ob = smc.ob(df, sw, close_mitigation=False)
+    n = len(cs)
+    for j, row in ob.iterrows():
+        d = row["OB"]
+        if d != d or not d:
+            continue
+        top, bot = float(row["Top"]), float(row["Bottom"])
+        if top - bot < A[j] * 0.3:
+            continue
+        mit = int(row["MitigatedIndex"]) if row["MitigatedIndex"] == row["MitigatedIndex"] and row["MitigatedIndex"] else n
+        away = False
+        for i in range(j + 3, min(n, j + 40, mit)):
+            c = cs[i]
+            if d > 0:
+                away = away or c["l"] > top + A[i] * 1.5
+                if away and c["l"] <= top and c["c"] > bot:
+                    yield i, 1, [{"type": "zone", "lo": bot, "hi": top, "i1": int(j), "label": "Order Block"}, {"type": "circle", "i": i, "at": "l"}]
+                    break
+            else:
+                away = away or c["h"] < bot - A[i] * 1.5
+                if away and c["h"] >= bot and c["c"] < top:
+                    yield i, -1, [{"type": "zone", "lo": bot, "hi": top, "i1": int(j), "label": "Order Block"}, {"type": "circle", "i": i, "at": "h"}]
+                    break
+
+
 def detect(topic, cs):
     A = atr(cs)
     if topic == "divergence":
@@ -240,6 +294,10 @@ def detect(topic, cs):
     if topic == "ema":
         cl = [c["c"] for c in cs]
         return list(d_ema(cs, A, ema(cl, 20), ema(cl, 50)))
+    if topic in ("bos", "choch"):
+        return list(d_structure(cs, topic.upper()))
+    if topic == "ob":
+        return list(d_ob(cs, A))
     return list({"pinbar": d_pinbar, "engulfing": d_engulfing, "sweep": d_sweep, "retest": d_retest,
                  "double": d_double, "fvg": d_fvg}[topic](cs, A))
 
@@ -302,6 +360,23 @@ def texts(topic, d):
             concept=["Fair Value Gap՝ երեք մոմ, որոնց միջև գինը չի առևտրվել։",
                      "Արագ շարժումը թողնում է անհավասարակշռություն, և գինը հաճախ վերադառնում է։"],
             label="Fair Value Gap", rule="FVG-ն *գոտի է*, ոչ թե ճշգրիտ գին։"),
+        "bos": dict(
+            hook=P(d, "Գինը կոտրեց նախորդ high-ը՝ *աճը շարունակվում է*", "Գինը կոտրեց նախորդ low-ը՝ *անկումը շարունակվում է*"),
+            concept=[P(d, "BOS (Break of Structure)՝ գինը փակվում է նախորդ swing high-ից վեր։",
+                       "BOS (Break of Structure)՝ գինը փակվում է նախորդ swing low-ից ներքև։"),
+                     "Սա ցույց է տալիս, որ տրենդը դեռ ուժեղ է։"],
+            label=P(d, "BOS ↑", "BOS ↓"), rule="BOS-ից հետո մուտքը փնտրիր *pullback-ի* վրա, ոչ թե կոտրման մոմի։"),
+        "choch": dict(
+            hook=P(d, "Առաջին նշանը, որ *անկումն ավարտվում է*", "Առաջին նշանը, որ *աճն ավարտվում է*"),
+            concept=["CHoCH (Change of Character)՝ առաջին կոտրումը տրենդի հակառակ ուղղությամբ։",
+                     P(d, "Անկման մեջ գինն առաջին անգամ փակվեց նախորդ high-ից վեր։", "Աճի մեջ գինն առաջին անգամ փակվեց նախորդ low-ից ներքև։")],
+            label=P(d, "CHoCH ↑", "CHoCH ↓"), rule="CHoCH-ից հետո սպասիր *նոր BOS-ի*՝ որպես հաստատում։"),
+        "ob": dict(
+            hook=P(d, "Գինը վերադարձավ այնտեղ, որտեղ *խոշոր խաղացողները գնել էին*",
+                   "Գինը վերադարձավ այնտեղ, որտեղ *խոշոր խաղացողները վաճառել էին*"),
+            concept=["Order Block՝ ուժեղ շարժումից առաջ վերջին հակառակ մոմը։",
+                     "Գինը հաճախ վերադառնում է այդ գոտի ու արձագանքում։"],
+            label=P(d, "Bullish Order Block", "Bearish Order Block"), rule="Order Block-ը ուժ ունի, երբ դրանից հետո կա *BOS*։"),
         "ema": dict(
             hook="Երկու գիծ, որոնք ցույց են տալիս *տրենդի փոփոխությունը*",
             concept=["EMA 20-ը արագ է արձագանքում, EMA 50-ը՝ դանդաղ։",
@@ -411,7 +486,8 @@ def build(st, now, data=None):
 def caption(p, info, res):
     tag = {"sweep": "#liquidity #smartmoney", "pinbar": "#pinbar #priceaction", "retest": "#breakout #supportresistance",
            "divergence": "#rsi #divergence", "engulfing": "#engulfing #candlestick", "double": "#doublebottom #chartpatterns",
-           "fvg": "#fvg #ict", "ema": "#ema #movingaverage"}[p["topic"]]
+           "fvg": "#fvg #ict", "ema": "#ema #movingaverage", "bos": "#bos #marketstructure #smc",
+           "choch": "#choch #marketstructure #smc", "ob": "#orderblock #smc #ict"}[p["topic"]]
     lines = [
         f"📊 {plain(p['hook'])}",
         "",

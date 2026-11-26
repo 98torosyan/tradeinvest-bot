@@ -12,3 +12,4 @@ rapidocr_onnxruntime>=1.3
 ta>=0.11
 ccxt>=4.0
 manim>=0.18
+smartmoneyconcepts>=0.0.27
