@@ -1,3 +1,15 @@
+**2026-11-26 17:39** `analysis` ✅ moved
+- ℹ️ the analysis Reel moved to 19:07
+- ✅ Poster P-12 published
+- ↺ catch-up poster: published
+- ✅ Daily fact Story
+- ↺ catch-up fact: published
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://decrypt.co/feed: 38 items
+- ✅ News published: Zodia Custody-ն հայտնել է տվյալների արտահոսքի մասին
+- ↺ catch-up news: published
+---
 **2026-11-26 12:39** `lesson` ✅ published
 - ✅ short S-023 published (14s, kw=False)
 - ✅ Story published
@@ -84,6 +96,3 @@
 ---
 **2026-11-25 03:16** `analysis` ✅ skipped-quiet
 - 🌙 03:16 — quiet hours, analysis skipped
----
-**2026-11-25 02:21** `fact` ✅ skipped-quiet
-- 🌙 02:21 — quiet hours, fact skipped
