@@ -12,7 +12,7 @@ export const END_FRAMES = 30;
 const Arrow: React.FC<{color: string}> = ({color}) =>
   <svg width={34} height={20} viewBox="0 0 34 20" style={{marginLeft: 14}}><path d="M2 10 H30 M22 3 L30 10 L22 17" stroke={color} strokeWidth={2.4} fill="none" strokeLinecap="round" strokeLinejoin="round" /></svg>;
 
-const Card: React.FC<{cta: "kw" | "dm" | "none"; tagline?: string}> = ({cta, tagline}) => {
+const Card: React.FC<{cta: "kw" | "dm" | "none"; tagline?: string; line?: boolean}> = ({cta, tagline, line = true}) => {
   const f = useCurrentFrame();
   const t = useTheme();
   const a = pr(f, 0, 10, (x) => 1 - Math.pow(1 - x, 4));
@@ -27,14 +27,14 @@ const Card: React.FC<{cta: "kw" | "dm" | "none"; tagline?: string}> = ({cta, tag
           display: "flex", alignItems: "center", fontFamily: ff(t, "body"), fontVariationSettings: t.type.bodyVar, fontSize: 40, color: t.c.fg}}>
           {CTA_TEXT[cta]}<Arrow color={t.c.fg} /></div>}
       </div>
-      <div style={{position: "absolute", left: 0, right: 0, top: (t.fx?.floorY ?? 1720) - 2, height: 4, background: t.c.accent, boxShadow: `0 0 18px ${t.c.accent}55`}} />
+      {line && <div style={{position: "absolute", left: 0, right: 0, top: (t.fx?.floorY ?? 1720) - 2, height: 4, background: t.c.accent, boxShadow: `0 0 18px ${t.c.accent}55`}} />}
       <Viewfinder />
     </div>
   );
 };
 
-export const EndCard: React.FC<{cta?: "kw" | "dm" | "none"; tagline?: string; theme?: Theme}> = ({cta = "dm", tagline = "TRADING ACADEMY", theme}) => {
+export const EndCard: React.FC<{cta?: "kw" | "dm" | "none"; tagline?: string; theme?: Theme; line?: boolean}> = ({cta = "dm", tagline = "TRADING ACADEMY", theme, line = true}) => {
   const t = useTheme();
   const th = theme ?? (t.name === "tuff" ? SEVAN : t.name === "ti_paper" ? TI : t);
-  return <ThemeProvider value={th}><Card cta={cta} tagline={tagline} /></ThemeProvider>;
+  return <ThemeProvider value={th}><Card cta={cta} tagline={tagline} line={line} /></ThemeProvider>;
 };

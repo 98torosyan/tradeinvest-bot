@@ -7,7 +7,11 @@ import {Sequence, useCurrentFrame, interpolate, Easing} from "remotion";
 import {ThemeRoot, useTheme, Cue, pr, ff} from "./lib/core";
 import {Words} from "./lib/Kinetic";
 import {EndCard, END_FRAMES} from "./lib/EndCard";
-import {getTheme} from "./theme";
+import {getTheme, Theme} from "./theme";
+
+// Clean frame (owner, Nov 2026): no viewfinder corners and no orange floor line — only what helps the viewer.
+const TI0 = getTheme("ti");
+const CLEAN: Theme = {...TI0, fx: {...TI0.fx!, corners: undefined, floorY: undefined}} as Theme;
 
 type C = {o: number; h: number; l: number; c: number};
 type Mark = {type: string; i?: number; i1?: number; i2?: number; v?: number; v1?: number; v2?: number; lo?: number; hi?: number;
@@ -147,7 +151,7 @@ const Backdrop: React.FC<{P: ChartLessonProps}> = ({P}) => {
     {orb(880 + 60 * Math.sin(f / 90), 1480 + 40 * Math.cos(f / 110), 620, 0.16 + 0.05 * breathe)}
     {orb(120 + 50 * Math.cos(f / 120), 1750, 520, 0.08)}
     {orb(1020, 250 + 30 * Math.sin(f / 100), 380, 0.07)}
-    <svg width={1080} height={1920} style={{position: "absolute", inset: 0, opacity: 0.5, translate: `${drift}px 0px`}}>
+    <svg width={1500} height={1920} style={{position: "absolute", left: 0, top: 0, opacity: 0.5, translate: `${drift}px 0px`}}>
       <defs><linearGradient id="gfade" x1="0" y1="0" x2="1" y2="0">
         <stop offset="0" stopColor={A} stopOpacity="0" /><stop offset=".35" stopColor={A} stopOpacity="1" /><stop offset=".8" stopColor={A} stopOpacity="1" /><stop offset="1" stopColor={A} stopOpacity="0" /></linearGradient></defs>
       {[[46, 0.05], [26, 0.08], [10, 0.14]].map(([sw, op]) =>       /* stacked strokes = soft glow without an expensive blur filter */
@@ -221,9 +225,9 @@ const Scene: React.FC<ChartLessonProps> = (P) => {
 };
 
 export const ChartLesson: React.FC<ChartLessonProps> = (P) => (
-  <ThemeRoot theme={getTheme("ti")}>
+  <ThemeRoot theme={CLEAN}>
     <Sequence durationInFrames={CL.body} layout="none"><Scene {...P} /></Sequence>
-    <Sequence from={CL.body} layout="none"><EndCard cta="dm" /></Sequence>
+    <Sequence from={CL.body} layout="none"><EndCard cta="dm" line={false} /></Sequence>
     <Cue at={0} name="hook" volume={0.45} />
     <Cue at={CL.concept} name="swap" volume={0.4} />
     <Cue at={CL.signal + 20} name="hit" volume={0.5} />
