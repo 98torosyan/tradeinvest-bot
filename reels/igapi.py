@@ -97,6 +97,21 @@ def comments(media_id):
     return d.get("data", [])
 
 
+def comments_all(media_id, max_pages=20):
+    """Every top-level comment of a post (paged), for the giveaway draw."""
+    out, after = [], None
+    for _ in range(max_pages):
+        params = dict(fields="id,text,username,timestamp", limit=50)
+        if after:
+            params["after"] = after
+        d = ig._get(f"{media_id}/comments", **params)
+        out += d.get("data", [])
+        after = (d.get("paging") or {}).get("cursors", {}).get("after")
+        if not after or not (d.get("paging") or {}).get("next"):
+            break
+    return out
+
+
 def reply(comment_id, text):
     return ig._post(f"{comment_id}/replies", message=text)
 

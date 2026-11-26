@@ -261,6 +261,54 @@ def do_short(st, now, rid, publish, series=None):
     to_youtube(mp4, s["hook"], cap, ["trading", "թրեյդինգ", "crypto", "risk management"]); return "published"
 
 
+def do_giveaway(st, now, rid, publish):
+    """Daily, idempotent: publish the giveaway Reel on its start day; after it ends, draw winner + 2 reserves
+    and send them to the owner (he checks the follow and announces)."""
+    from . import giveaway as gw, shorts, igapi
+    from delivery.media_hosting import wait_until_reachable
+    g = gw.load()
+    if not g:
+        return "none"
+    today = now.date()
+    start = dt.date.fromisoformat(g["start"]); end = start + dt.timedelta(days=g["days"])
+    gs = st.setdefault("giveaways", {}).setdefault(g["id"], {})
+    if not gs.get("media") and start <= today < end:
+        s = g["script"]
+        mp4, cover = os.path.join(OUT, rid + ".mp4"), os.path.join(OUT, rid + ".jpg")
+        shorts.render(s, False, mp4, cover, music.pick("mood:inspire", None, st, today.isoformat(), need=25))
+        cap = gw.caption(g)
+        ok, bad = qa.text_ok(cap)
+        if not ok:
+            raise RuntimeError("giveaway caption spell-check: " + ", ".join(bad[:6]))
+        if not publish:
+            summary("[dry-run] giveaway Reel rendered"); return "dry-run"
+        urls = hosting.publish([(mp4, f"reels/{rid}.mp4"), (cover, f"reels/{rid}.jpg")])
+        if not wait_until_reachable(urls[f"reels/{rid}.mp4"], timeout=300):
+            raise RuntimeError("video is not reachable on GitHub Pages")
+        gs["media"] = igapi.publish_reel(urls[f"reels/{rid}.mp4"], cap, cover_url=urls.get(f"reels/{rid}.jpg"))
+        gs["published"] = today.isoformat()
+        reel_to_story(urls, rid)
+        notify(f"🎁 Giveaway-ը հրապարակվեց ({g['prize']})։ Ավարտ՝ {end:%d.%m}։ Կարող ես այն pin անել պրոֆիլում։")
+        summary("✅ Giveaway Reel published"); return "published"
+    if gs.get("media") and not gs.get("drawn") and (today > end or (today == end and now.hour >= 21)):
+        own = igapi.me().get("username", "")
+        pool = gw.entries(igapi.comments_all(gs["media"]), own)
+        seed = f"{g['id']}-{len(pool)}-{today.isoformat()}"
+        top = gw.draw(pool, seed) if pool else []
+        gs.update(drawn=today.isoformat(), entries=len(pool), users=len(set(pool)), result=top, seed=seed)
+        if not publish:
+            summary(f"[dry-run] giveaway draw {top}"); return "dry-run"
+        if top:
+            notify("🎁 Giveaway-ի արդյունքը\n"
+                   f"Մասնակցություններ՝ {len(pool)}, մարդիկ՝ {len(set(pool))}\n"
+                   f"🏆 Հաղթող՝ @{top[0]}\n" + "".join(f"Պահեստային {k}՝ @{u}\n" for k, u in enumerate(top[1:], 1)) +
+                   "Ստուգիր, որ հետևում է էջին, գրիր նրան DM, ապա հայտարարիր Story-ում։")
+        else:
+            notify("🎁 Giveaway-ն ավարտվեց, բայց ճիշտ մասնակցություն (2 ընկերոջ նշում) չկա։")
+        summary(f"✅ Giveaway drawn: {len(pool)} entries"); return "drawn"
+    return "waiting"
+
+
 def _catch_up(st, now, rid, publish, kinds):
     """Exact Cloudflare triggers also run the day's GitHub-cron items that have not happened yet
     (GitHub cron often starts hours late and late runs are skipped). Every job checks 'done today' itself."""
@@ -288,7 +336,7 @@ def do_lesson(st, now, rid, publish):
         else:
             summary("ℹ️ the 21:37 Reel slot is retired")
         if publish:
-            _catch_up(st, now, rid, publish, (["weekly"] if now.weekday() == 6 else []) + ["news", "digest"])
+            _catch_up(st, now, rid, publish, (["weekly"] if now.weekday() == 6 else []) + ["news", "giveaway", "digest"])
         return res
     if publish and quiet(now):
         summary(f"🌙 {now:%H:%M} is inside quiet hours — the lesson waits for the next slot"); return "skipped-quiet"
@@ -565,7 +613,7 @@ def do_analysis(st, now, rid, publish):
         summary("🌙 quiet hours — analysis skipped"); return "skipped-quiet"
     if publish and settings.SHORTS_ENABLED and now.hour < 18:
         summary("ℹ️ the analysis Reel moved to 19:07")
-        _catch_up(st, now, rid, publish, ["carousel" if now.weekday() in (0, 2, 4) else "poster", "fact", "news"])
+        _catch_up(st, now, rid, publish, ["carousel" if now.weekday() in (0, 2, 4) else "poster", "fact", "news", "giveaway"])
         return "moved"
     if publish and st.get("analysis_last") == today:
         summary("ℹ️ analysis already published today"); return "skipped"
@@ -912,7 +960,7 @@ def do_report_dry(st, now, rid, publish):
 
 
 HANDLERS = {"yt_check": do_yt_check, "digest": do_digest, "poster": do_poster, "fact": do_fact, "econ_dry": do_econ_dry, "monthly": do_monthly, "challenge": do_challenge, "alert": do_alert, "weekly": do_weekly, "report_dry": do_report_dry, "stories_pack": do_stories_pack, "music": do_music, "lesson": do_lesson, "news": do_news, "story": lambda s, n, r, p: do_story(s, n, r, p, False),
-            "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel, "analysis": do_analysis, "chart_lesson": do_chart_lesson}
+            "chart": lambda s, n, r, p: do_story(s, n, r, p, True), "quiz": do_quiz, "carousel": do_carousel, "analysis": do_analysis, "chart_lesson": do_chart_lesson, "giveaway": do_giveaway}
 
 
 ALWAYS = {"yt_check", "digest", "report_dry", "econ_dry", "music", "stories_pack"}     # allowed at any hour

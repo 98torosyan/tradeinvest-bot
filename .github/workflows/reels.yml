@@ -28,7 +28,7 @@ on:
         required: true
         default: "lesson"
         type: choice
-        options: [lesson, chart_lesson, news, story, chart, quiz, carousel, analysis, music, selftest, stories_pack, report_dry, weekly, challenge, alert, monthly, econ_dry, fact, poster, digest, yt_check]
+        options: [lesson, chart_lesson, giveaway, news, story, chart, quiz, carousel, analysis, music, selftest, stories_pack, report_dry, weekly, challenge, alert, monthly, econ_dry, fact, poster, digest, yt_check]
 
 permissions:
   contents: write
@@ -81,13 +81,13 @@ jobs:
           fi
           true
       - uses: actions/setup-node@v4
-        if: env.KIND == 'analysis' || env.KIND == 'lesson' || env.KIND == 'weekly' || env.KIND == 'chart_lesson'
+        if: env.KIND == 'analysis' || env.KIND == 'lesson' || env.KIND == 'weekly' || env.KIND == 'chart_lesson' || env.KIND == 'giveaway'
         with:
           node-version: "22"
           cache: npm
           cache-dependency-path: remotion/package-lock.json
       - name: Install Remotion
-        if: env.KIND == 'analysis' || env.KIND == 'lesson' || env.KIND == 'weekly' || env.KIND == 'chart_lesson'
+        if: env.KIND == 'analysis' || env.KIND == 'lesson' || env.KIND == 'weekly' || env.KIND == 'chart_lesson' || env.KIND == 'giveaway'
         run: cd remotion && npm ci --no-audit --no-fund && npx remotion browser ensure
       - name: Install system tools, Python deps and headless Chromium
         if: env.SKIP != '1'

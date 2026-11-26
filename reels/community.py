@@ -190,6 +190,7 @@ def comments(st):
     except igapi.Error as exc:
         print("[comments] token problem:", exc); return 0
     by_media = {p["media"]: lid for lid, p in st.get("published", {}).items()}
+    giveaway_media = {g.get("media") for g in st.get("giveaways", {}).values() if g.get("media")}
     cur = {l["id"]: l for l in curriculum.load()["lessons"]}
     done = 0
     try:
@@ -210,6 +211,8 @@ def comments(st):
                 continue
             if is_keyword(c.get("text")):
                 keyword_lead(igapi, c); done += 1
+                continue
+            if m["id"] in giveaway_media:      # tag-a-friend entries: no AI replies there
                 continue
             l = cur.get(by_media.get(m["id"], ""), {})
             context = (l.get("title", "") + ". " + l.get("summary", "") + " " +
