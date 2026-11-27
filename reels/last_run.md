@@ -1,3 +1,6 @@
+**2026-11-27 23:54** `carousel` ✅ skipped-late
+- ⏰ GitHub started this carousel run 527 min late — skipped (the next slot will post)
+---
 **2026-11-27 23:10** `quiz` ✅ skipped-late
 - ⏰ GitHub started this quiz run 573 min late — skipped (the next slot will post)
 ---
@@ -165,8 +168,3 @@
 ---
 **2026-11-26 20:47** `challenge` ✅ skipped-late
 - ⏰ GitHub started this challenge run 641 min late — skipped (the next slot will post)
----
-**2026-11-26 19:09** `lesson` ✅ published
-- [analysis] ETH S zone=1538.00-1557.73 touches=1 other=1845.07
-- ✅ Analysis Reel ETH published
-- ✅ Story published
