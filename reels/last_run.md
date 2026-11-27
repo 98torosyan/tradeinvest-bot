@@ -1,3 +1,24 @@
+**2026-11-27 17:39** `analysis` ✅ moved
+- ℹ️ the analysis Reel moved to 19:07
+- ✅ Carousel M-02 published (8 slides)
+- ↺ catch-up carousel: published
+- ✅ Daily term Story
+- ↺ catch-up fact: published
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://decrypt.co/feed: 34 items
+- [news] https://www.theblock.co/rss.xml: 20 items
+- [news] https://cryptoslate.com/feed/: 10 items
+- [news] https://cryptonews.com/news/feed/: 20 items
+- [news] https://bitcoinist.com/feed/: 8 items
+- [news] https://u.today/rss: 91 items
+- [news] 68 fresh items → 6 stories confirmed by ≥2 sources
+- [news] chosen story confirmed by 2: The Block, U.Today
+- ✅ News published (2 sources: The Block, U.Today): Ճապոնիայի բանկը զգուշացնում է stablecoin-ների մասին
+- ↺ catch-up news: published
+- ↺ catch-up giveaway: waiting
+- ↺ catch-up research: not-today
+---
 **2026-11-27 12:39** `lesson` ✅ published
 - ✅ Challenge Story day 23/30
 - ↺ catch-up challenge: published
@@ -120,6 +141,3 @@
 ---
 **2026-11-26 02:43** `analysis` ✅ skipped-quiet
 - 🌙 02:43 — quiet hours, analysis skipped
----
-**2026-11-26 01:36** `fact` ✅ skipped-quiet
-- 🌙 01:36 — quiet hours, fact skipped

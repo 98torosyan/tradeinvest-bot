@@ -1136,7 +1136,7 @@
   }
  },
  "palette": {
-  "news": 93
+  "news": 94
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -1239,7 +1239,9 @@
   "https://cointelegraph.com/news/standard-chartered-zodia-suffers-data-breach?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://decrypt.co/384033/standard-chartereds-zodia-custody-says-hackers-accessed-client-contact-details",
   "https://cointelegraph.com/news/spain-moves-grant-financial-watchdog-power-freeze-crypto-accounts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
-  "https://decrypt.co/384063/spain-lets-its-financial-intelligence-unit-freeze-crypto-accounts-without-a-court-order"
+  "https://decrypt.co/384063/spain-lets-its-financial-intelligence-unit-freeze-crypto-accounts-without-a-court-order",
+  "https://www.theblock.co/news/regulation/2026-11-27-bank-of-japan-official-says-stablecoins-need-reserve-rules-to-preserve-singleness-of-money-447059",
+  "https://u.today/bank-of-japan-warns-stablecoins-and-tokenization-threaten-financial-stability"
  ],
  "used_broll": [
   17238361,
@@ -1347,10 +1349,6 @@
  "last_track": "story_mixkit-electropop-870.mp3",
  "last_cta": "save",
  "news_media": [
-  {
-   "media": "18428925310145690",
-   "date": "2026-10-12"
-  },
   {
    "media": "18070802963774558",
    "date": "2026-10-13"
@@ -1587,6 +1585,12 @@
    "media": "18183110080439372",
    "date": "2026-11-27",
    "at": "2026-11-27T12:39:16.326470+04:00",
+   "sources": 2
+  },
+  {
+   "media": "18138134584783226",
+   "date": "2026-11-27",
+   "at": "2026-11-27T17:39:25.390833+04:00",
    "sources": 2
   }
  ],
@@ -1988,7 +1992,6 @@
    "user_px-cinematic-hiphop-315904.mp3"
   ],
   "moods/calm": [
-   "user_mk-mood-calm-127.mp3",
    "user_mk-mood-chill-256.mp3",
    "user_mk-mood-chill-25.mp3",
    "user_mk-mood-calm-682.mp3",
@@ -2020,7 +2023,7 @@
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
   "story": "user_px-action-trailer-624648.mp3",
   "moods/inspire": "user_mk-mood-uplifting-1001.mp3",
-  "moods/calm": "user_mk-mood-calm-443.mp3",
+  "moods/calm": "user_mk-mood-calm-127.mp3",
   "moods/tech": "user_mk-techno-117.mp3",
   "moods/tense": "user_px-dark-suspense-trailer-488322.mp3",
   "moods/energy": "user_px-urban-hiphop-beat-623450.mp3"
@@ -2459,7 +2462,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 109,
+  "user_momotmusic-inspiring-reels-406484.mp3": 110,
   "user_the-mountain-tech-corporate-593075.mp3": 17,
   "story_mixkit-electropop-870.mp3": 104,
   "user_the-mountain-finance-background-449885.mp3": 17,
@@ -2500,7 +2503,7 @@
   "user_mk-mood-chill-25.mp3": 2,
   "user_px-dark-suspense-trailer-488322.mp3": 2,
   "user_mk-mood-tension-565.mp3": 2,
-  "user_mk-mood-calm-127.mp3": 2,
+  "user_mk-mood-calm-127.mp3": 3,
   "user_mk-mood-tension-281.mp3": 2,
   "user_px-action-trailer-624648.mp3": 3,
   "user_px-into-the-night-drill-20928.mp3": 2,
@@ -2794,9 +2797,13 @@
   "C-05": {
    "media": "18184622650430206",
    "date": "2026-11-25"
+  },
+  "M-02": {
+   "media": "18085375508538770",
+   "date": "2026-11-27"
   }
  },
- "edu_carousel_last": "2026-11-25",
+ "edu_carousel_last": "2026-11-27",
  "challenge30": {
   "day": 23,
   "last": "2026-11-27"
@@ -2852,10 +2859,10 @@
   }
  },
  "daily_fact": {
-  "n": 22,
-  "last": "2026-11-26",
+  "n": 23,
+  "last": "2026-11-27",
   "fact": 8,
-  "term": 7,
+  "term": 8,
   "num": 7
  },
  "digest_last": "2026-11-26",
@@ -3593,5 +3600,8 @@
  ],
  "story_last": "2026-11-27",
  "amd_last": "2026-11-27",
- "quiz_last": "2026-11-27"
+ "quiz_last": "2026-11-27",
+ "giveaways": {
+  "GA-1": {}
+ }
 }
