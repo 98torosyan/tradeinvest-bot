@@ -1,3 +1,6 @@
+**2026-11-28 03:23** `lesson` ✅ skipped-quiet
+- 🌙 03:23 — quiet hours, lesson skipped
+---
 **2026-11-28 02:17** `analysis` ✅ skipped-quiet
 - 🌙 02:17 — quiet hours, analysis skipped
 ---
@@ -144,27 +147,3 @@
 - ℹ️ news already out today (2)
 - ↺ catch-up news: skipped
 - ↺ catch-up digest: skipped
----
-**2026-11-26 21:39** `lesson` ✅ slot-retired
-- ℹ️ the 21:37 Reel slot is retired
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 37 items
-- ✅ News published: Zodia Custody-ն հայտնել է տվյալների արտահոսքի մասին
-- ↺ catch-up news: published
-- 🌙 Օրվա ամփոփում · 2026-11-26
-
-✅ Հրապարակվեց՝ 8
-• 12:39 Challenge Story
-• 12:39 Reel-ը Story-ում
-• 12:39 Կարճ դաս (Reel)
-• 17:39 Լուր (Story)
-• 17:39 Պոստեր
-• 17:39 Փաստ / տերմին Story
-• 19:09 Reel-ը Story-ում
-• 19:09 Վերլուծություն (Reel)
-
-👥 Հետևորդներ՝ 41 (+0 օրում)
-
-Վաղը նույն ժամերին՝ ավտոմատ 🤖
-- ↺ catch-up digest: sent
