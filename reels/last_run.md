@@ -1,3 +1,40 @@
+**2026-11-27 21:39** `lesson` ✅ published
+- ✅ short A-001 published (20s, kw=True)
+- ✅ Story published
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://decrypt.co/feed: 34 items
+- [news] https://www.theblock.co/rss.xml: 20 items
+- [news] https://cryptoslate.com/feed/: 10 items
+- [news] https://cryptonews.com/news/feed/: 20 items
+- [news] https://bitcoinist.com/feed/: 8 items
+- [news] https://u.today/rss: 90 items
+- [news] 74 fresh items → 6 stories confirmed by ≥2 sources
+- [news] attempt 1 invalid: ["numbers not found in the sources: ['4'] — remove them or copy them exactly"]
+- [news] attempt 2 invalid: ["numbers not found in the sources: ['4'] — remove them or copy them exactly"]
+- [news] chosen story confirmed by 2: CoinDesk, Decrypt
+- ✅ News published (2 sources: CoinDesk, Decrypt): Binance-ը վերականգնել է հանումները
+- ↺ catch-up news: published
+- ↺ catch-up giveaway: waiting
+- 🌙 Օրվա ամփոփում · 2026-11-27
+
+✅ Հրապարակվեց՝ 10
+• 12:39 Challenge Story
+• 12:39 Quiz Story
+• 12:39 Reel-ը Story-ում
+• 12:39 Լուր (Story)
+• 12:39 Շուկայի Story
+• 17:39 Լուր (Story)
+• 17:39 Կարուսել
+• 17:39 Փաստ / տերմին Story
+• 19:09 Reel-ը Story-ում
+• 19:09 Վերլուծություն (Reel)
+
+👥 Հետևորդներ՝ 41 (+0 օրում)
+
+Վաղը նույն ժամերին՝ ավտոմատ 🤖
+- ↺ catch-up digest: sent
+---
 **2026-11-27 20:57** `news` ✅ skipped-late
 - ⏰ GitHub started this news run 620 min late — skipped (the next slot will post)
 ---
@@ -138,10 +175,3 @@
 - [news] https://decrypt.co/feed: 38 items
 - ✅ News published: Zodia Custody-ն հայտնել է տվյալների արտահոսքի մասին
 - ↺ catch-up news: published
----
-**2026-11-26 12:39** `lesson` ✅ published
-- ✅ short S-023 published (14s, kw=False)
-- ✅ Story published
-- ⚠️ YouTube upload failed (Instagram is fine): 403 Client Error: Forbidden for url: https://www.googleapis.com/upload/youtube/v3/videos?uploadType=resumable&part=snippet,status
-- ✅ Challenge Story day 22/30
-- ↺ catch-up challenge: published

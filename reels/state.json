@@ -1133,10 +1133,15 @@
    "date": "2026-11-27",
    "hour": 12,
    "topic": "sweep"
+  },
+  "A-001": {
+   "media": "18088997462709957",
+   "date": "2026-11-27",
+   "hour": 21
   }
  },
  "palette": {
-  "news": 94
+  "news": 95
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -1241,7 +1246,9 @@
   "https://cointelegraph.com/news/spain-moves-grant-financial-watchdog-power-freeze-crypto-accounts?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
   "https://decrypt.co/384063/spain-lets-its-financial-intelligence-unit-freeze-crypto-accounts-without-a-court-order",
   "https://www.theblock.co/news/regulation/2026-11-27-bank-of-japan-official-says-stablecoins-need-reserve-rules-to-preserve-singleness-of-money-447059",
-  "https://u.today/bank-of-japan-warns-stablecoins-and-tokenization-threaten-financial-stability"
+  "https://u.today/bank-of-japan-warns-stablecoins-and-tokenization-threaten-financial-stability",
+  "https://www.coindesk.com/markets/2026/11/27/binance-says-its-withdrawal-suspension-is-over-four-weeks-after-a-usd6-3-billion-hack",
+  "https://decrypt.co/384121/binance-fully-lifts-withdrawal-suspension-four-weeks-after-6-4b-hack"
  ],
  "used_broll": [
   17238361,
@@ -1349,10 +1356,6 @@
  "last_track": "story_mixkit-electropop-870.mp3",
  "last_cta": "save",
  "news_media": [
-  {
-   "media": "18070802963774558",
-   "date": "2026-10-13"
-  },
   {
    "media": "18098649380084595",
    "date": "2026-10-13"
@@ -1591,6 +1594,12 @@
    "media": "18138134584783226",
    "date": "2026-11-27",
    "at": "2026-11-27T17:39:25.390833+04:00",
+   "sources": 2
+  },
+  {
+   "media": "18118911092093245",
+   "date": "2026-11-27",
+   "at": "2026-11-27T21:39:06.451504+04:00",
    "sources": 2
   }
  ],
@@ -2003,7 +2012,6 @@
    "user_mk-techno-133.mp3"
   ],
   "moods/tense": [
-   "user_mk-mood-tension-188.mp3",
    "user_mk-mood-tension-871.mp3"
   ],
   "moods/energy": [
@@ -2024,7 +2032,7 @@
   "moods/inspire": "user_mk-mood-uplifting-1001.mp3",
   "moods/calm": "user_mk-mood-calm-127.mp3",
   "moods/tech": "user_mk-techno-162.mp3",
-  "moods/tense": "user_px-dark-suspense-trailer-488322.mp3",
+  "moods/tense": "user_mk-mood-tension-188.mp3",
   "moods/energy": "user_px-urban-hiphop-beat-623450.mp3"
  },
  "music_sections": {
@@ -2461,7 +2469,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 110,
+  "user_momotmusic-inspiring-reels-406484.mp3": 111,
   "user_the-mountain-tech-corporate-593075.mp3": 17,
   "story_mixkit-electropop-870.mp3": 104,
   "user_the-mountain-finance-background-449885.mp3": 17,
@@ -2498,7 +2506,7 @@
   "user_mk-mood-tension-871.mp3": 1,
   "user_mk-mood-tension-676.mp3": 2,
   "user_mk-mood-calm-443.mp3": 3,
-  "user_mk-mood-tension-188.mp3": 1,
+  "user_mk-mood-tension-188.mp3": 2,
   "user_mk-mood-chill-25.mp3": 2,
   "user_px-dark-suspense-trailer-488322.mp3": 2,
   "user_mk-mood-tension-565.mp3": 2,
@@ -2630,6 +2638,11 @@
    "media": "18084866432341005",
    "date": "2026-11-26",
    "kw": false
+  },
+  "A-001": {
+   "media": "18088997462709957",
+   "date": "2026-11-27",
+   "kw": true
   }
  },
  "shorts_last": "2026-11-27",
@@ -2869,7 +2882,7 @@
   "term": 8,
   "num": 7
  },
- "digest_last": "2026-11-26",
+ "digest_last": "2026-11-27",
  "digest_followers": 41,
  "alerts": {
   "BTC": 1795529022.928176,
@@ -3607,5 +3620,6 @@
  "quiz_last": "2026-11-27",
  "giveaways": {
   "GA-1": {}
- }
+ },
+ "arm_last": "2026-11-27"
 }
