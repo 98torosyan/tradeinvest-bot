@@ -1,3 +1,6 @@
+**2026-11-27 18:17** `story` ✅ skipped-late
+- ⏰ GitHub started this story run 580 min late — skipped (the next slot will post)
+---
 **2026-11-27 17:39** `analysis` ✅ moved
 - ℹ️ the analysis Reel moved to 19:07
 - ✅ Carousel M-02 published (8 slides)
@@ -138,6 +141,3 @@
 ---
 **2026-11-26 03:36** `lesson` ✅ skipped-quiet
 - 🌙 03:36 — quiet hours, lesson skipped
----
-**2026-11-26 02:43** `analysis` ✅ skipped-quiet
-- 🌙 02:43 — quiet hours, analysis skipped
