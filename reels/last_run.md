@@ -1,3 +1,6 @@
+**2026-11-27 05:11** `digest` ✅ skipped-late
+- ⏰ GitHub started this digest run 438 min late — skipped (the next slot will post)
+---
 **2026-11-27 03:44** `lesson` ✅ skipped-quiet
 - 🌙 03:44 — quiet hours, lesson skipped
 ---
@@ -96,7 +99,3 @@
 ---
 **2026-11-25 23:34** `quiz` ✅ skipped-late
 - ⏰ GitHub started this quiz run 597 min late — skipped (the next slot will post)
----
-**2026-11-25 22:51** `lesson` ✅ slot-retired
-- ℹ️ the 21:37 Reel slot is retired
-- ↺ catch-up digest: skipped
