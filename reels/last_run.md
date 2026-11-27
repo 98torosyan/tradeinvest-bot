@@ -1,3 +1,10 @@
+**2026-11-27 19:09** `lesson` ✅ published
+- [analysis] NDX S zone=24910.48-25297.53 touches=2 other=27018.88
+- ✅ Analysis Reel NDX published
+- ✅ Story published
+- ℹ️ news: the last one is less than 2 h old
+- ↺ catch-up news: skipped
+---
 **2026-11-27 18:17** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 580 min late — skipped (the next slot will post)
 ---
@@ -138,6 +145,3 @@
 ---
 **2026-11-26 05:13** `digest` ✅ skipped-late
 - ⏰ GitHub started this digest run 440 min late — skipped (the next slot will post)
----
-**2026-11-26 03:36** `lesson` ✅ skipped-quiet
-- 🌙 03:36 — quiet hours, lesson skipped
