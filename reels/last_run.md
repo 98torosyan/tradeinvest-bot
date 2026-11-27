@@ -1,3 +1,10 @@
+**2026-11-27 22:26** `lesson` ✅ slot-retired
+- ℹ️ the 21:37 Reel slot is retired
+- ℹ️ news: the last one is less than 2 h old
+- ↺ catch-up news: skipped
+- ↺ catch-up giveaway: waiting
+- ↺ catch-up digest: skipped
+---
 **2026-11-27 21:39** `lesson` ✅ published
 - ✅ short A-001 published (20s, kw=True)
 - ✅ Story published
@@ -163,15 +170,3 @@
 ---
 **2026-11-26 18:23** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 586 min late — skipped (the next slot will post)
----
-**2026-11-26 17:39** `analysis` ✅ moved
-- ℹ️ the analysis Reel moved to 19:07
-- ✅ Poster P-12 published
-- ↺ catch-up poster: published
-- ✅ Daily fact Story
-- ↺ catch-up fact: published
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://decrypt.co/feed: 38 items
-- ✅ News published: Zodia Custody-ն հայտնել է տվյալների արտահոսքի մասին
-- ↺ catch-up news: published
