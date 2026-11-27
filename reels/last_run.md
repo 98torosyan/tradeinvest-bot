@@ -1,3 +1,6 @@
+**2026-11-27 20:33** `challenge` ✅ skipped-late
+- ⏰ GitHub started this challenge run 627 min late — skipped (the next slot will post)
+---
 **2026-11-27 19:09** `lesson` ✅ published
 - [analysis] NDX S zone=24910.48-25297.53 touches=2 other=27018.88
 - ✅ Analysis Reel NDX published
@@ -142,6 +145,3 @@
 ---
 **2026-11-26 05:46** `news` ✅ skipped-quiet
 - 🌙 05:46 — quiet hours, news skipped
----
-**2026-11-26 05:13** `digest` ✅ skipped-late
-- ⏰ GitHub started this digest run 440 min late — skipped (the next slot will post)
