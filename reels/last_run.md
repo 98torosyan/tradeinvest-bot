@@ -1,3 +1,6 @@
+**2026-11-27 23:10** `quiz` ✅ skipped-late
+- ⏰ GitHub started this quiz run 573 min late — skipped (the next slot will post)
+---
 **2026-11-27 22:26** `lesson` ✅ slot-retired
 - ℹ️ the 21:37 Reel slot is retired
 - ℹ️ news: the last one is less than 2 h old
@@ -167,6 +170,3 @@
 - [analysis] ETH S zone=1538.00-1557.73 touches=1 other=1845.07
 - ✅ Analysis Reel ETH published
 - ✅ Story published
----
-**2026-11-26 18:23** `story` ✅ skipped-late
-- ⏰ GitHub started this story run 586 min late — skipped (the next slot will post)
