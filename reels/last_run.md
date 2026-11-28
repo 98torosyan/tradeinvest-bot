@@ -1,3 +1,27 @@
+**2026-11-28 17:39** `analysis` ✅ moved
+- ℹ️ the analysis Reel moved to 19:07
+- ✅ Poster P-13 published
+- ↺ catch-up poster: published
+- ✅ Daily num Story
+- ↺ catch-up fact: published
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://decrypt.co/feed: 35 items
+- [news] https://www.theblock.co/rss.xml: 20 items
+- [news] https://cryptoslate.com/feed/: 10 items
+- [news] https://cryptonews.com/news/feed/: 20 items
+- [news] https://bitcoinist.com/feed/: 8 items
+- [news] https://u.today/rss: 91 items
+- [news] 30 fresh items → 4 stories confirmed by ≥2 sources
+- [news] chosen story confirmed by 2: Decrypt, The Block
+- ✅ News published (2 sources: Decrypt, The Block): Արդյո՞ք արհեստական բանականությունը սպառնում է Bitcoin-ին
+- ↺ catch-up news: published
+- ✅ Story published
+- 🎁 Giveaway-ը հրապարակվեց (1 անվճար անհատական թրեյդինգի դաս)։ Ավարտ՝ 05.12։ Կարող ես այն pin անել պրոֆիլում։
+- ✅ Giveaway Reel published
+- ↺ catch-up giveaway: published
+- ↺ catch-up research: not-today
+---
 **2026-11-28 17:32** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 536 min late — skipped (the next slot will post)
 ---
@@ -165,6 +189,3 @@
 ---
 **2026-11-27 03:44** `lesson` ✅ skipped-quiet
 - 🌙 03:44 — quiet hours, lesson skipped
----
-**2026-11-27 02:33** `analysis` ✅ skipped-quiet
-- 🌙 02:33 — quiet hours, analysis skipped
