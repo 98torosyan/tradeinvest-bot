@@ -1,3 +1,40 @@
+**2026-11-28 21:39** `lesson` ✅ published
+- ✅ short A-002 published (17s, kw=True)
+- ✅ Story published
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://decrypt.co/feed: 36 items
+- [news] https://www.theblock.co/rss.xml: 20 items
+- [news] https://cryptoslate.com/feed/: 10 items
+- [news] https://cryptonews.com/news/feed/: 20 items
+- [news] https://bitcoinist.com/feed/: 8 items
+- [news] https://u.today/rss: 92 items
+- [news] 33 fresh items → 2 stories confirmed by ≥2 sources
+- [news] chosen story confirmed by 2: CryptoSlate, U.Today
+- ✅ News published (2 sources: CryptoSlate, U.Today): Վիտալիկ Բուտերինը զգուշացնում է Ethereum-ի թարմացման մասին
+- ↺ catch-up news: published
+- ↺ catch-up giveaway: waiting
+- 🌙 Օրվա ամփոփում · 2026-11-28
+
+✅ Հրապարակվեց՝ 12
+• 12:39 Challenge Story
+• 12:39 Quiz Story
+• 12:39 Reel-ը Story-ում
+• 12:39 Լուր (Story)
+• 12:39 Շուկայի Story
+• 17:39 Giveaway Reel published
+• 17:39 Reel-ը Story-ում
+• 17:39 Լուր (Story)
+• 17:39 Պոստեր
+• 17:39 Փաստ / տերմին Story
+• 19:09 Reel-ը Story-ում
+• 19:09 Վերլուծություն (Reel)
+
+👥 Հետևորդներ՝ 42 (+1 օրում)
+
+Վաղը նույն ժամերին՝ ավտոմատ 🤖
+- ↺ catch-up digest: sent
+---
 **2026-11-28 21:10** `lesson` ✅ skipped-late
 - ⏰ GitHub started this lesson run 513 min late — skipped (the next slot will post)
 ---
@@ -148,24 +185,3 @@
 ---
 **2026-11-27 18:17** `story` ✅ skipped-late
 - ⏰ GitHub started this story run 580 min late — skipped (the next slot will post)
----
-**2026-11-27 17:39** `analysis` ✅ moved
-- ℹ️ the analysis Reel moved to 19:07
-- ✅ Carousel M-02 published (8 slides)
-- ↺ catch-up carousel: published
-- ✅ Daily term Story
-- ↺ catch-up fact: published
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://decrypt.co/feed: 34 items
-- [news] https://www.theblock.co/rss.xml: 20 items
-- [news] https://cryptoslate.com/feed/: 10 items
-- [news] https://cryptonews.com/news/feed/: 20 items
-- [news] https://bitcoinist.com/feed/: 8 items
-- [news] https://u.today/rss: 91 items
-- [news] 68 fresh items → 6 stories confirmed by ≥2 sources
-- [news] chosen story confirmed by 2: The Block, U.Today
-- ✅ News published (2 sources: The Block, U.Today): Ճապոնիայի բանկը զգուշացնում է stablecoin-ների մասին
-- ↺ catch-up news: published
-- ↺ catch-up giveaway: waiting
-- ↺ catch-up research: not-today
