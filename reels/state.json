@@ -1138,10 +1138,16 @@
    "media": "18088997462709957",
    "date": "2026-11-27",
    "hour": 21
+  },
+  "CL-2026-11-28": {
+   "media": "17922781836462646",
+   "date": "2026-11-28",
+   "hour": 12,
+   "topic": "bos"
   }
  },
  "palette": {
-  "news": 95
+  "news": 96
  },
  "posted_links": [
   "https://decrypt.co/379365/circle-tether-freeze-stablecoins-bitget-hack",
@@ -1248,7 +1254,9 @@
   "https://www.theblock.co/news/regulation/2026-11-27-bank-of-japan-official-says-stablecoins-need-reserve-rules-to-preserve-singleness-of-money-447059",
   "https://u.today/bank-of-japan-warns-stablecoins-and-tokenization-threaten-financial-stability",
   "https://www.coindesk.com/markets/2026/11/27/binance-says-its-withdrawal-suspension-is-over-four-weeks-after-a-usd6-3-billion-hack",
-  "https://decrypt.co/384121/binance-fully-lifts-withdrawal-suspension-four-weeks-after-6-4b-hack"
+  "https://decrypt.co/384121/binance-fully-lifts-withdrawal-suspension-four-weeks-after-6-4b-hack",
+  "https://cointelegraph.com/news/china-march-2027-rollout-blockchain-identity-regulations?utm_source=rss_feed&utm_medium=rss&utm_campaign=rss_partner_inbound",
+  "https://cryptonews.com/news/china-blockchain-identity-regulations-march-2027/"
  ],
  "used_broll": [
   17238361,
@@ -1356,10 +1364,6 @@
  "last_track": "story_mixkit-electropop-870.mp3",
  "last_cta": "save",
  "news_media": [
-  {
-   "media": "18098649380084595",
-   "date": "2026-10-13"
-  },
   {
    "media": "18420832552155685",
    "date": "2026-10-14"
@@ -1601,9 +1605,15 @@
    "date": "2026-11-27",
    "at": "2026-11-27T21:39:06.451504+04:00",
    "sources": 2
+  },
+  {
+   "media": "18133639876858274",
+   "date": "2026-11-28",
+   "at": "2026-11-28T12:39:18.707479+04:00",
+   "sources": 2
   }
  ],
- "quiz_count": 36,
+ "quiz_count": 37,
  "clip_checks": {
   "35464509.mp4": true,
   "35464509.mp4:face": false,
@@ -1990,16 +2000,11 @@
   ],
   "news": [],
   "story": [
-   "user_px-danger-music-620575.mp3",
-   "user_px-dark-suspense-trailer-488322.mp3",
-   "user_px-epic-motivation-618588.mp3",
    "user_px-urban-hiphop-beat-623450.mp3",
    "user_px-into-the-night-drill-20928.mp3",
    "user_px-adrenaline-sport-620584.mp3"
   ],
-  "moods/inspire": [
-   "user_px-cinematic-hiphop-315904.mp3"
-  ],
+  "moods/inspire": [],
   "moods/calm": [
    "user_mk-mood-chill-256.mp3",
    "user_mk-mood-chill-25.mp3",
@@ -2011,9 +2016,7 @@
    "user_mk-techno-160.mp3",
    "user_mk-techno-133.mp3"
   ],
-  "moods/tense": [
-   "user_mk-mood-tension-871.mp3"
-  ],
+  "moods/tense": [],
   "moods/energy": [
    "user_px-adrenaline-sport-620584.mp3",
    "user_mk-mood-energetic-989.mp3",
@@ -2028,11 +2031,11 @@
  "music_last": {
   "lesson": "user_px-gym-phonk-620567.mp3",
   "news": "user_momotmusic-inspiring-reels-406484.mp3",
-  "story": "user_px-action-trailer-624648.mp3",
-  "moods/inspire": "user_mk-mood-uplifting-1001.mp3",
+  "story": "user_px-epic-motivation-618588.mp3",
+  "moods/inspire": "user_px-cinematic-hiphop-315904.mp3",
   "moods/calm": "user_mk-mood-calm-127.mp3",
   "moods/tech": "user_mk-techno-162.mp3",
-  "moods/tense": "user_mk-mood-tension-188.mp3",
+  "moods/tense": "user_mk-mood-tension-871.mp3",
   "moods/energy": "user_px-urban-hiphop-beat-623450.mp3"
  },
  "music_sections": {
@@ -2469,7 +2472,7 @@
  },
  "music_uses": {
   "delayed-flight.mp3": 1,
-  "user_momotmusic-inspiring-reels-406484.mp3": 111,
+  "user_momotmusic-inspiring-reels-406484.mp3": 112,
   "user_the-mountain-tech-corporate-593075.mp3": 17,
   "story_mixkit-electropop-870.mp3": 104,
   "user_the-mountain-finance-background-449885.mp3": 17,
@@ -2490,25 +2493,25 @@
   "user_mk-techno-134.mp3": 5,
   "user_mk-mood-calm-682.mp3": 2,
   "user_mk-house-623.mp3": 5,
-  "user_px-epic-motivation-618588.mp3": 4,
+  "user_px-epic-motivation-618588.mp3": 5,
   "user_mk-mood-uplifting-1001.mp3": 4,
   "user_mk-techno-160.mp3": 4,
   "user_mk-techno-133.mp3": 4,
   "user_mk-mood-tension-671.mp3": 2,
-  "user_px-cinematic-hiphop-315904.mp3": 4,
+  "user_px-cinematic-hiphop-315904.mp3": 5,
   "user_mk-mood-chill-494.mp3": 2,
-  "user_px-danger-music-620575.mp3": 2,
+  "user_px-danger-music-620575.mp3": 3,
   "user_mk-mood-uplifting-684.mp3": 4,
   "user_mk-mood-uplifting-963.mp3": 4,
   "user_mk-house-371.mp3": 5,
   "user_mk-mood-chill-256.mp3": 2,
   "user_mk-techno-162.mp3": 5,
-  "user_mk-mood-tension-871.mp3": 1,
+  "user_mk-mood-tension-871.mp3": 2,
   "user_mk-mood-tension-676.mp3": 2,
   "user_mk-mood-calm-443.mp3": 3,
   "user_mk-mood-tension-188.mp3": 2,
   "user_mk-mood-chill-25.mp3": 2,
-  "user_px-dark-suspense-trailer-488322.mp3": 2,
+  "user_px-dark-suspense-trailer-488322.mp3": 3,
   "user_mk-mood-tension-565.mp3": 2,
   "user_mk-mood-calm-127.mp3": 3,
   "user_mk-mood-tension-281.mp3": 2,
@@ -2645,7 +2648,7 @@
    "kw": true
   }
  },
- "shorts_last": "2026-11-27",
+ "shorts_last": "2026-11-28",
  "stories_pack_done": [
   "Story_1_Sksir_1.jpg",
   "Story_1_Sksir_2.jpg",
@@ -2822,8 +2825,8 @@
  },
  "edu_carousel_last": "2026-11-27",
  "challenge30": {
-  "day": 23,
-  "last": "2026-11-27"
+  "day": 24,
+  "last": "2026-11-28"
  },
  "posters_done": {
   "P-01": {
@@ -3611,13 +3614,14 @@
    "followers": 40
   }
  ],
- "chart_lesson_n": 1,
+ "chart_lesson_n": 2,
  "chart_lessons_used": [
-  "sweep:BTC:1795435200"
+  "sweep:BTC:1795435200",
+  "bos:ETH:1795176000"
  ],
- "story_last": "2026-11-27",
- "amd_last": "2026-11-27",
- "quiz_last": "2026-11-27",
+ "story_last": "2026-11-28",
+ "amd_last": "2026-11-28",
+ "quiz_last": "2026-11-28",
  "giveaways": {
   "GA-1": {}
  },

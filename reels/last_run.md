@@ -1,3 +1,30 @@
+**2026-11-28 12:39** `lesson` ✅ published
+- ✅ Challenge Story day 24/30
+- ↺ catch-up challenge: published
+- [market] src_stooq failed: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=%5Espx&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(h
+- [market] SPX row dropped, sources: {'yahoo': 7297.49}
+- ✅ Market Story published
+- [market] src_stooq failed: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=%5Espx&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(h
+- [market] SPX row dropped, sources: {'yahoo': 7297.49}
+- [market] p2p_bybit failed: HTTPSConnectionPool(host='api2.bybit.com', port=443): Read timed out. (read timeout=20)
+- [amd] usd [360.248202, 360.35411153] p2p [363.38]
+- ✅ AMD Story published (P2P sources: 1)
+- ↺ catch-up story: published
+- ✅ Quiz Story from H-037
+- ↺ catch-up quiz: published
+- [news] https://cointelegraph.com/rss: 30 items
+- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
+- [news] https://decrypt.co/feed: 35 items
+- [news] https://www.theblock.co/rss.xml: 20 items
+- [news] https://cryptoslate.com/feed/: 10 items
+- [news] https://cryptonews.com/news/feed/: 20 items
+- [news] https://bitcoinist.com/feed/: 0 items
+- [news] https://u.today/rss: 90 items
+- [news] 35 fresh items → 4 stories confirmed by ≥2 sources
+- [news] chosen story confirmed by 2: Cointelegraph, Cryptonews
+- ✅ News published (2 sources: Cointelegraph, Cryptonews): Չինաստանը սահմանել է բլոկչեյն նոր կանոններ
+- ↺ catch-up news: published
+---
 **2026-11-28 05:25** `news` ✅ skipped-quiet
 - 🌙 05:25 — quiet hours, news skipped
 ---
@@ -141,6 +168,3 @@
 ---
 **2026-11-27 01:26** `fact` ✅ skipped-quiet
 - 🌙 01:26 — quiet hours, fact skipped
----
-**2026-11-27 00:07** `poster` ✅ skipped-quiet
-- 🌙 00:07 — quiet hours, poster skipped
