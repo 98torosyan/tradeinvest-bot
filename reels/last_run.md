@@ -1,3 +1,6 @@
+**2026-11-28 19:49** `news` ✅ skipped-late
+- ⏰ GitHub started this news run 552 min late — skipped (the next slot will post)
+---
 **2026-11-28 19:27** `challenge` ✅ skipped-late
 - ⏰ GitHub started this challenge run 560 min late — skipped (the next slot will post)
 ---
@@ -190,6 +193,3 @@
 - [news] chosen story confirmed by 2: Cointelegraph, Decrypt
 - ✅ News published (2 sources: Cointelegraph, Decrypt): Իսպանիան կարող է սառեցնել կրիպտոհաշիվները
 - ↺ catch-up news: published
----
-**2026-11-27 05:42** `news` ✅ skipped-quiet
-- 🌙 05:42 — quiet hours, news skipped
