@@ -1,3 +1,6 @@
+**2026-11-28 21:50** `quiz` ✅ skipped-late
+- ⏰ GitHub started this quiz run 493 min late — skipped (the next slot will post)
+---
 **2026-11-28 21:39** `lesson` ✅ published
 - ✅ short A-002 published (17s, kw=True)
 - ✅ Story published
@@ -182,6 +185,3 @@
 - ✅ Story published
 - ℹ️ news: the last one is less than 2 h old
 - ↺ catch-up news: skipped
----
-**2026-11-27 18:17** `story` ✅ skipped-late
-- ⏰ GitHub started this story run 580 min late — skipped (the next slot will post)
