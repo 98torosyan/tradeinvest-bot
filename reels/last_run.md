@@ -1,3 +1,6 @@
+**2026-11-28 21:10** `lesson` ✅ skipped-late
+- ⏰ GitHub started this lesson run 513 min late — skipped (the next slot will post)
+---
 **2026-11-28 19:49** `news` ✅ skipped-late
 - ⏰ GitHub started this news run 552 min late — skipped (the next slot will post)
 ---
@@ -166,30 +169,3 @@
 - ↺ catch-up news: published
 - ↺ catch-up giveaway: waiting
 - ↺ catch-up research: not-today
----
-**2026-11-27 12:39** `lesson` ✅ published
-- ✅ Challenge Story day 23/30
-- ↺ catch-up challenge: published
-- [market] src_stooq failed: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=%5Espx&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(h
-- [market] SPX row dropped, sources: {'yahoo': 7182.78}
-- ✅ Market Story published
-- [market] src_stooq failed: HTTPSConnectionPool(host='stooq.com', port=443): Max retries exceeded with url: /q/d/l/?s=%5Espx&i=d (Caused by ConnectTimeoutError(<HTTPSConnection(h
-- [market] SPX row dropped, sources: {'yahoo': 7182.78}
-- [market] p2p_bybit failed: HTTPSConnectionPool(host='api2.bybit.com', port=443): Read timed out. (read timeout=20)
-- [amd] usd [360.238589, 360.28246014] p2p [363.595]
-- ✅ AMD Story published (P2P sources: 1)
-- ↺ catch-up story: published
-- ✅ Quiz Story from H-036
-- ↺ catch-up quiz: published
-- [news] https://cointelegraph.com/rss: 30 items
-- [news] https://www.coindesk.com/arc/outboundfeeds/rss/: 25 items
-- [news] https://decrypt.co/feed: 35 items
-- [news] https://www.theblock.co/rss.xml: 20 items
-- [news] https://cryptoslate.com/feed/: 10 items
-- [news] https://cryptonews.com/news/feed/: 20 items
-- [news] https://bitcoinist.com/feed/: 0 items
-- [news] https://u.today/rss: 91 items
-- [news] 59 fresh items → 4 stories confirmed by ≥2 sources
-- [news] chosen story confirmed by 2: Cointelegraph, Decrypt
-- ✅ News published (2 sources: Cointelegraph, Decrypt): Իսպանիան կարող է սառեցնել կրիպտոհաշիվները
-- ↺ catch-up news: published
